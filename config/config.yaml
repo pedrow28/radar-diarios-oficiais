@@ -1,0 +1,29 @@
+timezone: America/Sao_Paulo
+
+fontes:
+  dou:
+    orgao: "Ministério da Saúde"
+    delta: 75
+    concorrencia: 5
+    baixar_texto_integral: true
+  iofmg:
+    caderno: "Diário do Executivo"
+    secao: "Secretaria de Estado de Saúde"
+    tipos_publicacao:
+      - PORTARIA
+      - RESOLUÇÃO
+      - DECRETO
+      - DELIBERAÇÃO
+      - EXTRATO
+      - EDITAL
+      - ATO
+      - AVISO
+
+armazenamento:
+  dir_dados: ./data
+  reter_bruto_dias: 30
+
+# Opcional. Só usado por `radar notificar`. Credenciais vêm do ambiente.
+email:
+  habilitado: false
+  destinatarios: []

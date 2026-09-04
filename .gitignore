@@ -25,3 +25,6 @@ venv/
 Thumbs.db
 .vscode/
 .idea/
+
+# Workspace do subagent-driven-development (scratch)
+.superpowers/

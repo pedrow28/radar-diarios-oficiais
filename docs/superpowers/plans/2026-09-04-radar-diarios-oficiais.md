@@ -20,7 +20,7 @@ Estes valores vêm da spec e valem para **todas** as tasks:
 - **`Publicacao.texto` é o inteiro teor.** Nunca um snippet truncado.
 - **Nenhum campo de juízo** (`score`, `is_sus`, `impacto`, `relevancia`). O juízo é do Hermes.
 - **Sem segredo no código.** E-mail, chaves e caminhos de usuário vêm de `config.yaml` ou variável de ambiente.
-- **Encoding do DOU:** busca é `iso-8859-1` (o header `charset=UTF-8` mente); página de publicação é `utf-8`.
+- **Encoding do DOU:** UTF-8 nas duas páginas, header declarado correto (verificado contra o site). `decodificar_busca` tenta UTF-8 e só cai em ISO-8859-1 se os bytes não forem UTF-8 válido.
 - **ID do caderno IOF-MG** sempre lido de `cadernos[].id`. Nunca constante.
 - **Toda exceção de coleta** é `SemEdicao`, `ExtracaoParcial` ou `FonteIndisponivel`. Nada de `except:` pelado.
 - **Testes rodam offline**, contra as fixtures em `tests/fixtures/`. Nenhum teste faz requisição de rede.
@@ -55,7 +55,8 @@ def test_pacote_importavel():
 
 
 def test_fixtures_presentes(dir_fixtures: Path):
-    assert (dir_fixtures / "dou" / "busca-ms-2026-09-04.html").exists()
+    assert (dir_fixtures / "dou" / "busca-ms-2026-09-03-p1.html").exists()
+    assert (dir_fixtures / "dou" / "busca-ms-2026-09-03-p2.html").exists()
     assert (dir_fixtures / "dou" / "pub-portaria-gm-ms-12141.html").exists()
     assert (dir_fixtures / "iofmg" / "edicao-2026-09-03.meta.json").exists()
     assert (dir_fixtures / "iofmg" / "caderno-2026-09-03-ses.pdf").exists()
@@ -1348,12 +1349,28 @@ Corrige o bug 4 da spec: a seção deixa de ser adivinhada por palavra no títul
 **Interfaces:**
 - Consumes: `radar.core.erros.ExtracaoParcial`
 - Produces:
-  - `BASE_BUSCA: str`, `ID_BLOCO_JSON: str`
+  - `BASE_BUSCA: str`, `ID_BLOCO_JSON: str`, `ENCODING_BUSCA: str`, `ENCODING_PUBLICACAO: str`
+  - `Cursor` (frozen dataclass): `score`, `id`, `display_date`
   - `decodificar_busca(bruto: bytes) -> str`
   - `extrair_jsonarray(html: str) -> list[dict]`
-  - `montar_url_busca(orgao: str, data: date, delta: int, pagina: int) -> str`
+  - `cursor_do_ultimo(itens: list[dict]) -> Cursor | None`
+  - `montar_url_busca(orgao: str, data: date, delta: int, pagina: int = 1, cursor: Cursor | None = None) -> str`
   - `url_publicacao(url_title: str) -> str`
   - `total_de_resultados(html: str) -> int`
+
+**Descobertas de campo que este código encerra** (verificadas contra o site real em 2026-09-04, não suposições):
+
+1. **A data só funciona via `exactDate=personalizado`.** `exactDate=dia` com
+   `dateDay`/`dateMonth`/`dateYear` — a forma que os scripts atuais usam —
+   **ignora silenciosamente a data pedida** e devolve a edição corrente. Pedir
+   `dateDay=03` retornou publicações com `pubDate=04/09/2026`. O formato aceito é
+   `publishFrom=DD-MM-AAAA` (ou `DD/MM/AAAA`); em ISO (`2026-09-03`) volta a cair
+   em hoje, sem erro.
+2. **A paginação é por cursor, não por offset.** `currentPage=2` na URL não avança
+   (o Liferay apenas ecoa o valor). A página seguinte exige `currentPage`,
+   `newPage` e o cursor `score`/`id`/`displayDate` copiado do **último item da
+   página atual**. Validado: 03/09 devolveu 75 + 43 = 118 itens únicos, igual ao
+   total informado.
 
 - [ ] **Step 1: Write the failing test**
 
@@ -1376,14 +1393,22 @@ from radar.fontes.dou.busca import (
 
 @pytest.fixture
 def html_busca(dir_fixtures: Path) -> str:
-    return decodificar_busca((dir_fixtures / "dou" / "busca-ms-2026-09-04.html").read_bytes())
+    return decodificar_busca((dir_fixtures / "dou" / "busca-ms-2026-09-03-p1.html").read_bytes())
 
 
-def test_decodifica_como_iso_8859_1_apesar_do_header_mentir(html_busca: str):
-    """A pagina declara charset=UTF-8 e serve ISO-8859-1. Regressao critica."""
+def test_decodifica_em_utf8_preservando_acentuacao(html_busca: str):
+    """Acento intacto e sem mojibake. Regressao critica de encoding."""
     assert "Ministério da Saúde" in html_busca
-    assert "Ministï¿½rio" not in html_busca
-    assert "�" not in html_busca[:20000]
+    # Sinais de ter lido UTF-8 como latin-1:
+    assert "Ã©" not in html_busca
+    assert "Âº" not in html_busca
+    assert "�" not in html_busca
+
+
+def test_cai_para_latin1_se_os_bytes_nao_forem_utf8_valido():
+    """Rede de seguranca caso o portal mude o encoding servido."""
+    bruto = "Ministério".encode("iso-8859-1")  # invalido em UTF-8
+    assert decodificar_busca(bruto) == "Ministério"
 
 
 def test_extrai_os_itens_do_bloco_json(html_busca: str):
@@ -1410,7 +1435,12 @@ def test_tipos_vem_da_fonte_nao_de_palavra_no_titulo(html_busca: str):
 
 
 def test_total_de_resultados_e_lido_da_pagina(html_busca: str):
-    assert total_de_resultados(html_busca) == 142
+    assert total_de_resultados(html_busca) == 118
+
+
+def test_todos_os_itens_sao_da_data_pedida(html_busca: str):
+    """Regressao do parametro de data ignorado: pedir 03/09 tem que trazer 03/09."""
+    assert {i["pubDate"] for i in extrair_jsonarray(html_busca)} == {"03/09/2026"}
 
 
 def test_html_sem_bloco_json_levanta_erro():
@@ -1420,14 +1450,49 @@ def test_html_sem_bloco_json_levanta_erro():
         extrair_jsonarray("<html><body>nada aqui</body></html>")
 
 
-def test_monta_url_de_busca_com_data_e_pagina():
-    url = montar_url_busca("Ministério da Saúde", date(2026, 9, 4), delta=75, pagina=2)
-    assert "dateDay=04" in url
-    assert "dateMonth=09" in url
-    assert "dateYear=2026" in url
+def test_url_usa_data_personalizada_e_nunca_exactdate_dia():
+    """`exactDate=dia` ignora a data pedida e devolve a edicao corrente."""
+    url = montar_url_busca("Ministério da Saúde", date(2026, 9, 3), delta=75)
+    assert "exactDate=personalizado" in url
+    assert "publishFrom=03-09-2026" in url
+    assert "publishTo=03-09-2026" in url
+    assert "exactDate=dia" not in url
+    assert "dateDay" not in url
     assert "delta=75" in url
-    assert "currentPage=2" in url
     assert "Minist%C3%A9rio+da+Sa%C3%BAde" in url or "Minist%C3%A9rio%20da%20Sa%C3%BAde" in url
+
+
+def test_primeira_pagina_nao_leva_cursor():
+    url = montar_url_busca("MS", date(2026, 9, 3), delta=75)
+    assert "newPage" not in url
+    assert "score" not in url
+
+
+def test_cursor_e_extraido_do_ultimo_item(html_busca: str):
+    from radar.fontes.dou.busca import cursor_do_ultimo
+
+    itens = extrair_jsonarray(html_busca)
+    cursor = cursor_do_ultimo(itens)
+    assert cursor.id == itens[-1]["classPK"]
+    assert cursor.display_date == itens[-1]["displayDateSortable"]
+    assert cursor.score == itens[-1]["score"]
+
+
+def test_cursor_de_lista_vazia_e_none():
+    from radar.fontes.dou.busca import cursor_do_ultimo
+
+    assert cursor_do_ultimo([]) is None
+
+
+def test_url_da_segunda_pagina_carrega_o_cursor(html_busca: str):
+    from radar.fontes.dou.busca import cursor_do_ultimo
+
+    cursor = cursor_do_ultimo(extrair_jsonarray(html_busca))
+    url = montar_url_busca("MS", date(2026, 9, 3), delta=75, pagina=2, cursor=cursor)
+    assert "currentPage=1" in url
+    assert "newPage=2" in url
+    assert f"id={cursor.id}" in url
+    assert f"displayDate={cursor.display_date}" in url
 
 
 def test_url_de_publicacao_usa_o_slug():
@@ -1466,8 +1531,10 @@ from __future__ import annotations
 
 import json
 import re
+from dataclasses import dataclass
 from datetime import date
-from urllib.parse import quote_plus
+from typing import Any
+from urllib.parse import quote_plus, urlencode
 
 from radar.core.erros import ExtracaoParcial
 
@@ -1475,9 +1542,8 @@ BASE_BUSCA = "https://www.in.gov.br/consulta/-/buscar/dou"
 BASE_PUBLICACAO = "https://www.in.gov.br/web/dou/-/"
 ID_BLOCO_JSON = "_br_com_seatecnologia_in_buscadou_BuscaDouPortlet_params"
 
-# A página declara charset=UTF-8 mas entrega ISO-8859-1. Confiar no header
-# produz mojibake em todo nome de órgão acentuado.
-ENCODING_BUSCA = "iso-8859-1"
+# Verificado contra o site: o portal serve UTF-8 e o header diz a verdade.
+ENCODING_BUSCA = "utf-8"
 ENCODING_PUBLICACAO = "utf-8"
 
 _PADRAO_BLOCO = re.compile(
@@ -1488,8 +1554,17 @@ _PADRAO_TOTAL = re.compile(r"(\d+)\s+resultados?")
 
 
 def decodificar_busca(bruto: bytes) -> str:
-    """Decodifica a página de busca com o encoding que ela realmente usa."""
-    return bruto.decode(ENCODING_BUSCA)
+    """Decodifica a página de busca.
+
+    UTF-8 é auto-validante: uma sequência inválida levanta em vez de produzir
+    lixo silencioso. Por isso tentamos UTF-8 primeiro e só caímos em ISO-8859-1
+    se os bytes não forem UTF-8 válido — o que só aconteceria se o portal
+    mudasse. Latin-1 nunca falha, então jamais deve vir primeiro.
+    """
+    try:
+        return bruto.decode(ENCODING_BUSCA)
+    except UnicodeDecodeError:
+        return bruto.decode("iso-8859-1")
 
 
 def extrair_jsonarray(html: str) -> list[dict]:
@@ -1513,17 +1588,66 @@ def total_de_resultados(html: str) -> int:
     return int(achado.group(1)) if achado else 0
 
 
-def montar_url_busca(orgao: str, data: date, delta: int, pagina: int = 1) -> str:
-    return (
-        f"{BASE_BUSCA}?q=*"
-        f"&orgPrin={quote_plus(orgao)}"
-        f"&exactDate=dia"
-        f"&dateDay={data.day:02d}"
-        f"&dateMonth={data.month:02d}"
-        f"&dateYear={data.year}"
-        f"&delta={delta}"
-        f"&currentPage={pagina}"
+@dataclass(frozen=True)
+class Cursor:
+    """Posição da paginação: o último item da página já lida.
+
+    A busca do DOU pagina por cursor (`search_after`), não por offset. Mandar
+    `currentPage=2` na URL não avança nada — o portal só ecoa o valor.
+    """
+
+    score: Any
+    id: Any
+    display_date: Any
+
+
+def cursor_do_ultimo(itens: list[dict]) -> Cursor | None:
+    if not itens:
+        return None
+    ultimo = itens[-1]
+    return Cursor(
+        score=ultimo.get("score"),
+        id=ultimo.get("classPK"),
+        display_date=ultimo.get("displayDateSortable"),
     )
+
+
+def montar_url_busca(
+    orgao: str,
+    data: date,
+    delta: int,
+    pagina: int = 1,
+    cursor: Cursor | None = None,
+) -> str:
+    """URL da busca para uma data e página.
+
+    A data vai como `exactDate=personalizado` com `publishFrom`/`publishTo` em
+    DD-MM-AAAA. A forma `exactDate=dia` + `dateDay/dateMonth/dateYear`, usada
+    pelos scripts antigos, ignora a data pedida e devolve a edição corrente —
+    sem erro, o que é pior.
+    """
+    data_br = data.strftime("%d-%m-%Y")
+    parametros = {
+        "q": "*",
+        "s": "todos",
+        "orgPrin": orgao,
+        "exactDate": "personalizado",
+        "publishFrom": data_br,
+        "publishTo": data_br,
+        "sortType": "0",
+        "delta": delta,
+    }
+    if pagina > 1 and cursor is not None:
+        parametros.update(
+            {
+                "currentPage": pagina - 1,
+                "newPage": pagina,
+                "score": cursor.score,
+                "id": cursor.id,
+                "displayDate": cursor.display_date,
+            }
+        )
+    return f"{BASE_BUSCA}?{urlencode(parametros, quote_via=quote_plus)}"
 
 
 def url_publicacao(url_title: str) -> str:
@@ -1533,7 +1657,7 @@ def url_publicacao(url_title: str) -> str:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_dou_busca.py -v`
-Expected: PASS (9 testes)
+Expected: PASS (15 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -1553,8 +1677,8 @@ Corrige os bugs 1, 9 e 12 da spec: hoje `extend()` cego mais `len >= total` decl
 - Create: `tests/test_dou_paginacao.py`
 
 **Interfaces:**
-- Consumes: `extrair_jsonarray`, `total_de_resultados`, `montar_url_busca` da Task 7
-- Produces: `percorrer_paginas(buscar_pagina: Callable[[int], str], orgao: str, data: date, delta: int) -> tuple[list[dict], list[str]]` — devolve itens únicos (por `urlTitle`) e a lista de avisos.
+- Consumes: `extrair_jsonarray`, `total_de_resultados`, `cursor_do_ultimo`, `Cursor` da Task 7
+- Produces: `percorrer_paginas(buscar_pagina: Callable[[int, Cursor | None], str], delta: int) -> tuple[list[dict], list[str]]` — devolve itens únicos (por `urlTitle`) e a lista de avisos. O chamador injeta `buscar_pagina`, que recebe o número da página e o cursor da anterior e devolve o HTML já decodificado.
 
 - [ ] **Step 1: Write the failing test**
 
@@ -1562,9 +1686,9 @@ Corrige os bugs 1, 9 e 12 da spec: hoje `extend()` cego mais `len >= total` decl
 
 ```python
 import json
-from datetime import date
+from pathlib import Path
 
-from radar.fontes.dou.busca import ID_BLOCO_JSON, percorrer_paginas
+from radar.fontes.dou.busca import ID_BLOCO_JSON, decodificar_busca, percorrer_paginas
 
 
 def _pagina(itens: list[dict], total: int) -> str:
@@ -1577,28 +1701,58 @@ def _pagina(itens: list[dict], total: int) -> str:
 
 
 def _itens(inicio: int, quantos: int) -> list[dict]:
-    return [{"urlTitle": f"ato-{i}", "title": f"Ato {i}"} for i in range(inicio, inicio + quantos)]
+    return [
+        {"urlTitle": f"ato-{i}", "title": f"Ato {i}", "classPK": str(i),
+         "score": 0, "displayDateSortable": 1788490800000}
+        for i in range(inicio, inicio + quantos)
+    ]
 
 
 def test_percorre_todas_as_paginas_ate_o_total():
     paginas = {1: _pagina(_itens(0, 3), 5), 2: _pagina(_itens(3, 2), 5)}
-    itens, avisos = percorrer_paginas(lambda n: paginas[n], "MS", date(2026, 9, 4), delta=3)
+    itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=3)
     assert len(itens) == 5
     assert avisos == []
 
 
+def test_cursor_da_pagina_anterior_e_repassado():
+    """Sem o cursor a busca do DOU nunca avanca de pagina."""
+    recebidos: list = []
+
+    def buscar(n, cursor):
+        recebidos.append(cursor)
+        return _pagina(_itens((n - 1) * 3, 3), 6)
+
+    percorrer_paginas(buscar, delta=3)
+    assert recebidos[0] is None, "a primeira página não tem cursor"
+    assert recebidos[1] is not None
+    assert recebidos[1].id == "2", "cursor deve vir do último item da página 1"
+
+
 def test_deduplica_por_url_title():
-    """Mesmo item em duas paginas conta uma vez so."""
-    paginas = {1: _pagina(_itens(0, 3), 5), 2: _pagina(_itens(2, 3), 5)}
-    itens, _ = percorrer_paginas(lambda n: paginas[n], "MS", date(2026, 9, 4), delta=3)
+    """Item repetido na borda de duas paginas conta uma vez so."""
+    paginas = {1: _pagina(_itens(0, 3), 4), 2: _pagina(_itens(2, 2), 4)}
+    itens, _ = percorrer_paginas(lambda n, c: paginas[n], delta=3)
     assert len(itens) == 4
     assert len({i["urlTitle"] for i in itens}) == 4
+
+
+def test_para_por_unicos_e_nao_por_posicao_bruta():
+    """Regressao: contar posicao bruta em vez de unicos descarta item real.
+
+    Paginas 1 e 2 se sobrepoem no item 2. Somando posicoes, 3+3 ja atinge o
+    total 5 e o corte por posicao jogaria fora o item 4.
+    """
+    paginas = {1: _pagina(_itens(0, 3), 5), 2: _pagina(_itens(2, 3), 5)}
+    itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=3)
+    assert len({i["urlTitle"] for i in itens}) == 5
+    assert avisos == []
 
 
 def test_pagina_repetida_interrompe_e_avisa_em_vez_de_mentir_sucesso():
     """O bug atual: pagina que nao avanca inflava o contador ate 'completo'."""
     repetida = _pagina(_itens(0, 3), 9)
-    itens, avisos = percorrer_paginas(lambda n: repetida, "MS", date(2026, 9, 4), delta=3)
+    itens, avisos = percorrer_paginas(lambda n, c: repetida, delta=3)
     assert len(itens) == 3
     assert avisos, "paginação travada precisa gerar aviso"
     assert "repet" in avisos[0].lower() or "trav" in avisos[0].lower()
@@ -1606,22 +1760,20 @@ def test_pagina_repetida_interrompe_e_avisa_em_vez_de_mentir_sucesso():
 
 def test_avisa_quando_coletou_menos_que_o_total():
     paginas = {1: _pagina(_itens(0, 3), 10), 2: _pagina([], 10)}
-    itens, avisos = percorrer_paginas(lambda n: paginas[n], "MS", date(2026, 9, 4), delta=3)
+    itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=3)
     assert len(itens) == 3
     assert any("10" in a for a in avisos)
 
 
 def test_pagina_vazia_encerra_sem_erro():
     paginas = {1: _pagina(_itens(0, 2), 2), 2: _pagina([], 2)}
-    itens, avisos = percorrer_paginas(lambda n: paginas[n], "MS", date(2026, 9, 4), delta=2)
+    itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=2)
     assert len(itens) == 2
     assert avisos == []
 
 
 def test_sem_resultados_devolve_lista_vazia():
-    itens, avisos = percorrer_paginas(
-        lambda n: _pagina([], 0), "MS", date(2026, 9, 4), delta=75
-    )
+    itens, avisos = percorrer_paginas(lambda n, c: _pagina([], 0), delta=75)
     assert itens == []
     assert avisos == []
 
@@ -1630,13 +1782,27 @@ def test_teto_de_paginas_deriva_do_total_nao_de_constante():
     """Com 800 resultados e delta 75 sao 11 paginas; o limite antigo travava em 10."""
     chamadas: list[int] = []
 
-    def buscar(n: int) -> str:
+    def buscar(n, cursor):
         chamadas.append(n)
-        return _pagina(_itens((n - 1) * 75, 75), 800)
+        inicio = (n - 1) * 75
+        return _pagina(_itens(inicio, min(75, 800 - inicio)), 800)
 
-    itens, _ = percorrer_paginas(buscar, "MS", date(2026, 9, 4), delta=75)
+    itens, _ = percorrer_paginas(buscar, delta=75)
     assert len(itens) == 800
     assert max(chamadas) >= 11
+
+
+def test_edicao_real_percorre_as_duas_paginas(dir_fixtures: Path):
+    """Fixtures reais de 03/09/2026: 75 + 43 = 118, o total informado pela busca."""
+    paginas = {
+        1: decodificar_busca((dir_fixtures / "dou" / "busca-ms-2026-09-03-p1.html").read_bytes()),
+        2: decodificar_busca((dir_fixtures / "dou" / "busca-ms-2026-09-03-p2.html").read_bytes()),
+    }
+    itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=75)
+    assert len(itens) == 118
+    assert avisos == []
+    assert len({i["urlTitle"] for i in itens}) == 118, "não pode haver duplicata"
+    assert {i["pubName"] for i in itens} == {"DO1", "DO2", "DO3"}
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -1649,16 +1815,12 @@ Expected: FAIL com `ImportError: cannot import name 'percorrer_paginas'`
 Acrescentar ao fim de `radar/fontes/dou/busca.py`:
 
 ```python
-def percorrer_paginas(
-    buscar_pagina,
-    orgao: str,
-    data: date,
-    delta: int,
-) -> tuple[list[dict], list[str]]:
+def percorrer_paginas(buscar_pagina, delta: int) -> tuple[list[dict], list[str]]:
     """Percorre a paginação da busca acumulando itens únicos.
 
-    `buscar_pagina(numero) -> html` é injetado para manter esta função testável
-    sem rede.
+    `buscar_pagina(numero, cursor) -> html` é injetado para manter esta função
+    testável sem rede. O cursor vem do último item da página anterior; sem ele a
+    busca do DOU devolve sempre a primeira página.
 
     Três saídas explícitas, nunca um `except` pelado: total atingido, página
     vazia, ou página cujo conjunto de itens repete o da anterior — que é como a
@@ -1671,11 +1833,12 @@ def percorrer_paginas(
     avisos: list[str] = []
     total = 0
     vistos_anteriores: set[str] | None = None
+    cursor: Cursor | None = None
     pagina = 1
     teto = 1
 
     while pagina <= teto:
-        html = buscar_pagina(pagina)
+        html = buscar_pagina(pagina, cursor)
         if pagina == 1:
             total = total_de_resultados(html)
             if total == 0:
@@ -1704,6 +1867,7 @@ def percorrer_paginas(
 
         if len(unicos) >= total:
             break
+        cursor = cursor_do_ultimo(itens)
         pagina += 1
 
     if total and len(unicos) < total and not avisos:
@@ -1716,7 +1880,7 @@ def percorrer_paginas(
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_dou_paginacao.py -v`
-Expected: PASS (7 testes)
+Expected: PASS (10 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -1792,6 +1956,34 @@ def test_html_sem_corpo_devolve_texto_vazio_sem_estourar():
     assert isinstance(resultado, TextoDOU)
     assert resultado.texto == ""
     assert resultado.identifica is None
+    assert resultado.ementa is None
+
+
+def test_corta_no_rodape_e_ignora_o_que_vem_depois():
+    """O ato termina no rodape; paragrafo de mobiliario nao e inteiro teor."""
+    html = (
+        '<html><div class="texto-dou">'
+        '<p class="identifica">Portaria X</p>'
+        '<p class="dou-paragraph">Conteudo do ato.</p>'
+        "</div>"
+        '<div class="informacao-conteudo-dou">'
+        '<p class="h6">Este conteudo nao substitui o publicado no DOU.</p>'
+        "</div></html>"
+    )
+    texto = extrair_texto(html).texto
+    assert "Conteudo do ato." in texto
+    assert "nao substitui" not in texto
+
+
+def test_sem_rodape_ainda_extrai_ate_o_fim():
+    """Fallback: se a pagina nao tiver rodape, nao pode devolver vazio."""
+    html = (
+        '<html><div class="texto-dou">'
+        '<p class="identifica">Portaria Y</p>'
+        '<p class="dou-paragraph">Unico paragrafo.</p>'
+        "</div></html>"
+    )
+    assert "Unico paragrafo." in extrair_texto(html).texto
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -1817,6 +2009,11 @@ import re
 from dataclasses import dataclass
 
 _CORPO = re.compile(r'<div[^>]*class="[^"]*\btexto-dou\b[^"]*"[^>]*>(.*)', re.DOTALL)
+# O ato acaba no rodape. Sem esse corte, paragrafos de mobiliario da pagina
+# (classe `h6`, avisos de "nao substitui o publicado") entram no inteiro teor.
+_FIM_DO_ATO = re.compile(
+    r'<div[^>]*class="[^"]*\b(?:informacao-conteudo-dou|rodape-dou)\b', re.DOTALL
+)
 _PARAGRAFO = re.compile(r'<p class="([^"]+)"[^>]*>(.*?)</p>', re.DOTALL)
 _TAG = re.compile(r"<[^>]+>")
 _ESPACOS = re.compile(r"\s+")
@@ -1842,11 +2039,17 @@ def extrair_texto(html: str) -> TextoDOU:
     if not corpo:
         return TextoDOU(identifica=None, ementa=None, texto="")
 
+    # Corta no rodape quando ele existe; senao vai ate o fim do documento.
+    regiao = corpo.group(1)
+    rodape = _FIM_DO_ATO.search(regiao)
+    if rodape:
+        regiao = regiao[: rodape.start()]
+
     identifica: str | None = None
     ementa: str | None = None
     linhas: list[str] = []
 
-    for classes, conteudo in _PARAGRAFO.finditer(corpo.group(1)):
+    for classes, conteudo in _PARAGRAFO.finditer(regiao):
         nomes = set(classes.split())
         if nomes & _CLASSES_IGNORADAS:
             continue
@@ -1865,7 +2068,7 @@ def extrair_texto(html: str) -> TextoDOU:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_dou_texto.py -v`
-Expected: PASS (7 testes)
+Expected: PASS (10 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -1947,6 +2150,27 @@ def test_numero_ausente_vira_none_nao_placeholder():
     assert pub.numero is None
 
 
+def test_numero_nao_e_inventado_a_partir_de_no_seguido_de_ano():
+    """Regressao: 'Plano 2026' contem 'no 2026' e nao pode virar numero do ato."""
+    for titulo in (
+        "Divulga o Plano 2026 de metas",
+        "Concede abono 2026 aos servidores",
+        "Extrato do Convênio - Governo 2026",
+    ):
+        assert normalizar({**ITEM, "title": titulo}, None, DIA, QUANDO).numero is None
+
+
+def test_pagina_nao_numerica_vira_none_sem_estourar():
+    assert normalizar({**ITEM, "numberPage": "184-185"}, None, DIA, QUANDO).pagina is None
+    assert normalizar({**ITEM, "numberPage": None}, None, DIA, QUANDO).pagina is None
+
+
+def test_hierarquia_ausente_nao_estoura():
+    item = {k: v for k, v in ITEM.items() if k != "hierarchyStr"}
+    pub = normalizar(item, None, DIA, QUANDO)
+    assert pub.unidade is None
+
+
 def test_usa_texto_integral_quando_disponivel():
     texto = TextoDOU(identifica="Portaria GM/MS Nº 12.141", ementa="Renova.", texto="Art. 1º Fica renovada.")
     pub = normalizar(ITEM, texto, DIA, QUANDO)
@@ -2004,7 +2228,12 @@ from radar.fontes.dou.texto import TextoDOU
 
 # `pubName` é a seção real do diário, informada pela fonte.
 _SECAO_POR_PUBNAME = {"DO1": "1", "DO2": "2", "DO3": "3"}
-_PADRAO_NUMERO = re.compile(r"N[º°o]\s*([\d][\d.\-/]*)", re.IGNORECASE)
+# Exige o simbolo ordinal de verdade. Incluir "o" na classe faria a palavra
+# "no" casar sob IGNORECASE, e "Plano 2026" viraria numero de ato 2026 —
+# invencao de dado, que e exatamente o que este pacote nao pode fazer.
+# Medido sobre os 118 titulos reais das fixtures: a forma estrita extrai os
+# mesmos 62 numeros que a frouxa, sem perder nada.
+_PADRAO_NUMERO = re.compile(r"\bN[º°]\s*([\d][\d.\-/]*)", re.IGNORECASE)
 
 
 def _numero(titulo: str) -> str | None:
@@ -2063,7 +2292,7 @@ def normalizar(
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_dou_normaliza.py -v`
-Expected: PASS (13 testes)
+Expected: PASS (16 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -2096,6 +2325,7 @@ from datetime import date
 from pathlib import Path
 
 import pytest
+import requests
 
 from radar.core.config import ConfigDOU
 from radar.core.erros import FonteIndisponivel, Status
@@ -2142,7 +2372,9 @@ class SessaoFalsa:
     def get(self, url, timeout=None):
         self.pedidos.append(url)
         if any(f in url for f in self.falhar):
-            raise ConnectionError("rede caiu")
+            # requests.exceptions.ConnectionError, não a builtin: só a primeira é
+            # RequestException, que é o que `obter_bytes` converte em FonteIndisponivel.
+            raise requests.exceptions.ConnectionError("rede caiu")
 
         class R:
             status_code = 200
@@ -2221,6 +2453,34 @@ def test_escopo_registra_o_orgao(cfg, storage):
     sessao = SessaoFalsa({"buscar/dou": _html_busca([ITEM], 1), "portaria-1": HTML_PUB})
     resultado = FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4))
     assert resultado.escopo["orgao"] == "Ministério da Saúde"
+
+
+def test_texto_vazio_da_pagina_vira_parcial_com_aviso(cfg, storage):
+    """Estrutura da pagina mudada devolve vazio sem estourar.
+
+    Isso nao pode passar por coleta completa: o agente consumidor leria o
+    resumo truncado achando que e o inteiro teor.
+    """
+    sessao = SessaoFalsa({
+        "buscar/dou": _html_busca([ITEM], 1),
+        "portaria-1": b"<html><body>estrutura mudou, sem texto-dou</body></html>",
+    })
+    resultado = FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4))
+    assert resultado.status == Status.PARCIAL
+    assert any("vazio" in a.lower() for a in resultado.avisos)
+
+
+def test_escopo_registra_se_o_texto_integral_foi_buscado(cfg, storage):
+    """So lendo o JSON o consumidor precisa saber se `texto` e inteiro teor."""
+    sessao = SessaoFalsa({"buscar/dou": _html_busca([ITEM], 1), "portaria-1": HTML_PUB})
+    assert FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4)).escopo["texto_integral"] is True
+
+    cfg_resumo = ConfigDOU(
+        orgao=cfg.orgao, delta=cfg.delta, concorrencia=cfg.concorrencia,
+        baixar_texto_integral=False,
+    )
+    resultado = FonteDOU(cfg_resumo, storage, sessao).coletar(date(2026, 9, 5))
+    assert resultado.escopo["texto_integral"] is False
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -2272,14 +2532,19 @@ class FonteDOU:
 
     def coletar(self, data: date, forcar: bool = False) -> Resultado:
         quando = agora_utc()
-        escopo = {"orgao": self.cfg.orgao}
+        escopo = {
+            "orgao": self.cfg.orgao,
+            # O consumidor precisa saber, so lendo o JSON, se `texto` e o
+            # inteiro teor ou o resumo truncado da listagem.
+            "texto_integral": self.cfg.baixar_texto_integral,
+        }
 
-        def pagina(numero: int) -> str:
-            url = busca.montar_url_busca(self.cfg.orgao, data, self.cfg.delta, numero)
+        def pagina(numero: int, cursor) -> str:
+            url = busca.montar_url_busca(self.cfg.orgao, data, self.cfg.delta, numero, cursor)
             bruto = self._buscar_bruto(data, f"busca-p{numero}.html", url, forcar)
             return busca.decodificar_busca(bruto)
 
-        itens, avisos = busca.percorrer_paginas(pagina, self.cfg.orgao, data, self.cfg.delta)
+        itens, avisos = busca.percorrer_paginas(pagina, self.cfg.delta)
 
         if not itens:
             self.logger.info("DOU %s: nenhuma publicação para %s", data, self.cfg.orgao)
@@ -2322,9 +2587,19 @@ class FonteDOU:
                     data, f"pub-{item.get('classPK', slug)}.html",
                     busca.url_publicacao(slug), forcar,
                 )
-                return slug, extrair_texto(bruto.decode(busca.ENCODING_PUBLICACAO)), None
+                extraido = extrair_texto(bruto.decode(busca.ENCODING_PUBLICACAO))
             except (ErroRadar, OSError, UnicodeDecodeError) as exc:
                 return slug, None, f"Texto integral indisponível para {slug}: {exc}"
+
+            # Extração vazia não levanta exceção: é o que acontece se o portal
+            # mudar a estrutura da página. Sem tratar como falha, a coleta
+            # inteira degradaria para o resumo truncado ainda dizendo "ok".
+            if not extraido.texto.strip():
+                return slug, None, (
+                    f"Texto integral vazio para {slug}: a estrutura da página "
+                    "pode ter mudado."
+                )
+            return slug, extraido, None
 
         with ThreadPoolExecutor(max_workers=max(1, self.cfg.concorrencia)) as executor:
             for slug, texto, falha in executor.map(um, itens):
@@ -2340,7 +2615,7 @@ class FonteDOU:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_dou_coletor.py -v`
-Expected: PASS (7 testes)
+Expected: PASS (9 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -2541,9 +2816,12 @@ def montar_url(data: date) -> str:
     return f"{URL_API}?{urlencode({'dataPublicacao': data.strftime('%Y-%m-%d')})}"
 
 
-def consultar_edicao(sessao, data: date) -> dict:
-    """Devolve o objeto `dados` da edição. Sem edição na data → `SemEdicao`."""
-    bruto = obter_bytes(sessao, montar_url(data))
+def dados_de(bruto: bytes, data: date) -> dict:
+    """Extrai o objeto `dados` de uma resposta já baixada.
+
+    Separado de `consultar_edicao` para que o caminho com cache em disco e o
+    caminho de rede compartilhem exatamente a mesma interpretação.
+    """
     try:
         resposta = json.loads(bruto)
     except json.JSONDecodeError as exc:
@@ -2553,6 +2831,11 @@ def consultar_edicao(sessao, data: date) -> dict:
     if not dados:
         raise SemEdicao(f"Nenhuma edição do IOF-MG publicada em {data.isoformat()}")
     return dados
+
+
+def consultar_edicao(sessao, data: date) -> dict:
+    """Devolve o objeto `dados` da edição. Sem edição na data → `SemEdicao`."""
+    return dados_de(obter_bytes(sessao, montar_url(data)), data)
 
 
 def caderno_principal(dados: dict, descricao: str) -> dict:
@@ -2594,8 +2877,12 @@ Substitui o `find_section_pages()`, que lia só a página 1 e confiava em regex 
 - Consumes: `SemEdicao` (Task 2)
 - Produces:
   - `intervalo_da_secao(caderno: dict, secao: str, total_paginas: int) -> tuple[int, int]`
+  - `proxima_secao(caderno: dict, secao: str) -> str | None`
   - `texto_das_paginas(pdf: bytes, inicio: int, fim: int) -> list[tuple[int, str]]`
+  - `truncar_na_proxima_secao(paginas: list[tuple[int, str]], proxima: str | None) -> list[tuple[int, str]]`
   - `limpar(texto: str) -> str`
+
+**Por que o truncamento existe:** a última página do intervalo é compartilhada — ela contém o fim da seção alvo *e* o início da próxima. Sem cortar no cabeçalho da próxima seção, atos da Educação entram na coleta como se fossem da Saúde. A spec §7.2 exige isso.
 
 - [ ] **Step 1: Write the failing test**
 
@@ -2678,6 +2965,83 @@ def test_limpar_junta_palavra_hifenizada_na_quebra():
 
 def test_limpar_preserva_hifen_legitimo():
     assert "CIB-SUS" in limpar("DELIBERAÇÃO CIB-SUS/MG Nº 5.953")
+
+
+def test_limpar_refaz_separador_de_milhar_quebrado():
+    """A extracao do PDF insere espaco depois do ponto de milhar."""
+    assert "5.953" in limpar("DELIBERAÇÃO CIB-SUS/MG Nº 5. 953, DE 1 DE SETEMBRO")
+    assert "R$ 168.895.626,43" in limpar("valor total anual de R$ 168. 895. 626,43")
+    assert "1.130.647-9" in limpar("MASP 1. 130. 647-9")
+
+
+def test_limpar_nao_junta_quando_nao_ha_tres_digitos():
+    """So o padrao de milhar (exatamente 3 digitos) e normalizado."""
+    assert limpar("no exercício de 2025. 30 servidores") == "no exercício de 2025. 30 servidores"
+
+
+def test_limpar_nao_apaga_o_nome_do_estado_dentro_do_ato():
+    """Regressao: sem ancora de linha, o nome das entidades e mutilado.
+
+    "MINAS GERAIS" aparece 27 vezes dentro do corpo dos atos nas edicoes reais.
+    """
+    sujo = (
+        "MINAS GERAIS 	
+"
+        "Diário do Executivo	
+"
+        "A PRESIDENTE DA FUNDAÇÃO HOSPITALAR DO ESTADO DE MINAS GERAIS - FHEMIG resolve:
+"
+    )
+    limpo = limpar(sujo)
+    assert "FUNDAÇÃO HOSPITALAR DO ESTADO DE MINAS GERAIS - FHEMIG" in limpo
+    assert limpo.count("MINAS GERAIS") == 1, "só a ocorrência do corpo deve sobrar"
+    assert "Diário do Executivo" not in limpo
+
+
+def test_proxima_secao_e_a_seguinte_por_pagina():
+    from radar.fontes.iofmg.pdf import proxima_secao
+
+    assert proxima_secao(CADERNO, "Secretaria de Estado de Saúde") == (
+        "Secretaria de Estado de Educação"
+    )
+
+
+def test_proxima_secao_da_ultima_e_none():
+    from radar.fontes.iofmg.pdf import proxima_secao
+
+    assert proxima_secao(CADERNO, "Editais e Avisos") is None
+
+
+def test_trunca_pagina_de_fronteira_no_cabecalho_seguinte():
+    """A ultima pagina traz o fim da secao alvo E o inicio da proxima."""
+    from radar.fontes.iofmg.pdf import truncar_na_proxima_secao
+
+    paginas = [
+        (16, "PORTARIA SES Nº 1\nConteudo da saude."),
+        (17, "Fim da saude.\nSecretaria de Estado de Educação\nPORTARIA SEE Nº 9\nConteudo da educacao."),
+    ]
+    cortadas = truncar_na_proxima_secao(paginas, "Secretaria de Estado de Educação")
+    assert "Fim da saude." in cortadas[1][1]
+    assert "PORTARIA SEE" not in cortadas[1][1]
+    assert "Conteudo da educacao" not in cortadas[1][1]
+
+
+def test_truncar_sem_proxima_secao_nao_altera_nada():
+    from radar.fontes.iofmg.pdf import truncar_na_proxima_secao
+
+    paginas = [(23, "EDITAL Nº 1\nConteudo.")]
+    assert truncar_na_proxima_secao(paginas, None) == paginas
+
+
+def test_truncar_ignora_paginas_que_nao_a_ultima():
+    from radar.fontes.iofmg.pdf import truncar_na_proxima_secao
+
+    paginas = [
+        (16, "Secretaria de Estado de Educação mencionada de passagem.\nPORTARIA SES Nº 1"),
+        (17, "Conteudo final."),
+    ]
+    cortadas = truncar_na_proxima_secao(paginas, "Secretaria de Estado de Educação")
+    assert cortadas[0][1] == paginas[0][1], "só a última página é truncada"
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -2704,8 +3068,12 @@ import fitz
 
 from radar.core.erros import SemEdicao
 
+# Linha feita APENAS de mobiliario de pagina, uma ou mais pecas. A ancora de
+# linha e obrigatoria: "MINAS GERAIS" aparece 27 vezes DENTRO do corpo dos
+# atos ("FUNDACAO HOSPITALAR DO ESTADO DE MINAS GERAIS - FHEMIG"), e remove-la
+# sem ancora mutila o nome das entidades que publicam.
 _CABECALHO = re.compile(
-    r"^\s*(?:MINAS GERAIS|Diário do Executivo|Diário do Legislativo)\s*$",
+    r"^[ \t]*(?:(?:MINAS GERAIS|Diário do Executivo|Diário do Legislativo)[ \t]*)+$",
     re.IGNORECASE | re.MULTILINE,
 )
 _LINHA_DE_PAGINA = re.compile(
@@ -2717,6 +3085,12 @@ _DATA_E_PAGINA = re.compile(
     r"^\s*(?:segunda|terça|quarta|quinta|sexta|sábado|domingo)[^\n]*\d{4}\s*[–-]\s*\d{1,4}\s*$",
     re.IGNORECASE | re.MULTILINE,
 )
+# A extração do PDF insere um espaço depois do ponto de milhar: "5. 953",
+# "R$ 168. 895. 626,43", "MASP 1. 130. 647-9". Isso produz número de ato
+# ERRADO ("5" em vez de "5.953" — quatro deliberações viram todas "5") e
+# mutila os valores em reais, que são o principal sinal de captação.
+# Medido nas duas edições reais: 166 normalizações, zero falsos positivos.
+_MILHAR_QUEBRADO = re.compile(r"(?<=\d)\.[ ]+(?=\d{3}(?!\d))")
 # Hífen no fim da linha que quebra uma palavra; o legítimo (CIB-SUS) não é seguido de \n.
 _HIFENIZACAO = re.compile(r"(\w)-\s*\n\s*(\w)")
 _LINHAS_VAZIAS = re.compile(r"\n{3,}")
@@ -2741,6 +3115,32 @@ def intervalo_da_secao(caderno: dict, secao: str, total_paginas: int) -> tuple[i
     raise SemEdicao(f"Seção {secao!r} não encontrada no caderno. Disponíveis: {disponiveis}")
 
 
+def proxima_secao(caderno: dict, secao: str) -> str | None:
+    """Descrição da seção que começa depois da alvo, ou `None` se for a última."""
+    secoes = sorted(caderno.get("secoes", []), key=lambda s: s.get("paginaInicial", 0))
+    for posicao, atual in enumerate(secoes):
+        if atual.get("descricao") == secao and posicao + 1 < len(secoes):
+            return secoes[posicao + 1].get("descricao")
+    return None
+
+
+def truncar_na_proxima_secao(
+    paginas: list[tuple[int, str]], proxima: str | None
+) -> list[tuple[int, str]]:
+    """Corta a última página no cabeçalho da seção seguinte.
+
+    A página de fronteira é compartilhada entre dois órgãos; sem o corte, atos do
+    órgão seguinte entram na coleta como se fossem do alvo.
+    """
+    if not proxima or not paginas:
+        return paginas
+    numero, texto = paginas[-1]
+    posicao = texto.find(proxima)
+    if posicao == -1:
+        return paginas
+    return paginas[:-1] + [(numero, texto[:posicao].rstrip())]
+
+
 def texto_das_paginas(pdf: bytes, inicio: int, fim: int) -> list[tuple[int, str]]:
     """Texto de cada página do intervalo, 1-indexado e inclusivo."""
     paginas: list[tuple[int, str]] = []
@@ -2756,6 +3156,7 @@ def limpar(texto: str) -> str:
     limpo = _CABECALHO.sub("", texto)
     limpo = _LINHA_DE_PAGINA.sub("", limpo)
     limpo = _DATA_E_PAGINA.sub("", limpo)
+    limpo = _MILHAR_QUEBRADO.sub(".", limpo)
     limpo = _HIFENIZACAO.sub(r"\1\2", limpo)
     limpo = _LINHAS_VAZIAS.sub("\n\n", limpo)
     return limpo.strip()
@@ -2764,7 +3165,7 @@ def limpar(texto: str) -> str:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_iofmg_pdf.py -v`
-Expected: PASS (11 testes)
+Expected: PASS (19 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -2885,6 +3286,14 @@ def test_edicao_real_02_produz_publicacoes(paginas_02):
     assert len(achados) >= 5, f"segmentou apenas {len(achados)}"
 
 
+def test_numero_completo_em_deliberacao_cib_sus(paginas_02):
+    """Numero truncado e numero ERRADO: 4 deliberacoes distintas viram todas "5"."""
+    cib = [a for a in segmentar(paginas_02, TIPOS) if "CIB-SUS" in a.titulo]
+    assert cib, "as deliberacoes CIB-SUS precisam ser segmentadas"
+    assert all(a.numero and "." in a.numero for a in cib), [a.numero for a in cib]
+    assert len({a.numero for a in cib}) == len(cib), "os numeros devem ser distintos"
+
+
 def test_edicao_real_nao_gera_falsos_positivos_conhecidos(paginas_02):
     titulos = [a.titulo.upper() for a in segmentar(paginas_02, TIPOS)]
     assert not any(t.startswith("DELIBERA:") for t in titulos)
@@ -2988,7 +3397,7 @@ def segmentar(paginas: list[tuple[int, str]], tipos: list[str]) -> list[Bruto]:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_iofmg_segmenta.py -v`
-Expected: PASS (13 testes). Se `test_maioria_dos_segmentos_tem_numero` ou os testes de edição real falharem, ajustar `_e_cabecalho` — **não** relaxar o limiar do teste.
+Expected: PASS (14 testes). Se `test_maioria_dos_segmentos_tem_numero` ou os testes de edição real falharem, ajustar `_e_cabecalho` — **não** relaxar o limiar do teste.
 
 - [ ] **Step 5: Commit**
 
@@ -3241,6 +3650,7 @@ from datetime import date
 from radar.core.config import ConfigIOFMG
 from radar.core.datas import agora_utc
 from radar.core.erros import SemEdicao, Status
+from radar.core.http import obter_bytes
 from radar.core.log import configurar_log
 from radar.core.modelos import Resultado
 from radar.core.storage import Storage
@@ -3278,6 +3688,10 @@ class FonteIOFMG:
 
         conteudo = self._obter_pdf(data, dados, forcar)
         paginas = pdf_mod.texto_das_paginas(conteudo, inicio, fim)
+        # A última página é compartilhada com o órgão seguinte; cortar antes de segmentar.
+        paginas = pdf_mod.truncar_na_proxima_secao(
+            paginas, pdf_mod.proxima_secao(caderno, self.cfg.secao)
+        )
         brutos = segmenta.segmentar(paginas, self.cfg.tipos_publicacao)
 
         if not brutos:
@@ -3297,24 +3711,15 @@ class FonteIOFMG:
         )
 
     def _obter_dados(self, data: date, forcar: bool) -> dict:
-        import json
-
+        """Lê do cache ou da rede; a interpretação é a mesma nos dois caminhos."""
         if not forcar:
             guardado = self.storage.ler_raw(data, self.nome, "edicao.json")
             if guardado is not None:
-                dados = json.loads(guardado).get("dados")
-                if dados:
-                    return dados
-                raise SemEdicao(f"Nenhuma edição do IOF-MG em {data.isoformat()}")
-
-        from radar.core.http import obter_bytes
+                return api.dados_de(guardado, data)
 
         bruto = obter_bytes(self.sessao, api.montar_url(data))
         self.storage.salvar_raw(data, self.nome, "edicao.json", bruto)
-        dados = json.loads(bruto).get("dados")
-        if not dados:
-            raise SemEdicao(f"Nenhuma edição do IOF-MG em {data.isoformat()}")
-        return dados
+        return api.dados_de(bruto, data)
 
     def _obter_pdf(self, data: date, dados: dict, forcar: bool) -> bytes:
         if not forcar:
@@ -3491,6 +3896,24 @@ def test_consultar_encontra_no_historico(ambiente, capsys):
 def test_consultar_sem_resultado_devolve_zero(ambiente, capsys):
     cfg, _ = ambiente
     assert main(["consultar", "--config", str(cfg), "inexistente"]) == 0
+
+
+def test_modulo_executavel_com_python_m():
+    """Sem a guarda __main__, `python -m radar.cli` sai 0 em silencio.
+
+    Um cron nessa forma reportaria sucesso todo dia sem coletar nada. Usamos
+    --help porque ele exercita o despacho sem tocar a rede.
+    """
+    import subprocess
+    import sys
+
+    r = subprocess.run(
+        [sys.executable, "-m", "radar.cli", "--help"],
+        capture_output=True, text=True,
+    )
+    assert r.returncode == 0, r.stderr
+    assert "coletar" in r.stdout, "o --help precisa listar os subcomandos"
+    assert "consultar" in r.stdout
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -3605,12 +4028,20 @@ def main(argv: list[str] | None = None) -> int:
 
 def executar() -> None:
     raise SystemExit(main())
+
+
+# Sem esta guarda, `python -m radar.cli coletar ...` importa o modulo, nao roda
+# nada e sai com codigo 0. Um cron nessa forma reportaria sucesso todo dia sem
+# coletar coisa alguma — falha total silenciosa, que e exatamente o que o
+# contrato de status existe para impedir.
+if __name__ == "__main__":
+    executar()
 ```
 
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_cli.py -v`
-Expected: PASS (9 testes)
+Expected: PASS (10 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -3651,12 +4082,12 @@ from radar.core.modelos import Publicacao, Resultado, gerar_id
 from radar.notificacao.email import enviar, montar_html
 
 
-def _pub(titulo="Portaria 1", url="https://in.gov.br/x") -> Publicacao:
+def _pub(titulo="Portaria 1", url="https://in.gov.br/x", unidade=None) -> Publicacao:
     d = date(2026, 9, 4)
     return Publicacao(
         id=gerar_id("dou", d, url, titulo), fonte="dou", data_publicacao=d,
         coletado_em=datetime(2026, 9, 4, tzinfo=timezone.utc), orgao="Ministério da Saúde",
-        unidade=None, secao="1", pagina=None, edicao="168", tipo="Portaria", numero="1",
+        unidade=unidade, secao="1", pagina=None, edicao="168", tipo="Portaria", numero="1",
         titulo=titulo, ementa="Faz algo.", texto="Art. 1º ...", url=url, origem={},
     )
 
@@ -3673,6 +4104,21 @@ def test_html_lista_as_publicacoes():
     html = montar_html([_resultado([_pub()])])
     assert "Portaria 1" in html
     assert "Ministério da Saúde" in html
+
+
+def test_orgao_aparece_uma_vez_so_e_nao_por_publicacao():
+    """Repetir o orgao em cada item vira ruido: sao 118 num dia de DOU."""
+    html = montar_html([_resultado([
+        _pub(titulo="A", url="https://x/a"),
+        _pub(titulo="B", url="https://x/b"),
+    ])])
+    assert html.count("Ministério da Saúde") == 1
+
+
+def test_unidade_aparece_quando_existe():
+    """`unidade` varia dentro da coleta (Gabinete do Ministro, ANVISA) e informa."""
+    html = montar_html([_resultado([_pub(titulo="A", url="https://x/a", unidade="ANVISA")])])
+    assert "ANVISA" in html
 
 
 def test_titulo_com_html_e_escapado():
@@ -3795,6 +4241,11 @@ def montar_html(resultados: list[Resultado]) -> str:
             f"{escape(resultado.data_publicacao.strftime('%d/%m/%Y'))} "
             f"({escape(str(resultado.status))})</h2>"
         )
+        # O escopo (órgão/seção) é o mesmo para toda a coleta: entra uma vez no
+        # cabeçalho. Repeti-lo por publicação daria 118 linhas iguais num dia de DOU.
+        escopo = resultado.escopo.get("orgao") or resultado.escopo.get("secao") or ""
+        if escopo:
+            partes.append(f"<p><strong>{escape(escopo)}</strong></p>")
         if resultado.avisos:
             itens = "".join(f"<li>{escape(a)}</li>" for a in resultado.avisos)
             partes.append(f'<ul style="color:#8a6d3b">{itens}</ul>')
@@ -3808,7 +4259,10 @@ def montar_html(resultados: list[Resultado]) -> str:
             destino = escape(pub.url or "", quote=True)
             corpo = escape((pub.ementa or pub.texto)[:220])
             link = f'<a href="{destino}">{titulo}</a>' if destino else titulo
-            partes.append(f"<li>{link}<br><small>{corpo}</small></li>")
+            # `unidade` varia dentro da mesma coleta (Gabinete do Ministro,
+            # ANVISA, FHEMIG) e por isso informa; `orgao` é igual para todas.
+            origem = f"<strong>{escape(pub.unidade)}</strong> — " if pub.unidade else ""
+            partes.append(f"<li>{origem}{link}<br><small>{corpo}</small></li>")
         partes.append("</ul>")
     partes.append("</body>")
     return "".join(partes)
@@ -3934,7 +4388,7 @@ Por fim, em `main()`, antes do `return _consultar(args)`:
 - [ ] **Step 5: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_notificacao.py tests/test_cli.py -v`
-Expected: PASS (9 testes novos + os 9 do CLI seguem passando)
+Expected: PASS (11 testes novos + os 10 do CLI seguem passando)
 
 - [ ] **Step 6: Commit**
 
@@ -3966,6 +4420,12 @@ Expected: PASS em todos os testes de todas as tasks. Se algum falhar, corrigir a
 
 ```bash
 pip install -e ".[dev]"
+
+# As DUAS formas de invocacao precisam funcionar: o console script (usado no
+# README) e o modulo (usado no cron quando o PATH nao tem os scripts do venv).
+radar --help
+python -m radar.cli --help
+
 python -m radar.cli coletar --config config/config.yaml --data 2026-09-03 --fonte todas
 echo "exit=$?"
 ```
