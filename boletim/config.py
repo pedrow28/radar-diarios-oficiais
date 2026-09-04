@@ -46,20 +46,16 @@ class ConfigBoletim:
         if not caminho.exists():
             raise FileNotFoundError(f"Config não encontrado: {caminho}")
         bruto = yaml.safe_load(caminho.read_text(encoding="utf-8")) or {}
-        bloco = bruto.get("boletim", {})
+        bloco = dict(bruto.get("boletim", {}))
         # `dir_dados` é do topo do YAML: mesma chave que `radar.core.config.Config` usa.
         armazenamento = bruto.get("armazenamento", {})
-        return cls(
-            modelo=bloco.get("modelo", "claude-haiku-4-5"),
-            lote=int(bloco.get("lote", 12)),
-            max_chars_texto=int(bloco.get("max_chars_texto", 3000)),
-            max_itens_dia=int(bloco.get("max_itens_dia", 120)),
-            tentativas_llm=int(bloco.get("tentativas_llm", 2)),
-            timeout_llm_s=int(bloco.get("timeout_llm_s", 180)),
-            site_url=bloco.get("site_url", "https://pedrow28.github.io/radar-diarios-oficiais"),
-            cta=ConfigCTA(**bloco.get("cta", {})),
-            fontes=bloco.get("fontes", ["inlabs", "iofmg"]),
-            dir_saida=Path(bloco.get("dir_saida", "./boletim/saida")),
-            dir_site=Path(bloco.get("dir_site", "./site")),
-            dir_dados=Path(armazenamento.get("dir_dados", "./data")),
-        )
+        bloco["cta"] = ConfigCTA(**bloco.get("cta", {}))
+        padrao = cls()
+        for campo in ("lote", "max_chars_texto", "max_itens_dia", "tentativas_llm", "timeout_llm_s"):
+            if campo in bloco:
+                bloco[campo] = int(bloco[campo])
+        for campo in ("dir_saida", "dir_site"):
+            if campo in bloco:
+                bloco[campo] = Path(bloco[campo])
+        bloco["dir_dados"] = Path(armazenamento.get("dir_dados", padrao.dir_dados))
+        return cls(**bloco)

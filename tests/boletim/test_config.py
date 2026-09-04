@@ -72,6 +72,36 @@ def test_yaml_sobrescreve_os_defaults(tmp_path: Path):
     assert cfg.cta.mensagem == "Oi, vi o boletim de {data}"
 
 
+def test_bloco_parcial_mantem_defaults_dos_campos_omitidos(tmp_path: Path):
+    yaml_parcial = """
+armazenamento:
+  dir_dados: ./data
+boletim:
+  lote: 7
+  cta:
+    whatsapp: "5511999999999"
+"""
+    caminho = _escrever(tmp_path, yaml_parcial)
+    cfg = ConfigBoletim.carregar(caminho)
+    # Campo sobrescrito.
+    assert cfg.lote == 7
+    assert cfg.cta.whatsapp == "5511999999999"
+    # Campos omitidos no bloco `boletim` continuam com o default da dataclass
+    # (prova de que `carregar` usa o spread e não uma lista paralela de literais).
+    assert cfg.modelo == "claude-haiku-4-5"
+    assert cfg.max_chars_texto == 3000
+    assert cfg.max_itens_dia == 120
+    assert cfg.tentativas_llm == 2
+    assert cfg.timeout_llm_s == 180
+    assert cfg.site_url == "https://pedrow28.github.io/radar-diarios-oficiais"
+    assert cfg.fontes == ["inlabs", "iofmg"]
+    assert cfg.dir_saida == Path("./boletim/saida")
+    assert cfg.dir_site == Path("./site")
+    # Default do ConfigCTA preservado para os campos não sobrescritos.
+    assert cfg.cta.texto_botao == ConfigCTA().texto_botao
+    assert cfg.cta.mensagem == ConfigCTA().mensagem
+
+
 def test_config_boletim_inexistente_da_erro_claro(tmp_path: Path):
     import pytest
 
