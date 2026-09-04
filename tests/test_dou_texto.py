@@ -46,3 +46,31 @@ def test_html_sem_corpo_devolve_texto_vazio_sem_estourar():
     assert isinstance(resultado, TextoDOU)
     assert resultado.texto == ""
     assert resultado.identifica is None
+    assert resultado.ementa is None
+
+
+def test_corta_no_rodape_e_ignora_o_que_vem_depois():
+    """O ato termina no rodape; paragrafo de mobiliario nao e inteiro teor."""
+    html = (
+        '<html><div class="texto-dou">'
+        '<p class="identifica">Portaria X</p>'
+        '<p class="dou-paragraph">Conteudo do ato.</p>'
+        "</div>"
+        '<div class="informacao-conteudo-dou">'
+        '<p class="h6">Este conteudo nao substitui o publicado no DOU.</p>'
+        "</div></html>"
+    )
+    texto = extrair_texto(html).texto
+    assert "Conteudo do ato." in texto
+    assert "nao substitui" not in texto
+
+
+def test_sem_rodape_ainda_extrai_ate_o_fim():
+    """Fallback: se a pagina nao tiver rodape, nao pode devolver vazio."""
+    html = (
+        '<html><div class="texto-dou">'
+        '<p class="identifica">Portaria Y</p>'
+        '<p class="dou-paragraph">Unico paragrafo.</p>'
+        "</div></html>"
+    )
+    assert "Unico paragrafo." in extrair_texto(html).texto

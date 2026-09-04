@@ -11,6 +11,11 @@ import re
 from dataclasses import dataclass
 
 _CORPO = re.compile(r'<div[^>]*class="[^"]*\btexto-dou\b[^"]*"[^>]*>(.*)', re.DOTALL)
+# O ato acaba no rodape. Sem esse corte, paragrafos de mobiliario da pagina
+# (classe `h6`, avisos de "nao substitui o publicado") entram no inteiro teor.
+_FIM_DO_ATO = re.compile(
+    r'<div[^>]*class="[^"]*(?:informacao-conteudo-dou|rodape-dou)', re.DOTALL
+)
 _PARAGRAFO = re.compile(r'<p class="([^"]+)"[^>]*>(.*?)</p>', re.DOTALL)
 _TAG = re.compile(r"<[^>]+>")
 _ESPACOS = re.compile(r"\s+")
@@ -36,11 +41,17 @@ def extrair_texto(html: str) -> TextoDOU:
     if not corpo:
         return TextoDOU(identifica=None, ementa=None, texto="")
 
+    # Corta no rodape quando ele existe; senao vai ate o fim do documento.
+    regiao = corpo.group(1)
+    rodape = _FIM_DO_ATO.search(regiao)
+    if rodape:
+        regiao = regiao[: rodape.start()]
+
     identifica: str | None = None
     ementa: str | None = None
     linhas: list[str] = []
 
-    for match in _PARAGRAFO.finditer(corpo.group(1)):
+    for match in _PARAGRAFO.finditer(regiao):
         classes, conteudo = match.groups()
         nomes = set(classes.split())
         if nomes & _CLASSES_IGNORADAS:
