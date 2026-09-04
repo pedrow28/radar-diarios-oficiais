@@ -1,0 +1,11 @@
+# Fixtures são bytes capturados da fonte real. Qualquer normalização de fim de
+# linha ou de encoding invalida exatamente os testes que elas existem para
+# proteger (ISO-8859-1 na busca do DOU, offsets do PDF, envelope PKCS#7).
+tests/fixtures/** -text -diff
+
+# Código e docs: normalizar no repositório, respeitar o SO no working copy.
+*.py   text eol=lf
+*.md   text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
+*.toml text eol=lf
