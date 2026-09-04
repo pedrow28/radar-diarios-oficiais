@@ -28,6 +28,10 @@ _PADRAO_BLOCO = re.compile(
     re.DOTALL,
 )
 _PADRAO_TOTAL = re.compile(r"(\d+)\s+resultados?")
+# Teto duro de páginas para quando o total não pôde ser lido: sem ele, a única
+# saída do laço seria a página vazia ou repetida, e um portal que sempre
+# devolvesse itens novos manteria a coleta rodando para sempre.
+_TETO_SEM_TOTAL = 40
 
 
 def decodificar_busca(bruto: bytes) -> str:
@@ -148,6 +152,7 @@ def percorrer_paginas(buscar_pagina, delta: int) -> tuple[list[dict], list[str]]
     unicos: dict[str, dict] = {}
     avisos: list[str] = []
     total = 0
+    total_conhecido = True
     vistos_anteriores: set[str] | None = None
     cursor: Cursor | None = None
     pagina = 1
@@ -155,14 +160,30 @@ def percorrer_paginas(buscar_pagina, delta: int) -> tuple[list[dict], list[str]]
 
     while pagina <= teto:
         html = buscar_pagina(pagina, cursor)
+        # O `jsonArray` é extraído ANTES de qualquer decisão sobre o total: o
+        # total sai de um texto da página ("118 resultados") e some se o layout
+        # mudar, enquanto os itens continuam íntegros. Decidir pelo total antes
+        # de olhar os itens transformava mudança de layout em `vazio` com exit 0
+        # e nenhum aviso — a falha silenciosa que o contrato existe para impedir.
+        itens = extrair_jsonarray(html)
         if pagina == 1:
             total = total_de_resultados(html)
+            if total == 0 and not itens:
+                return [], []  # dia sem publicação: vazio legítimo, sem aviso.
             if total == 0:
-                return [], []
-            # Uma página de margem para o caso de o total oscilar durante a coleta.
-            teto = -(-total // delta) + 1
+                total_conhecido = False
+                avisos.append(
+                    "O total não pôde ser lido da página; o layout da busca pode "
+                    "ter mudado. Seguindo com os itens do jsonArray."
+                )
+                logger.warning(avisos[-1])
+                # Sem total não há teto derivável; a paginação para por página
+                # vazia ou repetida, com um limite duro contra laço infinito.
+                teto = _TETO_SEM_TOTAL
+            else:
+                # Uma página de margem para o caso de o total oscilar durante a coleta.
+                teto = -(-total // delta) + 1
 
-        itens = extrair_jsonarray(html)
         if not itens:
             break
 
@@ -181,7 +202,7 @@ def percorrer_paginas(buscar_pagina, delta: int) -> tuple[list[dict], list[str]]
             if chave:
                 unicos[chave] = item
 
-        if len(unicos) >= total:
+        if total_conhecido and len(unicos) >= total:
             break
         cursor = cursor_do_ultimo(itens)
         pagina += 1

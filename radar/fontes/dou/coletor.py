@@ -52,10 +52,15 @@ class FonteDOU:
         itens, avisos = busca.percorrer_paginas(pagina, self.cfg.delta)
 
         if not itens:
-            self.logger.info("DOU %s: nenhuma publicação para %s", data, self.cfg.orgao)
+            # `vazio` significa "não houve edição, siga sem alarme". Com aviso na
+            # mão, isso é mentira: houve algo a relatar, e o status é `parcial`.
+            status = Status.PARCIAL if avisos else Status.VAZIO
+            self.logger.info(
+                "DOU %s: nenhuma publicação para %s (%s)", data, self.cfg.orgao, status
+            )
             return Resultado(
                 fonte=self.nome, data_publicacao=data, coletado_em=quando,
-                status=Status.VAZIO, escopo=escopo, publicacoes=[], avisos=avisos,
+                status=status, escopo=escopo, publicacoes=[], avisos=avisos,
             )
 
         textos: dict[str, TextoDOU | None] = {}

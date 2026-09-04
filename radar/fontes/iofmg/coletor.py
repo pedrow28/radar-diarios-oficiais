@@ -31,21 +31,34 @@ class FonteIOFMG:
         # é a divisão por órgão (spec §4), e toda `Publicacao` daqui tem
         # `secao: null`. `ConfigIOFMG.secao` é config do usuário e não muda aqui.
         escopo = {"caderno": self.cfg.caderno, "orgao": self.cfg.secao}
-        vazio = Resultado(
-            fonte=self.nome, data_publicacao=data, coletado_em=quando,
-            status=Status.VAZIO, escopo=escopo, publicacoes=[], avisos=[],
-        )
 
+        def sem_nada(status: Status, avisos: list[str]) -> Resultado:
+            return Resultado(
+                fonte=self.nome, data_publicacao=data, coletado_em=quando,
+                status=status, escopo=escopo, publicacoes=[], avisos=avisos,
+            )
+
+        # Dia sem edição é o único `vazio` legítimo: nada a relatar além do
+        # próprio status, portanto sem aviso — `vazio` com aviso seria "não
+        # houve edição" carregando o relato de uma falha.
         try:
             dados = self._obter_dados(data, forcar)
+        except SemEdicao as exc:
+            self.logger.info("IOF-MG %s: %s", data, exc)
+            return sem_nada(Status.VAZIO, [])
+
+        # Já daqui para baixo há edição publicada. Não achar o caderno ou o
+        # órgão dentro dela pode ser dia sem publicação da SES, mas também pode
+        # ser renomeação no índice da API — que, reportada como `vazio`, seria
+        # coleta quebrada passando por domingo, todo dia, para sempre.
+        try:
             caderno = api.caderno_principal(dados, self.cfg.caderno)
             arquivo = dados.get("arquivoCadernoPrincipal", {})
             total_paginas = int(arquivo.get("totalPaginas", 0))
             inicio, fim = pdf_mod.intervalo_da_secao(caderno, self.cfg.secao, total_paginas)
         except SemEdicao as exc:
-            self.logger.info("IOF-MG %s: %s", data, exc)
-            vazio.avisos.append(str(exc))
-            return vazio
+            self.logger.warning("IOF-MG %s: %s", data, exc)
+            return sem_nada(Status.PARCIAL, [str(exc)])
 
         conteudo = self._obter_pdf(data, dados, forcar)
         paginas = pdf_mod.texto_das_paginas(conteudo, inicio, fim)
@@ -59,10 +72,11 @@ class FonteIOFMG:
         brutos = segmenta.segmentar(paginas, self.cfg.tipos_publicacao)
 
         if not brutos:
-            aviso = f"Seção {self.cfg.secao!r} localizada em pp. {inicio}-{fim}, mas nada segmentado."
+            # Órgão localizado e nada segmentado é quebra de extração, não
+            # ausência de edição: `parcial`, para o agente processar e alertar.
+            aviso = f"Órgão {self.cfg.secao!r} localizado em pp. {inicio}-{fim}, mas nada segmentado."
             self.logger.warning("IOF-MG %s: %s", data, aviso)
-            vazio.avisos.append(aviso)
-            return vazio
+            return sem_nada(Status.PARCIAL, [aviso])
 
         id_caderno = caderno.get("id")
         publicacoes = [
