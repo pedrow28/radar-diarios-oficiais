@@ -3896,6 +3896,24 @@ def test_consultar_encontra_no_historico(ambiente, capsys):
 def test_consultar_sem_resultado_devolve_zero(ambiente, capsys):
     cfg, _ = ambiente
     assert main(["consultar", "--config", str(cfg), "inexistente"]) == 0
+
+
+def test_modulo_executavel_com_python_m():
+    """Sem a guarda __main__, `python -m radar.cli` sai 0 em silencio.
+
+    Um cron nessa forma reportaria sucesso todo dia sem coletar nada. Usamos
+    --help porque ele exercita o despacho sem tocar a rede.
+    """
+    import subprocess
+    import sys
+
+    r = subprocess.run(
+        [sys.executable, "-m", "radar.cli", "--help"],
+        capture_output=True, text=True,
+    )
+    assert r.returncode == 0, r.stderr
+    assert "coletar" in r.stdout, "o --help precisa listar os subcomandos"
+    assert "consultar" in r.stdout
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -4010,12 +4028,20 @@ def main(argv: list[str] | None = None) -> int:
 
 def executar() -> None:
     raise SystemExit(main())
+
+
+# Sem esta guarda, `python -m radar.cli coletar ...` importa o modulo, nao roda
+# nada e sai com codigo 0. Um cron nessa forma reportaria sucesso todo dia sem
+# coletar coisa alguma — falha total silenciosa, que e exatamente o que o
+# contrato de status existe para impedir.
+if __name__ == "__main__":
+    executar()
 ```
 
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_cli.py -v`
-Expected: PASS (9 testes)
+Expected: PASS (10 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -4371,6 +4397,12 @@ Expected: PASS em todos os testes de todas as tasks. Se algum falhar, corrigir a
 
 ```bash
 pip install -e ".[dev]"
+
+# As DUAS formas de invocacao precisam funcionar: o console script (usado no
+# README) e o modulo (usado no cron quando o PATH nao tem os scripts do venv).
+radar --help
+python -m radar.cli --help
+
 python -m radar.cli coletar --config config/config.yaml --data 2026-09-03 --fonte todas
 echo "exit=$?"
 ```
