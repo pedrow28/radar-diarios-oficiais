@@ -48,6 +48,17 @@ def test_id_e_estavel_e_deterministico():
     assert a == b and len(a) == 16
 
 
+def test_publicacao_aceita_fonte_inlabs():
+    pub = _pub(fonte="inlabs")
+    assert pub.fonte == "inlabs"
+
+
+def test_id_inlabs_e_estavel():
+    a = gerar_id("inlabs", date(2026, 9, 4), "https://x/1", "Portaria 1")
+    b = gerar_id("inlabs", date(2026, 9, 4), "https://x/1", "Portaria 1")
+    assert a == b and len(a) == 16
+
+
 def test_id_muda_quando_a_url_muda():
     a = gerar_id("dou", date(2026, 9, 4), "https://x/1", "Portaria 1")
     b = gerar_id("dou", date(2026, 9, 4), "https://x/2", "Portaria 1")

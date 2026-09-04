@@ -25,7 +25,7 @@ def gerar_id(fonte: str, data_publicacao: date, url: str, titulo: str) -> str:
 @dataclass(frozen=True)
 class Publicacao:
     id: str
-    fonte: Literal["dou", "iofmg"]
+    fonte: Literal["dou", "iofmg", "inlabs"]
     data_publicacao: date
     coletado_em: datetime
 
