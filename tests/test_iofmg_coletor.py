@@ -191,6 +191,35 @@ def test_ato_do_orgao_anterior_nao_entra_com_procedencia_falsa(cfg, storage, dir
     assert all(p.orgao == "Secretaria de Estado de Saúde" for p in resultado.publicacoes)
 
 
+# ── N2: cabeçalho do órgão não achado corta nada, mas agora avisa ───────────
+
+
+def test_cabecalho_do_orgao_alvo_nao_achado_gera_aviso_e_parcial(cfg, storage, dir_fixtures, monkeypatch):
+    """O fallback de não cortar quando o cabeçalho não é achado está certo;
+    o que faltava era o aviso. Sem ele, o resultado saía `ok`, exit 0,
+    possivelmente com atos de outro órgão rotulados como da Saúde.
+    """
+    dia = date(2026, 9, 2)
+    _semear_02(storage, dir_fixtures, dia)
+    monkeypatch.setattr(
+        "radar.fontes.iofmg.pdf.posicao_do_cabecalho", lambda texto, secao: None
+    )
+    resultado = FonteIOFMG(cfg, storage, SessaoProibida()).coletar(dia)
+
+    assert resultado.status == Status.PARCIAL
+    assert any(
+        "Secretaria de Estado de Saúde" in a and "não encontrado" in a
+        for a in resultado.avisos
+    ), resultado.avisos
+
+
+def test_cabecalhos_achados_no_intervalo_real_nao_geram_aviso(cfg, storage, resposta_api):
+    """Regressão: a checagem nova não pode disparar quando o corte funciona."""
+    resultado = FonteIOFMG(cfg, storage, SessaoFalsa(resposta_api)).coletar(DIA)
+    assert resultado.status == Status.OK
+    assert resultado.avisos == []
+
+
 # ── C3 e K1: campo desconhecido é None, nunca inventado ─────────────────────
 
 

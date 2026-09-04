@@ -62,13 +62,37 @@ class FonteIOFMG:
 
         conteudo = self._obter_pdf(data, dados, forcar)
         paginas = pdf_mod.texto_das_paginas(conteudo, inicio, fim)
+        avisos: list[str] = []
+
         # As duas pontas do intervalo são compartilhadas: a primeira página traz
         # o fim do órgão anterior e a última, o início do seguinte. Cortar as
         # duas antes de segmentar, senão ato alheio entra com procedência falsa.
+        # `truncar_*` já tem um fallback seguro para cabeçalho não encontrado:
+        # não corta nada, para não mutilar conteúdo em silêncio. Mas "não
+        # cortar" sem avisar saía `ok`, exit 0 — possivelmente com atos de
+        # outro órgão rotulados como do alvo. Checar aqui, antes de cortar, é
+        # o que transforma esse fallback silencioso em `parcial`.
+        if paginas and pdf_mod.posicao_do_cabecalho(paginas[0][1], self.cfg.secao) is None:
+            aviso = (
+                f"Cabeçalho de {self.cfg.secao!r} não encontrado na primeira "
+                f"página (p. {inicio}); a fronteira com o órgão anterior pode "
+                f"não ter sido cortada."
+            )
+            self.logger.warning("IOF-MG %s: %s", data, aviso)
+            avisos.append(aviso)
         paginas = pdf_mod.truncar_antes_da_secao(paginas, self.cfg.secao)
-        paginas = pdf_mod.truncar_na_proxima_secao(
-            paginas, pdf_mod.proxima_secao(caderno, self.cfg.secao)
-        )
+
+        proxima = pdf_mod.proxima_secao(caderno, self.cfg.secao)
+        if proxima and paginas and pdf_mod.posicao_do_cabecalho(paginas[-1][1], proxima) is None:
+            aviso = (
+                f"Cabeçalho de {proxima!r} não encontrado na última página "
+                f"(p. {fim}); a fronteira com o órgão seguinte pode não ter "
+                f"sido cortada."
+            )
+            self.logger.warning("IOF-MG %s: %s", data, aviso)
+            avisos.append(aviso)
+        paginas = pdf_mod.truncar_na_proxima_secao(paginas, proxima)
+
         brutos = segmenta.segmentar(paginas, self.cfg.tipos_publicacao)
 
         if not brutos:
@@ -76,16 +100,18 @@ class FonteIOFMG:
             # ausência de edição: `parcial`, para o agente processar e alertar.
             aviso = f"Órgão {self.cfg.secao!r} localizado em pp. {inicio}-{fim}, mas nada segmentado."
             self.logger.warning("IOF-MG %s: %s", data, aviso)
-            return sem_nada(Status.PARCIAL, [aviso])
+            avisos.append(aviso)
+            return sem_nada(Status.PARCIAL, avisos)
 
         id_caderno = caderno.get("id")
         publicacoes = [
             normaliza.normalizar(b, data, quando, id_caderno, self.cfg.secao) for b in brutos
         ]
         self.logger.info("IOF-MG %s: %d publicações em pp. %d-%d", data, len(publicacoes), inicio, fim)
+        status = Status.PARCIAL if avisos else Status.OK
         return Resultado(
             fonte=self.nome, data_publicacao=data, coletado_em=quando,
-            status=Status.OK, escopo=escopo, publicacoes=publicacoes, avisos=[],
+            status=status, escopo=escopo, publicacoes=publicacoes, avisos=avisos,
         )
 
     def _obter_dados(self, data: date, forcar: bool) -> dict:
