@@ -31,19 +31,30 @@ def obter_bytes(
     *,
     tentativas: int = 3,
     espera_base: float = 1.0,
-) -> bytes:
+    aceitar_404: bool = False,
+    headers: dict[str, str] | None = None,
+) -> bytes | None:
     """Busca a URL devolvendo bytes crus.
 
     Erro transitório (rede, 5xx, 429) é retentado com backoff exponencial.
     Erro permanente (4xx, 401 incluído) não é: retentar um 404 nunca o
     transforma em 200, e um 401 é bloqueio de acesso, não ausência de edição.
+
+    `aceitar_404` devolve `None` no lugar de levantar, e só quem sabe que
+    naquela URL o 404 significa "o arquivo do dia não existe" pode pedi-lo —
+    é o caso do download do INLABS num domingo. Para as demais fontes o 404
+    continua sendo erro permanente.
     """
     logger = configurar_log()
     ultimo: Exception | None = None
+    # `headers` só entra na chamada quando há o que passar: assim qualquer
+    # objeto com assinatura `get(url, timeout)` — as sessões falsas dos testes
+    # inclusive — continua servindo de sessão.
+    extras = {"headers": headers} if headers else {}
 
     for tentativa in range(1, tentativas + 1):
         try:
-            resposta = sessao.get(url, timeout=_TIMEOUT)
+            resposta = sessao.get(url, timeout=_TIMEOUT, **extras)
         except requests.RequestException as exc:
             ultimo = exc
             logger.warning("Falha de rede em %s (tentativa %d/%d): %s", url, tentativa, tentativas, exc)
@@ -51,6 +62,9 @@ def obter_bytes(
             codigo = resposta.status_code
             if codigo == 200:
                 return resposta.content
+            if codigo == 404 and aceitar_404:
+                logger.info("HTTP 404 em %s: arquivo inexistente nesta data", url)
+                return None
             # Sem ramo para 401: a validação contra a API real provou que num
             # dia sem edição ela responde HTTP 200 com `{"dados":null}`, nunca
             # 401. O único 401 que ela pode emitir é bloqueio de acesso (WAF, IP
