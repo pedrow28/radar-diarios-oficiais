@@ -20,7 +20,7 @@ Estes valores vêm da spec e valem para **todas** as tasks:
 - **`Publicacao.texto` é o inteiro teor.** Nunca um snippet truncado.
 - **Nenhum campo de juízo** (`score`, `is_sus`, `impacto`, `relevancia`). O juízo é do Hermes.
 - **Sem segredo no código.** E-mail, chaves e caminhos de usuário vêm de `config.yaml` ou variável de ambiente.
-- **Encoding do DOU:** busca é `iso-8859-1` (o header `charset=UTF-8` mente); página de publicação é `utf-8`.
+- **Encoding do DOU:** UTF-8 nas duas páginas, header declarado correto (verificado contra o site). `decodificar_busca` tenta UTF-8 e só cai em ISO-8859-1 se os bytes não forem UTF-8 válido.
 - **ID do caderno IOF-MG** sempre lido de `cadernos[].id`. Nunca constante.
 - **Toda exceção de coleta** é `SemEdicao`, `ExtracaoParcial` ou `FonteIndisponivel`. Nada de `except:` pelado.
 - **Testes rodam offline**, contra as fixtures em `tests/fixtures/`. Nenhum teste faz requisição de rede.
@@ -1396,11 +1396,19 @@ def html_busca(dir_fixtures: Path) -> str:
     return decodificar_busca((dir_fixtures / "dou" / "busca-ms-2026-09-03-p1.html").read_bytes())
 
 
-def test_decodifica_como_iso_8859_1_apesar_do_header_mentir(html_busca: str):
-    """A pagina declara charset=UTF-8 e serve ISO-8859-1. Regressao critica."""
+def test_decodifica_em_utf8_preservando_acentuacao(html_busca: str):
+    """Acento intacto e sem mojibake. Regressao critica de encoding."""
     assert "Ministério da Saúde" in html_busca
-    assert "Ministï¿½rio" not in html_busca
-    assert "�" not in html_busca[:20000]
+    # Sinais de ter lido UTF-8 como latin-1:
+    assert "Ã©" not in html_busca
+    assert "Âº" not in html_busca
+    assert "�" not in html_busca
+
+
+def test_cai_para_latin1_se_os_bytes_nao_forem_utf8_valido():
+    """Rede de seguranca caso o portal mude o encoding servido."""
+    bruto = "Ministério".encode("iso-8859-1")  # invalido em UTF-8
+    assert decodificar_busca(bruto) == "Ministério"
 
 
 def test_extrai_os_itens_do_bloco_json(html_busca: str):
@@ -1534,9 +1542,8 @@ BASE_BUSCA = "https://www.in.gov.br/consulta/-/buscar/dou"
 BASE_PUBLICACAO = "https://www.in.gov.br/web/dou/-/"
 ID_BLOCO_JSON = "_br_com_seatecnologia_in_buscadou_BuscaDouPortlet_params"
 
-# A página declara charset=UTF-8 mas entrega ISO-8859-1. Confiar no header
-# produz mojibake em todo nome de órgão acentuado.
-ENCODING_BUSCA = "iso-8859-1"
+# Verificado contra o site: o portal serve UTF-8 e o header diz a verdade.
+ENCODING_BUSCA = "utf-8"
 ENCODING_PUBLICACAO = "utf-8"
 
 _PADRAO_BLOCO = re.compile(
@@ -1547,8 +1554,17 @@ _PADRAO_TOTAL = re.compile(r"(\d+)\s+resultados?")
 
 
 def decodificar_busca(bruto: bytes) -> str:
-    """Decodifica a página de busca com o encoding que ela realmente usa."""
-    return bruto.decode(ENCODING_BUSCA)
+    """Decodifica a página de busca.
+
+    UTF-8 é auto-validante: uma sequência inválida levanta em vez de produzir
+    lixo silencioso. Por isso tentamos UTF-8 primeiro e só caímos em ISO-8859-1
+    se os bytes não forem UTF-8 válido — o que só aconteceria se o portal
+    mudasse. Latin-1 nunca falha, então jamais deve vir primeiro.
+    """
+    try:
+        return bruto.decode(ENCODING_BUSCA)
+    except UnicodeDecodeError:
+        return bruto.decode("iso-8859-1")
 
 
 def extrair_jsonarray(html: str) -> list[dict]:
@@ -1641,7 +1657,7 @@ def url_publicacao(url_title: str) -> str:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_dou_busca.py -v`
-Expected: PASS (14 testes)
+Expected: PASS (15 testes)
 
 - [ ] **Step 5: Commit**
 

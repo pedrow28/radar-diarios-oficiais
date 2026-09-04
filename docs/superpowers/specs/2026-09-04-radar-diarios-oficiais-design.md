@@ -170,8 +170,9 @@ Cada item traz:
 
 Toda a classificação por palavra-chave é removida: `secao` e `tipo` vêm da fonte.
 
-**Encoding:** a página de busca declara `charset=UTF-8` **mas é ISO-8859-1**.
-Decodificar pelo header declarado produz mojibake. Forçar `iso-8859-1` na busca.
+**Encoding:** UTF-8 nas duas páginas, com o header declarado correto. Verificado
+contra o site. `decodificar_busca` tenta UTF-8 e só cai em ISO-8859-1 se os bytes
+não forem UTF-8 válido, porque UTF-8 é auto-validante e latin-1 nunca falha.
 
 **Paginação:** iterar páginas por parâmetro de URL até cobrir o total. Acumular
 em dict por URL. Se o conjunto de URLs de uma página for idêntico ao da anterior,
@@ -181,8 +182,7 @@ a paginação travou → aborta com `parcial` e aviso. Nunca declarar sucesso po
 ### 6.2 Texto integral
 
 Cada publicação é buscada na sua página canônica
-(`https://www.in.gov.br/web/dou/-/<urlTitle>`), que é **UTF-8** (diferente da
-busca). O corpo está em `div.texto-dou`, com parágrafos classificados:
+(`https://www.in.gov.br/web/dou/-/<urlTitle>`), também em **UTF-8**. O corpo está em `div.texto-dou`, com parágrafos classificados:
 `identifica` (título), `ementa`, `dou-paragraph`, `assina`, `anexo`. Tabelas em
 `dou-table`.
 
@@ -339,16 +339,16 @@ Fixtures reais capturadas em 2026-09-04, versionadas em `tests/fixtures/`
 
 | fixture | testa |
 |---|---|
-| `dou/busca-ms-2026-09-04.html` | parse do `jsonArray`, encoding ISO-8859-1, mapeamento `pubName`→`secao` |
-| `dou/pub-portaria-gm-ms-12141.html` | extração de `texto-dou`, encoding UTF-8, `identifica`/`ementa` |
+| `dou/busca-ms-2026-09-03-p1.html` e `-p2.html` | parse do `jsonArray`, encoding UTF-8, `pubName`→`secao`, paginação por cursor |
+| `dou/pub-portaria-gm-ms-12141.html` | extração de `texto-dou`, `identifica`/`ementa` |
 | `iofmg/envelope-pkcs7-2026-09-03.bin.gz` | desembrulho PKCS#7 em BER indefinido |
 | `iofmg/edicao-*.meta.json` | índice de seções, recorte de páginas, `id` do caderno por data |
 | `iofmg/caderno-*-ses.pdf` | segmentação e limpeza de texto |
 
 Cobertura mínima obrigatória:
 
-- **encoding ISO-8859-1 na busca do DOU** (regressão garantida se alguém
-  "consertar" para usar o header declarado)
+- **encoding UTF-8 com acentuação intacta na busca do DOU**, e o fallback para
+  latin-1 quando os bytes não são UTF-8 válido
 - paginação travada → `parcial`, nunca sucesso falso
 - recorte da última seção do caderno (sem próxima seção)
 - `id` do caderno vindo da resposta, jamais constante
