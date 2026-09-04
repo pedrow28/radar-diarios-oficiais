@@ -11,7 +11,12 @@ from radar.fontes.dou.texto import TextoDOU
 
 # `pubName` é a seção real do diário, informada pela fonte.
 _SECAO_POR_PUBNAME = {"DO1": "1", "DO2": "2", "DO3": "3"}
-_PADRAO_NUMERO = re.compile(r"N[º°o]\s*([\d][\d.\-/]*)", re.IGNORECASE)
+# Exige o simbolo ordinal de verdade. Incluir "o" na classe faria a palavra
+# "no" casar sob IGNORECASE, e "Plano 2026" viraria numero de ato 2026 —
+# invencao de dado, que e exatamente o que este pacote nao pode fazer.
+# Medido sobre os 118 titulos reais das fixtures: a forma estrita extrai os
+# mesmos 62 numeros que a frouxa, sem perder nada.
+_PADRAO_NUMERO = re.compile(r"\bN[º°]\s*([\d][\d.\-/]*)", re.IGNORECASE)
 
 
 def _numero(titulo: str) -> str | None:

@@ -54,6 +54,27 @@ def test_numero_ausente_vira_none_nao_placeholder():
     assert pub.numero is None
 
 
+def test_numero_nao_e_inventado_a_partir_de_no_seguido_de_ano():
+    """Regressao: 'Plano 2026' contem 'no 2026' e nao pode virar numero do ato."""
+    for titulo in (
+        "Divulga o Plano 2026 de metas",
+        "Concede abono 2026 aos servidores",
+        "Extrato do Convênio - Governo 2026",
+    ):
+        assert normalizar({**ITEM, "title": titulo}, None, DIA, QUANDO).numero is None
+
+
+def test_pagina_nao_numerica_vira_none_sem_estourar():
+    assert normalizar({**ITEM, "numberPage": "184-185"}, None, DIA, QUANDO).pagina is None
+    assert normalizar({**ITEM, "numberPage": None}, None, DIA, QUANDO).pagina is None
+
+
+def test_hierarquia_ausente_nao_estoura():
+    item = {k: v for k, v in ITEM.items() if k != "hierarchyStr"}
+    pub = normalizar(item, None, DIA, QUANDO)
+    assert pub.unidade is None
+
+
 def test_usa_texto_integral_quando_disponivel():
     texto = TextoDOU(identifica="Portaria GM/MS Nº 12.141", ementa="Renova.", texto="Art. 1º Fica renovada.")
     pub = normalizar(ITEM, texto, DIA, QUANDO)
