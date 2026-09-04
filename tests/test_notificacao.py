@@ -7,12 +7,12 @@ from radar.core.modelos import Publicacao, Resultado, gerar_id
 from radar.notificacao.email import enviar, montar_html
 
 
-def _pub(titulo="Portaria 1", url="https://in.gov.br/x") -> Publicacao:
+def _pub(titulo="Portaria 1", url="https://in.gov.br/x", unidade=None) -> Publicacao:
     d = date(2026, 9, 4)
     return Publicacao(
         id=gerar_id("dou", d, url, titulo), fonte="dou", data_publicacao=d,
         coletado_em=datetime(2026, 9, 4, tzinfo=timezone.utc), orgao="Ministério da Saúde",
-        unidade=None, secao="1", pagina=None, edicao="168", tipo="Portaria", numero="1",
+        unidade=unidade, secao="1", pagina=None, edicao="168", tipo="Portaria", numero="1",
         titulo=titulo, ementa="Faz algo.", texto="Art. 1º ...", url=url, origem={},
     )
 
@@ -29,6 +29,21 @@ def test_html_lista_as_publicacoes():
     html = montar_html([_resultado([_pub()])])
     assert "Portaria 1" in html
     assert "Ministério da Saúde" in html
+
+
+def test_orgao_aparece_uma_vez_so_e_nao_por_publicacao():
+    """Repetir o orgao em cada item vira ruido: sao 118 num dia de DOU."""
+    html = montar_html([_resultado([
+        _pub(titulo="A", url="https://x/a"),
+        _pub(titulo="B", url="https://x/b"),
+    ])])
+    assert html.count("Ministério da Saúde") == 1
+
+
+def test_unidade_aparece_quando_existe():
+    """`unidade` varia dentro da coleta (Gabinete do Ministro, ANVISA) e informa."""
+    html = montar_html([_resultado([_pub(titulo="A", url="https://x/a", unidade="ANVISA")])])
+    assert "ANVISA" in html
 
 
 def test_titulo_com_html_e_escapado():

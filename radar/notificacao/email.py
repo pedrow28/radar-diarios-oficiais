@@ -26,6 +26,11 @@ def montar_html(resultados: list[Resultado]) -> str:
             f"{escape(resultado.data_publicacao.strftime('%d/%m/%Y'))} "
             f"({escape(str(resultado.status))})</h2>"
         )
+        # O escopo (órgão/seção) é o mesmo para toda a coleta: entra uma vez no
+        # cabeçalho. Repeti-lo por publicação daria 118 linhas iguais num dia de DOU.
+        escopo = resultado.escopo.get("orgao") or resultado.escopo.get("secao") or ""
+        if escopo:
+            partes.append(f"<p><strong>{escape(escopo)}</strong></p>")
         if resultado.avisos:
             itens = "".join(f"<li>{escape(a)}</li>" for a in resultado.avisos)
             partes.append(f'<ul style="color:#8a6d3b">{itens}</ul>')
@@ -35,12 +40,14 @@ def montar_html(resultados: list[Resultado]) -> str:
         partes.append(f"<p>{len(resultado.publicacoes)} publicações.</p><ul>")
         for pub in resultado.publicacoes:
             titulo = escape(pub.titulo)
-            orgao = escape(pub.orgao)
             # `quote=True` é o que impede a URL raspada de escapar do atributo.
             destino = escape(pub.url or "", quote=True)
             corpo = escape((pub.ementa or pub.texto)[:220])
             link = f'<a href="{destino}">{titulo}</a>' if destino else titulo
-            partes.append(f"<li><strong>{orgao}</strong> — {link}<br><small>{corpo}</small></li>")
+            # `unidade` varia dentro da mesma coleta (Gabinete do Ministro,
+            # ANVISA, FHEMIG) e por isso informa; `orgao` é igual para todas.
+            origem = f"<strong>{escape(pub.unidade)}</strong> — " if pub.unidade else ""
+            partes.append(f"<li>{origem}{link}<br><small>{corpo}</small></li>")
         partes.append("</ul>")
     partes.append("</body>")
     return "".join(partes)
