@@ -4082,12 +4082,12 @@ from radar.core.modelos import Publicacao, Resultado, gerar_id
 from radar.notificacao.email import enviar, montar_html
 
 
-def _pub(titulo="Portaria 1", url="https://in.gov.br/x") -> Publicacao:
+def _pub(titulo="Portaria 1", url="https://in.gov.br/x", unidade=None) -> Publicacao:
     d = date(2026, 9, 4)
     return Publicacao(
         id=gerar_id("dou", d, url, titulo), fonte="dou", data_publicacao=d,
         coletado_em=datetime(2026, 9, 4, tzinfo=timezone.utc), orgao="Ministério da Saúde",
-        unidade=None, secao="1", pagina=None, edicao="168", tipo="Portaria", numero="1",
+        unidade=unidade, secao="1", pagina=None, edicao="168", tipo="Portaria", numero="1",
         titulo=titulo, ementa="Faz algo.", texto="Art. 1º ...", url=url, origem={},
     )
 
@@ -4104,6 +4104,21 @@ def test_html_lista_as_publicacoes():
     html = montar_html([_resultado([_pub()])])
     assert "Portaria 1" in html
     assert "Ministério da Saúde" in html
+
+
+def test_orgao_aparece_uma_vez_so_e_nao_por_publicacao():
+    """Repetir o orgao em cada item vira ruido: sao 118 num dia de DOU."""
+    html = montar_html([_resultado([
+        _pub(titulo="A", url="https://x/a"),
+        _pub(titulo="B", url="https://x/b"),
+    ])])
+    assert html.count("Ministério da Saúde") == 1
+
+
+def test_unidade_aparece_quando_existe():
+    """`unidade` varia dentro da coleta (Gabinete do Ministro, ANVISA) e informa."""
+    html = montar_html([_resultado([_pub(titulo="A", url="https://x/a", unidade="ANVISA")])])
+    assert "ANVISA" in html
 
 
 def test_titulo_com_html_e_escapado():
@@ -4226,6 +4241,11 @@ def montar_html(resultados: list[Resultado]) -> str:
             f"{escape(resultado.data_publicacao.strftime('%d/%m/%Y'))} "
             f"({escape(str(resultado.status))})</h2>"
         )
+        # O escopo (órgão/seção) é o mesmo para toda a coleta: entra uma vez no
+        # cabeçalho. Repeti-lo por publicação daria 118 linhas iguais num dia de DOU.
+        escopo = resultado.escopo.get("orgao") or resultado.escopo.get("secao") or ""
+        if escopo:
+            partes.append(f"<p><strong>{escape(escopo)}</strong></p>")
         if resultado.avisos:
             itens = "".join(f"<li>{escape(a)}</li>" for a in resultado.avisos)
             partes.append(f'<ul style="color:#8a6d3b">{itens}</ul>')
@@ -4239,7 +4259,10 @@ def montar_html(resultados: list[Resultado]) -> str:
             destino = escape(pub.url or "", quote=True)
             corpo = escape((pub.ementa or pub.texto)[:220])
             link = f'<a href="{destino}">{titulo}</a>' if destino else titulo
-            partes.append(f"<li>{link}<br><small>{corpo}</small></li>")
+            # `unidade` varia dentro da mesma coleta (Gabinete do Ministro,
+            # ANVISA, FHEMIG) e por isso informa; `orgao` é igual para todas.
+            origem = f"<strong>{escape(pub.unidade)}</strong> — " if pub.unidade else ""
+            partes.append(f"<li>{origem}{link}<br><small>{corpo}</small></li>")
         partes.append("</ul>")
     partes.append("</body>")
     return "".join(partes)
@@ -4365,7 +4388,7 @@ Por fim, em `main()`, antes do `return _consultar(args)`:
 - [ ] **Step 5: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_notificacao.py tests/test_cli.py -v`
-Expected: PASS (9 testes novos + os 9 do CLI seguem passando)
+Expected: PASS (11 testes novos + os 10 do CLI seguem passando)
 
 - [ ] **Step 6: Commit**
 
