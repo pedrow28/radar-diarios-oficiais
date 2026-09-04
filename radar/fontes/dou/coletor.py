@@ -37,7 +37,12 @@ class FonteDOU:
 
     def coletar(self, data: date, forcar: bool = False) -> Resultado:
         quando = agora_utc()
-        escopo = {"orgao": self.cfg.orgao}
+        escopo = {
+            "orgao": self.cfg.orgao,
+            # O consumidor precisa saber, so lendo o JSON, se `texto` e o
+            # inteiro teor ou o resumo truncado da listagem.
+            "texto_integral": self.cfg.baixar_texto_integral,
+        }
 
         def pagina(numero: int, cursor) -> str:
             url = busca.montar_url_busca(self.cfg.orgao, data, self.cfg.delta, numero, cursor)
@@ -87,9 +92,19 @@ class FonteDOU:
                     data, f"pub-{item.get('classPK', slug)}.html",
                     busca.url_publicacao(slug), forcar,
                 )
-                return slug, extrair_texto(bruto.decode(busca.ENCODING_PUBLICACAO)), None
+                extraido = extrair_texto(bruto.decode(busca.ENCODING_PUBLICACAO))
             except (ErroRadar, OSError, UnicodeDecodeError) as exc:
                 return slug, None, f"Texto integral indisponível para {slug}: {exc}"
+
+            # Extração vazia não levanta exceção: é o que acontece se o portal
+            # mudar a estrutura da página. Sem tratar como falha, a coleta
+            # inteira degradaria para o resumo truncado ainda dizendo "ok".
+            if not extraido.texto.strip():
+                return slug, None, (
+                    f"Texto integral vazio para {slug}: a estrutura da página "
+                    "pode ter mudado."
+                )
+            return slug, extraido, None
 
         with ThreadPoolExecutor(max_workers=max(1, self.cfg.concorrencia)) as executor:
             for slug, texto, falha in executor.map(um, itens):

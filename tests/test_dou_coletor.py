@@ -131,3 +131,31 @@ def test_escopo_registra_o_orgao(cfg, storage):
     sessao = SessaoFalsa({"buscar/dou": _html_busca([ITEM], 1), "portaria-1": HTML_PUB})
     resultado = FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4))
     assert resultado.escopo["orgao"] == "Ministério da Saúde"
+
+
+def test_texto_vazio_da_pagina_vira_parcial_com_aviso(cfg, storage):
+    """Estrutura da pagina mudada devolve vazio sem estourar.
+
+    Isso nao pode passar por coleta completa: o agente consumidor leria o
+    resumo truncado achando que e o inteiro teor.
+    """
+    sessao = SessaoFalsa({
+        "buscar/dou": _html_busca([ITEM], 1),
+        "portaria-1": b"<html><body>estrutura mudou, sem texto-dou</body></html>",
+    })
+    resultado = FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4))
+    assert resultado.status == Status.PARCIAL
+    assert any("vazio" in a.lower() for a in resultado.avisos)
+
+
+def test_escopo_registra_se_o_texto_integral_foi_buscado(cfg, storage):
+    """So lendo o JSON o consumidor precisa saber se `texto` e inteiro teor."""
+    sessao = SessaoFalsa({"buscar/dou": _html_busca([ITEM], 1), "portaria-1": HTML_PUB})
+    assert FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4)).escopo["texto_integral"] is True
+
+    cfg_resumo = ConfigDOU(
+        orgao=cfg.orgao, delta=cfg.delta, concorrencia=cfg.concorrencia,
+        baixar_texto_integral=False,
+    )
+    resultado = FonteDOU(cfg_resumo, storage, sessao).coletar(date(2026, 9, 5))
+    assert resultado.escopo["texto_integral"] is False
