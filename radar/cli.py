@@ -31,6 +31,10 @@ def _montar_parser() -> argparse.ArgumentParser:
     consultar.add_argument("--config", type=Path, default=Path("config/config.yaml"))
     consultar.add_argument("termo")
     consultar.add_argument("--desde", default=None)
+
+    notificar = sub.add_parser("notificar", help="Envia por e-mail o que já foi coletado")
+    notificar.add_argument("--config", type=Path, default=Path("config/config.yaml"))
+    notificar.add_argument("--data", default=None)
     return parser
 
 
@@ -87,12 +91,71 @@ def _consultar(args) -> int:
     return 0
 
 
+def _notificar(args) -> int:
+    import json
+
+    from radar.core.modelos import Resultado
+    from radar.notificacao.email import enviar, montar_html
+
+    cfg = Config.carregar(args.config)
+    data = parse_data(args.data) if args.data else hoje()
+    pasta = cfg.dir_dados / "normalized" / data.isoformat()
+    if not pasta.exists():
+        print(f"erro: nada coletado em {data.isoformat()}", file=sys.stderr)
+        return 2
+
+    resultados = []
+    for arquivo in sorted(pasta.glob("*.json")):
+        dados = json.loads(arquivo.read_text(encoding="utf-8"))
+        resultados.append(
+            Resultado(
+                fonte=dados["fonte"],
+                data_publicacao=data,
+                coletado_em=hoje_como_datetime(),
+                status=Status(dados["status"]),
+                escopo=dados["escopo"],
+                publicacoes=[],
+                avisos=dados["avisos"],
+            )
+        )
+        resultados[-1].publicacoes = _publicacoes_de(dados, data)
+
+    assunto = f"Radar de Diários Oficiais — {data.strftime('%d/%m/%Y')}"
+    enviado = enviar(montar_html(resultados), assunto, cfg.email)
+    print("e-mail enviado" if enviado else "e-mail não enviado (ver config/log)")
+    return 0
+
+
+def hoje_como_datetime():
+    from radar.core.datas import agora_utc
+
+    return agora_utc()
+
+
+def _publicacoes_de(dados: dict, data) -> list:
+    from datetime import datetime, timezone
+
+    from radar.core.modelos import Publicacao
+
+    publicacoes = []
+    for bruto in dados["publicacoes"]:
+        campos = dict(bruto)
+        campos["data_publicacao"] = data
+        campos["coletado_em"] = datetime.fromisoformat(
+            campos["coletado_em"].replace("Z", "+00:00")
+        ).astimezone(timezone.utc)
+        publicacoes.append(Publicacao(**campos))
+    return publicacoes
+
+
 def main(argv: list[str] | None = None) -> int:
     args = _montar_parser().parse_args(argv)
     configurar_log()
     try:
         if args.comando == "coletar":
             return _coletar(args)
+        if args.comando == "notificar":
+            return _notificar(args)
         return _consultar(args)
     except (ErroRadar, ValueError, FileNotFoundError) as exc:
         print(f"erro: {exc}", file=sys.stderr)
