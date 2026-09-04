@@ -81,9 +81,25 @@ def _coletar(args) -> int:
                 f"{resultado.fonte}: {resultado.status} | "
                 f"{len(resultado.publicacoes)} publicações | {len(resultado.avisos)} avisos"
             )
+        _limpar_bruto(storage, cfg.reter_bruto_dias, logger)
     finally:
         storage.fechar()
     return pior
+
+
+def _limpar_bruto(storage: Storage, dias: int, logger) -> None:
+    """Aplica a retenção de `raw/` (spec §8.1), sem derrubar a coleta.
+
+    A coleta já terminou aqui: uma falha ao apagar cache antigo não pode
+    transformar um dia bem coletado em exit 2.
+    """
+    try:
+        removidos = storage.limpar_raw_antigos(dias)
+    except OSError as exc:
+        logger.warning("Não foi possível limpar %s: %s", storage.dir_raw, exc)
+        return
+    if removidos:
+        logger.info("Retenção: %d dia(s) de bruto removidos (limite %d dias)", removidos, dias)
 
 
 def _consultar(args) -> int:

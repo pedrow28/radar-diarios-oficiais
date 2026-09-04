@@ -215,3 +215,39 @@ def test_erro_inesperado_no_consultar_devolve_exit_dois(ambiente, monkeypatch):
 
     monkeypatch.setattr("radar.core.storage.Storage.consultar", consulta_quebrada)
     assert main(["consultar", "--config", str(cfg), "teto"]) == 2
+
+
+# ── K4: a retenção configurada é de fato aplicada ───────────────────────────
+
+
+def test_coletar_aplica_a_retencao_de_bruto(ambiente):
+    """`reter_bruto_dias` existia na config, era testado e nunca era aplicado."""
+    from datetime import timedelta
+
+    from radar.core.datas import hoje
+    from radar.core.storage import Storage
+
+    cfg, dir_dados = ambiente
+    s = Storage(dir_dados)
+    velho = hoje() - timedelta(days=45)
+    recente = hoje() - timedelta(days=3)
+    s.salvar_raw(velho, "dou", "busca-p1.html", b"antigo")
+    s.salvar_raw(recente, "dou", "busca-p1.html", b"recente")
+    s.fechar()
+
+    assert main(["coletar", "--config", str(cfg), "--data", "2026-09-04", "--fonte", "dou"]) == 0
+    raw = dir_dados / "raw"
+    assert not (raw / velho.isoformat()).exists(), "45 dias > retenção de 30"
+    assert (raw / recente.isoformat()).exists()
+
+
+def test_falha_na_limpeza_nao_derruba_a_coleta(ambiente, monkeypatch):
+    """A coleta já terminou: apagar cache antigo não pode virar exit 2."""
+    cfg, dir_dados = ambiente
+
+    def explode(self, dias):
+        raise OSError("permissão negada")
+
+    monkeypatch.setattr("radar.core.storage.Storage.limpar_raw_antigos", explode)
+    assert main(["coletar", "--config", str(cfg), "--data", "2026-09-04", "--fonte", "dou"]) == 0
+    assert (dir_dados / "normalized" / "2026-09-04" / "dou.json").exists()

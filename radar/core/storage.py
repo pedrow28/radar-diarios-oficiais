@@ -3,11 +3,13 @@
 from __future__ import annotations
 
 import json
+import shutil
 import sqlite3
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from typing import Any
 
+from radar.core.datas import hoje
 from radar.core.modelos import Publicacao, Resultado
 
 _ESQUEMA = """
@@ -81,6 +83,33 @@ class Storage:
     def ler_raw(self, data: date, fonte: str, nome: str) -> bytes | None:
         caminho = self._caminho_raw(data, fonte, nome)
         return caminho.read_bytes() if caminho.exists() else None
+
+    def limpar_raw_antigos(self, dias: int) -> int:
+        """Remove os dias de `raw/` mais antigos que `dias`. Devolve quantos saíram.
+
+        Sem isso a VPS acumula cerca de 1,6 MB por dia indefinidamente (spec
+        §8.1). `dias <= 0` desliga a limpeza — apagar tudo nunca é o que um
+        operador quer dizer com "retenção zero" configurada por engano.
+
+        Só diretórios cujo nome é uma data ISO são candidatos: qualquer outra
+        coisa dentro de `raw/` não foi criada por este código e não é nossa
+        para apagar.
+        """
+        if dias <= 0 or not self.dir_raw.exists():
+            return 0
+        limite = hoje() - timedelta(days=dias)
+        removidos = 0
+        for pasta in sorted(self.dir_raw.iterdir()):
+            if not pasta.is_dir():
+                continue
+            try:
+                dia = date.fromisoformat(pasta.name)
+            except ValueError:
+                continue
+            if dia < limite:
+                shutil.rmtree(pasta)
+                removidos += 1
+        return removidos
 
     # ── saída normalizada ───────────────────────────────────────────────
     def salvar_normalizado(self, resultado: Resultado) -> Path:

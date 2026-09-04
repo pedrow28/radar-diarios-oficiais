@@ -95,3 +95,86 @@ def test_consulta_filtra_por_data_inicial(storage: Storage):
 
 def test_consulta_sem_resultado_devolve_lista_vazia(storage: Storage):
     assert storage.consultar("inexistente") == []
+
+
+# ── K4: retenção de `raw/` (spec §8.1) ──────────────────────────────────────
+
+
+def _semear_dia(storage, dia, conteudo=b"x"):
+    storage.salvar_raw(dia, "dou", "busca-p1.html", conteudo)
+    storage.salvar_raw(dia, "iofmg", "caderno.pdf", conteudo)
+
+
+def test_limpar_raw_remove_so_o_que_passou_da_retencao(tmp_path):
+    from datetime import timedelta
+
+    from radar.core.datas import hoje
+
+    s = Storage(tmp_path / "data")
+    try:
+        agora = hoje()
+        velho = agora - timedelta(days=31)
+        limite = agora - timedelta(days=30)
+        recente = agora - timedelta(days=2)
+        for dia in (velho, limite, recente, agora):
+            _semear_dia(s, dia)
+
+        assert s.limpar_raw_antigos(30) == 1
+        assert not (s.dir_raw / velho.isoformat()).exists()
+        for dia in (limite, recente, agora):
+            assert (s.dir_raw / dia.isoformat()).exists(), dia
+    finally:
+        s.fechar()
+
+
+def test_limpar_raw_remove_o_diretorio_inteiro_do_dia(tmp_path):
+    from datetime import timedelta
+
+    from radar.core.datas import hoje
+
+    s = Storage(tmp_path / "data")
+    try:
+        velho = hoje() - timedelta(days=90)
+        _semear_dia(s, velho, b"conteudo grande")
+        assert s.limpar_raw_antigos(30) == 1
+        assert list(s.dir_raw.iterdir()) == []
+    finally:
+        s.fechar()
+
+
+def test_limpar_raw_ignora_o_que_nao_e_dia(tmp_path):
+    """Nada dentro de `raw/` que este código não criou é nosso para apagar."""
+    s = Storage(tmp_path / "data")
+    try:
+        s.dir_raw.mkdir(parents=True, exist_ok=True)
+        (s.dir_raw / "anotacoes-do-operador").mkdir()
+        (s.dir_raw / "leia-me.txt").write_text("nao apague", encoding="utf-8")
+        assert s.limpar_raw_antigos(1) == 0
+        assert (s.dir_raw / "anotacoes-do-operador").exists()
+        assert (s.dir_raw / "leia-me.txt").exists()
+    finally:
+        s.fechar()
+
+
+def test_limpar_raw_com_retencao_zero_nao_apaga_nada(tmp_path):
+    from datetime import timedelta
+
+    from radar.core.datas import hoje
+
+    s = Storage(tmp_path / "data")
+    try:
+        _semear_dia(s, hoje() - timedelta(days=365))
+        assert s.limpar_raw_antigos(0) == 0
+        assert s.limpar_raw_antigos(-5) == 0
+        assert list(s.dir_raw.iterdir())
+    finally:
+        s.fechar()
+
+
+def test_limpar_raw_sem_diretorio_devolve_zero(tmp_path):
+    s = Storage(tmp_path / "data")
+    try:
+        assert not s.dir_raw.exists()
+        assert s.limpar_raw_antigos(30) == 0
+    finally:
+        s.fechar()
