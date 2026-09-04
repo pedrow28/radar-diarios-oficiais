@@ -2967,6 +2967,25 @@ def test_limpar_preserva_hifen_legitimo():
     assert "CIB-SUS" in limpar("DELIBERAÇÃO CIB-SUS/MG Nº 5.953")
 
 
+def test_limpar_nao_apaga_o_nome_do_estado_dentro_do_ato():
+    """Regressao: sem ancora de linha, o nome das entidades e mutilado.
+
+    "MINAS GERAIS" aparece 27 vezes dentro do corpo dos atos nas edicoes reais.
+    """
+    sujo = (
+        "MINAS GERAIS 	
+"
+        "Diário do Executivo	
+"
+        "A PRESIDENTE DA FUNDAÇÃO HOSPITALAR DO ESTADO DE MINAS GERAIS - FHEMIG resolve:
+"
+    )
+    limpo = limpar(sujo)
+    assert "FUNDAÇÃO HOSPITALAR DO ESTADO DE MINAS GERAIS - FHEMIG" in limpo
+    assert limpo.count("MINAS GERAIS") == 1, "só a ocorrência do corpo deve sobrar"
+    assert "Diário do Executivo" not in limpo
+
+
 def test_proxima_secao_e_a_seguinte_por_pagina():
     from radar.fontes.iofmg.pdf import proxima_secao
 
@@ -3037,8 +3056,12 @@ import fitz
 
 from radar.core.erros import SemEdicao
 
+# Linha feita APENAS de mobiliario de pagina, uma ou mais pecas. A ancora de
+# linha e obrigatoria: "MINAS GERAIS" aparece 27 vezes DENTRO do corpo dos
+# atos ("FUNDACAO HOSPITALAR DO ESTADO DE MINAS GERAIS - FHEMIG"), e remove-la
+# sem ancora mutila o nome das entidades que publicam.
 _CABECALHO = re.compile(
-    r"^\s*(?:MINAS GERAIS|Diário do Executivo|Diário do Legislativo)\s*$",
+    r"^[ \t]*(?:(?:MINAS GERAIS|Diário do Executivo|Diário do Legislativo)[ \t]*)+$",
     re.IGNORECASE | re.MULTILINE,
 )
 _LINHA_DE_PAGINA = re.compile(
@@ -3123,7 +3146,7 @@ def limpar(texto: str) -> str:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_iofmg_pdf.py -v`
-Expected: PASS (16 testes)
+Expected: PASS (17 testes)
 
 - [ ] **Step 5: Commit**
 
