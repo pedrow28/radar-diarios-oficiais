@@ -19,9 +19,8 @@ BASE_BUSCA = "https://www.in.gov.br/consulta/-/buscar/dou"
 BASE_PUBLICACAO = "https://www.in.gov.br/web/dou/-/"
 ID_BLOCO_JSON = "_br_com_seatecnologia_in_buscadou_BuscaDouPortlet_params"
 
-# A página declara charset=UTF-8 mas entrega ISO-8859-1. Confiar no header
-# produz mojibake em todo nome de órgão acentuado.
-ENCODING_BUSCA = "iso-8859-1"
+# Verificado contra o site: o portal serve UTF-8 e o header diz a verdade.
+ENCODING_BUSCA = "utf-8"
 ENCODING_PUBLICACAO = "utf-8"
 
 _PADRAO_BLOCO = re.compile(
@@ -32,8 +31,17 @@ _PADRAO_TOTAL = re.compile(r"(\d+)\s+resultados?")
 
 
 def decodificar_busca(bruto: bytes) -> str:
-    """Decodifica a página de busca com o encoding que ela realmente usa."""
-    return bruto.decode(ENCODING_BUSCA)
+    """Decodifica a página de busca.
+
+    UTF-8 é auto-validante: uma sequência inválida levanta em vez de produzir
+    lixo silencioso. Por isso tentamos UTF-8 primeiro e só caímos em ISO-8859-1
+    se os bytes não forem UTF-8 válido — o que só aconteceria se o portal
+    mudasse. Latin-1 nunca falha, então jamais deve vir primeiro.
+    """
+    try:
+        return bruto.decode(ENCODING_BUSCA)
+    except UnicodeDecodeError:
+        return bruto.decode("iso-8859-1")
 
 
 def extrair_jsonarray(html: str) -> list[dict]:

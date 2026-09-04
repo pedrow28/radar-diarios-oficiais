@@ -17,11 +17,19 @@ def html_busca(dir_fixtures: Path) -> str:
     return decodificar_busca((dir_fixtures / "dou" / "busca-ms-2026-09-03-p1.html").read_bytes())
 
 
-def test_decodifica_como_iso_8859_1_apesar_do_header_mentir(html_busca: str):
-    """A pagina declara charset=UTF-8 e serve ISO-8859-1. Regressao critica."""
+def test_decodifica_em_utf8_preservando_acentuacao(html_busca: str):
+    """Acento intacto e sem mojibake. Regressao critica de encoding."""
     assert "Ministério da Saúde" in html_busca
-    assert "Ministï¿½rio" not in html_busca
-    assert "�" not in html_busca[:20000]
+    # Sinais de ter lido UTF-8 como latin-1:
+    assert "Ã©" not in html_busca
+    assert "Âº" not in html_busca
+    assert "�" not in html_busca
+
+
+def test_cai_para_latin1_se_os_bytes_nao_forem_utf8_valido():
+    """Rede de seguranca caso o portal mude o encoding servido."""
+    bruto = "Ministério".encode("iso-8859-1")  # invalido em UTF-8
+    assert decodificar_busca(bruto) == "Ministério"
 
 
 def test_extrai_os_itens_do_bloco_json(html_busca: str):
