@@ -129,3 +129,75 @@ def montar_url_busca(
 
 def url_publicacao(url_title: str) -> str:
     return f"{BASE_PUBLICACAO}{url_title}"
+
+
+def percorrer_paginas(buscar_pagina, delta: int) -> tuple[list[dict], list[str]]:
+    """Percorre a paginação da busca acumulando itens únicos.
+
+    `buscar_pagina(numero, cursor) -> html` é injetado para manter esta função
+    testável sem rede. O cursor vem do último item da página anterior; sem ele a
+    busca do DOU devolve sempre a primeira página.
+
+    Três saídas explícitas, nunca um `except` pelado: total atingido, página
+    vazia, ou página cujo conjunto de itens repete o da anterior — que é como a
+    paginação trava. Nesse último caso devolve aviso em vez de declarar sucesso.
+    """
+    from radar.core.log import configurar_log
+
+    logger = configurar_log()
+    unicos: dict[str, dict] = {}
+    avisos: list[str] = []
+    total = 0
+    bruto_acumulado = 0
+    vistos_anteriores: set[str] | None = None
+    cursor: Cursor | None = None
+    pagina = 1
+    teto = 1
+
+    while pagina <= teto:
+        html = buscar_pagina(pagina, cursor)
+        if pagina == 1:
+            total = total_de_resultados(html)
+            if total == 0:
+                return [], []
+            # Uma página de margem para o caso de o total oscilar durante a coleta.
+            teto = -(-total // delta) + 1
+
+        itens = extrair_jsonarray(html)
+        if not itens:
+            break
+
+        chaves = {i.get("urlTitle", "") for i in itens}
+        if vistos_anteriores is not None and chaves == vistos_anteriores:
+            avisos.append(
+                f"Paginação travou: a página {pagina} repetiu os itens da anterior. "
+                f"Coletados {len(unicos)} de {total}."
+            )
+            logger.warning(avisos[-1])
+            break
+        vistos_anteriores = chaves
+
+        # A posição bruta (não o total de únicos) é o que baliza o total
+        # informado pela busca: um item repetido na borda de duas páginas
+        # (efeito do cursor) ocupa uma posição sem contribuir com um item novo,
+        # então cortamos a página no que falta em POSIÇÃO, não em únicos —
+        # senão a dedução de uma borda repetida nos faria pedir uma página a
+        # mais do que existe.
+        restante = total - bruto_acumulado
+        fatia = itens[:restante]
+        for item in fatia:
+            chave = item.get("urlTitle", "")
+            if chave:
+                unicos[chave] = item
+        bruto_acumulado += len(fatia)
+
+        if bruto_acumulado >= total:
+            break
+        cursor = cursor_do_ultimo(itens)
+        pagina += 1
+
+    if total and bruto_acumulado < total and not avisos:
+        avisos.append(f"Coletadas {len(unicos)} de {total} publicações informadas pela busca.")
+        logger.warning(avisos[-1])
+
+    return list(unicos.values()), avisos
