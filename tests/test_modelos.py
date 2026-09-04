@@ -9,7 +9,7 @@ from radar.core.erros import (
     Status,
     status_para_exit,
 )
-from radar.core.modelos import Publicacao, Resultado, gerar_id
+from radar.core.modelos import Publicacao, Resultado, gerar_id, publicacao_de_dict
 
 
 def _pub(**kw) -> Publicacao:
@@ -149,3 +149,22 @@ def test_coletado_em_naive_e_recusado():
     )
     with pytest.raises(ValueError):
         r.para_dict()
+
+
+def test_publicacao_de_dict_reidrata_o_que_para_dict_serializou():
+    pub = _pub()
+    de_volta = publicacao_de_dict(pub.para_dict(), pub.data_publicacao)
+    assert de_volta == pub
+
+
+def test_publicacao_de_dict_converte_coletado_em_para_utc():
+    bruto = _pub().para_dict()
+    bruto["coletado_em"] = "2026-09-04T09:00:00-03:00"
+    pub = publicacao_de_dict(bruto, date(2026, 9, 4))
+    assert pub.coletado_em == datetime(2026, 9, 4, 12, 0, tzinfo=timezone.utc)
+
+
+def test_publicacao_de_dict_usa_a_data_pedida_e_nao_a_do_json():
+    bruto = _pub().para_dict()
+    pub = publicacao_de_dict(bruto, date(2026, 9, 5))
+    assert pub.data_publicacao == date(2026, 9, 5)

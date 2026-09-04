@@ -1,0 +1,15 @@
+{
+  "schema_versao": "1.0",
+  "fonte": "iofmg",
+  "data_publicacao": "2026-09-06",
+  "coletado_em": "2026-09-03T09:00:00Z",
+  "status": "vazio",
+  "escopo": {
+    "cadernos": [
+      "Executivo"
+    ]
+  },
+  "total": 0,
+  "avisos": [],
+  "publicacoes": []
+}

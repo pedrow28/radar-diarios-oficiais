@@ -188,19 +188,9 @@ def hoje_como_datetime():
 
 
 def _publicacoes_de(dados: dict, data) -> list:
-    from datetime import datetime, timezone
+    from radar.core.modelos import publicacao_de_dict
 
-    from radar.core.modelos import Publicacao
-
-    publicacoes = []
-    for bruto in dados["publicacoes"]:
-        campos = dict(bruto)
-        campos["data_publicacao"] = data
-        campos["coletado_em"] = datetime.fromisoformat(
-            campos["coletado_em"].replace("Z", "+00:00")
-        ).astimezone(timezone.utc)
-        publicacoes.append(Publicacao(**campos))
-    return publicacoes
+    return [publicacao_de_dict(bruto, data) for bruto in dados["publicacoes"]]
 
 
 def main(argv: list[str] | None = None) -> int:

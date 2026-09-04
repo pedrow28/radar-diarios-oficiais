@@ -1,0 +1,211 @@
+{
+  "schema_versao": "1.0",
+  "fonte": "inlabs",
+  "data_publicacao": "2026-09-03",
+  "coletado_em": "2026-09-03T09:00:00Z",
+  "status": "ok",
+  "escopo": {
+    "secoes": [
+      "DO1"
+    ],
+    "orgaos": [
+      "Ministério da Saúde"
+    ]
+  },
+  "total": 8,
+  "avisos": [],
+  "publicacoes": [
+    {
+      "id": "679e98b47028cf11",
+      "fonte": "inlabs",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "secao": "1",
+      "pagina": 41,
+      "edicao": "169",
+      "tipo": "Portaria",
+      "numero": "3.412",
+      "titulo": "PORTARIA GM/MS Nº 3.412, DE 2 DE SETEMBRO DE 2026",
+      "ementa": "Habilita leitos de unidade de terapia intensiva adulto tipo II no Município de Manhuaçu e destina R$ 1.234.567,89 ao respectivo fundo municipal de saúde.",
+      "texto": "O Ministro de Estado da Saúde resolve habilitar dez leitos de unidade de terapia intensiva adulto tipo II sob gestão do Município de Manhuaçu, com efeitos a partir da competência setembro de 2026. Fica destinado o montante anual de R$ 1.234.567,89, na modalidade fundo a fundo, ao custeio dos leitos ora habilitados. Os recursos correrão à conta do orçamento do Fundo Nacional de Saúde e serão transferidos em parcelas mensais, condicionados ao registro dos leitos no cadastro nacional.",
+      "url": "https://pdf.in.gov.br/pdf/2026/09/03/90041.pdf",
+      "origem": {
+        "metodo": "inlabs",
+        "id_materia": "900041",
+        "art_category": "Ministério da Saúde/Gabinete do Ministro",
+        "pub_name": "DO1",
+        "texto_integral": true
+      }
+    },
+    {
+      "id": "f1354e8c87193e91",
+      "fonte": "inlabs",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "secao": "1",
+      "pagina": 44,
+      "edicao": "169",
+      "tipo": "Portaria",
+      "numero": "3.418",
+      "titulo": "PORTARIA SAPS/MS Nº 3.418, DE 2 DE SETEMBRO DE 2026",
+      "ementa": "Altera o critério de cálculo do piso da atenção primária para os municípios com menos de trinta mil habitantes.",
+      "texto": "A Secretaria de Atenção Primária à Saúde resolve alterar o critério de cálculo do componente de capitação ponderada que compõe o piso da atenção primária. Passa a ser considerada a população estimada mais recente divulgada pelo instituto oficial de estatística, e não mais a do censo anterior. A nova regra vale para os municípios com menos de trinta mil habitantes e produz efeitos a partir da competência outubro de 2026.",
+      "url": "https://pdf.in.gov.br/pdf/2026/09/03/90044.pdf",
+      "origem": {
+        "metodo": "inlabs",
+        "id_materia": "900044",
+        "art_category": "Ministério da Saúde/Secretaria de Atenção Primária à Saúde",
+        "pub_name": "DO1",
+        "texto_integral": true
+      }
+    },
+    {
+      "id": "0f787134818cff05",
+      "fonte": "inlabs",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "secao": "1",
+      "pagina": 58,
+      "edicao": "169",
+      "tipo": "Resolução",
+      "numero": "942",
+      "titulo": "RESOLUÇÃO DE DIRETORIA COLEGIADA - RDC Nº 942, DE 1º DE SETEMBRO DE 2026",
+      "ementa": "Dispõe sobre os requisitos sanitários mínimos para o funcionamento dos serviços de terapia renal substitutiva.",
+      "texto": "A Diretoria Colegiada da Agência Nacional de Vigilância Sanitária adota a presente resolução, que estabelece os requisitos sanitários mínimos para o funcionamento dos serviços de terapia renal substitutiva. Os serviços já em atividade têm o prazo de dezoito meses para se adequar às exigências de tratamento da água e de registro de intercorrências. A fiscalização cabe aos órgãos de vigilância sanitária estaduais e municipais.",
+      "url": "https://pdf.in.gov.br/pdf/2026/09/03/90058.pdf",
+      "origem": {
+        "metodo": "inlabs",
+        "id_materia": "900058",
+        "art_category": "Ministério da Saúde/Agência Nacional de Vigilância Sanitária/Diretoria Colegiada",
+        "pub_name": "DO1",
+        "texto_integral": true
+      }
+    },
+    {
+      "id": "0b69eb04e580ae34",
+      "fonte": "inlabs",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "secao": "1",
+      "pagina": 63,
+      "edicao": "169",
+      "tipo": "Edital",
+      "numero": "12",
+      "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 12/2026",
+      "ementa": "Torna público o chamamento para seleção de hospitais filantrópicos interessados em aderir ao programa de fortalecimento da média complexidade.",
+      "texto": "A Secretaria de Atenção Especializada à Saúde torna público o chamamento para seleção de hospitais filantrópicos e Santa Casa de Misericórdia interessados em aderir ao programa de fortalecimento da média complexidade. As propostas serão recebidas por meio de sistema eletrônico durante trinta dias corridos contados da publicação. Serão priorizadas as instituições situadas em regiões de saúde com vazio assistencial reconhecido pela comissão intergestores bipartite.",
+      "url": "https://pdf.in.gov.br/pdf/2026/09/03/90063.pdf",
+      "origem": {
+        "metodo": "inlabs",
+        "id_materia": "900063",
+        "art_category": "Ministério da Saúde/Secretaria de Atenção Especializada à Saúde",
+        "pub_name": "DO1",
+        "texto_integral": true
+      }
+    },
+    {
+      "id": "8e1af8ec1b84e968",
+      "fonte": "inlabs",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria-Executiva",
+      "secao": "1",
+      "pagina": 70,
+      "edicao": "169",
+      "tipo": "Portaria",
+      "numero": "1.907",
+      "titulo": "PORTARIA SE/MS Nº 1.907, DE 2 DE SETEMBRO DE 2026",
+      "ementa": "Nomeação de servidor para o cargo em comissão de assistente técnico do departamento de gestão interna.",
+      "texto": "O Secretário-Executivo, no uso de suas atribuições, resolve nomear o servidor ocupante da matrícula de número trinta e um mil para exercer o cargo em comissão de assistente técnico do departamento de gestão interna. A nomeação produz efeitos a contar da data de publicação e não implica alteração da lotação de origem.",
+      "url": "https://pdf.in.gov.br/pdf/2026/09/03/90070.pdf",
+      "origem": {
+        "metodo": "inlabs",
+        "id_materia": "900070",
+        "art_category": "Ministério da Saúde/Secretaria-Executiva",
+        "pub_name": "DO1",
+        "texto_integral": true
+      }
+    },
+    {
+      "id": "fa3a9ce5a4e10afa",
+      "fonte": "inlabs",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria-Executiva",
+      "secao": "1",
+      "pagina": 71,
+      "edicao": "169",
+      "tipo": "Portaria",
+      "numero": "1.908",
+      "titulo": "PORTARIA SE/MS Nº 1.908, DE 2 DE SETEMBRO DE 2026",
+      "ementa": "Exonera, a pedido, ocupante de cargo em comissão do departamento de logística.",
+      "texto": "O Secretário-Executivo resolve exonerar, a pedido, a ocupante do cargo em comissão de chefe de divisão do departamento de logística, com efeitos a contar de 1º de setembro de 2026. O cargo fica vago até novo provimento, e as atribuições passam interinamente ao substituto legal já indicado no regimento interno da unidade.",
+      "url": "https://pdf.in.gov.br/pdf/2026/09/03/90071.pdf",
+      "origem": {
+        "metodo": "inlabs",
+        "id_materia": "900071",
+        "art_category": "Ministério da Saúde/Secretaria-Executiva",
+        "pub_name": "DO1",
+        "texto_integral": true
+      }
+    },
+    {
+      "id": "412ee34e2e4d63df",
+      "fonte": "inlabs",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Departamento de Logística em Saúde",
+      "secao": "1",
+      "pagina": 88,
+      "edicao": "169",
+      "tipo": "Extrato",
+      "numero": "88",
+      "titulo": "EXTRATO DE CONTRATO Nº 88/2026",
+      "ementa": "Contratante: departamento de logística em saúde. Objeto: fornecimento de licenças de software de escritório. Vigência: doze meses.",
+      "texto": "Espécie: contrato administrativo. Objeto: fornecimento de licenças de software de escritório para as unidades administrativas do departamento. Vigência: doze meses, contados da assinatura, prorrogável na forma da lei. Valor: conforme a cláusula quinta do instrumento. Fundamento legal: lei de licitações e contratos administrativos. Signatários: o diretor do departamento e o representante legal da contratada.",
+      "url": "https://pdf.in.gov.br/pdf/2026/09/03/90088.pdf",
+      "origem": {
+        "metodo": "inlabs",
+        "id_materia": "900088",
+        "art_category": "Ministério da Saúde/Departamento de Logística em Saúde",
+        "pub_name": "DO1",
+        "texto_integral": true
+      }
+    },
+    {
+      "id": "9ee6fef5a2ad83f1",
+      "fonte": "inlabs",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Departamento de Logística em Saúde",
+      "secao": "1",
+      "pagina": 89,
+      "edicao": "169",
+      "tipo": "Ata",
+      "numero": "45",
+      "titulo": "ATA DE REGISTRO DE PREÇOS Nº 45/2026",
+      "ementa": "Registro de preços para aquisição de material de expediente, com validade de doze meses.",
+      "texto": "Fica registrado o preço para eventual aquisição de material de expediente destinado às unidades administrativas, com validade de doze meses contados da publicação. O registro não obriga a administração a contratar, sendo facultada a realização de procedimento próprio para a mesma finalidade. Os quantitativos estimados constam do anexo único, disponível no sistema eletrônico oficial.",
+      "url": "https://pdf.in.gov.br/pdf/2026/09/03/90089.pdf",
+      "origem": {
+        "metodo": "inlabs",
+        "id_materia": "900089",
+        "art_category": "Ministério da Saúde/Departamento de Logística em Saúde",
+        "pub_name": "DO1",
+        "texto_integral": true
+      }
+    }
+  ]
+}

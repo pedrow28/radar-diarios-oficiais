@@ -1,0 +1,106 @@
+{
+  "schema_versao": "1.0",
+  "fonte": "iofmg",
+  "data_publicacao": "2026-09-03",
+  "coletado_em": "2026-09-03T09:00:00Z",
+  "status": "parcial",
+  "escopo": {
+    "cadernos": [
+      "Executivo"
+    ]
+  },
+  "total": 4,
+  "avisos": [
+    "página 31 do caderno não pôde ser extraída"
+  ],
+  "publicacoes": [
+    {
+      "id": "f3caaa45877ff763",
+      "fonte": "iofmg",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": "Comissão Intergestores Bipartite",
+      "secao": null,
+      "pagina": 12,
+      "edicao": "2026-09-03",
+      "tipo": "Deliberação",
+      "numero": "4.512",
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 4.512, DE 1º DE SETEMBRO DE 2026",
+      "ementa": "Amplia em R$ 28.100.000,00 o teto MAC do Hospital César Leite, em Manhuaçu, para custeio da média e alta complexidade.",
+      "texto": "A Comissão Intergestores Bipartite do SUS de Minas Gerais delibera pela ampliação de R$ 28.100.000,00 no teto MAC destinado ao Hospital César Leite, referência regional em oncologia e em cirurgia de alta complexidade. O incremento tem caráter permanente e será repassado fundo a fundo, em parcelas mensais, ao Município de Manhuaçu, gestor pleno da assistência. A programação assistencial da região deverá ser revista em até noventa dias.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao/2026-09-03/p12",
+      "origem": {
+        "metodo": "iofmg",
+        "caderno": "Executivo",
+        "pagina_pdf": 12
+      }
+    },
+    {
+      "id": "900d4d22d7935ded",
+      "fonte": "iofmg",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": "Gabinete",
+      "secao": null,
+      "pagina": 13,
+      "edicao": "2026-09-03",
+      "tipo": "Resolução",
+      "numero": "9.120",
+      "titulo": "RESOLUÇÃO SES Nº 9.120, DE 1º DE SETEMBRO DE 2026",
+      "ementa": "Altera o prazo de envio da prestação de contas dos incentivos estaduais da atenção primária pelos municípios.",
+      "texto": "A Secretária de Estado de Saúde resolve alterar o prazo de envio da prestação de contas dos incentivos estaduais da atenção primária, que passa do décimo para o vigésimo dia útil do mês subsequente ao trimestre encerrado. A mudança atende pedido dos gestores municipais e vale já para o terceiro trimestre de 2026. Permanecem inalterados os documentos exigidos e a forma de envio pelo sistema estadual.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao/2026-09-03/p13",
+      "origem": {
+        "metodo": "iofmg",
+        "caderno": "Executivo",
+        "pagina_pdf": 13
+      }
+    },
+    {
+      "id": "24f17c8626e1fe5d",
+      "fonte": "iofmg",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": "Superintendência Regional de Saúde",
+      "secao": null,
+      "pagina": 19,
+      "edicao": "2026-09-03",
+      "tipo": "Ato",
+      "numero": "512",
+      "titulo": "ATO Nº 512/2026",
+      "ementa": "Concede férias regulamentares a servidores da superintendência regional de saúde, referentes ao exercício de 2026.",
+      "texto": "O superintendente regional de saúde concede férias regulamentares aos servidores relacionados no anexo, referentes ao exercício de 2026, a serem usufruídas no período indicado para cada matrícula. As chefias imediatas ficam responsáveis por organizar a escala de forma a não interromper o atendimento nas unidades da regional.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao/2026-09-03/p19",
+      "origem": {
+        "metodo": "iofmg",
+        "caderno": "Executivo",
+        "pagina_pdf": 19
+      }
+    },
+    {
+      "id": "beb4a04330693e0c",
+      "fonte": "iofmg",
+      "data_publicacao": "2026-09-03",
+      "coletado_em": "2026-09-03T09:00:00Z",
+      "orgao": "Fundação Hospitalar do Estado de Minas Gerais",
+      "unidade": "Presidência",
+      "secao": null,
+      "pagina": 27,
+      "edicao": "2026-09-03",
+      "tipo": "Portaria",
+      "numero": "218",
+      "titulo": "PORTARIA PRE Nº 218, DE 1º DE SETEMBRO DE 2026",
+      "ementa": "Institui grupo de trabalho para revisar o fluxo do prontuário eletrônico nas unidades assistenciais da Fundação.",
+      "texto": "A presidência da Fundação Hospitalar do Estado de Minas Gerais institui grupo de trabalho com a finalidade de revisar o fluxo do prontuário eletrônico nas unidades assistenciais, com foco na integração entre ambulatório e internação. O grupo terá noventa dias para apresentar relatório com proposta de padronização e cronograma de implantação, e reunir-se-á quinzenalmente.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao/2026-09-03/p27",
+      "origem": {
+        "metodo": "iofmg",
+        "caderno": "Executivo",
+        "pagina_pdf": 27
+      }
+    }
+  ]
+}

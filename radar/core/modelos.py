@@ -51,6 +51,22 @@ class Publicacao:
         return d
 
 
+def publicacao_de_dict(bruto: dict[str, Any], data: date) -> Publicacao:
+    """Reidrata uma `Publicacao` a partir do dict que `para_dict` gravou.
+
+    A data vem de fora porque quem chama já sabe de que dia é o arquivo lido, e
+    o JSON pode ter sido movido de pasta; o `coletado_em` é normalizado para
+    UTC para que comparações entre publicações de fontes distintas não misturem
+    fusos.
+    """
+    campos = dict(bruto)
+    campos["data_publicacao"] = data
+    campos["coletado_em"] = datetime.fromisoformat(
+        campos["coletado_em"].replace("Z", "+00:00")
+    ).astimezone(timezone.utc)
+    return Publicacao(**campos)
+
+
 @dataclass
 class Resultado:
     fonte: str
