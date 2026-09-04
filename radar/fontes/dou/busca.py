@@ -1,0 +1,123 @@
+"""Listagem do DOU a partir do JSON embutido na página de busca.
+
+A busca do in.gov.br serve os resultados dentro de um <script
+type="application/json">, o que dispensa navegador: basta HTTP e json.loads.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+from dataclasses import dataclass
+from datetime import date
+from typing import Any
+from urllib.parse import quote_plus, urlencode
+
+from radar.core.erros import ExtracaoParcial
+
+BASE_BUSCA = "https://www.in.gov.br/consulta/-/buscar/dou"
+BASE_PUBLICACAO = "https://www.in.gov.br/web/dou/-/"
+ID_BLOCO_JSON = "_br_com_seatecnologia_in_buscadou_BuscaDouPortlet_params"
+
+# A página declara charset=UTF-8 mas entrega ISO-8859-1. Confiar no header
+# produz mojibake em todo nome de órgão acentuado.
+ENCODING_BUSCA = "iso-8859-1"
+ENCODING_PUBLICACAO = "utf-8"
+
+_PADRAO_BLOCO = re.compile(
+    rf'<script id="{re.escape(ID_BLOCO_JSON)}" type="application/json">(.*?)</script>',
+    re.DOTALL,
+)
+_PADRAO_TOTAL = re.compile(r"(\d+)\s+resultados?")
+
+
+def decodificar_busca(bruto: bytes) -> str:
+    """Decodifica a página de busca com o encoding que ela realmente usa."""
+    return bruto.decode(ENCODING_BUSCA)
+
+
+def extrair_jsonarray(html: str) -> list[dict]:
+    """Devolve os itens de resultado embutidos na página."""
+    achado = _PADRAO_BLOCO.search(html)
+    if not achado:
+        raise ExtracaoParcial(
+            "Bloco JSON de resultados não encontrado na busca do DOU. "
+            "A estrutura da página pode ter mudado."
+        )
+    try:
+        dados = json.loads(achado.group(1).strip())
+    except json.JSONDecodeError as exc:
+        raise ExtracaoParcial(f"Bloco JSON da busca do DOU é inválido: {exc}") from exc
+    return dados.get("jsonArray", [])
+
+
+def total_de_resultados(html: str) -> int:
+    """Total informado pela própria busca, usado para saber quando parar."""
+    achado = _PADRAO_TOTAL.search(html)
+    return int(achado.group(1)) if achado else 0
+
+
+@dataclass(frozen=True)
+class Cursor:
+    """Posição da paginação: o último item da página já lida.
+
+    A busca do DOU pagina por cursor (`search_after`), não por offset. Mandar
+    `currentPage=2` na URL não avança nada — o portal só ecoa o valor.
+    """
+
+    score: Any
+    id: Any
+    display_date: Any
+
+
+def cursor_do_ultimo(itens: list[dict]) -> Cursor | None:
+    if not itens:
+        return None
+    ultimo = itens[-1]
+    return Cursor(
+        score=ultimo.get("score"),
+        id=ultimo.get("classPK"),
+        display_date=ultimo.get("displayDateSortable"),
+    )
+
+
+def montar_url_busca(
+    orgao: str,
+    data: date,
+    delta: int,
+    pagina: int = 1,
+    cursor: Cursor | None = None,
+) -> str:
+    """URL da busca para uma data e página.
+
+    A data vai como `exactDate=personalizado` com `publishFrom`/`publishTo` em
+    DD-MM-AAAA. A forma `exactDate=dia` + `dateDay/dateMonth/dateYear`, usada
+    pelos scripts antigos, ignora a data pedida e devolve a edição corrente —
+    sem erro, o que é pior.
+    """
+    data_br = data.strftime("%d-%m-%Y")
+    parametros = {
+        "q": "*",
+        "s": "todos",
+        "orgPrin": orgao,
+        "exactDate": "personalizado",
+        "publishFrom": data_br,
+        "publishTo": data_br,
+        "sortType": "0",
+        "delta": delta,
+    }
+    if pagina > 1 and cursor is not None:
+        parametros.update(
+            {
+                "currentPage": pagina - 1,
+                "newPage": pagina,
+                "score": cursor.score,
+                "id": cursor.id,
+                "displayDate": cursor.display_date,
+            }
+        )
+    return f"{BASE_BUSCA}?{urlencode(parametros, quote_via=quote_plus)}"
+
+
+def url_publicacao(url_title: str) -> str:
+    return f"{BASE_PUBLICACAO}{url_title}"
