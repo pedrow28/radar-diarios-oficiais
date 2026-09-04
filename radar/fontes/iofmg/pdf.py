@@ -68,6 +68,28 @@ def proxima_secao(caderno: dict, secao: str) -> str | None:
     return None
 
 
+def posicao_do_cabecalho(texto: str, secao: str) -> int | None:
+    """Offset do cabeçalho do órgão no texto da página, ou `None` se não houver.
+
+    Duas exigências, e as duas foram medidas nas edições reais:
+
+    - **Âncora de linha.** "Secretaria de Estado de Saúde" aparece no corpo dos
+      atos ("no âmbito da Secretaria de Estado de Saúde;"). Um `find` cru acha a
+      menção antes do cabeçalho e o corte destruiria o órgão inteiro.
+    - **Tolerância à quebra de linha.** A coluna estreita do PDF parte o
+      cabeçalho em duas linhas ("Secretaria de \\nEstado de Saúde"), então o
+      espaço entre as palavras precisa casar `\\s+`.
+    """
+    if not secao:
+        return None
+    partes = [re.escape(p) for p in secao.split()]
+    if not partes:
+        return None
+    padrao = re.compile(r"^[ \t]*" + r"\s+".join(partes) + r"[ \t]*$", re.MULTILINE)
+    achado = padrao.search(texto)
+    return achado.start() if achado else None
+
+
 def truncar_na_proxima_secao(
     paginas: list[tuple[int, str]], proxima: str | None
 ) -> list[tuple[int, str]]:
@@ -79,10 +101,33 @@ def truncar_na_proxima_secao(
     if not proxima or not paginas:
         return paginas
     numero, texto = paginas[-1]
-    posicao = texto.find(proxima)
-    if posicao == -1:
+    posicao = posicao_do_cabecalho(texto, proxima)
+    if posicao is None:
         return paginas
     return paginas[:-1] + [(numero, texto[:posicao].rstrip())]
+
+
+def truncar_antes_da_secao(
+    paginas: list[tuple[int, str]], secao: str | None
+) -> list[tuple[int, str]]:
+    """Corta a primeira página no cabeçalho do órgão alvo.
+
+    Simétrica de `truncar_na_proxima_secao`: a primeira página do intervalo é
+    tão compartilhada quanto a última, só que com o órgão *anterior*. Sem este
+    corte, atos alheios entram na coleta com procedência falsa — medido em
+    02/09, onde `PORTARIA Nº 35` é do IPSEMG e vinha rotulada como da Secretaria
+    de Estado de Saúde.
+
+    Se o cabeçalho não aparecer, nada é cortado: perder conteúdo em silêncio
+    seria pior que carregar a sobra da fronteira.
+    """
+    if not secao or not paginas:
+        return paginas
+    numero, texto = paginas[0]
+    posicao = posicao_do_cabecalho(texto, secao)
+    if posicao is None:
+        return paginas
+    return [(numero, texto[posicao:].lstrip())] + paginas[1:]
 
 
 def texto_das_paginas(pdf: bytes, inicio: int, fim: int) -> list[tuple[int, str]]:

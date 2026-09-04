@@ -46,7 +46,10 @@ class FonteIOFMG:
 
         conteudo = self._obter_pdf(data, dados, forcar)
         paginas = pdf_mod.texto_das_paginas(conteudo, inicio, fim)
-        # A última página é compartilhada com o órgão seguinte; cortar antes de segmentar.
+        # As duas pontas do intervalo são compartilhadas: a primeira página traz
+        # o fim do órgão anterior e a última, o início do seguinte. Cortar as
+        # duas antes de segmentar, senão ato alheio entra com procedência falsa.
+        paginas = pdf_mod.truncar_antes_da_secao(paginas, self.cfg.secao)
         paginas = pdf_mod.truncar_na_proxima_secao(
             paginas, pdf_mod.proxima_secao(caderno, self.cfg.secao)
         )

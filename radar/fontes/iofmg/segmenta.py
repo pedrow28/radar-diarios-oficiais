@@ -26,9 +26,15 @@ class Bruto:
 
 
 def _compilar(tipos: list[str]) -> re.Pattern:
-    alternativas = "|".join(re.escape(t) for t in sorted(tipos, key=len, reverse=True))
-    # Cabeçalho começa a linha e não é seguido imediatamente de ':' (DELIBERA:).
-    return re.compile(rf"^\s*({alternativas})(?![:A-ZÇ])(.*)$", re.IGNORECASE | re.MULTILINE)
+    alternativas = "|".join(
+        re.escape(t.upper()) for t in sorted(tipos, key=len, reverse=True)
+    )
+    # Cabeçalho começa a linha, é CAIXA ALTA e não é seguido imediatamente de
+    # ':' (DELIBERA:). Sem `IGNORECASE` de propósito: a extração do PDF quebra a
+    # linha no meio da frase, e uma citação em caixa mista no começo de uma linha
+    # ("Resolução SES nº 8.994/2023, ...") virava cabeçalho — inventando uma
+    # publicação inexistente e cortando o inteiro teor do ato de verdade.
+    return re.compile(rf"^\s*({alternativas})(?![:A-ZÇ])(.*)$", re.MULTILINE)
 
 
 def _e_cabecalho(tipo: str, resto: str) -> bool:

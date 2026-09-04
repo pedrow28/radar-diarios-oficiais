@@ -104,7 +104,9 @@ def cfg() -> ConfigIOFMG:
 def test_coleta_edicao_real_ponta_a_ponta(cfg, storage, resposta_api):
     resultado = FonteIOFMG(cfg, storage, SessaoFalsa(resposta_api)).coletar(DIA)
     assert resultado.status == Status.OK
-    assert len(resultado.publicacoes) >= 5
+    # Medido na edição real: 4 atos da SES. Eram 5 enquanto a citação em caixa
+    # mista "Resolução SES nº 8.994/2023..." virava publicação inexistente.
+    assert len(resultado.publicacoes) == 4
     assert all(p.texto.strip() for p in resultado.publicacoes)
     assert all(p.fonte == "iofmg" for p in resultado.publicacoes)
 
@@ -135,3 +137,52 @@ def test_escopo_registra_secao_e_caderno(cfg, storage, resposta_api):
     resultado = FonteIOFMG(cfg, storage, SessaoFalsa(resposta_api)).coletar(DIA)
     assert resultado.escopo["secao"] == "Secretaria de Estado de Saúde"
     assert resultado.escopo["caderno"] == "Diário do Executivo"
+
+
+# ── C2: a primeira página do intervalo também é fronteira ───────────────────
+
+
+class SessaoProibida:
+    """Qualquer requisição aqui é bug: este teste roda inteiro do cache."""
+
+    def get(self, url, timeout=None):  # pragma: no cover - só existe para falhar
+        raise AssertionError(f"o teste não pode ir à rede: {url}")
+
+
+def _semear_02(storage: Storage, dir_fixtures: Path, dia: date) -> None:
+    """Põe a edição de 02/09 no cache bruto, com o índice recortado nas 3 páginas."""
+    meta = {
+        "dados": {
+            "cadernos": [
+                {
+                    "id": 330892,
+                    "descricao": "Diário do Executivo",
+                    "secoes": [
+                        {"descricao": "Instituto de Previdência dos Servidores", "paginaInicial": 1},
+                        {"descricao": "Secretaria de Estado de Saúde", "paginaInicial": 1},
+                        {"descricao": "Secretaria de Estado de Educação", "paginaInicial": 3},
+                    ],
+                }
+            ],
+            "arquivoCadernoPrincipal": {"totalPaginas": 3, "arquivo": ""},
+        }
+    }
+    storage.salvar_raw(dia, "iofmg", "edicao.json", json.dumps(meta).encode("utf-8"))
+    storage.salvar_raw(
+        dia, "iofmg", "caderno.pdf",
+        (dir_fixtures / "iofmg" / "caderno-2026-09-02-ses.pdf").read_bytes(),
+    )
+
+
+def test_ato_do_orgao_anterior_nao_entra_com_procedencia_falsa(cfg, storage, dir_fixtures):
+    """`PORTARIA Nº 35` é do IPSEMG e vinha rotulada como da Secretaria de Saúde."""
+    dia = date(2026, 9, 2)
+    _semear_02(storage, dir_fixtures, dia)
+    resultado = FonteIOFMG(cfg, storage, SessaoProibida()).coletar(dia)
+
+    assert resultado.status == Status.OK
+    titulos = [p.titulo for p in resultado.publicacoes]
+    assert not any(t.startswith("PORTARIA Nº 35") for t in titulos), titulos
+    # Medido: 16 segmentos antes das correções, 13 depois (C1 tirou 2, C2 tirou 1).
+    assert len(resultado.publicacoes) == 13, titulos
+    assert all(p.orgao == "Secretaria de Estado de Saúde" for p in resultado.publicacoes)

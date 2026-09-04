@@ -148,3 +148,77 @@ def test_truncar_ignora_paginas_que_nao_a_ultima():
     ]
     cortadas = truncar_na_proxima_secao(paginas, "Secretaria de Estado de Educação")
     assert cortadas[0][1] == paginas[0][1], "só a última página é truncada"
+
+
+# ── C2: a primeira página também é fronteira ────────────────────────────────
+
+
+def test_truncar_antes_corta_o_orgao_anterior():
+    from radar.fontes.iofmg.pdf import truncar_antes_da_secao
+
+    paginas = [
+        (47, "PORTARIA IPSEMG Nº 35\nConteudo do ipsemg.\nSecretaria de Estado de Saúde\nPORTARIA SES Nº 1"),
+        (48, "Conteudo da saude."),
+    ]
+    cortadas = truncar_antes_da_secao(paginas, "Secretaria de Estado de Saúde")
+    assert "PORTARIA IPSEMG" not in cortadas[0][1]
+    assert cortadas[0][1].startswith("Secretaria de Estado de Saúde")
+    assert "PORTARIA SES Nº 1" in cortadas[0][1]
+
+
+def test_truncar_antes_so_mexe_na_primeira_pagina():
+    from radar.fontes.iofmg.pdf import truncar_antes_da_secao
+
+    paginas = [
+        (47, "Secretaria de Estado de Saúde\nPORTARIA SES Nº 1"),
+        (48, "Lixo antes\nSecretaria de Estado de Saúde\nDepois"),
+    ]
+    cortadas = truncar_antes_da_secao(paginas, "Secretaria de Estado de Saúde")
+    assert cortadas[1][1] == paginas[1][1], "só a primeira página é truncada"
+
+
+def test_truncar_antes_sem_cabecalho_nao_corta_nada():
+    """Fallback seguro: perder conteúdo em silêncio é pior que a sobra."""
+    from radar.fontes.iofmg.pdf import truncar_antes_da_secao
+
+    paginas = [(47, "PORTARIA SES Nº 1\nConteudo.")]
+    assert truncar_antes_da_secao(paginas, "Secretaria de Estado de Saúde") == paginas
+    assert truncar_antes_da_secao(paginas, None) == paginas
+    assert truncar_antes_da_secao([], "Secretaria de Estado de Saúde") == []
+
+
+def test_cabecalho_quebrado_em_duas_linhas_e_encontrado():
+    """A coluna estreita do PDF real parte o cabeçalho: 'Secretaria de \nEstado de Saúde'."""
+    from radar.fontes.iofmg.pdf import truncar_antes_da_secao
+
+    paginas = [(47, "Ato alheio.\nSecretaria de \nEstado de Saúde\nSecretário: Fulano\nPORTARIA Nº 1")]
+    cortadas = truncar_antes_da_secao(paginas, "Secretaria de Estado de Saúde")
+    assert "Ato alheio" not in cortadas[0][1]
+    assert cortadas[0][1].startswith("Secretaria de")
+
+
+def test_mencao_no_corpo_do_ato_nao_e_confundida_com_cabecalho():
+    """Medido: a menção aparece no corpo antes do cabeçalho; um `find` cru mutila o órgão."""
+    from radar.fontes.iofmg.pdf import truncar_antes_da_secao
+
+    corpo = (
+        "PORTARIA IPSEMG Nº 35\n"
+        "no âmbito da Secretaria de Estado de Saúde;\n"
+        "Secretaria de Estado de Saúde\n"
+        "PORTARIA SES Nº 1"
+    )
+    cortadas = truncar_antes_da_secao([(47, corpo)], "Secretaria de Estado de Saúde")
+    assert "no âmbito da" not in cortadas[0][1]
+    assert "PORTARIA SES Nº 1" in cortadas[0][1]
+
+
+def test_cabecalho_real_da_ses_e_localizado_na_primeira_pagina(dir_fixtures: Path):
+    from radar.fontes.iofmg.pdf import posicao_do_cabecalho
+
+    for dia, npaginas in (("2026-09-02", 3), ("2026-09-03", 2)):
+        pdf = (dir_fixtures / "iofmg" / f"caderno-{dia}-ses.pdf").read_bytes()
+        primeira = texto_das_paginas(pdf, 1, npaginas)[0][1]
+        posicao = posicao_do_cabecalho(primeira, "Secretaria de Estado de Saúde")
+        assert posicao is not None, dia
+        assert 0 < posicao < len(primeira)
+        assert "Secretário: Fábio Baccheretti Vitor" in primeira[posicao : posicao + 200]

@@ -114,3 +114,77 @@ def test_segmentos_nao_se_sobrepoem(paginas_03):
     achados = segmentar(paginas_03, TIPOS)
     for anterior, seguinte in zip(achados, achados[1:]):
         assert seguinte.titulo not in anterior.texto
+
+
+# ── C1: o token de tipo só casa em CAIXA ALTA ───────────────────────────────
+
+
+def _producao(dir_fixtures: Path, dia: str, npaginas: int):
+    """Páginas como o coletor as entrega ao segmentador: as duas pontas cortadas."""
+    from radar.fontes.iofmg.pdf import truncar_antes_da_secao, truncar_na_proxima_secao
+
+    pdf = (dir_fixtures / "iofmg" / f"caderno-{dia}-ses.pdf").read_bytes()
+    paginas = texto_das_paginas(pdf, 1, npaginas)
+    paginas = truncar_antes_da_secao(paginas, "Secretaria de Estado de Saúde")
+    return truncar_na_proxima_secao(paginas, "Secretaria de Estado de Educação")
+
+
+def test_citacao_em_caixa_mista_nao_vira_cabecalho():
+    """A quebra de linha do PDF põe a citação no começo da linha; não é ato novo."""
+    paginas = [(
+        1,
+        "RESOLUÇÃO SES Nº 11.606, 02 DE SETEMBRO DE 2026.\n"
+        "Ficam mantidos os demais artigos e anexos dispostos na\n"
+        "Resolução SES nº 8.994/2023, nº 8.686/2023 e nº 8.687/2023.\n"
+        "Fábio Baccheretti Vitor, Secretário.",
+    )]
+    achados = segmentar(paginas, TIPOS)
+    assert len(achados) == 1, [a.titulo for a in achados]
+    assert achados[0].numero == "11.606"
+    # O inteiro teor do ato de verdade não pode parar na citação.
+    assert "Fábio Baccheretti Vitor" in achados[0].texto
+
+
+def test_deliberacao_citada_em_caixa_mista_nao_vira_publicacao():
+    paginas = [(
+        1,
+        "DELIBERAÇÃO CIB-SUS/MG Nº 5.956, DE 1 DE SETEMBRO DE 2026\n"
+        "Aprova a alteração do inciso VII do art. 1º da\n"
+        "Deliberação CIB-SUS/MG nº 5.696, de 09 de abril de 2026, que aprova\n"
+        "o repasse de recurso.",
+    )]
+    achados = segmentar(paginas, TIPOS)
+    assert [a.numero for a in achados] == ["5.956"]
+
+
+def test_tipo_em_caixa_mista_no_inicio_da_linha_e_ignorado():
+    paginas = [(1, "Portaria Presidencial nº 3.591, de 30 de julho de 2026.\nConteudo.")]
+    assert segmentar(paginas, TIPOS) == []
+
+
+def test_edicao_real_03_sem_publicacao_inventada(dir_fixtures: Path):
+    """Medido: 5 segmentos antes da correção, 4 depois; o extra não existia."""
+    achados = segmentar(_producao(dir_fixtures, "2026-09-03", 2), TIPOS)
+    assert len(achados) == 4, [a.titulo for a in achados]
+    assert not any("8.994" in a.titulo for a in achados)
+    resolucao = [a for a in achados if a.numero == "11.606"][0]
+    # Antes da correção o inteiro teor terminava em "...dispostos na".
+    assert not resolucao.texto.rstrip().endswith("dispostos na")
+    assert "8.994" in resolucao.texto, "a citação pertence ao corpo da 11.606"
+
+
+def test_edicao_real_02_sem_publicacao_inventada(dir_fixtures: Path):
+    """Medido: 16 segmentos antes; 13 depois de C1 e C2."""
+    achados = segmentar(_producao(dir_fixtures, "2026-09-02", 3), TIPOS)
+    assert len(achados) == 13, [a.titulo for a in achados]
+    titulos = [a.titulo for a in achados]
+    assert not any("5.696" in t for t in titulos)
+    assert not any(t.startswith("Portaria") for t in titulos)
+
+
+def test_todo_titulo_comeca_em_caixa_alta(dir_fixtures: Path):
+    """Invariante da §7.4: cabeçalho de ato é caixa alta, sempre."""
+    for dia, npaginas in (("2026-09-02", 3), ("2026-09-03", 2)):
+        for achado in segmentar(_producao(dir_fixtures, dia, npaginas), TIPOS):
+            primeira = achado.titulo.split()[0]
+            assert primeira == primeira.upper(), achado.titulo
