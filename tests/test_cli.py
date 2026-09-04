@@ -42,6 +42,7 @@ def ambiente(tmp_path: Path, monkeypatch):
 
     monkeypatch.setattr("radar.fontes.dou.coletor.FonteDOU.coletar", coleta_falsa)
     monkeypatch.setattr("radar.fontes.iofmg.coletor.FonteIOFMG.coletar", coleta_falsa)
+    monkeypatch.setattr("radar.fontes.inlabs.coletor.FonteINLABS.coletar", coleta_falsa)
     return cfg, tmp_path / "data"
 
 
@@ -59,11 +60,13 @@ def test_coletar_grava_o_json_normalizado(ambiente):
 
 
 def test_coletar_todas_gera_um_json_por_fonte(ambiente):
+    """`todas` são as três fontes registradas, INLABS incluída."""
     cfg, dir_dados = ambiente
     main(["coletar", "--config", str(cfg), "--data", "2026-09-04", "--fonte", "todas"])
     pasta = dir_dados / "normalized" / "2026-09-04"
     assert (pasta / "dou.json").exists()
     assert (pasta / "iofmg.json").exists()
+    assert (pasta / "inlabs.json").exists()
 
 
 def test_status_parcial_devolve_exit_um(ambiente, monkeypatch):
@@ -279,3 +282,53 @@ def test_falha_na_limpeza_nao_derruba_a_coleta(ambiente, monkeypatch):
     monkeypatch.setattr("radar.core.storage.Storage.limpar_raw_antigos", explode)
     assert main(["coletar", "--config", str(cfg), "--data", "2026-09-04", "--fonte", "dou"]) == 0
     assert (dir_dados / "normalized" / "2026-09-04" / "dou.json").exists()
+
+
+# ── G2: `--fonte` aceita lista, e nome inválido não passa em silêncio ───────
+
+
+def test_fonte_aceita_lista_separada_por_virgula(ambiente):
+    """Em nuvem o `dou` é inútil (IP de datacenter bloqueado); rodar só as
+    duas que funcionam precisa caber numa invocação.
+    """
+    cfg, dir_dados = ambiente
+    codigo = main(["coletar", "--config", str(cfg), "--data", "2026-09-04",
+                   "--fonte", "inlabs,iofmg"])
+    assert codigo == 0
+    pasta = dir_dados / "normalized" / "2026-09-04"
+    assert (pasta / "inlabs.json").exists()
+    assert (pasta / "iofmg.json").exists()
+    assert not (pasta / "dou.json").exists()
+
+
+def test_espaco_em_volta_do_nome_nao_invalida_a_lista(ambiente):
+    cfg, dir_dados = ambiente
+    assert main(["coletar", "--config", str(cfg), "--data", "2026-09-04",
+                 "--fonte", "inlabs, iofmg"]) == 0
+    assert (dir_dados / "normalized" / "2026-09-04" / "iofmg.json").exists()
+
+
+def test_fonte_desconhecida_devolve_exit_dois_e_lista_as_validas(ambiente, capsys):
+    """Sem `choices` o argparse não recusa mais nada; a validação passou para
+    `_fontes`, e um erro mudo aqui viraria "coletou nada" com exit 0.
+    """
+    cfg, _ = ambiente
+    assert main(["coletar", "--config", str(cfg), "--data", "2026-09-04",
+                 "--fonte", "dou,diariomunicipal"]) == 2
+    erro = capsys.readouterr().err
+    assert "diariomunicipal" in erro
+    for valida in ("dou", "inlabs", "iofmg", "todas"):
+        assert valida in erro
+
+
+def test_fonte_vazia_devolve_exit_dois(ambiente):
+    cfg, _ = ambiente
+    assert main(["coletar", "--config", str(cfg), "--data", "2026-09-04",
+                 "--fonte", ","]) == 2
+
+
+def test_fonte_repetida_coleta_uma_vez_so(ambiente, capsys):
+    cfg, _ = ambiente
+    assert main(["coletar", "--config", str(cfg), "--data", "2026-09-04",
+                 "--fonte", "dou,dou"]) == 0
+    assert capsys.readouterr().out.count("dou: ok") == 1

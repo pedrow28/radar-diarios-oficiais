@@ -14,11 +14,12 @@ from pathlib import Path
 
 import pytest
 
-from radar.core.config import ConfigDOU, ConfigIOFMG
+from radar.core.config import ConfigDOU, ConfigINLABS, ConfigIOFMG
 from radar.core.erros import Status
 from radar.core.storage import Storage
 from radar.fontes.dou.busca import ID_BLOCO_JSON
 from radar.fontes.dou.coletor import FonteDOU
+from radar.fontes.inlabs.coletor import FonteINLABS
 from radar.fontes.iofmg.coletor import FonteIOFMG
 
 DIA = date(2026, 9, 3)
@@ -47,6 +48,26 @@ class SessaoDOU:
 
 class SessaoIOFMG(SessaoDOU):
     pass
+
+
+class SessaoINLABS:
+    """Autentica e responde 404 a tudo: o dia em que nada foi publicado."""
+
+    cookies = ["inlabs_session_cookie"]
+
+    def post(self, url, data=None, headers=None, timeout=None):
+        class R:
+            status_code = 200
+            content = b""
+
+        return R()
+
+    def get(self, url, timeout=None, **kwargs):
+        class R:
+            status_code = 404
+            content = b""
+
+        return R()
 
 
 @pytest.fixture
@@ -81,8 +102,8 @@ def _edicao(secoes: list[dict]) -> bytes:
     ).encode("utf-8")
 
 
-def _cenarios(storage: Storage, dir_fixtures: Path):
-    """Um `Resultado` de cada caminho sem publicação das duas fontes."""
+def _cenarios(storage: Storage, dir_fixtures: Path, monkeypatch):
+    """Um `Resultado` de cada caminho sem publicação das três fontes."""
     # DOU: dia sem publicação — vazio legítimo.
     yield "dou/sem publicação", FonteDOU(
         _cfg_dou(), storage, SessaoDOU(_html_busca([], 0))
@@ -128,9 +149,26 @@ def _cenarios(storage: Storage, dir_fixtures: Path):
         cfg_sem_tipos, storage, SessaoIOFMG(b"")
     ).coletar(dia)
 
+    # INLABS: nenhuma seção publicada — vazio legítimo.
+    monkeypatch.setenv("INLABS_EMAIL", "alguem@exemplo.org")
+    monkeypatch.setenv("INLABS_SENHA", "segredo")
+    yield "inlabs/sem arquivo", FonteINLABS(
+        ConfigINLABS(), storage, SessaoINLABS()
+    ).coletar(date(2026, 9, 6))
 
-def test_nenhum_resultado_sai_vazio_com_aviso(storage, dir_fixtures):
-    for nome, resultado in _cenarios(storage, dir_fixtures):
+    # INLABS: zip publicado, nenhum artigo dos órgãos configurados.
+    dia_inlabs = date(2026, 9, 11)
+    storage.salvar_raw(
+        dia_inlabs, "inlabs", f"{dia_inlabs.isoformat()}-DO1.zip",
+        (dir_fixtures / "inlabs" / "2026-09-03-DO1.zip").read_bytes(),
+    )
+    yield "inlabs/nada no escopo", FonteINLABS(
+        ConfigINLABS(orgaos=["Ministério do Turismo"]), storage, SessaoINLABS()
+    ).coletar(dia_inlabs)
+
+
+def test_nenhum_resultado_sai_vazio_com_aviso(storage, dir_fixtures, monkeypatch):
+    for nome, resultado in _cenarios(storage, dir_fixtures, monkeypatch):
         if resultado.avisos:
             assert resultado.status == Status.PARCIAL, (
                 f"{nome}: tem aviso {resultado.avisos!r} e mesmo assim "
@@ -140,25 +178,36 @@ def test_nenhum_resultado_sai_vazio_com_aviso(storage, dir_fixtures):
             assert resultado.avisos == [], f"{nome}: vazio não pode carregar aviso"
 
 
-def test_quebra_de_extracao_do_iofmg_nao_passa_por_domingo(storage, dir_fixtures):
+def test_quebra_de_extracao_do_iofmg_nao_passa_por_domingo(storage, dir_fixtures, monkeypatch):
     """Antes: "órgão localizado mas nada segmentado" saía como `vazio`, exit 0."""
-    por_nome = dict(_cenarios(storage, dir_fixtures))
+    por_nome = dict(_cenarios(storage, dir_fixtures, monkeypatch))
     assert por_nome["iofmg/nada segmentado"].status == Status.PARCIAL
     assert por_nome["iofmg/órgão ausente"].status == Status.PARCIAL
     assert por_nome["iofmg/sem edição"].status == Status.VAZIO
     assert por_nome["iofmg/sem edição"].avisos == []
 
 
-def test_layout_mudado_no_dou_nao_passa_por_dia_sem_publicacao(storage, dir_fixtures):
-    por_nome = dict(_cenarios(storage, dir_fixtures))
+def test_layout_mudado_no_dou_nao_passa_por_dia_sem_publicacao(storage, dir_fixtures, monkeypatch):
+    por_nome = dict(_cenarios(storage, dir_fixtures, monkeypatch))
     assert por_nome["dou/sem publicação"].status == Status.VAZIO
     assert por_nome["dou/total sem itens"].status == Status.PARCIAL
 
 
-def test_status_vazio_sempre_significa_exit_zero_sem_alarme(storage, dir_fixtures):
+def test_status_vazio_sempre_significa_exit_zero_sem_alarme(storage, dir_fixtures, monkeypatch):
     """`vazio` → exit 0; `parcial` → exit 1. Sem aviso mudo em exit 0."""
     from radar.core.erros import status_para_exit
 
-    for nome, resultado in _cenarios(storage, dir_fixtures):
+    for nome, resultado in _cenarios(storage, dir_fixtures, monkeypatch):
         exit_code = status_para_exit(resultado.status)
         assert not (exit_code == 0 and resultado.avisos), nome
+
+
+def test_filtro_de_orgao_quebrado_no_inlabs_nao_passa_por_domingo(storage, dir_fixtures, monkeypatch):
+    """Zip publicado e nada do escopo pode ser `artCategory` renomeada na
+    fonte; reportá-lo como `vazio` calaria o filtro quebrado para sempre.
+    """
+    por_nome = dict(_cenarios(storage, dir_fixtures, monkeypatch))
+    assert por_nome["inlabs/sem arquivo"].status == Status.VAZIO
+    assert por_nome["inlabs/sem arquivo"].avisos == []
+    assert por_nome["inlabs/nada no escopo"].status == Status.PARCIAL
+    assert por_nome["inlabs/nada no escopo"].avisos

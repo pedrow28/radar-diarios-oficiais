@@ -36,7 +36,8 @@ python -m radar.cli --help
 ## Uso
 
 ```bash
-radar coletar --data 2026-09-04 --fonte todas   # dou | iofmg | todas
+radar coletar --data 2026-09-04 --fonte todas   # dou | inlabs | iofmg | todas
+radar coletar --fonte inlabs,iofmg              # lista separada por vírgula
 radar coletar --forcar                          # ignora o cache de brutos
 radar consultar "teto MAC" --desde 2026-06-01   # histórico indexado
 ```
@@ -63,6 +64,36 @@ distingue os quatro desfechos:
 | `erro`    | 2    | a coleta quebrou                   | **não** publicar    |
 
 Com `--fonte todas`, o exit code é o pior status entre as fontes.
+
+## Fonte INLABS
+
+O INLABS é o serviço oficial de distribuição do DOU da Imprensa Nacional: um
+zip de XMLs por seção (`DO1`, `DO2`, `DO3` e as edições extras `DO1E`…), com
+o inteiro teor de cada matéria. Exige conta gratuita em
+<https://inlabs.in.gov.br/>.
+
+**É a fonte recomendada em nuvem.** A fonte `dou` raspa o portal `in.gov.br`,
+que bloqueia IP de datacenter — de um GitHub Actions ou de uma VPS ela falha,
+enquanto o INLABS atende normalmente.
+
+As credenciais vêm do ambiente, nunca do YAML:
+
+```bash
+export INLABS_EMAIL="voce@exemplo.org"
+export INLABS_SENHA="sua-senha"
+radar coletar --fonte inlabs,iofmg
+```
+
+O login é preguiçoso: reprocessar um dia que já está em `data/raw/<data>/inlabs/`
+não pede credencial nenhuma. Sem edição publicada na data — domingo, feriado —
+o serviço responde 404 e a coleta sai `vazio`, exit 0.
+
+Quais órgãos entram é decisão do bloco `fontes.inlabs` do
+`config/config.yaml`: `orgaos` casa o 1º nível de `artCategory`, e
+`subunidades_extra` recorta a "Presidência da República", que de outro modo
+traria o Executivo inteiro. A ANVISA é aceita em qualquer nível da hierarquia,
+porque o serviço ora a publica como órgão de 1º nível, ora sob o Ministério da
+Saúde.
 
 ## Integração com o Hermes
 
