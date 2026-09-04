@@ -1956,6 +1956,34 @@ def test_html_sem_corpo_devolve_texto_vazio_sem_estourar():
     assert isinstance(resultado, TextoDOU)
     assert resultado.texto == ""
     assert resultado.identifica is None
+    assert resultado.ementa is None
+
+
+def test_corta_no_rodape_e_ignora_o_que_vem_depois():
+    """O ato termina no rodape; paragrafo de mobiliario nao e inteiro teor."""
+    html = (
+        '<html><div class="texto-dou">'
+        '<p class="identifica">Portaria X</p>'
+        '<p class="dou-paragraph">Conteudo do ato.</p>'
+        "</div>"
+        '<div class="informacao-conteudo-dou">'
+        '<p class="h6">Este conteudo nao substitui o publicado no DOU.</p>'
+        "</div></html>"
+    )
+    texto = extrair_texto(html).texto
+    assert "Conteudo do ato." in texto
+    assert "nao substitui" not in texto
+
+
+def test_sem_rodape_ainda_extrai_ate_o_fim():
+    """Fallback: se a pagina nao tiver rodape, nao pode devolver vazio."""
+    html = (
+        '<html><div class="texto-dou">'
+        '<p class="identifica">Portaria Y</p>'
+        '<p class="dou-paragraph">Unico paragrafo.</p>'
+        "</div></html>"
+    )
+    assert "Unico paragrafo." in extrair_texto(html).texto
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -1981,6 +2009,11 @@ import re
 from dataclasses import dataclass
 
 _CORPO = re.compile(r'<div[^>]*class="[^"]*\btexto-dou\b[^"]*"[^>]*>(.*)', re.DOTALL)
+# O ato acaba no rodape. Sem esse corte, paragrafos de mobiliario da pagina
+# (classe `h6`, avisos de "nao substitui o publicado") entram no inteiro teor.
+_FIM_DO_ATO = re.compile(
+    r'<div[^>]*class="[^"]*(?:informacao-conteudo-dou|rodape-dou)', re.DOTALL
+)
 _PARAGRAFO = re.compile(r'<p class="([^"]+)"[^>]*>(.*?)</p>', re.DOTALL)
 _TAG = re.compile(r"<[^>]+>")
 _ESPACOS = re.compile(r"\s+")
@@ -2006,11 +2039,17 @@ def extrair_texto(html: str) -> TextoDOU:
     if not corpo:
         return TextoDOU(identifica=None, ementa=None, texto="")
 
+    # Corta no rodape quando ele existe; senao vai ate o fim do documento.
+    regiao = corpo.group(1)
+    rodape = _FIM_DO_ATO.search(regiao)
+    if rodape:
+        regiao = regiao[: rodape.start()]
+
     identifica: str | None = None
     ementa: str | None = None
     linhas: list[str] = []
 
-    for classes, conteudo in _PARAGRAFO.finditer(corpo.group(1)):
+    for classes, conteudo in _PARAGRAFO.finditer(regiao):
         nomes = set(classes.split())
         if nomes & _CLASSES_IGNORADAS:
             continue
@@ -2029,7 +2068,7 @@ def extrair_texto(html: str) -> TextoDOU:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_dou_texto.py -v`
-Expected: PASS (7 testes)
+Expected: PASS (10 testes)
 
 - [ ] **Step 5: Commit**
 
