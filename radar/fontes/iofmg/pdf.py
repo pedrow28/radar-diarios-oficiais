@@ -29,6 +29,12 @@ _DATA_E_PAGINA = re.compile(
     r"^\s*(?:segunda|terça|quarta|quinta|sexta|sábado|domingo)[^\n]*\d{4}\s*[–-]\s*\d{1,4}\s*$",
     re.IGNORECASE | re.MULTILINE,
 )
+# A extração do PDF insere um espaço depois do ponto de milhar: "5. 953",
+# "R$ 168. 895. 626,43", "MASP 1. 130. 647-9". Isso produz número de ato
+# ERRADO ("5" em vez de "5.953" — quatro deliberações viram todas "5") e
+# mutila os valores em reais, que são o principal sinal de captação.
+# Medido nas duas edições reais: 166 normalizações, zero falsos positivos.
+_MILHAR_QUEBRADO = re.compile(r"(?<=\d)\.[ ]+(?=\d{3}(?!\d))")
 # Hífen no fim da linha que quebra uma palavra; o legítimo (CIB-SUS) não é seguido de \n.
 _HIFENIZACAO = re.compile(r"(\w)-\s*\n\s*(\w)")
 _LINHAS_VAZIAS = re.compile(r"\n{3,}")
@@ -94,6 +100,7 @@ def limpar(texto: str) -> str:
     limpo = _CABECALHO.sub("", texto)
     limpo = _LINHA_DE_PAGINA.sub("", limpo)
     limpo = _DATA_E_PAGINA.sub("", limpo)
+    limpo = _MILHAR_QUEBRADO.sub(".", limpo)
     limpo = _HIFENIZACAO.sub(r"\1\2", limpo)
     limpo = _LINHAS_VAZIAS.sub("\n\n", limpo)
     return limpo.strip()

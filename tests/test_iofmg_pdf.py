@@ -76,6 +76,18 @@ def test_limpar_preserva_hifen_legitimo():
     assert "CIB-SUS" in limpar("DELIBERAÇÃO CIB-SUS/MG Nº 5.953")
 
 
+def test_limpar_refaz_separador_de_milhar_quebrado():
+    """A extracao do PDF insere espaco depois do ponto de milhar."""
+    assert "5.953" in limpar("DELIBERAÇÃO CIB-SUS/MG Nº 5. 953, DE 1 DE SETEMBRO")
+    assert "R$ 168.895.626,43" in limpar("valor total anual de R$ 168. 895. 626,43")
+    assert "1.130.647-9" in limpar("MASP 1. 130. 647-9")
+
+
+def test_limpar_nao_junta_quando_nao_ha_tres_digitos():
+    """So o padrao de milhar (exatamente 3 digitos) e normalizado."""
+    assert limpar("no exercício de 2025. 30 servidores") == "no exercício de 2025. 30 servidores"
+
+
 def test_limpar_nao_apaga_o_nome_do_estado_dentro_do_ato():
     """Regressao: sem ancora de linha, o nome das entidades e mutilado.
 

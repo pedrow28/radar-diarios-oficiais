@@ -89,6 +89,14 @@ def test_edicao_real_02_produz_publicacoes(paginas_02):
     assert len(achados) >= 5, f"segmentou apenas {len(achados)}"
 
 
+def test_numero_completo_em_deliberacao_cib_sus(paginas_02):
+    """Numero truncado e numero ERRADO: 4 deliberacoes distintas viram todas "5"."""
+    cib = [a for a in segmentar(paginas_02, TIPOS) if "CIB-SUS" in a.titulo]
+    assert cib, "as deliberacoes CIB-SUS precisam ser segmentadas"
+    assert all(a.numero and "." in a.numero for a in cib), [a.numero for a in cib]
+    assert len({a.numero for a in cib}) == len(cib), "os numeros devem ser distintos"
+
+
 def test_edicao_real_nao_gera_falsos_positivos_conhecidos(paginas_02):
     titulos = [a.titulo.upper() for a in segmentar(paginas_02, TIPOS)]
     assert not any(t.startswith("DELIBERA:") for t in titulos)
