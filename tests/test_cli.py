@@ -241,6 +241,34 @@ def test_coletar_aplica_a_retencao_de_bruto(ambiente):
     assert (raw / recente.isoformat()).exists()
 
 
+# ── N3: falha de disco/SQLite também não pode matar a fonte seguinte ────────
+
+
+def test_falha_ao_salvar_normalizado_nao_impede_a_fonte_seguinte(ambiente, monkeypatch):
+    """`salvar_normalizado` ficava FORA do try: um OSError aqui não derrubava só
+    a fonte do DOU, ele impedia o IOF-MG de rodar — a metade "não mata a fonte
+    seguinte" da correção C5 continuava aberta para falhas de disco.
+    """
+    from radar.core.storage import Storage
+
+    cfg, dir_dados = ambiente
+    original = Storage.salvar_normalizado
+
+    def explode_so_para_dou(self, resultado):
+        if resultado.fonte == "dou":
+            raise OSError("disco cheio")
+        return original(self, resultado)
+
+    monkeypatch.setattr("radar.core.storage.Storage.salvar_normalizado", explode_so_para_dou)
+    codigo = main(["coletar", "--config", str(cfg), "--data", "2026-09-04", "--fonte", "todas"])
+    assert codigo == 2
+    assert not (dir_dados / "normalized" / "2026-09-04" / "dou.json").exists()
+    assert (dir_dados / "normalized" / "2026-09-04" / "iofmg.json").exists(), (
+        "a segunda fonte precisa rodar e gravar o próprio JSON mesmo com a "
+        "primeira falhando ao salvar em disco"
+    )
+
+
 def test_falha_na_limpeza_nao_derruba_a_coleta(ambiente, monkeypatch):
     """A coleta já terminou: apagar cache antigo não pode virar exit 2."""
     cfg, dir_dados = ambiente

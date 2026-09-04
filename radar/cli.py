@@ -60,13 +60,19 @@ def _coletar(args) -> int:
     pior = 0
     try:
         for fonte in _fontes(args.fonte, cfg, storage, sessao):
-            try:
-                resultado = fonte.coletar(data, forcar=args.forcar)
             # `Exception`, não só `ErroRadar`: uma `ValueError` do desembrulho,
             # uma `TypeError` de `int(totalPaginas)` ou uma `OSError` de disco
             # escapariam, o Python escolheria exit 1 — que o contrato reserva
             # para `parcial`, "processar e alertar" — e a fonte seguinte nem
-            # rodaria. Aqui a fonte quebrada vira `erro` e a outra segue.
+            # rodaria. Aqui a fonte quebrada vira `erro` e a outra segue. As
+            # gravações em disco/SQLite ficam DENTRO deste `try`: uma falha
+            # nelas (disco cheio, SQLite bloqueado) é exatamente do mesmo tipo
+            # de acidente que uma falha de coleta e não pode matar a fonte
+            # seguinte.
+            try:
+                resultado = fonte.coletar(data, forcar=args.forcar)
+                storage.salvar_normalizado(resultado)
+                storage.gravar(resultado.publicacoes)
             except Exception as exc:
                 logger.exception("%s falhou: %s", fonte.nome, exc)
                 pior = max(pior, status_para_exit(Status.ERRO))
@@ -74,8 +80,6 @@ def _coletar(args) -> int:
                 # de que uma fonte caiu, e via apenas a linha da que deu certo.
                 print(f"{fonte.nome}: erro | {exc}")
                 continue
-            storage.salvar_normalizado(resultado)
-            storage.gravar(resultado.publicacoes)
             pior = max(pior, status_para_exit(resultado.status))
             print(
                 f"{resultado.fonte}: {resultado.status} | "
