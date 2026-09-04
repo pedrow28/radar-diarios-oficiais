@@ -55,7 +55,8 @@ def test_pacote_importavel():
 
 
 def test_fixtures_presentes(dir_fixtures: Path):
-    assert (dir_fixtures / "dou" / "busca-ms-2026-09-04.html").exists()
+    assert (dir_fixtures / "dou" / "busca-ms-2026-09-03-p1.html").exists()
+    assert (dir_fixtures / "dou" / "busca-ms-2026-09-03-p2.html").exists()
     assert (dir_fixtures / "dou" / "pub-portaria-gm-ms-12141.html").exists()
     assert (dir_fixtures / "iofmg" / "edicao-2026-09-03.meta.json").exists()
     assert (dir_fixtures / "iofmg" / "caderno-2026-09-03-ses.pdf").exists()
@@ -1348,12 +1349,28 @@ Corrige o bug 4 da spec: a seção deixa de ser adivinhada por palavra no títul
 **Interfaces:**
 - Consumes: `radar.core.erros.ExtracaoParcial`
 - Produces:
-  - `BASE_BUSCA: str`, `ID_BLOCO_JSON: str`
+  - `BASE_BUSCA: str`, `ID_BLOCO_JSON: str`, `ENCODING_BUSCA: str`, `ENCODING_PUBLICACAO: str`
+  - `Cursor` (frozen dataclass): `score`, `id`, `display_date`
   - `decodificar_busca(bruto: bytes) -> str`
   - `extrair_jsonarray(html: str) -> list[dict]`
-  - `montar_url_busca(orgao: str, data: date, delta: int, pagina: int) -> str`
+  - `cursor_do_ultimo(itens: list[dict]) -> Cursor | None`
+  - `montar_url_busca(orgao: str, data: date, delta: int, pagina: int = 1, cursor: Cursor | None = None) -> str`
   - `url_publicacao(url_title: str) -> str`
   - `total_de_resultados(html: str) -> int`
+
+**Descobertas de campo que este código encerra** (verificadas contra o site real em 2026-09-04, não suposições):
+
+1. **A data só funciona via `exactDate=personalizado`.** `exactDate=dia` com
+   `dateDay`/`dateMonth`/`dateYear` — a forma que os scripts atuais usam —
+   **ignora silenciosamente a data pedida** e devolve a edição corrente. Pedir
+   `dateDay=03` retornou publicações com `pubDate=04/09/2026`. O formato aceito é
+   `publishFrom=DD-MM-AAAA` (ou `DD/MM/AAAA`); em ISO (`2026-09-03`) volta a cair
+   em hoje, sem erro.
+2. **A paginação é por cursor, não por offset.** `currentPage=2` na URL não avança
+   (o Liferay apenas ecoa o valor). A página seguinte exige `currentPage`,
+   `newPage` e o cursor `score`/`id`/`displayDate` copiado do **último item da
+   página atual**. Validado: 03/09 devolveu 75 + 43 = 118 itens únicos, igual ao
+   total informado.
 
 - [ ] **Step 1: Write the failing test**
 
@@ -1376,7 +1393,7 @@ from radar.fontes.dou.busca import (
 
 @pytest.fixture
 def html_busca(dir_fixtures: Path) -> str:
-    return decodificar_busca((dir_fixtures / "dou" / "busca-ms-2026-09-04.html").read_bytes())
+    return decodificar_busca((dir_fixtures / "dou" / "busca-ms-2026-09-03-p1.html").read_bytes())
 
 
 def test_decodifica_como_iso_8859_1_apesar_do_header_mentir(html_busca: str):
@@ -1410,7 +1427,12 @@ def test_tipos_vem_da_fonte_nao_de_palavra_no_titulo(html_busca: str):
 
 
 def test_total_de_resultados_e_lido_da_pagina(html_busca: str):
-    assert total_de_resultados(html_busca) == 142
+    assert total_de_resultados(html_busca) == 118
+
+
+def test_todos_os_itens_sao_da_data_pedida(html_busca: str):
+    """Regressao do parametro de data ignorado: pedir 03/09 tem que trazer 03/09."""
+    assert {i["pubDate"] for i in extrair_jsonarray(html_busca)} == {"03/09/2026"}
 
 
 def test_html_sem_bloco_json_levanta_erro():
@@ -1420,14 +1442,49 @@ def test_html_sem_bloco_json_levanta_erro():
         extrair_jsonarray("<html><body>nada aqui</body></html>")
 
 
-def test_monta_url_de_busca_com_data_e_pagina():
-    url = montar_url_busca("Ministério da Saúde", date(2026, 9, 4), delta=75, pagina=2)
-    assert "dateDay=04" in url
-    assert "dateMonth=09" in url
-    assert "dateYear=2026" in url
+def test_url_usa_data_personalizada_e_nunca_exactdate_dia():
+    """`exactDate=dia` ignora a data pedida e devolve a edicao corrente."""
+    url = montar_url_busca("Ministério da Saúde", date(2026, 9, 3), delta=75)
+    assert "exactDate=personalizado" in url
+    assert "publishFrom=03-09-2026" in url
+    assert "publishTo=03-09-2026" in url
+    assert "exactDate=dia" not in url
+    assert "dateDay" not in url
     assert "delta=75" in url
-    assert "currentPage=2" in url
     assert "Minist%C3%A9rio+da+Sa%C3%BAde" in url or "Minist%C3%A9rio%20da%20Sa%C3%BAde" in url
+
+
+def test_primeira_pagina_nao_leva_cursor():
+    url = montar_url_busca("MS", date(2026, 9, 3), delta=75)
+    assert "newPage" not in url
+    assert "score" not in url
+
+
+def test_cursor_e_extraido_do_ultimo_item(html_busca: str):
+    from radar.fontes.dou.busca import cursor_do_ultimo
+
+    itens = extrair_jsonarray(html_busca)
+    cursor = cursor_do_ultimo(itens)
+    assert cursor.id == itens[-1]["classPK"]
+    assert cursor.display_date == itens[-1]["displayDateSortable"]
+    assert cursor.score == itens[-1]["score"]
+
+
+def test_cursor_de_lista_vazia_e_none():
+    from radar.fontes.dou.busca import cursor_do_ultimo
+
+    assert cursor_do_ultimo([]) is None
+
+
+def test_url_da_segunda_pagina_carrega_o_cursor(html_busca: str):
+    from radar.fontes.dou.busca import cursor_do_ultimo
+
+    cursor = cursor_do_ultimo(extrair_jsonarray(html_busca))
+    url = montar_url_busca("MS", date(2026, 9, 3), delta=75, pagina=2, cursor=cursor)
+    assert "currentPage=1" in url
+    assert "newPage=2" in url
+    assert f"id={cursor.id}" in url
+    assert f"displayDate={cursor.display_date}" in url
 
 
 def test_url_de_publicacao_usa_o_slug():
@@ -1466,8 +1523,10 @@ from __future__ import annotations
 
 import json
 import re
+from dataclasses import dataclass
 from datetime import date
-from urllib.parse import quote_plus
+from typing import Any
+from urllib.parse import quote_plus, urlencode
 
 from radar.core.erros import ExtracaoParcial
 
@@ -1513,17 +1572,66 @@ def total_de_resultados(html: str) -> int:
     return int(achado.group(1)) if achado else 0
 
 
-def montar_url_busca(orgao: str, data: date, delta: int, pagina: int = 1) -> str:
-    return (
-        f"{BASE_BUSCA}?q=*"
-        f"&orgPrin={quote_plus(orgao)}"
-        f"&exactDate=dia"
-        f"&dateDay={data.day:02d}"
-        f"&dateMonth={data.month:02d}"
-        f"&dateYear={data.year}"
-        f"&delta={delta}"
-        f"&currentPage={pagina}"
+@dataclass(frozen=True)
+class Cursor:
+    """Posição da paginação: o último item da página já lida.
+
+    A busca do DOU pagina por cursor (`search_after`), não por offset. Mandar
+    `currentPage=2` na URL não avança nada — o portal só ecoa o valor.
+    """
+
+    score: Any
+    id: Any
+    display_date: Any
+
+
+def cursor_do_ultimo(itens: list[dict]) -> Cursor | None:
+    if not itens:
+        return None
+    ultimo = itens[-1]
+    return Cursor(
+        score=ultimo.get("score"),
+        id=ultimo.get("classPK"),
+        display_date=ultimo.get("displayDateSortable"),
     )
+
+
+def montar_url_busca(
+    orgao: str,
+    data: date,
+    delta: int,
+    pagina: int = 1,
+    cursor: Cursor | None = None,
+) -> str:
+    """URL da busca para uma data e página.
+
+    A data vai como `exactDate=personalizado` com `publishFrom`/`publishTo` em
+    DD-MM-AAAA. A forma `exactDate=dia` + `dateDay/dateMonth/dateYear`, usada
+    pelos scripts antigos, ignora a data pedida e devolve a edição corrente —
+    sem erro, o que é pior.
+    """
+    data_br = data.strftime("%d-%m-%Y")
+    parametros = {
+        "q": "*",
+        "s": "todos",
+        "orgPrin": orgao,
+        "exactDate": "personalizado",
+        "publishFrom": data_br,
+        "publishTo": data_br,
+        "sortType": "0",
+        "delta": delta,
+    }
+    if pagina > 1 and cursor is not None:
+        parametros.update(
+            {
+                "currentPage": pagina - 1,
+                "newPage": pagina,
+                "score": cursor.score,
+                "id": cursor.id,
+                "displayDate": cursor.display_date,
+            }
+        )
+    return f"{BASE_BUSCA}?{urlencode(parametros, quote_via=quote_plus)}"
 
 
 def url_publicacao(url_title: str) -> str:
@@ -1533,7 +1641,7 @@ def url_publicacao(url_title: str) -> str:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_dou_busca.py -v`
-Expected: PASS (9 testes)
+Expected: PASS (14 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -1553,8 +1661,8 @@ Corrige os bugs 1, 9 e 12 da spec: hoje `extend()` cego mais `len >= total` decl
 - Create: `tests/test_dou_paginacao.py`
 
 **Interfaces:**
-- Consumes: `extrair_jsonarray`, `total_de_resultados`, `montar_url_busca` da Task 7
-- Produces: `percorrer_paginas(buscar_pagina: Callable[[int], str], orgao: str, data: date, delta: int) -> tuple[list[dict], list[str]]` — devolve itens únicos (por `urlTitle`) e a lista de avisos.
+- Consumes: `extrair_jsonarray`, `total_de_resultados`, `cursor_do_ultimo`, `Cursor` da Task 7
+- Produces: `percorrer_paginas(buscar_pagina: Callable[[int, Cursor | None], str], delta: int) -> tuple[list[dict], list[str]]` — devolve itens únicos (por `urlTitle`) e a lista de avisos. O chamador injeta `buscar_pagina`, que recebe o número da página e o cursor da anterior e devolve o HTML já decodificado.
 
 - [ ] **Step 1: Write the failing test**
 
@@ -1562,9 +1670,9 @@ Corrige os bugs 1, 9 e 12 da spec: hoje `extend()` cego mais `len >= total` decl
 
 ```python
 import json
-from datetime import date
+from pathlib import Path
 
-from radar.fontes.dou.busca import ID_BLOCO_JSON, percorrer_paginas
+from radar.fontes.dou.busca import ID_BLOCO_JSON, decodificar_busca, percorrer_paginas
 
 
 def _pagina(itens: list[dict], total: int) -> str:
@@ -1577,20 +1685,38 @@ def _pagina(itens: list[dict], total: int) -> str:
 
 
 def _itens(inicio: int, quantos: int) -> list[dict]:
-    return [{"urlTitle": f"ato-{i}", "title": f"Ato {i}"} for i in range(inicio, inicio + quantos)]
+    return [
+        {"urlTitle": f"ato-{i}", "title": f"Ato {i}", "classPK": str(i),
+         "score": 0, "displayDateSortable": 1788490800000}
+        for i in range(inicio, inicio + quantos)
+    ]
 
 
 def test_percorre_todas_as_paginas_ate_o_total():
     paginas = {1: _pagina(_itens(0, 3), 5), 2: _pagina(_itens(3, 2), 5)}
-    itens, avisos = percorrer_paginas(lambda n: paginas[n], "MS", date(2026, 9, 4), delta=3)
+    itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=3)
     assert len(itens) == 5
     assert avisos == []
+
+
+def test_cursor_da_pagina_anterior_e_repassado():
+    """Sem o cursor a busca do DOU nunca avanca de pagina."""
+    recebidos: list = []
+
+    def buscar(n, cursor):
+        recebidos.append(cursor)
+        return _pagina(_itens((n - 1) * 3, 3), 6)
+
+    percorrer_paginas(buscar, delta=3)
+    assert recebidos[0] is None, "a primeira página não tem cursor"
+    assert recebidos[1] is not None
+    assert recebidos[1].id == "2", "cursor deve vir do último item da página 1"
 
 
 def test_deduplica_por_url_title():
     """Mesmo item em duas paginas conta uma vez so."""
     paginas = {1: _pagina(_itens(0, 3), 5), 2: _pagina(_itens(2, 3), 5)}
-    itens, _ = percorrer_paginas(lambda n: paginas[n], "MS", date(2026, 9, 4), delta=3)
+    itens, _ = percorrer_paginas(lambda n, c: paginas[n], delta=3)
     assert len(itens) == 4
     assert len({i["urlTitle"] for i in itens}) == 4
 
@@ -1598,7 +1724,7 @@ def test_deduplica_por_url_title():
 def test_pagina_repetida_interrompe_e_avisa_em_vez_de_mentir_sucesso():
     """O bug atual: pagina que nao avanca inflava o contador ate 'completo'."""
     repetida = _pagina(_itens(0, 3), 9)
-    itens, avisos = percorrer_paginas(lambda n: repetida, "MS", date(2026, 9, 4), delta=3)
+    itens, avisos = percorrer_paginas(lambda n, c: repetida, delta=3)
     assert len(itens) == 3
     assert avisos, "paginação travada precisa gerar aviso"
     assert "repet" in avisos[0].lower() or "trav" in avisos[0].lower()
@@ -1606,22 +1732,20 @@ def test_pagina_repetida_interrompe_e_avisa_em_vez_de_mentir_sucesso():
 
 def test_avisa_quando_coletou_menos_que_o_total():
     paginas = {1: _pagina(_itens(0, 3), 10), 2: _pagina([], 10)}
-    itens, avisos = percorrer_paginas(lambda n: paginas[n], "MS", date(2026, 9, 4), delta=3)
+    itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=3)
     assert len(itens) == 3
     assert any("10" in a for a in avisos)
 
 
 def test_pagina_vazia_encerra_sem_erro():
     paginas = {1: _pagina(_itens(0, 2), 2), 2: _pagina([], 2)}
-    itens, avisos = percorrer_paginas(lambda n: paginas[n], "MS", date(2026, 9, 4), delta=2)
+    itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=2)
     assert len(itens) == 2
     assert avisos == []
 
 
 def test_sem_resultados_devolve_lista_vazia():
-    itens, avisos = percorrer_paginas(
-        lambda n: _pagina([], 0), "MS", date(2026, 9, 4), delta=75
-    )
+    itens, avisos = percorrer_paginas(lambda n, c: _pagina([], 0), delta=75)
     assert itens == []
     assert avisos == []
 
@@ -1630,13 +1754,26 @@ def test_teto_de_paginas_deriva_do_total_nao_de_constante():
     """Com 800 resultados e delta 75 sao 11 paginas; o limite antigo travava em 10."""
     chamadas: list[int] = []
 
-    def buscar(n: int) -> str:
+    def buscar(n, cursor):
         chamadas.append(n)
         return _pagina(_itens((n - 1) * 75, 75), 800)
 
-    itens, _ = percorrer_paginas(buscar, "MS", date(2026, 9, 4), delta=75)
+    itens, _ = percorrer_paginas(buscar, delta=75)
     assert len(itens) == 800
     assert max(chamadas) >= 11
+
+
+def test_edicao_real_percorre_as_duas_paginas(dir_fixtures: Path):
+    """Fixtures reais de 03/09/2026: 75 + 43 = 118, o total informado pela busca."""
+    paginas = {
+        1: decodificar_busca((dir_fixtures / "dou" / "busca-ms-2026-09-03-p1.html").read_bytes()),
+        2: decodificar_busca((dir_fixtures / "dou" / "busca-ms-2026-09-03-p2.html").read_bytes()),
+    }
+    itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=75)
+    assert len(itens) == 118
+    assert avisos == []
+    assert len({i["urlTitle"] for i in itens}) == 118, "não pode haver duplicata"
+    assert {i["pubName"] for i in itens} == {"DO1", "DO2", "DO3"}
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -1649,16 +1786,12 @@ Expected: FAIL com `ImportError: cannot import name 'percorrer_paginas'`
 Acrescentar ao fim de `radar/fontes/dou/busca.py`:
 
 ```python
-def percorrer_paginas(
-    buscar_pagina,
-    orgao: str,
-    data: date,
-    delta: int,
-) -> tuple[list[dict], list[str]]:
+def percorrer_paginas(buscar_pagina, delta: int) -> tuple[list[dict], list[str]]:
     """Percorre a paginação da busca acumulando itens únicos.
 
-    `buscar_pagina(numero) -> html` é injetado para manter esta função testável
-    sem rede.
+    `buscar_pagina(numero, cursor) -> html` é injetado para manter esta função
+    testável sem rede. O cursor vem do último item da página anterior; sem ele a
+    busca do DOU devolve sempre a primeira página.
 
     Três saídas explícitas, nunca um `except` pelado: total atingido, página
     vazia, ou página cujo conjunto de itens repete o da anterior — que é como a
@@ -1671,11 +1804,12 @@ def percorrer_paginas(
     avisos: list[str] = []
     total = 0
     vistos_anteriores: set[str] | None = None
+    cursor: Cursor | None = None
     pagina = 1
     teto = 1
 
     while pagina <= teto:
-        html = buscar_pagina(pagina)
+        html = buscar_pagina(pagina, cursor)
         if pagina == 1:
             total = total_de_resultados(html)
             if total == 0:
@@ -1704,6 +1838,7 @@ def percorrer_paginas(
 
         if len(unicos) >= total:
             break
+        cursor = cursor_do_ultimo(itens)
         pagina += 1
 
     if total and len(unicos) < total and not avisos:
@@ -1716,7 +1851,7 @@ def percorrer_paginas(
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_dou_paginacao.py -v`
-Expected: PASS (7 testes)
+Expected: PASS (9 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -2096,6 +2231,7 @@ from datetime import date
 from pathlib import Path
 
 import pytest
+import requests
 
 from radar.core.config import ConfigDOU
 from radar.core.erros import FonteIndisponivel, Status
@@ -2142,7 +2278,9 @@ class SessaoFalsa:
     def get(self, url, timeout=None):
         self.pedidos.append(url)
         if any(f in url for f in self.falhar):
-            raise ConnectionError("rede caiu")
+            # requests.exceptions.ConnectionError, não a builtin: só a primeira é
+            # RequestException, que é o que `obter_bytes` converte em FonteIndisponivel.
+            raise requests.exceptions.ConnectionError("rede caiu")
 
         class R:
             status_code = 200
@@ -2274,12 +2412,12 @@ class FonteDOU:
         quando = agora_utc()
         escopo = {"orgao": self.cfg.orgao}
 
-        def pagina(numero: int) -> str:
-            url = busca.montar_url_busca(self.cfg.orgao, data, self.cfg.delta, numero)
+        def pagina(numero: int, cursor) -> str:
+            url = busca.montar_url_busca(self.cfg.orgao, data, self.cfg.delta, numero, cursor)
             bruto = self._buscar_bruto(data, f"busca-p{numero}.html", url, forcar)
             return busca.decodificar_busca(bruto)
 
-        itens, avisos = busca.percorrer_paginas(pagina, self.cfg.orgao, data, self.cfg.delta)
+        itens, avisos = busca.percorrer_paginas(pagina, self.cfg.delta)
 
         if not itens:
             self.logger.info("DOU %s: nenhuma publicação para %s", data, self.cfg.orgao)
@@ -2541,9 +2679,12 @@ def montar_url(data: date) -> str:
     return f"{URL_API}?{urlencode({'dataPublicacao': data.strftime('%Y-%m-%d')})}"
 
 
-def consultar_edicao(sessao, data: date) -> dict:
-    """Devolve o objeto `dados` da edição. Sem edição na data → `SemEdicao`."""
-    bruto = obter_bytes(sessao, montar_url(data))
+def dados_de(bruto: bytes, data: date) -> dict:
+    """Extrai o objeto `dados` de uma resposta já baixada.
+
+    Separado de `consultar_edicao` para que o caminho com cache em disco e o
+    caminho de rede compartilhem exatamente a mesma interpretação.
+    """
     try:
         resposta = json.loads(bruto)
     except json.JSONDecodeError as exc:
@@ -2553,6 +2694,11 @@ def consultar_edicao(sessao, data: date) -> dict:
     if not dados:
         raise SemEdicao(f"Nenhuma edição do IOF-MG publicada em {data.isoformat()}")
     return dados
+
+
+def consultar_edicao(sessao, data: date) -> dict:
+    """Devolve o objeto `dados` da edição. Sem edição na data → `SemEdicao`."""
+    return dados_de(obter_bytes(sessao, montar_url(data)), data)
 
 
 def caderno_principal(dados: dict, descricao: str) -> dict:
@@ -2594,8 +2740,12 @@ Substitui o `find_section_pages()`, que lia só a página 1 e confiava em regex 
 - Consumes: `SemEdicao` (Task 2)
 - Produces:
   - `intervalo_da_secao(caderno: dict, secao: str, total_paginas: int) -> tuple[int, int]`
+  - `proxima_secao(caderno: dict, secao: str) -> str | None`
   - `texto_das_paginas(pdf: bytes, inicio: int, fim: int) -> list[tuple[int, str]]`
+  - `truncar_na_proxima_secao(paginas: list[tuple[int, str]], proxima: str | None) -> list[tuple[int, str]]`
   - `limpar(texto: str) -> str`
+
+**Por que o truncamento existe:** a última página do intervalo é compartilhada — ela contém o fim da seção alvo *e* o início da próxima. Sem cortar no cabeçalho da próxima seção, atos da Educação entram na coleta como se fossem da Saúde. A spec §7.2 exige isso.
 
 - [ ] **Step 1: Write the failing test**
 
@@ -2678,6 +2828,52 @@ def test_limpar_junta_palavra_hifenizada_na_quebra():
 
 def test_limpar_preserva_hifen_legitimo():
     assert "CIB-SUS" in limpar("DELIBERAÇÃO CIB-SUS/MG Nº 5.953")
+
+
+def test_proxima_secao_e_a_seguinte_por_pagina():
+    from radar.fontes.iofmg.pdf import proxima_secao
+
+    assert proxima_secao(CADERNO, "Secretaria de Estado de Saúde") == (
+        "Secretaria de Estado de Educação"
+    )
+
+
+def test_proxima_secao_da_ultima_e_none():
+    from radar.fontes.iofmg.pdf import proxima_secao
+
+    assert proxima_secao(CADERNO, "Editais e Avisos") is None
+
+
+def test_trunca_pagina_de_fronteira_no_cabecalho_seguinte():
+    """A ultima pagina traz o fim da secao alvo E o inicio da proxima."""
+    from radar.fontes.iofmg.pdf import truncar_na_proxima_secao
+
+    paginas = [
+        (16, "PORTARIA SES Nº 1\nConteudo da saude."),
+        (17, "Fim da saude.\nSecretaria de Estado de Educação\nPORTARIA SEE Nº 9\nConteudo da educacao."),
+    ]
+    cortadas = truncar_na_proxima_secao(paginas, "Secretaria de Estado de Educação")
+    assert "Fim da saude." in cortadas[1][1]
+    assert "PORTARIA SEE" not in cortadas[1][1]
+    assert "Conteudo da educacao" not in cortadas[1][1]
+
+
+def test_truncar_sem_proxima_secao_nao_altera_nada():
+    from radar.fontes.iofmg.pdf import truncar_na_proxima_secao
+
+    paginas = [(23, "EDITAL Nº 1\nConteudo.")]
+    assert truncar_na_proxima_secao(paginas, None) == paginas
+
+
+def test_truncar_ignora_paginas_que_nao_a_ultima():
+    from radar.fontes.iofmg.pdf import truncar_na_proxima_secao
+
+    paginas = [
+        (16, "Secretaria de Estado de Educação mencionada de passagem.\nPORTARIA SES Nº 1"),
+        (17, "Conteudo final."),
+    ]
+    cortadas = truncar_na_proxima_secao(paginas, "Secretaria de Estado de Educação")
+    assert cortadas[0][1] == paginas[0][1], "só a última página é truncada"
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -2741,6 +2937,32 @@ def intervalo_da_secao(caderno: dict, secao: str, total_paginas: int) -> tuple[i
     raise SemEdicao(f"Seção {secao!r} não encontrada no caderno. Disponíveis: {disponiveis}")
 
 
+def proxima_secao(caderno: dict, secao: str) -> str | None:
+    """Descrição da seção que começa depois da alvo, ou `None` se for a última."""
+    secoes = sorted(caderno.get("secoes", []), key=lambda s: s.get("paginaInicial", 0))
+    for posicao, atual in enumerate(secoes):
+        if atual.get("descricao") == secao and posicao + 1 < len(secoes):
+            return secoes[posicao + 1].get("descricao")
+    return None
+
+
+def truncar_na_proxima_secao(
+    paginas: list[tuple[int, str]], proxima: str | None
+) -> list[tuple[int, str]]:
+    """Corta a última página no cabeçalho da seção seguinte.
+
+    A página de fronteira é compartilhada entre dois órgãos; sem o corte, atos do
+    órgão seguinte entram na coleta como se fossem do alvo.
+    """
+    if not proxima or not paginas:
+        return paginas
+    numero, texto = paginas[-1]
+    posicao = texto.find(proxima)
+    if posicao == -1:
+        return paginas
+    return paginas[:-1] + [(numero, texto[:posicao].rstrip())]
+
+
 def texto_das_paginas(pdf: bytes, inicio: int, fim: int) -> list[tuple[int, str]]:
     """Texto de cada página do intervalo, 1-indexado e inclusivo."""
     paginas: list[tuple[int, str]] = []
@@ -2764,7 +2986,7 @@ def limpar(texto: str) -> str:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_iofmg_pdf.py -v`
-Expected: PASS (11 testes)
+Expected: PASS (16 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -3241,6 +3463,7 @@ from datetime import date
 from radar.core.config import ConfigIOFMG
 from radar.core.datas import agora_utc
 from radar.core.erros import SemEdicao, Status
+from radar.core.http import obter_bytes
 from radar.core.log import configurar_log
 from radar.core.modelos import Resultado
 from radar.core.storage import Storage
@@ -3278,6 +3501,10 @@ class FonteIOFMG:
 
         conteudo = self._obter_pdf(data, dados, forcar)
         paginas = pdf_mod.texto_das_paginas(conteudo, inicio, fim)
+        # A última página é compartilhada com o órgão seguinte; cortar antes de segmentar.
+        paginas = pdf_mod.truncar_na_proxima_secao(
+            paginas, pdf_mod.proxima_secao(caderno, self.cfg.secao)
+        )
         brutos = segmenta.segmentar(paginas, self.cfg.tipos_publicacao)
 
         if not brutos:
@@ -3297,24 +3524,15 @@ class FonteIOFMG:
         )
 
     def _obter_dados(self, data: date, forcar: bool) -> dict:
-        import json
-
+        """Lê do cache ou da rede; a interpretação é a mesma nos dois caminhos."""
         if not forcar:
             guardado = self.storage.ler_raw(data, self.nome, "edicao.json")
             if guardado is not None:
-                dados = json.loads(guardado).get("dados")
-                if dados:
-                    return dados
-                raise SemEdicao(f"Nenhuma edição do IOF-MG em {data.isoformat()}")
-
-        from radar.core.http import obter_bytes
+                return api.dados_de(guardado, data)
 
         bruto = obter_bytes(self.sessao, api.montar_url(data))
         self.storage.salvar_raw(data, self.nome, "edicao.json", bruto)
-        dados = json.loads(bruto).get("dados")
-        if not dados:
-            raise SemEdicao(f"Nenhuma edição do IOF-MG em {data.isoformat()}")
-        return dados
+        return api.dados_de(bruto, data)
 
     def _obter_pdf(self, data: date, dados: dict, forcar: bool) -> bytes:
         if not forcar:
