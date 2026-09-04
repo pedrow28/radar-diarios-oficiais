@@ -23,15 +23,36 @@ def dados_de(bruto: bytes, data: date) -> dict:
 
     Separado de `consultar_edicao` para que o caminho com cache em disco e o
     caminho de rede compartilhem exatamente a mesma interpretação.
+
+    O único sinal válido de "sem edição" é a chave `dados` presente e nula —
+    validado contra a API num domingo: `{"dados": null, "erros": []}`. Tratar
+    qualquer outra coisa falsy (chave ausente, `{}`, `[]`, envelope trocado)
+    como sem edição faria uma mudança de esquema na API virar "domingo" para
+    sempre, com exit 0 — a falha silenciosa que o contrato de status existe
+    para impedir.
     """
     try:
         resposta = json.loads(bruto)
     except json.JSONDecodeError as exc:
         raise FonteIndisponivel(f"Resposta da API do IOF-MG não é JSON: {exc}") from exc
 
-    dados = resposta.get("dados")
-    if not dados:
+    if not isinstance(resposta, dict) or "dados" not in resposta:
+        raise FonteIndisponivel(
+            "Resposta da API do IOF-MG não tem a chave 'dados'; o esquema da "
+            "resposta pode ter mudado."
+        )
+
+    dados = resposta["dados"]
+    if dados is None:
         raise SemEdicao(f"Nenhuma edição do IOF-MG publicada em {data.isoformat()}")
+
+    if not isinstance(dados, dict) or not dados:
+        raise FonteIndisponivel(
+            f"Resposta da API do IOF-MG trouxe 'dados' vazio ou de tipo "
+            f"inesperado ({type(dados).__name__}); o esquema da resposta pode "
+            f"ter mudado."
+        )
+
     return dados
 
 

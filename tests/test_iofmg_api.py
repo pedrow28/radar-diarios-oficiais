@@ -101,3 +101,58 @@ def test_http_401_e_bloqueio_de_acesso_nao_dia_sem_edicao():
 
     with pytest.raises(FonteIndisponivel):
         consultar_edicao(SessaoFalsa(b"", status=401), date(2026, 9, 6))
+
+
+# ── N1: só "dados" presente e nulo é domingo; qualquer outra coisa é quebra ──
+
+
+def test_dia_sem_edicao_real_continua_sem_edicao():
+    """Sinal validado contra a API num domingo: chave presente, valor nulo.
+
+    Este é o único caso que não pode regredir.
+    """
+    from radar.fontes.iofmg.api import dados_de
+
+    corpo = json.dumps({"dados": None, "erros": []}).encode()
+    with pytest.raises(SemEdicao):
+        dados_de(corpo, date(2026, 9, 6))
+
+
+def test_chave_dados_renomeada_e_fonte_indisponivel_nao_domingo():
+    """Chave ausente é mudança de esquema, não "sem edição"."""
+    from radar.core.erros import FonteIndisponivel
+    from radar.fontes.iofmg.api import dados_de
+
+    corpo = json.dumps({"conteudo": {"cadernos": []}, "erros": []}).encode()
+    with pytest.raises(FonteIndisponivel):
+        dados_de(corpo, date(2026, 9, 6))
+
+
+def test_dados_dict_vazio_e_fonte_indisponivel():
+    """`{}` não é o sinal de domingo — é presença sem conteúdo, esquema quebrado."""
+    from radar.core.erros import FonteIndisponivel
+    from radar.fontes.iofmg.api import dados_de
+
+    corpo = json.dumps({"dados": {}, "erros": []}).encode()
+    with pytest.raises(FonteIndisponivel):
+        dados_de(corpo, date(2026, 9, 6))
+
+
+def test_dados_lista_vazia_e_fonte_indisponivel():
+    """`[]` não é dict; tipo errado também é mudança de esquema."""
+    from radar.core.erros import FonteIndisponivel
+    from radar.fontes.iofmg.api import dados_de
+
+    corpo = json.dumps({"dados": [], "erros": []}).encode()
+    with pytest.raises(FonteIndisponivel):
+        dados_de(corpo, date(2026, 9, 6))
+
+
+def test_envelope_totalmente_diferente_e_fonte_indisponivel():
+    """Resposta sem a menor semelhança com o esquema conhecido não é domingo."""
+    from radar.core.erros import FonteIndisponivel
+    from radar.fontes.iofmg.api import dados_de
+
+    corpo = json.dumps({"mensagem": "manutenção programada"}).encode()
+    with pytest.raises(FonteIndisponivel):
+        dados_de(corpo, date(2026, 9, 6))
