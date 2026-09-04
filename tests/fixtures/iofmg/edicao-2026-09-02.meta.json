@@ -1,0 +1,107 @@
+{
+  "dados": {
+    "dataPublicacao": "2026-09-02T00:00:00",
+    "cadernos": [
+      {
+        "secoes": [
+          {
+            "descricao": "Governo do Estado",
+            "paginaInicial": 1
+          },
+          {
+            "descricao": "Secretaria de Estado de Governo",
+            "paginaInicial": 3
+          },
+          {
+            "descricao": "Controladoria-Geral do Estado",
+            "paginaInicial": 3
+          },
+          {
+            "descricao": "Polícia Militar de Minas Gerais",
+            "paginaInicial": 3
+          },
+          {
+            "descricao": "Polícia Civil do Estado de Minas Gerais",
+            "paginaInicial": 4
+          },
+          {
+            "descricao": "Ouvidoria-Geral do Estado",
+            "paginaInicial": 6
+          },
+          {
+            "descricao": "Secretaria de Estado de Agricultura, Pecuária e Abastecimento",
+            "paginaInicial": 6
+          },
+          {
+            "descricao": "Secretaria de Estado de Comunicação Social",
+            "paginaInicial": 6
+          },
+          {
+            "descricao": "Secretaria de Estado de Desenvolvimento Econômico",
+            "paginaInicial": 7
+          },
+          {
+            "descricao": "Secretaria de Estado de Desenvolvimento Social",
+            "paginaInicial": 7
+          },
+          {
+            "descricao": "Secretaria de Estado de Fazenda",
+            "paginaInicial": 8
+          },
+          {
+            "descricao": "Secretaria de Estado de Justiça e Segurança Pública",
+            "paginaInicial": 33
+          },
+          {
+            "descricao": "Secretaria de Estado de Meio Ambiente e Desenvolvimento Sustentável",
+            "paginaInicial": 37
+          },
+          {
+            "descricao": "Secretaria de Estado de Planejamento e Gestão",
+            "paginaInicial": 38
+          },
+          {
+            "descricao": "Secretaria de Estado de Saúde",
+            "paginaInicial": 47
+          },
+          {
+            "descricao": "Secretaria de Estado de Educação",
+            "paginaInicial": 49
+          },
+          {
+            "descricao": "Editais e Avisos",
+            "paginaInicial": 54
+          }
+        ],
+        "id": 330892,
+        "descricao": "Diário do Executivo",
+        "ordem": 100
+      },
+      {
+        "secoes": [],
+        "id": 330893,
+        "descricao": "Diário dos Municípios Mineiros",
+        "ordem": 200
+      },
+      {
+        "secoes": [
+          {
+            "descricao": "Particulares e Pessoas Físicas",
+            "paginaInicial": 1
+          }
+        ],
+        "id": 330894,
+        "descricao": "Diário de Terceiros",
+        "ordem": 300
+      }
+    ],
+    "arquivoCadernoPrincipal": {
+      "arquivo": "<<REMOVIDO: ver caderno-*-ses.pdf>>",
+      "pagina": 1,
+      "totalPaginas": 82,
+      "arquivoUnico": true,
+      "descricaoCaderno": "Diário do Executivo"
+    }
+  },
+  "erros": []
+}

@@ -1,0 +1,27 @@
+# Segredos
+.env
+*.token.json
+google_token.json
+
+# Dados coletados (reproduzíveis via `radar coletar`)
+data/
+logs/
+*.db
+*.db-wal
+*.db-shm
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# SO / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
