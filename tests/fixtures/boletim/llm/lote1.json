@@ -1,0 +1,106 @@
+{
+  "itens": [
+    {
+      "id": "679e98b47028cf11",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Portaria GM/MS nº 3.412, de 2 de setembro de 2026, habilita dez leitos de UTI adulto tipo II em Manhuaçu.",
+      "por_que_importa": "Abre R$ 1.234.567,89 por ano de custeio fundo a fundo para o município.",
+      "valor_brl": 1234567.89,
+      "entes": [
+        "Município de Manhuaçu"
+      ],
+      "tags": [
+        "habilitação",
+        "uti",
+        "custeio"
+      ]
+    },
+    {
+      "id": "f1354e8c87193e91",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Portaria SAPS/MS nº 3.418, de 2 de setembro de 2026, muda o critério de cálculo do piso da atenção primária.",
+      "por_que_importa": "Municípios com menos de 30 mil habitantes recalculam a receita da atenção primária a partir de outubro.",
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "atenção primária",
+        "piso"
+      ]
+    },
+    {
+      "id": "0f787134818cff05",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "RDC nº 942, de 1º de setembro de 2026, fixa requisitos sanitários para serviços de terapia renal substitutiva.",
+      "por_que_importa": "Serviços de diálise já em operação têm 18 meses para se adequar.",
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "anvisa",
+        "diálise"
+      ]
+    },
+    {
+      "id": "0b69eb04e580ae34",
+      "categoria": "C",
+      "relevancia": 2,
+      "resumo": "Edital de chamamento público nº 12/2026 seleciona hospitais filantrópicos para o programa de média complexidade.",
+      "por_que_importa": "Prazo de 30 dias para inscrever a instituição, com prioridade para regiões com vazio assistencial.",
+      "valor_brl": null,
+      "entes": [
+        "Santa Casa de Misericórdia"
+      ],
+      "tags": [
+        "chamamento",
+        "filantrópicos"
+      ]
+    },
+    {
+      "id": "f3caaa45877ff763",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Deliberação CIB-SUS/MG nº 4.512, de 1º de setembro de 2026, amplia o teto MAC do Hospital César Leite.",
+      "por_que_importa": "São R$ 28.100.000,00 permanentes de média e alta complexidade para a regional de Manhuaçu.",
+      "valor_brl": 28100000.0,
+      "entes": [
+        "Hospital César Leite",
+        "Município de Manhuaçu"
+      ],
+      "tags": [
+        "teto mac",
+        "cib",
+        "oncologia"
+      ]
+    },
+    {
+      "id": "900d4d22d7935ded",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Resolução SES nº 9.120, de 1º de setembro de 2026, adia o prazo de prestação de contas dos incentivos estaduais.",
+      "por_que_importa": "O envio passa do 10º para o 20º dia útil, já no terceiro trimestre de 2026.",
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "prestação de contas",
+        "minas gerais"
+      ]
+    },
+    {
+      "id": "beb4a04330693e0c",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria PRE nº 218, de 1º de setembro de 2026, institui grupo de trabalho sobre prontuário eletrônico na Fhemig.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Hospitalar"
+      ],
+      "tags": [
+        "fhemig",
+        "prontuário"
+      ]
+    }
+  ]
+}

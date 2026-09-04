@@ -365,6 +365,152 @@ PUBS_IOFMG = [
 ]
 
 
+# ── respostas de LLM, nos ids que o prefiltro mantém ────────────────────
+def _id(titulo: str) -> str:
+    """Id da publicação da fixture pelo título, para não repetir hash à mão."""
+    for pub in (*PUBS_INLABS, *PUBS_IOFMG):
+        if pub["titulo"].startswith(titulo):
+            return pub["id"]
+    raise KeyError(titulo)
+
+
+def lote1() -> dict:
+    """Classificação dos 7 itens que sobrevivem ao prefiltro no dia 03/09."""
+    return {
+        "itens": [
+            {
+                "id": _id("PORTARIA GM/MS Nº 3.412"),
+                "categoria": "A",
+                "relevancia": 3,
+                "resumo": (
+                    "Portaria GM/MS nº 3.412, de 2 de setembro de 2026, habilita dez "
+                    "leitos de UTI adulto tipo II em Manhuaçu."
+                ),
+                "por_que_importa": (
+                    "Abre R$ 1.234.567,89 por ano de custeio fundo a fundo para o "
+                    "município."
+                ),
+                "valor_brl": 1234567.89,
+                "entes": ["Município de Manhuaçu"],
+                "tags": ["habilitação", "uti", "custeio"],
+            },
+            {
+                "id": _id("PORTARIA SAPS/MS Nº 3.418"),
+                "categoria": "B",
+                "relevancia": 2,
+                "resumo": (
+                    "Portaria SAPS/MS nº 3.418, de 2 de setembro de 2026, muda o "
+                    "critério de cálculo do piso da atenção primária."
+                ),
+                "por_que_importa": (
+                    "Municípios com menos de 30 mil habitantes recalculam a receita "
+                    "da atenção primária a partir de outubro."
+                ),
+                "valor_brl": None,
+                "entes": [],
+                "tags": ["atenção primária", "piso"],
+            },
+            {
+                "id": _id("RESOLUÇÃO DE DIRETORIA COLEGIADA - RDC Nº 942"),
+                "categoria": "B",
+                "relevancia": 2,
+                "resumo": (
+                    "RDC nº 942, de 1º de setembro de 2026, fixa requisitos "
+                    "sanitários para serviços de terapia renal substitutiva."
+                ),
+                "por_que_importa": (
+                    "Serviços de diálise já em operação têm 18 meses para se adequar."
+                ),
+                "valor_brl": None,
+                "entes": [],
+                "tags": ["anvisa", "diálise"],
+            },
+            {
+                "id": _id("EDITAL DE CHAMAMENTO PÚBLICO Nº 12/2026"),
+                "categoria": "C",
+                "relevancia": 2,
+                "resumo": (
+                    "Edital de chamamento público nº 12/2026 seleciona hospitais "
+                    "filantrópicos para o programa de média complexidade."
+                ),
+                "por_que_importa": (
+                    "Prazo de 30 dias para inscrever a instituição, com prioridade "
+                    "para regiões com vazio assistencial."
+                ),
+                "valor_brl": None,
+                "entes": ["Santa Casa de Misericórdia"],
+                "tags": ["chamamento", "filantrópicos"],
+            },
+            {
+                "id": _id("DELIBERAÇÃO CIB-SUS/MG Nº 4.512"),
+                "categoria": "A",
+                "relevancia": 3,
+                "resumo": (
+                    "Deliberação CIB-SUS/MG nº 4.512, de 1º de setembro de 2026, "
+                    "amplia o teto MAC do Hospital César Leite."
+                ),
+                "por_que_importa": (
+                    "São R$ 28.100.000,00 permanentes de média e alta complexidade "
+                    "para a regional de Manhuaçu."
+                ),
+                "valor_brl": 28100000.0,
+                "entes": ["Hospital César Leite", "Município de Manhuaçu"],
+                "tags": ["teto mac", "cib", "oncologia"],
+            },
+            {
+                "id": _id("RESOLUÇÃO SES Nº 9.120"),
+                "categoria": "B",
+                "relevancia": 3,
+                "resumo": (
+                    "Resolução SES nº 9.120, de 1º de setembro de 2026, adia o prazo "
+                    "de prestação de contas dos incentivos estaduais."
+                ),
+                "por_que_importa": (
+                    "O envio passa do 10º para o 20º dia útil, já no terceiro "
+                    "trimestre de 2026."
+                ),
+                "valor_brl": None,
+                "entes": [],
+                "tags": ["prestação de contas", "minas gerais"],
+            },
+            {
+                "id": _id("PORTARIA PRE Nº 218"),
+                "categoria": "D",
+                "relevancia": 1,
+                "resumo": (
+                    "Portaria PRE nº 218, de 1º de setembro de 2026, institui grupo "
+                    "de trabalho sobre prontuário eletrônico na Fhemig."
+                ),
+                "por_que_importa": None,
+                "valor_brl": None,
+                "entes": ["Fundação Hospitalar"],
+                "tags": ["fhemig", "prontuário"],
+            },
+        ]
+    }
+
+
+def editorial() -> dict:
+    return {
+        "titulo": "3 habilitações e 1 teto MAC ampliado em MG",
+        "em_30_segundos": [
+            "O Ministério da Saúde habilitou 10 leitos de UTI adulto em Manhuaçu, "
+            "com R$ 1.234.567,89 de custeio anual.",
+            "A CIB-SUS/MG ampliou em R$ 28.100.000,00 o teto MAC do Hospital "
+            "César Leite.",
+            "A portaria SAPS/MS nº 3.418 mudou o critério do piso da atenção "
+            "primária para municípios de até 30 mil habitantes.",
+            "O edital de chamamento nº 12/2026 abre 30 dias de inscrição para "
+            "hospitais filantrópicos.",
+        ],
+        "intro": (
+            "O dia trouxe 2 atos que movimentam recurso direto para Minas Gerais e "
+            "3 que mudam regra de financiamento. Vale conferir prazo de adesão e "
+            "competência de início em cada um."
+        ),
+    }
+
+
 def _normalizado(
     fonte: str, data: date, status: str, escopo: dict, avisos: list[str], pubs: list[dict]
 ) -> dict:
@@ -416,8 +562,10 @@ def gerar() -> None:
         BASE / "normalized" / DATA_VAZIA.isoformat() / "iofmg.json",
         _normalizado("iofmg", DATA_VAZIA, "vazio", {"cadernos": ["Executivo"]}, [], []),
     )
+    _escrever(BASE / "llm" / "lote1.json", lote1())
+    _escrever(BASE / "llm" / "editorial.json", editorial())
 
 
 if __name__ == "__main__":
     gerar()
-    print(f"fixtures gravadas em {BASE / 'normalized'}")
+    print(f"fixtures gravadas em {BASE}")
