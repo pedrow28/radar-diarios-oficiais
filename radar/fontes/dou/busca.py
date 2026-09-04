@@ -148,7 +148,6 @@ def percorrer_paginas(buscar_pagina, delta: int) -> tuple[list[dict], list[str]]
     unicos: dict[str, dict] = {}
     avisos: list[str] = []
     total = 0
-    bruto_acumulado = 0
     vistos_anteriores: set[str] | None = None
     cursor: Cursor | None = None
     pagina = 1
@@ -177,26 +176,17 @@ def percorrer_paginas(buscar_pagina, delta: int) -> tuple[list[dict], list[str]]
             break
         vistos_anteriores = chaves
 
-        # A posição bruta (não o total de únicos) é o que baliza o total
-        # informado pela busca: um item repetido na borda de duas páginas
-        # (efeito do cursor) ocupa uma posição sem contribuir com um item novo,
-        # então cortamos a página no que falta em POSIÇÃO, não em únicos —
-        # senão a dedução de uma borda repetida nos faria pedir uma página a
-        # mais do que existe.
-        restante = total - bruto_acumulado
-        fatia = itens[:restante]
-        for item in fatia:
+        for item in itens:
             chave = item.get("urlTitle", "")
             if chave:
                 unicos[chave] = item
-        bruto_acumulado += len(fatia)
 
-        if bruto_acumulado >= total:
+        if len(unicos) >= total:
             break
         cursor = cursor_do_ultimo(itens)
         pagina += 1
 
-    if total and bruto_acumulado < total and not avisos:
+    if total and len(unicos) < total and not avisos:
         avisos.append(f"Coletadas {len(unicos)} de {total} publicações informadas pela busca.")
         logger.warning(avisos[-1])
 

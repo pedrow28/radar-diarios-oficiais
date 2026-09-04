@@ -43,11 +43,23 @@ def test_cursor_da_pagina_anterior_e_repassado():
 
 
 def test_deduplica_por_url_title():
-    """Mesmo item em duas paginas conta uma vez so."""
-    paginas = {1: _pagina(_itens(0, 3), 5), 2: _pagina(_itens(2, 3), 5)}
+    """Item repetido na borda de duas paginas conta uma vez so."""
+    paginas = {1: _pagina(_itens(0, 3), 4), 2: _pagina(_itens(2, 2), 4)}
     itens, _ = percorrer_paginas(lambda n, c: paginas[n], delta=3)
     assert len(itens) == 4
     assert len({i["urlTitle"] for i in itens}) == 4
+
+
+def test_para_por_unicos_e_nao_por_posicao_bruta():
+    """Regressao: contar posicao bruta em vez de unicos descarta item real.
+
+    Paginas 1 e 2 se sobrepoem no item 2. Somando posicoes, 3+3 ja atinge o
+    total 5 e o corte por posicao jogaria fora o item 4.
+    """
+    paginas = {1: _pagina(_itens(0, 3), 5), 2: _pagina(_itens(2, 3), 5)}
+    itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=3)
+    assert len({i["urlTitle"] for i in itens}) == 5
+    assert avisos == []
 
 
 def test_pagina_repetida_interrompe_e_avisa_em_vez_de_mentir_sucesso():
@@ -85,7 +97,8 @@ def test_teto_de_paginas_deriva_do_total_nao_de_constante():
 
     def buscar(n, cursor):
         chamadas.append(n)
-        return _pagina(_itens((n - 1) * 75, 75), 800)
+        inicio = (n - 1) * 75
+        return _pagina(_itens(inicio, min(75, 800 - inicio)), 800)
 
     itens, _ = percorrer_paginas(buscar, delta=75)
     assert len(itens) == 800
