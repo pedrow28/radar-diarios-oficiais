@@ -2453,6 +2453,34 @@ def test_escopo_registra_o_orgao(cfg, storage):
     sessao = SessaoFalsa({"buscar/dou": _html_busca([ITEM], 1), "portaria-1": HTML_PUB})
     resultado = FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4))
     assert resultado.escopo["orgao"] == "Ministério da Saúde"
+
+
+def test_texto_vazio_da_pagina_vira_parcial_com_aviso(cfg, storage):
+    """Estrutura da pagina mudada devolve vazio sem estourar.
+
+    Isso nao pode passar por coleta completa: o agente consumidor leria o
+    resumo truncado achando que e o inteiro teor.
+    """
+    sessao = SessaoFalsa({
+        "buscar/dou": _html_busca([ITEM], 1),
+        "portaria-1": b"<html><body>estrutura mudou, sem texto-dou</body></html>",
+    })
+    resultado = FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4))
+    assert resultado.status == Status.PARCIAL
+    assert any("vazio" in a.lower() for a in resultado.avisos)
+
+
+def test_escopo_registra_se_o_texto_integral_foi_buscado(cfg, storage):
+    """So lendo o JSON o consumidor precisa saber se `texto` e inteiro teor."""
+    sessao = SessaoFalsa({"buscar/dou": _html_busca([ITEM], 1), "portaria-1": HTML_PUB})
+    assert FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4)).escopo["texto_integral"] is True
+
+    cfg_resumo = ConfigDOU(
+        orgao=cfg.orgao, delta=cfg.delta, concorrencia=cfg.concorrencia,
+        baixar_texto_integral=False,
+    )
+    resultado = FonteDOU(cfg_resumo, storage, sessao).coletar(date(2026, 9, 5))
+    assert resultado.escopo["texto_integral"] is False
 ```
 
 - [ ] **Step 2: Run test to verify it fails**
@@ -2504,7 +2532,12 @@ class FonteDOU:
 
     def coletar(self, data: date, forcar: bool = False) -> Resultado:
         quando = agora_utc()
-        escopo = {"orgao": self.cfg.orgao}
+        escopo = {
+            "orgao": self.cfg.orgao,
+            # O consumidor precisa saber, so lendo o JSON, se `texto` e o
+            # inteiro teor ou o resumo truncado da listagem.
+            "texto_integral": self.cfg.baixar_texto_integral,
+        }
 
         def pagina(numero: int, cursor) -> str:
             url = busca.montar_url_busca(self.cfg.orgao, data, self.cfg.delta, numero, cursor)
@@ -2554,9 +2587,19 @@ class FonteDOU:
                     data, f"pub-{item.get('classPK', slug)}.html",
                     busca.url_publicacao(slug), forcar,
                 )
-                return slug, extrair_texto(bruto.decode(busca.ENCODING_PUBLICACAO)), None
+                extraido = extrair_texto(bruto.decode(busca.ENCODING_PUBLICACAO))
             except (ErroRadar, OSError, UnicodeDecodeError) as exc:
                 return slug, None, f"Texto integral indisponível para {slug}: {exc}"
+
+            # Extração vazia não levanta exceção: é o que acontece se o portal
+            # mudar a estrutura da página. Sem tratar como falha, a coleta
+            # inteira degradaria para o resumo truncado ainda dizendo "ok".
+            if not extraido.texto.strip():
+                return slug, None, (
+                    f"Texto integral vazio para {slug}: a estrutura da página "
+                    "pode ter mudado."
+                )
+            return slug, extraido, None
 
         with ThreadPoolExecutor(max_workers=max(1, self.cfg.concorrencia)) as executor:
             for slug, texto, falha in executor.map(um, itens):
@@ -2572,7 +2615,7 @@ class FonteDOU:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_dou_coletor.py -v`
-Expected: PASS (7 testes)
+Expected: PASS (9 testes)
 
 - [ ] **Step 5: Commit**
 
