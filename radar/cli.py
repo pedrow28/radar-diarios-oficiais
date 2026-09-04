@@ -8,7 +8,7 @@ from pathlib import Path
 
 from radar.core.config import Config
 from radar.core.datas import hoje, parse_data
-from radar.core.erros import ErroRadar, Status, status_para_exit
+from radar.core.erros import Status, status_para_exit
 from radar.core.http import criar_sessao
 from radar.core.log import configurar_log
 from radar.core.storage import Storage
@@ -62,9 +62,17 @@ def _coletar(args) -> int:
         for fonte in _fontes(args.fonte, cfg, storage, sessao):
             try:
                 resultado = fonte.coletar(data, forcar=args.forcar)
-            except ErroRadar as exc:
-                logger.error("%s falhou: %s", fonte.nome, exc)
+            # `Exception`, não só `ErroRadar`: uma `ValueError` do desembrulho,
+            # uma `TypeError` de `int(totalPaginas)` ou uma `OSError` de disco
+            # escapariam, o Python escolheria exit 1 — que o contrato reserva
+            # para `parcial`, "processar e alertar" — e a fonte seguinte nem
+            # rodaria. Aqui a fonte quebrada vira `erro` e a outra segue.
+            except Exception as exc:
+                logger.exception("%s falhou: %s", fonte.nome, exc)
                 pior = max(pior, status_para_exit(Status.ERRO))
+                # Também em stdout: quem captura só stdout perdia a informação
+                # de que uma fonte caiu, e via apenas a linha da que deu certo.
+                print(f"{fonte.nome}: erro | {exc}")
                 continue
             storage.salvar_normalizado(resultado)
             storage.gravar(resultado.publicacoes)
@@ -149,15 +157,22 @@ def _publicacoes_de(dados: dict, data) -> list:
 
 
 def main(argv: list[str] | None = None) -> int:
+    """Despacha o subcomando e devolve SEMPRE um exit code do contrato.
+
+    O exit code nunca pode ser escolhido pelo Python: uma exceção que escapa
+    sai com 1, e 1 significa `parcial` — "processar e alertar" —, então uma
+    quebra total seria lida pelo agente como coleta aproveitável.
+    """
     args = _montar_parser().parse_args(argv)
-    configurar_log()
+    logger = configurar_log()
     try:
         if args.comando == "coletar":
             return _coletar(args)
         if args.comando == "notificar":
             return _notificar(args)
         return _consultar(args)
-    except (ErroRadar, ValueError, FileNotFoundError) as exc:
+    except Exception as exc:
+        logger.exception("radar %s falhou: %s", args.comando, exc)
         print(f"erro: {exc}", file=sys.stderr)
         return 2
 

@@ -40,12 +40,27 @@ def test_erro_permanente_nao_e_retentado():
     assert s.chamadas == 1
 
 
-def test_401_vira_sem_edicao():
-    """A API do IOF-MG responde 401 quando nao ha diario na data."""
+def test_401_e_erro_permanente_nao_dia_sem_edicao():
+    """Validado contra a API real: num dia sem edição ela responde HTTP 200 com
+    `{"dados": null, "erros": []}` — nunca 401. Logo o único 401 possível é
+    bloqueio de acesso (WAF, IP banido), e traduzi-lo em "domingo, siga sem
+    alarme" calaria a coleta todo dia, para sempre.
+    """
     s = SessaoFalsa([RespostaFalsa(401)])
-    with pytest.raises(SemEdicao):
+    with pytest.raises(FonteIndisponivel):
         obter_bytes(s, "https://x", espera_base=0)
-    assert s.chamadas == 1
+    assert s.chamadas == 1, "erro permanente não é retentado"
+
+
+def test_dia_sem_edicao_continua_sendo_o_corpo_da_resposta():
+    """Quem detecta o dia sem edição é `api.dados_de`, pelo `dados` nulo."""
+    import json
+    from datetime import date
+
+    from radar.fontes.iofmg.api import dados_de
+
+    with pytest.raises(SemEdicao):
+        dados_de(json.dumps({"dados": None, "erros": []}).encode(), date(2026, 9, 6))
 
 
 def test_erro_transitorio_e_retentado_ate_o_limite():

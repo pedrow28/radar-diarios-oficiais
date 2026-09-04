@@ -92,6 +92,12 @@ def test_consultar_edicao_sem_dados_levanta_sem_edicao():
         consultar_edicao(SessaoFalsa(corpo), date(2026, 9, 6))
 
 
-def test_http_401_vira_sem_edicao():
-    with pytest.raises(SemEdicao):
+def test_http_401_e_bloqueio_de_acesso_nao_dia_sem_edicao():
+    """A API nunca responde 401 por falta de edição; 401 é bloqueio de acesso.
+
+    Reportá-lo como `vazio` faria um IP banido virar "domingo" todo dia.
+    """
+    from radar.core.erros import FonteIndisponivel
+
+    with pytest.raises(FonteIndisponivel):
         consultar_edicao(SessaoFalsa(b"", status=401), date(2026, 9, 6))

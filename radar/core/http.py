@@ -6,7 +6,7 @@ import time
 
 import requests
 
-from radar.core.erros import FonteIndisponivel, SemEdicao
+from radar.core.erros import FonteIndisponivel
 from radar.core.log import configurar_log
 
 USER_AGENT = (
@@ -35,7 +35,8 @@ def obter_bytes(
     """Busca a URL devolvendo bytes crus.
 
     Erro transitório (rede, 5xx, 429) é retentado com backoff exponencial.
-    Erro permanente (4xx) não é: retentar um 404 nunca o transforma em 200.
+    Erro permanente (4xx, 401 incluído) não é: retentar um 404 nunca o
+    transforma em 200, e um 401 é bloqueio de acesso, não ausência de edição.
     """
     logger = configurar_log()
     ultimo: Exception | None = None
@@ -50,8 +51,11 @@ def obter_bytes(
             codigo = resposta.status_code
             if codigo == 200:
                 return resposta.content
-            if codigo == 401:
-                raise SemEdicao(f"Sem edição disponível em {url} (HTTP 401)")
+            # Sem ramo para 401: a validação contra a API real provou que num
+            # dia sem edição ela responde HTTP 200 com `{"dados":null}`, nunca
+            # 401. O único 401 que ela pode emitir é bloqueio de acesso (WAF, IP
+            # banido) — que, traduzido em "domingo, siga sem alarme", calaria a
+            # coleta todo dia, para sempre. Cai no erro permanente.
             if codigo not in _TRANSITORIOS:
                 raise FonteIndisponivel(f"HTTP {codigo} em {url} (erro permanente, sem retry)")
             ultimo = FonteIndisponivel(f"HTTP {codigo} em {url}")

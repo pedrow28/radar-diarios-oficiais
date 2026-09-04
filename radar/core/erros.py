@@ -34,7 +34,12 @@ class ErroRadar(Exception):
 
 
 class SemEdicao(ErroRadar):
-    """Não houve edição publicada nesta data (feriado, domingo, 401 da API)."""
+    """Não houve edição publicada nesta data (feriado, domingo).
+
+    Quem detecta isso é o corpo da resposta, não o código HTTP: a API do IOF-MG
+    responde HTTP 200 com `{"dados": null, "erros": []}` num dia sem edição.
+    Um 401 é bloqueio de acesso e vira `FonteIndisponivel`.
+    """
 
 
 class FonteIndisponivel(ErroRadar):

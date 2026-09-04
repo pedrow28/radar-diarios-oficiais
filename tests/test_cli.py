@@ -152,3 +152,66 @@ def test_modulo_executavel_com_python_m():
     assert r.returncode == 0, r.stderr
     assert "coletar" in r.stdout, "o --help precisa listar os subcomandos"
     assert "consultar" in r.stdout
+
+
+# ── C5: o exit code nunca é escolhido pelo Python ───────────────────────────
+
+
+def test_excecao_inesperada_em_uma_fonte_devolve_exit_dois(ambiente, monkeypatch):
+    """Antes: a exceção escapava e o Python saía 1, que é `parcial`."""
+
+    def explode(self, data, forcar=False):
+        raise RuntimeError("desembrulho do PKCS#7 quebrou")
+
+    monkeypatch.setattr("radar.fontes.dou.coletor.FonteDOU.coletar", explode)
+    assert main(["coletar", "--config", str(ambiente[0]), "--data", "2026-09-04",
+                 "--fonte", "dou"]) == 2
+
+
+def test_fonte_quebrada_nao_impede_a_seguinte(ambiente, monkeypatch):
+    """A fonte sobrevivente precisa rodar e gravar o JSON dela."""
+    cfg, dir_dados = ambiente
+
+    def explode(self, data, forcar=False):
+        raise TypeError("int() com totalPaginas None")
+
+    monkeypatch.setattr("radar.fontes.dou.coletor.FonteDOU.coletar", explode)
+    codigo = main(["coletar", "--config", str(cfg), "--data", "2026-09-04", "--fonte", "todas"])
+    assert codigo == 2
+    assert (dir_dados / "normalized" / "2026-09-04" / "iofmg.json").exists()
+    assert not (dir_dados / "normalized" / "2026-09-04" / "dou.json").exists()
+
+
+def test_falha_de_fonte_tambem_sai_em_stdout(ambiente, monkeypatch, capsys):
+    """Quem captura só stdout perdia a informação de que uma fonte caiu."""
+    cfg, _ = ambiente
+
+    def explode(self, data, forcar=False):
+        raise OSError("disco cheio")
+
+    monkeypatch.setattr("radar.fontes.dou.coletor.FonteDOU.coletar", explode)
+    main(["coletar", "--config", str(cfg), "--data", "2026-09-04", "--fonte", "todas"])
+    saida = capsys.readouterr().out
+    assert "dou: erro | disco cheio" in saida
+    assert "iofmg: ok" in saida, "a linha da fonte que deu certo continua igual"
+
+
+def test_excecao_fora_do_laco_de_fontes_devolve_exit_dois(ambiente, monkeypatch):
+    """Falha ao abrir o storage não pode sair 1 nem estourar traceback."""
+
+    def storage_quebrado(*args, **kwargs):
+        raise OSError("permissão negada em ./data")
+
+    monkeypatch.setattr("radar.cli.Storage", storage_quebrado)
+    assert main(["coletar", "--config", str(ambiente[0]), "--data", "2026-09-04",
+                 "--fonte", "dou"]) == 2
+
+
+def test_erro_inesperado_no_consultar_devolve_exit_dois(ambiente, monkeypatch):
+    cfg, _ = ambiente
+
+    def consulta_quebrada(self, termo, desde=None):
+        raise RuntimeError("banco corrompido")
+
+    monkeypatch.setattr("radar.core.storage.Storage.consultar", consulta_quebrada)
+    assert main(["consultar", "--config", str(cfg), "teto"]) == 2
