@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import hashlib
 from dataclasses import asdict, dataclass, field
-from datetime import date, datetime
+from datetime import date, datetime, timezone
 from typing import Any, Literal
 
 from radar.core.erros import Status
@@ -76,5 +76,11 @@ class Resultado:
 
 
 def _iso_utc(momento: datetime) -> str:
-    """Serializa em ISO-8601 com sufixo Z, sem microssegundos."""
-    return momento.replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
+    """Serializa em ISO-8601 com sufixo Z, sem microssegundos.
+
+    Converte para UTC antes de formatar. Rejeita datetime naive.
+    """
+    if momento.tzinfo is None:
+        raise ValueError("datetime sem fuso horário (naive) é ambíguo; é preciso tzinfo")
+    utc = momento.astimezone(timezone.utc)
+    return utc.replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")

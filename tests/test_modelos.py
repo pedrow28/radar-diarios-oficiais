@@ -108,3 +108,33 @@ def test_hierarquia_de_erros():
     assert issubclass(SemEdicao, ErroRadar)
     assert issubclass(FonteIndisponivel, ErroRadar)
     assert issubclass(ExtracaoParcial, ErroRadar)
+
+
+def test_coletado_em_e_convertido_para_utc():
+    """Datetime em outro fuso precisa ser convertido, nao apenas rotulado Z."""
+    from datetime import timedelta
+
+    fuso_br = timezone(timedelta(hours=-3))
+    r = Resultado(
+        fonte="dou",
+        data_publicacao=date(2026, 9, 4),
+        coletado_em=datetime(2026, 9, 4, 9, 0, 0, tzinfo=fuso_br),
+        status=Status.OK,
+        escopo={},
+        publicacoes=[],
+    )
+    assert r.para_dict()["coletado_em"] == "2026-09-04T12:00:00Z"
+
+
+def test_coletado_em_naive_e_recusado():
+    """Sem fuso nao da para saber o instante; erro explicito em vez de chute."""
+    r = Resultado(
+        fonte="dou",
+        data_publicacao=date(2026, 9, 4),
+        coletado_em=datetime(2026, 9, 4, 9, 0, 0),
+        status=Status.OK,
+        escopo={},
+        publicacoes=[],
+    )
+    with pytest.raises(ValueError):
+        r.para_dict()
