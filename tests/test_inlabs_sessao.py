@@ -121,12 +121,13 @@ def linhas_de_log():
     logger.setLevel(nivel)
 
 
-def test_a_senha_nunca_aparece_no_log(linhas_de_log):
+def test_a_senha_e_o_email_nunca_aparecem_no_log(linhas_de_log):
     sessao = SessaoFalsa(cookies=[])
     with pytest.raises(FonteIndisponivel):
         abrir_sessao("alguem@exemplo.org", "senha-secretissima", sessao)
     assert linhas_de_log, "o login precisa deixar rastro de que tentou"
     assert not any("senha-secretissima" in linha for linha in linhas_de_log)
+    assert not any("alguem@exemplo.org" in linha for linha in linhas_de_log)
 
 
 def test_sem_sessao_informada_uma_e_criada(monkeypatch):

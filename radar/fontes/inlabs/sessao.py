@@ -42,7 +42,7 @@ def abrir_sessao(email: str, senha: str, sessao=None):
     sessao = criar_sessao() if sessao is None else sessao
     cabecalhos = {**HEADER_ORIGEM, "Content-Type": "application/x-www-form-urlencoded"}
 
-    logger.info("INLABS: autenticando %s", email)
+    logger.info("INLABS: autenticando")
     sessao.post(URL_LOGIN, data={"email": email, "password": senha},
                 headers=cabecalhos, timeout=_TIMEOUT)
 
