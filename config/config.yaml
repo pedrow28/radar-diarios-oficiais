@@ -18,6 +18,18 @@ fontes:
       - EDITAL
       - ATO
       - AVISO
+  inlabs:
+    secoes:
+      - DO1
+    orgaos:
+      - "Ministério da Saúde"
+      - "Agência Nacional de Vigilância Sanitária"
+      - "Presidência da República"
+      - "Ministério da Fazenda"
+      - "Ministério do Planejamento e Orçamento"
+    # 2º nível exigido para capturar atos publicados sob "Presidência da República".
+    subunidades_extra:
+      - "Casa Civil"
 
 armazenamento:
   dir_dados: ./data
