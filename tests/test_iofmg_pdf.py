@@ -76,6 +76,22 @@ def test_limpar_preserva_hifen_legitimo():
     assert "CIB-SUS" in limpar("DELIBERAÇÃO CIB-SUS/MG Nº 5.953")
 
 
+def test_limpar_nao_apaga_o_nome_do_estado_dentro_do_ato():
+    """Regressao: sem ancora de linha, o nome das entidades e mutilado.
+
+    "MINAS GERAIS" aparece 27 vezes dentro do corpo dos atos nas edicoes reais.
+    """
+    sujo = (
+        "MINAS GERAIS \t\n"
+        "Diário do Executivo\t\n"
+        "A PRESIDENTE DA FUNDAÇÃO HOSPITALAR DO ESTADO DE MINAS GERAIS - FHEMIG resolve:\n"
+    )
+    limpo = limpar(sujo)
+    assert "FUNDAÇÃO HOSPITALAR DO ESTADO DE MINAS GERAIS - FHEMIG" in limpo
+    assert limpo.count("MINAS GERAIS") == 1, "só a ocorrência do corpo deve sobrar"
+    assert "Diário do Executivo" not in limpo
+
+
 def test_proxima_secao_e_a_seguinte_por_pagina():
     from radar.fontes.iofmg.pdf import proxima_secao
 

@@ -12,9 +12,13 @@ import fitz
 
 from radar.core.erros import SemEdicao
 
+# Linha feita APENAS de mobiliario de pagina, uma ou mais pecas. A ancora de
+# linha e obrigatoria: "MINAS GERAIS" aparece 27 vezes DENTRO do corpo dos
+# atos ("FUNDACAO HOSPITALAR DO ESTADO DE MINAS GERAIS - FHEMIG"), e remove-la
+# sem ancora mutila o nome das entidades que publicam.
 _CABECALHO = re.compile(
-    r"[ \t]*(?:MINAS GERAIS|Diário do Executivo|Diário do Legislativo)[ \t]*",
-    re.IGNORECASE,
+    r"^[ \t]*(?:(?:MINAS GERAIS|Diário do Executivo|Diário do Legislativo)[ \t]*)+$",
+    re.IGNORECASE | re.MULTILINE,
 )
 _LINHA_DE_PAGINA = re.compile(
     r"^\s*\d{1,4}\s*[–-]\s*(?:segunda|terça|quarta|quinta|sexta|sábado|domingo)"
