@@ -39,3 +39,21 @@ armazenamento:
 email:
   habilitado: false
   destinatarios: []
+
+boletim:
+  modelo: claude-haiku-4-5
+  lote: 12
+  max_chars_texto: 3000
+  max_itens_dia: 120
+  tentativas_llm: 2
+  timeout_llm_s: 180
+  site_url: "https://pedrow28.github.io/radar-diarios-oficiais"
+  fontes:
+    - inlabs
+    - iofmg
+  dir_saida: ./boletim/saida
+  dir_site: ./site
+  cta:
+    whatsapp: "5531984483183"
+    texto_botao: "Falar com a Thauma sobre IA para o SUS"
+    mensagem: "Olá, vi o Radar de captação de {data} e quero conversar sobre soluções de IA para saúde"
