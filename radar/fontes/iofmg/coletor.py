@@ -27,7 +27,10 @@ class FonteIOFMG:
 
     def coletar(self, data: date, forcar: bool = False) -> Resultado:
         quando = agora_utc()
-        escopo = {"caderno": self.cfg.caderno, "secao": self.cfg.secao}
+        # A chave é `orgao`, não `secao`: no IOF-MG o que a API chama de "seção"
+        # é a divisão por órgão (spec §4), e toda `Publicacao` daqui tem
+        # `secao: null`. `ConfigIOFMG.secao` é config do usuário e não muda aqui.
+        escopo = {"caderno": self.cfg.caderno, "orgao": self.cfg.secao}
         vazio = Resultado(
             fonte=self.nome, data_publicacao=data, coletado_em=quando,
             status=Status.VAZIO, escopo=escopo, publicacoes=[], avisos=[],

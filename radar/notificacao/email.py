@@ -28,7 +28,7 @@ def montar_html(resultados: list[Resultado]) -> str:
         )
         # O escopo (órgão/seção) é o mesmo para toda a coleta: entra uma vez no
         # cabeçalho. Repeti-lo por publicação daria 118 linhas iguais num dia de DOU.
-        escopo = resultado.escopo.get("orgao") or resultado.escopo.get("secao") or ""
+        escopo = resultado.escopo.get("orgao") or ""
         if escopo:
             partes.append(f"<p><strong>{escape(escopo)}</strong></p>")
         if resultado.avisos:

@@ -133,10 +133,13 @@ def test_reprocessamento_reusa_o_pdf_em_cache(cfg, storage, resposta_api):
     assert len(sessao.pedidos) == pedidos
 
 
-def test_escopo_registra_secao_e_caderno(cfg, storage, resposta_api):
+def test_escopo_registra_orgao_e_caderno(cfg, storage, resposta_api):
+    """A chave é `orgao`: no IOF-MG a divisão da API é por órgão (spec §4)."""
     resultado = FonteIOFMG(cfg, storage, SessaoFalsa(resposta_api)).coletar(DIA)
-    assert resultado.escopo["secao"] == "Secretaria de Estado de Saúde"
+    assert resultado.escopo["orgao"] == "Secretaria de Estado de Saúde"
     assert resultado.escopo["caderno"] == "Diário do Executivo"
+    assert "secao" not in resultado.escopo, "a chave ambígua não pode voltar"
+    assert all(p.secao is None for p in resultado.publicacoes)
 
 
 # ── C2: a primeira página do intervalo também é fronteira ───────────────────
@@ -186,3 +189,25 @@ def test_ato_do_orgao_anterior_nao_entra_com_procedencia_falsa(cfg, storage, dir
     # Medido: 16 segmentos antes das correções, 13 depois (C1 tirou 2, C2 tirou 1).
     assert len(resultado.publicacoes) == 13, titulos
     assert all(p.orgao == "Secretaria de Estado de Saúde" for p in resultado.publicacoes)
+
+
+# ── C3 e K1: campo desconhecido é None, nunca inventado ─────────────────────
+
+
+def test_ementa_do_iofmg_e_none():
+    """A API não fornece ementa; o primeiro período do ato não é uma."""
+    assert normalizar(BRUTO, DIA, QUANDO, 330896, "SES").ementa is None
+
+
+def test_ementa_nunca_e_fabricada_na_edicao_real(cfg, storage, resposta_api):
+    """Medido: das 21 ementas geradas, 5 eram fragmento de data e 2 eram "Art"."""
+    resultado = FonteIOFMG(cfg, storage, SessaoFalsa(resposta_api)).coletar(DIA)
+    assert resultado.publicacoes
+    assert all(p.ementa is None for p in resultado.publicacoes)
+
+
+def test_edicao_e_none_porque_a_api_nao_expoe_numero_de_edicao():
+    """`edicao` recebia o id interno do caderno, que já vai em `origem`."""
+    pub = normalizar(BRUTO, DIA, QUANDO, 330896, "SES")
+    assert pub.edicao is None
+    assert pub.origem["id_caderno"] == 330896

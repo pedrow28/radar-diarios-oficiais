@@ -36,7 +36,6 @@ def normalizar(
     orgao: str,
 ) -> Publicacao:
     url = url_pagina(data_publicacao, id_caderno, bruto.pagina) or ""
-    ementa = bruto.texto.split(".")[0][:300] if bruto.texto else None
     return Publicacao(
         id=gerar_id("iofmg", data_publicacao, url or bruto.titulo, bruto.titulo),
         fonte="iofmg",
@@ -46,11 +45,17 @@ def normalizar(
         unidade=None,
         secao=None,  # IOF-MG não tem Seção 1/2/3.
         pagina=bruto.pagina,
-        edicao=str(id_caderno) if id_caderno is not None else None,
+        # A API do IOF-MG não expõe número de edição. O id do caderno não é
+        # esse número — é chave interna, e já vai em `origem.id_caderno`.
+        edicao=None,
         tipo=bruto.tipo,
         numero=bruto.numero,
         titulo=bruto.titulo,
-        ementa=ementa,
+        # A API não fornece ementa e o primeiro período do ato não é uma:
+        # das 21 geradas nas edições reais, 5 eram fragmento de data, 2 eram
+        # "Art" e 4 truncavam o número do ato no ponto de milhar. Campo vazio é
+        # informação; campo inventado é mentira que o agente consome como verdade.
+        ementa=None,
         texto=bruto.texto,
         url=url,
         origem={"metodo": "api jornalminasgerais", "id_caderno": id_caderno},
