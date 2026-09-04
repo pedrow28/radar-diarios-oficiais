@@ -1,9 +1,11 @@
+import json
 from datetime import date
 from pathlib import Path
 
 import pytest
 
 from radar.fontes.dou.busca import (
+    ID_BLOCO_JSON,
     decodificar_busca,
     extrair_jsonarray,
     montar_url_busca,
@@ -69,6 +71,32 @@ def test_html_sem_bloco_json_levanta_erro():
 
     with pytest.raises(ExtracaoParcial):
         extrair_jsonarray("<html><body>nada aqui</body></html>")
+
+
+# ── N4: chave "jsonArray" ausente é mudança de estrutura, não página vazia ──
+
+
+def test_jsonarray_renomeada_levanta_extracao_parcial():
+    """`.get("jsonArray", [])` devolvia [] em silêncio se a chave mudasse.
+
+    Combinado com o total também ilegível (C4), o par virava coleta vazia sem
+    nenhum aviso: `vazio`, exit 0, publicações do dia nunca chegam ao agente.
+    """
+    from radar.core.erros import ExtracaoParcial
+
+    bloco = json.dumps({"itensResultado": [{"urlTitle": "ato-1"}]})
+    html = (
+        f'<script id="{ID_BLOCO_JSON}" type="application/json">{bloco}</script>'
+    )
+    with pytest.raises(ExtracaoParcial):
+        extrair_jsonarray(html)
+
+
+def test_jsonarray_presente_e_vazio_continua_legitimo():
+    """Página real sem itens (`"jsonArray": []`) não pode virar erro."""
+    bloco = json.dumps({"jsonArray": []})
+    html = f'<script id="{ID_BLOCO_JSON}" type="application/json">{bloco}</script>'
+    assert extrair_jsonarray(html) == []
 
 
 def test_url_usa_data_personalizada_e_nunca_exactdate_dia():

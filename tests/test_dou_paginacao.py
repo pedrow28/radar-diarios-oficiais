@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from radar.fontes.dou.busca import ID_BLOCO_JSON, decodificar_busca, percorrer_paginas
 
 
@@ -160,6 +162,31 @@ def test_total_ilegivel_na_edicao_real_recupera_as_118(dir_fixtures: Path):
     itens, avisos = percorrer_paginas(lambda n, c: paginas[n], delta=75)
     assert len(itens) == 118
     assert avisos, "não pode coletar 118 itens declarando sucesso mudo"
+
+
+# ── N4: total E jsonArray renomeados juntos não podem virar `vazio` mudo ────
+
+
+def _pagina_sem_total_e_sem_jsonarray(itens: list[dict], total: int) -> str:
+    """Total e chave JSON, os dois renomeados: "registros" e "itensResultado"."""
+    bloco = json.dumps({"itensResultado": itens})
+    return (
+        f"<html><p>{total} registros</p>"
+        f'<script id="{ID_BLOCO_JSON}" type="application/json">{bloco}</script>'
+        f"</html>"
+    )
+
+
+def test_ambos_renomeados_avisa_em_vez_de_virar_vazio_mudo():
+    """Antes: jsonArray ausente virava [] em silêncio; com o total também
+    ilegível, `total == 0 and not itens` disparava o atalho de "domingo
+    legítimo" e a coleta real desaparecia como `vazio`, exit 0, sem aviso.
+    """
+    from radar.core.erros import ExtracaoParcial
+
+    pagina = _pagina_sem_total_e_sem_jsonarray(_itens(0, 5), 5)
+    with pytest.raises(ExtracaoParcial):
+        percorrer_paginas(lambda n, c: pagina, delta=3)
 
 
 def test_total_ilegivel_nao_lacunha_o_laco():

@@ -60,7 +60,17 @@ def extrair_jsonarray(html: str) -> list[dict]:
         dados = json.loads(achado.group(1).strip())
     except json.JSONDecodeError as exc:
         raise ExtracaoParcial(f"Bloco JSON da busca do DOU é inválido: {exc}") from exc
-    return dados.get("jsonArray", [])
+    # A chave ausente é mudança de estrutura, não página sem itens: com
+    # `.get(..., [])` ela virava lista vazia em silêncio. Combinada com o total
+    # também ilegível (C4), o par resultava em coleta vazia sem nenhum aviso —
+    # `vazio`, exit 0, e as publicações do dia nunca chegavam ao agente. Um
+    # `jsonArray` presente e vazio continua sendo página legítima sem itens.
+    if "jsonArray" not in dados:
+        raise ExtracaoParcial(
+            "Chave 'jsonArray' ausente no bloco JSON da busca do DOU. "
+            "A estrutura da página pode ter mudado."
+        )
+    return dados["jsonArray"]
 
 
 def total_de_resultados(html: str) -> int:
