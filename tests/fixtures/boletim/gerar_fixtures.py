@@ -528,9 +528,14 @@ def _normalizado(
 
 
 def _escrever(caminho: Path, conteudo: dict) -> None:
+    # `newline` explícito: `tests/fixtures/**` é `-text` no .gitattributes, então
+    # o CRLF que o Windows colocaria aqui seria versionado, e gerar a fixture de
+    # novo no Linux mudaria o arquivo inteiro.
     caminho.parent.mkdir(parents=True, exist_ok=True)
     caminho.write_text(
-        json.dumps(conteudo, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps(conteudo, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+        newline="\n",
     )
 
 
