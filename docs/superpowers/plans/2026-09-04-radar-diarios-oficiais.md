@@ -2967,6 +2967,18 @@ def test_limpar_preserva_hifen_legitimo():
     assert "CIB-SUS" in limpar("DELIBERAÇÃO CIB-SUS/MG Nº 5.953")
 
 
+def test_limpar_refaz_separador_de_milhar_quebrado():
+    """A extracao do PDF insere espaco depois do ponto de milhar."""
+    assert "5.953" in limpar("DELIBERAÇÃO CIB-SUS/MG Nº 5. 953, DE 1 DE SETEMBRO")
+    assert "R$ 168.895.626,43" in limpar("valor total anual de R$ 168. 895. 626,43")
+    assert "1.130.647-9" in limpar("MASP 1. 130. 647-9")
+
+
+def test_limpar_nao_junta_quando_nao_ha_tres_digitos():
+    """So o padrao de milhar (exatamente 3 digitos) e normalizado."""
+    assert limpar("no exercício de 2025. 30 servidores") == "no exercício de 2025. 30 servidores"
+
+
 def test_limpar_nao_apaga_o_nome_do_estado_dentro_do_ato():
     """Regressao: sem ancora de linha, o nome das entidades e mutilado.
 
@@ -3073,6 +3085,12 @@ _DATA_E_PAGINA = re.compile(
     r"^\s*(?:segunda|terça|quarta|quinta|sexta|sábado|domingo)[^\n]*\d{4}\s*[–-]\s*\d{1,4}\s*$",
     re.IGNORECASE | re.MULTILINE,
 )
+# A extração do PDF insere um espaço depois do ponto de milhar: "5. 953",
+# "R$ 168. 895. 626,43", "MASP 1. 130. 647-9". Isso produz número de ato
+# ERRADO ("5" em vez de "5.953" — quatro deliberações viram todas "5") e
+# mutila os valores em reais, que são o principal sinal de captação.
+# Medido nas duas edições reais: 166 normalizações, zero falsos positivos.
+_MILHAR_QUEBRADO = re.compile(r"(?<=\d)\.[ ]+(?=\d{3}(?!\d))")
 # Hífen no fim da linha que quebra uma palavra; o legítimo (CIB-SUS) não é seguido de \n.
 _HIFENIZACAO = re.compile(r"(\w)-\s*\n\s*(\w)")
 _LINHAS_VAZIAS = re.compile(r"\n{3,}")
@@ -3138,6 +3156,7 @@ def limpar(texto: str) -> str:
     limpo = _CABECALHO.sub("", texto)
     limpo = _LINHA_DE_PAGINA.sub("", limpo)
     limpo = _DATA_E_PAGINA.sub("", limpo)
+    limpo = _MILHAR_QUEBRADO.sub(".", limpo)
     limpo = _HIFENIZACAO.sub(r"\1\2", limpo)
     limpo = _LINHAS_VAZIAS.sub("\n\n", limpo)
     return limpo.strip()
@@ -3146,7 +3165,7 @@ def limpar(texto: str) -> str:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_iofmg_pdf.py -v`
-Expected: PASS (17 testes)
+Expected: PASS (19 testes)
 
 - [ ] **Step 5: Commit**
 
@@ -3267,6 +3286,14 @@ def test_edicao_real_02_produz_publicacoes(paginas_02):
     assert len(achados) >= 5, f"segmentou apenas {len(achados)}"
 
 
+def test_numero_completo_em_deliberacao_cib_sus(paginas_02):
+    """Numero truncado e numero ERRADO: 4 deliberacoes distintas viram todas "5"."""
+    cib = [a for a in segmentar(paginas_02, TIPOS) if "CIB-SUS" in a.titulo]
+    assert cib, "as deliberacoes CIB-SUS precisam ser segmentadas"
+    assert all(a.numero and "." in a.numero for a in cib), [a.numero for a in cib]
+    assert len({a.numero for a in cib}) == len(cib), "os numeros devem ser distintos"
+
+
 def test_edicao_real_nao_gera_falsos_positivos_conhecidos(paginas_02):
     titulos = [a.titulo.upper() for a in segmentar(paginas_02, TIPOS)]
     assert not any(t.startswith("DELIBERA:") for t in titulos)
@@ -3370,7 +3397,7 @@ def segmentar(paginas: list[tuple[int, str]], tipos: list[str]) -> list[Bruto]:
 - [ ] **Step 4: Run test to verify it passes**
 
 Run: `python -m pytest tests/test_iofmg_segmenta.py -v`
-Expected: PASS (13 testes). Se `test_maioria_dos_segmentos_tem_numero` ou os testes de edição real falharem, ajustar `_e_cabecalho` — **não** relaxar o limiar do teste.
+Expected: PASS (14 testes). Se `test_maioria_dos_segmentos_tem_numero` ou os testes de edição real falharem, ajustar `_e_cabecalho` — **não** relaxar o limiar do teste.
 
 - [ ] **Step 5: Commit**
 
