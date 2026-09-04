@@ -101,3 +101,11 @@ def main(argv: list[str] | None = None) -> int:
 
 def executar() -> None:
     raise SystemExit(main())
+
+
+# Sem esta guarda, `python -m radar.cli coletar ...` importa o modulo, nao roda
+# nada e sai com codigo 0. Um cron nessa forma reportaria sucesso todo dia sem
+# coletar coisa alguma — falha total silenciosa, que e exatamente o que o
+# contrato de status existe para impedir.
+if __name__ == "__main__":
+    executar()

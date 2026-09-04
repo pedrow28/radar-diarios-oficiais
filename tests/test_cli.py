@@ -134,3 +134,21 @@ def test_consultar_encontra_no_historico(ambiente, capsys):
 def test_consultar_sem_resultado_devolve_zero(ambiente, capsys):
     cfg, _ = ambiente
     assert main(["consultar", "--config", str(cfg), "inexistente"]) == 0
+
+
+def test_modulo_executavel_com_python_m():
+    """Sem a guarda __main__, `python -m radar.cli` sai 0 em silencio.
+
+    Um cron nessa forma reportaria sucesso todo dia sem coletar nada. Usamos
+    --help porque ele exercita o despacho sem tocar a rede.
+    """
+    import subprocess
+    import sys
+
+    r = subprocess.run(
+        [sys.executable, "-m", "radar.cli", "--help"],
+        capture_output=True, text=True,
+    )
+    assert r.returncode == 0, r.stderr
+    assert "coletar" in r.stdout, "o --help precisa listar os subcomandos"
+    assert "consultar" in r.stdout
