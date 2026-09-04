@@ -48,9 +48,14 @@ def normalizar(
     if texto is not None and texto.texto:
         corpo = texto.texto
         ementa = texto.ementa
+        integral = True
     else:
+        # Fallback para o resumo da listagem, medido entre 182 e 403 chars. A
+        # marca é POR PUBLICAÇÃO: `escopo.texto_integral` fala da coleta toda, e
+        # um agente que itera `publicacoes` leria 400 chars como inteiro teor.
         corpo = item.get("content", "") or ""
         ementa = None
+        integral = False
 
     return Publicacao(
         id=gerar_id("dou", data_publicacao, url, titulo),
@@ -68,5 +73,14 @@ def normalizar(
         ementa=ementa,
         texto=corpo,
         url=url,
-        origem={"metodo": "in.gov.br/consulta", "classPK": item.get("classPK")},
+        origem={
+            "metodo": "in.gov.br/consulta",
+            "classPK": item.get("classPK"),
+            # `False` diz que `texto` é o resumo truncado da listagem, não o
+            # inteiro teor — sem isso a publicação degradada é indistinguível.
+            "texto_integral": integral,
+            # `orgao`/`unidade` guardam só os dois primeiros níveis, e 51 dos
+            # 118 itens reais têm três ou mais. O original fica aqui inteiro.
+            "hierarquia": item.get("hierarchyStr"),
+        },
     )

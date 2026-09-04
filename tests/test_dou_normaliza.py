@@ -107,3 +107,50 @@ def test_nao_ha_campo_de_juizo():
     pub = normalizar(ITEM, None, DIA, QUANDO)
     for proibido in ("score", "is_sus", "impacto", "relevancia"):
         assert not hasattr(pub, proibido)
+
+
+# ── C6: resumo truncado nunca sai sem marca ─────────────────────────────────
+
+
+def test_marca_texto_integral_quando_o_inteiro_teor_foi_obtido():
+    texto = TextoDOU(identifica="Portaria", ementa="Faz algo.", texto="Art. 1º " + "x" * 3000)
+    pub = normalizar(ITEM, texto, DIA, QUANDO)
+    assert pub.origem["texto_integral"] is True
+    assert pub.texto == texto.texto
+
+
+def test_marca_resumo_truncado_da_listagem():
+    """Sem a marca, o agente lê ~400 chars achando que é o inteiro teor."""
+    pub = normalizar(ITEM, None, DIA, QUANDO)
+    assert pub.origem["texto_integral"] is False
+    assert pub.texto == ITEM["content"]
+
+
+def test_texto_integral_vazio_conta_como_resumo():
+    """Extração que devolve vazio cai no `content` e precisa da mesma marca."""
+    pub = normalizar(ITEM, TextoDOU(identifica="", ementa=None, texto=""), DIA, QUANDO)
+    assert pub.origem["texto_integral"] is False
+
+
+# ── K3: a hierarquia original não pode se perder ────────────────────────────
+
+
+def test_hierarquia_completa_fica_em_origem():
+    """51 dos 118 itens reais têm 3+ níveis; `orgao`/`unidade` guardam 2."""
+    item = {
+        **ITEM,
+        "hierarchyStr": (
+            "Ministério da Saúde/Fundação Oswaldo Cruz/Instituto Nacional de "
+            "Controle de Qualidade em Saúde/Diretoria"
+        ),
+    }
+    pub = normalizar(item, None, DIA, QUANDO)
+    assert pub.origem["hierarquia"] == item["hierarchyStr"]
+    assert pub.orgao == "Ministério da Saúde"
+    assert pub.unidade == "Fundação Oswaldo Cruz"
+    assert "Instituto Nacional" not in (pub.unidade or "")
+
+
+def test_hierarquia_ausente_nao_quebra():
+    pub = normalizar({k: v for k, v in ITEM.items() if k != "hierarchyStr"}, None, DIA, QUANDO)
+    assert pub.origem["hierarquia"] is None

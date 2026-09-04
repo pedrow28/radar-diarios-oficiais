@@ -159,3 +159,20 @@ def test_escopo_registra_se_o_texto_integral_foi_buscado(cfg, storage):
     )
     resultado = FonteDOU(cfg_resumo, storage, sessao).coletar(date(2026, 9, 5))
     assert resultado.escopo["texto_integral"] is False
+
+
+def test_publicacao_degradada_e_marcada_uma_a_uma(cfg, storage):
+    """C6: a coleta vira `parcial`, mas a publicação também precisa dizer."""
+    outro = {**ITEM, "urlTitle": "portaria-2", "classPK": "2", "title": "Portaria GM/MS Nº 2"}
+    sessao = SessaoFalsa(
+        {"buscar/dou": _html_busca([ITEM, outro], 2), "portaria-1": HTML_PUB},
+        falhar={"portaria-2"},
+    )
+    resultado = FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4))
+    assert resultado.status == Status.PARCIAL
+    por_slug = {p.url.rsplit("/", 1)[-1]: p for p in resultado.publicacoes}
+    assert por_slug["portaria-1"].origem["texto_integral"] is True
+    assert por_slug["portaria-2"].origem["texto_integral"] is False
+    assert resultado.escopo["texto_integral"] is True, (
+        "o escopo fala da coleta; a marca por publicação é que distingue as duas"
+    )
