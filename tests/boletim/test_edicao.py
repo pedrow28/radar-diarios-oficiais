@@ -1,4 +1,5 @@
 import json
+import logging
 from datetime import date, datetime, timezone
 
 from boletim.edicao import (
@@ -14,6 +15,7 @@ from boletim.edicao import (
     validar_voz,
 )
 from boletim.llm import LLMFalso
+from radar.core.log import configurar_log
 
 
 def _item(**kw) -> Item:
@@ -275,6 +277,36 @@ def test_montar_edicao_marca_parcial_quando_ha_item_de_fallback():
 def test_montar_edicao_propaga_o_parcial_da_coleta():
     llm = LLMFalso({"editorial": _editorial_bom()})
     assert _montar([_item(categoria="A")], llm, parcial=True).parcial is True
+
+
+def test_montar_edicao_loga_aviso_quando_llm_esta_fora_do_ar(caplog):
+    logger = configurar_log()
+    logger.addHandler(caplog.handler)
+    try:
+        with caplog.at_level(logging.WARNING, logger="radar"):
+            _montar([_item(categoria="A", resumo="resumo A")], LLMFalso({}))
+    finally:
+        logger.removeHandler(caplog.handler)
+
+    assert "editorial" in caplog.text
+    assert "LLM indisponível" in caplog.text
+
+
+def test_montar_edicao_loga_aviso_quando_voz_reprova_duas_vezes(caplog):
+    ruim = dict(_editorial_bom(), titulo="Radar do dia — 3 habilitações")
+    llm = LLMFalso({"editorial": [ruim, ruim]})
+    logger = configurar_log()
+    logger.addHandler(caplog.handler)
+    try:
+        with caplog.at_level(logging.WARNING, logger="radar"):
+            _montar(
+                [_item(id="1", categoria="A"), _item(id="2", categoria="B")], llm
+            )
+    finally:
+        logger.removeHandler(caplog.handler)
+
+    assert "voz reprovada 2x" in caplog.text
+    assert "travessão" in caplog.text
 
 
 def test_editorial_deterministico_lista_no_maximo_tres_titulos_de_d():

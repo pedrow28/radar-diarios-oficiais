@@ -20,6 +20,7 @@ from typing import Any, Literal, Sequence
 from boletim.esquemas import EDITORIAL_SCHEMA, validar
 from boletim.llm import LLM, LLMIndisponivel
 from boletim.prompts import SISTEMA_EDITORIAL, montar_editorial
+from radar.core.log import configurar_log
 
 Categoria = Literal["A", "B", "C", "D", "X"]
 
@@ -237,9 +238,11 @@ def _abertura(
     A segunda chamada leva as correções junto: sem dizer o que estava errado,
     repetir o mesmo prompt tende a produzir o mesmo travessão.
     """
+    logger = configurar_log()
     contagens = {cat: len(secoes[cat]) for cat in ROTULOS}
     base = montar_editorial(relevantes, contagens, data)
     prompt = base
+    erros: list[str] = []
 
     for _ in range(2):
         try:
@@ -247,6 +250,7 @@ def _abertura(
                 SISTEMA_EDITORIAL, prompt, EDITORIAL_SCHEMA, rotulo="editorial"
             )
         except LLMIndisponivel:
+            logger.warning("editorial: LLM indisponível, título determinístico")
             break
         erros = validar(resposta, EDITORIAL_SCHEMA) or _erros_de_voz(resposta)
         if not erros:
@@ -256,6 +260,10 @@ def _abertura(
                 resposta["intro"],
             )
         prompt = f"{base}\n\nCorreções obrigatórias: {'; '.join(erros)}"
+    else:
+        # O `for` terminou sem `break`: as duas tentativas caíram na
+        # validação (schema ou voz), não no LLM fora do ar.
+        logger.warning("editorial: voz reprovada 2x: %s", "; ".join(erros))
 
     return (
         titulo_fallback(data, len(relevantes)),

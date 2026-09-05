@@ -157,6 +157,21 @@ def test_lote_incompleto_e_reprocessado_por_bisseccao(cfg):
     assert pubs[2].id in llm.chamadas[2][2]
 
 
+def test_item_unico_restante_recebe_retentativa_solo(cfg):
+    pubs = [_pub(1), _pub(2), _pub(3)]
+    parcial = _lote(_resposta(pubs[0]), _resposta(pubs[1]))
+    llm = LLMFalso({"lote-0": [parcial, parcial, _lote(_resposta(pubs[2]))]})
+
+    itens, avisos = classificar(pubs, llm, cfg)
+
+    assert [i.id for i in itens] == [p.id for p in pubs]
+    assert not any(i.fallback for i in itens)
+    assert len(llm.chamadas) == 3
+    # A terceira chamada é a retentativa solo do único item que sobrou.
+    assert pubs[0].id not in llm.chamadas[2][2]
+    assert pubs[2].id in llm.chamadas[2][2]
+
+
 def test_item_que_o_llm_nunca_devolve_vira_fallback_d(cfg):
     pubs = [_pub(1), _pub(2)]
     llm = LLMFalso({"lote-0": _lote(_resposta(pubs[0]))})

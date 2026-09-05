@@ -87,6 +87,18 @@ def test_entes_candidatos_ignora_marcador_seguido_de_minuscula():
     assert entes_candidatos("compete ao Município de origem informar") == ()
 
 
+def test_entes_candidatos_nao_funde_dois_entes_ligados_por_e():
+    texto = "Repasse ao Município de Uberaba e Hospital Regional de Barbacena."
+    entes = entes_candidatos(texto)
+    assert not any(" e " in ente for ente in entes)
+
+
+def test_entes_candidatos_para_no_e_entre_municipios():
+    assert entes_candidatos("Municípios de Manhuaçu e Ipatinga") == (
+        "Municípios de Manhuaçu",
+    )
+
+
 # ── triar: uma publicação por regra ─────────────────────────────────────
 def test_secao_2_do_dou_e_descartada(cfg):
     pub = _pub("PORTARIA Nº 9 QUE HABILITA LEITOS", secao="2", fonte="inlabs")

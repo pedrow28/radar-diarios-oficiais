@@ -125,7 +125,14 @@ def _resolver(
             return
 
     faltantes = [p for p in pubs if p.id not in respostas]
-    if len(faltantes) <= 1:
+    if not faltantes:
+        return
+    if len(faltantes) == 1:
+        # Bisseção "até tamanho 1": o item sozinho ainda merece uma chamada só
+        # dele antes de virar fallback D. A recursão termina porque, dentro
+        # dela, `pubs` já é esse mesmo item único (`len(pubs) == 1`).
+        if len(pubs) > 1:
+            _resolver(faltantes, llm, cfg, rotulo, respostas, avisos, estado)
         return
     meio = len(faltantes) // 2
     _resolver(faltantes[:meio], llm, cfg, rotulo, respostas, avisos, estado)

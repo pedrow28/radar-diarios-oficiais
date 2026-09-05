@@ -46,7 +46,7 @@ _VALOR = re.compile(r"R\$\s?(\d{1,3}(?:\.\d{3})*|\d+),(\d{2})")
 
 _MAIUSCULA = "A-ZÁÀÂÃÄÉÈÊËÍÌÎÏÓÒÔÕÖÚÙÛÜÇÑ"
 _PALAVRA = rf"[{_MAIUSCULA}][^\W\d_]*"
-_LIGACAO = r"(?:de|do|da|dos|das|e|em)"
+_LIGACAO = r"(?:de|do|da|dos|das)"
 _MARCADOR = r"Munic[íi]pios? de|Hospital|Santa Casa|Funda[çc][ãa]o|Instituto"
 # O marcador entra no nome: "César Leite" sozinho é nome de pessoa, "Hospital
 # César Leite" é a entidade que o gestor reconhece. O nome corre por palavras
