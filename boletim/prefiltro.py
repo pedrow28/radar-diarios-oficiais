@@ -26,8 +26,13 @@ from boletim.config import ConfigBoletim
 from radar.core.modelos import Publicacao
 
 def _compilar(regras: tuple[str, ...]) -> re.Pattern[str]:
-    """Uma alternação só, para a pergunta "casou alguma?"."""
-    return re.compile("|".join(regras), re.IGNORECASE)
+    """Uma alternação só, para a pergunta "casou alguma?".
+
+    Cada regra entra entre `(?:...)`: `|` tem a menor precedência de toda a
+    regex, e sem o agrupamento uma regra futura com alternação solta no topo
+    (fora de parênteses) vazaria para as regras vizinhas na hora de casar.
+    """
+    return re.compile("|".join(f"(?:{r})" for r in regras), re.IGNORECASE)
 
 
 def _uma_a_uma(regras: tuple[str, ...]) -> tuple[tuple[str, re.Pattern[str]], ...]:
@@ -55,7 +60,6 @@ _REGRAS_DESCARTE = (
     r"|apostilamento|comodato|rescisão|cessão|cooperação)",
     r"aviso de (homologação|suspensão|revogação|dispensa|reabertura|adiamento"
     r"|retificação)",
-    r"retificação",
     r"termo de (apostilamento|doação)",
     r"resultado de julgamento",
     r"resolução-re\b",
@@ -66,8 +70,8 @@ _REGRAS_DESCARTE = (
     r"portaria de pessoal",
     r"progressão funcional",
     r"licença (prêmio|capacitação)",
-    r"aposentadoria",
-    r"pensão",
+    r"\baposentadoria\b",
+    r"\bpensão\b",
 )
 _DESCARTE = _compilar(_REGRAS_DESCARTE)
 
@@ -132,9 +136,11 @@ _FORTE_CORPO_UMA_A_UMA = _uma_a_uma(_REGRAS_FORTE_CORPO)
 _VALOR = re.compile(r"R\$\s?(\d{1,3}(?:\.\d{3})*|\d+),(\d{2})")
 
 _MAIUSCULA = "A-ZÁÀÂÃÄÉÈÊËÍÌÎÏÓÒÔÕÖÚÙÛÜÇÑ"
-# Inicial maiúscula seguida de minúscula: "Dias" entra no nome, "ANEXO" não.
-# O texto do IOF-MG vem de PDF e emenda o cabeçalho do anexo no nome do ente.
-_PALAVRA = rf"[{_MAIUSCULA}](?![{_MAIUSCULA}])[^\W\d_]*"
+# Cabeçalho de seção que o PDF do IOF-MG emenda no nome do ente: bloqueado
+# mesmo em caixa alta. Uma sigla ou algarismo romano legítimos ("BH", "XXIII",
+# "FHEMIG", "HEMOMINAS") não estão nesta lista e continuam entrando no nome.
+_PALAVRA_BLOQUEADA = r"ANEXO|TABELA|QUADRO|APÊNDICE|ART|ARTIGO|CAPÍTULO|SEÇÃO"
+_PALAVRA = rf"(?!(?:{_PALAVRA_BLOQUEADA})\b)[{_MAIUSCULA}][^\W\d_]*"
 _LIGACAO = r"(?:de|do|da|dos|das)"
 _MARCADOR = r"Munic[íi]pios? de|Hospital|Santa Casa|Funda[çc][ãa]o|Instituto"
 # O marcador entra no nome: "César Leite" sozinho é nome de pessoa, "Hospital

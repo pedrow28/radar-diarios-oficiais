@@ -32,6 +32,10 @@
     "9681323633188e26": {
       "caso": "8",
       "porque": "Portaria GM/MS 12.134 de habilitacao com cifra real de R$ 25.304.807,91 no corpo: forca soma titulo e corpo."
+    },
+    "f7077106b63989be": {
+      "caso": "9 (rodada 1, achado 1 do revisor)",
+      "porque": "Retificacao do Anexo XIV da Portaria GM/MS 6.898 (habilitacao de servicos de saude bucal), 01/09 dou. Titulo e tipo sao literalmente 'Retificacao', sem ementa: o _FORTE nunca teria como resgatar esse item se a regra bare 'retificacao' o descartasse. Precisa ficar mantida sem passar pelo resgate."
     }
   },
   "publicacoes": [
@@ -95,7 +99,7 @@
       "numero": "3.618/2026",
       "titulo": "EXTRATO DE DOAÇÃO Nº 3.618/2026",
       "ementa": null,
-      "texto": "EXTRATO DE DOAÇÃO Nº 3.618/2026\nDoador: a UNIÃO, por intermédio do MINISTÉRIO DA SAÚDE - MS, neste ato representado pela SECRETARIA DE ATENÇÃO PRIMÁRIA À SAÚDE - Saps, CNPJ sob nº 00.394.544/0108-14.\nDonatário: Medicilândia/PA, neste ato representado pela Secretaria Municipal de Saúde, CNPJ sob nº 11.419.894/0001-75.\nObjeto: doação, com encargos, de bens destinados à estruturação de Unidades Básicas de Saúde - UBS, no âmbito da modalidade Equipamentos para UBS do eixo Saúde do Programa de Aceleração do Crescimento - Novo PAC 2025, com previsão de entregas sucessivas por lote ou remessa, cuja descrição individualizada dos bens constará dos Anexos integrantes deste Termo.\nNúmero Único de Protocolo: 25000.108511/2026-47.\nSignatários: Deywis Juliano Daniel, pelo município de Medicilândia/PA e Ana Luiza Ferreira Rodrigues Caldas, pela Secretaria de Atenção Primária à Saúde do Ministério da Saúde - Saps/MS.\nData de assinatura do termo de doação: 21/08/2026.",
+      "texto": "EXTRATO DE DOAÇÃO Nº 3.618/2026\nDoador: a UNIÃO, por intermédio do MINISTÉRIO DA SAÚDE - MS, neste ato representado pela SECRETARIA DE ATENÇÃO PRIMÁRIA À SAÚDE - Saps.\nDonatário: Medicilândia/PA, neste ato representado pela Secretaria Municipal de Saúde.\nObjeto: doação, com encargos, de bens destinados à estruturação de Unidades Básicas de Saúde - UBS, no âmbito da modalidade Equipamentos para UBS do eixo Saúde do Programa de Aceleração do Crescimento - Novo PAC 2025, com previsão de entregas sucessivas por lote ou remessa, cuja descrição individualizada dos bens constará dos Anexos integrantes deste Termo.\nNúmero Único de Protocolo: 25000.108511/2026-47.\nData de assinatura do termo de doação: 21/08/2026.",
       "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-3.618/2026-729031336",
       "origem": {
         "metodo": "in.gov.br/consulta",
@@ -213,6 +217,29 @@
       "origem": {
         "metodo": "in.gov.br/consulta",
         "classPK": "729400780",
+        "texto_integral": true,
+        "hierarquia": "Ministério da Saúde/Gabinete do Ministro"
+      }
+    },
+    {
+      "id": "f7077106b63989be",
+      "fonte": "dou",
+      "data_publicacao": "2026-09-01",
+      "coletado_em": "2026-09-06T12:24:45Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "secao": "1",
+      "pagina": 70,
+      "edicao": "165",
+      "tipo": "Retificação",
+      "numero": null,
+      "titulo": "Retificação",
+      "ementa": null,
+      "texto": "Retificação\nNo Anexo XIV da Portaria GM/MS nº 6.898, de 28 de abril de 2025, republicada no Diário Oficial da União - DOU nº 89, de 14 de maio de 2026, seção 1, páginas 101 - 119.\nOnde se lê:\nANEXO XIVHABILITAÇÃO DE SERVIÇOS DE ESPECIALIDADES EM SAÚDE BUCAL - SESB, POR MUNICÍPIO\nUF\nIBGE\nMUNICIPIO\nCNES\nTIPO DE RECURSO\nTIPO DE PEDIDO\nCOD. HABILITAÇÃO\nPI\n220100\nARRAIAL\n2365715\nCUSTEIO\nHABILITAÇÃO\n0406\nPI\n220320\nCURIMATÁ\n2369486\nCUSTEIO\nHABILITAÇÃO\n0406\nLeia-se:\nANEXO XIV HABILITAÇÃO DE SERVIÇOS DE ESPECIALIDADES EM SAÚDE BUCAL - SESB, POR MUNICÍPIO\nUF\nIBGE\nMUNICIPIO\nCNES\nTIPO DE RECURSO\nTIPO DE PEDIDO\nCOD. HABILITAÇÃO\nPI\n220100\nARRAIAL\n4763955\nCUSTEIO\nHABILITAÇÃO\n0406\nPI\n220320\nCURIMATÁ\n2404672\nCUSTEIO\nHABILITAÇÃO\n0406",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729385631",
+      "origem": {
+        "metodo": "in.gov.br/consulta",
+        "classPK": "729385633",
         "texto_integral": true,
         "hierarquia": "Ministério da Saúde/Gabinete do Ministro"
       }

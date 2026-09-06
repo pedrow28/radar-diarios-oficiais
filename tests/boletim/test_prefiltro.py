@@ -116,6 +116,31 @@ def test_entes_candidatos_para_na_quebra_de_linha_dupla():
     assert entes_candidatos(texto) == ("Fundação Hospitalar",)
 
 
+def test_entes_candidatos_preserva_sigla_em_caixa_alta_no_meio_do_nome():
+    """"Santa Casa BH" não pode sumir: bloquear toda palavra em caixa alta
+    (exigindo que o segundo caractere não fosse maiúsculo) derrubava a sigla
+    inteira, não só o cabeçalho de seção que a regra queria barrar."""
+    texto = "Convênio com a Santa Casa BH e o Hospital Risoleta Neves."
+    assert entes_candidatos(texto) == ("Santa Casa BH", "Hospital Risoleta Neves")
+
+
+def test_entes_candidatos_preserva_algarismo_romano_em_caixa_alta():
+    texto = "Convênio com o Hospital João XXIII para custeio."
+    assert entes_candidatos(texto) == ("Hospital João XXIII",)
+
+
+def test_entes_candidatos_preserva_sigla_junto_a_fundacao():
+    texto = "Repasse à Fundação HEMOMINAS para custeio."
+    assert entes_candidatos(texto) == ("Fundação HEMOMINAS",)
+
+
+def test_entes_candidatos_ainda_bloqueia_cabecalho_de_secao_em_caixa_alta():
+    """ANEXO, TABELA etc. continuam de fora mesmo com a sigla liberada."""
+    assert entes_candidatos("Fundação Ezequiel Dias\nTABELA I") == (
+        "Fundação Ezequiel Dias",
+    )
+
+
 # ── triar: uma publicação por regra ─────────────────────────────────────
 def test_secao_2_do_dou_e_descartada(cfg):
     pub = _pub("PORTARIA Nº 9 QUE HABILITA LEITOS", secao="2", fonte="inlabs")
@@ -168,7 +193,9 @@ def test_rdc_citada_no_preambulo_nao_resgata(cfg):
         tipo="Resolução",
         texto="no uso das atribuições que lhe confere a RDC nº 585, de 2021, resolve:",
     )
-    assert triar([pub], cfg).descartadas[0].regra == "descarte"
+    triagem = triar([pub], cfg)
+    assert triagem.mantidas == ()
+    assert triagem.descartadas[0].regra == "descarte"
 
 
 def test_edital_citado_no_corpo_de_extrato_nao_resgata(cfg):
@@ -177,7 +204,9 @@ def test_edital_citado_no_corpo_de_extrato_nao_resgata(cfg):
         tipo="Extrato de Contrato",
         texto="conforme condições constantes do respectivo Edital de licitação e seus Anexos.",
     )
-    assert triar([pub], cfg).descartadas[0].regra == "descarte"
+    triagem = triar([pub], cfg)
+    assert triagem.mantidas == ()
+    assert triagem.descartadas[0].regra == "descarte"
 
 
 def test_vocabulario_de_tabela_sus_retem_pelo_titulo(cfg):
@@ -237,7 +266,6 @@ def test_publicacao_sem_regra_alguma_e_mantida(cfg):
         "AVISO DE REABERTURA DE PRAZO",
         "AVISO DE ADIAMENTO",
         "AVISO DE RETIFICAÇÃO",
-        "RETIFICAÇÃO",
         "TERMO DE APOSTILAMENTO Nº 3/2026",
         "TERMO DE DOAÇÃO Nº 8/2026",
         "PORTARIA DE PESSOAL Nº 40",
@@ -254,6 +282,23 @@ def test_ruido_de_diario_e_descartado_pelo_titulo(cfg, titulo):
     triagem = triar([pub], cfg)
     assert triagem.mantidas == ()
     assert triagem.descartadas[0].regra == "descarte"
+
+
+def test_retificacao_bare_nao_e_mais_descartada(cfg):
+    """`retificação` sozinha no `_DESCARTE` violava a decisão do controlador:
+    uma retificação de anexo (só o título "Retificação", sem ementa) nunca
+    poderia ser resgatada pelo `_FORTE`, que só olha título e ementa. Só
+    `aviso de retificação` continua descartando."""
+    pub = _pub("Retificação", tipo="Retificação")
+    triagem = triar([pub], cfg)
+    assert [p.id for p in triagem.mantidas] == [pub.id]
+
+
+def test_suspensao_nao_e_descartada_pela_regra_de_pensao(cfg):
+    """`pensão` sem `\\b` casava dentro de "suspensão"."""
+    pub = _pub("Suspensão de convênio")
+    triagem = triar([pub], cfg)
+    assert [p.id for p in triagem.mantidas] == [pub.id]
 
 
 def test_teto_nao_corta_publicacao_do_iofmg(cfg):

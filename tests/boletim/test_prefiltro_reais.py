@@ -92,6 +92,16 @@ def test_habilitacao_com_cifra_real_soma_titulo_e_corpo(reais, cfg):
     assert forca(pub) >= 2
 
 
+def test_retificacao_de_anexo_sem_ementa_e_mantida(reais, cfg):
+    """`f7077106b63989be`: retificação do Anexo XIV de uma portaria de
+    habilitação, 01/09. Título e tipo são literalmente "Retificação", sem
+    ementa — o `_FORTE` nunca teria como resgatar esse item (R1 só olha
+    título e ementa). A regra `retificação` sozinha no `_DESCARTE` violava a
+    decisão do controlador ao descartar atos assim sem chance de resgate."""
+    pub = reais["f7077106b63989be"]
+    assert _veredito(pub, cfg) == "mantida"
+
+
 # ── o que precisa cair ──────────────────────────────────────────────────
 @pytest.mark.parametrize(
     "id_real",
