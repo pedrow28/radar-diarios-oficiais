@@ -1,0 +1,180 @@
+{#
+  E-mail da edição e, no modo `web`, a mesma página no site.
+
+  Tabela, coluna única, estilo inline: é o que Outlook e Gmail entendem. O
+  `<style>` do head guarda só o que não pode ser inline - a media query do
+  celular e a troca de logo no modo escuro. Largura fluida com teto de 600px;
+  o `width="600"` fixo só existe dentro do comentário condicional do Outlook,
+  que é o único cliente que ignora `max-width`.
+
+  Uma luz só: o azul `#0060e0` do botão e dos links. Nenhum outro `bgcolor`.
+#}
+{% macro eyebrow(texto) %}
+<p style="margin:0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:12px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#5a6280;">{{ texto }}</p>
+{% endmacro %}
+{% macro espaco(altura) %}
+<tr><td height="{{ altura }}" style="height:{{ altura }}px; line-height:{{ altura }}px; font-size:0;">&nbsp;</td></tr>
+{% endmacro %}
+{% macro cartao() %}
+<tr>
+<td style="padding:0 16px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF; border:1px solid #dde4ee;">
+<tr>
+<td class="card" style="padding:32px;">
+{{ caller() }}
+</td>
+</tr>
+</table>
+</td>
+</tr>
+{% endmacro %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>{{ edicao.titulo|sem_travessao }}</title>
+<style>
+a { overflow-wrap: anywhere; }
+@media only screen and (max-width:480px) {
+  .card { padding: 16px !important; }
+  .meta-linha { display: block !important; }
+  .botao a { display: block !important; width: 100% !important; box-sizing: border-box; }
+}
+@media (prefers-color-scheme: dark) {
+  .logo-claro { display: none !important; }
+  .logo-escuro { display: block !important; }
+}
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#f5f7f9;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f5f7f9" style="background-color:#f5f7f9;">
+<tr>
+<td align="center" style="padding:0;">
+<!--[if mso]><table role="presentation" width="600" align="center"><tr><td><![endif]-->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:600px; margin:0 auto;">
+
+{# ── cabeçalho ─────────────────────────────────────────────────────── #}
+<tr>
+<td style="padding:24px 16px;">
+<img class="logo-claro" src="{{ url_logo_navy }}" width="140" alt="Thauma" style="display:block; width:140px; max-width:100%; height:auto; border:0;">
+<img class="logo-escuro" src="{{ url_logo_branco }}" width="140" alt="Thauma" style="display:none; width:140px; max-width:100%; height:auto; border:0;">
+<div style="margin-top:16px;">
+{{ eyebrow("Radar de captação em saúde") }}
+</div>
+<p style="margin:4px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.5; color:#5a6280;">{{ edicao.data|data_extenso }}</p>
+</td>
+</tr>
+
+{# ── ressalva de coleta ────────────────────────────────────────────── #}
+{% if edicao.parcial %}
+{% set avisos = edicao.fontes|avisos_fontes %}
+<tr>
+<td style="padding:0 16px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF; border:1px solid #dde4ee;">
+<tr>
+<td style="padding:16px;">
+<p style="margin:0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.6; color:#5a6280;">Coleta parcial nesta data{% if avisos %}: {{ avisos }}{% endif %}.</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+{{ espaco(16) }}
+{% endif %}
+
+{# ── abertura ──────────────────────────────────────────────────────── #}
+{% call cartao() %}
+<h1 style="margin:0 0 16px; font-family:Georgia, 'Times New Roman', serif; font-size:28px; font-weight:500; line-height:1.25; letter-spacing:-0.02em; color:#00051f;">{{ edicao.titulo|sem_travessao }}</h1>
+<p style="margin:0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">{{ edicao.intro|sem_travessao }}</p>
+{% endcall %}
+{{ espaco(24) }}
+
+{# ── em 30 segundos ────────────────────────────────────────────────── #}
+{% call cartao() %}
+{{ eyebrow("Em 30 segundos") }}
+<ul style="margin:16px 0 0; padding-left:20px;">
+{% for bullet in edicao.em_30_segundos %}
+<li style="margin:0 0 8px; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">{{ bullet|sem_travessao }}</li>
+{% endfor %}
+</ul>
+{% endcall %}
+
+{# ── seções A, B e C ───────────────────────────────────────────────── #}
+{% for categoria in ["A", "B", "C"] %}
+{% if edicao.secoes[categoria] %}
+{{ espaco(48) }}
+<tr>
+<td style="padding:0 16px 16px;">
+{{ eyebrow(rotulos[categoria] ~ " (" ~ edicao.secoes[categoria]|length ~ ")") }}
+</td>
+</tr>
+{% for item in edicao.secoes[categoria] %}
+{% if not loop.first %}{{ espaco(24) }}{% endif %}
+<tr>
+<td style="padding:0 16px;">
+{% include "_item.html.j2" %}
+</td>
+</tr>
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+{# ── chamada ───────────────────────────────────────────────────────── #}
+{{ espaco(48) }}
+{% call cartao() %}
+<p style="margin:0 0 24px; text-align:center; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">Quer transformar essas oportunidades em captação? Pedro William responde no WhatsApp.</p>
+<table class="botao" role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+<tr>
+<td bgcolor="#0060e0" style="border-radius:4px;">
+<a href="{{ cta_url }}" style="display:block; padding:16px 24px; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; font-weight:600; line-height:1.3; color:#ffffff; text-decoration:none;">{{ cta_texto }}</a>
+</td>
+</tr>
+</table>
+{% endcall %}
+
+{# ── outros atos ───────────────────────────────────────────────────── #}
+{% if edicao.secoes["D"] %}
+{{ espaco(48) }}
+<tr>
+<td style="padding:0 16px 16px;">
+{{ eyebrow(rotulos["D"] ~ " (" ~ edicao.secoes["D"]|length ~ ")") }}
+</td>
+</tr>
+{% call cartao() %}
+{% for item in edicao.secoes["D"] %}
+<p style="margin:{{ 0 if loop.first else 8 }}px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:15px; line-height:1.6; color:#1c2438;">{{ item.titulo|sem_travessao }} · {{ item.orgao|sem_travessao }} <a href="{{ item.url|e }}" style="color:#0060e0; text-decoration:underline;">ver</a></p>
+{% endfor %}
+{% endcall %}
+{% endif %}
+
+{# ── rodapé ────────────────────────────────────────────────────────── #}
+{{ espaco(48) }}
+<tr>
+<td style="padding:0 16px 32px;">
+{% set publicadas = edicao.fontes|rejectattr("status", "in", ["ausente", "vazio"])|list %}
+{% if publicadas %}
+<p style="margin:0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.6; color:#5a6280;">Fontes: {% for fonte in publicadas %}{{ fonte.nome|nome_fonte }}{% if fonte.edicao %} (edição {{ fonte.edicao }}{% if fonte.paginas %}, {{ fonte.paginas }}{% endif %}){% elif fonte.paginas %} ({{ fonte.paginas }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.</p>
+{% endif %}
+<p style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.6; color:#5a6280;">Thauma · inteligência e narrativa em saúde</p>
+<p style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.6; color:#5a6280;">
+{% if modo == "email" %}
+<a href="{{ url_edicao }}" style="color:#0060e0; text-decoration:underline;">Ler a versão completa</a><br>
+{% else %}
+<a href="{{ site_url }}" style="color:#0060e0; text-decoration:underline;">Voltar ao índice</a><br>
+{% endif %}
+<a href="{{ cta_url }}" style="color:#0060e0; text-decoration:underline;">Conversar no WhatsApp: {{ cta_whatsapp_legivel }}</a><br>
+<a href="#descadastrar" style="color:#0060e0; text-decoration:underline;">Descadastrar</a>
+</p>
+</td>
+</tr>
+
+</table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td>
+</tr>
+</table>
+</body>
+</html>

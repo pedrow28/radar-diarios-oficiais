@@ -1,0 +1,24 @@
+{#
+  Um item de A, B ou C: o cartão que o gestor lê para decidir se abre o ato.
+
+  A ordem é a da decisão: o que é, de onde veio, o que diz, por que importa,
+  quanto vale, onde conferir. O valor sai em Georgia porque é número que
+  carrega argumento, mas em `#00051f` e não na luz - a luz é só o botão.
+#}
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF; border:1px solid #dde4ee;">
+<tr>
+<td class="card" style="padding:32px;">
+<h3 style="margin:0 0 8px; font-family:Georgia, 'Times New Roman', serif; font-size:20px; font-weight:500; line-height:1.3; color:#00051f;">{{ item.titulo|sem_travessao }}</h3>
+<p class="meta-linha" style="margin:0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.5; color:#5a6280;">{{ item.orgao|sem_travessao }}{% if item.unidade %} · {{ item.unidade|sem_travessao }}{% endif %}{% if item.tipo %} · {{ item.tipo }}{% endif %}{% if item.numero %} nº {{ item.numero }}{% endif %} · {{ item.data_publicacao|data_br }}{% if item.fonte == "iofmg" %} · IOF-MG{% elif item.secao %} · DOU seção {{ item.secao }}{% endif %}{% if item.pagina %} p. {{ item.pagina }}{% endif %}</p>
+<p style="margin:8px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">{{ item.resumo|sem_travessao }}</p>
+{% if item.por_que_importa %}
+<p style="margin:16px 0 4px; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:12px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#5a6280;">Por que importa</p>
+<p style="margin:0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">{{ item.por_que_importa|sem_travessao }}</p>
+{% endif %}
+{% if item.valor_brl %}
+<p style="margin:16px 0 0; font-family:Georgia, 'Times New Roman', serif; font-size:20px; line-height:1.3; color:#00051f;">{{ item.valor_brl|brl }}</p>
+{% endif %}
+<p style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:15px; line-height:1.5;"><a href="{{ item.url|e }}" style="color:#0060e0; text-decoration:underline;">Ver publicação</a></p>
+</td>
+</tr>
+</table>

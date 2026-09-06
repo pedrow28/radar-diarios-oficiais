@@ -1,0 +1,60 @@
+{#
+  A mesma edição em markdown: arquivo do dia e formato que um agente lê.
+
+  Sem autoescape aqui - markdown não é HTML, e escapar `<` transformaria o
+  texto do diário em ruído. O arquivo nunca é servido como página.
+#}
+# {{ edicao.titulo|sem_travessao }}
+
+{{ edicao.data|data_extenso }}
+
+{% if edicao.parcial %}
+{% set avisos = edicao.fontes|avisos_fontes %}
+> Coleta parcial nesta data{% if avisos %}: {{ avisos }}{% endif %}.
+
+{% endif %}
+{{ edicao.intro|sem_travessao }}
+
+## Em 30 segundos
+
+{% for bullet in edicao.em_30_segundos %}
+- {{ bullet|sem_travessao }}
+{% endfor %}
+{% for categoria in ["A", "B", "C", "D"] %}
+{% if edicao.secoes[categoria] %}
+
+## {{ rotulos[categoria] }} ({{ edicao.secoes[categoria]|length }})
+{% for item in edicao.secoes[categoria] %}
+
+### {{ item.titulo|sem_travessao }}
+
+{{ item.orgao|sem_travessao }}{% if item.unidade %} · {{ item.unidade|sem_travessao }}{% endif %}{% if item.tipo %} · {{ item.tipo }}{% endif %}{% if item.numero %} nº {{ item.numero }}{% endif %} · {{ item.data_publicacao|data_br }}{% if item.fonte == "iofmg" %} · IOF-MG{% elif item.secao %} · DOU seção {{ item.secao }}{% endif %}{% if item.pagina %} p. {{ item.pagina }}{% endif %}
+
+
+{{ item.resumo|sem_travessao }}
+{% if item.por_que_importa %}
+
+Por que importa: {{ item.por_que_importa|sem_travessao }}
+{% endif %}
+{% if item.valor_brl %}
+
+Valor: {{ item.valor_brl|brl }}
+{% endif %}
+
+[Ver publicação]({{ item.url }})
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+## Fale com a Thauma
+
+Quer transformar essas oportunidades em captação? Pedro William responde no WhatsApp: [{{ cta_whatsapp_legivel }}]({{ cta_url }})
+
+---
+
+{% set publicadas = edicao.fontes|rejectattr("status", "in", ["ausente", "vazio"])|list %}
+{% if publicadas %}
+Fontes: {% for fonte in publicadas %}{{ fonte.nome|nome_fonte }}{% if fonte.edicao %} (edição {{ fonte.edicao }}{% if fonte.paginas %}, {{ fonte.paginas }}{% endif %}){% elif fonte.paginas %} ({{ fonte.paginas }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.
+
+{% endif %}
+Thauma · inteligência e narrativa em saúde
