@@ -162,8 +162,8 @@ dois horários escrevem no mesmo `site/` e o segundo espera o primeiro.
 
 **Freio remoto:** um arquivo `PARAR` na raiz da `main` (primeira linha = motivo)
 faz o job imprimir o motivo e pular tudo, terminando verde. Remover religa. É a
-convenção `00-Governanca/PARAR.md` do cérebro corporativo da Thauma: desligar tem
-de ser um commit que qualquer um vê e reverte, não uma mudança escondida em
+mesma convenção de freio remoto usada internamente na Thauma: desligar tem de
+ser um commit que qualquer um vê e reverte, não uma mudança escondida em
 Settings.
 
 **Alarme:** falha abre uma issue `Boletim <data> falhou` com o link da execução,

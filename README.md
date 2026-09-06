@@ -233,9 +233,9 @@ mesmo que a edição do dia já exista).
 desliga a rotina: o job continua rodando, imprime `freio remoto ativo:` com a
 primeira linha do arquivo — escreva ali o motivo — e pula todo o resto, sem
 coletar, sem chamar o modelo e sem publicar. Remover o arquivo religa. É a
-mesma convenção do `00-Governanca/PARAR.md` do cérebro corporativo da Thauma:
-desligar tem de ser um commit que qualquer um vê e reverte, não uma mudança
-escondida em Settings.
+mesma convenção de freio remoto usada internamente na Thauma: desligar tem de
+ser um commit que qualquer um vê e reverte, não uma mudança escondida em
+Settings.
 
 ```bash
 echo "IOF-MG mudou o layout do PDF; retomar depois do ajuste" > PARAR

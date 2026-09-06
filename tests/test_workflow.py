@@ -148,6 +148,17 @@ def test_coleta_com_erro_derruba_o_job_antes_de_publicar(
     assert coleta["env"]["INLABS_EMAIL"] == "${{ secrets.INLABS_EMAIL }}"
 
 
+def test_codigo_inesperado_derruba_o_job(workflow: dict[str, Any]) -> None:
+    """Um rc que não seja 0, 1 ou 2 (ex.: 127, 137) não pode cair no `else` como
+    sucesso silencioso: o passo precisa propagar esse código com `exit "$rc"`."""
+    coleta = next(p for p in passos(workflow) if p.get("id") == "coleta")
+    boletim = next(p for p in passos(workflow) if p.get("id") == "boletim")
+    for passo in (coleta, boletim):
+        assert 'exit "$rc"' in passo["run"], (
+            f"passo {passo.get('name')!r} não propaga um código de saída inesperado"
+        )
+
+
 def test_boletim_vazio_nao_publica(workflow: dict[str, Any]) -> None:
     """Domingo e feriado saem 0 com `boletim: vazio`; não há o que subir."""
     boletim = next(p for p in passos(workflow) if p.get("id") == "boletim")
