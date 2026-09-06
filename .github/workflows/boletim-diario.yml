@@ -188,8 +188,11 @@ jobs:
           git add --force "boletim/saida/$DATA"
           git add site
           git diff --cached --quiet || git commit -m "boletim: edição $DATA"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          # A branch é a da execução, não `main` fixa: o cron sempre roda na
+          # branch padrão, mas um `workflow_dispatch` de teste sai de outra, e
+          # `HEAD:main` empurraria os commits dessa outra branch para a `main`.
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
 
       - name: Configura o Pages
         if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true' && steps.boletim.outputs.vazio != 'true'
