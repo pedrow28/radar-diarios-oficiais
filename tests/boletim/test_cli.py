@@ -84,6 +84,36 @@ def test_dia_sem_publicacao_sai_0_e_nao_grava_nada(config, tmp_path, capsys):
 
 
 def test_llm_indisponivel_sai_2_e_deixa_o_site_intocado(config, tmp_path, capsys):
+    """Queda de verdade: a pasta tem resposta para o editorial, não para o lote.
+
+    É o caminho de um modelo que caiu no meio da execução - diferente da pasta
+    vazia (abaixo), que é configuração errada, não indisponibilidade.
+    """
+    so_editorial = tmp_path / "so-editorial"
+    so_editorial.mkdir()
+    (so_editorial / "editorial.json").write_text(
+        (FIXTURES / "llm" / "editorial.json").read_text(encoding="utf-8"),
+        encoding="utf-8",
+    )
+
+    codigo = main(
+        ["gerar", "--config", str(config), "--data", DATA,
+         "--llm", "falso", "--respostas", str(so_editorial)]
+    )
+
+    assert codigo == 2
+    assert "erro:" in capsys.readouterr().err
+    assert not (tmp_path / "site").exists()
+
+
+def test_llm_falso_com_pasta_vazia_sai_2_com_mensagem_que_nomeia_a_pasta(
+    config, tmp_path, capsys
+):
+    """Pasta sem nenhum arquivo de resposta é `--respostas` errado, não modelo fora do ar.
+
+    A mensagem precisa nomear a pasta para o agente distinguir os dois casos
+    no log, em vez de cair no mesmo caminho silencioso da queda.
+    """
     vazio = tmp_path / "sem-respostas"
     vazio.mkdir()
 
@@ -93,8 +123,24 @@ def test_llm_indisponivel_sai_2_e_deixa_o_site_intocado(config, tmp_path, capsys
     )
 
     assert codigo == 2
-    assert "erro:" in capsys.readouterr().err
+    erro = capsys.readouterr().err
+    assert "erro:" in erro
+    assert str(vazio) in erro
     assert not (tmp_path / "site").exists()
+
+
+def test_llm_falso_usa_pasta_padrao_das_fixtures_mesmo_fora_da_raiz_do_repo(
+    config, tmp_path, monkeypatch
+):
+    """O padrão de `--respostas` é ancorado no arquivo, não no cwd do processo.
+
+    Antes da correção, `Path("tests/fixtures/boletim/llm")` só resolvia a
+    partir da raiz do repositório; rodando de outro diretório, a pasta padrão
+    "sumia" e um `--llm falso` sem `--respostas` caía no mesmo caminho de uma
+    queda real do modelo.
+    """
+    monkeypatch.chdir(tmp_path)
+    assert _gerar(config) == 1
 
 
 def test_renderizar_regrava_a_partir_do_disco_sem_chamar_o_llm(config, tmp_path):

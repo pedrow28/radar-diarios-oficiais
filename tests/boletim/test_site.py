@@ -96,3 +96,21 @@ def test_reconstruir_indice_regenera_a_partir_do_json(edicao, cfg):
 def test_reconstruir_indice_sem_edicoes_ainda_gera_a_pagina(cfg):
     caminho = reconstruir_indice(cfg)
     assert "Radar de captação em saúde" in caminho.read_text(encoding="utf-8")
+
+
+def test_publicar_com_edicoes_json_corrompido_nao_deixa_site_pela_metade(edicao, cfg):
+    """Um `edicoes.json` ilegível tem de estourar antes de qualquer gravação.
+
+    `publicar` lê e mescla o arquivo, e só depois grava; se a ordem regredir
+    para "grava a página primeiro", este teste falha porque a página passa a
+    existir mesmo com a exceção.
+    """
+    cfg.dir_site.mkdir(parents=True)
+    corrompido = "{ isto não é json"
+    (cfg.dir_site / "edicoes.json").write_text(corrompido, encoding="utf-8")
+
+    with pytest.raises(json.JSONDecodeError):
+        _publicar(edicao, cfg)
+
+    assert not (cfg.dir_site / "edicoes" / "2026-09-03.html").exists()
+    assert (cfg.dir_site / "edicoes.json").read_text(encoding="utf-8") == corrompido

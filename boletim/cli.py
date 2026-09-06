@@ -4,9 +4,12 @@ O contrato de saída é o mesmo do `radar`: 0 saiu inteiro, 1 saiu com ressalva,
 2 não saiu. A ressalva importa porque uma edição com uma fonte faltando ainda
 vale a pena publicar - o prazo de um edital não espera o IOF-MG voltar.
 
-`gerar` renderiza tudo em memória antes de escrever qualquer arquivo. Se o LLM
-cair ou um template quebrar, a falha acontece antes da primeira gravação e o
-site continua exatamente como estava; meia edição no ar é pior que nenhuma.
+`gerar` renderiza e-mail, página e markdown em memória antes de gravar os
+arquivos do dia: LLM fora do ar ou template quebrado falha antes da primeira
+gravação. A publicação no site é outra etapa, com a mesma garantia por conta
+própria - `boletim.site.publicar` lê e mescla `edicoes.json` e renderiza o
+índice antes de tocar em qualquer arquivo do `site/`, então uma falha ali
+também não deixa meia edição no ar.
 """
 
 from __future__ import annotations
@@ -39,8 +42,10 @@ from radar.core.datas import agora_utc, hoje, parse_data
 from radar.core.log import configurar_log
 
 # `--llm falso` usa as respostas das fixtures por padrão: é o modo de ensaiar o
-# pipeline inteiro sem gastar chamada de modelo nem depender de rede.
-RESPOSTAS_PADRAO = Path("tests/fixtures/boletim/llm")
+# pipeline inteiro sem gastar chamada de modelo nem depender de rede. Ancorado
+# no arquivo, não no cwd: rodando de outro diretório (ou de um wheel instalado)
+# um caminho relativo a `tests/` apontaria para uma pasta que não existe.
+RESPOSTAS_PADRAO = Path(__file__).resolve().parents[1] / "tests" / "fixtures" / "boletim" / "llm"
 ARQUIVOS_FALSOS = {"lote-0": "lote1.json", "editorial": "editorial.json"}
 
 
@@ -80,16 +85,27 @@ def _montar_parser() -> argparse.ArgumentParser:
 def _llm(args, cfg: ConfigBoletim) -> LLM:
     """O modelo real ou o dublê alimentado por uma pasta de respostas gravadas.
 
-    Arquivo faltando não é erro: sem ele o rótulo simplesmente não tem resposta,
-    e o pipeline percorre o mesmo caminho de um modelo fora do ar.
+    Um arquivo faltando não é erro: sem ele, só aquele rótulo fica sem
+    resposta, e o pipeline percorre o mesmo caminho de um modelo fora do ar no
+    meio da execução - é assim que se testa a queda parcial. Mas a pasta
+    inteira sem nenhum dos dois arquivos é outra coisa: quase sempre um
+    `--respostas` errado ou um `cwd` inesperado, e isso precisa de uma
+    mensagem que nomeie a pasta, não do mesmo caminho silencioso da
+    indisponibilidade - os dois ficariam indistinguíveis no log.
     """
     if args.llm == "claude":
         return ClaudeCodeCLI(cfg.modelo, cfg.timeout_llm_s)
+    pasta = Path(args.respostas)
     respostas: dict[str, dict | list[dict]] = {}
     for rotulo, arquivo in ARQUIVOS_FALSOS.items():
-        caminho = Path(args.respostas) / arquivo
+        caminho = pasta / arquivo
         if caminho.exists():
             respostas[rotulo] = json.loads(caminho.read_text(encoding="utf-8"))
+    if not respostas:
+        raise ValueError(
+            f"--llm falso: nenhuma resposta encontrada em {pasta} "
+            f"(esperado {' e/ou '.join(ARQUIVOS_FALSOS.values())})"
+        )
     return LLMFalso(respostas)
 
 

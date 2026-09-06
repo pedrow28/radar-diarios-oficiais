@@ -8,6 +8,10 @@ perdesse sumiria do arquivo sem ninguém notar.
 
 O `.nojekyll` na raiz não é detalhe: sem ele o Pages roda Jekyll e ignora todo
 arquivo ou pasta que comece com underscore.
+
+`publicar` lê e mescla `edicoes.json` e renderiza o índice antes de gravar
+qualquer arquivo: um `edicoes.json` corrompido ou uma ficha sem `contagens`
+tem de estourar ali, não depois da página já estar no ar.
 """
 
 from __future__ import annotations
@@ -28,24 +32,33 @@ PASTA_ASSETS = "assets"
 
 
 def publicar(edicao: Edicao, html_web: str, cfg: ConfigBoletim) -> Path:
-    """Grava a página da edição, atualiza o arquivo e regenera o índice."""
+    """Grava a página da edição, atualiza o arquivo e regenera o índice.
+
+    Tudo que pode falhar - ler e mesclar `edicoes.json`, renderizar o índice -
+    acontece antes da primeira gravação. Um `edicoes.json` corrompido ou uma
+    ficha sem `contagens` estoura aqui, com o `site/` inteiro intocado; só
+    depois desse ponto é que qualquer arquivo é escrito.
+    """
     dir_site = Path(cfg.dir_site)
+    entradas = _mesclar(_ler_edicoes(dir_site), _ficha(edicao))
+    indice_html = _renderizar_indice(entradas, cfg)
+
     pagina = dir_site / PASTA_EDICOES / f"{edicao.data.isoformat()}.html"
     pagina.parent.mkdir(parents=True, exist_ok=True)
     pagina.write_text(html_web, encoding="utf-8", newline="\n")
 
-    entradas = _mesclar(_ler_edicoes(dir_site), _ficha(edicao))
     _gravar_edicoes(dir_site, entradas)
     _copiar_assets(dir_site)
     (dir_site / ".nojekyll").write_bytes(b"")
-    _gravar_indice(dir_site, entradas, cfg)
+    _gravar_indice_html(dir_site, indice_html)
     return pagina
 
 
 def reconstruir_indice(cfg: ConfigBoletim) -> Path:
     """Regera `index.html` a partir de `edicoes.json`, sem tocar nas páginas."""
     dir_site = Path(cfg.dir_site)
-    return _gravar_indice(dir_site, _ler_edicoes(dir_site), cfg)
+    indice_html = _renderizar_indice(_ler_edicoes(dir_site), cfg)
+    return _gravar_indice_html(dir_site, indice_html)
 
 
 def _ficha(edicao: Edicao) -> dict[str, Any]:
@@ -87,15 +100,18 @@ def _gravar_edicoes(dir_site: Path, entradas: list[dict[str, Any]]) -> None:
     )
 
 
-def _gravar_indice(
-    dir_site: Path, entradas: list[dict[str, Any]], cfg: ConfigBoletim
-) -> Path:
+def _renderizar_indice(entradas: list[dict[str, Any]], cfg: ConfigBoletim) -> str:
+    """Só renderiza, não grava: é a parte que pode falhar antes de tocar disco."""
     # A data volta a ser `date` aqui: o template a escreve por extenso, e
     # formatar data em Jinja a partir de string seria uma segunda gramática.
     para_render = [{**e, "data": date.fromisoformat(e["data"])} for e in entradas]
+    return render_index(para_render, cfg)
+
+
+def _gravar_indice_html(dir_site: Path, indice_html: str) -> Path:
     dir_site.mkdir(parents=True, exist_ok=True)
     caminho = dir_site / "index.html"
-    caminho.write_text(render_index(para_render, cfg), encoding="utf-8", newline="\n")
+    caminho.write_text(indice_html, encoding="utf-8", newline="\n")
     return caminho
 
 
