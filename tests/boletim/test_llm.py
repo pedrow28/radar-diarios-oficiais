@@ -179,3 +179,29 @@ def test_falso_registra_rotulo_sistema_e_usuario():
     falso.completar_json("sistema", "usuario", SCHEMA, rotulo="lote-0")
     assert falso.chamadas == [("lote-0", "sistema", "usuario")]
 
+
+
+def test_arquivo_deixado_aberto_pelo_cli_nao_derruba_a_chamada(cli, monkeypatch):
+    """A limpeza do diretório de trabalho não pode virar falha da geração.
+
+    Observado numa rodada real no Windows: o `claude` é um processo Node que
+    ainda segura o diretório quando o `subprocess.run` retorna, e o
+    `TemporaryDirectory` estourava `PermissionError [WinError 32]` na saída do
+    `with` - depois de o modelo ter respondido. O dia inteiro saía com exit 2
+    por causa de um diretório temporário. Aqui o dublê deixa um arquivo aberto
+    dentro do `cwd`, que é o que o Windows recusa a apagar.
+    """
+    abertos = []
+
+    def falso_run(argv, **kwargs):
+        aberto = open(f"{kwargs['cwd']}/sessao.lock", "w", encoding="utf-8")
+        aberto.write("segurando o diretório")
+        abertos.append(aberto)  # vazamento proposital: o handle segue aberto
+        return subprocess.CompletedProcess(argv, 0, json.dumps({"structured_output": {"a": 1}}), "")
+
+    monkeypatch.setattr(subprocess, "run", falso_run)
+    try:
+        assert cli.completar_json("s", "u", SCHEMA, rotulo="lote-0") == {"a": 1}
+    finally:
+        for aberto in abertos:
+            aberto.close()

@@ -75,7 +75,16 @@ class ClaudeCodeCLI:
         # Diretório temporário como `cwd`: assim o CLI não enxerga o repositório
         # nem escreve nada nele. O contexto apaga o diretório mesmo se a chamada
         # estourar o tempo.
-        with tempfile.TemporaryDirectory(prefix="boletim-llm-") as trabalho:
+        #
+        # `ignore_cleanup_errors` não é zelo: no Windows o `claude` é um processo
+        # Node que ainda segura o diretório quando o `subprocess.run` retorna, e
+        # sem isso a saída do `with` estoura `PermissionError [WinError 32]`
+        # depois de o modelo já ter respondido - o dia inteiro sairia com exit 2
+        # por causa de um diretório temporário. O que sobra é uma pasta vazia em
+        # `%TEMP%`, que o sistema limpa.
+        with tempfile.TemporaryDirectory(
+            prefix="boletim-llm-", ignore_cleanup_errors=True
+        ) as trabalho:
             try:
                 processo = subprocess.run(
                     argv,
