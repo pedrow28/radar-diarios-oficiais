@@ -7,6 +7,10 @@
   A meta acompanha a do e-mail: duas linhas, quem publicou e onde saiu, sem a
   tira de middle dots. O markdown não tem hierarquia visual, então a mesma
   informação precisa chegar pela mesma ordem.
+
+  A URL passa por `url_markdown`: esquema fora de `http`/`https` não vira link,
+  e o que sobra sai com `(`, `)` e espaço codificados - sem isso um parêntese
+  vindo do diário fecharia o link no meio e jogaria o resto da URL no texto.
 #}
 # {{ edicao.titulo|sem_travessao }}
 
@@ -45,8 +49,11 @@ Por que importa. {{ item.por_que_importa|sem_travessao }}
 
 Valor: {{ item.valor_brl|brl }}
 {% endif %}
+{% set href = item.url|url_markdown %}
+{% if href %}
 
-[Ver publicação]({{ item.url }})
+[Ver publicação]({{ href }})
+{% endif %}
 {% endfor %}
 {% endif %}
 {% endfor %}

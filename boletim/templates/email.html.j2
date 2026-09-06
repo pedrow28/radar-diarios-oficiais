@@ -153,8 +153,11 @@ a { overflow-wrap: anywhere; }
 {{ rotulo(rotulos["D"], "0 16px") }}
 <tr>
 <td style="padding:16px 16px 0;">
+{# Sem URL de esquema conhecido o título fica de pé, só que sem link: o ato
+   continua registrado, que é a razão de existir desta lista. #}
 {% for item in edicao.secoes["D"] %}
-<p class="muted" style="margin:{{ 0 if loop.first else 16 }}px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:15px; line-height:1.5; color:#5a6280;"><a class="link" href="{{ item.url|e }}" style="color:#0060e0; text-decoration:underline;">{{ item.titulo|sem_travessao|titulo_ato }}</a>, {{ item.orgao|sem_travessao }}</p>
+{% set href = item.url|url_segura %}
+<p class="muted" style="margin:{{ 0 if loop.first else 16 }}px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:15px; line-height:1.5; color:#5a6280;">{% if href %}<a class="link" href="{{ href|e }}" style="color:#0060e0; text-decoration:underline;">{{ item.titulo|sem_travessao|titulo_ato }}</a>{% else %}{{ item.titulo|sem_travessao|titulo_ato }}{% endif %}, {{ item.orgao|sem_travessao }}</p>
 {% endfor %}
 </td>
 </tr>

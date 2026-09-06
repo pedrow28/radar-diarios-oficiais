@@ -29,6 +29,7 @@ from boletim.render import (
     sem_travessao,
     telefone_legivel,
     titulo_ato,
+    url_segura,
 )
 from tests.fixtures.boletim.edicao_exemplo import edicao_exemplo
 
@@ -517,3 +518,86 @@ def test_indice_usa_a_mesma_folha_e_a_mesma_serifa_do_email(cfg):
     assert indice.count("background-color:#FFFFFF") == 1
     assert "Georgia, 'Times New Roman', serif" in indice
     assert "#dde4ee" in indice
+
+
+# ── esquema de URL ──────────────────────────────────────────────────────
+@pytest.mark.parametrize(
+    "url",
+    [
+        "https://www.in.gov.br/web/dou/-/portaria-1",
+        "http://www.iof.mg.gov.br/edicao",
+        "  https://www.in.gov.br/espacos  ",
+        "HTTPS://WWW.IN.GOV.BR/MAIUSCULA",
+    ],
+)
+def test_url_segura_deixa_passar_http_e_https(url):
+    assert url_segura(url) == url.strip()
+
+
+@pytest.mark.parametrize(
+    "url",
+    [
+        "javascript:alert(1)",
+        "JavaScript:alert(1)",
+        "data:text/html;base64,PHNjcmlwdD4=",
+        "vbscript:msgbox(1)",
+        "file:///etc/passwd",
+        "//exemplo.test/protocolo-relativo",
+        "",
+    ],
+)
+def test_url_segura_recusa_o_resto(url):
+    assert url_segura(url) == ""
+
+
+def _com_url(edicao, url: str):
+    """A mesma edição com um único item em A, carregando a URL de teste."""
+    primeiro = edicao.secoes["A"][0]
+    return replace(
+        edicao, secoes={**edicao.secoes, "A": (replace(primeiro, url=url),)}
+    )
+
+
+def test_url_hostil_do_diario_nao_vira_href_no_email(edicao, cfg):
+    """`item.url` vem do diário e a peça vai para e-mail e página pública.
+
+    O autoescape do Jinja impede a fuga do atributo, mas não impede um
+    `javascript:` de virar href legítimo. A defesa é a lista de esquemas.
+    """
+    html = render_email(_com_url(edicao, "javascript:alert(1)"), cfg)
+    assert "javascript:" not in html
+    assert 'href=""' not in html
+
+
+def test_url_de_dados_nao_vira_href_no_email(edicao, cfg):
+    html = render_email(_com_url(edicao, "data:text/html,<h1>x</h1>"), cfg)
+    assert "data:text/html" not in html
+
+
+def test_url_https_continua_virando_href(edicao, cfg):
+    html = render_email(_com_url(edicao, "https://exemplo.test/ato"), cfg)
+    assert 'href="https://exemplo.test/ato"' in html
+
+
+def test_lista_de_outros_atos_perde_o_link_mas_mantem_o_titulo(edicao, cfg):
+    """Em D o link envolve o próprio título: sem href, o título fica de pé."""
+    primeiro = edicao.secoes["D"][0]
+    hostil = replace(
+        edicao,
+        secoes={**edicao.secoes, "D": (replace(primeiro, url="javascript:alert(1)"),)},
+    )
+    html = render_email(hostil, cfg)
+    assert "javascript:" not in html
+    assert titulo_ato(sem_travessao(primeiro.titulo)) in html
+
+
+def test_markdown_nao_publica_link_com_esquema_hostil(edicao, cfg):
+    md = render_md(_com_url(edicao, "javascript:alert(1)"), cfg)
+    assert "javascript:" not in md
+    assert "[Ver publicação]()" not in md
+
+
+def test_markdown_escapa_parentese_e_espaco_da_url(edicao, cfg):
+    """`)` ou espaço vindos do diário fechariam o link markdown no meio."""
+    md = render_md(_com_url(edicao, "https://exemplo.test/ato (2026)"), cfg)
+    assert "[Ver publicação](https://exemplo.test/ato%20%282026%29)" in md

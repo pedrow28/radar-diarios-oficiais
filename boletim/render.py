@@ -57,6 +57,12 @@ SEM_RELEVANTES_CURTO = "Sem publicações relevantes"
 
 SEM_CONTEUDO = ("ausente", "vazio")
 MAX_AVISOS = 3
+
+# Lista fechada de esquemas que podem virar href. Ver `url_segura`.
+ESQUEMAS_SEGUROS = ("https://", "http://")
+# O que quebraria o destino de um link markdown, que fecha no primeiro `)`.
+_ESCAPE_MARKDOWN = {" ": "%20", "(": "%28", ")": "%29", "<": "%3C", ">": "%3E"}
+
 _TRAVESSAO = re.compile(r"[—–]")
 _TELEFONE_BR = re.compile(r"^55(\d{2})(\d{5})(\d{4})$")
 _EDICAO_NUMERO = re.compile(r"^\d+$")
@@ -99,6 +105,33 @@ def telefone_legivel(numero: str) -> str:
         return numero
     ddd, prefixo, sufixo = achado.groups()
     return f"({ddd}) {prefixo}-{sufixo}"
+
+
+def url_segura(url: str) -> str:
+    """A URL do ato, ou `""` quando o esquema não é `http`/`https`.
+
+    `item.url` vem do diário - `pdfPage` do XML do INLABS, URL montada no
+    IOF-MG - e termina em href de página pública e de e-mail. O autoescape do
+    Jinja impede a fuga do atributo, mas não impede um `javascript:` ou um
+    `data:` de virar link legítimo. A lista de esquemas é fechada de propósito:
+    `mailto:`, `file:` e `//` relativo a protocolo também não têm o que fazer
+    num link de publicação.
+
+    Devolver vazio, e não uma URL de reserva, é deliberado: o template mostra o
+    ato sem link, e ninguém é levado a lugar nenhum sem saber para onde.
+    """
+    limpa = (url or "").strip()
+    return limpa if limpa.lower().startswith(ESQUEMAS_SEGUROS) else ""
+
+
+def url_markdown(url: str) -> str:
+    """A mesma URL, pronta para o destino de um link markdown.
+
+    O markdown fecha o destino no primeiro `)` e não sobrevive a espaço no
+    meio; um dos dois vindo do diário partiria o link e jogaria o resto da URL
+    no texto. Percent-encoding resolve sem tocar no que já é válido.
+    """
+    return "".join(_ESCAPE_MARKDOWN.get(letra, letra) for letra in url_segura(url))
 
 
 def nome_fonte(nome: str) -> str:
@@ -249,6 +282,8 @@ def criar_ambiente() -> Environment:
     ambiente.filters["data_br"] = data_br
     ambiente.filters["data_extenso"] = data_extenso
     ambiente.filters["sem_travessao"] = sem_travessao
+    ambiente.filters["url_segura"] = url_segura
+    ambiente.filters["url_markdown"] = url_markdown
     ambiente.filters["nome_fonte"] = nome_fonte
     ambiente.filters["avisos_fontes"] = avisos_fontes
     ambiente.filters["fontes_publicadas"] = fontes_publicadas
