@@ -21,7 +21,7 @@ from typing import Any, Literal, Sequence
 from jinja2 import Environment, PackageLoader, StrictUndefined
 
 from boletim.config import ConfigBoletim
-from boletim.edicao import ROTULOS, Edicao, FonteResumo
+from boletim.edicao import ROTULOS, Edicao, FonteResumo, Item
 from radar.core.datas import hoje
 
 Modo = Literal["email", "web"]
@@ -38,10 +38,28 @@ NOMES_FONTE = {
     "dou": "DOU",
 }
 
+# Na citação de um ato o leitor precisa do nome do diário, não do coletor:
+# "DOU nº 169, seção 1" e não "DOU via INLABS nº 169, seção 1".
+DIARIOS = {
+    "inlabs": "DOU",
+    "dou": "DOU",
+    "iofmg": "Diário Oficial de Minas Gerais",
+}
+
+# Contagem do índice em frase, com singular e plural. A versão anterior era
+# uma tira de middle dots que ainda imprimia "1 editais".
+NOMES_CONTAGEM = {
+    "A": ("ato de captação", "atos de captação"),
+    "B": ("mudança de regra", "mudanças de regra"),
+    "C": ("edital", "editais"),
+}
+SEM_RELEVANTES_CURTO = "Sem publicações relevantes"
+
 SEM_CONTEUDO = ("ausente", "vazio")
 MAX_AVISOS = 3
 _TRAVESSAO = re.compile(r"[—–]")
 _TELEFONE_BR = re.compile(r"^55(\d{2})(\d{5})(\d{4})$")
+_EDICAO_NUMERO = re.compile(r"^\d+$")
 
 
 def brl(valor: float) -> str:
@@ -85,6 +103,52 @@ def telefone_legivel(numero: str) -> str:
 
 def nome_fonte(nome: str) -> str:
     return NOMES_FONTE.get(nome, nome)
+
+
+def meta_orgao(item: Item) -> str:
+    """Primeira linha da meta: quem publicou o ato.
+
+    A linha de meta era uma tira única de campos unidos por middle dot, que é
+    assinatura de página gerada e, pior, dava o mesmo peso a "Ministério da
+    Saúde" e a "p. 41". Agora são duas linhas com hierarquia: quem publicou
+    primeiro, porque é o que o gestor reconhece, e onde saiu depois.
+    """
+    return ", ".join(parte for parte in (item.orgao, item.unidade) if parte)
+
+
+def meta_origem(item: Item) -> str:
+    """Segunda linha da meta: onde o ato saiu, em forma de citação.
+
+    O número da edição só entra quando é número: no IOF-MG o campo guarda a
+    própria data, e "nº 2026-09-03" seria ruído em cima da data que já fecha
+    a linha. O tipo e o número do ato não aparecem aqui porque `titulo_ato`
+    já os carrega no título.
+    """
+    diario = DIARIOS.get(item.fonte, item.fonte)
+    if item.edicao and _EDICAO_NUMERO.match(item.edicao):
+        diario = f"{diario} nº {item.edicao}"
+    partes = [diario]
+    if item.secao:
+        partes.append(f"seção {item.secao}")
+    if item.pagina:
+        partes.append(f"página {item.pagina}")
+    return f"{', '.join(partes)}, de {data_br(item.data_publicacao)}"
+
+
+def resumo_edicao(contagens: dict[str, int], parcial: bool = False) -> str:
+    """O que a edição trouxe, em uma frase, para a entrada do índice."""
+    partes = [
+        f"{contagens.get(cat, 0)} {singular if contagens.get(cat, 0) == 1 else plural}"
+        for cat, (singular, plural) in NOMES_CONTAGEM.items()
+        if contagens.get(cat, 0)
+    ]
+    if not partes:
+        frase = SEM_RELEVANTES_CURTO
+    elif len(partes) == 1:
+        frase = partes[0]
+    else:
+        frase = f"{', '.join(partes[:-1])} e {partes[-1]}"
+    return f"{frase}. Coleta parcial." if parcial else f"{frase}."
 
 
 def fontes_publicadas(fontes: Sequence[FonteResumo]) -> list[FonteResumo]:
@@ -188,6 +252,9 @@ def criar_ambiente() -> Environment:
     ambiente.filters["avisos_fontes"] = avisos_fontes
     ambiente.filters["fontes_publicadas"] = fontes_publicadas
     ambiente.filters["titulo_ato"] = titulo_ato
+    ambiente.filters["meta_orgao"] = meta_orgao
+    ambiente.filters["meta_origem"] = meta_origem
+    ambiente.filters["resumo_edicao"] = resumo_edicao
     return ambiente
 
 

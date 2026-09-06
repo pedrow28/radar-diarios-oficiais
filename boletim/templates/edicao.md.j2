@@ -3,6 +3,10 @@
 
   Sem autoescape aqui - markdown não é HTML, e escapar `<` transformaria o
   texto do diário em ruído. O arquivo nunca é servido como página.
+
+  A meta acompanha a do e-mail: duas linhas, quem publicou e onde saiu, sem a
+  tira de middle dots. O markdown não tem hierarquia visual, então a mesma
+  informação precisa chegar pela mesma ordem.
 #}
 # {{ edicao.titulo|sem_travessao }}
 
@@ -28,13 +32,14 @@
 
 ### {{ item.titulo|sem_travessao|titulo_ato }}
 
-{{ item.orgao|sem_travessao }}{% if item.unidade %} · {{ item.unidade|sem_travessao }}{% endif %}{% if item.tipo %} · {{ item.tipo }}{% endif %}{% if item.numero %} nº {{ item.numero }}{% endif %} · {{ item.data_publicacao|data_br }}{% if item.fonte == "iofmg" %} · IOF-MG{% elif item.secao %} · DOU seção {{ item.secao }}{% endif %}{% if item.pagina %} p. {{ item.pagina }}{% endif %}
+{{ item|meta_orgao|sem_travessao }}
 
+{{ item|meta_origem }}
 
 {{ item.resumo|sem_travessao }}
 {% if item.por_que_importa %}
 
-Por que importa: {{ item.por_que_importa|sem_travessao }}
+Por que importa. {{ item.por_que_importa|sem_travessao }}
 {% endif %}
 {% if item.valor_brl %}
 
@@ -48,7 +53,7 @@ Valor: {{ item.valor_brl|brl }}
 
 ## Fale com a Thauma
 
-Quer transformar essas oportunidades em captação? Pedro William responde no WhatsApp: [{{ cta_whatsapp_legivel }}]({{ cta_url }})
+Pedro William responde no WhatsApp o que estes atos mudam para a sua instituição: [{{ cta_whatsapp_legivel }}]({{ cta_url }})
 
 ---
 
@@ -57,4 +62,4 @@ Quer transformar essas oportunidades em captação? Pedro William responde no Wh
 Fontes: {% for fonte in publicadas %}{{ fonte.nome|nome_fonte }}{% if fonte.edicao %} (edição {{ fonte.edicao }}{% if fonte.paginas %}, {{ fonte.paginas }}{% endif %}){% elif fonte.paginas %} ({{ fonte.paginas }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.
 
 {% endif %}
-Thauma · inteligência e narrativa em saúde
+Thauma. Inteligência e narrativa em saúde.

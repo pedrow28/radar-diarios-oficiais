@@ -19,10 +19,13 @@ from boletim.render import (
     brl,
     data_br,
     data_extenso,
+    meta_orgao,
+    meta_origem,
     render_email,
     render_index,
     render_md,
     render_web,
+    resumo_edicao,
     sem_travessao,
     telefone_legivel,
     titulo_ato,
@@ -32,6 +35,14 @@ from tests.fixtures.boletim.edicao_exemplo import edicao_exemplo
 MSO = re.compile(r"<!--\[if [^\]]*\]>.*?<!\[endif\]-->", re.DOTALL)
 EMOJI = re.compile(r"[\U0001F300-\U0001FAFF]")
 WHATSAPP = "wa.me/5531984483183"
+
+_EDICAO_INDICE = {
+    "data": date(2026, 9, 3),
+    "titulo": "Boletim de 03/09",
+    "url": "edicoes/2026-09-03.html",
+    "contagens": {"A": 2, "B": 1, "C": 1, "D": 2},
+    "parcial": True,
+}
 
 
 @pytest.fixture
@@ -137,6 +148,50 @@ def test_titulo_ato_nao_preserva_palavra_comum_curta_so_por_ser_maiuscula(bruto)
     assert titulo_ato(bruto) == bruto.capitalize()
 
 
+def test_meta_orgao_junta_orgao_e_unidade_sem_middle_dot(edicao):
+    # Antes a meta era uma tira de "A · B · C · D". Agora a primeira linha diz
+    # só quem publicou, que é o que o gestor reconhece.
+    federal = edicao.secoes["B"][0]
+    assert meta_orgao(federal) == (
+        "Ministério da Saúde, Secretaria de Atenção Primária à Saúde"
+    )
+
+
+def test_meta_orgao_omite_a_unidade_quando_ela_falta(edicao):
+    sem_unidade = replace(edicao.secoes["B"][0], unidade=None)
+    assert meta_orgao(sem_unidade) == "Ministério da Saúde"
+
+
+def test_meta_origem_cita_diario_edicao_secao_pagina_e_data(edicao):
+    federal = edicao.secoes["B"][0]
+    assert meta_origem(federal) == "DOU nº 169, seção 1, página 44, de 03/09/2026"
+
+
+def test_meta_origem_no_estadual_nao_repete_a_data_como_numero_de_edicao(edicao):
+    # No IOF-MG o campo `edicao` é a própria data ("2026-09-03"); citá-la como
+    # "nº 2026-09-03" seria ruído, e a data já fecha a linha.
+    estadual = edicao.secoes["A"][0]
+    assert estadual.fonte == "iofmg"
+    assert meta_origem(estadual) == (
+        "Diário Oficial de Minas Gerais, página 12, de 03/09/2026"
+    )
+
+
+@pytest.mark.parametrize(
+    "contagens, parcial, esperado",
+    [
+        ({"A": 2, "B": 1, "C": 1}, False, "2 atos de captação, 1 mudança de regra e 1 edital."),
+        # O índice antigo imprimia "1 editais": o plural agora acompanha o número.
+        ({"A": 1, "B": 0, "C": 1}, False, "1 ato de captação e 1 edital."),
+        ({"A": 0, "B": 0, "C": 3}, False, "3 editais."),
+        ({"A": 0, "B": 0, "C": 0}, False, "Sem publicações relevantes."),
+        ({"A": 2, "B": 0, "C": 0}, True, "2 atos de captação. Coleta parcial."),
+    ],
+)
+def test_resumo_edicao_conta_em_frase_com_plural_correto(contagens, parcial, esperado):
+    assert resumo_edicao(contagens, parcial) == esperado
+
+
 # ── entregabilidade ─────────────────────────────────────────────────────
 def test_head_declara_viewport_e_esquema_de_cor(html):
     assert 'name="viewport"' in html
@@ -182,18 +237,7 @@ def test_rodape_repete_o_whatsapp_em_link_e_por_extenso(html):
 
 
 def test_indice_nao_tem_botao(cfg):
-    indice = render_index(
-        [
-            {
-                "data": date(2026, 9, 3),
-                "titulo": "Boletim de 03/09",
-                "url": "edicoes/2026-09-03.html",
-                "contagens": {"A": 2, "B": 1, "C": 1, "D": 2},
-                "parcial": True,
-            }
-        ],
-        cfg,
-    )
+    indice = render_index([_EDICAO_INDICE], cfg)
     assert 'bgcolor="#0060e0"' not in indice
     assert "#0060e0" in indice  # o link continua sendo a luz
 
@@ -205,6 +249,55 @@ def test_nada_de_ambar_ciano_gradiente_travessao_ou_emoji(html):
     assert "linear-gradient" not in html
     assert "—" not in html and "–" not in html
     assert EMOJI.search(html) is None
+
+
+def test_sem_middle_dot_seta_ou_raio_generico(html, cfg, edicao):
+    """Os três tells que o design pass tirou da peça, nas três saídas.
+
+    O middle dot e a seta são assinatura de página gerada; o raio ficou em 0
+    porque a folha é quadrada e um botão arredondado dentro dela seria o único
+    canto redondo da peça.
+    """
+    indice = render_index([_EDICAO_INDICE], cfg)
+    for saida in (html, render_web(edicao, cfg), render_md(edicao, cfg), indice):
+        assert " · " not in saida
+        assert "→" not in saida
+        assert "border-radius" not in saida
+
+
+def test_no_maximo_quatro_rotulos_em_caixa_alta(html):
+    """Um rótulo por seção real (A, B, C, D) e nenhum decorativo.
+
+    O DESIGN.md autoriza o rótulo caixa alta; os dois skills o tratam como
+    tell quando ele abre toda seção. O teto de 4 é o acordo: a estrutura fala
+    por tipo, espaço e filete, e o rótulo só nomeia divisão de verdade.
+    """
+    assert html.count("text-transform:uppercase") <= 4
+
+
+def test_a_edicao_inteira_cabe_em_uma_folha_branca(html):
+    """Uma superfície, não uma pilha de cartões iguais.
+
+    A hierarquia vem do tipo e do respiro, como manda o DESIGN.md; o cartão
+    repetido era o que fazia a peça parecer um digest de SaaS.
+    """
+    assert html.count("background-color:#FFFFFF") == 1
+
+
+def test_o_valor_sai_em_georgia_navy_alinhado_a_direita(html):
+    """A coluna do dinheiro: a única coisa alinhada à direita na peça."""
+    celulas = re.findall(r"<td[^>]*>R\$ [\d.,]+</td>", html)
+    assert len(celulas) == 2
+    for celula in celulas:
+        assert "text-align:right" in celula
+        assert "Georgia" in celula
+        assert "color:#00051f" in celula
+        # O valor não é a luz: a luz é o botão.
+        assert "#0060e0" not in celula
+
+
+def test_por_que_importa_nao_e_mais_um_rotulo_em_caixa_alta(html):
+    assert "Por que importa." in html
 
 
 def test_nenhuma_webfont(html):
@@ -297,5 +390,17 @@ def test_indice_lista_as_edicoes_da_mais_recente_para_a_mais_antiga(cfg):
     ]
     html = render_index(edicoes, cfg)
     assert html.index("4 de setembro de 2026") < html.index("3 de setembro de 2026")
-    assert "coleta parcial" in html
+    assert "Coleta parcial." in html
     assert 'href="edicoes/2026-09-03.html"' in html
+
+
+def test_indice_conta_as_edicoes_em_frase_e_nao_em_tira_de_pontos(cfg):
+    indice = render_index([_EDICAO_INDICE], cfg)
+    assert "2 atos de captação, 1 mudança de regra e 1 edital. Coleta parcial." in indice
+
+
+def test_indice_usa_a_mesma_folha_e_a_mesma_serifa_do_email(cfg):
+    indice = render_index([_EDICAO_INDICE], cfg)
+    assert indice.count("background-color:#FFFFFF") == 1
+    assert "Georgia, 'Times New Roman', serif" in indice
+    assert "#dde4ee" in indice
