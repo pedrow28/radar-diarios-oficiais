@@ -141,6 +141,9 @@ jobs:
         id: coleta
         if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
         env:
+          # Só usados quando `boletim.fontes` inclui `inlabs`, que não é o
+          # padrão. Sem os segredos cadastrados eles chegam vazios, e ninguém
+          # os lê: a `FonteINLABS` só é instanciada se `inlabs` for pedida.
           INLABS_EMAIL: ${{ secrets.INLABS_EMAIL }}
           INLABS_SENHA: ${{ secrets.INLABS_SENHA }}
           DATA: ${{ steps.data.outputs.data }}
@@ -182,7 +185,7 @@ jobs:
           fi
 
       # O normalizado é o insumo do dia: com ele dá para regerar a edição sem
-      # bater de novo no INLABS e no IOF-MG.
+      # bater de novo no portal do DOU e no IOF-MG.
       - name: Guarda o normalizado
         if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
         uses: actions/upload-artifact@v4
