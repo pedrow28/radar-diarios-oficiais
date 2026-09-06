@@ -95,10 +95,46 @@ def test_telefone_legivel_formata_o_numero_br():
             "Portaria GM/MS nº 500, de 10 de janeiro de 2026",
             "Portaria GM/MS nº 500",
         ),
+        (
+            "PORTARIA CONJUNTA SAES/SGTES/MS Nº 5, DE 3 DE SETEMBRO DE 2026",
+            "Portaria conjunta SAES/SGTES/MS nº 5",
+        ),
+        (
+            # "ATO" não é sigla de nenhum órgão: é a palavra comum "ato".
+            "ATO DO PRESIDENTE",
+            "Ato do presidente",
+        ),
+        (
+            # "AVISO" e "PAUTA" também não estão na lista fechada de siglas.
+            "AVISO DE PAUTA",
+            "Aviso de pauta",
+        ),
+        (
+            "PORTARIA FHEMIG Nº 218",
+            "Portaria FHEMIG nº 218",
+        ),
+        (
+            "Portaria nº 10, de 1º de setembro de 2026",
+            "Portaria nº 10",
+        ),
+        (
+            "RESOLUÇÃO SES/MG Nº 9.101",
+            "Resolução SES/MG nº 9.101",
+        ),
     ],
 )
 def test_titulo_ato_sentenca_com_sigla_preservada_e_data_removida(bruto, esperado):
     assert titulo_ato(bruto) == esperado
+
+
+@pytest.mark.parametrize(
+    "bruto",
+    ["AVISO", "PAUTA", "NOTA", "CARGO", "AUTOS"],
+)
+def test_titulo_ato_nao_preserva_palavra_comum_curta_so_por_ser_maiuscula(bruto):
+    """Achado da rodada 2: o limite de tamanho não bastava para distinguir
+    sigla de palavra comum curta - só a lista fechada `SIGLAS` decide."""
+    assert titulo_ato(bruto) == bruto.capitalize()
 
 
 # ── entregabilidade ─────────────────────────────────────────────────────

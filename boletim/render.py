@@ -112,31 +112,40 @@ _DATA_FINAL = re.compile(
     re.IGNORECASE,
 )
 _NUMERO_ORDINAL = re.compile(r"^N[º°O]\.?$", re.IGNORECASE)
-_SEPARADORES_SIGLA = re.compile(r"[/\-.\d]+")
-_MAX_LETRAS_SIGLA = 5
-# Conectores comuns não viram sigla mesmo vindo maiúsculos do diário: todo
-# título bruto é maiúsculo inteiro, sigla ou não, e "DE" sozinho não carrega
-# sentido de órgão ou tipo de ato.
-_CONECTORES = frozenset(
-    "de da do das dos e ou a o as os em no na nos nas com sem para por que".split()
+_PONTUACAO_FINAL = ",;:."
+_GRUPO_SIGLA = re.compile(r"^[A-Z0-9]+$")
+_NAO_LETRA = re.compile(r"[/\-.0-9]")
+
+# Lista fechada de siglas de órgão/instrumento que sobrevivem ao sentence
+# case. Nenhuma heurística de tamanho: uma palavra comum e curta em
+# maiúscula ("ATO", "AVISO", "PAUTA", "NOTA", "CARGO", "AUTOS" - achado da
+# rodada 2) não vira sigla só por ter poucas letras. Ordenada para facilitar
+# conferir se uma sigla nova já está aqui.
+SIGLAS = frozenset(
+    "AGU ANS ANVISA CC CES CGU CIB CIT CMS CNES CNPJ CNS CONASEMS CONASS CPF "
+    "DOU FHEMIG FNS GAB GM INSS IOF LDO LOA MAC MEC MG MS PNAB PPA PR PRE "
+    "RDC RE SAES SAMU SAPS SCTIE SE SECEX SES SGTES SIGTAP SUS SVSA TCU UBS "
+    "UPA UTI VISA".split()
 )
 
 
 def _eh_sigla(palavra: str) -> bool:
     """Uma sigla sobrevive ao sentence case; uma palavra comum, não.
 
-    "RDC", "MG" e cada metade de "GM/MS" ou "CIB-SUS/MG" são o órgão ou o tipo
-    de ato abreviado - perderiam sentido em minúscula. Uma palavra comum de
-    seis letras ou mais ("EDITAL", "PORTARIA", "DELIBERAÇÃO") não vira sigla
-    só por estar em maiúscula no título bruto: título de diário é maiúsculo
-    inteiro, sigla ou não, e o que distingue as duas coisas é o tamanho.
+    Duas formas de ser sigla: (a) o token junta grupos com "/" ou "-" que são
+    só letras maiúsculas e dígitos - "GM/MS", "CIB-SUS/MG",
+    "SAES/SGTES/MS" - o token inteiro é o órgão abreviado, mesmo que uma
+    parte isolada ("SUS") também esteja em `SIGLAS`; ou (b) o token, sem
+    "/", "-", "." e dígitos, está na lista fechada `SIGLAS`. Fora isso, é
+    palavra comum e desce para minúscula - não importa o tamanho.
     """
-    if palavra.lower() in _CONECTORES:
+    nucleo = palavra.rstrip(_PONTUACAO_FINAL)
+    if not nucleo:
         return False
-    partes = [p for p in _SEPARADORES_SIGLA.split(palavra) if p]
-    return bool(partes) and all(
-        1 <= len(p) <= _MAX_LETRAS_SIGLA and p.isupper() for p in partes
-    )
+    if "/" in nucleo or "-" in nucleo:
+        grupos = re.split(r"[/\-]", nucleo)
+        return all(grupo and _GRUPO_SIGLA.match(grupo) for grupo in grupos)
+    return _NAO_LETRA.sub("", nucleo) in SIGLAS
 
 
 def titulo_ato(titulo: str) -> str:
