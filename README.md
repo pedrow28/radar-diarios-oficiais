@@ -69,6 +69,47 @@ dela. Por isso quem consome o `radar` deve olhar o disco antes de tratar o 2
 como dia perdido — é o que a rotina em nuvem faz para publicar meia edição em
 vez de nenhuma (ver "Rotina em nuvem").
 
+## Fonte DOU (portal, padrão)
+
+A fonte `dou` raspa o portal público `in.gov.br` e não exige conta nenhuma.
+Quais órgãos ela acompanha é decisão do bloco `fontes.dou` do
+`config/config.yaml`:
+
+```yaml
+fontes:
+  dou:
+    orgaos:
+      - "Ministério da Saúde"
+      - "Presidência da República"
+      - "Ministério da Fazenda"
+      - "Ministério do Planejamento e Orçamento"
+    # 2º nível exigido para capturar atos publicados sob "Presidência da República".
+    subunidades_extra:
+      - "Casa Civil"
+```
+
+É **uma busca por órgão** (`orgPrin`), com os resultados juntados e sem
+repetição — o mesmo ato listado sob dois órgãos entra uma vez só. O bruto de
+cada busca vai para `data/raw/<data>/dou/busca-<órgão>-p<N>.html`.
+
+`subunidades_extra` é um filtro de **segundo nível**: a "Presidência da
+República" assina boa parte do diário, então só entram as publicações cuja
+segunda posição da hierarquia esteja na lista (hoje, "Casa Civil"). Para os
+demais órgãos o filtro não recorta nada. A ANVISA não precisa estar em
+`orgaos`: no portal ela aparece dentro da hierarquia do Ministério da Saúde e
+vem junto. A regra é a mesma do INLABS, em `radar/fontes/escopo.py`.
+
+**Compatibilidade.** A chave antiga `orgao: "..."` (singular, um órgão só)
+continua aceita e vira `orgaos: ["..."]`. Se o YAML trouxer as duas, `orgaos`
+manda e o log avisa que `orgao` está obsoleto.
+
+Sobre o status: um órgão sem publicação no dia **não** é aviso — é rotina a
+Fazenda não publicar nada de saúde. Todos sem publicação sai `vazio` (exit 0).
+Um órgão fora do ar com os outros de pé sai `parcial`, com o nome de quem caiu
+no aviso; todos fora do ar sai `erro`. Publicações encontradas e nenhuma no
+escopo também sai `parcial`: pode ser a hierarquia renomeada na fonte, e
+`vazio` calaria o filtro quebrado para sempre.
+
 ## Fonte INLABS (opcional)
 
 **O padrão é o portal.** `boletim.fontes` no `config/config.yaml` traz `dou` e
@@ -399,7 +440,7 @@ requisição de rede.
 
 ## Configuração
 
-`config/config.yaml` controla órgão, seção e tipos de publicação. Segredos só
+`config/config.yaml` controla órgãos, seção e tipos de publicação. Segredos só
 por variável de ambiente — nada de e-mail ou chave no código.
 
 ## Documentos
