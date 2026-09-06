@@ -65,18 +65,27 @@ distingue os quatro desfechos:
 
 Com `--fonte todas`, o exit code é o pior status entre as fontes.
 
-## Fonte INLABS
+## Fonte INLABS (opcional)
 
-O INLABS é o serviço oficial de distribuição do DOU da Imprensa Nacional: um
-zip de XMLs por seção (`DO1`, `DO2`, `DO3` e as edições extras `DO1E`…), com
-o inteiro teor de cada matéria. Exige conta gratuita em
+**O padrão é o portal.** `boletim.fontes` no `config/config.yaml` traz `dou` e
+`iofmg`: a fonte `dou` raspa o portal público `in.gov.br` e não exige conta
+nenhuma. Foi ela que sustentou os cinco dias da semana de validação real, a
+partir de IP residencial. De IP de datacenter o portal pode não responder —
+numa VPS deu HTTP 000 —, e se os runners do GitHub estiverem na mesma situação
+a troca para o INLABS é uma linha de YAML. Antes de trocar, rode a **sonda do
+portal** (seção "Rotina em nuvem"): ela responde de graça se o runner passa.
+
+O INLABS é o caminho alternativo: o serviço oficial de distribuição do DOU da
+Imprensa Nacional, um zip de XMLs por seção (`DO1`, `DO2`, `DO3` e as edições
+extras `DO1E`…), com o inteiro teor de cada matéria. Exige conta gratuita em
 <https://inlabs.in.gov.br/>.
 
-**É a fonte recomendada em nuvem.** A fonte `dou` raspa o portal `in.gov.br`,
-que bloqueia IP de datacenter — de um GitHub Actions ou de uma VPS ela falha,
-enquanto o INLABS atende normalmente.
+**Ressalva honesta:** a fonte `inlabs` nunca rodou contra o serviço real. O que
+existe de teste é contra fixture sintética, montada a partir da documentação do
+formato. Ligá-la é uma troca a validar, não um caminho já percorrido.
 
-As credenciais vêm do ambiente, nunca do YAML:
+Para trocar, edite `boletim.fontes` (`dou` → `inlabs`) e cadastre os dois
+segredos. As credenciais vêm do ambiente, nunca do YAML:
 
 ```bash
 export INLABS_EMAIL="voce@exemplo.org"
@@ -237,11 +246,14 @@ publica no GitHub Pages. Setup único no repositório:
 
 1. **Settings → Pages → Source: "GitHub Actions"**. Sem isso o `deploy-pages`
    falha com "Pages not enabled".
-2. **Settings → Secrets and variables → Actions**, três segredos:
-   - `INLABS_EMAIL` e `INLABS_SENHA` — conta gratuita em
-     <https://inlabs.in.gov.br/>;
+2. **Settings → Secrets and variables → Actions**, um segredo obrigatório:
    - `CLAUDE_CODE_OAUTH_TOKEN` — saída de `claude setup-token`.
-3. Nada mais: o `GITHUB_TOKEN` do próprio Actions cobre o commit, o deploy e a
+3. Só se `boletim.fontes` incluir `inlabs`: `INLABS_EMAIL` e `INLABS_SENHA`,
+   de uma conta gratuita em <https://inlabs.in.gov.br/>. Com a lista padrão
+   (`dou`, `iofmg`) eles não são usados — os dois nomes continuam no `env` do
+   passo de coleta, chegam vazios e nada os lê, porque a `FonteINLABS` só é
+   instanciada quando `inlabs` está entre as fontes pedidas.
+4. Nada mais: o `GITHUB_TOKEN` do próprio Actions cobre o commit, o deploy e a
    issue de falha.
 
 **A rotina vem desligada.** O repositório traz o arquivo `PARAR` na raiz: o job

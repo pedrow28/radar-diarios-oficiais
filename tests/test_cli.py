@@ -327,6 +327,28 @@ def test_fonte_vazia_devolve_exit_dois(ambiente):
                  "--fonte", ","]) == 2
 
 
+def test_fonte_fora_da_lista_nem_chega_a_ser_instanciada(ambiente, monkeypatch):
+    """`_fontes` só constrói o que foi pedido, e isso é contrato, não detalhe.
+
+    O workflow em nuvem deixa `INLABS_EMAIL`/`INLABS_SENHA` no `env` do passo
+    de coleta mesmo quando `boletim.fontes` não inclui `inlabs`: sem segredo
+    cadastrado eles chegam vazios. Construir a `FonteINLABS` de qualquer jeito
+    - por ansiedade de montar o dicionário inteiro antes de escolher - faria o
+    dia inteiro quebrar por falta de uma credencial que ninguém ia usar.
+    """
+    from radar.cli import _fontes
+    from radar.core.config import Config
+
+    def explodir(self, *args, **kwargs):
+        raise AssertionError("FonteINLABS instanciada sem ter sido pedida")
+
+    monkeypatch.setattr("radar.fontes.inlabs.coletor.FonteINLABS.__init__", explodir)
+
+    cfg, _ = ambiente
+    escolhidas = _fontes("dou,iofmg", Config.carregar(cfg), object(), object())
+    assert [f.nome for f in escolhidas] == ["dou", "iofmg"]
+
+
 def test_fonte_repetida_coleta_uma_vez_so(ambiente, capsys):
     cfg, _ = ambiente
     assert main(["coletar", "--config", str(cfg), "--data", "2026-09-04",

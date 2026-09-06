@@ -3,12 +3,12 @@
 Um `.yml` de Actions só é executado em produção: não há como rodá-lo antes de
 subir, e um erro ali aparece como boletim que não saiu - ou, pior, como segredo
 no log público. Estes testes cobrem o que dá para afirmar sem um runner: a
-forma do arquivo, os dois horários, os três segredos, as permissões mínimas e
+forma do arquivo, os dois horários, os segredos, as permissões mínimas e
 as duas regras de higiene (nada de `echo` com segredo, nada de `::set-output`).
 
 Cobrem também o `testes.yml`, que é o único runner que roda a suíte antes do
-merge, e o `PARAR` versionado, que mantém a rotina desligada até a primeira
-execução real contra o `claude`.
+merge, o `sonda-dou.yml`, que mede de graça se o portal do DOU responde a um
+runner do GitHub, e o `PARAR`, que desliga a rotina quando está presente.
 
 O que eles não cobrem, e nenhum teste local cobriria, é o comportamento do
 runner. Isso fica com o `workflow_dispatch` e com a issue automática de falha.
@@ -30,7 +30,10 @@ FREIO = RAIZ / "PARAR"
 
 # 09:30 e 12:00 no horário de Brasília, de segunda a sábado (o cron do GitHub é UTC).
 CRONS = {"30 12 * * 1-6", "0 15 * * 1-6"}
-SEGREDOS = {"INLABS_EMAIL", "INLABS_SENHA", "CLAUDE_CODE_OAUTH_TOKEN"}
+# O único segredo sem o qual a rotina não roda: o modelo é chamado em toda
+# execução. Os do INLABS são opcionais desde que o portal virou a fonte padrão.
+SEGREDO_OBRIGATORIO = "CLAUDE_CODE_OAUTH_TOKEN"
+SEGREDOS_OPCIONAIS = {"INLABS_EMAIL", "INLABS_SENHA"}
 PASSO_DO_FREIO = "freio"
 
 
@@ -94,9 +97,19 @@ def test_execucoes_nao_se_atropelam(workflow: dict[str, Any]) -> None:
     assert workflow["concurrency"] == {"group": "boletim", "cancel-in-progress": False}
 
 
-def test_os_tres_segredos_e_apenas_eles(texto: str) -> None:
+def test_o_unico_segredo_obrigatorio_e_o_do_modelo(texto: str) -> None:
+    """Só o token do Claude Code é indispensável; os do INLABS são opcionais.
+
+    A fonte padrão é o portal (`dou`), que não pede credencial. Os dois
+    segredos do INLABS podem continuar no `env` do passo de coleta: um
+    `${{ secrets.X }}` não configurado vira string vazia, e a `FonteINLABS` só
+    é instanciada quando `inlabs` está na lista de fontes — a instância em
+    `radar.cli._fontes` é preguiçosa. Nenhum outro segredo pode aparecer: um
+    nome novo no YAML sem o segredo cadastrado é falha silenciosa.
+    """
     referenciados = set(re.findall(r"secrets\.([A-Z_]+)", texto))
-    assert referenciados == SEGREDOS
+    assert SEGREDO_OBRIGATORIO in referenciados
+    assert referenciados <= {SEGREDO_OBRIGATORIO, *SEGREDOS_OPCIONAIS}
 
 
 def test_nenhum_passo_imprime_segredo(workflow: dict[str, Any]) -> None:

@@ -48,8 +48,9 @@ boletim:
   tentativas_llm: 2
   timeout_llm_s: 180
   site_url: "https://pedrow28.github.io/radar-diarios-oficiais"
+  # Troque `dou` por `inlabs` se o portal bloquear os runners e você tiver conta INLABS.
   fontes:
-    - inlabs
+    - dou
     - iofmg
   dir_saida: ./boletim/saida
   dir_site: ./site

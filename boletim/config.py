@@ -35,7 +35,9 @@ class ConfigBoletim:
     timeout_llm_s: int = 180
     site_url: str = "https://pedrow28.github.io/radar-diarios-oficiais"
     cta: ConfigCTA = field(default_factory=ConfigCTA)
-    fontes: list[str] = field(default_factory=lambda: ["inlabs", "iofmg"])
+    # O DOU vem do portal público (`dou`), que não exige conta. A fonte
+    # `inlabs` continua disponível para quem tiver credencial.
+    fontes: list[str] = field(default_factory=lambda: ["dou", "iofmg"])
     dir_saida: Path = Path("./boletim/saida")
     dir_site: Path = Path("./site")
     dir_dados: Path = Path("./data")

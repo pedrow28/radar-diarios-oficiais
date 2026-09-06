@@ -45,7 +45,7 @@ def test_defaults_quando_bloco_boletim_nao_existe(tmp_path: Path):
     assert cfg.tentativas_llm == 2
     assert cfg.timeout_llm_s == 180
     assert cfg.site_url == "https://pedrow28.github.io/radar-diarios-oficiais"
-    assert cfg.fontes == ["inlabs", "iofmg"]
+    assert cfg.fontes == ["dou", "iofmg"]
     assert cfg.dir_saida == Path("./boletim/saida")
     assert cfg.dir_site == Path("./site")
     assert cfg.dir_dados == Path("./data")
@@ -94,7 +94,7 @@ boletim:
     assert cfg.tentativas_llm == 2
     assert cfg.timeout_llm_s == 180
     assert cfg.site_url == "https://pedrow28.github.io/radar-diarios-oficiais"
-    assert cfg.fontes == ["inlabs", "iofmg"]
+    assert cfg.fontes == ["dou", "iofmg"]
     assert cfg.dir_saida == Path("./boletim/saida")
     assert cfg.dir_site == Path("./site")
     # Default do ConfigCTA preservado para os campos não sobrescritos.
