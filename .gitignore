@@ -5,6 +5,9 @@ google_token.json
 
 # Dados coletados (reproduzíveis via `radar coletar`)
 data/
+
+# Saída do boletim (reproduzível via `boletim gerar`)
+boletim/saida/
 logs/
 *.db
 *.db-wal
