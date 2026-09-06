@@ -227,3 +227,56 @@ def test_sem_publicacoes_nao_chama_o_llm(cfg):
     llm = LLMFalso({})
     assert classificar([], llm, cfg) == ([], [])
     assert llm.chamadas == []
+
+
+# ── orçamento global de chamadas ────────────────────────────────────────
+_INVALIDA = {"itens": [{"id": "idqualquer", "categoria": "Z"}]}
+
+
+def test_resposta_sempre_invalida_nao_multiplica_as_chamadas(cfg):
+    """Schema quebrado no lote inteiro não pode virar fan-out ilimitado.
+
+    Antes do orçamento, 24 publicações viravam 92 chamadas: só
+    `LLMIndisponivel` desistia, e a bisseção recursiva multiplicava as
+    tentativas de uma resposta que nunca ia validar. `--max-budget-usd` é por
+    chamada, então quem paga a conta é a cota da assinatura.
+    """
+    pubs = [_pub(n) for n in range(1, 25)]
+    llm = LLMFalso({"lote-0": _INVALIDA, "lote-1": _INVALIDA})
+
+    itens, avisos = classificar(pubs, llm, cfg)
+
+    assert len(llm.chamadas) <= 3 * 2 + 2
+    assert len(itens) == 24
+    assert all(item.categoria == "D" and item.fallback for item in itens)
+    assert "24 itens sem classificação por LLM (fallback D)" in avisos
+
+
+def test_orcamento_esgotado_desiste_com_aviso(cfg):
+    """Com muitas tentativas por lote, quem encerra a rodada é o teto global."""
+    cfg.tentativas_llm = 5
+    pubs = [_pub(n) for n in range(1, 25)]
+    llm = LLMFalso({"lote-0": _INVALIDA, "lote-1": _INVALIDA})
+
+    itens, avisos = classificar(pubs, llm, cfg)
+
+    assert len(llm.chamadas) == 3 * 2 + 2
+    assert any("orçamento de chamadas esgotado" in aviso for aviso in avisos)
+    assert all(item.fallback for item in itens)
+
+
+def test_item_solo_reprovado_seguidamente_encerra_a_rodada(cfg):
+    """`tentativas_llm` rejeições seguidas num item só é formato quebrado.
+
+    Um item sozinho é o menor pedido possível: se nem ele volta no schema, o
+    resto do dia não vai voltar, e insistir só gasta cota.
+    """
+    cfg.lote = 1
+    pubs = [_pub(1), _pub(2)]
+    llm = LLMFalso({"lote-0": _INVALIDA, "lote-1": _INVALIDA})
+
+    itens, avisos = classificar(pubs, llm, cfg)
+
+    assert len(llm.chamadas) == cfg.tentativas_llm
+    assert all(item.fallback for item in itens)
+    assert any("fora do schema" in aviso for aviso in avisos)

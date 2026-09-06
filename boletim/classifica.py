@@ -8,6 +8,7 @@ ela aparece como "outro ato", marcada, em vez de desaparecer em silêncio.
 
 from __future__ import annotations
 
+import math
 from typing import Any, Sequence
 
 from boletim.config import ConfigBoletim
@@ -32,7 +33,7 @@ def classificar(
     logger = configurar_log()
     respostas: dict[str, dict[str, Any]] = {}
     avisos: list[str] = []
-    estado = _Estado()
+    estado = _Estado(orcamento_chamadas=orcamento_de_chamadas(len(mantidas), cfg))
 
     for indice in range(0, len(mantidas), cfg.lote):
         lote = list(mantidas[indice : indice + cfg.lote])
@@ -56,16 +57,40 @@ def classificar(
     return itens, avisos
 
 
+def orcamento_de_chamadas(mantidas: int, cfg: ConfigBoletim) -> int:
+    """Teto global de chamadas ao LLM para a execução inteira.
+
+    O `--max-budget-usd` do CLI é por chamada, não por dia. Sem um teto global,
+    uma resposta que nunca valida no schema - exatamente o que uma mudança de
+    versão do CLI produziria - faz a bisseção recursiva multiplicar as
+    tentativas: 24 publicações viraram 92 chamadas na medição, e um dia real de
+    120 mantidas passaria de 400. Isso queima a cota da assinatura, estoura o
+    tempo do job e enche o `itens.json` de avisos.
+
+    Três chamadas por lote cobrem com folga o caminho normal (tentativas mais
+    bisseção), o `+2` paga as retentativas solo do fim, e o piso de 4 vale para
+    o dia de uma publicação só.
+    """
+    lotes = math.ceil(mantidas / cfg.lote) if mantidas else 0
+    return max(4, 3 * lotes + 2)
+
+
 class _Estado:
     """O que o LLM já entregou nesta execução, e se ele ainda está de pé.
 
     Importa para o exit code: cair antes do primeiro lote é falha total e o CLI
     sai 2; cair depois é edição parcial, que ainda vale a pena publicar.
+
+    `orcamento_chamadas` e `rejeicoes_seguidas` são os dois freios do fan-out:
+    o primeiro é o teto do dia, o segundo desiste quando nem um item sozinho
+    volta no schema - aí não é azar, é o formato da resposta que mudou.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, orcamento_chamadas: int) -> None:
         self.algum_sucesso = False
         self.desistiu = False
+        self.orcamento_chamadas = orcamento_chamadas
+        self.rejeicoes_seguidas = 0
 
 
 def _resolver(
@@ -89,6 +114,19 @@ def _resolver(
     esperados = {p.id for p in pubs}
 
     for tentativa in range(1, cfg.tentativas_llm + 1):
+        if estado.orcamento_chamadas <= 0:
+            estado.desistiu = True
+            avisos.append(
+                f"{rotulo}: orçamento de chamadas esgotado, "
+                "o restante do dia fica sem classificação"
+            )
+            logger.warning(
+                "%s: orçamento de chamadas esgotado depois de %d respostas",
+                rotulo,
+                len(respostas),
+            )
+            return
+        estado.orcamento_chamadas -= 1
         try:
             bruto = llm.completar_json(
                 SISTEMA_CLASSIFICACAO,
@@ -113,8 +151,27 @@ def _resolver(
                 f"{rotulo}: resposta inválida na tentativa {tentativa}: {erros[0]}"
             )
             logger.warning("%s: resposta inválida (%d erros)", rotulo, len(erros))
+            if len(pubs) == 1:
+                # Um item sozinho é o menor pedido possível. Se nem ele volta no
+                # schema, insistir no resto do dia só gasta cota: o que mudou
+                # foi o formato da resposta, não o tamanho do lote.
+                estado.rejeicoes_seguidas += 1
+                if estado.rejeicoes_seguidas >= cfg.tentativas_llm:
+                    estado.desistiu = True
+                    avisos.append(
+                        f"{rotulo}: {estado.rejeicoes_seguidas} respostas seguidas "
+                        "fora do schema em item único, o restante do dia fica "
+                        "sem classificação"
+                    )
+                    logger.warning(
+                        "%s: %d respostas seguidas fora do schema em item único",
+                        rotulo,
+                        estado.rejeicoes_seguidas,
+                    )
+                    return
             continue
 
+        estado.rejeicoes_seguidas = 0
         for item in bruto["itens"]:
             if item["id"] in esperados:
                 respostas[item["id"]] = item
