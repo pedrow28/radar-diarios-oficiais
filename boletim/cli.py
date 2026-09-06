@@ -114,10 +114,19 @@ def _gerar(args) -> int:
     data = parse_data(args.data) if args.data else hoje()
     carga = carregar(cfg.dir_dados, data, cfg.fontes)
 
+    if carga.todas_ausentes:
+        # Nada a classificar não é dia vazio: é coleta que não aconteceu. Sair 0
+        # aqui deixaria a rotina verde e muda todo dia - e ninguém olha a aba
+        # Actions quando ela está verde.
+        raise ValueError(f"nenhuma fonte coletada em {data.isoformat()}")
+
     if carga.todas_vazias:
-        # Silêncio não é falha: feriado e domingo saem 0, e sem arquivo nenhum.
+        # Silêncio não é falha: feriado e domingo saem 0. Mas se alguma fonte
+        # esperada não chegou, o dia é vazio E degradado: o stdout continua
+        # dizendo `vazio` (é o que o workflow lê para não publicar) e o exit 1
+        # marca a execução como parcial.
         print("boletim: vazio")
-        return 0
+        return 1 if carga.parcial else 0
 
     llm = _llm(args, cfg)
     triagem = triar(carga.publicacoes, cfg)

@@ -27,12 +27,31 @@ class Carga:
     publicacoes: tuple[Publicacao, ...]
 
     @property
+    def todas_ausentes(self) -> bool:
+        """Nenhuma das fontes esperadas chegou a ser coletada.
+
+        É erro, não dia vazio. Se `boletim.fontes` e o `--fonte` da coleta
+        divergirem - ou se a coleta inteira falhar antes de gravar -, não há o
+        que classificar, e um boletim verde nesse caso é o mesmo defeito que a
+        `FonteINLABS` evita de propósito: filtro quebrado passando por domingo,
+        todo dia, para sempre.
+        """
+        return bool(self.fontes) and all(f.status == AUSENTE for f in self.fontes)
+
+    @property
     def todas_vazias(self) -> bool:
         """Dia sem nada a classificar: feriado, domingo, edição sem saúde.
 
         Distinto de `parcial`: aqui o boletim sai mesmo assim, com a nota de
         que não houve publicação relevante — silêncio nunca é sinal de falha.
+
+        `ausente` nunca conta como `vazio`: fonte que não coletou não diz nada
+        sobre o dia. Com todas ausentes isto é `False` (e o CLI sai 2); com
+        algumas ausentes e o resto vazio o dia sai vazio, mas `parcial` marca a
+        execução como degradada em vez de verde.
         """
+        if self.todas_ausentes:
+            return False
         presentes = [f for f in self.fontes if f.status != AUSENTE]
         if presentes and all(f.status == "vazio" for f in presentes):
             return True

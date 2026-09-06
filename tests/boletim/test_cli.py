@@ -19,9 +19,15 @@ DATA = "2026-09-03"
 DATA_VAZIA = "2026-09-06"
 
 
-@pytest.fixture
-def config(tmp_path) -> Path:
+def escrever_config(tmp_path: Path, *fontes: str) -> Path:
+    """Config do dia, com a lista de fontes esperadas explícita.
+
+    É a lista que decide o exit code do dia sem publicação: fonte esperada e
+    sem arquivo vira `ausente`, e `ausente` não é `vazio`. Por isso cada teste
+    de dia vazio precisa dizer o que o dia deveria ter trazido.
+    """
     caminho = tmp_path / "config.yaml"
+    linhas = "".join(f"    - {fonte}\n" for fonte in fontes)
     caminho.write_text(
         "armazenamento:\n"
         f"  dir_dados: {FIXTURES.as_posix()}\n"
@@ -29,12 +35,15 @@ def config(tmp_path) -> Path:
         "  site_url: https://exemplo.test/radar\n"
         f"  dir_saida: {(tmp_path / 'saida').as_posix()}\n"
         f"  dir_site: {(tmp_path / 'site').as_posix()}\n"
-        "  fontes:\n"
-        "    - inlabs\n"
-        "    - iofmg\n",
+        "  fontes:\n" + linhas,
         encoding="utf-8",
     )
     return caminho
+
+
+@pytest.fixture
+def config(tmp_path) -> Path:
+    return escrever_config(tmp_path, "inlabs", "iofmg")
 
 
 def _gerar(config: Path, data: str = DATA, *extra: str) -> int:
@@ -75,10 +84,38 @@ def test_gerar_com_sem_site_nao_toca_no_site(config, tmp_path):
     assert not (tmp_path / "site").exists()
 
 
-def test_dia_sem_publicacao_sai_0_e_nao_grava_nada(config, tmp_path, capsys):
+def test_dia_sem_publicacao_sai_0_e_nao_grava_nada(tmp_path, capsys):
+    """Domingo e feriado: a fonte esperada coletou, e o dia veio vazio."""
+    config = escrever_config(tmp_path, "iofmg")
     assert _gerar(config, DATA_VAZIA) == 0
 
     assert capsys.readouterr().out.strip() == "boletim: vazio"
+    assert not (tmp_path / "saida").exists()
+    assert not (tmp_path / "site").exists()
+
+
+def test_dia_vazio_com_uma_fonte_ausente_sai_1(config, tmp_path, capsys):
+    """Sem o que publicar, mas a rodada é degradada: `vazio` no stdout, exit 1.
+
+    O workflow lê `boletim: vazio` do stdout para não publicar; o 1 é o que
+    impede a execução de terminar verde com uma fonte que nunca chegou.
+    """
+    assert _gerar(config, DATA_VAZIA) == 1
+
+    assert capsys.readouterr().out.strip() == "boletim: vazio"
+    assert not (tmp_path / "saida").exists()
+    assert not (tmp_path / "site").exists()
+
+
+def test_dia_com_todas_as_fontes_ausentes_sai_2(config, tmp_path, capsys):
+    """Nada coletado é erro, não dia vazio.
+
+    Era o desfecho mais perigoso do CLI: `ausente` contava como `vazio`, o
+    comando saía 0 e a rotina ficava verde e muda enquanto ninguém olhava.
+    """
+    assert _gerar(config, "2026-09-05") == 2
+
+    assert "erro: nenhuma fonte coletada em 2026-09-05" in capsys.readouterr().err
     assert not (tmp_path / "saida").exists()
     assert not (tmp_path / "site").exists()
 

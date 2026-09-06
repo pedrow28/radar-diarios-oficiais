@@ -58,12 +58,28 @@ def test_fonte_ausente_vira_resumo_ausente_sem_quebrar(dir_dados):
 def test_dia_sem_edicao_e_todas_vazias(dir_dados):
     carga = carregar(dir_dados, date(2026, 9, 6), ["iofmg"])
     assert carga.todas_vazias is True
+    assert carga.todas_ausentes is False
     assert carga.parcial is False
     assert carga.publicacoes == ()
 
 
-def test_dia_so_com_fonte_ausente_conta_como_vazio(dir_dados):
+def test_dia_com_todas_as_fontes_ausentes_nao_e_vazio(dir_dados):
+    """Nenhuma fonte coletada é filtro quebrado, não domingo.
+
+    `ausente` contando como `vazio` fazia o dia sair verde e silencioso: o
+    mesmo defeito que a `FonteINLABS` evita de proposito quando distingue
+    "sem arquivo" de "nada no escopo".
+    """
     carga = carregar(dir_dados, date(2026, 9, 6), ["inlabs"])
+    assert carga.todas_ausentes is True
+    assert carga.todas_vazias is False
+    assert carga.parcial is True
+
+
+def test_uma_fonte_ausente_e_o_resto_vazio_e_vazio_parcial(dir_dados):
+    """Sai `vazio` - não há o que publicar -, mas marcado como parcial."""
+    carga = carregar(dir_dados, date(2026, 9, 6), ["inlabs", "iofmg"])
+    assert carga.todas_ausentes is False
     assert carga.todas_vazias is True
     assert carga.parcial is True
 
