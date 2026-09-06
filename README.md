@@ -154,10 +154,31 @@ site/
 ```
 
 `itens.json` é o que permite `boletim renderizar`: corrigir um template não
-custa uma segunda chamada de modelo. A pasta `boletim/saida/` é ignorada pelo
-git — rodar o boletim na sua máquina não suja a árvore. Na nuvem é diferente: o
-workflow commita a pasta do dia com `git add --force`, porque lá ela é o
-registro do que foi ao ar.
+custa uma segunda chamada de modelo.
+
+**`boletim/saida/` é versionada.** Ela não está no `.gitignore`: `boletim/saida/<data>`
+é o registro auditável do julgamento que foi ao ar, e é o workflow que commita
+a pasta do dia. A contrapartida é que rodar o boletim na sua máquina suja a
+árvore. Duas formas de não commitar uma edição de teste:
+
+```bash
+boletim gerar --data 2026-09-03 --sem-site     # não mexe no site/
+rm -rf boletim/saida/2026-09-03                # e apague a pasta do dia antes de commitar
+```
+
+ou, melhor para uso repetido, um `--config` próprio apontando `boletim.dir_saida`
+e `boletim.dir_site` para fora do repositório:
+
+```yaml
+# ~/radar-local.yaml
+boletim:
+  dir_saida: /tmp/radar/saida
+  dir_site: /tmp/radar/site
+```
+
+```bash
+boletim gerar --data 2026-09-03 --config ~/radar-local.yaml
+```
 
 ### Exit codes do `boletim`
 
@@ -165,11 +186,15 @@ registro do que foi ao ar.
 |------|----------------------|-----------------------------------------------|
 | 0    | `boletim: N publicações…` | edição inteira                          |
 | 0    | `boletim: vazio`     | não houve edição nos diários (feriado, domingo) |
+| 1    | `boletim: vazio`     | idem, mas alguma fonte esperada não coletou: nada a publicar, rodada degradada |
 | 1    | `boletim: … status=parcial` | edição saiu com ressalva: uma fonte faltou, ou algum item caiu no fallback D |
 | 2    | `erro: …` (stderr)   | não saiu edição; nada deve ser publicado      |
 
 O 1 é publicável de propósito: o prazo de um edital não espera o IOF-MG voltar.
-O 2 nunca é: a rotina em nuvem derruba o job antes de tocar no site.
+O 2 nunca é: a rotina em nuvem derruba o job antes de tocar no site. Fonte
+`ausente` nunca conta como dia vazio — com **todas** as fontes ausentes o
+comando sai 2 (`erro: nenhuma fonte coletada em <data>`), porque nada a
+classificar é coleta que não aconteceu, não domingo.
 
 ### O modelo
 
@@ -219,6 +244,18 @@ publica no GitHub Pages. Setup único no repositório:
 3. Nada mais: o `GITHUB_TOKEN` do próprio Actions cobre o commit, o deploy e a
    issue de falha.
 
+**A rotina vem desligada.** O repositório traz o arquivo `PARAR` na raiz: o job
+roda, imprime o motivo e pula tudo. É de propósito — a perna do LLM ainda não
+executou nenhuma vez contra o `claude` real, e um cron diário estreando com uma
+flag recusada pelo CLI viraria uma issue vermelha por dia. Para ligar, faça a
+rodada que falta (`boletim gerar --data <data já coletada> --llm claude
+--sem-site`, com o `claude` logado), confira o `itens.json` e o `edicao.html`, e
+então apague o arquivo e commite:
+
+```bash
+git rm PARAR && git commit -m "boletim: liga a rotina diária" && git push
+```
+
 **Horários.** 09:30 e 12:00 no horário de Brasília, de segunda a sábado (no
 arquivo eles aparecem como `30 12` e `0 15`, porque o cron do GitHub é UTC). A
 execução das 12:00 é a rede de segurança de quando o diário ainda não estava
@@ -244,8 +281,15 @@ git add PARAR && git commit -m "freio: pausa o boletim" && git push
 
 **Quando falha.** O job abre uma issue intitulada `Boletim <data> falhou` com o
 link da execução, e não duplica se já houver uma aberta com o mesmo título.
-Exit 2 na coleta ou na geração derruba o job antes de qualquer publicação;
-`boletim: vazio` termina o job verde sem publicar nada.
+Exit 2 na coleta ou na geração derruba o job antes de qualquer publicação — e
+qualquer código que não seja 0, 1 ou 2 (um 127, um 137) também derruba, em vez
+de cair num `else` de sucesso silencioso. `boletim: vazio` termina o job sem
+publicar nada.
+
+**Fontes da coleta.** O `--fonte` do workflow é lido de `boletim.fontes` do
+`config/config.yaml`, não escrito à mão no YAML do Actions: as duas listas
+divergindo produziriam um dia inteiro de fonte `ausente`, que hoje é exit 2 e
+antes era um "vazio" verde.
 
 ## Integração com o Hermes
 
