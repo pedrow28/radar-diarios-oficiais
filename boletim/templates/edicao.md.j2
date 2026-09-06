@@ -27,7 +27,7 @@
 {% for categoria in ["A", "B", "C", "D"] %}
 {% if edicao.secoes[categoria] %}
 
-## {{ rotulos[categoria] }} ({{ edicao.secoes[categoria]|length }})
+## {{ rotulos[categoria] }}
 {% for item in edicao.secoes[categoria] %}
 
 ### {{ item.titulo|sem_travessao|titulo_ato }}

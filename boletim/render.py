@@ -132,7 +132,8 @@ def meta_origem(item: Item) -> str:
         partes.append(f"seção {item.secao}")
     if item.pagina:
         partes.append(f"página {item.pagina}")
-    return f"{', '.join(partes)}, de {data_br(item.data_publicacao)}"
+    # `secao` e `pagina` chegam do diário, que copia travessão de PDF.
+    return sem_travessao(f"{', '.join(partes)}, de {data_br(item.data_publicacao)}")
 
 
 def resumo_edicao(contagens: dict[str, int], parcial: bool = False) -> str:

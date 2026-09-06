@@ -55,5 +55,5 @@ boletim:
   dir_site: ./site
   cta:
     whatsapp: "5531984483183"
-    texto_botao: "Falar com a Thauma sobre IA para o SUS"
+    texto_botao: "Falar com a Thauma no WhatsApp"
     mensagem: "Olá, vi o Radar de captação de {data} e quero conversar sobre soluções de IA para saúde"

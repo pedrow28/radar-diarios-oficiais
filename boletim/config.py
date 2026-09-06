@@ -13,7 +13,7 @@ import yaml
 @dataclass
 class ConfigCTA:
     whatsapp: str = "5531984483183"
-    texto_botao: str = "Falar com a Thauma sobre IA para o SUS"
+    texto_botao: str = "Falar com a Thauma no WhatsApp"
     mensagem: str = (
         "Olá, vi o Radar de captação de {data} e quero conversar sobre "
         "soluções de IA para saúde"

@@ -13,7 +13,7 @@ from datetime import date
 
 import pytest
 
-from boletim.config import ConfigBoletim
+from boletim.config import ConfigBoletim, ConfigCTA
 from boletim.edicao import ROTULOS
 from boletim.render import (
     brl,
@@ -35,6 +35,16 @@ from tests.fixtures.boletim.edicao_exemplo import edicao_exemplo
 MSO = re.compile(r"<!--\[if [^\]]*\]>.*?<!\[endif\]-->", re.DOTALL)
 EMOJI = re.compile(r"[\U0001F300-\U0001FAFF]")
 WHATSAPP = "wa.me/5531984483183"
+# O bloco de repintura do modo escuro. Ele é o único lugar da peça onde o ciano
+# e o navy de fundo podem aparecer, e por isso sai do HTML antes das checagens
+# de paleta do sistema claro.
+ESCURO = re.compile(
+    r"@media \(prefers-color-scheme: dark\) \{.*?^\}$",
+    re.DOTALL | re.MULTILINE,
+)
+FILETE = "border-top:1px solid #dde4ee"
+# O rótulo de seção é a única coisa em caixa alta na peça.
+ROTULO_DE_SECAO = "text-transform:uppercase"
 
 _EDICAO_INDICE = {
     "data": date(2026, 9, 3),
@@ -177,6 +187,14 @@ def test_meta_origem_no_estadual_nao_repete_a_data_como_numero_de_edicao(edicao)
     )
 
 
+def test_meta_origem_troca_travessao_vindo_do_diario(edicao):
+    # Minor do ledger: a citação passava sem `sem_travessao`, e o campo `secao`
+    # chega do diário, que copia travessão de PDF.
+    com_travessao = replace(edicao.secoes["B"][0], secao="1 — suplemento")
+    assert "—" not in meta_origem(com_travessao)
+    assert "seção 1 - suplemento" in meta_origem(com_travessao)
+
+
 @pytest.mark.parametrize(
     "contagens, parcial, esperado",
     [
@@ -216,6 +234,41 @@ def test_swap_de_logo_no_modo_escuro(html):
     assert ".logo-claro" in html and ".logo-escuro" in html
 
 
+@pytest.mark.parametrize("saida", ["email", "indice"])
+def test_modo_escuro_repinta_o_fundo_junto_com_o_logo(saida, html, cfg):
+    """O logo branco precisa de chão escuro, e não só de `display:block`.
+
+    Achado da revisão: o cliente que honra `prefers-color-scheme` sem inverter
+    nada (Apple Mail com `color-scheme: light dark`) trocava o logo navy pelo
+    branco e o deixava sobre `#f5f7f9`. A troca de logo e a repintura da peça
+    passam a viver na mesma media query.
+    """
+    peca = html if saida == "email" else render_index([_EDICAO_INDICE], cfg)
+    bloco = ESCURO.search(peca)
+    assert bloco is not None
+    regras = bloco.group().replace(" ", "")
+    assert ".logo-escuro{display:block!important;}" in regras
+    # Tokens escuros do DESIGN.md: navy de fundo, branco só em título, ink no
+    # corpo, ciano como luz - o azul elétrico dá 3.60:1 sobre navy e reprova.
+    assert ".fundo{background-color:#00051f!important;}" in regras
+    assert ".titulo{color:#FFFFFF!important;}" in regras
+    assert ".corpo{color:#c7d2e8!important;}" in regras
+    assert ".muted{color:#8b95b5!important;}" in regras
+    assert ".link{color:#40D7FF!important;}" in regras
+    assert "background-color:#050a25!important" in regras
+    assert "border-color:#1a2246!important" in regras
+
+
+@pytest.mark.parametrize(
+    "classe", ["fundo", "folha", "titulo", "corpo", "muted", "filete", "link"]
+)
+def test_cada_classe_da_repintura_tem_dono_no_html(classe, html):
+    """Estilo é inline nesta peça: sem a classe no elemento, a media query
+    escura não tem em que pegar."""
+    # Token inteiro: `titulo-edicao` não é `titulo`.
+    assert re.search(rf'class="(?:[^"]*\s)?{classe}(?:\s[^"]*)?"', html) is not None
+
+
 def test_toda_imagem_tem_alt(html):
     imagens = re.findall(r"<img\b[^>]*>", html)
     assert imagens
@@ -229,6 +282,17 @@ def test_existe_um_unico_botao_e_ele_leva_ao_whatsapp(html, edicao, cfg):
     bloco = html[ocorrencias[0] : ocorrencias[0] + 600]
     assert f'<a href="{cfg.cta.url(edicao.data)}"' in bloco
     assert cfg.cta.texto_botao in bloco
+
+
+def test_rotulo_padrao_do_botao_cabe_em_uma_linha_a_375px(html):
+    """Achado da revisão: "Falar com a Thauma sobre IA para o SUS" tem 38
+    caracteres e, a 17px/600 com 24px de recuo, pede ~350px numa tela que
+    oferece 295. O rótulo passa a nomear o destino em 30 caracteres e o botão
+    desce para 16px, que é o corpo mínimo do DESIGN.md."""
+    assert len(ConfigCTA().texto_botao) <= 32
+    assert ConfigCTA().texto_botao == "Falar com a Thauma no WhatsApp"
+    inicio = html.index('bgcolor="#0060e0"')
+    assert "font-size:16px" in html[inicio : inicio + 600]
 
 
 def test_rodape_repete_o_whatsapp_em_link_e_por_extenso(html):
@@ -245,7 +309,9 @@ def test_indice_nao_tem_botao(cfg):
 # ── identidade ──────────────────────────────────────────────────────────
 def test_nada_de_ambar_ciano_gradiente_travessao_ou_emoji(html):
     assert "#FFB347" not in html
-    assert "color:#40D7FF" not in html.replace(" ", "")
+    # O ciano é a luz do sistema escuro e só pode carregar texto lá dentro: no
+    # claro ele dá 1.58:1. Fora da media query escura, continua proibido.
+    assert "color:#40D7FF" not in ESCURO.sub("", html).replace(" ", "")
     assert "linear-gradient" not in html
     assert "—" not in html and "–" not in html
     assert EMOJI.search(html) is None
@@ -260,7 +326,9 @@ def test_sem_middle_dot_seta_ou_raio_generico(html, cfg, edicao):
     """
     indice = render_index([_EDICAO_INDICE], cfg)
     for saida in (html, render_web(edicao, cfg), render_md(edicao, cfg), indice):
-        assert " · " not in saida
+        # Sem os espaços: o middle dot não é assinatura de página gerada só
+        # quando vem espaçado.
+        assert "·" not in saida
         assert "→" not in saida
         assert "border-radius" not in saida
 
@@ -296,6 +364,44 @@ def test_o_valor_sai_em_georgia_navy_alinhado_a_direita(html):
         assert "#0060e0" not in celula
 
 
+def test_o_pe_do_ato_le_como_uma_linha_so(html, edicao):
+    """Achado da revisão: 22px ao lado de 15px lia como dois objetos soltos.
+
+    O pé do ato é um rodapé, não um par de elementos: link a 16px, valor a
+    20px e os dois pendurados na mesma linha de base.
+    """
+    pes = re.findall(r"<tr>\s*<td align=\"left\" valign=\"bottom\".*?</tr>", html, re.DOTALL)
+    assert len(pes) == sum(len(edicao.secoes[cat]) for cat in ("A", "B", "C"))
+    for pe in pes:
+        assert "font-size:16px" in pe
+        assert pe.count('valign="bottom"') == (2 if "R$" in pe else 1)
+        if "R$" in pe:
+            assert "font-size:20px" in pe
+    assert "font-size:22px" not in html
+
+
+def _quebras(html: str) -> list[tuple[int, bool]]:
+    """Cada filete da peça como `(altura do espaçador acima, abre seção?)`."""
+    saida = []
+    for achado in re.finditer(re.escape(FILETE), html):
+        acima = re.findall(r'height="(\d+)"', html[: achado.start()])
+        abaixo = html[achado.end() : achado.end() + 400]
+        saida.append((int(acima[-1]), ROTULO_DE_SECAO in abaixo))
+    return saida
+
+
+def test_quebra_de_secao_pesa_mais_que_quebra_entre_itens(html):
+    """Achado da revisão: as duas quebras eram o mesmo `32/filete/32`, então
+    a seção nova lia como mais um ato. Antes de um rótulo de seção o respiro
+    de cima sobe para 48px; entre itens continua em 32."""
+    quebras = _quebras(html)
+    de_secao = [altura for altura, abre in quebras if abre]
+    de_item = [altura for altura, abre in quebras if not abre]
+    assert len(de_secao) == 3  # A, B e C
+    assert set(de_secao) == {48}
+    assert de_item and 48 not in de_item
+
+
 def test_por_que_importa_nao_e_mais_um_rotulo_em_caixa_alta(html):
     assert "Por que importa." in html
 
@@ -320,8 +426,15 @@ def test_secao_vazia_nao_deixa_rotulo_orfao(edicao, cfg):
     assert ROTULOS["A"] in html
 
 
-def test_contagem_acompanha_o_rotulo(html, edicao):
-    assert f'{ROTULOS["A"]} ({len(edicao.secoes["A"])})' in html
+def test_rotulo_de_secao_nao_traz_contagem(html, edicao, cfg):
+    """Achado da revisão: "Captação de recursos (2)" conta o que o leitor já
+    vê logo abaixo, e o parêntese com número é tell de página gerada. A
+    contagem em frase continua onde ela informa de fato: no índice."""
+    for saida in (html, render_web(edicao, cfg), render_md(edicao, cfg)):
+        for chave, rotulo in ROTULOS.items():
+            assert rotulo in saida
+            assert f'{rotulo} ({len(edicao.secoes[chave])})' not in saida
+    assert "2 atos de captação" in render_index([_EDICAO_INDICE], cfg)
 
 
 def test_valor_sai_formatado_em_reais(html):

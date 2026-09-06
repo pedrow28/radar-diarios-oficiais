@@ -3,7 +3,7 @@
 
   Tabela, coluna única, estilo inline: é o que Outlook e Gmail entendem. O
   `<style>` do head guarda só o que não pode ser inline - a media query do
-  celular e a troca de logo no modo escuro. Largura fluida com teto de 600px;
+  celular e a repintura do modo escuro. Largura fluida com teto de 600px;
   o `width="600"` fixo só existe dentro do comentário condicional do Outlook,
   que é o único cliente que ignora `max-width`.
 
@@ -14,15 +14,23 @@
 
   Uma luz só: o azul `#0060e0` do botão e dos links. Nenhum outro `bgcolor`.
   Uma coisa alinhada à direita: o valor em reais. É por isso que ela é vista.
+
+  As classes (`fundo`, `folha`, `titulo`, `corpo`, `muted`, `filete`, `link`)
+  não estilizam nada no modo claro - o inline faz isso. Elas existem para que
+  a media query escura tenha em que pegar, porque quem troca o logo por causa
+  de `prefers-color-scheme` precisa trocar o chão junto.
 #}
 {% macro espaco(altura) %}
 <tr><td height="{{ altura }}" style="height:{{ altura }}px; line-height:{{ altura }}px; font-size:0;">&nbsp;</td></tr>
 {% endmacro %}
 {% macro filete() %}
-<tr><td style="border-top:1px solid #dde4ee; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr>
+<tr><td class="filete" style="border-top:1px solid #dde4ee; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr>
 {% endmacro %}
+{% macro quebra_item() %}{{ espaco(32) }}{{ filete() }}{{ espaco(32) }}{% endmacro %}
+{# Seção nova pesa mais que ato novo: 48 em cima do filete, 32 embaixo. #}
+{% macro quebra_secao() %}{{ espaco(48) }}{{ filete() }}{{ espaco(32) }}{% endmacro %}
 {% macro rotulo(texto, recuo) %}
-<tr><td style="padding:{{ recuo }}; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:12px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#5a6280;">{{ texto }}</td></tr>
+<tr><td class="muted" style="padding:{{ recuo }}; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:12px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#5a6280;">{{ texto }}</td></tr>
 {% endmacro %}
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -35,20 +43,26 @@
 <style>
 a { overflow-wrap: anywhere; }
 @media only screen and (max-width:480px) {
-  .folha { padding: 16px !important; }
+  .recheio { padding: 16px !important; }
   .titulo-edicao { font-size: 28px !important; }
-  .valor { font-size: 20px !important; }
   .botao { width: 100% !important; }
   .botao a { display: block !important; width: 100% !important; box-sizing: border-box; text-align: center; }
 }
 @media (prefers-color-scheme: dark) {
   .logo-claro { display: none !important; }
   .logo-escuro { display: block !important; }
+  .fundo { background-color: #00051f !important; }
+  .folha { background-color: #050a25 !important; border-color: #1a2246 !important; }
+  .titulo { color: #FFFFFF !important; }
+  .corpo { color: #c7d2e8 !important; }
+  .muted { color: #8b95b5 !important; }
+  .filete { border-color: #1a2246 !important; }
+  .link { color: #40D7FF !important; }
 }
 </style>
 </head>
-<body style="margin:0; padding:0; background-color:#f5f7f9;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f5f7f9" style="background-color:#f5f7f9;">
+<body class="fundo" style="margin:0; padding:0; background-color:#f5f7f9;">
+<table class="fundo" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f5f7f9" style="background-color:#f5f7f9;">
 <tr>
 <td align="center" style="padding:0;">
 <!--[if mso]><table role="presentation" width="600" align="center"><tr><td><![endif]-->
@@ -59,13 +73,13 @@ a { overflow-wrap: anywhere; }
 <td style="padding:24px 16px;">
 <img class="logo-claro" src="{{ url_logo_navy }}" width="140" alt="Thauma" style="display:block; width:140px; max-width:100%; height:auto; border:0;">
 <img class="logo-escuro" src="{{ url_logo_branco }}" width="140" alt="Thauma" style="display:none; width:140px; max-width:100%; height:auto; border:0;">
-<p style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:15px; line-height:1.5; color:#00051f;">Radar de captação em saúde</p>
-<p style="margin:4px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.5; color:#5a6280;">{{ edicao.data|data_extenso }}</p>
+<p class="titulo" style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:15px; line-height:1.5; color:#00051f;">Radar de captação em saúde</p>
+<p class="muted" style="margin:4px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.5; color:#5a6280;">{{ edicao.data|data_extenso }}</p>
 {% if edicao.parcial %}
 {% set avisos = edicao.fontes|avisos_fontes %}
 {# Ressalva de proveniência, não alerta: sem caixa e sem cor, como o DESIGN.md
    pede para dado com ressalva. #}
-<p style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.5; color:#5a6280;">Coleta parcial nesta data{% if avisos %}: {{ avisos }}{% endif %}.</p>
+<p class="muted" style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.5; color:#5a6280;">Coleta parcial nesta data{% if avisos %}: {{ avisos }}{% endif %}.</p>
 {% endif %}
 </td>
 </tr>
@@ -73,35 +87,35 @@ a { overflow-wrap: anywhere; }
 {# ── a folha: abertura, 30 segundos e os atos de A, B e C ───────────── #}
 <tr>
 <td style="padding:0 16px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF; border:1px solid #dde4ee;">
+<table class="folha" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF; border:1px solid #dde4ee;">
 <tr>
-<td class="folha" style="padding:32px;">
+<td class="recheio" style="padding:32px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
 
 <tr>
 <td>
-<h1 class="titulo-edicao" style="margin:0; font-family:Georgia, 'Times New Roman', serif; font-size:32px; font-weight:400; line-height:1.2; letter-spacing:-0.02em; color:#00051f;">{{ edicao.titulo|sem_travessao }}</h1>
-<p style="margin:24px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">{{ edicao.intro|sem_travessao }}</p>
+<h1 class="titulo titulo-edicao" style="margin:0; font-family:Georgia, 'Times New Roman', serif; font-size:32px; font-weight:400; line-height:1.2; letter-spacing:-0.02em; color:#00051f;">{{ edicao.titulo|sem_travessao }}</h1>
+<p class="corpo" style="margin:24px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">{{ edicao.intro|sem_travessao }}</p>
 </td>
 </tr>
 
-{{ espaco(32) }}{{ filete() }}{{ espaco(32) }}
+{{ quebra_item() }}
 <tr>
 <td>
-<p style="margin:0 0 16px; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.5; color:#5a6280;">Em 30 segundos</p>
+<p class="muted" style="margin:0 0 16px; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.5; color:#5a6280;">Em 30 segundos</p>
 {% for bullet in edicao.em_30_segundos %}
-<p style="margin:{{ 0 if loop.first else 16 }}px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">{{ bullet|sem_travessao }}</p>
+<p class="corpo" style="margin:{{ 0 if loop.first else 16 }}px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">{{ bullet|sem_travessao }}</p>
 {% endfor %}
 </td>
 </tr>
 
 {% for categoria in ["A", "B", "C"] %}
 {% if edicao.secoes[categoria] %}
-{{ espaco(32) }}{{ filete() }}{{ espaco(32) }}
-{{ rotulo(rotulos[categoria] ~ " (" ~ edicao.secoes[categoria]|length ~ ")", "0") }}
+{{ quebra_secao() }}
+{{ rotulo(rotulos[categoria], "0") }}
 {{ espaco(24) }}
 {% for item in edicao.secoes[categoria] %}
-{% if not loop.first %}{{ espaco(32) }}{{ filete() }}{{ espaco(32) }}{% endif %}
+{% if not loop.first %}{{ quebra_item() }}{% endif %}
 <tr>
 <td>
 {% include "_item.html.j2" %}
@@ -122,11 +136,11 @@ a { overflow-wrap: anywhere; }
 {{ espaco(48) }}
 <tr>
 <td style="padding:0 16px;">
-<p style="margin:0 0 24px; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">Pedro William responde no WhatsApp o que estes atos mudam para a sua instituição.</p>
+<p class="corpo" style="margin:0 0 24px; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; line-height:1.65; color:#1c2438;">Pedro William responde no WhatsApp o que estes atos mudam para a sua instituição.</p>
 <table class="botao" role="presentation" cellpadding="0" cellspacing="0" border="0">
 <tr>
 <td bgcolor="#0060e0" style="padding:0;">
-<a href="{{ cta_url }}" style="display:block; padding:16px 24px; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:17px; font-weight:600; line-height:1.3; color:#ffffff; text-decoration:none;">{{ cta_texto }}</a>
+<a href="{{ cta_url }}" style="display:block; padding:16px 24px; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:16px; font-weight:600; line-height:1.3; color:#ffffff; text-decoration:none;">{{ cta_texto }}</a>
 </td>
 </tr>
 </table>
@@ -136,11 +150,11 @@ a { overflow-wrap: anywhere; }
 {# ── outros atos: a cauda quieta, sem folha ─────────────────────────── #}
 {% if edicao.secoes["D"] %}
 {{ espaco(48) }}
-{{ rotulo(rotulos["D"] ~ " (" ~ edicao.secoes["D"]|length ~ ")", "0 16px") }}
+{{ rotulo(rotulos["D"], "0 16px") }}
 <tr>
 <td style="padding:16px 16px 0;">
 {% for item in edicao.secoes["D"] %}
-<p style="margin:{{ 0 if loop.first else 16 }}px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:15px; line-height:1.5; color:#5a6280;"><a href="{{ item.url|e }}" style="color:#0060e0; text-decoration:underline;">{{ item.titulo|sem_travessao|titulo_ato }}</a>, {{ item.orgao|sem_travessao }}</p>
+<p class="muted" style="margin:{{ 0 if loop.first else 16 }}px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:15px; line-height:1.5; color:#5a6280;"><a class="link" href="{{ item.url|e }}" style="color:#0060e0; text-decoration:underline;">{{ item.titulo|sem_travessao|titulo_ato }}</a>, {{ item.orgao|sem_travessao }}</p>
 {% endfor %}
 </td>
 </tr>
@@ -152,17 +166,17 @@ a { overflow-wrap: anywhere; }
 <td style="padding:0 16px 32px;">
 {% set publicadas = edicao.fontes|fontes_publicadas %}
 {% if publicadas %}
-<p style="margin:0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.6; color:#5a6280;">Fontes: {% for fonte in publicadas %}{{ fonte.nome|nome_fonte }}{% if fonte.edicao %} (edição {{ fonte.edicao }}{% if fonte.paginas %}, {{ fonte.paginas }}{% endif %}){% elif fonte.paginas %} ({{ fonte.paginas }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.</p>
+<p class="muted" style="margin:0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.6; color:#5a6280;">Fontes: {% for fonte in publicadas %}{{ fonte.nome|nome_fonte }}{% if fonte.edicao %} (edição {{ fonte.edicao }}{% if fonte.paginas %}, {{ fonte.paginas }}{% endif %}){% elif fonte.paginas %} ({{ fonte.paginas }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.</p>
 {% endif %}
-<p style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.6; color:#5a6280;">Thauma. Inteligência e narrativa em saúde.</p>
-<p style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.6; color:#5a6280;">
+<p class="muted" style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.6; color:#5a6280;">Thauma. Inteligência e narrativa em saúde.</p>
+<p class="muted" style="margin:16px 0 0; font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif; font-size:14px; line-height:1.6; color:#5a6280;">
 {% if modo == "email" %}
-<a href="{{ url_edicao }}" style="color:#0060e0; text-decoration:underline;">Ler a versão completa</a><br>
+<a class="link" href="{{ url_edicao }}" style="color:#0060e0; text-decoration:underline;">Ler a versão completa</a><br>
 {% else %}
-<a href="{{ site_url }}" style="color:#0060e0; text-decoration:underline;">Voltar ao índice</a><br>
+<a class="link" href="{{ site_url }}" style="color:#0060e0; text-decoration:underline;">Voltar ao índice</a><br>
 {% endif %}
-<a href="{{ cta_url }}" style="color:#0060e0; text-decoration:underline;">Conversar no WhatsApp: {{ cta_whatsapp_legivel }}</a><br>
-<a href="#descadastrar" style="color:#0060e0; text-decoration:underline;">Descadastrar</a>
+<a class="link" href="{{ cta_url }}" style="color:#0060e0; text-decoration:underline;">Conversar no WhatsApp: {{ cta_whatsapp_legivel }}</a><br>
+<a class="link" href="#descadastrar" style="color:#0060e0; text-decoration:underline;">Descadastrar</a>
 </p>
 </td>
 </tr>
