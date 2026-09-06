@@ -1,0 +1,111 @@
+# Sonda: o portal do DOU atende um runner do GitHub?
+#
+# A pergunta não está respondida, e responder por dentro da rotina diária sairia
+# caro: o portal `in.gov.br` serviu os cinco dias da semana de validação a
+# partir de IP residencial e devolveu HTTP 000 de uma VPS. Se ele também recusar
+# a faixa de IP do Actions, a fonte `dou` precisa ser trocada por `inlabs` no
+# `config/config.yaml` — e o jeito barato de descobrir isso é um clique, não uma
+# issue vermelha às 09:31.
+#
+# Três decisões:
+#
+# 1. Só `workflow_dispatch`. Uma sonda agendada mediria todo dia uma coisa que
+#    só se pergunta na hora de decidir a fonte, e bateria no portal de graça.
+# 2. O job termina verde mesmo com o portal bloqueando. O veredito não é o
+#    status do job, é a linha no resumo da execução: um job vermelho diria
+#    "algo deu errado", quando o resultado "o runner é bloqueado" é uma
+#    medição bem-sucedida.
+# 3. O normalizado sobe como artefato. `dou.json` com publicações dentro é a
+#    prova de que passou; sem ele, `ok` no resumo seria uma palavra sem lastro.
+name: Sonda do DOU
+
+on:
+  workflow_dispatch:
+    inputs:
+      data:
+        description: "AAAA-MM-DD; padrão: ontem em America/Sao_Paulo"
+        type: string
+        required: false
+
+# A fonte `dou` não tem credencial: a sonda lê o repositório e nada mais.
+permissions:
+  contents: read
+
+env:
+  TZ: America/Sao_Paulo
+  PYTHONUTF8: "1"
+
+jobs:
+  sonda:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      # Sem os extras do boletim: a sonda não classifica nem renderiza nada.
+      - name: Dependências
+        run: pip install -e .
+
+      # A entrada do disparo chega por `env`, não interpolada no meio do
+      # script: `${{ inputs.data }}` colado no shell é injeção com cara de data.
+      - name: Data da sonda
+        id: data
+        env:
+          ENTRADA_DATA: ${{ inputs.data }}
+        run: |
+          # Ontem, e não hoje: às 09:00 de São Paulo a edição do dia pode ainda
+          # não estar no ar, e um `vazio` legítimo seria lido como bloqueio.
+          data="${ENTRADA_DATA:-$(date -d yesterday +%F)}"
+          echo "data=$data" >> "$GITHUB_OUTPUT"
+          echo "sondando o DOU de $data"
+
+      - name: Coleta do DOU pelo portal
+        id: sonda
+        env:
+          DATA: ${{ steps.data.outputs.data }}
+        run: |
+          saida="$RUNNER_TEMP/sonda-stdout.txt"
+          set +e
+          python -m radar.cli coletar --fonte dou --data "$DATA" > "$saida"
+          rc=$?
+          set -e
+          cat "$saida"
+          echo "rc=$rc"
+          # O status sai do stdout do `radar` (`dou: ok | ...`), que distingue
+          # `ok` de `vazio` - os dois saem rc 0 e significam coisas opostas
+          # para a pergunta desta sonda.
+          status=$(sed -n 's/^dou: \([a-z]*\) |.*/\1/p' "$saida" | head -n 1)
+          if [ -z "$status" ]; then
+            # Sem linha nenhuma: o `radar` morreu antes de imprimir (traceback
+            # em stderr, processo morto). Cai no rc.
+            case "$rc" in
+              0) status=ok ;;
+              1) status=parcial ;;
+              *) status=erro ;;
+            esac
+          fi
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+
+      - name: Guarda o que a sonda coletou
+        uses: actions/upload-artifact@v4
+        with:
+          name: sonda-dou-${{ steps.data.outputs.data }}
+          path: data/normalized/${{ steps.data.outputs.data }}
+          retention-days: 7
+          # Não achar arquivo é um desfecho legítimo da sonda (foi o que a VPS
+          # produziu), não um aviso amarelo a ser explicado.
+          if-no-files-found: ignore
+
+      - name: Veredito
+        env:
+          STATUS: ${{ steps.sonda.outputs.status }}
+          RC: ${{ steps.sonda.outputs.rc }}
+        run: |
+          echo "DOU pelo portal a partir do runner: $STATUS (rc $RC)" >> "$GITHUB_STEP_SUMMARY"

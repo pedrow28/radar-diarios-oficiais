@@ -26,6 +26,7 @@ import yaml
 RAIZ = Path(__file__).resolve().parents[1]
 WORKFLOW = RAIZ / ".github" / "workflows" / "boletim-diario.yml"
 CI = RAIZ / ".github" / "workflows" / "testes.yml"
+SONDA = RAIZ / ".github" / "workflows" / "sonda-dou.yml"
 FREIO = RAIZ / "PARAR"
 
 # 09:30 e 12:00 no horário de Brasília, de segunda a sábado (o cron do GitHub é UTC).
@@ -311,4 +312,84 @@ def test_a_ci_usa_python_311_com_cache(ci: dict[str, Any]) -> None:
     )
     assert setup["with"]["python-version"] == "3.11"
     assert setup["with"]["cache"] == "pip"
+    assert setup["with"]["cache-dependency-path"] == "pyproject.toml"
+
+
+# ── sonda do portal do DOU ──────────────────────────────────────────────
+@pytest.fixture(scope="module")
+def texto_sonda() -> str:
+    return SONDA.read_text(encoding="utf-8")
+
+
+@pytest.fixture(scope="module")
+def sonda(texto_sonda: str) -> dict[str, Any]:
+    return yaml.safe_load(texto_sonda)
+
+
+def passos_sonda(sonda: dict[str, Any]) -> list[dict[str, Any]]:
+    return sonda["jobs"]["sonda"]["steps"]
+
+
+def test_a_sonda_existe_e_e_um_job_curto(sonda: dict[str, Any]) -> None:
+    """A pergunta que a sonda responde: o portal do DOU atende um runner?
+
+    Ela existe porque a resposta não é sabida - o portal serviu cinco dias de
+    IP residencial e recusou uma VPS - e porque descobrir por dentro da rotina
+    diária custaria uma issue vermelha de manhã em vez de um clique.
+    """
+    assert sonda["jobs"]["sonda"]["runs-on"] == "ubuntu-latest"
+    assert sonda["jobs"]["sonda"]["timeout-minutes"] == 10
+
+
+def test_a_sonda_so_roda_quando_alguem_pede(sonda: dict[str, Any]) -> None:
+    """Sem `schedule`: uma sonda agendada vira ruído diário sobre uma pergunta
+    que só precisa ser respondida quando alguém está decidindo trocar a fonte.
+    E sem gatilho de `push`, que a faria bater no portal a cada commit."""
+    disparos = sonda.get("on", sonda.get(True))
+    assert set(disparos) == {"workflow_dispatch"}
+    entrada = disparos["workflow_dispatch"]["inputs"]["data"]
+    assert entrada["type"] == "string"
+    assert entrada["required"] is False
+
+
+def test_a_sonda_so_le_o_repositorio_e_nao_usa_segredo(
+    sonda: dict[str, Any], texto_sonda: str
+) -> None:
+    """A fonte `dou` não tem credencial: um segredo aqui só poderia vazar.
+
+    E `contents: read` porque a sonda não commita, não publica e não abre
+    issue - ela mede e escreve no resumo da execução.
+    """
+    assert sonda["permissions"] == {"contents": "read"}
+    assert "secrets." not in texto_sonda
+
+
+def test_a_sonda_coleta_so_o_dou(sonda: dict[str, Any]) -> None:
+    """`--fonte dou` e nada mais: envolver o IOF-MG confundiria a medição."""
+    corridos = " ".join(passo.get("run", "") for passo in passos_sonda(sonda))
+    assert "--fonte dou" in corridos
+    assert "iofmg" not in corridos
+    assert "inlabs" not in corridos
+    # O rc é o dado da medição; `set +e` é o que impede o `set -e` do runner de
+    # matar o passo antes de alguém poder lê-lo.
+    assert "set +e" in corridos
+    assert "$GITHUB_STEP_SUMMARY" in corridos
+
+
+def test_a_sonda_guarda_o_que_coletou(sonda: dict[str, Any]) -> None:
+    """Um `dou.json` de verdade é a prova de que o runner passou; sem ele, a
+    linha do resumo seria só uma palavra sem lastro. `ignore` porque não achar
+    arquivo é um desfecho legítimo da sonda, não um aviso amarelo."""
+    upload = next(
+        p for p in passos_sonda(sonda) if p.get("uses", "").startswith("actions/upload-artifact")
+    )
+    assert upload["with"]["if-no-files-found"] == "ignore"
+    assert upload["with"]["retention-days"] == 7
+
+
+def test_a_sonda_usa_python_311_com_cache(sonda: dict[str, Any]) -> None:
+    setup = next(
+        p for p in passos_sonda(sonda) if p.get("uses", "").startswith("actions/setup-python")
+    )
+    assert setup["with"]["python-version"] == "3.11"
     assert setup["with"]["cache-dependency-path"] == "pyproject.toml"

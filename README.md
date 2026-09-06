@@ -287,6 +287,26 @@ existe.
 entradas: `data` (`AAAA-MM-DD`, padrão hoje em São Paulo) e `forcar` (regera
 mesmo que a edição do dia já exista).
 
+**Sonda do portal.** `.github/workflows/sonda-dou.yml`, Actions → "Sonda do
+DOU" → "Run workflow", com uma entrada opcional `data` (padrão: ontem em São
+Paulo). Roda só `radar coletar --fonte dou`, sobe o normalizado como artefato
+(7 dias) e escreve no resumo da execução:
+
+```
+DOU pelo portal a partir do runner: ok|vazio|parcial|erro (rc N)
+```
+
+Ela existe porque não se sabe se o portal `in.gov.br` atende a faixa de IP do
+GitHub: de IP residencial serviu cinco dias seguidos, de uma VPS devolveu HTTP
+000. `ok` com publicações no artefato quer dizer que a fonte padrão serve em
+nuvem; `erro` é a deixa para trocar `dou` por `inlabs` em `boletim.fontes`.
+Rode num dia útil — em domingo o portal devolve `vazio` legitimamente e a
+medição não diz nada.
+
+O job termina **verde mesmo quando o portal bloqueia**: o veredito é a linha do
+resumo, não a cor do job. Um job vermelho diria "algo deu errado", quando
+descobrir que o runner é bloqueado é a sonda funcionando.
+
 **Freio remoto.** Criar e commitar um arquivo `PARAR` na raiz da `main`
 desliga a rotina: o job continua rodando, imprime `freio remoto ativo:` com a
 primeira linha do arquivo — escreva ali o motivo — e pula todo o resto, sem
