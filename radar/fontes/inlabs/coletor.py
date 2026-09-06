@@ -11,31 +11,22 @@ from radar.core.erros import FonteIndisponivel, Status
 from radar.core.log import configurar_log
 from radar.core.modelos import Resultado
 from radar.core.storage import Storage
+from radar.fontes import escopo as regra_escopo
 from radar.fontes.inlabs import normaliza
 from radar.fontes.inlabs.sessao import abrir_sessao, baixar_zip
 from radar.fontes.inlabs.xml import Artigo, listar_artigos
 
-# A ANVISA às vezes é 1º nível de `artCategory` e às vezes vem sob o
-# "Ministério da Saúde" — o mesmo órgão, em duas árvores. Casar em qualquer
-# nível é o que impede a RDC de sumir conforme o dia.
-_ANVISA = "Agência Nacional de Vigilância Sanitária"
-
-# A "Presidência da República" assina boa parte do diário. Sem exigir a
-# subunidade, incluí-la em `orgaos` faria o recorte deixar de recortar.
-_PRESIDENCIA = "Presidência da República"
-
 
 def em_escopo(a: Artigo, cfg: ConfigINLABS) -> bool:
-    """Diz se o artigo é de um órgão que se quer acompanhar."""
-    niveis = [n.strip() for n in a.art_category.split("/") if n.strip()]
-    if _ANVISA in cfg.orgaos and _ANVISA in niveis:
-        return True
-    primeiro = niveis[0] if niveis else ""
-    if primeiro not in cfg.orgaos:
-        return False
-    if primeiro == _PRESIDENCIA:
-        return len(niveis) > 1 and niveis[1] in cfg.subunidades_extra
-    return True
+    """Diz se o artigo é de um órgão que se quer acompanhar.
+
+    A regra vive em `radar.fontes.escopo`, compartilhada com a fonte do portal:
+    `artCategory` e `hierarchyStr` descrevem o órgão do mesmo jeito, e duas
+    cópias da regra divergiriam no primeiro ajuste feito de um lado só.
+    """
+    return regra_escopo.em_escopo(
+        regra_escopo.niveis_de(a.art_category), cfg.orgaos, cfg.subunidades_extra
+    )
 
 
 class FonteINLABS:
