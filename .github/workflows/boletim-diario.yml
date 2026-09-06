@@ -1,6 +1,6 @@
 # Rotina diária do boletim: coleta -> classificação -> edição -> GitHub Pages.
 #
-# Três decisões que não são óbvias no YAML:
+# Cinco decisões que não são óbvias no YAML:
 #
 # 1. Dois horários por dia. O DOU sai cedo e o IOF-MG costuma sair depois; a
 #    execução das 12:00 é a rede de segurança de quando o dia ainda não estava
@@ -11,11 +11,19 @@
 # 3. Exit code manda. `radar` e `boletim` devolvem 0 (inteiro), 1 (com
 #    ressalva, publica assim mesmo) e 2 (não saiu, não publica). O passo captura
 #    o código em vez de deixar o `set -e` decidir: 0 e 1 seguem, e qualquer
-#    outro valor derruba o job — 2, mas também um 127 de comando não encontrado
-#    ou um 137 de processo morto, que num `else` de sucesso passariam calados.
+#    outro valor derruba o job — um 127 de comando não encontrado ou um 137 de
+#    processo morto, que num `else` de sucesso passariam calados.
+#    Na coleta há uma exceção, e ela é o ponto 5.
 # 4. O `--fonte` da coleta sai de `boletim.fontes` do `config/config.yaml`, não
 #    de uma lista escrita à mão aqui. As duas divergindo produziriam um dia
 #    inteiro de fonte `ausente` — hoje exit 2, antes um "vazio" verde e mudo.
+# 5. Coleta com exit 2 não é necessariamente dia perdido. O 2 do `radar` é o
+#    pior status entre as fontes: uma fonte fora do ar sai 2 mesmo com a outra
+#    tendo gravado o normalizado. O disco desempata — havendo
+#    `data/normalized/<data>/*.json`, o dia segue como parcial e a fonte que
+#    caiu entra no boletim como `ausente`; sem nenhum json, `exit 2` como antes.
+#    O portal do DOU é a fonte padrão e pode recusar o IP do runner: a rotina
+#    degradar para meia edição é melhor do que ficar muda até alguém notar.
 name: Boletim diário
 
 on:
@@ -138,12 +146,29 @@ jobs:
           DATA: ${{ steps.data.outputs.data }}
           FONTES: ${{ steps.fontes.outputs.fontes }}
         run: |
+          saida="$RUNNER_TEMP/coleta-stdout.txt"
           set +e
-          python -m radar.cli coletar --fonte "$FONTES" --data "$DATA"
+          python -m radar.cli coletar --fonte "$FONTES" --data "$DATA" > "$saida"
           rc=$?
           set -e
+          # O `radar` escreve `<fonte>: <status> | ...` em stdout, uma linha por
+          # fonte. Redirecionado para arquivo e não mostrado, o log diria só
+          # "exit 2" e ninguém saberia qual fonte caiu.
+          cat "$saida"
           if [ "$rc" -eq 2 ]; then
-            echo "coleta falhou (exit 2): nada será publicado hoje"
+            # Exit 2 é o pior status entre as fontes, não "nada foi coletado".
+            # Com o portal do DOU recusando o runner e o IOF-MG normal, abortar
+            # aqui custaria a edição inteira por causa de uma fonte. O disco
+            # decide: havendo normalizado, o dia sai parcial e a fonte que caiu
+            # entra no boletim como `ausente`.
+            normalizados=$(find "data/normalized/$DATA" -name '*.json' 2>/dev/null | wc -l)
+            if [ "$normalizados" -gt 0 ]; then
+              echo "coleta parcial (exit 2 com $normalizados fonte(s) em disco): a edição sai com ressalva"
+              grep ': erro' "$saida" || true
+              echo "parcial=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "coleta falhou (exit 2) e nada foi normalizado: nada será publicado hoje"
             exit 2
           fi
           if [ "$rc" -eq 1 ]; then

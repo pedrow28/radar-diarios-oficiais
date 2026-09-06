@@ -1,3 +1,4 @@
+import json
 from datetime import date, timezone
 
 import pytest
@@ -88,6 +89,34 @@ def test_fonte_ok_com_publicacoes_nao_e_vazia(dir_dados):
     carga = carregar(dir_dados, date(2026, 9, 3), ["inlabs"])
     assert carga.todas_vazias is False
     assert carga.parcial is False
+
+
+def test_portal_do_dou_fora_do_ar_e_iofmg_ok_da_edicao_parcial(tmp_path, dir_dados):
+    """O caso que a rotina em nuvem passou a publicar em vez de abortar.
+
+    O portal do DOU pode recusar o IP do runner; o IOF-MG não depende disso.
+    Sem `dou.json` em disco e com um `iofmg.json` `ok`, o dia tem o que
+    classificar: nem `todas_ausentes` (que sairia 2) nem `todas_vazias` (que
+    não publicaria), e sim uma edição normal com a marca de parcial.
+    """
+    pasta = tmp_path / "normalized" / "2026-09-03"
+    pasta.mkdir(parents=True)
+    original = json.loads(
+        (dir_dados / "normalized" / "2026-09-03" / "iofmg.json").read_text(encoding="utf-8")
+    )
+    original["status"] = "ok"
+    original["avisos"] = []
+    (pasta / "iofmg.json").write_text(
+        json.dumps(original, ensure_ascii=False), encoding="utf-8"
+    )
+
+    carga = carregar(tmp_path, date(2026, 9, 3), ["dou", "iofmg"])
+
+    assert [(f.nome, f.status) for f in carga.fontes] == [("dou", "ausente"), ("iofmg", "ok")]
+    assert carga.todas_ausentes is False
+    assert carga.todas_vazias is False
+    assert carga.parcial is True
+    assert len(carga.publicacoes) == 4
 
 
 def test_carga_e_imutavel():

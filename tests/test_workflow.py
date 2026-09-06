@@ -159,13 +159,46 @@ def test_o_freio_guarda_todos_os_passos_seguintes(workflow: dict[str, Any]) -> N
         )
 
 
-def test_coleta_com_erro_derruba_o_job_antes_de_publicar(
+def test_coleta_sem_nada_normalizado_derruba_o_job_antes_de_publicar(
     workflow: dict[str, Any],
 ) -> None:
-    """Exit 2 do `radar` significa "não publicar": o passo precisa propagar."""
+    """Exit 2 com o disco vazio significa "não publicar": o passo propaga."""
     coleta = next(p for p in passos(workflow) if p.get("id") == "coleta")
     assert "exit 2" in coleta["run"]
     assert coleta["env"]["INLABS_EMAIL"] == "${{ secrets.INLABS_EMAIL }}"
+
+
+def test_uma_fonte_fora_do_ar_ainda_publica_edicao_parcial(
+    workflow: dict[str, Any],
+) -> None:
+    """Exit 2 do `radar` é o pior status entre as fontes, não "nada coletado".
+
+    Com `dou` fora do ar e `iofmg` normal, o `radar` sai 2 mesmo tendo gravado
+    `data/normalized/<data>/iofmg.json`. Abortar aí custaria a edição inteira
+    por causa de uma fonte: o passo olha o disco antes de desistir e, achando
+    normalizado, segue com `parcial=true` - a fonte que caiu entra no boletim
+    como `ausente`, que é exatamente a ressalva que a edição parcial existe
+    para carregar. Sem nenhum json, aí sim `exit 2`.
+    """
+    coleta = next(p for p in passos(workflow) if p.get("id") == "coleta")
+    # Só os comandos: um `exit 2` citado dentro de um comentário não é o `exit
+    # 2` que derruba o job, e compará-los faria o teste passar (ou falhar) por
+    # prosa.
+    linhas = [
+        linha.strip()
+        for linha in coleta["run"].splitlines()
+        if linha.strip() and not linha.strip().startswith("#")
+    ]
+
+    # A checagem de disco precisa vir antes do `exit 2`, não depois.
+    checagem = next(i for i, linha in enumerate(linhas) if "data/normalized/$DATA" in linha)
+    aborto = next(i for i, linha in enumerate(linhas) if linha == "exit 2")
+    assert checagem < aborto, "o passo desiste do dia antes de olhar o disco"
+
+    assert 'echo "parcial=true" >> "$GITHUB_OUTPUT"' in linhas
+    # Qual fonte caiu tem de aparecer no log: o `radar` imprime `<fonte>: erro`
+    # em stdout, e stdout redirecionado a arquivo some se ninguém o mostrar.
+    assert any(linha.startswith("cat ") for linha in linhas)
 
 
 def test_codigo_inesperado_derruba_o_job(workflow: dict[str, Any]) -> None:

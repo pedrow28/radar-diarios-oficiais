@@ -63,7 +63,11 @@ distingue os quatro desfechos:
 | `parcial` | 1    | coletou, mas algo falhou           | processar e alertar |
 | `erro`    | 2    | a coleta quebrou                   | **não** publicar    |
 
-Com `--fonte todas`, o exit code é o pior status entre as fontes.
+Com mais de uma fonte, o exit code é o **pior status entre elas**: uma fonte
+que quebra faz o comando sair 2 mesmo que a outra tenha gravado o normalizado
+dela. Por isso quem consome o `radar` deve olhar o disco antes de tratar o 2
+como dia perdido — é o que a rotina em nuvem faz para publicar meia edição em
+vez de nenhuma (ver "Rotina em nuvem").
 
 ## Fonte INLABS (opcional)
 
@@ -291,12 +295,29 @@ echo "IOF-MG mudou o layout do PDF; retomar depois do ajuste" > PARAR
 git add PARAR && git commit -m "freio: pausa o boletim" && git push
 ```
 
+**Quando uma fonte cai.** O `radar` sai 2 quando **qualquer** fonte quebra,
+mesmo tendo gravado o normalizado da outra. O passo de coleta não trata esse 2
+como veredito: ele conta os `data/normalized/<data>/*.json`.
+
+| coleta | disco | o job |
+|--------|-------|-------|
+| exit 0 | —     | segue; edição inteira |
+| exit 1 | —     | segue com `parcial=true`; edição com ressalva |
+| exit 2 | pelo menos um json | segue com `parcial=true`; a fonte que caiu vira `ausente` e a edição sai parcial |
+| exit 2 | nenhum json | `exit 2`: nada é publicado |
+| outro (127, 137…) | — | propaga o código; nada é publicado |
+
+O log do passo mostra o stdout do `radar` (`<fonte>: erro | …`), então qual
+fonte caiu fica no registro da execução. Isso existe porque o portal do DOU
+pode recusar o IP do runner: perder o IOF-MG junto seria perder o dia inteiro
+por um bloqueio que nem é dele.
+
 **Quando falha.** O job abre uma issue intitulada `Boletim <data> falhou` com o
 link da execução, e não duplica se já houver uma aberta com o mesmo título.
-Exit 2 na coleta ou na geração derruba o job antes de qualquer publicação — e
-qualquer código que não seja 0, 1 ou 2 (um 127, um 137) também derruba, em vez
-de cair num `else` de sucesso silencioso. `boletim: vazio` termina o job sem
-publicar nada.
+Exit 2 na geração derruba o job antes de qualquer publicação — e qualquer
+código que não seja 0, 1 ou 2 (um 127, um 137) também derruba, em vez de cair
+num `else` de sucesso silencioso. `boletim: vazio` termina o job sem publicar
+nada.
 
 **Fontes da coleta.** O `--fonte` do workflow é lido de `boletim.fontes` do
 `config/config.yaml`, não escrito à mão no YAML do Actions: as duas listas
