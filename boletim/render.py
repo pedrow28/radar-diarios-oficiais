@@ -87,6 +87,16 @@ def nome_fonte(nome: str) -> str:
     return NOMES_FONTE.get(nome, nome)
 
 
+def fontes_publicadas(fontes: Sequence[FonteResumo]) -> list[FonteResumo]:
+    """As fontes que entraram na edição, excluindo as que não coletaram nada.
+
+    Única dona da regra de "sem conteúdo": e-mail e markdown citavam a mesma
+    lista de status como literal repetido, e um dos dois ficaria desatualizado
+    no dia em que um terceiro status se juntasse a `ausente`/`vazio`.
+    """
+    return [fonte for fonte in fontes if fonte.status not in SEM_CONTEUDO]
+
+
 def avisos_fontes(fontes: Sequence[FonteResumo], limite: int = MAX_AVISOS) -> str:
     """Os primeiros avisos das fontes, para a faixa de coleta parcial.
 
@@ -95,6 +105,61 @@ def avisos_fontes(fontes: Sequence[FonteResumo], limite: int = MAX_AVISOS) -> st
     """
     avisos = [aviso for fonte in fontes for aviso in fonte.avisos]
     return "; ".join(avisos[:limite])
+
+
+_DATA_FINAL = re.compile(
+    r",?\s+DE\s+\d{1,2}[ºo°]?\s+DE\s+[A-ZÇÃÉ]+\s+DE\s+\d{4}\s*$",
+    re.IGNORECASE,
+)
+_NUMERO_ORDINAL = re.compile(r"^N[º°O]\.?$", re.IGNORECASE)
+_SEPARADORES_SIGLA = re.compile(r"[/\-.\d]+")
+_MAX_LETRAS_SIGLA = 5
+# Conectores comuns não viram sigla mesmo vindo maiúsculos do diário: todo
+# título bruto é maiúsculo inteiro, sigla ou não, e "DE" sozinho não carrega
+# sentido de órgão ou tipo de ato.
+_CONECTORES = frozenset(
+    "de da do das dos e ou a o as os em no na nos nas com sem para por que".split()
+)
+
+
+def _eh_sigla(palavra: str) -> bool:
+    """Uma sigla sobrevive ao sentence case; uma palavra comum, não.
+
+    "RDC", "MG" e cada metade de "GM/MS" ou "CIB-SUS/MG" são o órgão ou o tipo
+    de ato abreviado - perderiam sentido em minúscula. Uma palavra comum de
+    seis letras ou mais ("EDITAL", "PORTARIA", "DELIBERAÇÃO") não vira sigla
+    só por estar em maiúscula no título bruto: título de diário é maiúsculo
+    inteiro, sigla ou não, e o que distingue as duas coisas é o tamanho.
+    """
+    if palavra.lower() in _CONECTORES:
+        return False
+    partes = [p for p in _SEPARADORES_SIGLA.split(palavra) if p]
+    return bool(partes) and all(
+        1 <= len(p) <= _MAX_LETRAS_SIGLA and p.isupper() for p in partes
+    )
+
+
+def titulo_ato(titulo: str) -> str:
+    """Título do ato em formato de sentença, sem a data que já está na linha de meta.
+
+    O diário publica o identificador do ato em maiúscula inteira e gruda a
+    data no fim: "PORTARIA GM/MS Nº 3.412, DE 2 DE SETEMBRO DE 2026". O
+    DESIGN pede título em formato de sentença, e a data sai porque já aparece
+    na linha de meta do item - repeti-la no título é ruído, não reforço.
+    """
+    sem_data = _DATA_FINAL.sub("", titulo).strip()
+    palavras = sem_data.split()
+    resultado: list[str] = []
+    for indice, palavra in enumerate(palavras):
+        proxima = palavras[indice + 1] if indice + 1 < len(palavras) else ""
+        if _NUMERO_ORDINAL.match(palavra) and proxima[:1].isdigit():
+            resultado.append("nº")
+        elif _eh_sigla(palavra):
+            resultado.append(palavra)
+        else:
+            resultado.append(palavra.lower())
+    texto = " ".join(resultado)
+    return texto[:1].upper() + texto[1:] if texto else texto
 
 
 def criar_ambiente() -> Environment:
@@ -112,6 +177,8 @@ def criar_ambiente() -> Environment:
     ambiente.filters["sem_travessao"] = sem_travessao
     ambiente.filters["nome_fonte"] = nome_fonte
     ambiente.filters["avisos_fontes"] = avisos_fontes
+    ambiente.filters["fontes_publicadas"] = fontes_publicadas
+    ambiente.filters["titulo_ato"] = titulo_ato
     return ambiente
 
 

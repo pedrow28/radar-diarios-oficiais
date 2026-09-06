@@ -25,6 +25,7 @@ from boletim.render import (
     render_web,
     sem_travessao,
     telefone_legivel,
+    titulo_ato,
 )
 from tests.fixtures.boletim.edicao_exemplo import edicao_exemplo
 
@@ -68,6 +69,36 @@ def test_telefone_legivel_formata_o_numero_br():
     assert telefone_legivel("5531984483183") == "(31) 98448-3183"
     # Número fora do formato esperado sai como está: inventar máscara é pior.
     assert telefone_legivel("123") == "123"
+
+
+@pytest.mark.parametrize(
+    "bruto, esperado",
+    [
+        (
+            "DELIBERAÇÃO CIB-SUS/MG Nº 4.512, DE 1º DE SETEMBRO DE 2026",
+            "Deliberação CIB-SUS/MG nº 4.512",
+        ),
+        (
+            "PORTARIA GM/MS Nº 3.412, DE 2 DE SETEMBRO DE 2026",
+            "Portaria GM/MS nº 3.412",
+        ),
+        (
+            "EDITAL DE CHAMAMENTO PÚBLICO Nº 12/2026",
+            "Edital de chamamento público nº 12/2026",
+        ),
+        (
+            "RESOLUÇÃO DE DIRETORIA COLEGIADA - RDC Nº 942, DE 1º DE SETEMBRO DE 2026",
+            "Resolução de diretoria colegiada - RDC nº 942",
+        ),
+        (
+            # Já em formato de sentença: só a data sai, o resto passa direto.
+            "Portaria GM/MS nº 500, de 10 de janeiro de 2026",
+            "Portaria GM/MS nº 500",
+        ),
+    ],
+)
+def test_titulo_ato_sentenca_com_sigla_preservada_e_data_removida(bruto, esperado):
+    assert titulo_ato(bruto) == esperado
 
 
 # ── entregabilidade ─────────────────────────────────────────────────────

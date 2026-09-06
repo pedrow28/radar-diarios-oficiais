@@ -26,7 +26,7 @@
 ## {{ rotulos[categoria] }} ({{ edicao.secoes[categoria]|length }})
 {% for item in edicao.secoes[categoria] %}
 
-### {{ item.titulo|sem_travessao }}
+### {{ item.titulo|sem_travessao|titulo_ato }}
 
 {{ item.orgao|sem_travessao }}{% if item.unidade %} · {{ item.unidade|sem_travessao }}{% endif %}{% if item.tipo %} · {{ item.tipo }}{% endif %}{% if item.numero %} nº {{ item.numero }}{% endif %} · {{ item.data_publicacao|data_br }}{% if item.fonte == "iofmg" %} · IOF-MG{% elif item.secao %} · DOU seção {{ item.secao }}{% endif %}{% if item.pagina %} p. {{ item.pagina }}{% endif %}
 
@@ -52,7 +52,7 @@ Quer transformar essas oportunidades em captação? Pedro William responde no Wh
 
 ---
 
-{% set publicadas = edicao.fontes|rejectattr("status", "in", ["ausente", "vazio"])|list %}
+{% set publicadas = edicao.fontes|fontes_publicadas %}
 {% if publicadas %}
 Fontes: {% for fonte in publicadas %}{{ fonte.nome|nome_fonte }}{% if fonte.edicao %} (edição {{ fonte.edicao }}{% if fonte.paginas %}, {{ fonte.paginas }}{% endif %}){% elif fonte.paginas %} ({{ fonte.paginas }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.
 
