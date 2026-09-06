@@ -1,10 +1,14 @@
-"""O workflow diário, lido como código.
+"""Os dois workflows, lidos como código.
 
 Um `.yml` de Actions só é executado em produção: não há como rodá-lo antes de
 subir, e um erro ali aparece como boletim que não saiu - ou, pior, como segredo
 no log público. Estes testes cobrem o que dá para afirmar sem um runner: a
 forma do arquivo, os dois horários, os três segredos, as permissões mínimas e
 as duas regras de higiene (nada de `echo` com segredo, nada de `::set-output`).
+
+Cobrem também o `testes.yml`, que é o único runner que roda a suíte antes do
+merge, e o `PARAR` versionado, que mantém a rotina desligada até a primeira
+execução real contra o `claude`.
 
 O que eles não cobrem, e nenhum teste local cobriria, é o comportamento do
 runner. Isso fica com o `workflow_dispatch` e com a issue automática de falha.
@@ -19,7 +23,10 @@ from typing import Any
 import pytest
 import yaml
 
-WORKFLOW = Path(__file__).resolve().parents[1] / ".github" / "workflows" / "boletim-diario.yml"
+RAIZ = Path(__file__).resolve().parents[1]
+WORKFLOW = RAIZ / ".github" / "workflows" / "boletim-diario.yml"
+CI = RAIZ / ".github" / "workflows" / "testes.yml"
+FREIO = RAIZ / "PARAR"
 
 # 09:30 e 12:00 no horário de Brasília, de segunda a sábado (o cron do GitHub é UTC).
 CRONS = {"30 12 * * 1-6", "0 15 * * 1-6"}
@@ -160,7 +167,11 @@ def test_codigo_inesperado_derruba_o_job(workflow: dict[str, Any]) -> None:
 
 
 def test_boletim_vazio_nao_publica(workflow: dict[str, Any]) -> None:
-    """Domingo e feriado saem 0 com `boletim: vazio`; não há o que subir."""
+    """Domingo e feriado saem com `boletim: vazio`; não há o que subir.
+
+    O `grep` é no stdout, não no exit code, de propósito: o dia vazio com uma
+    fonte que não chegou sai 1, e 1 é um código que o passo aceita e segue.
+    """
     boletim = next(p for p in passos(workflow) if p.get("id") == "boletim")
     assert "boletim: vazio" in boletim["run"]
     for passo in passos(workflow):
@@ -169,3 +180,80 @@ def test_boletim_vazio_nao_publica(workflow: dict[str, Any]) -> None:
             assert "steps.boletim.outputs.vazio != 'true'" in passo.get("if", ""), (
                 f"passo {passo.get('name')!r} publica um dia vazio"
             )
+
+
+def test_a_lista_de_fontes_vem_do_config_e_nao_do_yaml(
+    workflow: dict[str, Any],
+) -> None:
+    """`boletim.fontes` é a única fonte de verdade da lista de fontes.
+
+    Escrita duas vezes - no YAML do config e no `--fonte` daqui -, ela diverge
+    em silêncio, e o dia sai com a fonte esquecida em `ausente`. Foi o defeito
+    que a `Carga.todas_ausentes` passou a pegar; este teste fecha a porta antes.
+    """
+    coleta = next(p for p in passos(workflow) if p.get("id") == "coleta")
+    fontes = next(p for p in passos(workflow) if p.get("id") == "fontes")
+
+    assert "config/config.yaml" in fontes["run"]
+    assert "ConfigBoletim" in fontes["run"]
+    assert 'echo "fontes=$fontes" >> "$GITHUB_OUTPUT"' in fontes["run"]
+
+    assert coleta["env"]["FONTES"] == "${{ steps.fontes.outputs.fontes }}"
+    assert '--fonte "$FONTES"' in coleta["run"]
+    assert "inlabs" not in coleta["run"], "lista de fontes escrita à mão na coleta"
+
+
+def test_o_repositorio_ja_vem_com_o_freio_puxado() -> None:
+    """A rotina só liga depois da primeira rodada real com o `claude`.
+
+    Nenhuma execução do LLM contra o CLI de verdade aconteceu ainda (todas as
+    tentativas morreram em OAuth expirado). Um cron diário estreando assim
+    abriria uma issue vermelha por dia; o `PARAR` versionado adia isso até
+    alguém apagar o arquivo, que é um commit visível e reversível.
+    """
+    assert FREIO.exists(), "o freio saiu do repositório sem a rodada real do LLM"
+    primeira = FREIO.read_text(encoding="utf-8").splitlines()[0]
+    assert "--llm claude" in primeira
+    assert "apague este arquivo" in primeira
+
+
+# ── workflow de testes ──────────────────────────────────────────────────
+@pytest.fixture(scope="module")
+def ci() -> dict[str, Any]:
+    return yaml.safe_load(CI.read_text(encoding="utf-8"))
+
+
+def test_a_suite_roda_em_push_e_em_pull_request(ci: dict[str, Any]) -> None:
+    """Sem CI, o único runner do projeto era a rotina diária: quebra de template
+    aparecia na manhã seguinte, como job vermelho do boletim."""
+    disparos = ci.get("on", ci.get(True))
+    assert "push" in disparos
+    assert "pull_request" in disparos
+    # Sem filtro de branch: um push que quebra a suíte precisa doer onde for.
+    assert disparos["push"] is None
+    assert disparos["pull_request"] is None
+
+
+def test_a_ci_instala_os_extras_e_roda_o_pytest_com_w_error(ci: dict[str, Any]) -> None:
+    passos_ci = ci["jobs"]["pytest"]["steps"]
+    corridos = " ".join(passo.get("run", "") for passo in passos_ci)
+    assert ci["jobs"]["pytest"]["runs-on"] == "ubuntu-latest"
+    assert 'pip install -e ".[boletim,dev]"' in corridos
+    assert "-W error" in corridos
+    assert "python -m pytest" in corridos
+
+
+def test_a_ci_so_le_o_repositorio(ci: dict[str, Any]) -> None:
+    """Rodar teste não commita, não publica e não abre issue."""
+    assert ci["permissions"] == {"contents": "read"}
+
+
+def test_a_ci_usa_python_311_com_cache(ci: dict[str, Any]) -> None:
+    setup = next(
+        passo
+        for passo in ci["jobs"]["pytest"]["steps"]
+        if passo.get("uses", "").startswith("actions/setup-python")
+    )
+    assert setup["with"]["python-version"] == "3.11"
+    assert setup["with"]["cache"] == "pip"
+    assert setup["with"]["cache-dependency-path"] == "pyproject.toml"

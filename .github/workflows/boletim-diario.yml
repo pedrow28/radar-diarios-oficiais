@@ -10,8 +10,12 @@
 #    que qualquer um reverte, sem entrar em Settings.
 # 3. Exit code manda. `radar` e `boletim` devolvem 0 (inteiro), 1 (com
 #    ressalva, publica assim mesmo) e 2 (não saiu, não publica). O passo captura
-#    o código em vez de deixar o `set -e` decidir, porque só 2 pode derrubar o
-#    job.
+#    o código em vez de deixar o `set -e` decidir: 0 e 1 seguem, e qualquer
+#    outro valor derruba o job — 2, mas também um 127 de comando não encontrado
+#    ou um 137 de processo morto, que num `else` de sucesso passariam calados.
+# 4. O `--fonte` da coleta sai de `boletim.fontes` do `config/config.yaml`, não
+#    de uma lista escrita à mão aqui. As duas divergindo produziriam um dia
+#    inteiro de fonte `ausente` — hoje exit 2, antes um "vazio" verde e mudo.
 name: Boletim diário
 
 on:
@@ -115,6 +119,16 @@ jobs:
           npm install -g @anthropic-ai/claude-code
           claude --version
 
+      # A lista de fontes tem uma única fonte de verdade: o `config/config.yaml`.
+      # Escrita duas vezes, ela diverge, e o dia sai com fonte `ausente`.
+      - name: Fontes do config
+        id: fontes
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
+        run: |
+          fontes=$(python -c "from boletim.config import ConfigBoletim; print(','.join(ConfigBoletim.carregar(__import__('pathlib').Path('config/config.yaml')).fontes))")
+          echo "fontes=$fontes" >> "$GITHUB_OUTPUT"
+          echo "fontes da coleta: $fontes"
+
       - name: Coleta
         id: coleta
         if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
@@ -122,9 +136,10 @@ jobs:
           INLABS_EMAIL: ${{ secrets.INLABS_EMAIL }}
           INLABS_SENHA: ${{ secrets.INLABS_SENHA }}
           DATA: ${{ steps.data.outputs.data }}
+          FONTES: ${{ steps.fontes.outputs.fontes }}
         run: |
           set +e
-          python -m radar.cli coletar --fonte inlabs,iofmg --data "$DATA"
+          python -m radar.cli coletar --fonte "$FONTES" --data "$DATA"
           rc=$?
           set -e
           if [ "$rc" -eq 2 ]; then
@@ -173,19 +188,21 @@ jobs:
             echo "geração terminou com código inesperado ($rc): nada será publicado hoje"
             exit "$rc"
           fi
-          # Dia sem edição nos diários: exit 0 e nenhum arquivo escrito. Não há
-          # o que commitar nem o que publicar, e isso não é falha.
+          # Dia sem edição nos diários: nenhum arquivo escrito, nada a commitar
+          # nem a publicar, e isso não é falha. Sai 0 quando todas as fontes
+          # coletaram e vieram vazias, e 1 quando alguma não chegou - a rodada
+          # continua sem publicar, mas fica marcada como degradada.
           if grep -q "boletim: vazio" "$saida"; then
             echo "vazio=true" >> "$GITHUB_OUTPUT"
           else
             echo "vazio=false" >> "$GITHUB_OUTPUT"
           fi
 
-      # `boletim/saida/` está no `.gitignore` para que rodar o boletim na
-      # máquina de alguém não suje a árvore. Na nuvem é o contrário: a pasta do
-      # dia é o registro do julgamento que foi ao ar, e é o que permite um
-      # `boletim renderizar` depois sem gastar outra chamada de modelo. Daí o
-      # `--force`, restrito à pasta do dia.
+      # `boletim/saida/` é versionada de propósito (não está no `.gitignore`): a
+      # pasta do dia é o registro auditável do julgamento que foi ao ar, e é o
+      # que permite um `boletim renderizar` depois sem gastar outra chamada de
+      # modelo. Um `git add` comum basta — quem roda o boletim localmente é que
+      # precisa limpar a pasta, ou apontar `dir_saida` para fora do repo.
       - name: Commit da edição
         if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true' && steps.boletim.outputs.vazio != 'true'
         env:
@@ -193,7 +210,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add --force "boletim/saida/$DATA"
+          git add "boletim/saida/$DATA"
           git add site
           git diff --cached --quiet || git commit -m "boletim: edição $DATA"
           # A branch é a da execução, não `main` fixa: o cron sempre roda na
