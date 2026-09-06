@@ -1,0 +1,72 @@
+{#
+  A mesma edição em markdown: arquivo do dia e formato que um agente lê.
+
+  Sem autoescape aqui - markdown não é HTML, e escapar `<` transformaria o
+  texto do diário em ruído. O arquivo nunca é servido como página.
+
+  A meta acompanha a do e-mail: duas linhas, quem publicou e onde saiu, sem a
+  tira de middle dots. O markdown não tem hierarquia visual, então a mesma
+  informação precisa chegar pela mesma ordem.
+
+  A URL passa por `url_markdown`: esquema fora de `http`/`https` não vira link,
+  e o que sobra sai com `(`, `)` e espaço codificados - sem isso um parêntese
+  vindo do diário fecharia o link no meio e jogaria o resto da URL no texto.
+#}
+# {{ edicao.titulo|sem_travessao }}
+
+{{ edicao.data|data_extenso }}
+
+{% if edicao.parcial %}
+{% set avisos = edicao.fontes|avisos_fontes %}
+> Coleta parcial nesta data{% if avisos %}: {{ avisos }}{% endif %}.
+
+{% endif %}
+{{ edicao.intro|sem_travessao }}
+
+## Em 30 segundos
+
+{% for bullet in edicao.em_30_segundos %}
+- {{ bullet|sem_travessao }}
+{% endfor %}
+{% for categoria in ["A", "B", "C", "D"] %}
+{% if edicao.secoes[categoria] %}
+
+## {{ rotulos[categoria] }}
+{% for item in edicao.secoes[categoria] %}
+
+### {{ item.titulo|sem_travessao|titulo_ato }}
+
+{{ item|meta_orgao|sem_travessao }}
+
+{{ item|meta_origem }}
+
+{{ item.resumo|sem_travessao }}
+{% if item.por_que_importa %}
+
+Por que importa. {{ item.por_que_importa|sem_travessao }}
+{% endif %}
+{% if item.valor_brl %}
+
+Valor: {{ item.valor_brl|brl }}
+{% endif %}
+{% set href = item.url|url_markdown %}
+{% if href %}
+
+[Ver publicação]({{ href }})
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+## Fale com a Thauma
+
+Pedro William responde no WhatsApp o que estes atos mudam para a sua instituição: [{{ cta_whatsapp_legivel }}]({{ cta_url }})
+
+---
+
+{% set publicadas = edicao.fontes|fontes_publicadas %}
+{% if publicadas %}
+Fontes: {% for fonte in publicadas %}{{ fonte.nome|nome_fonte }}{% if fonte.edicao %} (edição {{ fonte.edicao }}{% if fonte.paginas %}, {{ fonte.paginas }}{% endif %}){% elif fonte.paginas %} ({{ fonte.paginas }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.
+
+{% endif %}
+Thauma. Inteligência e narrativa em saúde.

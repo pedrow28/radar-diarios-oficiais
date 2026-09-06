@@ -24,7 +24,14 @@ def _montar_parser() -> argparse.ArgumentParser:
     coletar = sub.add_parser("coletar", help="Coleta as publicações de uma data")
     coletar.add_argument("--config", type=Path, default=Path("config/config.yaml"))
     coletar.add_argument("--data", default=None, help="AAAA-MM-DD ou DD/MM/AAAA (padrão: hoje)")
-    coletar.add_argument("--fonte", choices=["dou", "iofmg", "todas"], default="todas")
+    # Sem `choices`: o valor também pode ser uma lista, e `choices` recusaria
+    # "inlabs,iofmg" inteiro. Quem valida nome a nome é `_fontes`.
+    coletar.add_argument(
+        "--fonte",
+        default="todas",
+        help='"todas" ou lista separada por vírgula: dou, inlabs, iofmg '
+             "(ex.: --fonte inlabs,iofmg)",
+    )
     coletar.add_argument("--forcar", action="store_true", help="Ignora o cache de artefatos brutos")
 
     consultar = sub.add_parser("consultar", help="Busca no histórico já coletado")
@@ -39,14 +46,34 @@ def _montar_parser() -> argparse.ArgumentParser:
 
 
 def _fontes(nome: str, cfg: Config, storage: Storage, sessao) -> list:
+    """Instancia as fontes pedidas. Nome inválido levanta `ValueError`.
+
+    Levantar importa: `main` traduz a exceção em exit 2, e um nome
+    desconhecido ignorado em silêncio sairia 0 sem ter coletado nada.
+    """
     from radar.fontes.dou.coletor import FonteDOU
+    from radar.fontes.inlabs.coletor import FonteINLABS
     from radar.fontes.iofmg.coletor import FonteIOFMG
 
     disponiveis = {
         "dou": lambda: FonteDOU(cfg.dou, storage, sessao),
+        "inlabs": lambda: FonteINLABS(cfg.inlabs, storage, sessao),
         "iofmg": lambda: FonteIOFMG(cfg.iofmg, storage, sessao),
     }
-    chaves = list(disponiveis) if nome == "todas" else [nome]
+    if nome == "todas":
+        chaves = list(disponiveis)
+    else:
+        # `dict.fromkeys` tira repetição preservando a ordem pedida: coletar a
+        # mesma fonte duas vezes só duplicaria trabalho e linhas de saída.
+        chaves = list(dict.fromkeys(p.strip() for p in nome.split(",") if p.strip()))
+    validas = ", ".join([*disponiveis, "todas"])
+    if not chaves:
+        raise ValueError(f"--fonte vazio; válidas: {validas}")
+    desconhecidas = [c for c in chaves if c not in disponiveis]
+    if desconhecidas:
+        raise ValueError(
+            f"fonte desconhecida: {', '.join(desconhecidas)}; válidas: {validas}"
+        )
     return [disponiveis[c]() for c in chaves]
 
 
@@ -161,19 +188,9 @@ def hoje_como_datetime():
 
 
 def _publicacoes_de(dados: dict, data) -> list:
-    from datetime import datetime, timezone
+    from radar.core.modelos import publicacao_de_dict
 
-    from radar.core.modelos import Publicacao
-
-    publicacoes = []
-    for bruto in dados["publicacoes"]:
-        campos = dict(bruto)
-        campos["data_publicacao"] = data
-        campos["coletado_em"] = datetime.fromisoformat(
-            campos["coletado_em"].replace("Z", "+00:00")
-        ).astimezone(timezone.utc)
-        publicacoes.append(Publicacao(**campos))
-    return publicacoes
+    return [publicacao_de_dict(bruto, data) for bruto in dados["publicacoes"]]
 
 
 def main(argv: list[str] | None = None) -> int:

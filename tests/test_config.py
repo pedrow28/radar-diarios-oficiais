@@ -56,6 +56,39 @@ def test_config_inexistente_da_erro_claro(tmp_path: Path):
         Config.carregar(tmp_path / "nao-existe.yaml")
 
 
+def test_inlabs_usa_defaults_quando_bloco_nao_existe(caminho_config: Path):
+    cfg = Config.carregar(caminho_config)
+    assert cfg.inlabs.secoes == ["DO1"]
+    assert cfg.inlabs.orgaos == [
+        "Ministério da Saúde",
+        "Agência Nacional de Vigilância Sanitária",
+        "Presidência da República",
+        "Ministério da Fazenda",
+        "Ministério do Planejamento e Orçamento",
+    ]
+    assert cfg.inlabs.subunidades_extra == ["Casa Civil"]
+
+
+def test_inlabs_le_valores_do_yaml(tmp_path: Path):
+    # `YAML_MINIMO` já declara um mapa `fontes:`; um segundo mapa `fontes:`
+    # no mesmo arquivo sobrescreveria o primeiro, então o bloco `inlabs`
+    # entra dentro do mapa `fontes:` existente.
+    conteudo = YAML_MINIMO.rstrip().replace(
+        "armazenamento:",
+        "  inlabs:\n"
+        "    secoes: [DO1, DO2]\n"
+        "    orgaos: [Ministério da Saúde]\n"
+        "    subunidades_extra: [Casa Civil, Vice-Presidência]\n"
+        "armazenamento:",
+    )
+    p = tmp_path / "c.yaml"
+    p.write_text(conteudo, encoding="utf-8")
+    cfg = Config.carregar(p)
+    assert cfg.inlabs.secoes == ["DO1", "DO2"]
+    assert cfg.inlabs.orgaos == ["Ministério da Saúde"]
+    assert cfg.inlabs.subunidades_extra == ["Casa Civil", "Vice-Presidência"]
+
+
 def test_nenhum_email_hardcoded_no_pacote():
     """Regressão: hoje pedrowilliamrd@gmail.com está fixo em 2 scripts."""
     raiz = Path(__file__).resolve().parent.parent / "radar"

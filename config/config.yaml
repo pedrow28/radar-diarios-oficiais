@@ -18,6 +18,18 @@ fontes:
       - EDITAL
       - ATO
       - AVISO
+  inlabs:
+    secoes:
+      - DO1
+    orgaos:
+      - "Ministério da Saúde"
+      - "Agência Nacional de Vigilância Sanitária"
+      - "Presidência da República"
+      - "Ministério da Fazenda"
+      - "Ministério do Planejamento e Orçamento"
+    # 2º nível exigido para capturar atos publicados sob "Presidência da República".
+    subunidades_extra:
+      - "Casa Civil"
 
 armazenamento:
   dir_dados: ./data
@@ -27,3 +39,22 @@ armazenamento:
 email:
   habilitado: false
   destinatarios: []
+
+boletim:
+  modelo: claude-haiku-4-5
+  lote: 12
+  max_chars_texto: 3000
+  max_itens_dia: 120
+  tentativas_llm: 2
+  timeout_llm_s: 180
+  site_url: "https://pedrow28.github.io/radar-diarios-oficiais"
+  # Troque `dou` por `inlabs` se o portal bloquear os runners e você tiver conta INLABS.
+  fontes:
+    - dou
+    - iofmg
+  dir_saida: ./boletim/saida
+  dir_site: ./site
+  cta:
+    whatsapp: "5531984483183"
+    texto_botao: "Falar com a Thauma no WhatsApp"
+    mensagem: "Olá, vi o Radar de captação de {data} e quero conversar sobre soluções de IA para saúde"

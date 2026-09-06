@@ -1,0 +1,248 @@
+{
+  "_leia_me": "Subconjunto real da rodada 31/08-04/09/2026 (semana-report.md), extraido de .superpowers/sdd/seguinte-constru-mos-esse-projeto-snazzy-hejlsberg/semana/normalized/<data>/<fonte>.json sem edicao, com 'texto' truncado em 3000 chars. A origem de cada publicacao esta nos proprios campos 'data_publicacao', 'fonte' e 'id'.",
+  "casos": {
+    "2badc4fb9af2a751": {
+      "caso": "1",
+      "porque": "Portaria SAES/MS 4.795 altera a Tabela SUS: forca 0 antes de G7, cortada pelo teto em 31/08. Agora precisa casar _FORTE no titulo/ementa."
+    },
+    "8c8731bbce27cf8c": {
+      "caso": "2",
+      "porque": "Resolucao-RE da Anvisa: _DESCARTE casa no titulo e o preambulo cita RDC. Nao pode mais ser resgatada pelo corpo."
+    },
+    "5c87ec9922084fcd": {
+      "caso": "3",
+      "porque": "Extrato de Doacao: a maior massa de ruido da semana (103 na semana). _DESCARTE novo."
+    },
+    "c9fc835cc7da4e0e": {
+      "caso": "4",
+      "porque": "Extrato de Contrato resgatado antes por 'edital' no corpo (e com cifra real de R$ 369.600,00). Agora descartado."
+    },
+    "dcd548f2f702c56a": {
+      "caso": "5",
+      "porque": "Extrato de Termo Aditivo resgatado antes por 'R$ 0,1203'. Cifra sem milhar nao conta."
+    },
+    "349443f3076ab55a": {
+      "caso": "6",
+      "porque": "Deliberacao CIB-SUS/MG 5.960 de Teto MAC (R$ 28.132.761,89): mantida, forte e protegida do teto por ser iofmg."
+    },
+    "8f89654ecee2aac7": {
+      "caso": "7",
+      "porque": "RDC da Anvisa 1.039 que altera regra: mantida por 'habilita'/'credencia' na ementa, nao por 'rdc' no corpo."
+    },
+    "9681323633188e26": {
+      "caso": "8",
+      "porque": "Portaria GM/MS 12.134 de habilitacao com cifra real de R$ 25.304.807,91 no corpo: forca soma titulo e corpo."
+    },
+    "f7077106b63989be": {
+      "caso": "9 (rodada 1, achado 1 do revisor)",
+      "porque": "Retificacao do Anexo XIV da Portaria GM/MS 6.898 (habilitacao de servicos de saude bucal), 01/09 dou. Titulo e tipo sao literalmente 'Retificacao', sem ementa: o _FORTE nunca teria como resgatar esse item se a regra bare 'retificacao' o descartasse. Precisa ficar mantida sem passar pelo resgate."
+    }
+  },
+  "publicacoes": [
+    {
+      "id": "2badc4fb9af2a751",
+      "fonte": "dou",
+      "data_publicacao": "2026-08-31",
+      "coletado_em": "2026-09-06T12:24:21Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "secao": null,
+      "pagina": 4,
+      "edicao": "164-C",
+      "tipo": "Portaria",
+      "numero": "4.795",
+      "titulo": "Portaria SAES/MS Nº 4.795, DE 26 DE agosto DE 2026",
+      "ementa": "Inclui atributo complementar, altera procedimentos e tipo de compatibilidades na Tabela de Procedimentos, Medicamentos, Órteses, Próteses e Materiais Especiais do Sistema Único de Saúde.",
+      "texto": "Portaria SAES/MS Nº 4.795, DE 26 DE agosto DE 2026\nInclui atributo complementar, altera procedimentos e tipo de compatibilidades na Tabela de Procedimentos, Medicamentos, Órteses, Próteses e Materiais Especiais do Sistema Único de Saúde.\nO SECRETÁRIO DE ATENÇÃO ESPECIALIZADA À SAÚDE, no uso das atribuições que lhe confere o Decreto nº 11.798, de 28 de novembro de 2023, resolve:\nArt. 1º Fica incluído, na Tabela de Procedimentos, Medicamentos, Órteses, Próteses e Materiais Especiais do Sistema Único de Saúde, o atributo complementar 072- Exige procedimento de Videolaringoscopia ou Laringoscopia.\nParágrafo único. O atributo complementar previsto no caput determina que seja registrado e executado na APAC, obrigatoriamente, o procedimento 02.09.04.004-1 - Videolaringoscopia ou 02.09.04.002-5 - Laringoscopia, observadas as compatibilidades estabelecidas entre o procedimento principal e os procedimentos secundários.\nArt. 2º Ficam alterados, na Tabela de Procedimentos, Medicamentos, Órteses, Próteses e Materiais Especiais do Sistema Único de Saúde, os procedimentos conforme o Anexo I a esta Portaria.\nArt. 3º Ficam alterados, na Tabela de Procedimentos, Medicamentos, Órteses, Próteses e Materiais Especiais do Sistema Único de Saúde, os tipos de compatibilidades conforme o Anexo II a esta Portaria.\nArt. 4º Cabe à Coordenação-Geral de Gestão de Sistemas de Informação em Saúde do Departamento de Regulação Assistencial e Controle da Secretaria de Atenção Especializada à Saúde do Ministério da Saúde (CGSI/DRAC/SAES/MS) a adoção das providências necessárias para adequar o Sistema de Gerenciamento da Tabela de Procedimentos, Medicamentos, Órteses, Próteses e Materiais Especiais do Sistema Único de Saúde (SIGTAP) e do Repositório de Terminologias em Saúde (RTS), com vistas à implantação das alterações definidas por esta Portaria.\nArt. 5º Esta Portaria entra em vigor na data de sua publicação, com efeitos operacionais nos sistemas de informação a partir da competência seguinte à sua publicação.\nMOZART JULIO TABOSA SALES\nANEXO I\nPROCEDIMENTOS ALTERADOS\nPROCEDIMENTO\nATRIBUTOS ALTERADOS\n09.02.01.005-0 - OCI PROGRESSÃO DA AVALIAÇÃO DIAGNÓSTICA II - SÍNDROME CORONARIANA CRÔNICA\nALTERA VALOR DO SERVIÇO AMBULATORIAL PARA: R$ 1.879,80\n09.03.01.002-0 OCI AVALIAÇÃO DIAGNÓSTICA EM ORTOPEDIA COM RECURSOS DE RADIOLOGIA E ULTRASSONOGRAFIA\nALTERA VALOR DO SERVIÇO AMBULATORIAL PARA: R$ 216,83\n09.03.01.003-8 -OCI AVALIAÇÃO DIAGNÓSTICA EM ORTOPEDIA COM RECURSOS DE RADIOLOGIA E TOMOGRAFIA COMPUTADORIZADA\nALTERA VALOR DO SERVIÇO AMBULATORIAL PARA: R$ 417, 15\n09.03.01.004-6 -OCI AVALIAÇÃO DIAGNÓSTICA EM ORTOPEDIA COM RECURSOS DE RADIOLOGIA E RESSONÂNCIA MAGNÉTICA\nALTERA VALOR DO SERVIÇO AMBULATORIAL PARA: R$ 616,76\n09.06.01.001-2 - OCI - GIN1 - AVALIAÇÃO DIAGNÓSTICA INICIAL DE SAÚDE DA MULHER (GINECOLOGIA) I\nALTERA VALOR DO SERVIÇO AMBULATORIAL PARA: R$ 199,95\n09.06.01.002-0 - OCI - GIN1 - AVALIAÇÃO DIAGNÓSTICA INICIAL DE SAÚDE DA MULHER (GINECOLOGIA) II\nALTERA VALOR DO SERVIÇO AMBULA",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.795-de-26-de-agosto-de-2026-729109381",
+      "origem": {
+        "metodo": "in.gov.br/consulta",
+        "classPK": "729109383",
+        "texto_integral": true,
+        "hierarquia": "Ministério da Saúde/Secretaria de Atenção Especializada à Saúde"
+      }
+    },
+    {
+      "id": "8c8731bbce27cf8c",
+      "fonte": "dou",
+      "data_publicacao": "2026-08-31",
+      "coletado_em": "2026-09-06T12:24:21Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "secao": "1",
+      "pagina": 111,
+      "edicao": "164",
+      "tipo": "Resolução",
+      "numero": "3.416",
+      "titulo": "RESOLUÇÃO-RE Nº 3.416, DE 28 DE AGOSTO DE 2026",
+      "ementa": null,
+      "texto": "RESOLUÇÃO-RE Nº 3.416, DE 28 DE AGOSTO DE 2026\nO GERENTE-GERAL DE MEDICAMENTOS DA AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA, no uso das atribuições que lhe confere o art. 100, aliado ao art. 203, I, § 1º do Regimento Interno aprovado pela Resolução da Diretoria Colegiada - RDC nº 585, de 10 de dezembro de 2021, resolve:\nArt. 1º Deferir petições relacionadas à Gerência-Geral de Medicamentos, conforme anexo.\nArt. 2º Esta Resolução entra em vigor na data de sua publicação.\nRAPHAEL SANCHES PEREIRA\nANEXO\nNOME DA EMPRESA CNPJ\nPRINCIPIO(S) ATIVO(S)\nNOME DO MEDICAMENTO NUMERO DO PROCESSO VENCIMENTO DO REGISTRO\nASSUNTO DA PETIÇÃO EXPEDIENTE\nASSUNTO DA PETIÇÃO DO MATRIZ NÚMERO DO EXPEDIENTE MATRIZ NÚMERO DO PROCESSO MATRIZ\nNUMERO DE REGISTRO VALIDADE\nAPRESENTAÇÃO DO PRODUTO\nPRINCIPIO(S) ATIVO(S)\n--------------------------------------------------\n1FARMA INDUSTRIA FARMACEUTICA LTDA 48113906000149\nlevofloxacino hemi-hidratado\nlevofloxacino 25351.741344/2014-27 08/2035\n10506 GENÉRICO - MODIFICAÇÃO PÓS-REGISTRO - CLONE 1584478/24-1\n(11115 - RDC 73/2016 - GENÉRICO - Inclusão de nova concentração - 1493934/24-7 - 25351.563046/2010-05)\n1.0481.0097.005-2 24 Meses\n750 MG COM REV CT BL AL PLAS PVC TRANS X 5\n1.0481.0097.006-0 24 Meses\n750 MG COM REV CT BL AL PLAS PVC TRANS X 50\n1.0481.0097.007-9 24 Meses\n750 MG COM REV CT BL AL PLAS PVC TRANS X 70\n--------------------------------------------------\nCIMED INDUSTRIA S.A 02814497000107\nlevofloxacino hemi-hidratado\nlevofloxacino 25351.563046/2010-05 02/2028\n11115 RDC 73/2016 - GENÉRICO - INCLUSÃO DE NOVA CONCENTRAÇÃO 1493934/24-7\n1.4381.0159.005-7 24 Meses\n750 MG COM REV CT BL AL PLAS PVC TRANS X 5\n1.4381.0159.006-5 24 Meses\n750 MG COM REV CT BL AL PLAS PVC TRANS X 50\n1.4381.0159.007-3 24 Meses\n750 MG COM REV CT BL AL PLAS PVC TRANS X 70\n--------------------------------------------------\nEUROFARMA LABORATORIOS S.A. 61190096000192\nrosuvastatina cálcica\nROX 25351.049097/2021-32 06/2030\n10507 SIMILAR - MODIFICAÇÃO PÓS-REGISTRO - CLONE 0135088/26-9\n(11106 - RDC 73/2016 - GENÉRICO - Ampliação do prazo de validade do medicamento - 0070448/26-4 - 25351.787955/2014-70)\n1.0043.1364.001-5 36 Meses\n5 MG COM REV CT BL AL AL X 10\n1.0043.1364.002-3 36 Meses\n5 MG COM REV CT BL AL AL X 30\n1.0043.1364.003-1 36 Meses\n5 MG COM REV CT BL AL AL X 60\n1.0043.1364.004-1 36 Meses\n5 MG COM REV CT BL AL AL X 90\n1.0043.1364.005-8 36 Meses\n10 MG COM REV CT BL AL AL X 10\n1.0043.1364.006-6 36 Meses\n10 MG COM REV CT BL AL AL X 30\n1.0043.1364.007-4 36 Meses\n10 MG COM REV CT BL AL AL X 60\n1.0043.1364.008-2 36 Meses\n10 MG COM REV CT BL AL AL X 90\n1.0043.1364.009-0 36 Meses\n20 MG COM REV CT BL AL AL X 10\n1.0043.1364.010-4 36 Meses\n20 MG COM REV CT BL AL AL X 30\n1.0043.1364.011-2 36 Meses\n20 MG COM REV CT BL AL AL X 60\n1.0043.1364.012-0 36 Meses\n20 MG COM REV CT BL AL AL X 90\nrosuvastatina cálcica\nRUVA 25351.050433/2015-41 06/2030\n10507 SIMILAR - MODIFICAÇÃO PÓS-REGISTRO - CLONE 0135058/26-7\n(11106 - RDC 73/2016 - GENÉRICO - Ampliação do prazo de validade do m",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-re-n-3.416-de-28-de-agosto-de-2026-729108803",
+      "origem": {
+        "metodo": "in.gov.br/consulta",
+        "classPK": "729108805",
+        "texto_integral": true,
+        "hierarquia": "Ministério da Saúde/Agência Nacional de Vigilância Sanitária/2ª Diretoria/Gerência-Geral de Medicamentos"
+      }
+    },
+    {
+      "id": "5c87ec9922084fcd",
+      "fonte": "dou",
+      "data_publicacao": "2026-08-31",
+      "coletado_em": "2026-09-06T12:24:21Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "secao": "3",
+      "pagina": 107,
+      "edicao": "164",
+      "tipo": "Extrato de Doação",
+      "numero": "3.618/2026",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 3.618/2026",
+      "ementa": null,
+      "texto": "EXTRATO DE DOAÇÃO Nº 3.618/2026\nDoador: a UNIÃO, por intermédio do MINISTÉRIO DA SAÚDE - MS, neste ato representado pela SECRETARIA DE ATENÇÃO PRIMÁRIA À SAÚDE - Saps.\nDonatário: Medicilândia/PA, neste ato representado pela Secretaria Municipal de Saúde.\nObjeto: doação, com encargos, de bens destinados à estruturação de Unidades Básicas de Saúde - UBS, no âmbito da modalidade Equipamentos para UBS do eixo Saúde do Programa de Aceleração do Crescimento - Novo PAC 2025, com previsão de entregas sucessivas por lote ou remessa, cuja descrição individualizada dos bens constará dos Anexos integrantes deste Termo.\nNúmero Único de Protocolo: 25000.108511/2026-47.\nData de assinatura do termo de doação: 21/08/2026.",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-3.618/2026-729031336",
+      "origem": {
+        "metodo": "in.gov.br/consulta",
+        "classPK": "729031338",
+        "texto_integral": true,
+        "hierarquia": "Ministério da Saúde/Secretaria de Atenção Primária à Saúde"
+      }
+    },
+    {
+      "id": "c9fc835cc7da4e0e",
+      "fonte": "dou",
+      "data_publicacao": "2026-08-31",
+      "coletado_em": "2026-09-06T12:24:21Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Grupo Hospitalar Conceição",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "164",
+      "tipo": "Extrato de Contrato",
+      "numero": null,
+      "titulo": "Extrato de Contrato",
+      "ementa": null,
+      "texto": "Extrato de Contrato\nEspécie: Contrato de Prestação de Serviços nº 594/26, Processo nº 293/26, firmado entre o Grupo Hospitalar Conceição e a empresa PHYSICS CONSULTORIA EM FÍSICA MÉDICA LTDA, inscrita no CNPJ sob o nº 04.857.243/0001-00. Objeto: prestação de serviços de física médica voltados aos serviços de diagnóstico por imagem dos HOSPITAIS NOSSA SENHORA DA CONCEIÇÃO (INCLUINDO O HOSPITAL CRIANÇA CONCEIÇÃO, CRISTO REDENTOR, FÊMINA E UPA MOACYR SCLIAR), pelo período de 12 (doze) meses, prorrogável até o limite legal, mediante acordo entre as partes, conforme Termo de Referência e demais especificações e condições constantes do respectivo Edital de licitação e seus Anexos. Em retribuição aos serviços constantes da cláusula primeira o CONTRATANTE se obriga a pagar à CONTRATADA o valor total estimado: R$ 369.600,00 (trezentos e sessenta e nove mil e seiscentos reais).",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-contrato-728899716",
+      "origem": {
+        "metodo": "in.gov.br/consulta",
+        "classPK": "728899718",
+        "texto_integral": true,
+        "hierarquia": "Ministério da Saúde/Grupo Hospitalar Conceição"
+      }
+    },
+    {
+      "id": "dcd548f2f702c56a",
+      "fonte": "dou",
+      "data_publicacao": "2026-08-31",
+      "coletado_em": "2026-09-06T12:24:21Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "164",
+      "tipo": "Extrato de Termo Aditivo",
+      "numero": "1/2026",
+      "titulo": "EXTRATO DE TERMO ADITIVO Nº 1/2026 - UASG 250005",
+      "ementa": null,
+      "texto": "EXTRATO DE TERMO ADITIVO Nº 1/2026 - UASG 250005\nNúmero do Contrato: 261/2025.\nNº Processo: 25000.156512/2024-36.\nPregão. Nº 90094/2024. Contratante: DEPARTAMENTO DE LOGISTICA EM SAUDE - DLOG. Contratado: 37.333.393/0001-65 - SEMINA INSUMOS ESTRATÉGICOS LTDA. Objeto: Prorrogar o prazo de vigência do contrato por mais 12 (doze) meses, a partir de 29/08/2026 até 28/08/2027 e reajustar o valor unitário do insumo para R$ 0,1203. Vigência: 29/08/2026 a 28/08/2027. Valor Total Atualizado do Contrato: R$ 2.406.000,00. Data de Assinatura: 27/08/2026.\n(COMPRASNET 4.0 - 27/08/2026).",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-aditivo-n-1/2026-uasg-250005-728884715",
+      "origem": {
+        "metodo": "in.gov.br/consulta",
+        "classPK": "728884717",
+        "texto_integral": true,
+        "hierarquia": "Ministério da Saúde/Secretaria Executiva/Departamento de Logística em Saúde/Coordenação-Geral de Licitações e Contratos de Insumos Estratégicos para Saúde"
+      }
+    },
+    {
+      "id": "349443f3076ab55a",
+      "fonte": "iofmg",
+      "data_publicacao": "2026-09-04",
+      "coletado_em": "2026-09-06T12:25:26Z",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "secao": null,
+      "pagina": 26,
+      "edicao": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.960",
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.960,",
+      "ementa": null,
+      "texto": "DE 03 DE SETEMBRO DE 2026\nAprova a solicitação ao Ministério da Saúde da incorporação de \nrecurso financeiro para o Teto Financeiro Federal de Média e Alta \nComplexidade (Teto MAC) do município de Manhuaçu, gestão \nmunicipal.\nA Comissão Intergestores Bipartite do Sistema Único de Saúde do \nEstado de Minas Gerais - CIB-SUS/MG, no uso de suas atribuições que \nlhe conferem o art. 14-A da Lei Federal nº 8.080, de 19 de setembro de \n1990, e o art. 32 do Decreto Federal nº 7.508, de 28 de junho de 2011 \ne considerando:\n- o Memorando SES/SUBRAS-NPP nº. 628/2026;\n- o Ofício nº 562/2026, de 03 de setembro de 2026, do Conselho das \nSecretarias Municipais de Saúde - COSEMS/MG; e\n- a aprovação Ad Referendum da CIB-SUS/MG, conforme disposto \nno art. 50 da Deliberação CIB-SUS/MG nº 3.030, de 13 de novembro \nde 2019, que aprova o Regimento Interno da Comissão Intergestores \nBipartite do Sistema Único de Saúde do Estado de Minas Gerais (CIBSUS/MG), das Comissões Intergestores Bipartite Macrorregionais \n(CIB Macro) e das Comissões Intergestores Bipartite Microrregionais \n(CIB Micro) do Estado de Minas Gerais.\nDELIBERA:\nArt. 1º - Fica aprovada a solicitação ao Ministério da Saúde da \nincorporação de recurso financeiro para o Teto Financeiro Federal de \nMédia e Alta Complexidade (Teto MAC) do município de Manhuaçu.\nParágrafo único – O pleito se refere à incorporação de recursos com \na motivação de complementação de custeio do prestador/unidade \nhospitalar/serviço, especificamente em relação ao Hospital César Leite, \nCNES 2173166.\nArt. 2º - A alocação de que trata o art. 1º desta Deliberação perfaz o \nvalor total anual de R$ 28.132.761,89 (vinte e oito milhões, cento \ne trinta e dois mil, setecentos e sessenta e um reais e oitenta e nove \ncentavos), onerando o orçamento do Ministério da Saúde, conforme \ndemonstrado no Plano de Incorporação de Recursos apresentado pelo \nmunicípio de Manhuaçu.\nParágrafo único - O recurso deverá ser incorporado ao Fundo Municipal \nde Saúde do município de Manhuaçu.\nArt. 3º - Após a alocação do teto financeiro de que trata esta \nDeliberação, caberá à Câmara Técnica propor a alocação do recurso e à \nComissão Intergestores Bipartite (CIB-SUS/MG) a pactuação quanto a \nprogramação dos recursos na assistência.\nArt. 5º - Esta Deliberação entra em vigor na data de sua publicação, com \nefeitos financeiros na PPI/MG após publicação da Portaria Ministerial \nde alocação do recurso de que trata esta Deliberação.\nBelo Horizonte, 03 de setembro de 2026.\nPOLIANA CARDOSO LOPES SANTOS\nSECRETÁRIA DE ESTADO DE SAÚDE EM EXERCÍCIO \nE COORDENADORA DA CIB-SUS/MG\n03 2255855 - 1\nEXPEDIENTE DO SECRETÁRIO DE SAÚDE",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D",
+      "origem": {
+        "metodo": "api jornalminasgerais",
+        "id_caderno": 330899
+      }
+    },
+    {
+      "id": "8f89654ecee2aac7",
+      "fonte": "dou",
+      "data_publicacao": "2026-08-31",
+      "coletado_em": "2026-09-06T12:24:21Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "secao": "1",
+      "pagina": 107,
+      "edicao": "164",
+      "tipo": "Resolução",
+      "numero": "1.039",
+      "titulo": "RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA nº 1.039, DE 26 DE AGOSTO DE 2026(*)",
+      "ementa": "Estabelece critérios, requisitos e procedimentos para laboratórios analíticos que realizam ensaios de controle de qualidade em produtos e serviços sujeitos à vigilância sanitária, dispõe sobre as boas práticas para laboratórios analíticos, sobre a habilitação na Rede Brasileira de Laboratórios Analíticos em Saúde e sobre o credenciamento para a execução de análises fiscais e de controle, altera a Resolução da Diretoria Colegiada - RDC nº 703, de 16 de maio de 2022, e revoga a Resolução da Diretoria Colegiada - RDC nº 512, de 27 de maio de 2021, e a Resolução da Diretoria Colegiada - RDC nº 928, de 25 de setembro de 2024.",
+      "texto": "RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA nº 1.039, DE 26 DE AGOSTO DE 2026(*)\nEstabelece critérios, requisitos e procedimentos para laboratórios analíticos que realizam ensaios de controle de qualidade em produtos e serviços sujeitos à vigilância sanitária, dispõe sobre as boas práticas para laboratórios analíticos, sobre a habilitação na Rede Brasileira de Laboratórios Analíticos em Saúde e sobre o credenciamento para a execução de análises fiscais e de controle, altera a Resolução da Diretoria Colegiada - RDC nº 703, de 16 de maio de 2022, e revoga a Resolução da Diretoria Colegiada - RDC nº 512, de 27 de maio de 2021, e a Resolução da Diretoria Colegiada - RDC nº 928, de 25 de setembro de 2024.\nA DIRETORIA COLEGIADA DA AGÊNCIA NACIONAL DE VIGILÂNCIA SANITÁRIA, no uso das competências que lhe conferem os arts. 7º, inciso III, e 15, incisos III e IV, da Lei nº 9.782, de 26 de janeiro de1999, e considerando o disposto no art. 187, inciso VI e § 1º, do Regimento Interno, aprovado pela Resolução da Diretoria Colegiada - RDC nº 585, de 10 de dezembro de 2021, resolve adotar a seguinte Resolução, conforme deliberado em reunião realizada em 19 de agosto de 2026, e eu, Diretor-Presidente, determino a sua publicação.\nCAPÍTULO I\nDAS DISPOSIÇÕES INICIAIS\nSeção I\nObjetivo\nArt. 1º Esta Resolução estabelece critérios, requisitos e procedimentos aplicáveis aos laboratórios analíticos, públicos ou privados, que realizam ensaios de controle de qualidade em produtos e serviços sujeitos à vigilância sanitária, referentes a:\nI - Boas Práticas para Laboratórios Analíticos;\nII - habilitação no âmbito da Rede Brasileira de Laboratórios Analíticos em Saúde (Reblas); e\nIII - credenciamento para a execução de análises fiscais e de controle previstas na legislação sanitária.\nParágrafo único. O disposto nesta Resolução não isenta os laboratórios do cumprimento das legislações e dos regulamentos específicos vinculados às suas áreas de atuação.\nSeção II\nAbrangência\nArt. 2º Esta Resolução se aplica aos:\nI - laboratórios analíticos, públicos ou privados, que realizam ensaios de controle de qualidade em produtos e serviços sujeitos à vigilância sanitária e que estão sujeitos ao licenciamento sanitário conforme a Resolução da Diretoria Colegiada RDC nº 153, 26 de abril de 2017, e Instrução Normativa IN nº 66, 1º de setembro de 2020, ou outras normas que vierem a substituí-las, bem como os códigos sanitários locais;\nII - laboratórios oficiais que pertençam à Rede Nacional de Laboratórios de Vigilância Sanitária (RNLVISA);\nIII - laboratórios analíticos que pertençam aos importadores, distribuidores, fracionadores, fabricantes de produtos sujeitos à vigilância sanitária e às demais empresas responsáveis por garantir e zelar pela manutenção da qualidade, segurança e eficácia dos produtos até o consumidor final; e\nIV - detentores da regularização de produtos sujeitos à vigilância sanitária.\nParágrafo único. O presente regulamento se aplica apenas aos estabelecimentos localizados em t",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-da-diretoria-colegiada-anvisa-n-1.039-de-26-de-agosto-de-2026-*-729101481",
+      "origem": {
+        "metodo": "in.gov.br/consulta",
+        "classPK": "729101483",
+        "texto_integral": true,
+        "hierarquia": "Ministério da Saúde/Agência Nacional de Vigilância Sanitária/Diretoria Colegiada"
+      }
+    },
+    {
+      "id": "9681323633188e26",
+      "fonte": "dou",
+      "data_publicacao": "2026-09-01",
+      "coletado_em": "2026-09-06T12:24:45Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "secao": "1",
+      "pagina": 70,
+      "edicao": "165",
+      "tipo": "Portaria",
+      "numero": "12.134",
+      "titulo": "Portaria GM/MS Nº 12.134, DE 31 DE agosto DE 2026",
+      "ementa": "Altera a Portaria GM/MS nº 9.520, de 18 de dezembro de 2025, que habilita estabelecimento para prestação de serviços especializados em saúde no âmbito do componente créditos financeiros do Programa Agora Tem Especialistas.",
+      "texto": "Portaria GM/MS Nº 12.134, DE 31 DE agosto DE 2026\nAltera a Portaria GM/MS nº 9.520, de 18 de dezembro de 2025, que habilita estabelecimento para prestação de serviços especializados em saúde no âmbito do componente créditos financeiros do Programa Agora Tem Especialistas.\nO MINISTRO DE ESTADO DA SAÚDE, no uso das atribuições que lhe conferem os incisos I e II do parágrafo único do art. 87 da Constituição Federal, resolve:\nArt. 1º A Portaria GM/MS nº 9.520, de 18 de dezembro de 2025, passa a vigorar com as seguintes alterações:\n\"Art. 2º O limite anual para emissão de Certificado de Valor de Créditos Financeiros do Athena Healthcare Holding S A, habilitado no âmbito do componente créditos financeiros do Programa Agora Tem Especialistas será de R$ 25.304.807,91 (vinte e cinco milhões, trezentos e quatro mil oitocentos e sete reais e noventa e um centavos)\". (NR)\nArt. 2º Esta Portaria entra em vigor na data de sua publicação.\nALEXANDRE ROCHA SANTOS PADILHA",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.134-de-31-de-agosto-de-2026-729400778",
+      "origem": {
+        "metodo": "in.gov.br/consulta",
+        "classPK": "729400780",
+        "texto_integral": true,
+        "hierarquia": "Ministério da Saúde/Gabinete do Ministro"
+      }
+    },
+    {
+      "id": "f7077106b63989be",
+      "fonte": "dou",
+      "data_publicacao": "2026-09-01",
+      "coletado_em": "2026-09-06T12:24:45Z",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "secao": "1",
+      "pagina": 70,
+      "edicao": "165",
+      "tipo": "Retificação",
+      "numero": null,
+      "titulo": "Retificação",
+      "ementa": null,
+      "texto": "Retificação\nNo Anexo XIV da Portaria GM/MS nº 6.898, de 28 de abril de 2025, republicada no Diário Oficial da União - DOU nº 89, de 14 de maio de 2026, seção 1, páginas 101 - 119.\nOnde se lê:\nANEXO XIVHABILITAÇÃO DE SERVIÇOS DE ESPECIALIDADES EM SAÚDE BUCAL - SESB, POR MUNICÍPIO\nUF\nIBGE\nMUNICIPIO\nCNES\nTIPO DE RECURSO\nTIPO DE PEDIDO\nCOD. HABILITAÇÃO\nPI\n220100\nARRAIAL\n2365715\nCUSTEIO\nHABILITAÇÃO\n0406\nPI\n220320\nCURIMATÁ\n2369486\nCUSTEIO\nHABILITAÇÃO\n0406\nLeia-se:\nANEXO XIV HABILITAÇÃO DE SERVIÇOS DE ESPECIALIDADES EM SAÚDE BUCAL - SESB, POR MUNICÍPIO\nUF\nIBGE\nMUNICIPIO\nCNES\nTIPO DE RECURSO\nTIPO DE PEDIDO\nCOD. HABILITAÇÃO\nPI\n220100\nARRAIAL\n4763955\nCUSTEIO\nHABILITAÇÃO\n0406\nPI\n220320\nCURIMATÁ\n2404672\nCUSTEIO\nHABILITAÇÃO\n0406",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729385631",
+      "origem": {
+        "metodo": "in.gov.br/consulta",
+        "classPK": "729385633",
+        "texto_integral": true,
+        "hierarquia": "Ministério da Saúde/Gabinete do Ministro"
+      }
+    }
+  ]
+}

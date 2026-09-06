@@ -36,7 +36,8 @@ python -m radar.cli --help
 ## Uso
 
 ```bash
-radar coletar --data 2026-09-04 --fonte todas   # dou | iofmg | todas
+radar coletar --data 2026-09-04 --fonte todas   # dou | inlabs | iofmg | todas
+radar coletar --fonte inlabs,iofmg              # lista separada por vírgula
 radar coletar --forcar                          # ignora o cache de brutos
 radar consultar "teto MAC" --desde 2026-06-01   # histórico indexado
 ```
@@ -62,7 +63,291 @@ distingue os quatro desfechos:
 | `parcial` | 1    | coletou, mas algo falhou           | processar e alertar |
 | `erro`    | 2    | a coleta quebrou                   | **não** publicar    |
 
-Com `--fonte todas`, o exit code é o pior status entre as fontes.
+Com mais de uma fonte, o exit code é o **pior status entre elas**: uma fonte
+que quebra faz o comando sair 2 mesmo que a outra tenha gravado o normalizado
+dela. Por isso quem consome o `radar` deve olhar o disco antes de tratar o 2
+como dia perdido — é o que a rotina em nuvem faz para publicar meia edição em
+vez de nenhuma (ver "Rotina em nuvem").
+
+## Fonte INLABS (opcional)
+
+**O padrão é o portal.** `boletim.fontes` no `config/config.yaml` traz `dou` e
+`iofmg`: a fonte `dou` raspa o portal público `in.gov.br` e não exige conta
+nenhuma. Foi ela que sustentou os cinco dias da semana de validação real, a
+partir de IP residencial. De IP de datacenter o portal pode não responder —
+numa VPS deu HTTP 000 —, e se os runners do GitHub estiverem na mesma situação
+a troca para o INLABS é uma linha de YAML. Antes de trocar, rode a **sonda do
+portal** (seção "Rotina em nuvem"): ela responde de graça se o runner passa.
+
+O INLABS é o caminho alternativo: o serviço oficial de distribuição do DOU da
+Imprensa Nacional, um zip de XMLs por seção (`DO1`, `DO2`, `DO3` e as edições
+extras `DO1E`…), com o inteiro teor de cada matéria. Exige conta gratuita em
+<https://inlabs.in.gov.br/>.
+
+**Ressalva honesta:** a fonte `inlabs` nunca rodou contra o serviço real. O que
+existe de teste é contra fixture sintética, montada a partir da documentação do
+formato. Ligá-la é uma troca a validar, não um caminho já percorrido.
+
+Para trocar, edite `boletim.fontes` (`dou` → `inlabs`) e cadastre os dois
+segredos. As credenciais vêm do ambiente, nunca do YAML:
+
+```bash
+export INLABS_EMAIL="voce@exemplo.org"
+export INLABS_SENHA="sua-senha"
+radar coletar --fonte inlabs,iofmg
+```
+
+O login é preguiçoso: reprocessar um dia que já está em `data/raw/<data>/inlabs/`
+não pede credencial nenhuma. Sem edição publicada na data — domingo, feriado —
+o serviço responde 404 e a coleta sai `vazio`, exit 0.
+
+Quais órgãos entram é decisão do bloco `fontes.inlabs` do
+`config/config.yaml`: `orgaos` casa o 1º nível de `artCategory`, e
+`subunidades_extra` recorta a "Presidência da República", que de outro modo
+traria o Executivo inteiro. A ANVISA é aceita em qualquer nível da hierarquia,
+porque o serviço ora a publica como órgão de 1º nível, ora sob o Ministério da
+Saúde.
+
+## Boletim diário (newsletter)
+
+O `radar` entrega dado limpo; o `boletim` é a camada que transforma esse dado
+numa edição legível por um gestor. São três camadas encadeadas, cada uma com um
+comando próprio:
+
+| camada  | comando            | entrega                                    |
+|---------|--------------------|--------------------------------------------|
+| coleta  | `radar coletar`    | `data/normalized/<data>/<fonte>.json`      |
+| boletim | `boletim gerar`    | `boletim/saida/<data>/` (e-mail, md, itens)|
+| site    | `boletim site`     | `site/` estático para o GitHub Pages       |
+
+Entre a coleta e o modelo há um prefiltro determinístico: descarta nomeação,
+extrato de contrato e aviso de licitação por regex, e registra em
+`prefiltro.json` qual regra descartou o quê. Só o que sobra vai ao LLM, em
+lotes, para receber categoria, resumo e relevância. As categorias são cinco:
+
+| categoria | o que entra                                                    |
+|-----------|-----------------------------------------------------------------|
+| A         | captação de recursos: habilitação, teto MAC, emenda, repasse    |
+| B         | mudança de regra: critério, piso, prazo, tabela                 |
+| C         | edital ou chamamento público                                    |
+| D         | fato administrativo relevante, sem recurso e sem regra nova     |
+| X         | irrelevante; fica em `itens.json`, fora da edição               |
+
+### Rodar local
+
+```bash
+pip install -e ".[boletim,dev]"
+
+boletim gerar --data 2026-09-03                 # coleta já feita; chama o modelo
+boletim gerar --data 2026-09-03 --sem-site      # não publica no site/
+boletim renderizar --data 2026-09-03            # refaz os arquivos, sem gastar LLM
+boletim site                                    # reconstrói só o índice
+```
+
+Para ensaiar o pipeline inteiro sem rede, sem custo e sem modelo, use as
+respostas gravadas nas fixtures:
+
+```bash
+boletim gerar --data 2026-09-03 --llm falso --respostas tests/fixtures/boletim/llm
+```
+
+Como o `radar`, o comando `boletim` só existe no `PATH` com a venv ativada; a
+forma `python -m boletim.cli gerar ...` é equivalente e sempre funciona.
+
+### Saída
+
+```
+boletim/saida/<data>/
+  prefiltro.json   o que foi descartado e por qual regra
+  itens.json       o julgamento do dia, incluindo os itens X
+  edicao.md        a edição em markdown
+  edicao.html      o e-mail pronto para enviar
+site/
+  index.html · edicoes/<data>.html · edicoes.json · assets/
+```
+
+`itens.json` é o que permite `boletim renderizar`: corrigir um template não
+custa uma segunda chamada de modelo.
+
+**`boletim/saida/` é versionada.** Ela não está no `.gitignore`: `boletim/saida/<data>`
+é o registro auditável do julgamento que foi ao ar, e é o workflow que commita
+a pasta do dia. A contrapartida é que rodar o boletim na sua máquina suja a
+árvore. Duas formas de não commitar uma edição de teste:
+
+```bash
+boletim gerar --data 2026-09-03 --sem-site     # não mexe no site/
+rm -rf boletim/saida/2026-09-03                # e apague a pasta do dia antes de commitar
+```
+
+ou, melhor para uso repetido, um `--config` próprio apontando `boletim.dir_saida`
+e `boletim.dir_site` para fora do repositório:
+
+```yaml
+# ~/radar-local.yaml
+boletim:
+  dir_saida: /tmp/radar/saida
+  dir_site: /tmp/radar/site
+```
+
+```bash
+boletim gerar --data 2026-09-03 --config ~/radar-local.yaml
+```
+
+### Exit codes do `boletim`
+
+| exit | saída no stdout      | significado                                  |
+|------|----------------------|-----------------------------------------------|
+| 0    | `boletim: N publicações…` | edição inteira                          |
+| 0    | `boletim: vazio`     | não houve edição nos diários (feriado, domingo) |
+| 1    | `boletim: vazio`     | idem, mas alguma fonte esperada não coletou: nada a publicar, rodada degradada |
+| 1    | `boletim: … status=parcial` | edição saiu com ressalva: uma fonte faltou, ou algum item caiu no fallback D |
+| 2    | `erro: …` (stderr)   | não saiu edição; nada deve ser publicado      |
+
+O 1 é publicável de propósito: o prazo de um edital não espera o IOF-MG voltar.
+O 2 nunca é: a rotina em nuvem derruba o job antes de tocar no site. Fonte
+`ausente` nunca conta como dia vazio — com **todas** as fontes ausentes o
+comando sai 2 (`erro: nenhuma fonte coletada em <data>`), porque nada a
+classificar é coleta que não aconteceu, não domingo.
+
+### O modelo
+
+A classificação e a abertura da edição são feitas pelo **Claude Haiku**
+(`boletim.modelo` no `config/config.yaml`), chamado pelo **Claude Code em modo
+`-p`**, não pela API. Não há chave de API neste projeto: o que autentica é o
+token da assinatura.
+
+```bash
+claude setup-token          # gera o token; guarde em CLAUDE_CODE_OAUTH_TOKEN
+```
+
+Na máquina onde o Claude Code já está logado, nada disso é necessário — o
+`boletim` acha o CLI no `PATH` e usa a sessão existente. O token só é preciso
+onde não há login interativo, como no GitHub Actions. **Cada execução consome a
+cota da assinatura**, não um crédito de API à parte.
+
+A chamada roda desarmada: sem ferramentas, sem MCP, sem sessão persistida, sem
+herdar configuração do projeto, com teto de gasto e num diretório temporário. O
+que entra no prompt é texto de diário oficial vindo da internet; se esse texto
+contiver instruções, o pior desfecho é uma classificação errada.
+
+### Identidade visual
+
+A autoridade é o `DESIGN.md` da Thauma (documento interno, fora deste repo), não
+o gosto de quem edita o template. O que ele impõe e está codificado aqui:
+sentença em vez de Title Case, número em vez de adjetivo, hífen em vez de
+travessão, nada de emoji nem de pergunta retórica — `boletim.edicao.validar_voz`
+reprova o texto do modelo e pede correção antes de aceitar a abertura.
+
+**Um botão por e-mail.** O botão é o WhatsApp; "ler a versão completa" e o
+segundo contato são links de texto. O CTA é configurável em `boletim.cta` do
+`config/config.yaml` (`whatsapp`, `texto_botao`, `mensagem`), e a mensagem
+aceita `{data}`.
+
+### Rotina em nuvem
+
+O workflow `.github/workflows/boletim-diario.yml` roda a cadeia inteira e
+publica no GitHub Pages. Setup único no repositório:
+
+1. **Settings → Pages → Source: "GitHub Actions"**. Sem isso o `deploy-pages`
+   falha com "Pages not enabled".
+2. **Settings → Secrets and variables → Actions**, um segredo obrigatório:
+   - `CLAUDE_CODE_OAUTH_TOKEN` — saída de `claude setup-token`.
+3. Só se `boletim.fontes` incluir `inlabs`: `INLABS_EMAIL` e `INLABS_SENHA`,
+   de uma conta gratuita em <https://inlabs.in.gov.br/>. Com a lista padrão
+   (`dou`, `iofmg`) eles não são usados — os dois nomes continuam no `env` do
+   passo de coleta, chegam vazios e nada os lê, porque a `FonteINLABS` só é
+   instanciada quando `inlabs` está entre as fontes pedidas.
+4. Nada mais: o `GITHUB_TOKEN` do próprio Actions cobre o commit, o deploy e a
+   issue de falha.
+
+**A rotina vem desligada.** O repositório traz o arquivo `PARAR` na raiz: o job
+roda, imprime o motivo e pula tudo. É de propósito — a perna do LLM ainda não
+executou nenhuma vez contra o `claude` real, e um cron diário estreando com uma
+flag recusada pelo CLI viraria uma issue vermelha por dia. Para ligar, faça a
+rodada que falta (`boletim gerar --data <data já coletada> --llm claude
+--sem-site`, com o `claude` logado), confira o `itens.json` e o `edicao.html`, e
+então apague o arquivo e commite:
+
+```bash
+git rm PARAR && git commit -m "boletim: liga a rotina diária" && git push
+```
+
+Esse commit é o gesto inteiro: **nenhum teste precisa ser alterado junto**. A
+suíte aceita o repositório com e sem `PARAR`; o que ela cobra é que um freio
+presente diga na primeira linha por que está ali, porque é essa linha que o
+workflow imprime como `freio remoto ativo:`.
+
+**Horários.** 09:30 e 12:00 no horário de Brasília, de segunda a sábado (no
+arquivo eles aparecem como `30 12` e `0 15`, porque o cron do GitHub é UTC). A
+execução das 12:00 é a rede de segurança de quando o diário ainda não estava
+publicado às 09:30, e se anula sozinha quando `site/edicoes/<data>.html` já
+existe.
+
+**Disparo manual.** Actions → "Boletim diário" → "Run workflow", com duas
+entradas: `data` (`AAAA-MM-DD`, padrão hoje em São Paulo) e `forcar` (regera
+mesmo que a edição do dia já exista).
+
+**Sonda do portal.** `.github/workflows/sonda-dou.yml`, Actions → "Sonda do
+DOU" → "Run workflow", com uma entrada opcional `data` (padrão: ontem em São
+Paulo). Roda só `radar coletar --fonte dou`, sobe o normalizado como artefato
+(7 dias) e escreve no resumo da execução:
+
+```
+DOU pelo portal a partir do runner: ok|vazio|parcial|erro (rc N)
+```
+
+Ela existe porque não se sabe se o portal `in.gov.br` atende a faixa de IP do
+GitHub: de IP residencial serviu cinco dias seguidos, de uma VPS devolveu HTTP
+000. `ok` com publicações no artefato quer dizer que a fonte padrão serve em
+nuvem; `erro` é a deixa para trocar `dou` por `inlabs` em `boletim.fontes`.
+Rode num dia útil — em domingo o portal devolve `vazio` legitimamente e a
+medição não diz nada.
+
+O job termina **verde mesmo quando o portal bloqueia**: o veredito é a linha do
+resumo, não a cor do job. Um job vermelho diria "algo deu errado", quando
+descobrir que o runner é bloqueado é a sonda funcionando.
+
+**Freio remoto.** Criar e commitar um arquivo `PARAR` na raiz da `main`
+desliga a rotina: o job continua rodando, imprime `freio remoto ativo:` com a
+primeira linha do arquivo — escreva ali o motivo — e pula todo o resto, sem
+coletar, sem chamar o modelo e sem publicar. Remover o arquivo religa. É a
+mesma convenção de freio remoto usada internamente na Thauma: desligar tem de
+ser um commit que qualquer um vê e reverte, não uma mudança escondida em
+Settings.
+
+```bash
+echo "IOF-MG mudou o layout do PDF; retomar depois do ajuste" > PARAR
+git add PARAR && git commit -m "freio: pausa o boletim" && git push
+```
+
+**Quando uma fonte cai.** O `radar` sai 2 quando **qualquer** fonte quebra,
+mesmo tendo gravado o normalizado da outra. O passo de coleta não trata esse 2
+como veredito: ele conta os `data/normalized/<data>/*.json`.
+
+| coleta | disco | o job |
+|--------|-------|-------|
+| exit 0 | —     | segue; edição inteira |
+| exit 1 | —     | segue com `parcial=true`; edição com ressalva |
+| exit 2 | pelo menos um json | segue com `parcial=true`; a fonte que caiu vira `ausente` e a edição sai parcial |
+| exit 2 | nenhum json | `exit 2`: nada é publicado |
+| outro (127, 137…) | — | propaga o código; nada é publicado |
+
+O log do passo mostra o stdout do `radar` (`<fonte>: erro | …`), então qual
+fonte caiu fica no registro da execução. Isso existe porque o portal do DOU
+pode recusar o IP do runner: perder o IOF-MG junto seria perder o dia inteiro
+por um bloqueio que nem é dele.
+
+**Quando falha.** O job abre uma issue intitulada `Boletim <data> falhou` com o
+link da execução, e não duplica se já houver uma aberta com o mesmo título.
+Exit 2 na geração derruba o job antes de qualquer publicação — e qualquer
+código que não seja 0, 1 ou 2 (um 127, um 137) também derruba, em vez de cair
+num `else` de sucesso silencioso. `boletim: vazio` termina o job sem publicar
+nada.
+
+**Fontes da coleta.** O `--fonte` do workflow é lido de `boletim.fontes` do
+`config/config.yaml`, não escrito à mão no YAML do Actions: as duas listas
+divergindo produziriam um dia inteiro de fonte `ausente`, que hoje é exit 2 e
+antes era um "vazio" verde.
 
 ## Integração com o Hermes
 

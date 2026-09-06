@@ -1,0 +1,37 @@
+# A suíte inteira em todo push e todo PR, em qualquer branch.
+#
+# Sem isto, o único runner do projeto era a rotina diária: um push que
+# quebrasse um template só aparecia na manhã seguinte, como job vermelho do
+# boletim, misturado com falha de coleta e de modelo. Aqui a falha chega no
+# commit que a causou.
+#
+# `-W error` porque a suíte já roda limpa: DeprecationWarning de dependência é
+# aviso de migração pendente, e ele precisa doer enquanto ainda dá tempo.
+name: Testes
+
+on:
+  push:
+  pull_request:
+
+# Só ler o código: este workflow não commita, não publica e não abre issue.
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Dependências
+        run: pip install -e ".[boletim,dev]"
+
+      - name: Suíte
+        run: python -m pytest -q -W error

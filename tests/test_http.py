@@ -96,3 +96,54 @@ def test_obter_texto_respeita_o_encoding_pedido_e_ignora_o_declarado():
 def test_sessao_tem_user_agent():
     sessao = criar_sessao()
     assert "Mozilla" in sessao.headers["User-Agent"]
+
+
+# ── G2: 404 aceitável e headers por requisição (INLABS) ─────────────────────
+
+
+class SessaoQueRegistraHeaders:
+    """Aceita `headers` e guarda o que recebeu, inclusive quando não recebe."""
+
+    def __init__(self, respostas):
+        self.respostas = list(respostas)
+        self.headers_recebidos: list = []
+
+    def get(self, url, timeout=None, **kwargs):
+        self.headers_recebidos.append(kwargs.get("headers"))
+        return self.respostas.pop(0)
+
+
+def test_404_aceito_devolve_none_em_vez_de_levantar():
+    """No INLABS o 404 é o arquivo do dia não existir (domingo, feriado),
+    não indisponibilidade da fonte.
+    """
+    s = SessaoFalsa([RespostaFalsa(404)])
+    assert obter_bytes(s, "https://x", aceitar_404=True, espera_base=0) is None
+    assert s.chamadas == 1
+
+
+def test_404_continua_levantando_para_quem_nao_pediu():
+    """O padrão não muda: as fontes atuais dependem do 404 ser erro."""
+    s = SessaoFalsa([RespostaFalsa(404)])
+    with pytest.raises(FonteIndisponivel):
+        obter_bytes(s, "https://x", espera_base=0)
+
+
+def test_aceitar_404_nao_engole_outros_erros():
+    s = SessaoFalsa([RespostaFalsa(403)])
+    with pytest.raises(FonteIndisponivel):
+        obter_bytes(s, "https://x", aceitar_404=True, espera_base=0)
+
+
+def test_headers_extras_chegam_na_requisicao():
+    s = SessaoQueRegistraHeaders([RespostaFalsa(200, b"zip")])
+    obter_bytes(s, "https://x", headers={"origem": "736372697072"}, espera_base=0)
+    assert s.headers_recebidos == [{"origem": "736372697072"}]
+
+
+def test_sem_headers_extras_a_sessao_nao_recebe_o_argumento():
+    """As sessões falsas já existentes só aceitam `(url, timeout)`; passar
+    `headers=None` sempre quebraria todas elas.
+    """
+    s = SessaoFalsa([RespostaFalsa(200, b"ok")])
+    assert obter_bytes(s, "https://x", espera_base=0) == b"ok"
