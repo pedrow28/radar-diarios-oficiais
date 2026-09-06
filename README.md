@@ -272,6 +272,11 @@ então apague o arquivo e commite:
 git rm PARAR && git commit -m "boletim: liga a rotina diária" && git push
 ```
 
+Esse commit é o gesto inteiro: **nenhum teste precisa ser alterado junto**. A
+suíte aceita o repositório com e sem `PARAR`; o que ela cobra é que um freio
+presente diga na primeira linha por que está ali, porque é essa linha que o
+workflow imprime como `freio remoto ativo:`.
+
 **Horários.** 09:30 e 12:00 no horário de Brasília, de segunda a sábado (no
 arquivo eles aparecem como `30 12` e `0 15`, porque o cron do GitHub é UTC). A
 execução das 12:00 é a rede de segurança de quando o diário ainda não estava

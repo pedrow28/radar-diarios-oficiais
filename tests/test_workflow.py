@@ -249,18 +249,27 @@ def test_a_lista_de_fontes_vem_do_config_e_nao_do_yaml(
     assert "inlabs" not in coleta["run"], "lista de fontes escrita à mão na coleta"
 
 
-def test_o_repositorio_ja_vem_com_o_freio_puxado() -> None:
-    """A rotina só liga depois da primeira rodada real com o `claude`.
+def test_o_freio_presente_diz_o_motivo_e_o_readme_diz_como_soltar() -> None:
+    """O `PARAR` é opcional; o que não é opcional é ele se explicar.
 
-    Nenhuma execução do LLM contra o CLI de verdade aconteceu ainda (todas as
-    tentativas morreram em OAuth expirado). Um cron diário estreando assim
-    abriria uma issue vermelha por dia; o `PARAR` versionado adia isso até
-    alguém apagar o arquivo, que é um commit visível e reversível.
+    A versão anterior deste teste exigia que o arquivo existisse. Isso fazia da
+    ação normal - soltar o freio depois da rodada real com o `claude` - uma
+    quebra da suíte, e a saída óbvia para quem esbarrasse nela seria apagar o
+    teste junto com o arquivo, perdendo de vez a garantia de que um freio
+    presente diz por que está lá. Aqui a ausência passa: o freio é um estado
+    legítimo do repositório, não um invariante.
+
+    Com o arquivo presente, duas exigências. A primeira linha não pode ser
+    vazia, porque é ela que o workflow imprime como `freio remoto ativo:` - uma
+    linha em branco vira um job que se cala sem dizer por quê. E o README tem
+    de ensinar a soltar, senão o freio vira permanente por desconhecimento.
     """
-    assert FREIO.exists(), "o freio saiu do repositório sem a rodada real do LLM"
-    primeira = FREIO.read_text(encoding="utf-8").splitlines()[0]
-    assert "--llm claude" in primeira
-    assert "apague este arquivo" in primeira
+    if not FREIO.exists():
+        return
+    primeira = FREIO.read_text(encoding="utf-8").splitlines()[0].strip()
+    assert primeira, "o freio não diz por que a rotina está parada"
+    leiame = (RAIZ / "README.md").read_text(encoding="utf-8")
+    assert "git rm PARAR" in leiame, "o README não ensina a soltar o freio"
 
 
 # ── workflow de testes ──────────────────────────────────────────────────

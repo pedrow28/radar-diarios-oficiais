@@ -13,3 +13,10 @@ Antes de ligar a rotina, com o `claude` logado:
 e conferir `boletim/saida/<data>/itens.json` e `edicao.html` - acerto de
 categoria, valor inventado, falso X. Passando isso, apague este arquivo e
 commite: a rotina volta a rodar no proximo horario.
+
+    git rm PARAR && git commit -m "boletim: liga a rotina diaria"
+
+Apagar o arquivo e o gesto inteiro. Nenhum teste precisa ser tocado junto: a
+suite aceita o repositorio com e sem freio, e so cobra que um freio presente
+diga na primeira linha por que esta ali - e essa linha que o workflow imprime
+como `freio remoto ativo:`.
