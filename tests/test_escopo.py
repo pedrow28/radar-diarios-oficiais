@@ -7,7 +7,7 @@ duas cópias divergiriam no dia em que uma delas fosse ajustada.
 
 from __future__ import annotations
 
-from radar.fontes.escopo import em_escopo, niveis_de
+from radar.fontes.escopo import em_escopo, niveis_de, normalizar
 
 ORGAOS = [
     "Ministério da Saúde",
@@ -78,3 +78,29 @@ def test_anvisa_sob_ministerio_no_escopo_entra_pelo_primeiro_nivel():
 def test_subunidade_extra_so_vale_para_a_presidencia():
     """"Casa Civil" na lista não abre exceção para órgão fora de `orgaos`."""
     assert not _em("Ministério da Educação/Casa Civil")
+
+
+# ── comparação normalizada (R2) ─────────────────────────────────────────
+def test_orgao_casa_com_caixa_acento_e_espaco_diferentes():
+    """O 2º nível vem do texto do portal, não de um enum: "SECRETARIA DO
+    TESOURO  NACIONAL" e "Secretaria do Tesouro Nacional" são o mesmo órgão, e
+    a igualdade exata fazia a diferença sumir sem ninguém ver."""
+    assert _em("MINISTERIO  DA SAUDE/Gabinete do Ministro")
+    assert _em("  Ministério da Saúde  /Gabinete do Ministro")
+
+
+def test_subunidade_casa_normalizada():
+    assert _em("PRESIDENCIA DA REPUBLICA/CASA  CIVIL")
+    assert not _em("Presidência da República/Secretaria Geral")
+
+
+def test_anvisa_casa_normalizada():
+    orgaos = [*ORGAOS, "AGENCIA NACIONAL DE VIGILANCIA SANITARIA"]
+    assert _em("Agência Nacional de Vigilância Sanitária/Diretoria Colegiada", orgaos)
+
+
+def test_normalizar_tira_caixa_acento_e_espaco_repetido():
+    assert normalizar("  Secretaria do  TESOURO Nacional ") == (
+        "secretaria do tesouro nacional"
+    )
+    assert normalizar("Gabinete do Ministro") == normalizar("GABINETE DO MINISTRO")
