@@ -1,19 +1,32 @@
-"""Coleta do DOU: listagem via JSON embutido, depois inteiro teor de cada ato."""
+"""Coleta do DOU: uma busca por órgão, recorte de escopo, depois inteiro teor."""
 
 from __future__ import annotations
 
+import re
+import unicodedata
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 
 from radar.core.config import ConfigDOU
 from radar.core.datas import agora_utc
-from radar.core.erros import ErroRadar, Status
+from radar.core.erros import ErroRadar, FonteIndisponivel, Status
 from radar.core.http import obter_bytes
 from radar.core.log import configurar_log
 from radar.core.modelos import Resultado
 from radar.core.storage import Storage
+from radar.fontes import escopo as regra_escopo
 from radar.fontes.dou import busca, normaliza
 from radar.fontes.dou.texto import TextoDOU, extrair_texto
+
+
+def _apelido(orgao: str) -> str:
+    """Nome de arquivo estável para o bruto de cada órgão.
+
+    Sem ele os órgãos dividiriam `busca-p1.html` e o segundo leria, do cache, a
+    listagem do primeiro — coleta silenciosamente errada no reprocessamento.
+    """
+    sem_acento = unicodedata.normalize("NFKD", orgao).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "-", sem_acento.lower()).strip("-") or "orgao"
 
 
 class FonteDOU:
@@ -37,26 +50,49 @@ class FonteDOU:
 
     def coletar(self, data: date, forcar: bool = False) -> Resultado:
         quando = agora_utc()
+        orgaos = list(self.cfg.orgaos or [])
+        if not orgaos:
+            # Coletar zero órgão sairia `vazio`, exit 0, todo dia — falha total
+            # em silêncio, que é o que o contrato de status existe para impedir.
+            raise ValueError("fontes.dou.orgaos está vazio: nenhum órgão a coletar")
+
         escopo = {
-            "orgao": self.cfg.orgao,
+            "orgaos": orgaos,
+            "subunidades_extra": list(self.cfg.subunidades_extra),
             # O consumidor precisa saber, so lendo o JSON, se `texto` e o
             # inteiro teor ou o resumo truncado da listagem.
             "texto_integral": self.cfg.baixar_texto_integral,
         }
 
-        def pagina(numero: int, cursor) -> str:
-            url = busca.montar_url_busca(self.cfg.orgao, data, self.cfg.delta, numero, cursor)
-            bruto = self._buscar_bruto(data, f"busca-p{numero}.html", url, forcar)
-            return busca.decodificar_busca(bruto)
+        encontrados, avisos, falharam = self._buscar_orgaos(data, orgaos, forcar)
 
-        itens, avisos = busca.percorrer_paginas(pagina, self.cfg.delta)
+        # Todos os órgãos fora do ar não é "dia sem edição": é a fonte
+        # indisponível, e isso tem de chegar ao agente como `erro` (exit 2).
+        if len(falharam) == len(orgaos):
+            raise FonteIndisponivel(
+                f"Busca do DOU falhou em todos os órgãos: {', '.join(falharam)}"
+            )
+
+        # O recorte usa a hierarquia do próprio item, ANTES de buscar o inteiro
+        # teor: filtrar depois custaria uma requisição por ato descartado — e a
+        # Presidência traz o Executivo inteiro para se ficar com a Casa Civil.
+        itens = [i for i in encontrados if self._no_escopo(i)]
 
         if not itens:
+            if encontrados:
+                # Achou e descartou tudo pode ser hierarquia renomeada na fonte;
+                # dizer `vazio` calaria o filtro quebrado para sempre.
+                aviso = (
+                    f"{len(encontrados)} publicações encontradas e nenhuma no escopo "
+                    f"({', '.join(orgaos)}); o filtro de órgão pode ter quebrado."
+                )
+                self.logger.warning("DOU %s: %s", data, aviso)
+                avisos.append(aviso)
             # `vazio` significa "não houve edição, siga sem alarme". Com aviso na
             # mão, isso é mentira: houve algo a relatar, e o status é `parcial`.
             status = Status.PARCIAL if avisos else Status.VAZIO
             self.logger.info(
-                "DOU %s: nenhuma publicação para %s (%s)", data, self.cfg.orgao, status
+                "DOU %s: nenhuma publicação para %s (%s)", data, ", ".join(orgaos), status
             )
             return Resultado(
                 fonte=self.nome, data_publicacao=data, coletado_em=quando,
@@ -74,11 +110,69 @@ class FonteDOU:
         ]
 
         status = Status.PARCIAL if avisos else Status.OK
-        self.logger.info("DOU %s: %d publicações (%s)", data, len(publicacoes), status)
+        self.logger.info(
+            "DOU %s: %d publicações de %d encontradas em %d órgão(s) (%s)",
+            data, len(publicacoes), len(encontrados), len(orgaos), status,
+        )
         return Resultado(
             fonte=self.nome, data_publicacao=data, coletado_em=quando,
             status=status, escopo=escopo, publicacoes=publicacoes, avisos=avisos,
         )
+
+    def _no_escopo(self, item: dict) -> bool:
+        """Aplica a regra compartilhada com o INLABS à hierarquia do item.
+
+        A busca já vem recortada por `orgPrin`, mas o portal devolve a
+        Presidência inteira sob esse órgão: é o 2º nível que separa a Casa Civil
+        da Secretaria-Geral.
+        """
+        return regra_escopo.em_escopo(
+            regra_escopo.niveis_de(item.get("hierarchyStr")),
+            self.cfg.orgaos or [],
+            self.cfg.subunidades_extra,
+        )
+
+    def _buscar_orgaos(
+        self, data: date, orgaos: list[str], forcar: bool
+    ) -> tuple[list[dict], list[str], list[str]]:
+        """Uma busca por órgão, acumulando itens únicos por `urlTitle`.
+
+        Um órgão que não publicou no dia não é aviso — é normal a Fazenda não
+        ter ato nenhum. Um órgão que caiu é: o dia segue com os outros, mas
+        degradado a `parcial` e com o nome de quem faltou.
+        """
+        encontrados: dict[str, dict] = {}
+        avisos: list[str] = []
+        falharam: list[str] = []
+
+        for orgao in orgaos:
+            def pagina(numero: int, cursor, orgao=orgao) -> str:
+                url = busca.montar_url_busca(orgao, data, self.cfg.delta, numero, cursor)
+                nome = f"busca-{_apelido(orgao)}-p{numero}.html"
+                return busca.decodificar_busca(self._buscar_bruto(data, nome, url, forcar))
+
+            try:
+                itens, avisos_do_orgao = busca.percorrer_paginas(pagina, self.cfg.delta)
+            except ErroRadar as exc:
+                falharam.append(orgao)
+                aviso = f"Busca do órgão {orgao} falhou: {exc}"
+                self.logger.warning("DOU %s: %s", data, aviso)
+                avisos.append(aviso)
+                continue
+
+            avisos.extend(avisos_do_orgao)
+            novos = 0
+            for item in itens:
+                chave = item.get("urlTitle") or str(item.get("classPK") or "")
+                if chave and chave not in encontrados:
+                    encontrados[chave] = item
+                    novos += 1
+            self.logger.info(
+                "DOU %s: %s trouxe %d publicações (%d inéditas)",
+                data, orgao, len(itens), novos,
+            )
+
+        return list(encontrados.values()), avisos, falharam
 
     def _baixar_textos(
         self, itens: list[dict], data: date, forcar: bool
