@@ -4,7 +4,7 @@ import pytest
 
 from boletim.carga import carregar
 from boletim.config import ConfigBoletim
-from boletim.prefiltro import Descarte, entes_candidatos, triar, valores_brl
+from boletim.prefiltro import Descarte, entes_candidatos, forca, triar, valores_brl
 from radar.core.modelos import Publicacao, gerar_id
 
 
@@ -99,6 +99,23 @@ def test_entes_candidatos_para_no_e_entre_municipios():
     )
 
 
+def test_entes_candidatos_costura_nome_quebrado_pelo_pdf():
+    """O texto do IOF-MG vem de PDF e quebra o nome no meio."""
+    texto = "Repasse ao Hospital Santa Casa de Montes \nClaros, conforme anexo."
+    assert entes_candidatos(texto) == ("Hospital Santa Casa de Montes Claros",)
+
+
+def test_entes_candidatos_nao_engole_cabecalho_em_caixa_alta():
+    assert entes_candidatos("Fundação Ezequiel Dias\nANEXO I") == (
+        "Fundação Ezequiel Dias",
+    )
+
+
+def test_entes_candidatos_para_na_quebra_de_linha_dupla():
+    texto = "Fundação Hospitalar\n\nHemominas presta contas."
+    assert entes_candidatos(texto) == ("Fundação Hospitalar",)
+
+
 # ── triar: uma publicação por regra ─────────────────────────────────────
 def test_secao_2_do_dou_e_descartada(cfg):
     pub = _pub("PORTARIA Nº 9 QUE HABILITA LEITOS", secao="2", fonte="inlabs")
@@ -130,18 +147,159 @@ def test_retencao_forte_vence_o_descarte(cfg):
     assert triagem.descartadas == ()
 
 
-def test_retencao_forte_pode_vir_do_texto_alem_da_ementa(cfg):
+def test_retencao_forte_no_corpo_nao_resgata_titulo_descartado(cfg):
+    """O corpo de qualquer ato traz cifra e preâmbulo: não serve de resgate.
+
+    Era a maior fonte de ruído da rodada real (222 das 504 mantidas da semana).
+    """
     pub = _pub(
         "PORTARIA Nº 12",
         ementa="Concede férias regulamentares.",
         texto="No mesmo ato fica ampliado o teto MAC da regional em R$ 10.000,00.",
     )
-    assert len(triar([pub], cfg).mantidas) == 1
+    triagem = triar([pub], cfg)
+    assert triagem.mantidas == ()
+    assert triagem.descartadas[0].regra == "descarte"
+
+
+def test_rdc_citada_no_preambulo_nao_resgata(cfg):
+    pub = _pub(
+        "RESOLUÇÃO-RE Nº 3.416",
+        tipo="Resolução",
+        texto="no uso das atribuições que lhe confere a RDC nº 585, de 2021, resolve:",
+    )
+    assert triar([pub], cfg).descartadas[0].regra == "descarte"
+
+
+def test_edital_citado_no_corpo_de_extrato_nao_resgata(cfg):
+    pub = _pub(
+        "EXTRATO DE CONTRATO Nº 594/26",
+        tipo="Extrato de Contrato",
+        texto="conforme condições constantes do respectivo Edital de licitação e seus Anexos.",
+    )
+    assert triar([pub], cfg).descartadas[0].regra == "descarte"
+
+
+def test_vocabulario_de_tabela_sus_retem_pelo_titulo(cfg):
+    pub = _pub(
+        "PORTARIA SAES/MS Nº 4.795",
+        ementa=(
+            "Inclui atributo complementar, altera procedimentos e tipo de "
+            "compatibilidades na Tabela de Procedimentos, Medicamentos, Órteses, "
+            "Próteses e Materiais Especiais do Sistema Único de Saúde."
+        ),
+    )
+    triagem = triar([pub], cfg)
+    assert [p.id for p in triagem.mantidas] == [pub.id]
+    assert forca(pub) >= 1
+
+
+def test_forca_conta_regras_distintas_e_nao_ocorrencias(cfg):
+    """"altera o critério" e "altera o prazo" são a mesma regra, não duas."""
+    pub = _pub("PORTARIA Nº 14", ementa="Altera o critério e altera o prazo do repasse.")
+    assert forca(pub) == 2  # a regra do `altera` e a do `repasse`
+
+
+def test_forca_soma_o_corpo_quando_ha_cifra_com_milhar(cfg):
+    pub = _pub(
+        "PORTARIA GM/MS Nº 12.134",
+        ementa="Altera a Portaria que habilita estabelecimento especializado.",
+        texto="O limite anual será de R$ 25.304.807,91 (vinte e cinco milhões).",
+    )
+    assert forca(pub) >= 2
+
+
+def test_forca_ignora_cifra_sem_milhar_no_corpo(cfg):
+    pub = _pub(
+        "PORTARIA Nº 15",
+        ementa="Institui grupo de trabalho sobre prontuário.",
+        texto="Valor de Contrapartida: R$ 0,00. Valor unitário do insumo: R$ 12,00.",
+    )
+    assert forca(pub) == 0
 
 
 def test_publicacao_sem_regra_alguma_e_mantida(cfg):
     pub = _pub("PORTARIA Nº 13", ementa="Institui grupo de trabalho sobre prontuário.")
     assert len(triar([pub], cfg).mantidas) == 1
+
+
+@pytest.mark.parametrize(
+    "titulo",
+    [
+        "EXTRATO DE DOAÇÃO Nº 3.618/2026",
+        "EXTRATO DE APOSTILAMENTO Nº 4/2026",
+        "EXTRATO DE COMODATO Nº 7/2026",
+        "EXTRATO DE RESCISÃO Nº 2/2026",
+        "EXTRATO DE CESSÃO DE USO Nº 9/2026",
+        "EXTRATO DE COOPERAÇÃO TÉCNICA Nº 1/2026",
+        "AVISO DE REVOGAÇÃO DE LICITAÇÃO",
+        "AVISO DE DISPENSA DE LICITAÇÃO",
+        "AVISO DE REABERTURA DE PRAZO",
+        "AVISO DE ADIAMENTO",
+        "AVISO DE RETIFICAÇÃO",
+        "RETIFICAÇÃO",
+        "TERMO DE APOSTILAMENTO Nº 3/2026",
+        "TERMO DE DOAÇÃO Nº 8/2026",
+        "PORTARIA DE PESSOAL Nº 40",
+        "PORTARIA Nº 41 DE PROGRESSÃO FUNCIONAL",
+        "PORTARIA Nº 42 DE LICENÇA PRÊMIO",
+        "PORTARIA Nº 43 DE LICENÇA CAPACITAÇÃO",
+        "PORTARIA Nº 44 QUE CONCEDE APOSENTADORIA",
+        "PORTARIA Nº 45 QUE CONCEDE PENSÃO POR MORTE",
+        "RESOLUÇÃO-RE Nº 3.416",
+    ],
+)
+def test_ruido_de_diario_e_descartado_pelo_titulo(cfg, titulo):
+    pub = _pub(titulo)
+    triagem = triar([pub], cfg)
+    assert triagem.mantidas == ()
+    assert triagem.descartadas[0].regra == "descarte"
+
+
+def test_teto_nao_corta_publicacao_do_iofmg(cfg):
+    """As deliberações CIB-SUS/MG são poucas e carregam o maior valor do dia."""
+    cfg.max_itens_dia = 3
+    cib = _pub(
+        "DELIBERAÇÃO CIB-SUS/MG Nº 5.960",
+        ementa="Aprova incorporação de recurso ao Teto MAC do município.",
+        fonte="iofmg",
+        tipo="DELIBERAÇÃO",
+    )
+    fraca_mg = _pub(
+        "PORTARIA FUNED Nº 67",
+        ementa="Institui grupo de trabalho sobre prontuário.",
+        fonte="iofmg",
+        tipo="PORTARIA",
+    )
+    forte_dou = _pub("PORTARIA Nº 50", ementa="Habilita leitos e amplia o teto MAC.")
+    fraca_a = _pub("PORTARIA Nº 51", ementa="Institui grupo de trabalho sobre prontuário.")
+    fraca_b = _pub("PORTARIA Nº 52", ementa="Institui comissão de acompanhamento.")
+
+    triagem = triar([fraca_a, cib, forte_dou, fraca_mg, fraca_b], cfg)
+
+    assert [p.id for p in triagem.mantidas] == [cib.id, forte_dou.id, fraca_mg.id]
+    assert {d.id for d in triagem.descartadas} == {fraca_a.id, fraca_b.id}
+    assert {d.regra for d in triagem.descartadas} == {"teto"}
+    assert triagem.avisos == ("2 itens além do teto de 3 não foram classificados",)
+
+
+def test_teto_corta_a_forca_zero_antes_da_forca_um(cfg):
+    cfg.max_itens_dia = 1
+    zero = _pub("PORTARIA Nº 60", ementa="Institui grupo de trabalho sobre prontuário.")
+    um = _pub("PORTARIA Nº 61", ementa="Habilita leitos de retaguarda.")
+    triagem = triar([zero, um], cfg)
+    assert [p.id for p in triagem.mantidas] == [um.id]
+    assert triagem.descartadas == (Descarte(zero.id, "teto"),)
+
+
+def test_teto_menor_que_o_numero_de_protegidas_nao_corta_nenhuma(cfg):
+    cfg.max_itens_dia = 1
+    mg_a = _pub("DELIBERAÇÃO CIB-SUS/MG Nº 1", fonte="iofmg", tipo="DELIBERAÇÃO")
+    mg_b = _pub("DELIBERAÇÃO CIB-SUS/MG Nº 2", fonte="iofmg", tipo="DELIBERAÇÃO")
+    dou = _pub("PORTARIA Nº 70", ementa="Institui grupo de trabalho.")
+    triagem = triar([mg_a, mg_b, dou], cfg)
+    assert {p.id for p in triagem.mantidas} == {mg_a.id, mg_b.id}
+    assert triagem.descartadas == (Descarte(dou.id, "teto"),)
 
 
 def test_teto_corta_os_menos_fortes_e_avisa(cfg):
