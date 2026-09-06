@@ -1,0 +1,225 @@
+# Rotina diária do boletim: coleta -> classificação -> edição -> GitHub Pages.
+#
+# Três decisões que não são óbvias no YAML:
+#
+# 1. Dois horários por dia. O DOU sai cedo e o IOF-MG costuma sair depois; a
+#    execução das 12:00 é a rede de segurança de quando o dia ainda não estava
+#    publicado às 09:30. Ela se anula sozinha quando a edição já existe.
+# 2. O freio é um arquivo no repositório (`PARAR`), não um segredo nem uma
+#    variável: desligar a rotina precisa ser um commit que qualquer um vê e
+#    que qualquer um reverte, sem entrar em Settings.
+# 3. Exit code manda. `radar` e `boletim` devolvem 0 (inteiro), 1 (com
+#    ressalva, publica assim mesmo) e 2 (não saiu, não publica). O passo captura
+#    o código em vez de deixar o `set -e` decidir, porque só 2 pode derrubar o
+#    job.
+name: Boletim diário
+
+on:
+  schedule:
+    # O cron do GitHub é UTC. 12:30 UTC = 09:30 BRT, 15:00 UTC = 12:00 BRT.
+    - cron: "30 12 * * 1-6"
+    - cron: "0 15 * * 1-6"
+  workflow_dispatch:
+    inputs:
+      data:
+        description: "AAAA-MM-DD; padrão: hoje em America/Sao_Paulo"
+        type: string
+        required: false
+      forcar:
+        description: "regera mesmo que a edição do dia já exista"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write      # commitar a edição do dia
+  pages: write         # publicar no GitHub Pages
+  id-token: write      # exigido pelo deploy-pages
+  issues: write        # abrir a issue quando o dia falha
+
+# Os dois horários escrevem em `site/` e dão push na mesma branch. Em paralelo
+# um sobrescreveria o outro; cancelar o que está rodando mataria o boletim das
+# 09:30 pela metade, então a segunda execução espera.
+concurrency:
+  group: boletim
+  cancel-in-progress: false
+
+env:
+  TZ: America/Sao_Paulo
+  PYTHONUTF8: "1"
+
+jobs:
+  boletim:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Freio remoto
+        id: freio
+        run: |
+          if [ -f PARAR ]; then
+            echo "freio remoto ativo: $(head -n 1 PARAR)"
+            echo "pular=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "pular=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # As entradas do disparo manual chegam por `env`, e não interpoladas no
+      # meio do script: `${{ inputs.data }}` colado no shell é injeção de
+      # comando com cara de data.
+      - name: Data da edição
+        id: data
+        if: steps.freio.outputs.pular != 'true'
+        env:
+          ENTRADA_DATA: ${{ inputs.data }}
+          ENTRADA_FORCAR: ${{ inputs.forcar }}
+        run: |
+          data="${ENTRADA_DATA:-$(date +%F)}"
+          echo "data=$data" >> "$GITHUB_OUTPUT"
+          if [ -f "site/edicoes/$data.html" ] && [ "$ENTRADA_FORCAR" != "true" ]; then
+            echo "a edição de $data já está publicada; nada a fazer"
+            echo "existe=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "existe=false" >> "$GITHUB_OUTPUT"
+          fi
+          echo "edição do dia: $data"
+
+      - name: Python
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dependências
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
+        run: pip install -e ".[boletim,dev]"
+
+      - name: Node
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # O LLM é chamado pelo próprio Claude Code em modo `-p`, com o token da
+      # assinatura. Não há chave de API neste projeto.
+      - name: Claude Code
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude --version
+
+      - name: Coleta
+        id: coleta
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
+        env:
+          INLABS_EMAIL: ${{ secrets.INLABS_EMAIL }}
+          INLABS_SENHA: ${{ secrets.INLABS_SENHA }}
+          DATA: ${{ steps.data.outputs.data }}
+        run: |
+          set +e
+          python -m radar.cli coletar --fonte inlabs,iofmg --data "$DATA"
+          rc=$?
+          set -e
+          if [ "$rc" -eq 2 ]; then
+            echo "coleta falhou (exit 2): nada será publicado hoje"
+            exit 2
+          fi
+          if [ "$rc" -eq 1 ]; then
+            echo "coleta parcial (exit 1): a edição sai com ressalva"
+            echo "parcial=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "parcial=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # O normalizado é o insumo do dia: com ele dá para regerar a edição sem
+      # bater de novo no INLABS e no IOF-MG.
+      - name: Guarda o normalizado
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: normalized-${{ steps.data.outputs.data }}
+          path: data/normalized/${{ steps.data.outputs.data }}
+          retention-days: 90
+          if-no-files-found: warn
+
+      - name: Geração do boletim
+        id: boletim
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          DATA: ${{ steps.data.outputs.data }}
+        run: |
+          saida="$RUNNER_TEMP/boletim-stdout.txt"
+          set +e
+          python -m boletim.cli gerar --data "$DATA" > "$saida"
+          rc=$?
+          set -e
+          cat "$saida"
+          if [ "$rc" -eq 2 ]; then
+            echo "geração falhou (exit 2): nada será publicado hoje"
+            exit 2
+          fi
+          # Dia sem edição nos diários: exit 0 e nenhum arquivo escrito. Não há
+          # o que commitar nem o que publicar, e isso não é falha.
+          if grep -q "boletim: vazio" "$saida"; then
+            echo "vazio=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "vazio=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # `boletim/saida/` está no `.gitignore` para que rodar o boletim na
+      # máquina de alguém não suje a árvore. Na nuvem é o contrário: a pasta do
+      # dia é o registro do julgamento que foi ao ar, e é o que permite um
+      # `boletim renderizar` depois sem gastar outra chamada de modelo. Daí o
+      # `--force`, restrito à pasta do dia.
+      - name: Commit da edição
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true' && steps.boletim.outputs.vazio != 'true'
+        env:
+          DATA: ${{ steps.data.outputs.data }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --force "boletim/saida/$DATA"
+          git add site
+          git diff --cached --quiet || git commit -m "boletim: edição $DATA"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Configura o Pages
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true' && steps.boletim.outputs.vazio != 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Empacota o site
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true' && steps.boletim.outputs.vazio != 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Publica no Pages
+        id: deploy
+        if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true' && steps.boletim.outputs.vazio != 'true'
+        uses: actions/deploy-pages@v4
+
+      # Falha silenciosa é o pior desfecho possível numa rotina diária: ninguém
+      # olha a aba Actions todo dia. A issue é o alarme. Uma por dia: reexecutar
+      # um dia que já falhou não abre a segunda.
+      - name: Abre issue em caso de falha
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DATA: ${{ steps.data.outputs.data }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          titulo="Boletim ${DATA:-$(date +%F)} falhou"
+          abertas=$(gh issue list --state open --search "$titulo in:title" --json title --jq '.[].title')
+          if printf '%s\n' "$abertas" | grep -Fxq "$titulo"; then
+            echo "issue já aberta: $titulo"
+            exit 0
+          fi
+          gh issue create --title "$titulo" --body "Run: $RUN_URL"
