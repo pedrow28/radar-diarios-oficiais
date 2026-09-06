@@ -95,6 +95,158 @@ traria o Executivo inteiro. A ANVISA é aceita em qualquer nível da hierarquia,
 porque o serviço ora a publica como órgão de 1º nível, ora sob o Ministério da
 Saúde.
 
+## Boletim diário (newsletter)
+
+O `radar` entrega dado limpo; o `boletim` é a camada que transforma esse dado
+numa edição legível por um gestor. São três camadas encadeadas, cada uma com um
+comando próprio:
+
+| camada  | comando            | entrega                                    |
+|---------|--------------------|--------------------------------------------|
+| coleta  | `radar coletar`    | `data/normalized/<data>/<fonte>.json`      |
+| boletim | `boletim gerar`    | `boletim/saida/<data>/` (e-mail, md, itens)|
+| site    | `boletim site`     | `site/` estático para o GitHub Pages       |
+
+Entre a coleta e o modelo há um prefiltro determinístico: descarta nomeação,
+extrato de contrato e aviso de licitação por regex, e registra em
+`prefiltro.json` qual regra descartou o quê. Só o que sobra vai ao LLM, em
+lotes, para receber categoria, resumo e relevância. As categorias são cinco:
+
+| categoria | o que entra                                                    |
+|-----------|-----------------------------------------------------------------|
+| A         | captação de recursos: habilitação, teto MAC, emenda, repasse    |
+| B         | mudança de regra: critério, piso, prazo, tabela                 |
+| C         | edital ou chamamento público                                    |
+| D         | fato administrativo relevante, sem recurso e sem regra nova     |
+| X         | irrelevante; fica em `itens.json`, fora da edição               |
+
+### Rodar local
+
+```bash
+pip install -e ".[boletim,dev]"
+
+boletim gerar --data 2026-09-03                 # coleta já feita; chama o modelo
+boletim gerar --data 2026-09-03 --sem-site      # não publica no site/
+boletim renderizar --data 2026-09-03            # refaz os arquivos, sem gastar LLM
+boletim site                                    # reconstrói só o índice
+```
+
+Para ensaiar o pipeline inteiro sem rede, sem custo e sem modelo, use as
+respostas gravadas nas fixtures:
+
+```bash
+boletim gerar --data 2026-09-03 --llm falso --respostas tests/fixtures/boletim/llm
+```
+
+Como o `radar`, o comando `boletim` só existe no `PATH` com a venv ativada; a
+forma `python -m boletim.cli gerar ...` é equivalente e sempre funciona.
+
+### Saída
+
+```
+boletim/saida/<data>/
+  prefiltro.json   o que foi descartado e por qual regra
+  itens.json       o julgamento do dia, incluindo os itens X
+  edicao.md        a edição em markdown
+  edicao.html      o e-mail pronto para enviar
+site/
+  index.html · edicoes/<data>.html · edicoes.json · assets/
+```
+
+`itens.json` é o que permite `boletim renderizar`: corrigir um template não
+custa uma segunda chamada de modelo. A pasta `boletim/saida/` é ignorada pelo
+git — rodar o boletim na sua máquina não suja a árvore. Na nuvem é diferente: o
+workflow commita a pasta do dia com `git add --force`, porque lá ela é o
+registro do que foi ao ar.
+
+### Exit codes do `boletim`
+
+| exit | saída no stdout      | significado                                  |
+|------|----------------------|-----------------------------------------------|
+| 0    | `boletim: N publicações…` | edição inteira                          |
+| 0    | `boletim: vazio`     | não houve edição nos diários (feriado, domingo) |
+| 1    | `boletim: … status=parcial` | edição saiu com ressalva: uma fonte faltou, ou algum item caiu no fallback D |
+| 2    | `erro: …` (stderr)   | não saiu edição; nada deve ser publicado      |
+
+O 1 é publicável de propósito: o prazo de um edital não espera o IOF-MG voltar.
+O 2 nunca é: a rotina em nuvem derruba o job antes de tocar no site.
+
+### O modelo
+
+A classificação e a abertura da edição são feitas pelo **Claude Haiku**
+(`boletim.modelo` no `config/config.yaml`), chamado pelo **Claude Code em modo
+`-p`**, não pela API. Não há chave de API neste projeto: o que autentica é o
+token da assinatura.
+
+```bash
+claude setup-token          # gera o token; guarde em CLAUDE_CODE_OAUTH_TOKEN
+```
+
+Na máquina onde o Claude Code já está logado, nada disso é necessário — o
+`boletim` acha o CLI no `PATH` e usa a sessão existente. O token só é preciso
+onde não há login interativo, como no GitHub Actions. **Cada execução consome a
+cota da assinatura**, não um crédito de API à parte.
+
+A chamada roda desarmada: sem ferramentas, sem MCP, sem sessão persistida, sem
+herdar configuração do projeto, com teto de gasto e num diretório temporário. O
+que entra no prompt é texto de diário oficial vindo da internet; se esse texto
+contiver instruções, o pior desfecho é uma classificação errada.
+
+### Identidade visual
+
+A autoridade é o `DESIGN.md` da Thauma (documento interno, fora deste repo), não
+o gosto de quem edita o template. O que ele impõe e está codificado aqui:
+sentença em vez de Title Case, número em vez de adjetivo, hífen em vez de
+travessão, nada de emoji nem de pergunta retórica — `boletim.edicao.validar_voz`
+reprova o texto do modelo e pede correção antes de aceitar a abertura.
+
+**Um botão por e-mail.** O botão é o WhatsApp; "ler a versão completa" e o
+segundo contato são links de texto. O CTA é configurável em `boletim.cta` do
+`config/config.yaml` (`whatsapp`, `texto_botao`, `mensagem`), e a mensagem
+aceita `{data}`.
+
+### Rotina em nuvem
+
+O workflow `.github/workflows/boletim-diario.yml` roda a cadeia inteira e
+publica no GitHub Pages. Setup único no repositório:
+
+1. **Settings → Pages → Source: "GitHub Actions"**. Sem isso o `deploy-pages`
+   falha com "Pages not enabled".
+2. **Settings → Secrets and variables → Actions**, três segredos:
+   - `INLABS_EMAIL` e `INLABS_SENHA` — conta gratuita em
+     <https://inlabs.in.gov.br/>;
+   - `CLAUDE_CODE_OAUTH_TOKEN` — saída de `claude setup-token`.
+3. Nada mais: o `GITHUB_TOKEN` do próprio Actions cobre o commit, o deploy e a
+   issue de falha.
+
+**Horários.** 09:30 e 12:00 no horário de Brasília, de segunda a sábado (no
+arquivo eles aparecem como `30 12` e `0 15`, porque o cron do GitHub é UTC). A
+execução das 12:00 é a rede de segurança de quando o diário ainda não estava
+publicado às 09:30, e se anula sozinha quando `site/edicoes/<data>.html` já
+existe.
+
+**Disparo manual.** Actions → "Boletim diário" → "Run workflow", com duas
+entradas: `data` (`AAAA-MM-DD`, padrão hoje em São Paulo) e `forcar` (regera
+mesmo que a edição do dia já exista).
+
+**Freio remoto.** Criar e commitar um arquivo `PARAR` na raiz da `main`
+desliga a rotina: o job continua rodando, imprime `freio remoto ativo:` com a
+primeira linha do arquivo — escreva ali o motivo — e pula todo o resto, sem
+coletar, sem chamar o modelo e sem publicar. Remover o arquivo religa. É a
+mesma convenção do `00-Governanca/PARAR.md` do cérebro corporativo da Thauma:
+desligar tem de ser um commit que qualquer um vê e reverte, não uma mudança
+escondida em Settings.
+
+```bash
+echo "IOF-MG mudou o layout do PDF; retomar depois do ajuste" > PARAR
+git add PARAR && git commit -m "freio: pausa o boletim" && git push
+```
+
+**Quando falha.** O job abre uma issue intitulada `Boletim <data> falhou` com o
+link da execução, e não duplica se já houver uma aberta com o mesmo título.
+Exit 2 na coleta ou na geração derruba o job antes de qualquer publicação;
+`boletim: vazio` termina o job verde sem publicar nada.
+
 ## Integração com o Hermes
 
 ```python
