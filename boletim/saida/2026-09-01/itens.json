@@ -1,0 +1,1018 @@
+{
+  "data": "2026-09-01",
+  "gerado_em": "2026-09-07T23:30:42.928539+00:00",
+  "avisos": [
+    "lote-1: id fora do lote ignorado: c156945cbf87083"
+  ],
+  "edicao": {
+    "titulo": "Deliberações de Minas e registros de preços ampliam oportunidades de captação",
+    "em_30_segundos": [
+      "Deliberação CIB-SUS/MG altera normas para concessão de incentivo financeiro excepcional aos municípios para Rede de Cuidados à Pessoa com Deficiência.",
+      "Resolução SES/MG altera prazo de execução (prorrogação 04 meses até dez/2026) e muda procedimento de comprovação para autodeclaratório. Complementa a Deliberação 5.948.",
+      "Deliberação CIB-SUS/MG altera regras de ressarcimento para procedimento Colangiopancreatografia Retrógrada Endoscópica Terapêutica (CPRE) sob programa Valora Minas."
+    ],
+    "intro": "Nesta segunda-feira, a agenda traz 13 deliberações federais e estaduais que redefinem oportunidades de financiamento e simplificam processos críticos nas Santas Casas e secretarias municipais. Destaque para as deliberações mineiras que flexibilizam exigências administrativas no ressarcimento de CPRE e ampliam recursos para a rede de deficiência. No plano federal, a expansão de limites de créditos para o Agora Tem Especialistas e a abertura de novos registros de preços em material médico-hospitalar oferecem margem de manobra orçamentária até o final de 2026. Protocolos clínicos aprovados reforçam o direcionamento assistencial.",
+    "parcial": false,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "165",
+        "paginas": "pp. 70-117",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ok",
+        "edicao": null,
+        "paginas": "pp. 21-21",
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "cde32778f492d671",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": null,
+      "tipo": "Portaria Conjunta",
+      "numero": "70",
+      "data_publicacao": "2026-09-01",
+      "secao": "1",
+      "pagina": 71,
+      "edicao": "165",
+      "titulo": "Portaria Conjunta SAES/SCTIE Nº 70, DE 5 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-conjunta-saes/sctie-n-70-de-5-de-agosto-de-2026-729409225",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Aprova Protocolo Clínico e Diretrizes Terapêuticas para Hipoparatireoidismo",
+      "por_que_importa": "Estabelece diretrizes de diagnóstico e tratamento que secretarias estaduais e municipais devem implementar; obriga estruturação de rede assistencial com fluxos de atendimento padronizados",
+      "valor_brl": null,
+      "entes": [
+        "Secretarias de Saúde dos Estados",
+        "Secretaria de Saúde do Distrito Federal",
+        "Secretarias de Saúde dos Municípios"
+      ],
+      "tags": [
+        "protocolo clínico",
+        "regulação",
+        "hipoparatireoidismo",
+        "diretrizes terapêuticas",
+        "CONITEC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9681323633188e26",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.134",
+      "data_publicacao": "2026-09-01",
+      "secao": "1",
+      "pagina": 70,
+      "edicao": "165",
+      "titulo": "Portaria GM/MS Nº 12.134, DE 31 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.134-de-31-de-agosto-de-2026-729400778",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Altera limite anual de Certificado de Valor de Créditos Financeiros para Athena Healthcare no Programa Agora Tem Especialistas",
+      "por_que_importa": "Libera R$ 25,3 milhões para financiamento de serviços especializados em saúde; aumenta capacidade de acesso a especialistas via programa federal",
+      "valor_brl": 25304807.91,
+      "entes": [
+        "Athena Healthcare Holding S/A",
+        "Estabelecimentos conveniados ao Programa Agora Tem Especialistas"
+      ],
+      "tags": [
+        "créditos financeiros",
+        "programa agora tem especialistas",
+        "especialistas",
+        "financiamento federal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "57a401f44af6cbd5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Resolução",
+      "numero": "1.041",
+      "data_publicacao": "2026-09-01",
+      "secao": "1",
+      "pagina": 71,
+      "edicao": "165",
+      "titulo": "RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA Nº 1.041, DE 26 DE AGOSTO DE 2026(*)",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-da-diretoria-colegiada-anvisa-n-1.041-de-26-de-agosto-de-2026-*-729400697",
+      "categoria": "C",
+      "relevancia": 2,
+      "resumo": "Altera prazo para notificação/registro de gases medicinais enquadrados como medicamentos até 31 de março de 2027",
+      "por_que_importa": "Estende prazo de adaptação para fornecedores; afeta continuidade de abastecimento de gases medicinais essenciais (oxigênio, óxido nitroso, etc.) em estabelecimentos de saúde",
+      "valor_brl": null,
+      "entes": [
+        "Empresas fornecedoras de gases medicinais",
+        "Estabelecimentos de saúde usuários de gases medicinais"
+      ],
+      "tags": [
+        "gases medicinais",
+        "ANVISA",
+        "regulação",
+        "registro",
+        "medicamentos",
+        "RDC 870/2024"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3c01a60888b83283",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Edital",
+      "numero": "299",
+      "data_publicacao": "2026-09-01",
+      "secao": "1",
+      "pagina": 71,
+      "edicao": "165",
+      "titulo": "DESPACHO Nº 299, DE 28 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-n-299-de-28-de-agosto-de-2026-729397827",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de intimação de operadora de saúde suplementar por não cobertura de procedimentos",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Santa Luzia Assistência Médica S/A"
+      ],
+      "tags": [
+        "ANS",
+        "fiscalização",
+        "saúde suplementar",
+        "operadora privada",
+        "rotina administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f7077106b63989be",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "1",
+      "pagina": 70,
+      "edicao": "165",
+      "titulo": "Retificação",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729385631",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Retificação de números CNES em portaria de habilitação de serviços de especialidades em saúde bucal (Piauí)",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Saúde do Piauí"
+      ],
+      "tags": [
+        "retificação",
+        "CNES",
+        "cadastro",
+        "saúde bucal",
+        "rotina administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fc2db15cf84b7aba",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "165",
+      "titulo": "EXTRATO DE RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-retificacao-729328023",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Retificação de idioma (português/espanhol) em extrato de contrato de revisão de textos científicos da Fiocruz",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Oswaldo Cruz"
+      ],
+      "tags": [
+        "retificação",
+        "contrato",
+        "documentação",
+        "rotina administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e9dfcf073a3d95cc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "165",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729327942",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Retificação de número de contrato da Fundação Oswaldo Cruz",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Oswaldo Cruz"
+      ],
+      "tags": [
+        "retificação",
+        "contrato",
+        "documentação",
+        "rotina administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "37992ea21744825b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Resolução",
+      "numero": "3.168",
+      "data_publicacao": "2026-09-01",
+      "secao": "1",
+      "pagina": 71,
+      "edicao": "165",
+      "titulo": "RESOLUÇÃO OPERACIONAL ANS Nº 3.168, DE 27 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-operacional-ans-n-3.168-de-27-de-agosto-de-2026-729316183",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Instaura regime especial de Direção Técnica na operadora SELECT OPERADORA DE PLANO DE SAUDE",
+      "por_que_importa": "Indica anormalidades administrativas e assistenciais graves; regime especial pode resultar em descredenciamento ou transferência de beneficiários, afetando acesso a serviços",
+      "valor_brl": null,
+      "entes": [
+        "SELECT OPERADORA DE PLANO DE SAUDE LTDA"
+      ],
+      "tags": [
+        "ANS",
+        "operadora plano de saúde",
+        "direção técnica",
+        "regime especial",
+        "regulação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f1ca082c408b9413",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Grupo Hospitalar Conceição",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 115,
+      "edicao": "165",
+      "titulo": "ExtratoS de RegistroS de Preços",
+      "url": "https://www.in.gov.br/web/dou/-/extratos-de-registros-de-precos-729314924",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Registros de Preços com aquisições de material médico-hospitalar, material imobilizado e equipamentos para Grupo Hospitalar Conceição",
+      "por_que_importa": "Define fornecedores e preços para material hospitalar essencial; total de aquisições que estabelecem referências de compra; afeta capacidade de abastecimento de insumos críticos",
+      "valor_brl": 3096873.78,
+      "entes": [
+        "Grupo Hospitalar Conceição S/A",
+        "Empresas fornecedoras de material médico-hospitalar"
+      ],
+      "tags": [
+        "licitação",
+        "pregão eletrônico",
+        "registro de preços",
+        "material hospitalar",
+        "aquisição",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "41a09a03033eaf7f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "1",
+      "pagina": 70,
+      "edicao": "165",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729312907",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Retificação de CNES em portaria de habilitação de CAPS I em Jaguaruna/SC",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Saúde de Santa Catarina"
+      ],
+      "tags": [
+        "retificação",
+        "CNES",
+        "CAPS I",
+        "habilitação",
+        "rotina administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fe9dc82624194835",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "165",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-729253732",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Parcelamento de débito individual por glosa técnica junto ao Fundo Nacional de Saúde",
+      "por_que_importa": null,
+      "valor_brl": 3803.47,
+      "entes": [
+        "Fundo Nacional de Saúde"
+      ],
+      "tags": [
+        "parcelamento",
+        "débito",
+        "glosa",
+        "administrativo",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "df061f988a5f5785",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "165",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729253618",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ata de Registro de Preços para aquisição de materiais hospitalares com vigência de 12 meses",
+      "por_que_importa": "Define fornecedor (GREEN MED) e preços para material hospitalar essencial; facilita acesso a insumos para unidades de saúde; estabelece referência de custos para programação de compras",
+      "valor_brl": 123457.7,
+      "entes": [
+        "Instituto de Cardiologia/Secretaria de Atenção Especializada",
+        "GREEN MED Distribuidora e Importadora de Medicamentos"
+      ],
+      "tags": [
+        "registro de preços",
+        "pregão eletrônico",
+        "material hospitalar",
+        "fornecimento",
+        "aquisição"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8aa2656e319fe2d7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": "3/2026",
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "165",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO Nº 3/2026",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-n-3/2026-729253424",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Aviso de Chamamento Público FIOCRUZ para pesquisa de preços de químicos controlados e não controlados",
+      "por_que_importa": "Rotina de compra administrativa de órgão público de saúde; fornecedores podem ser relevantes para benchmarking de preços",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Oswaldo Cruz",
+        "Escola Nacional de Saúde Pública Sérgio Arouca"
+      ],
+      "tags": [
+        "compra",
+        "pesquisa_preços",
+        "químicos",
+        "FIOCRUZ",
+        "rotina_administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1a461125229e02a7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Extrato de Protocolo de Intenção",
+      "numero": "226/2026",
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "165",
+      "titulo": "EXTRATO DE PROTOCOLO DE INTENÇÕES Nº 226/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-protocolo-de-intencoes-n-226/2026-729253396",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Protocolo de Intenções entre FIOCRUZ e UFOPA para cooperação técnica em pesquisa, ensino e inovação (2026-2029)",
+      "por_que_importa": "Novo acordo que pode criar oportunidades de colaboração técnica, capacitação e pesquisa para instituições de saúde",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Oswaldo Cruz",
+        "Universidade Federal do Oeste do Pará"
+      ],
+      "tags": [
+        "protocolo_intenções",
+        "cooperação_técnica",
+        "pesquisa",
+        "ensino",
+        "inovação",
+        "novo_acordo",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8c0b1e077b2d3421",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Vigilância em Saúde e Ambiente",
+      "tipo": "Edital de Notificação",
+      "numero": "4",
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "165",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 4, DE 31 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-4-de-31-de-agosto-de-2026-729242223",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação para pessoas físicas que devem devolver débitos de diárias e ajuda de custo",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Vigilância em Saúde e Ambiente"
+      ],
+      "tags": [
+        "notificação",
+        "devolução_recursos",
+        "pessoal",
+        "não_relevante"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8ed7146ee8c6f430",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "704",
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "165",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 704, DE 27 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-704-de-27-de-agosto-de-2026-729223103",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação para pessoa física retirar notificação de devolução de recursos",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Atenção Primária à Saúde"
+      ],
+      "tags": [
+        "notificação",
+        "pessoal",
+        "devolução_recursos",
+        "não_relevante"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8bad5299f44be009",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 115,
+      "edicao": "165",
+      "titulo": "EDITAL DE INTIMAÇÃO DE 26 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-intimacao-de-26-de-agosto-de-2026-729222977",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Intimação da ANS sobre multa para operadora de plano de saúde suplementar",
+      "por_que_importa": null,
+      "valor_brl": 24000,
+      "entes": [
+        "Agência Nacional de Saúde Suplementar"
+      ],
+      "tags": [
+        "ANS",
+        "multa",
+        "saúde_suplementar",
+        "não_relevante_para_público"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "47041c0b1548735c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "165",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-729221158",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Alteração de edital de Concorrência 324/2026 para Construção de Unidade Básica de Saúde Indígena em Pesqueira/PE",
+      "por_que_importa": "Investimento em infraestrutura de saúde pública com impacto direto em secretarias municipais; relevante para planejamento de SMS e políticas de saúde indígena",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Saúde Indígena",
+        "Ministério da Saúde"
+      ],
+      "tags": [
+        "construção_UBS",
+        "saúde_indígena",
+        "infraestrutura",
+        "concorrência",
+        "alteração_edital",
+        "investimento_público"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6b5ed4731b6a2736",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Vigilância em Saúde e Ambiente",
+      "tipo": "Extrato de Acordo de Cooperação Técnica",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "165",
+      "titulo": "EXTRATO DE ACORDO DE COOPERAÇÃO TÉCNICA",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-cooperacao-tecnica-729221081",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Acordo de Cooperação Técnica SVSA/MS e Instituto Vital Brazil para avaliação de pesticidas contra escorpiões em ambiente urbano",
+      "por_que_importa": "Novo protocolo técnico para SUS em municípios de RJ, SP, Paraná e RS; pode impactar estratégias públicas de saúde e vigilância epidemiológica",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Vigilância em Saúde e Ambiente",
+        "Instituto Vital Brazil",
+        "Ministério da Saúde"
+      ],
+      "tags": [
+        "acordo_cooperação",
+        "pesquisa",
+        "protocolo_técnico",
+        "SUS",
+        "vigilância_epidemiológica",
+        "escorpionismo",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5b1cb67c347f8932",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Grupo Hospitalar Conceição",
+      "tipo": "Extrato de Dispensa de Chamamento Público",
+      "numero": "2/2026",
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "165",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO Nº 2/2026",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-n-2/2026-729205966",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Chamamento Público do Grupo Hospitalar Conceição para credenciamento de creches e educação infantil em Pelotas/RS",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Grupo Hospitalar Conceição",
+        "Hospital Nossa Senhora da Conceição"
+      ],
+      "tags": [
+        "creche",
+        "educação_infantil",
+        "benefício_funcionário",
+        "serviço_interno",
+        "não_relevante"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "564b0cc3c0d4b387",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "165",
+      "titulo": "EDITAL DE CONVOCAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-convocacao-729205831",
+      "categoria": "C",
+      "relevancia": 2,
+      "resumo": "Edital de Convocação FUNASA para ex-prefeito de Trairao/PA sobre irregularidades em convênio de abastecimento de água (CV 2339/2018)",
+      "por_que_importa": "Envolve prestação de contas de convênio SUS; relevante para SMS sobre procedimentos de conformidade em convênios de infraestrutura de saúde",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Trairao",
+        "FUNASA"
+      ],
+      "tags": [
+        "convênio",
+        "irregularidades",
+        "infraestrutura",
+        "prestação_contas",
+        "água_potável",
+        "SUS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1d303764fbe893ce",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Adesão",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "165",
+      "titulo": "EXTRATO DE ADESÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-adesao-729177778",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Adesão do INTO/MS a Pregão Eletrônico 90012/2025 do Hospital Naval de Natal para aquisição de materiais hospitalares",
+      "por_que_importa": "Novo fornecimento de materiais hospitalares para instituto federal; pode indicar tendências de preços e fornecedores no mercado hospitalar",
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Traumatologia e Ortopedia",
+        "Hospital Naval de Natal",
+        "Ministério da Saúde"
+      ],
+      "tags": [
+        "adesão_pregão",
+        "materiais_hospitalares",
+        "compra_pública",
+        "contrato",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c156945cbfc87083",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "165",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729164799",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Registro de Preços (Ata 339/2026) para aquisição de materiais hospitalares com AFRAMED Produtos Hospitalares Ltda - Vigência 01/09/2026 a 01/09/2027",
+      "por_que_importa": "Novo registro de preços para materiais hospitalares pode servir de referência para SMS e instituições filantrópicas; valor total R$ 837,50",
+      "valor_brl": 837.5,
+      "entes": [
+        "Instituto Nacional de Cardiologia",
+        "AFRAMED Produtos Hospitalares Ltda"
+      ],
+      "tags": [
+        "registro_preços",
+        "materiais_hospitalares",
+        "compra_pública",
+        "vigência_2026_2027",
+        "fornecedor",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "899bbb86f18185c9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "165",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-729159664",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Alteração de Edital - Pregão 241/2026 para Materiais Hospitalares (Geral - Terapia Intensiva) com mudança de data",
+      "por_que_importa": "Alteração em processo de compra de materiais críticos de terapia intensiva; relevante para hospitais que acompanham editais públicos e benchmarks",
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Cardiologia",
+        "Secretaria de Atenção Especializada à Saúde"
+      ],
+      "tags": [
+        "alteração_edital",
+        "pregão",
+        "materiais_hospitalares",
+        "terapia_intensiva",
+        "compra_pública",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "48e93540177480e3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "165",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729148435",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de vigência de contrato entre FIOCRUZ e FIOTEC, ajustando datas de 2020-2025 para 2022-2027",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Oswaldo Cruz",
+        "Fundação para o Desenvolvimento Científico e Tecnológico em Saúde"
+      ],
+      "tags": [
+        "rotina-administrativa",
+        "contrato-interno",
+        "fiocruz"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "132745a56499c935",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "165",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729147836",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Registro de Preços para aquisição de Manta Térmica (Ata 335/2026). Vigência 01/09/2026 a 01/09/2027.",
+      "por_que_importa": "Define preços para material hospitalar que instituições SUS podem adquirir via registro de preços. Relevante para planejamento de compras.",
+      "valor_brl": 106628,
+      "entes": [
+        "Secretaria de Atenção Especializada à Saúde",
+        "CEI Comércio Exportação e Imp de Materiais Médicos"
+      ],
+      "tags": [
+        "registro-de-preços",
+        "material-hospitalar",
+        "aquisição",
+        "pregão-eletrônico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bd404a283cb5cb7f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-09-01",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "165",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-729120947",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração de edital do Pregão 404/2026 para Máquinas de Autoatendimento em cessão onerosa. Nova data: 01/09/2026.",
+      "por_que_importa": "Alteração processual que afeta o cronograma de licitação. Menor impacto direto em recursos, mas importante para participantes.",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Atenção Especializada à Saúde"
+      ],
+      "tags": [
+        "edital-alterado",
+        "licitação",
+        "pregão",
+        "cronograma",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5400c6b33140ec99",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11554",
+      "data_publicacao": "2026-09-01",
+      "secao": null,
+      "pagina": 21,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES Nº 11554 DE 28 DE AGOSTO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-01T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330889%2C%22paginaSelecionada%22%3A21%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Resolução revogando designação de servidor para função gratificada. Inclui concessões de férias-prêmio, errata sobre ambulância e cadastro de farmácia.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde de Minas Gerais",
+        "Hemominas",
+        "Farmácia da Rede LTDA"
+      ],
+      "tags": [
+        "gestão-rh",
+        "férias-prêmio",
+        "errata",
+        "cadastro-farmacêutico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b9f0248b2b395785",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.948",
+      "data_publicacao": "2026-09-01",
+      "secao": null,
+      "pagina": 21,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.948,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-01T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330889%2C%22paginaSelecionada%22%3A21%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Deliberação CIB-SUS/MG altera normas para concessão de incentivo financeiro excepcional aos municípios para Rede de Cuidados à Pessoa com Deficiência.",
+      "por_que_importa": "CRÍTICO: Alteração nas normas de como os municípios acessam e executam incentivos financeiros federais/estaduais. Afeta diretamente financiamento de redes de saúde.",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde de Minas Gerais",
+        "CIB-SUS/MG",
+        "COSEMS/MG"
+      ],
+      "tags": [
+        "incentivo-financeiro",
+        "rede-de-deficiência",
+        "deliberação",
+        "financiamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ddee4beea82f7cc9",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11.604",
+      "data_publicacao": "2026-09-01",
+      "secao": null,
+      "pagina": 21,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES/MG Nº 11.604, DE 31 DE AGOSTO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-01T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330889%2C%22paginaSelecionada%22%3A21%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Resolução SES/MG altera prazo de execução (prorrogação 04 meses até dez/2026) e muda procedimento de comprovação para autodeclaratório. Complementa a Deliberação 5.948.",
+      "por_que_importa": "CRÍTICO: Prorrogação de prazo para usar recursos e simplificação de procedimentos beneficia diretamente municípios e instituições executoras de programas de deficiência.",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde de Minas Gerais",
+        "CASPD-DR"
+      ],
+      "tags": [
+        "prorrogação-de-prazo",
+        "simplificação-procedimento",
+        "até-dezembro-2026",
+        "autodeclaratório"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "830e520ed70d0857",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.949",
+      "data_publicacao": "2026-09-01",
+      "secao": null,
+      "pagina": 21,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.949,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-01T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330889%2C%22paginaSelecionada%22%3A21%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Deliberação CIB-SUS/MG altera regras de ressarcimento para procedimento Colangiopancreatografia Retrógrada Endoscópica Terapêutica (CPRE) sob programa Valora Minas.",
+      "por_que_importa": "CRÍTICO: Define como hospitais será ressarcidos por procedimentos específicos de urgência. Impacta receita de instituições que realizam CPRE.",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde de Minas Gerais",
+        "CIB-SUS/MG"
+      ],
+      "tags": [
+        "ressarcimento-hospitalar",
+        "cpre",
+        "valora-minas",
+        "procedimento-urgência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1547099a8e9f44d0",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11.605",
+      "data_publicacao": "2026-09-01",
+      "secao": null,
+      "pagina": 21,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES/MG Nº 11.605, DE 31 DE AGOSTO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-01T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330889%2C%22paginaSelecionada%22%3A21%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Resolução SES/MG revoga exigência de Termo de Adesão para ressarcimento de CPRE. Dispensa formalidade anterior. Complementa Resolução 11.537.",
+      "por_que_importa": "CRÍTICO: Simplificação burocrática facilita acesso ao ressarcimento de procedimentos hospitalares. Beneficia Hemominas e demais hospitais executores.",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde de Minas Gerais",
+        "Fundação Centro de Hematologia e Hemoterapia - Hemominas"
+      ],
+      "tags": [
+        "ressarcimento-hospitalar",
+        "dispensa-termo",
+        "simplificação",
+        "cpre"
+      ],
+      "fallback": false
+    }
+  ]
+}

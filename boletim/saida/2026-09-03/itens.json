@@ -1,0 +1,1534 @@
+{
+  "data": "2026-09-03",
+  "gerado_em": "2026-09-07T23:41:48.859901+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "Recursos em alta na captação de especialidades e suprimentos hospitalares",
+    "em_30_segundos": [
+      "Expansão de programas de hemodiálise: 3 portarias habilitando/ampliando créditos financeiros em clínicas especializadas",
+      "PROADI-SUS: R$ 16 milhões investidos com Hospital Sírio-Libanês em rastreamento organizado de neoplasias",
+      "Inovação tecnológica: 4 consultas públicas Conitec sobre incorporação de monitorização neurofisiológica intraoperatória",
+      "Aquisições robustas: Grupo Hospitalar Conceição com R$ 16,6 milhões em materiais, medicamentos e gases medicinais",
+      "Certificações e renovações: Novos Hospitais de Ensino e CEBAS renovadas para filantrópicas"
+    ],
+    "intro": "O radar encontrou 30 publicações relevantes nesta data. O texto de abertura não pôde ser gerado, e os destaques abaixo saem direto da classificação.",
+    "parcial": false,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "167",
+        "paginas": "pp. 61-89",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ok",
+        "edicao": null,
+        "paginas": "pp. 16-17",
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "b02349c8a06d30fa",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria Conjunta",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "167",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729948805",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação corrigindo omissão de subtítulo em portaria anterior",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "rotina-administrativa",
+        "errata",
+        "sem-impacto"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d700d602ace26303",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Aviso de Consulta Pública",
+      "numero": "90",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 75,
+      "edicao": "167",
+      "titulo": "CONSULTA PÚBLICA SCTIE/MS Nº 90, DE 1º DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/consulta-publica-sctie/ms-n-90-de-1-de-setembro-de-2026-729947819",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Consulta pública para incorporação de monitorização neurofisiológica intraoperatória em cirurgias de coluna vertebral no SUS",
+      "por_que_importa": "Se incorporada, muda regras de cobertura SUS e habilita hospitais para realizar procedimento com financiamento público",
+      "valor_brl": null,
+      "entes": [
+        "Conitec"
+      ],
+      "tags": [
+        "mudanca-protocolo",
+        "incorporacao-tecnologia",
+        "SUS",
+        "cirurgia-ortopedica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8f0e2b2e7662169e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.826",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "167",
+      "titulo": "Portaria SAES/MS Nº 4.826, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.826-de-2-de-setembro-de-2026-729946733",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Deferimento de renovação de CEBAS para Associação Hospitalar São Roque de Severiano de Almeida (CNPJ 89.428.783/0001-12), válido de 2025 a 2027",
+      "por_que_importa": "Renova certificação de entidade beneficente mantendo direitos e imunidades fiscais; validade confirmada pelo tribunal federal",
+      "valor_brl": null,
+      "entes": [
+        "Associação Hospitalar São Roque de Severiano de Almeida"
+      ],
+      "tags": [
+        "CEBAS",
+        "renovacao",
+        "imunidade-fiscal",
+        "decisao-judicial",
+        "RS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9246e5d811bdf224",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.805",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "167",
+      "titulo": "Portaria SAES/MS Nº 4.805, DE 28 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.805-de-28-de-agosto-de-2026-729941757",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Habilitação do Instituto de Nefrologia do Ceará (CNPJ 06.976.039/0001-25) para créditos financeiros no Programa Agora Tem Especialistas em hemodiálise",
+      "por_que_importa": "Novo fluxo de receita: limite anual de CVCF (Certificados de Valor de Créditos Financeiros) para procedimentos de hemodiálise",
+      "valor_brl": 1567589.6,
+      "entes": [
+        "Instituto de Nefrologia do Ceará - INECE"
+      ],
+      "tags": [
+        "Agora-Tem-Especialistas",
+        "creditos-financeiros",
+        "hemodiálise",
+        "receita",
+        "CE"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8e2bf8106dce0c43",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Portaria",
+      "numero": "55",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 75,
+      "edicao": "167",
+      "titulo": "PORTARIA SCTIE/MS Nº 55, DE 1º DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sctie/ms-n-55-de-1-de-setembro-de-2026-729934540",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Aprovação do Protocolo de Uso de Iodeto de Potássio em Emergências Nucleares no âmbito do SUS",
+      "por_que_importa": "Novo protocolo clínico que hospitalares devem conhecer e implementar em seus planos de contingência para emergências nucleares",
+      "valor_brl": null,
+      "entes": [
+        "Conitec"
+      ],
+      "tags": [
+        "novo-protocolo",
+        "emergencia-nuclear",
+        "regra-clinica",
+        "contingencia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ac55442404c2e21c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Portaria Conjunta",
+      "numero": "78",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 75,
+      "edicao": "167",
+      "titulo": "PORTARIA CONJUNTA SGTES/SAES Nº 78, DE 2 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-conjunta-sgtes/saes-n-78-de-2-de-setembro-de-2026-729934406",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Concessão de Certificação de Hospital de Ensino - Nível 1 a 2 estabelecimentos: Hospital Universitário Cassiano Antônio Moraes (ES) e Hospital Universitário da Universidade Federal de Sergipe (SE)",
+      "por_que_importa": "Habilita para solicitação de Certificação Nível 2 (acesso a financiamentos específicos, integração ensino-serviço); prerrogativa para desenvolvimento acadêmico",
+      "valor_brl": null,
+      "entes": [
+        "Hospital Universitário Cassiano Antônio Moraes",
+        "Hospital Universitário da Universidade Federal de Sergipe"
+      ],
+      "tags": [
+        "hospital-ensino",
+        "certificacao",
+        "nivel-1",
+        "ensino-servico",
+        "ES",
+        "SE"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cda697c6cc7772da",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 75,
+      "edicao": "167",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729934327",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação corrigindo número de RMS em portaria anterior (de 5306111 para 5306311)",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "rotina-administrativa",
+        "errata",
+        "correcao-dados",
+        "sem-impacto"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cbc18298606bc0d0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Aviso de Consulta Pública",
+      "numero": "91",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 75,
+      "edicao": "167",
+      "titulo": "CONSULTA PÚBLICA SCTIE/MS Nº 91, DE 1º DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/consulta-publica-sctie/ms-n-91-de-1-de-setembro-de-2026-729931925",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Consulta pública para incorporação de cloridrato de terbinafina para tratamento de esporotricose em segunda linha (falha ao itraconazol)",
+      "por_que_importa": "Se aprovada, muda protocolo de tratamento disponível no SUS; hospitais precisam preparar-se para novo fármaco e indicações",
+      "valor_brl": null,
+      "entes": [
+        "Conitec"
+      ],
+      "tags": [
+        "mudanca-protocolo",
+        "incorporacao-farmaco",
+        "esporotricose",
+        "tratamento-segunda-linha"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b3e4fbeb2b7dd42b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Despacho",
+      "numero": "108",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 76,
+      "edicao": "167",
+      "titulo": "DESPACHO Nº 108, DE 2 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-n-108-de-2-de-setembro-de-2026-729931897",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Decisões administrativas sobre multas a empresas fumígenas (tabaco) - penalidades e arquivamentos de processos",
+      "por_que_importa": null,
+      "valor_brl": 419500,
+      "entes": [
+        "Emporium Cigars",
+        "HBT Indústria e Comércio",
+        "Menendez Amerino",
+        "JTI Processadora de Tabaco",
+        "Philip Morris Brasil",
+        "Box 247 Comércio"
+      ],
+      "tags": [
+        "fiscalizacao-anvisa",
+        "multas-tabaco",
+        "controle-sanitario",
+        "sem-impacto-hospitalar"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2801bf7949491b03",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Instituto Nacional de Cardiologia",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "167",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-729908632",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Aviso de chamamento público do Instituto Nacional de Cardiologia para demonstração de equipamentos automatizados de bioquímica clínica e imunologia",
+      "por_que_importa": "Oportunidade para fornecedores de equipamentos; informativo para hospitais que buscam soluções de laboratório automatizadas",
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Cardiologia"
+      ],
+      "tags": [
+        "chamamento-publico",
+        "mercado-equipamentos",
+        "laboratorio",
+        "estudo-mercado"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "430e58177402bd08",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 86,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729908555",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ata de registro de preços para Distrito Sanitário Especial Indígena Altamira - aquisição de materiais médico-hospitalares",
+      "por_que_importa": null,
+      "valor_brl": 3399,
+      "entes": [
+        "Distrito Sanitário Especial Indígena Altamira",
+        "HAWA MED Produtos Médico-Hospitalares"
+      ],
+      "tags": [
+        "registro-precos",
+        "saude-indigena",
+        "compras-governo",
+        "sem-impacto-filantropia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "92dab27956517ffe",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 86,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729908527",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ata de registro de preços para Distrito Sanitário Especial Indígena Altamira - aquisição de materiais médico-hospitalares",
+      "por_que_importa": null,
+      "valor_brl": 2450,
+      "entes": [
+        "Distrito Sanitário Especial Indígena Altamira",
+        "MN Comércio e Serviços"
+      ],
+      "tags": [
+        "registro-precos",
+        "saude-indigena",
+        "compras-governo",
+        "sem-impacto-filantropia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e47d57e74a5b9973",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729884802",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Registro de preços R$ 9.234 para materiais médico-hospitalares do Distrito Sanitário Especial Indígena Altamira",
+      "por_que_importa": null,
+      "valor_brl": 9234,
+      "entes": [
+        "Secretaria de Saúde Indígena"
+      ],
+      "tags": [
+        "saúde-indígena",
+        "materiais-hospitalares",
+        "fora-escopo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6899b93b05287a01",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 89,
+      "edicao": "167",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729884693",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Retificação corrigindo número de contrato (nº 4/2026 para nº 03/2026) em publicação anterior",
+      "por_que_importa": "Correção meramente administrativa/numérica",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Oswaldo Cruz"
+      ],
+      "tags": [
+        "retificação",
+        "administrativo",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "374e6af2b25154e4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Ajuste",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 84,
+      "edicao": "167",
+      "titulo": "EXTRATO DE AJUSTE",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-ajuste-729871763",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Ajuste Proadi-SUS com Hospital Sírio-Libanês: R$ 16.014.008,88 para rastreamento organizado de neoplasias junto a Secretarias Estaduais e Municipais",
+      "por_que_importa": "Transferência de recursos de alto valor para programa nacional de inovação em rastreamento de câncer, envolvendo rede pública municipal e estadual até 31/dez/2026",
+      "valor_brl": 16014008.88,
+      "entes": [
+        "Hospital Sírio-Libanês",
+        "Secretarias Estaduais de Saúde",
+        "Secretarias Municipais de Saúde"
+      ],
+      "tags": [
+        "proadi-sus",
+        "rastreamento-câncer",
+        "financiamento",
+        "crítico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d0982debfd826ee5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "711",
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "167",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 711, DE 1º DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-711-de-1-de-setembro-de-2026-729871686",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação pessoal a André Luis Esteves Batista para retirar comunicado sobre devolução de recursos",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação-pessoal",
+        "fora-escopo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "61b576ef3f0142ae",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 86,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729871609",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Registro de preços R$ 8.426 para materiais médico-hospitalares do Distrito Sanitário Especial Indígena Altamira",
+      "por_que_importa": null,
+      "valor_brl": 8426,
+      "entes": [
+        "Secretaria de Saúde Indígena"
+      ],
+      "tags": [
+        "saúde-indígena",
+        "materiais-hospitalares",
+        "fora-escopo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3bd0785ab7597b71",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.809",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "167",
+      "titulo": "Portaria SAES/MS Nº 4.809, DE 28 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.809-de-28-de-agosto-de-2026-729862443",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Portaria alterando limite de créditos financeiros para hemodiálise (Nefrocor): de valor não especificado para R$ 721.233,95 anuais",
+      "por_que_importa": "Altera regra de financiamento do programa Agora Tem Especialistas na modalidade de terapia renal substitutiva, impactando disponibilidade de recursos para estabelecimentos habilitados",
+      "valor_brl": 721233.95,
+      "entes": [
+        "Nefrocor Serviços em Nefrologia e Cardiologia Ltda"
+      ],
+      "tags": [
+        "agora-tem-especialistas",
+        "hemodiálise",
+        "créditos-financeiros"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "69cadf0892eb4ecf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Aviso de Consulta Pública",
+      "numero": "92",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 75,
+      "edicao": "167",
+      "titulo": "CONSULTA PÚBLICA SCTIE/MS Nº 92, DE 1º DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/consulta-publica-sctie/ms-n-92-de-1-de-setembro-de-2026-729862415",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Consulta pública Conitec sobre incorporação de monitorização neurofisiológica intraoperatória para cirurgias de cabeça/pescoço com tireoide (prazo: 20 dias)",
+      "por_que_importa": "Proposta de incorporação tecnológica ao SUS que, se aprovada, mudará padrão de cuidado e gerará novas despesas/receitas para estabelecimentos de saúde",
+      "valor_brl": null,
+      "entes": [
+        "Conitec",
+        "Secretaria de Atenção Especializada"
+      ],
+      "tags": [
+        "conitec",
+        "incorporação-tecnológica",
+        "neuromonitorização",
+        "consulta-pública"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6f3e8f4247f79e14",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Instituto Nacional de Traumatologia e Ortopedia",
+      "tipo": "Aviso de Penalidade",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "167",
+      "titulo": "AVISO DE PENALIDADE",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-penalidade-729861415",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Aviso de penalidade: impedimento de licitar/contratar por 1 mês (02/09 a 02/10/2026) contra fornecedora S&S Martins (CNPJ 21.907.626/0001-56)",
+      "por_que_importa": "Rotina de enforcement; não afeta captação de recursos",
+      "valor_brl": null,
+      "entes": [
+        "S&S Martins Distribuidora de Produtos para Saúde Ltda"
+      ],
+      "tags": [
+        "penalidade",
+        "fornecedor",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e5f38d5f52e8bc59",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Portaria",
+      "numero": "89",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 75,
+      "edicao": "167",
+      "titulo": "CONSULTA PÚBLICA SCTIE/MS Nº 89, DE 1º DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/consulta-publica-sctie/ms-n-89-de-1-de-setembro-de-2026-729858296",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Consulta pública Conitec sobre incorporação de monitorização neurofisiológica intraoperatória em cirurgias de epilepsia (prazo: 20 dias)",
+      "por_que_importa": "Proposta de incorporação tecnológica ao SUS para neurocirurgia; se aprovada, impactará padrão de cuidado e custos para estabelecimentos",
+      "valor_brl": null,
+      "entes": [
+        "Conitec",
+        "Secretaria de Atenção Especializada"
+      ],
+      "tags": [
+        "conitec",
+        "incorporação-tecnológica",
+        "epilepsia",
+        "consulta-pública"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cd484efcec4180ee",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Aviso de Consulta Pública",
+      "numero": "93",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 75,
+      "edicao": "167",
+      "titulo": "CONSULTA PÚBLICA SCTIE/MS Nº 93, DE 1º DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/consulta-publica-sctie/ms-n-93-de-1-de-setembro-de-2026-729855658",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Consulta pública Conitec sobre incorporação de monitorização neurofisiológica intraoperatória em tumores de base de crânio e estruturas adjacentes (prazo: 20 dias)",
+      "por_que_importa": "Proposta de incorporação tecnológica ao SUS para neurocirurgia oncológica; mudará padrão de cuidado se aprovada",
+      "valor_brl": null,
+      "entes": [
+        "Conitec",
+        "Secretaria de Atenção Especializada"
+      ],
+      "tags": [
+        "conitec",
+        "incorporação-tecnológica",
+        "neurocirurgia",
+        "consulta-pública"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c8cdb0d6874f36ed",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Consulta Pública",
+      "numero": "10",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "167",
+      "titulo": "Consulta Pública nº 10, DE 1º DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/consulta-publica-n-10-de-1-de-setembro-de-2026-729854862",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Consulta pública para revisão das Diretrizes de Cuidado da Pessoa Laringectomizada e Traqueostomizada (prazo: 15 dias)",
+      "por_que_importa": "Atualização de diretrizes de cuidado pode impactar protocolos e fluxos de atenção especializada para essas populações",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Atenção Especializada"
+      ],
+      "tags": [
+        "diretrizes-cuidado",
+        "laringectomia",
+        "traqueostomia",
+        "consulta-pública"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e3e57b261420835c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.820",
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "167",
+      "titulo": "Portaria SAES/MS Nº 4.820, DE 1º DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.820-de-1-de-setembro-de-2026-729850609",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Portaria habilitando Nefroclinica de Uberlândia (MG) no programa Agora Tem Especialistas para hemodiálise com limite anual de R$ 989.228,10 (válida 12 meses com efeitos a partir de março/2026)",
+      "por_que_importa": "Novo estabelecimento em Minas Gerais habilitado a receber créditos financeiros do programa de especialistas; abre fluxo de recursos para terapia renal em região periférica",
+      "valor_brl": 989228.1,
+      "entes": [
+        "Nefroclinica de Uberlândia Ltda",
+        "Secretaria Municipal de Saúde de Uberlândia"
+      ],
+      "tags": [
+        "agora-tem-especialistas",
+        "hemodiálise",
+        "uberlândia",
+        "minas-gerais",
+        "crítico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "65f5d6b5b6d6e0a7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 76,
+      "edicao": "167",
+      "titulo": "ReTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729850586",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Retificação de processo administrativo da Anvisa sobre recursos de empresas (Azul Linhas Aéreas e Bebidas Grassi)",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "anvisa",
+        "retificacao",
+        "processo-administrativo",
+        "nao-relevante-saude"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "aca1c41172150d4b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "167",
+      "titulo": "Retificação",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729846776",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de Portaria SAES/MS corrigindo código de procedimento de biopsia (02.01.01.015-1 para 02.01.01.066-6 - Biopsia de Colo Uterino)",
+      "por_que_importa": "Mudança de codificação de procedimento pode impactar faturamento SUS e classificação de ações clínicas",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Atenção Especializada à Saúde"
+      ],
+      "tags": [
+        "codificacao-procedimento",
+        "sus",
+        "retificacao",
+        "impacta-faturamento",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "802719731ff4ba47",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Instituto Nacional de Cardiologia",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 84,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729844343",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Extrato de Registro de Preços do Instituto Nacional de Cardiologia para aquisição de materiais hospitalares (EPIs) via Pregão Eletrônico",
+      "por_que_importa": "Publicação rotineira de licitação; serve como referência de preços praticados",
+      "valor_brl": 510178.72,
+      "entes": [
+        "Instituto Nacional de Cardiologia"
+      ],
+      "tags": [
+        "licitacao",
+        "registro-precos",
+        "materiais-hospitalares",
+        "epi",
+        "rotina-administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5a74080a7cc685a0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729844262",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Extrato de Registro de Preços para aquisição de materiais médico-hospitalares do Distrito Sanitário Especial Indígena Altamira - Empresa ALFA DISTRIBUIDORA",
+      "por_que_importa": "Licitação administrativa; referência de preços para distrito específico",
+      "valor_brl": 307948,
+      "entes": [
+        "Secretaria de Saúde Indígena",
+        "DSEI Altamira"
+      ],
+      "tags": [
+        "licitacao",
+        "registro-precos",
+        "saude-indigena",
+        "materiais-hospitalares"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "91f66b5225bfbe38",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 89,
+      "edicao": "167",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-729844108",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação da Funasa cobrado devolução de recursos de convênio não executado do município de América Dourada-BA. Responsável solidário é empresa contratada. Valor original R$ 22.717,09 atualizado para R$ 33.877,77",
+      "por_que_importa": "CRÍTICO: Mostra consequências de inexecução de convênios de saúde - gestores e responsáveis podem ser cobrados. Define que empresas contratadas são solidariamente responsáveis. Prazo de 15 dias para recolhimento ou será inscrito débito e aberto processo de cobrança",
+      "valor_brl": 33877.77,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de América Dourada-BA"
+      ],
+      "tags": [
+        "convenio",
+        "devolucao-recursos",
+        "responsabilidade-solidaria",
+        "inscricao-debito",
+        "risco-operacional",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f8a952ca786898c0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 86,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729800739",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Extrato de Registro de Preços para aquisição de materiais médico-hospitalares do DSEI Altamira - Empresa CIRURGICA SR PRODUTOS HOSPITALARES",
+      "por_que_importa": "Licitação administrativa; pequena ata de registro",
+      "valor_brl": 4311,
+      "entes": [
+        "Secretaria de Saúde Indígena",
+        "DSEI Altamira"
+      ],
+      "tags": [
+        "licitacao",
+        "registro-precos",
+        "saude-indigena",
+        "materiais-hospitalares"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f2ced3d75547a93d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 86,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729800716",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Extrato de Registro de Preços para aquisição de materiais médico-hospitalares do DSEI Altamira - Empresa RBB LICITA­ÇÕES E SERVIÇOS",
+      "por_que_importa": "Licitação administrativa; pequena ata de registro",
+      "valor_brl": 780,
+      "entes": [
+        "Secretaria de Saúde Indígena",
+        "DSEI Altamira"
+      ],
+      "tags": [
+        "licitacao",
+        "registro-precos",
+        "saude-indigena",
+        "materiais-hospitalares"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8a517b3d12052f98",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "710",
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "167",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 710, DE 31 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-710-de-31-de-agosto-de-2026-729790248",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação da SAPS para gestor do Fundo Municipal de Saúde de Embu-Guaçu/SP para retirar notificação sobre transferências e devoluções de recursos em 15 dias",
+      "por_que_importa": "Afeta gestores municipais de saúde; notificação sobre transferências/devolução de recursos SUS pode indicar pendências ou atrasos no cumprimento de objetivos",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Atenção Primária à Saúde",
+        "Município de Embu-Guaçu-SP"
+      ],
+      "tags": [
+        "transferencia-recursos",
+        "gestor-municipal",
+        "notificacao",
+        "sus",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9b46731f86b45602",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Edital",
+      "numero": "2/",
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 87,
+      "edicao": "167",
+      "titulo": "EDITAL Nº 2/GGREC/GADIP/ANVISA, DE 25 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-n-2/ggrec/gadip/anvisa-de-25-de-agosto-de-2026-729775041",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Edital da Anvisa notificando decisões administrativas em processos sancionadores de empresas de cosméticos e produtos diversos (multas entre R$ 2.000 e R$ 100.000)",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Agência Nacional de Vigilância Sanitária"
+      ],
+      "tags": [
+        "anvisa",
+        "processos-sancionadores",
+        "cosmeticos",
+        "nao-relevante-saude-publica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2de061ed127f63ab",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Grupo Hospitalar Conceição",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 87,
+      "edicao": "167",
+      "titulo": "EXTRATOS DE REGISTROS DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extratos-de-registros-de-precos-729774911",
+      "categoria": "C",
+      "relevancia": 2,
+      "resumo": "Extratos de Registros de Preços do Grupo Hospitalar Conceição para 4 grandes licitações: gases medicinais (R$ 227k), materiais hospitalares (R$ 1,3M), medicamentos não padronizados (R$ 13,2M) e medicamentos padronizados (R$ 1,8M)",
+      "por_que_importa": "Publicação administrativa mas mostra padrão de compra e preços praticados em hospital federal; útil para benchmarking de gestão de hospitais",
+      "valor_brl": 16669655.33,
+      "entes": [
+        "Grupo Hospitalar Conceição",
+        "Hospital Regional de Pronto-Socorro Pelotas",
+        "Hospital Nossa Senhora da Conceição",
+        "Hospital Federal de Bonsucesso"
+      ],
+      "tags": [
+        "licitacao",
+        "registro-precos",
+        "gases-medicinais",
+        "materiais-hospitalares",
+        "medicamentos",
+        "benchmarking"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "184d2afbfd551c7a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 89,
+      "edicao": "167",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-729774888",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação da Funasa ao ex-prefeito de Caicó/RN sobre Tomada de Contas Especial em convênio (nº 328/2015). Prazo de 15 dias para atender ou será inscrito débito no SIAFI",
+      "por_que_importa": "Mostra mecanismo de responsabilização de gestores públicos por convênios; importante para entender riscos de gestão de recursos federais e consequências de não cumprimento",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Caicó-RN"
+      ],
+      "tags": [
+        "convenio",
+        "tomada-contas-especial",
+        "responsabilizacao-gestor",
+        "siafi",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5bf4c9b58cc5397f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Instituto Nacional de Traumatologia e Ortopedia",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "167",
+      "titulo": "EDITAL DE NOTIFICAÇÃO E INTIMAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-e-intimacao-729768959",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Edital de Notificação e Intimação do INTO a empresa FSA MEDICAL sobre processo administrativo por irregularidades em licitação (não apresentação de amostras). Prazo de 10 dias para defesa",
+      "por_que_importa": "Processo administrativo rotineiro; mostra cumprimento de normas de licitação",
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Traumatologia e Ortopedia"
+      ],
+      "tags": [
+        "licitacao",
+        "processo-administrativo",
+        "irregularidade",
+        "defesa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "535965e00459e654",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 86,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729768878",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ata de Registro de Preços nº 16/2026 para aquisição de materiais médico-hospitalares do Distrito Sanitário Especial Indígena Altamira",
+      "por_que_importa": "Define tabela de preços para fornecimento de materiais hospitalares ao SUS indígena, impactando custo de insumos e disponibilidade de recursos",
+      "valor_brl": 720,
+      "entes": [
+        "Ministério da Saúde",
+        "Secretaria de Saúde Indígena",
+        "Distrito Sanitário Especial Indígena Altamira"
+      ],
+      "tags": [
+        "registro de preços",
+        "materiais médico-hospitalares",
+        "saúde indígena",
+        "aquisição",
+        "fornecimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "365f2a4e325c15b4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 86,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729759917",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ata de Registro de Preços nº 14/2026 para aquisição de materiais médico-hospitalares do Distrito Sanitário Especial Indígena Altamira",
+      "por_que_importa": "Define preços para fornecimento de materiais hospitalares ao SUS indígena por empresa especializada",
+      "valor_brl": 18700,
+      "entes": [
+        "Ministério da Saúde",
+        "Secretaria de Saúde Indígena",
+        "Distrito Sanitário Especial Indígena Altamira"
+      ],
+      "tags": [
+        "registro de preços",
+        "materiais médico-hospitalares",
+        "saúde indígena",
+        "fornecimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ea2c3c9f5110e0e1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 88,
+      "edicao": "167",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-729756535",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Edital de notificação individual para ex-prefeito do Município de Pariconha/AL",
+      "por_que_importa": "Notificação de processo específico - sem impacto direto em captação de recursos para instituições filantrópicas ou SUS",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Pariconha"
+      ],
+      "tags": [
+        "notificação",
+        "processo administrativo",
+        "Pariconha"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7407523f5edcb7f2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": "164/2026",
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 89,
+      "edicao": "167",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO Nº 164/2026",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-n-164/2026-729756400",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Aviso de chamamento público para pesquisa de mercado de serviços de confecção, transporte e higienização de uniformes e têxteis da Farmanguinhos/Fiocruz",
+      "por_que_importa": "Oportunidade de fornecimento para Fiocruz - relevante para fornecedores, não para captação de recursos de instituições filantrópicas",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Oswaldo Cruz",
+        "Instituto de Tecnologia em Fármacos - Farmanguinhos"
+      ],
+      "tags": [
+        "chamamento público",
+        "pesquisa de mercado",
+        "serviços",
+        "uniformes",
+        "fornecimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6c1ff1dfd56ce932",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 89,
+      "edicao": "167",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-729746502",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Edital de notificação para pagamento de débito em convênio do município de Camacã-BA (dois herdeiros de ex-gestora)",
+      "por_que_importa": "Notificação de cobração individual - não impacta captação de recursos para instituições filantrópicas ou regras do SUS",
+      "valor_brl": 104937.18,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Camacã"
+      ],
+      "tags": [
+        "notificação",
+        "débito",
+        "convênio",
+        "Camacã",
+        "TC/PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5efd85a84a588a60",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 89,
+      "edicao": "167",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-729741697",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Edital de notificação de débito para Construtora Vieira LTDA por inexecução de convênio de melhorias sanitárias domiciliares em Pesqueira/PE",
+      "por_que_importa": "Notificação de cobração individual - não afeta captação de recursos para instituições filantrópicas",
+      "valor_brl": 106758.59,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Pesqueira"
+      ],
+      "tags": [
+        "notificação",
+        "débito",
+        "convênio",
+        "construção",
+        "melhorias sanitárias"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a5055364fe8c4c66",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 86,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729731546",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ata de Registro de Preços nº 13/2026 para aquisição de materiais e medicamentos do Distrito Sanitário Especial Indígena Altamira",
+      "por_que_importa": "Define preços para fornecimento de medicamentos e materiais hospitalares ao SUS indígena",
+      "valor_brl": 13845,
+      "entes": [
+        "Ministério da Saúde",
+        "Secretaria de Saúde Indígena",
+        "Distrito Sanitário Especial Indígena Altamira"
+      ],
+      "tags": [
+        "registro de preços",
+        "medicamentos",
+        "materiais médico-hospitalares",
+        "saúde indígena",
+        "fornecimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fc57eddad6ddbee4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 86,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729731462",
+      "categoria": "A",
+      "relevancia": 1,
+      "resumo": "Ata de Registro de Preços nº 19/2026 para aquisição de materiais de iluminação do Distrito Sanitário Especial Indígena Altamira",
+      "por_que_importa": "Define preços para fornecimento de materiais ao SUS indígena - impacto menor por valor reduzido",
+      "valor_brl": 600,
+      "entes": [
+        "Ministério da Saúde",
+        "Secretaria de Saúde Indígena",
+        "Distrito Sanitário Especial Indígena Altamira"
+      ],
+      "tags": [
+        "registro de preços",
+        "materiais",
+        "iluminação",
+        "saúde indígena",
+        "fornecimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "68b0a5fa5998bc2e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "167",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-729716375",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ata de Registro de Preços nº 09/2026 para aquisição de produtos para saúde e pesquisas do Distrito Sanitário Especial Indígena Altamira",
+      "por_que_importa": "Define preços para fornecimento de produtos para saúde ao SUS indígena, garantindo acesso a insumos",
+      "valor_brl": 17732.5,
+      "entes": [
+        "Ministério da Saúde",
+        "Secretaria de Saúde Indígena",
+        "Distrito Sanitário Especial Indígena Altamira"
+      ],
+      "tags": [
+        "registro de preços",
+        "produtos para saúde",
+        "pesquisas",
+        "saúde indígena",
+        "fornecimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cc22a3fd10f533ae",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Instituto Nacional de Traumatologia e Ortopedia",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "167",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-729703430",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Aviso de alteração de edital do Pregão 194/2025 para aquisição de medicamentos antirreumáticos (hilano e outros) do INOT",
+      "por_que_importa": "Alteração de datas em licitação - relevante para fornecedores acompanharem oportunidades",
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Traumatologia e Ortopedia"
+      ],
+      "tags": [
+        "alteração de edital",
+        "pregão",
+        "medicamentos",
+        "antirreumáticos",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "be4e885dc2982dac",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11.606",
+      "data_publicacao": "2026-09-03",
+      "secao": null,
+      "pagina": 16,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES Nº 11.606, 02 DE SETEMBRO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-03T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330896%2C%22paginaSelecionada%22%3A16%7D",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Resolução SES Minas Gerais nº 11.606 que prorroga por 12 meses prazo de execução de recursos para Atenção Primária à Saúde (veículos, equipamentos, materiais permanentes, Academia da Saúde)",
+      "por_que_importa": "Muda regra de prazo para execução de recursos já transferidos - impacta planejamento e capacidade de gasto de múltiplos municípios mineiros",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde de Minas Gerais",
+        "Municípios de Minas Gerais"
+      ],
+      "tags": [
+        "prorrogação de prazo",
+        "atenção primária",
+        "estruturação",
+        "recursos",
+        "investimento",
+        "gestão financeira"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "514556bb0bf6abca",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": "288",
+      "data_publicacao": "2026-09-03",
+      "secao": null,
+      "pagina": 16,
+      "edicao": null,
+      "titulo": "ATO Nº 288 DE 28 DE AGOSTO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-03T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330896%2C%22paginaSelecionada%22%3A16%7D",
+      "categoria": "C",
+      "relevancia": 0,
+      "resumo": "Ato administrativo com progressões de carreira, opções de composição remuneratória, licenças paternidade e aposentadorias de servidores da SES Minas Gerais",
+      "por_que_importa": "Rotina administrativa de gestão de pessoal - não impacta captação de recursos ou regras operacionais para instituições filantrópicas/Santas Casas/SUS",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde de Minas Gerais"
+      ],
+      "tags": [
+        "progressão na carreira",
+        "composição remuneratória",
+        "licença",
+        "aposentadoria",
+        "recursos humanos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "23e5ae3a23edde47",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "31",
+      "data_publicacao": "2026-09-03",
+      "secao": null,
+      "pagina": 16,
+      "edicao": null,
+      "titulo": "PORTARIA ESP Nº 31 DE 02 DE SETEMBRO 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-03T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330896%2C%22paginaSelecionada%22%3A16%7D",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Hemominas institui comissão para avaliar valor de mercado de locação de imóvel na Rua Grão Pará 882 (administração central); Portaria ESP aplica ADGP a servidor gerencial",
+      "por_que_importa": "A avaliação de valor de mercado do imóvel alugado pode resultar em renegociação de contrato de locação, impactando custos operacionais recorrentes da fundação. Prazo de 30 dias sugere ação urgente para revisão de despesa imobiliária.",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Centro de Hematologia e Hemoterapia do Estado de Minas Gerais (Hemominas)"
+      ],
+      "tags": [
+        "Despesa operacional",
+        "Imóvel alugado",
+        "Avaliação de custos",
+        "Contrato de locação",
+        "Administração"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4a15ed5abcadb006",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": null,
+      "data_publicacao": "2026-09-03",
+      "secao": null,
+      "pagina": 17,
+      "edicao": null,
+      "titulo": "PORTARIA FUNED N. º 67, DE 01 DE SETEMBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-03T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330896%2C%22paginaSelecionada%22%3A17%7D",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Funed anula progressão e concede promoção por escolaridade com efeitos retroativos (11/06/2025) em cumprimento de decisão judicial; Fhemig exonera técnica de enfermagem do Hospital João XXIII por infrequência em estágio probatório",
+      "por_que_importa": "A reclassificação de TST Nível I para Nível II implica mudança salarial retroativa (impacto em folha de pessoal e possível retroativo); exoneração reduz carga de pessoal e folha. Ambas afetam gestão orçamentária de pessoal.",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ezequiel Dias (FUNED)",
+        "Fundação Hospitalar do Estado de Minas Gerais (Fhemig)",
+        "Hospital João XXIII"
+      ],
+      "tags": [
+        "Folha de pagamento",
+        "Reclassificação de servidor",
+        "Decisão judicial",
+        "Pessoal",
+        "Retroativo"
+      ],
+      "fallback": false
+    }
+  ]
+}

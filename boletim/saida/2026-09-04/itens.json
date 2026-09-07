@@ -1,0 +1,1520 @@
+{
+  "data": "2026-09-04",
+  "gerado_em": "2026-09-07T23:47:52.139790+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "Renovações de CEBAS e ajustes orçamentários movimentam recursos do SUS",
+    "em_30_segundos": [
+      "R$ 29,2 milhões aprovados em recomposição de Tetos MAC para 4 municípios mineiros (Manhuaçu, Capetinga, Claraval, Jacuí)",
+      "13 instituições filantrópicas com CEBAS renovado ou deferido, consolidando elegibilidade para transferências federais",
+      "Expansão de SAMU 192 em 3 cidades nordestinas com portarias de renovação de qualificação e manutenção de repasses",
+      "Programa PRONAS/PCD com R$ 1,47 milhão destinado a projeto de TEA em Gravatá",
+      "Adesão de 3 municípios do RS à PNAISP com recursos federais condicionados ao credenciamento"
+    ],
+    "intro": "Esta edição consolida um movimento duplo de expansão orçamentária e qualificação institucional para a rede filantrópica e municipal. Enquanto a SES-MG recompõe tetos de financiamento com ênfase na complexidade, o Ministério da Saúde avança em dois frentes simultâneas: renovação em larga escala de certificações de filantropia (CEBAS) e abertura de novas linhas de programa para grupos vulneráveis. Gestores de Santas Casas e instituições comunitárias encontram aqui evidências de que o financiamento federal segue reforçando compromissos com entidades que já comprovaram dedicação ao SUS. Para secretarias municipais, a pauta traz oportunidades de ampliação de serviços de urgência e entrada em programas estruturantes de atenção integral.",
+    "parcial": false,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "168",
+        "paginas": "pp. 1-200",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ok",
+        "edicao": null,
+        "paginas": "pp. 25-31",
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "8bb79b6d8ac6163d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.796",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 184,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.796, DE 27 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.796-de-27-de-agosto-de-2026-730247815",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS da Fundação Ivan Goulart (São Borja, RS) com comprovação de 60%+ de atendimento SUS",
+      "por_que_importa": "CEBAS é certificado crítico para isenção de impostos (IR, CSLL, PIS, COFINS) e contribuições sociais. Renovação confirma status de entidade beneficente e mantém elegibilidade para contratos SUS. Entidades sem CEBAS perdem isenções e capacidade de captar recursos filantrópicos.",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ivan Goulart"
+      ],
+      "tags": [
+        "cebas",
+        "isenção-fiscal",
+        "entidade-filantrópica",
+        "renovação",
+        "sus"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c190ed03b81aa1f8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 184,
+      "edicao": "168",
+      "titulo": "Retificação",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730246547",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Retificação de classificação de CEO em Luís Eduardo Magalhães (BA) - alteração de Tipo 2 para Tipo 1 na habilitação",
+      "por_que_importa": "Correção administrativa de tipologia de CEO. Pode afetar futuro repasse de recursos ou habilitação, mas é uma retificação de erro anterior, não uma nova mudança de política.",
+      "valor_brl": null,
+      "entes": [
+        "Município de Luís Eduardo Magalhães"
+      ],
+      "tags": [
+        "ceo",
+        "odontologia",
+        "habilitação",
+        "retificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "21abbc6b6020ceb8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.816",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.816, DE 31 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.816-de-31-de-agosto-de-2026-730246466",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS da Sociedade Literária e Caritativa Santo Agostinho (Porto Alegre, RS) com 60%+ SUS até 31/12/2026",
+      "por_que_importa": "Renovação de CEBAS garante continuidade de isenções fiscais e obrigações contratuais com SUS. Crítico para manutenção de status filantrópico e acesso a benefícios tributários e contribuições.",
+      "valor_brl": null,
+      "entes": [
+        "Sociedade Literária e Caritativa Santo Agostinho"
+      ],
+      "tags": [
+        "cebas",
+        "isenção-fiscal",
+        "renovação",
+        "sus",
+        "entidade-filantrópica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8e7c2b41427a54b1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.802",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.802, DE 27 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.802-de-27-de-agosto-de-2026-730245277",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS da Irmandade da Santa Casa de Louveira (SP) com 60%+ SUS até 31/01/2027",
+      "por_que_importa": "Santa Casa é instituição tradicional filantrópica. CEBAS é essencial para manter isenções de impostos, contribuições sociais e elegibilidade para contratos SUS. Sem CEBAS, a instituição perde toda capacidade de operar como entidade beneficente.",
+      "valor_brl": null,
+      "entes": [
+        "Irmandade da Santa Casa de Louveira"
+      ],
+      "tags": [
+        "cebas",
+        "santa-casa",
+        "isenção-fiscal",
+        "renovação",
+        "sus"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "42a92a9f707e7f3c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.140",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 183,
+      "edicao": "168",
+      "titulo": "Portaria GM/MS Nº 12.140, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.140-de-3-de-setembro-de-2026-730244538",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Renovação de qualificação e manutenção de repasse de R$ 137.186,40/ano para USB/SAMU 192 do Município de Águas Belas (PE)",
+      "por_que_importa": "Combina dois impactos: (1) renova qualificação da Unidade de Suporte Básico do SAMU por 3 anos; (2) confirma repasse anual para custeio. Afeta diretamente orçamento municipal e continuidade do serviço de urgência.",
+      "valor_brl": 137186.4,
+      "entes": [
+        "Município de Águas Belas"
+      ],
+      "tags": [
+        "samu",
+        "repasse-financeiro",
+        "urgência",
+        "qualificação",
+        "bloco-mac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e7e52a1dec69f24b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.793",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 184,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.793, DE 26 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.793-de-26-de-agosto-de-2026-730244402",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Deferimento em grau de reconsideração do CEBAS do Instituto Amo Acalentar (Belém, PA) com 20% de receita em gratuidade",
+      "por_que_importa": "Primeira concessão de CEBAS (após recurso em reconsideração). Permite que institutos apliquem critério alternativo (20% de receita em gratuidade ao invés de 60% SUS). Abre acesso a isenções fiscais e legitimidade como entidade beneficente.",
+      "valor_brl": null,
+      "entes": [
+        "Instituto Amo Acalentar"
+      ],
+      "tags": [
+        "cebas",
+        "concessão",
+        "isenção-fiscal",
+        "gratuidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "36bc8c4804af046d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.811",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.811, DE 31 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.811-de-31-de-agosto-de-2026-730241666",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS da Associação do Hospital Jaraguá (Jaraguá do Sul, SC) com 60%+ SUS até 28/12/2028",
+      "por_que_importa": "Renovação de CEBAS para hospital filantrópico. Garante continuidade de isenção fiscal total (IR, CSLL, PIS, COFINS, INSS) e obrigações contratuais com SUS. Crítico para viabilidade financeira de hospitais filantrópicos.",
+      "valor_brl": null,
+      "entes": [
+        "Associação do Hospital Jaraguá"
+      ],
+      "tags": [
+        "cebas",
+        "hospital",
+        "isenção-fiscal",
+        "renovação",
+        "sus"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b36c56452348eb35",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.808",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.808, DE 28 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.808-de-28-de-agosto-de-2026-730239282",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Deferimento de CEBAS do Instituto de Gestão e Cidadania (Fortaleza, CE) com 60%+ SUS, validade 3 anos",
+      "por_que_importa": "Primeira concessão de CEBAS a novo instituto. Permite acesso a todas as isenções fiscais federais (IR, CSLL, PIS, COFINS) e contribuições sociais. Abre possibilidade de captação de recursos e contratos SUS.",
+      "valor_brl": null,
+      "entes": [
+        "Instituto de Gestão e Cidadania"
+      ],
+      "tags": [
+        "cebas",
+        "concessão",
+        "isenção-fiscal",
+        "sus"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "eaaed9fa3fa636e2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.790",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 184,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.790, DE 26 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.790-de-26-de-agosto-de-2026-730235750",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS da Associação Beneficente Seara do Bem (Lages, SC) com 60%+ SUS até 31/12/2028",
+      "por_que_importa": "Renovação de CEBAS garante continuidade de isenções fiscais e benefícios contributivos. Entidade filantrópica mantém elegibilidade para contratos SUS e acesso a benefícios tributários.",
+      "valor_brl": null,
+      "entes": [
+        "Associação Beneficente Seara do Bem"
+      ],
+      "tags": [
+        "cebas",
+        "isenção-fiscal",
+        "renovação",
+        "sus"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e84f1cf8a7645c05",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.797",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 184,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.797, DE 27 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.797-de-27-de-agosto-de-2026-730233692",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS da Associação Beneficente de Pirangi (Pirangi, SP) com 60%+ SUS até 23/04/2028",
+      "por_que_importa": "Renovação de CEBAS mantém status de entidade filantrópica e isenções fiscais totais. Crítico para continuidade operacional de instituições que dependem de benefícios tributários.",
+      "valor_brl": null,
+      "entes": [
+        "Associação Beneficente de Pirangi"
+      ],
+      "tags": [
+        "cebas",
+        "isenção-fiscal",
+        "renovação",
+        "sus"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a223a48fdbcd74f6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.818",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.818, DE 31 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.818-de-31-de-agosto-de-2026-730233613",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Deferimento de CEBAS do Instituto de Saúde Nossa Senhora de Lourdes de Planalto (PR) com 60%+ SUS, validade 3 anos",
+      "por_que_importa": "Primeira concessão de CEBAS a novo instituto. Permite acesso integral a isenções de IR, CSLL, PIS, COFINS e contribuições sociais. Abre capacidade de prestar serviços ao SUS como entidade beneficente.",
+      "valor_brl": null,
+      "entes": [
+        "Instituto de Saúde Nossa Senhora de Lourdes de Planalto"
+      ],
+      "tags": [
+        "cebas",
+        "concessão",
+        "isenção-fiscal",
+        "sus"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b80f18b4e425f068",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Resolução",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 200,
+      "edicao": "168",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730233534",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Retificação de omissão de títulos institucionais em duas resoluções da ANVISA (Resoluções-RE 3.408 e 3.410)",
+      "por_que_importa": "Retificação puramente administrativa - apenas corrige omissão de identificação institucional (4ª Diretoria, Gerência de Laboratórios de Saúde Pública). Sem impacto operacional, regulatório ou financeiro para instituições de saúde.",
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "anvisa",
+        "retificação",
+        "administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7e9c69d3951d4f13",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.136",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 183,
+      "edicao": "168",
+      "titulo": "PORTARIA GM/MS Nº 12.136, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.136-de-2-de-setembro-de-2026-730233139",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Aprova adesão de 3 municípios do RS (Caçapava do Sul, Rosário do Sul, Encantado) à Política Nacional de Atenção Integral à Saúde das Pessoas Privadas de Liberdade (PNAISP), com transferência de recursos federais condicionada ao credenciamento.",
+      "por_que_importa": "Abre acesso a financiamento federal para saúde prisional nos municípios aderentes, conforme Portarias de Consolidação GM/MS.",
+      "valor_brl": null,
+      "entes": [
+        "Município de Caçapava do Sul",
+        "Município de Rosário do Sul",
+        "Município de Encantado"
+      ],
+      "tags": [
+        "Transferência Federal",
+        "PNAISP",
+        "SUS",
+        "Saúde Prisional",
+        "Recursos Federais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4ea312f1f9c1d6a9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.813",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.813, DE 31 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.813-de-31-de-agosto-de-2026-730216308",
+      "categoria": "C",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS da Associação de Combate ao Câncer do Centro Oeste de Minas (Divinópolis/MG), comprovando 60% de serviços ao SUS. Validez 2024-2026.",
+      "por_que_importa": "Mantém certificação de entidade beneficente, preservando benefícios fiscais e isenções para instituição filantrópica que presta serviços ao SUS.",
+      "valor_brl": null,
+      "entes": [
+        "Associação de Combate ao Câncer do Centro Oeste de Minas"
+      ],
+      "tags": [
+        "CEBAS",
+        "Filantropia",
+        "Benefícios Fiscais",
+        "SUS",
+        "Minas Gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4d47a62bb9fe69c4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "168",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-730182492",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Edital de notificação da FUNASA ao ex-prefeito de Anhembi/SP para retirar notificação sobre débito de convênio (Tomada de Contas Especial).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Município de Anhembi",
+        "FUNASA"
+      ],
+      "tags": [
+        "Cobrança",
+        "Procedimento Administrativo",
+        "Tomada de Contas Especial"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "da61a48a7a4d80f1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "168",
+      "titulo": "EDITAL DE CONVOCAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-convocacao-730175121",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Notificação a fornecedor G.O Medical Ltda. por não cumprimento de ATA de Registro de Preços nº 34/2025 (Pregão nº 90011/2025). Valor em questão: R$ 16.932,46.",
+      "por_que_importa": null,
+      "valor_brl": 16932.46,
+      "entes": [
+        "DSEI Maranhão",
+        "G.O Medical LTDA"
+      ],
+      "tags": [
+        "Fornecedor",
+        "Registro de Preços",
+        "Gestão Contratual",
+        "Sanção Administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5651c016843f6175",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.817",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.817, DE 31 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.817-de-31-de-agosto-de-2026-730154819",
+      "categoria": "C",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS da Associação de Combate ao Câncer do Brasil Central (Uberaba/MG), comprovando 60% de serviços ao SUS. Validez 2025-2027.",
+      "por_que_importa": "Mantém certificação de entidade beneficente, preservando benefícios fiscais e isenções para instituição filantrópica que presta serviços ao SUS.",
+      "valor_brl": null,
+      "entes": [
+        "Associação de Combate ao Câncer do Brasil Central"
+      ],
+      "tags": [
+        "CEBAS",
+        "Filantropia",
+        "Benefícios Fiscais",
+        "SUS",
+        "Minas Gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6137e477dc09eb92",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 200,
+      "edicao": "168",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730154712",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Retificação de Portaria nº 3.039/2026 sobre delegação de competência para concessão de GTATA (gratificação) na FUNASA. Correção interna de gestão de RH.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "FUNASA"
+      ],
+      "tags": [
+        "Gestão Interna",
+        "Recursos Humanos",
+        "Retificação",
+        "Delegação de Competência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f674ae948b0de97f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.804",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.804, DE 27 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.804-de-27-de-agosto-de-2026-730151389",
+      "categoria": "C",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS do Hospital Beneficente São Pedro (Garibaldi/RS), comprovando 60% de serviços ao SUS. Validez 2025-2027.",
+      "por_que_importa": "Mantém certificação de Santa Casa, preservando benefícios fiscais e isenções para instituição filantrópica que presta serviços ao SUS.",
+      "valor_brl": null,
+      "entes": [
+        "Hospital Beneficente São Pedro"
+      ],
+      "tags": [
+        "CEBAS",
+        "Filantropia",
+        "Santa Casa",
+        "SUS",
+        "Rio Grande do Sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e62a5e6bf52109d1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.823",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.823, DE 1º DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.823-de-1-de-setembro-de-2026-730150324",
+      "categoria": "C",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS do Hospital São Francisco de Paula (São Francisco de Paula/RS), comprovando 60% de serviços ao SUS. Validez 2026-2028.",
+      "por_que_importa": "Mantém certificação de hospital filantrópico, preservando benefícios fiscais e isenções para instituição que presta serviços ao SUS.",
+      "valor_brl": null,
+      "entes": [
+        "Hospital São Francisco de Paula"
+      ],
+      "tags": [
+        "CEBAS",
+        "Filantropia",
+        "SUS",
+        "Rio Grande do Sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c0b9dcc32014efe8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.814",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.814, DE 31 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.814-de-31-de-agosto-de-2026-730146598",
+      "categoria": "C",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS da Santa Casa de Misericórdia de Estrela D'Oeste (SP), comprovando 60% de serviços ao SUS. Validez 2024-2027.",
+      "por_que_importa": "Mantém certificação de Santa Casa, preservando benefícios fiscais e isenções para instituição filantrópica que presta serviços ao SUS.",
+      "valor_brl": null,
+      "entes": [
+        "Irmandade da Santa Casa de Misericórdia de Estrela D'Oeste"
+      ],
+      "tags": [
+        "CEBAS",
+        "Filantropia",
+        "Santa Casa",
+        "SUS",
+        "São Paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6b271366a283da84",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.141",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 184,
+      "edicao": "168",
+      "titulo": "Portaria GM/MS Nº 12.141, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.141-de-3-de-setembro-de-2026-730143120",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Renova qualificação de Unidades de Suporte Básico (USB) do SAMU 192 de Irecê/BA para Central e Lapão. Mantém transferência federal anual de R$ 274.372,80 (R$ 137.186,40 cada) no Bloco MAC.",
+      "por_que_importa": "Garante continuidade de financiamento federal para serviço pré-hospitalar em 2 municípios da Bahia por 3 anos consecutivos.",
+      "valor_brl": 274372.8,
+      "entes": [
+        "Central de Regulação das Urgências Irecê",
+        "Município de Central",
+        "Município de Lapão"
+      ],
+      "tags": [
+        "Transferência Federal",
+        "SAMU",
+        "Urgência",
+        "Pré-hospitalar",
+        "MAC",
+        "Bahia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5c48eb7f8c441f6b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.815",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.815, DE 31 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.815-de-31-de-agosto-de-2026-730143041",
+      "categoria": "C",
+      "relevancia": 2,
+      "resumo": "Renovação do CEBAS da Sociedade Hospital São Gabriel Arcanjo (Cruzeiro do Sul/SC), comprovando 60% de serviços ao SUS. Validez 2024-2027.",
+      "por_que_importa": "Mantém certificação de hospital filantrópico, preservando benefícios fiscais e isenções para instituição que presta serviços ao SUS.",
+      "valor_brl": null,
+      "entes": [
+        "Sociedade Hospital São Gabriel Arcanjo"
+      ],
+      "tags": [
+        "CEBAS",
+        "Filantropia",
+        "SUS",
+        "Santa Catarina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4744c191dd7875da",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Aresto",
+      "numero": "1.795",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 186,
+      "edicao": "168",
+      "titulo": "ARESTO nº 1.795, DE 3 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/aresto-n-1.795-de-3-de-setembro-de-2026-730142962",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Aresto nº 1.795 da ANVISA com decisões sobre recursos administrativos de 5 empresas (Building Health, Know-How, Medcosta, Yamamura, VARIG). Negação de provimentos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "ANVISA"
+      ],
+      "tags": [
+        "Procedimento Administrativo",
+        "Recurso",
+        "Regulação",
+        "ANVISA"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b9c5b34cfeef1e5a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.824",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 185,
+      "edicao": "168",
+      "titulo": "Portaria SAES/MS Nº 4.824, DE 1º DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.824-de-1-de-setembro-de-2026-730141146",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Concessão de CEBAS para Saúde Alegria e Sustentabilidade Brasil (Cruz, CE)",
+      "por_que_importa": "CEBAS é certificação crítica que abre acesso a programas de financiamento federal, imunidade fiscal e critérios de seleção em editais de saúde. Válido por 3 anos. Modelo direto de oportunidade para filantrópicos.",
+      "valor_brl": null,
+      "entes": [
+        "Saúde Alegria e Sustentabilidade Brasil"
+      ],
+      "tags": [
+        "CEBAS",
+        "certificação",
+        "filantropia",
+        "imunidade fiscal",
+        "acesso a programas"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bf484a7974e92faf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.032",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 183,
+      "edicao": "168",
+      "titulo": "Portaria GM/MS Nº 12.032, DE 27 DE julho DE 2026 (*)",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.032-de-27-de-julho-de-2026-*-730140197",
+      "categoria": "C",
+      "relevancia": 0,
+      "resumo": "Delegação de competência ao Secretário-Executivo do MS para concessão de GTATA",
+      "por_que_importa": "Rotina administrativa interna do Ministério da Saúde. Não muda regras ou dinheiro disponível para hospitais filantrópicos ou SMS.",
+      "valor_brl": null,
+      "entes": [
+        "Ministério da Saúde"
+      ],
+      "tags": [
+        "delegação",
+        "GTATA",
+        "administrativo",
+        "interno"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6d134d3120bd9089",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.138",
+      "data_publicacao": "2026-09-04",
+      "secao": "1",
+      "pagina": 183,
+      "edicao": "168",
+      "titulo": "Portaria GM/MS Nº 12.138, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.138-de-3-de-setembro-de-2026-730136937",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Renovação de qualificação de Central de Regulação das Urgências (CRU/SAMU 192) de Porto Alegre e manutenção de recursos",
+      "por_que_importa": "Garante continuidade de financiamento anual para SAMU municipal por mais 3 anos. SMS precisa renovar qualificação para manter recursos. Muda continuidade de dinheiro.",
+      "valor_brl": 352934.4,
+      "entes": [
+        "Município de Porto Alegre"
+      ],
+      "tags": [
+        "SAMU",
+        "urgências",
+        "financiamento municipal",
+        "qualificação",
+        "renovação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2a607385ed4feeda",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 109,
+      "edicao": "168",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-730135406",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Parcelamento de débito de R$ 154.622,62 do Instituto Walfredo Guedes Pereira com Fundo Nacional de Saúde",
+      "por_que_importa": "Mostra cobrança de glosa técnica. Relevante para instituições no setor (alerta de fiscalização) mas é situação específica de recuperação de crédito, não oportunidade de captação.",
+      "valor_brl": 154622.62,
+      "entes": [
+        "Instituto Walfredo Guedes Pereira"
+      ],
+      "tags": [
+        "débito",
+        "glosa",
+        "parcelamento",
+        "fiscalização",
+        "Fundo Nacional de Saúde",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8c965f87eaf9a2c3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "168",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-730124802",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Notificação a ex-prefeito sobre Tomada de Contas Especial (FUNASA)",
+      "por_que_importa": "Rotina administrativo-legal de fiscalização. Não impacta diretamente captação de recursos ou mudanças em regras para hospitais filantrópicos.",
+      "valor_brl": null,
+      "entes": [
+        "Município de Riachão",
+        "Fundação Nacional de Saúde"
+      ],
+      "tags": [
+        "tomada de contas especial",
+        "notificação",
+        "convênio",
+        "procedimento administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fa47dea37000f9f6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Compromisso",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 109,
+      "edicao": "168",
+      "titulo": "EXTRATO DE COMPROMISSO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-compromisso-730108379",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Compromisso PRONAS/PCD: R$ 1.476.991,02 para projeto TEA e PCDs em Gravatá (SERC)",
+      "por_que_importa": "Exemplifica oportunidade de captação via PRONAS/PCD. Muda dinheiro real - recurso liberado. Modelo replicável para instituições interessadas em deficiência e desenvolvimento infantil.",
+      "valor_brl": 1476991.02,
+      "entes": [
+        "Serviços de Estimulação e Reabilitação da Criança (SERC)"
+      ],
+      "tags": [
+        "PRONAS/PCD",
+        "TEA",
+        "PCDs",
+        "financiamento",
+        "projeto",
+        "termo de compromisso"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "38c110ab38c42a19",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Padronização",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "168",
+      "titulo": "AVISO DE PADRONIZAÇÃO DE MARCAS",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-padronizacao-de-marcas-730105990",
+      "categoria": "C",
+      "relevancia": 0,
+      "resumo": "Aviso de processo de Padronização de Marcas de Insumos Hospitalares (IFF/Fiocruz)",
+      "por_que_importa": "Rotina administrativa interna da Fiocruz. Não muda dinheiro ou regras para instituições externas.",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Oswaldo Cruz",
+        "Instituto Nacional de Saúde da Mulher"
+      ],
+      "tags": [
+        "padronização",
+        "insumos",
+        "processo administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "70323f8b73fe5df7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "580",
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "168",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 580, DE 29 DE julho DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-580-de-29-de-julho-de-2026-730101203",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Edital de Notificação (SAPS) para retirada de parecer técnico sobre devolução de recursos",
+      "por_que_importa": "Rotina de procedimento administrativo-legal. Notificação pessoal sobre parecer específico não altera regras ou oportunidades de captação.",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Atenção Primária à Saúde"
+      ],
+      "tags": [
+        "notificação",
+        "parecer técnico",
+        "devolução de recursos",
+        "procedimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d3375bf3ed2db9eb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "168",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730081466",
+      "categoria": "C",
+      "relevancia": 0,
+      "resumo": "Retificação de publicação anterior (SESAI): correção de 'Concorrência' para 'Pregão Eletrônico'",
+      "por_que_importa": "Correção puramente formal/terminológica. Não muda valores, regras ou oportunidades.",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Saúde Indígena"
+      ],
+      "tags": [
+        "retificação",
+        "nomenclatura",
+        "procedimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d76c62740d54129a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "168",
+      "titulo": "Retificação",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730063879",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de Termo Aditivo ao Convênio: correção de vigência e valor para R$ 799.850,00",
+      "por_que_importa": "Muda valor do repasse (aumenta de R$ 250k para R$ 799,850), mas é retificação de erro anterior. Afeta dinheiro mas requer investigação do convênio original para contexto.",
+      "valor_brl": 799850,
+      "entes": [
+        "Entidade do Convênio 947083/2023"
+      ],
+      "tags": [
+        "retificação",
+        "convênio",
+        "valor corrigido",
+        "termo aditivo",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a12f54d0ae208296",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "168",
+      "titulo": "Retificação",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730050312",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de Termo Aditivo ao Convênio: correção de vigência e valor para R$ 250.000,00",
+      "por_que_importa": "Muda valor do repasse (reduz de R$ 799,850 para R$ 250k), mas é retificação de erro anterior. Afeta dinheiro mas requer investigação do convênio original para contexto.",
+      "valor_brl": 250000,
+      "entes": [
+        "Entidade do Convênio 947078/2023"
+      ],
+      "tags": [
+        "retificação",
+        "convênio",
+        "valor corrigido",
+        "termo aditivo",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "aa1157cd85e79e61",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Empresa Brasileira de Hemoderivados e Biotecnologia",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "168",
+      "titulo": "AVISO DE ALTERAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-730048081",
+      "categoria": "C",
+      "relevancia": 0,
+      "resumo": "Aviso de Alteração de Pregão Eletrônico: contratação de recreador/animador para mascote da Hemobrás",
+      "por_que_importa": "Processo de contratação interno da Hemobrás. Não impacta instituições externas ou oportunidades de captação.",
+      "valor_brl": null,
+      "entes": [
+        "Empresa Brasileira de Hemoderivados e Biotecnologia"
+      ],
+      "tags": [
+        "pregão",
+        "contratação",
+        "administrativo",
+        "interno"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8750cf5101b4d0a1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "168",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-730048042",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Edital notificando empresa contratada sobre pendência com Município de Riachão/MA",
+      "por_que_importa": "É apenas notificação de cobrança administrativa, sem mudança de regra ou fluxo de recurso imediato",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Riachão/MA"
+      ],
+      "tags": [
+        "notificação",
+        "cobrança",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ee135caebad9707b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "168",
+      "titulo": "EXTRATO DE ENCERRAMENTO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-encerramento-730003439",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Encerramento de Convênio nº 1086/2019 com Município de São Francisco de Assis/RS",
+      "por_que_importa": "Encerra convênio, interrompendo potencial fluxo de transferências de recursos federais para o município",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de São Francisco de Assis/RS"
+      ],
+      "tags": [
+        "encerramento",
+        "convênio",
+        "regra"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f3ed1ac90442ac32",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "168",
+      "titulo": "EXTRATO DE ENCERRAMENTO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-encerramento-730001143",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Encerramento de Convênio nº 00715/2017 com Município de Soledade/RS",
+      "por_que_importa": "Encerra convênio, cessando potencial fluxo de transferências de recursos federais para o município",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Soledade/RS"
+      ],
+      "tags": [
+        "encerramento",
+        "convênio",
+        "regra"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "982499e3f4b10222",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "713",
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "168",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 713, DE 2 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-713-de-2-de-setembro-de-2026-729982894",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Edital de notificação pessoal para retirada de documento administrativo",
+      "por_que_importa": "Notificação pessoal de caráter puramente administrativo, sem impacto em recursos ou regras institucionais",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Atenção Primária à Saúde"
+      ],
+      "tags": [
+        "notificação",
+        "administrativo",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ca8b36bd5fa2bab7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 109,
+      "edicao": "168",
+      "titulo": "EXTRATOS DE CONVÊNIOs",
+      "url": "https://www.in.gov.br/web/dou/-/extratos-de-convenios-729967630",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Assinatura e prorrogação de múltiplos convênios SUS para cessão de servidores entre Ministério e municípios",
+      "por_que_importa": "Muda regra: estabelece novas relações de trabalho e alocação de recursos humanos federais em secretarias municipais",
+      "valor_brl": null,
+      "entes": [
+        "Ministério da Saúde",
+        "Prefeitura Municipal de Saltinho/SP",
+        "Prefeitura Municipal de Cambuci/RJ",
+        "Prefeitura Municipal de Carapebus/RJ",
+        "Prefeitura Municipal de Ibatiba/ES",
+        "Prefeitura Municipal de Monte do Carmo/TO",
+        "Prefeitura Municipal de Volta Redonda/RJ"
+      ],
+      "tags": [
+        "convênio",
+        "cessão-de-servidores",
+        "regra"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e08d794cad27e46b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": "3",
+      "pagina": 109,
+      "edicao": "168",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-729965257",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Parcelamento de débito de R$ 127.382,48 pela glosa técnica do Fundo Municipal de Saúde de Aracati/CE",
+      "por_que_importa": "Muda dinheiro: estabelece obrigação de pagamento em 60 parcelas, impactando fluxo de caixa e orçamento do município",
+      "valor_brl": 127382.48,
+      "entes": [
+        "Fundo Nacional de Saúde",
+        "Fundo Municipal de Saúde de Aracati/CE"
+      ],
+      "tags": [
+        "parcelamento",
+        "débito",
+        "glosa",
+        "financeiro"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "676fd619c24e43ba",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.958",
+      "data_publicacao": "2026-09-04",
+      "secao": null,
+      "pagina": 25,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.958,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A25%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Aprovação de incorporação de R$ 189.263,93 ao Teto MAC do município de Jacuí por extrapolamento",
+      "por_que_importa": "Muda dinheiro: aumenta limite de gastos em média e alta complexidade disponível para o município",
+      "valor_brl": 189263.93,
+      "entes": [
+        "Ministério da Saúde",
+        "Município de Jacuí/MG",
+        "CIB-SUS/MG"
+      ],
+      "tags": [
+        "teto-mac",
+        "recurso",
+        "médio-alta-complexidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "713a8e8a105298f7",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11602",
+      "data_publicacao": "2026-09-04",
+      "secao": null,
+      "pagina": 26,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES Nº 11602, 27 DE AGOSTO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D",
+      "categoria": "C",
+      "relevancia": 0,
+      "resumo": "Anulação e concessão de progressão funcional a servidora da SES/MG por cumprimento de mandado",
+      "por_que_importa": "Rotina administrativa de gestão de pessoal, ajuste decorrente de decisão judicial",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde/MG"
+      ],
+      "tags": [
+        "progressão",
+        "pessoal",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8ba65a5437c4788d",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11601",
+      "data_publicacao": "2026-09-04",
+      "secao": null,
+      "pagina": 26,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES Nº 11601, 27 DE AGOSTO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D",
+      "categoria": "C",
+      "relevancia": 0,
+      "resumo": "Anulação e concessão de progressão funcional a servidora da SES/MG por cumprimento de ação ordinária",
+      "por_que_importa": "Rotina administrativa de gestão de pessoal, ajuste decorrente de decisão judicial",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde/MG"
+      ],
+      "tags": [
+        "progressão",
+        "pessoal",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "349443f3076ab55a",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.960",
+      "data_publicacao": "2026-09-04",
+      "secao": null,
+      "pagina": 26,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.960,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Aprovação de incorporação de R$ 28.132.761,89 ao Teto MAC de Manhuaçu para complementação do Hospital César Leite",
+      "por_que_importa": "Muda dinheiro substancialmente: maior aumento de teto para hospital específico, impacta diretamente capacidade de prestação de serviços",
+      "valor_brl": 28132761.89,
+      "entes": [
+        "Ministério da Saúde",
+        "Município de Manhuaçu/MG",
+        "Hospital César Leite",
+        "CIB-SUS/MG"
+      ],
+      "tags": [
+        "teto-mac",
+        "recurso",
+        "hospital",
+        "médio-alta-complexidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b5ac77ce2fa7fc71",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": null,
+      "data_publicacao": "2026-09-04",
+      "secao": null,
+      "pagina": 26,
+      "edicao": null,
+      "titulo": "ATO 313, DE 02 DE SETEMBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D",
+      "categoria": "C",
+      "relevancia": 0,
+      "resumo": "Exonerações e nomeações de servidores em órgãos da SES/MG, Hemominas e Funed",
+      "por_que_importa": "Rotina administrativa de gestão de pessoal de instituições de saúde, sem impacto em fluxos financeiros",
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde/MG",
+        "Fundação Centro de Hematologia e Hemoterapia/MG",
+        "Fundação Ezequiel Dias/MG"
+      ],
+      "tags": [
+        "pessoal",
+        "exoneração",
+        "nomeação",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "50fa291918ca9285",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.959",
+      "data_publicacao": "2026-09-04",
+      "secao": null,
+      "pagina": 26,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.959,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Aprovação de incorporação de R$ 680.282,90 ao Teto MAC do município de Capetinga por extrapolamento",
+      "por_que_importa": "Muda dinheiro: aumenta limite de gastos em média e alta complexidade disponível para o município",
+      "valor_brl": 680282.9,
+      "entes": [
+        "Ministério da Saúde",
+        "Município de Capetinga/MG",
+        "CIB-SUS/MG"
+      ],
+      "tags": [
+        "teto-mac",
+        "recurso",
+        "médio-alta-complexidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a19d374ad65982b8",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.957",
+      "data_publicacao": "2026-09-04",
+      "secao": null,
+      "pagina": 26,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.957,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Deliberação CIB-SUS/MG que aprova solicitação de incorporação de R$ 200.286,02 ao Teto Financeiro Federal de Média e Alta Complexidade (Teto MAC) do município de Claraval",
+      "por_que_importa": "Muda o fluxo de dinheiro: aumenta permanentemente os recursos anuais disponíveis para assistência de média e alta complexidade no município, necessário para cobrir extrapolamento de teto anterior. O recurso será incorporado ao Fundo Municipal de Saúde de Claraval",
+      "valor_brl": 200286.02,
+      "entes": [
+        "Fundação Hospitalar do Estado de Minas Gerais",
+        "Prefeitura de Claraval",
+        "Fundo Municipal de Saúde de Claraval"
+      ],
+      "tags": [
+        "Teto MAC",
+        "Incorporação de recursos",
+        "Média e Alta Complexidade",
+        "Deliberação CIB-SUS/MG",
+        "Recurso Federal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5d434fe075b965f3",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "3.608",
+      "data_publicacao": "2026-09-04",
+      "secao": null,
+      "pagina": 31,
+      "edicao": null,
+      "titulo": "PORTARIA PRESIDENCIAL FHEMIG Nº 3.608, DE 03 DE SETEMBRO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A31%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria que institui Comissão de Recursos Hierárquicos para avaliar desempenho de servidores em exercício na FHEMIG",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Hospitalar do Estado de Minas Gerais"
+      ],
+      "tags": [
+        "Rotina administrativa",
+        "Recursos Humanos",
+        "Avaliação de desempenho",
+        "Procedimento interno"
+      ],
+      "fallback": false
+    }
+  ]
+}

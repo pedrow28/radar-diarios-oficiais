@@ -1,0 +1,1390 @@
+{
+  "data": "2026-09-02",
+  "gerado_em": "2026-09-07T23:36:33.208372+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "Santa Casa de Passos recebe R$ 168,89 milhões; FNS investe em água rural em sete estados",
+    "em_30_segundos": [
+      "Deliberação CIB-SUS/MG nº 5.953 aprovando incorporação de R$ 168,89 milhões ao Teto MAC de Passos para complementação de custeio da Santa Casa de Misericórdia",
+      "Convênio FNS nº 992083 - Implantação de sistemas de abastecimento de água em áreas rurais do município de Pavão/MG",
+      "Aprovação de incorporação de R$ 884.018,62 ao Teto MAC do município de São João Batista do Glória por extrapolamento de serviços de média e alta complexidade"
+    ],
+    "intro": "Edição de 2 de setembro registra uma tarde de aprovações significativas em Minas Gerais, com destaque para o aporte de R$ 168,89 milhões destinado à Santa Casa de Misericórdia de Passos - incorporação que reforça a sustentabilidade de instituições filantrópicas do estado. As Secretarias Estaduais de Saúde de MG continuam aprovando complementações de custeio e resoluções estruturantes, enquanto o Ministério da Saúde avança na universalização do acesso à água potável em áreas rurais através da FNS e FUNASA. Para gestores de hospitais filantrópicos e secretarias municipais, a data marca oportunidades em financiamento de infraestrutura sanitária e reconhecimento de centros de referência em especialidades críticas.",
+    "parcial": false,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "166",
+        "paginas": "pp. 67-137",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ok",
+        "edicao": null,
+        "paginas": "pp. 47-49",
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "2555913b6b90ee54",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 137,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729692473",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio FNS com Município de Parnamirim/PE para implantação de abastecimento de água em áreas rurais",
+      "por_que_importa": "Transferência de recursos federais da Fundação Nacional de Saúde para investimento em infraestrutura hídrica municipal, alterando fluxo de caixa do ente",
+      "valor_brl": 2898148.22,
+      "entes": [
+        "Município de Parnamirim"
+      ],
+      "tags": [
+        "convênio-novo",
+        "recurso-federal",
+        "infraestrutura-hídrica",
+        "FNS",
+        "Pernambuco"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f0180774de8cf5d0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "703",
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 133,
+      "edicao": "166",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 703, DE 27 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-703-de-27-de-agosto-de-2026-729688576",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Edital de notificação do Fundo Municipal de Saúde de Japoatã/SE em local incerto para retirar ofício com parecer técnico",
+      "por_que_importa": "Possível indicador de fragilidade administrativa ou incapacidade de comunicação com gestor; procedimento formal sem mudança de recursos",
+      "valor_brl": null,
+      "entes": [
+        "Fundo Municipal de Saúde de Japoatã"
+      ],
+      "tags": [
+        "notificação-formal",
+        "procedimento-administrativo",
+        "Sergipe"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7278e12f2290b3df",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 132,
+      "edicao": "166",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-729679327",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Parcelamento de débito de R$ 484.163,39 do Fundo Municipal de Saúde de Breves/PA por glosa técnica em 60 parcelas",
+      "por_que_importa": "Passivo significativo resultante de glosa que afeta a capacidade financeira operacional do fundo; mudança de situação de débito",
+      "valor_brl": 484163.39,
+      "entes": [
+        "Fundo Municipal de Saúde de Breves"
+      ],
+      "tags": [
+        "glosa-técnica",
+        "débito",
+        "parcelamento",
+        "Pará",
+        "passivo-municipal",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c06f9304f19e1c5d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 137,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729663824",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio FNS com Município de Marques de Souza/RS para implantação de abastecimento de água em áreas rurais",
+      "por_que_importa": "Transferência de recursos federais para infraestrutura de saneamento, fluxo novo de capital federal",
+      "valor_brl": 2046000,
+      "entes": [
+        "Município de Marques de Souza"
+      ],
+      "tags": [
+        "convênio-novo",
+        "recurso-federal",
+        "infraestrutura-hídrica",
+        "FNS",
+        "Rio Grande do Sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "49e87e4fc90f2023",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "567",
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 133,
+      "edicao": "166",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 567, DE 29 DE JULHO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-567-de-29-de-julho-de-2026-729657751",
+      "categoria": "C",
+      "relevancia": 0,
+      "resumo": "Edital de notificação de pessoa física (Sr. José Alberto Tarifa Nogueira) em local incerto para retirar ofício de parecer técnico",
+      "por_que_importa": "Procedimento administrativo de notificação formal; não impacta instituições de saúde diretamente",
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação-formal",
+        "pessoa-física",
+        "procedimento-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1ee45948d1d597e5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 136,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729654386",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio FNS com Município de Itapajé/CE para implantação de abastecimento de água em áreas rurais",
+      "por_que_importa": "Maior transferência deste lote em recursos federais para infraestrutura de saneamento; fluxo crítico de capital",
+      "valor_brl": 3000000,
+      "entes": [
+        "Município de Itapajé"
+      ],
+      "tags": [
+        "convênio-novo",
+        "recurso-federal",
+        "infraestrutura-hídrica",
+        "FNS",
+        "Ceará",
+        "maior-valor"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0a3398f4b3d02699",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Nota de Empenho",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 131,
+      "edicao": "166",
+      "titulo": "EXTRATO SIMPLIFICADO DE INSERÇÃO ORÇAMENTÁRIA",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-simplificado-de-insercao-orcamentaria-729649310",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Inserção orçamentária de R$ 5.980.560,69 no 3º termo de ajuste ao 157º termo de cooperação técnica entre MS e OMS/OPAS",
+      "por_que_importa": "Aumento de recursos federais em convênio de cooperação internacional; mudança de alocação orçamentária que afeta disponibilidades do sistema",
+      "valor_brl": 5980560.69,
+      "entes": [
+        "Fundo Nacional de Saúde"
+      ],
+      "tags": [
+        "inserção-orçamentária",
+        "cooperação-internacional",
+        "OMS-OPAS",
+        "mudança-orçamentária",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "376407b9e5689798",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "709",
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 133,
+      "edicao": "166",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 709, DE 28 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-709-de-28-de-agosto-de-2026-729649208",
+      "categoria": "C",
+      "relevancia": 0,
+      "resumo": "Edital de notificação de pessoa física (Sr. Pedro Paulo Soares Ribeiro) em local ignorado/incerto para retirar ofício de parecer técnico",
+      "por_que_importa": "Procedimento administrativo de notificação formal; não impacta instituições de saúde",
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação-formal",
+        "pessoa-física",
+        "procedimento-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c594b8c96794e7dc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 136,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729641420",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio FNS com Município de Palestina Do Pará/PA para melhorias sanitárias domiciliares em comunidades rurais",
+      "por_que_importa": "Transferência de recursos federais para ações de saneamento e saúde preventiva; novo fluxo de capital",
+      "valor_brl": 1548599.81,
+      "entes": [
+        "Município de Palestina Do Pará"
+      ],
+      "tags": [
+        "convênio-novo",
+        "recurso-federal",
+        "melhorias-sanitárias",
+        "saúde-preventiva",
+        "FNS",
+        "Pará"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b2598121c12c4a4a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 137,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729631013",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio FNS com Município de Canudos do Vale/RS para implantação de abastecimento de água em áreas rurais",
+      "por_que_importa": "Transferência de recursos federais para infraestrutura hídrica; fluxo novo de capital federal",
+      "valor_brl": 2046000,
+      "entes": [
+        "Município de Canudos do Vale"
+      ],
+      "tags": [
+        "convênio-novo",
+        "recurso-federal",
+        "infraestrutura-hídrica",
+        "FNS",
+        "Rio Grande do Sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f29e733ecb3c064a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Edital",
+      "numero": "36",
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 137,
+      "edicao": "166",
+      "titulo": "EDITAL Nº 36, DE 1º DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-n-36-de-1-de-setembro-de-2026-729630936",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Edital de divulgação de eliminação e desistência de candidatos em processo seletivo da FIOCRUZ para Analista de Gestão em Saúde",
+      "por_que_importa": "Informação de RH interno da FIOCRUZ; não impacta captação de recursos para entidades filantrópicas, Santas Casas ou secretarias municipais",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Oswaldo Cruz"
+      ],
+      "tags": [
+        "seleção-pessoal",
+        "RH-institucional",
+        "FIOCRUZ",
+        "rotina-interna"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "caa40f5d74c19f47",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 132,
+      "edicao": "166",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-729629398",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Rescisão de parcelamento de débito de R$ 8.276,27 (ex-bolsista Programa Mais Médicos) com inscrição em Dívida Ativa",
+      "por_que_importa": "Mudança de status de débito para Dívida Ativa; indicador de rigor na cobrança e possível aumento de passivos não liquidados no sistema",
+      "valor_brl": 8276.27,
+      "entes": [],
+      "tags": [
+        "débito",
+        "dívida-ativa",
+        "programa-mais-médicos",
+        "passivo-crescente",
+        "regra:b-administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4c036758dc7d54ac",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "705",
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 133,
+      "edicao": "166",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 705, DE 28 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-705-de-28-de-agosto-de-2026-729629376",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 705 - Convocação para retirada de documentação de notificação sobre monitoramento de transferências pela SAPS",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundo Municipal de Saúde de São João da Ponta/PA",
+        "Fundo Municipal de Saúde de Sousa/PB"
+      ],
+      "tags": [
+        "notificação",
+        "fiscalização",
+        "rotina-administrativa",
+        "SAPS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "65ef6d2063f7c865",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "707",
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 133,
+      "edicao": "166",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 707, DE 28 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-707-de-28-de-agosto-de-2026-729614745",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 707 - Convocação de pessoa em local ignorado para retirada de notificação referente a parecer técnico",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "parecer-técnico",
+        "rotina-administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "59bc5b9b7b2d727f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 137,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729612337",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio FNS nº 992041 - Implantação de rede de abastecimento de água, perfuração de poço e substituição de reservatórios em comunidades rurais e quilombolas de Colorado/RS",
+      "por_que_importa": "Transferência para infraestrutura crítica de saúde em áreas rurais sem contrapartida municipal; atende populações quilombolas",
+      "valor_brl": 3000000,
+      "entes": [
+        "Município de Colorado/RS"
+      ],
+      "tags": [
+        "convênio-água",
+        "infraestrutura-rural",
+        "quilombolas",
+        "saneamento",
+        "FNS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5bf1d2658cf12a70",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "702",
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 133,
+      "edicao": "166",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 702, DE 27 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-702-de-27-de-agosto-de-2026-729596127",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 702 - Convocação para retirada de documentação de fiscalização pela SAPS",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "fiscalização",
+        "rotina-administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7c1b06dcb21cd153",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 136,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729594023",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Convênio FNS nº 992083 - Implantação de sistemas de abastecimento de água em áreas rurais do município de Pavão/MG",
+      "por_que_importa": "Transferência de 2026 para infraestrutura de água; contrapartida municipal mínima (R$ 3 mil) facilita execução",
+      "valor_brl": 2958744.13,
+      "entes": [
+        "Município de Pavão/MG"
+      ],
+      "tags": [
+        "convênio-água",
+        "zona-rural",
+        "infraestrutura",
+        "FNS",
+        "saneamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fc644fd68bbafea9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 132,
+      "edicao": "166",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-729581779",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Parcelamento de Débito nº 085/2026 - Santa Casa de Misericórdia de Passos deve devolver R$ 6.300.368,77 em glosas técnicas em 60 parcelas",
+      "por_que_importa": "Instituição filantrópica enfrenta devolução; inadimplência enseja Tomada de Contas Especial; impacto crítico na sustentabilidade da instituição",
+      "valor_brl": 6300368.77,
+      "entes": [
+        "Irmandade da Santa Casa de Misericórdia de Passos"
+      ],
+      "tags": [
+        "glosa-técnica",
+        "santa-casa",
+        "devolução-recursos",
+        "filantrópico",
+        "risco-TCE"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b8cc5b83f79194f3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Compromisso",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 131,
+      "edicao": "166",
+      "titulo": "EXTRATO DE COMPROMISSO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-compromisso-729578468",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Compromisso PRONAS/PCD - Repasse de R$ 1.614.320,14 à Associação Alma Autista para execução de projeto de reabilitação em autismo",
+      "por_que_importa": "Novo fluxo de recurso para organização social; representa mudança na captação de recursos para programas especializados de saúde mental",
+      "valor_brl": 1614320.14,
+      "entes": [
+        "Associação Alma Autista"
+      ],
+      "tags": [
+        "PRONAS/PCD",
+        "organização-social",
+        "autismo",
+        "reabilitação",
+        "saúde-mental"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "04dca7918d69a80e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "708",
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 133,
+      "edicao": "166",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 708, DE 28 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-708-de-28-de-agosto-de-2026-729568658",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 708 - Convocação para retirada de documentação de parecer técnico pela SAPS",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "parecer-técnico",
+        "rotina-administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "802cf112b85d8667",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Adesão",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 133,
+      "edicao": "166",
+      "titulo": "EXTRATO DE ADESÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-adesao-729559484",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Adesão - INTO adere a contrato de fornecimento via pregão eletrônico com empresa de soluções hospitalares até 17/03/2027",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Traumatologia e Ortopedia (INTO)"
+      ],
+      "tags": [
+        "contratação",
+        "pregão-eletrônico",
+        "fornecimento-hospitalar",
+        "rotina-operacional"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ddce4d875d2389aa",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 137,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729559172",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio FNS nº 984730 - Ampliação de sistema de abastecimento de água em áreas rurais de Bodocó/PE",
+      "por_que_importa": "Transferência para infraestrutura de água sem contrapartida municipal; execução de 3 anos para ampliação de rede",
+      "valor_brl": 2992886.99,
+      "entes": [
+        "Município de Bodocó/PE"
+      ],
+      "tags": [
+        "convênio-água",
+        "infraestrutura-rural",
+        "ampliação-rede",
+        "FNS",
+        "saneamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "58a5c7fab5ec0983",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Nota de Empenho",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 131,
+      "edicao": "166",
+      "titulo": "EXTRATO SIMPLIFICADO DE INSERÇÃO ORÇAMENTÁRIA",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-simplificado-de-insercao-orcamentaria-729549465",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Inserção Orçamentária - Aporte de R$ 3 milhões ao 134º Termo de Cooperação Técnica MS/OPAS-OMS com vigência até 2031",
+      "por_que_importa": "Recursos federais para programas de trabalho em saúde pública via cooperação internacional; garante financiamento de ações técnicas até 2031",
+      "valor_brl": 3000000,
+      "entes": [
+        "Ministério da Saúde",
+        "Organização Pan-Americana da Saúde/OMS"
+      ],
+      "tags": [
+        "cooperação-técnica",
+        "OPAS-OMS",
+        "recursos-orçamentários",
+        "saúde-pública",
+        "vigência-longa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c1b9648abb567169",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 132,
+      "edicao": "166",
+      "titulo": "EXTRATOS DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extratos-de-convenio-729549330",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Convênios SUS nº 112/2026, 113/2026, 103/2026, 109/2026, 133/2026 e prorrogação 231/2021 - Cessão de servidores entre MS e seis prefeituras municipais",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Prefeitura de Miguel Pereira/RJ",
+        "Prefeitura de Guaraí/TO",
+        "Prefeitura de Itacajá/TO",
+        "Prefeitura de Araruama/RJ",
+        "Prefeitura de Araguatins/TO",
+        "Prefeitura de Couto Magalhães/TO"
+      ],
+      "tags": [
+        "cessão-pessoal",
+        "convênio-SUS",
+        "rotina-administrativa",
+        "gestão-pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "50dfc2f7ed2030a5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 136,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729549153",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Convênio FUNASA de R$ 3M para implantação de sistema de abastecimento de água rural em Cafezal do Sul (MS)",
+      "por_que_importa": "Infraestrutura de saneamento financiada pelo MS, mas destinada a zona rural sem incidência direta em prestadores de saúde (hospitais/Santas Casas). Rotina de convênios de infraestrutura básica.",
+      "valor_brl": 3000000,
+      "entes": [
+        "Município de Cafezal do Sul",
+        "Fundação Nacional de Saúde"
+      ],
+      "tags": [
+        "convênio",
+        "FUNASA",
+        "infraestrutura",
+        "água",
+        "zona rural"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3c68dd47396f2bc0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 133,
+      "edicao": "166",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-729542605",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Retificação de data em extrato de comodato (vigência corrigida de 19/08/2026 para 01/09/2026 a 19/08/2027)",
+      "por_que_importa": "Simples correção de erro administrativo em datas. Sem impacto financeiro ou mudança de regra substantiva.",
+      "valor_brl": null,
+      "entes": [
+        "Ministério da Saúde"
+      ],
+      "tags": [
+        "retificação",
+        "comodato",
+        "administrativo",
+        "DOU"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5ca94e0174d81c17",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 137,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729533118",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Convênio FUNASA de R$ 3M para implantação/ampliação de sistema de abastecimento de água em Buriti dos Montes (PI)",
+      "por_que_importa": "Infraestrutura de saneamento. Não afeta diretamente prestadores de serviços de saúde. Dentro da rotina de convênios FUNASA.",
+      "valor_brl": 2999442,
+      "entes": [
+        "Município de Buriti dos Montes",
+        "Fundação Nacional de Saúde"
+      ],
+      "tags": [
+        "convênio",
+        "FUNASA",
+        "infraestrutura",
+        "água"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "21b51802f09f1951",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "706",
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 133,
+      "edicao": "166",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 706, DE 28 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-706-de-28-de-agosto-de-2026-729526153",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 706 convocando pessoa para retirar ofícios da SAPS/MS",
+      "por_que_importa": "Notificação administrativa pessoal. Procedimento de rotina sem impacto em recursos ou regras de funcionamento de instituições.",
+      "valor_brl": null,
+      "entes": [
+        "Ministério da Saúde - Secretaria de Atenção Primária"
+      ],
+      "tags": [
+        "edital",
+        "notificação",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5914d02873c18ac6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": "3",
+      "pagina": 137,
+      "edicao": "166",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-729512535",
+      "categoria": "C",
+      "relevancia": 1,
+      "resumo": "Convênio FUNASA de R$ 3M para implantação de Sistema Público de Abastecimento de Água em Nova Canaã (BA)",
+      "por_que_importa": "Infraestrutura de saneamento básico. Não relacionado a prestadores de saúde. Convênio de rotina FUNASA.",
+      "valor_brl": 3000000,
+      "entes": [
+        "Município de Nova Canaã",
+        "Fundação Nacional de Saúde"
+      ],
+      "tags": [
+        "convênio",
+        "FUNASA",
+        "infraestrutura",
+        "água"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f505342e9ffd6926",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "8",
+      "data_publicacao": "2026-09-02",
+      "secao": "1",
+      "pagina": 73,
+      "edicao": "166",
+      "titulo": "Portaria DRAC Nº 8, DE 31 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-drac-n-8-de-31-de-agosto-de-2026-729432169",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Portaria DRAC nº 8 cadastrando profissionais de saúde como auditores de operadoras privadas (GEAP, Unimed, etc)",
+      "por_que_importa": "Regulação de auditorias em planos de saúde privados. Não afeta hospitais públicos, filantrópicos ou secretarias de saúde municipal.",
+      "valor_brl": null,
+      "entes": [
+        "Ministério da Saúde - Secretaria de Atenção Especializada"
+      ],
+      "tags": [
+        "portaria",
+        "auditoria",
+        "planos privados",
+        "regulação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1854b6f73da71a13",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "295",
+      "data_publicacao": "2026-09-02",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "166",
+      "titulo": "PORTARIA INC Nº 295, DE 31 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-inc-n-295-de-31-de-agosto-de-2026-729428876",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Portaria INC nº 295 publicando listagem de alunos que concluíram Mestrado em Ciências Cardiovasculares",
+      "por_que_importa": "Publicação administrativa de conclusão de pós-graduação. Sem impacto financeiro ou regulatório para gestão de saúde.",
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Cardiologia"
+      ],
+      "tags": [
+        "educação",
+        "pós-graduação",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e179bcee90c8c035",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Portaria Conjunta",
+      "numero": "77",
+      "data_publicacao": "2026-09-02",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "166",
+      "titulo": "PORTARIA CONJUNTA SGTES/SAES Nº 77, DE 1º DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-conjunta-sgtes/saes-n-77-de-1-de-setembro-de-2026-729426798",
+      "categoria": "B",
+      "relevancia": 2,
+      "resumo": "Portaria Conjunta SGTES/SAES nº 77 concedendo Certificação de Hospital de Ensino Nível 1 a 2 hospitais (PB e SE)",
+      "por_que_importa": "MUDA REGRA: Certifica hospitais como Hospitais de Ensino Nível 1, habilitando-os para evoluir a Nível 2. Abre acesso a programas de integração ensino-serviço e possíveis benefícios financeiros futuros via MS/MEC.",
+      "valor_brl": null,
+      "entes": [
+        "Hospital Regional Deputado Janduhy Carneiro",
+        "Hospital Universitário de Lagarto"
+      ],
+      "tags": [
+        "certificação",
+        "hospital de ensino",
+        "regulação",
+        "integração ensino-serviço",
+        "nível 1"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "eac2d01dcd90b779",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Vigilância em Saúde e Ambiente",
+      "tipo": "Portaria",
+      "numero": "186",
+      "data_publicacao": "2026-09-02",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "166",
+      "titulo": "Portaria SVSA/MS Nº 186, DE 1º DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-svsa/ms-n-186-de-1-de-setembro-de-2026-729412931",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Portaria SVSA/MS nº 186 instituindo Grupo de Trabalho para elaboração de Plano Estratégico de Vigilância em Saúde",
+      "por_que_importa": "Criação de grupo para planejamento futuro de vigilância em saúde. Ainda é fase preparatória, sem mudança imediata de regra ou alocação de recursos.",
+      "valor_brl": null,
+      "entes": [
+        "Ministério da Saúde - Secretaria de Vigilância em Saúde"
+      ],
+      "tags": [
+        "grupo de trabalho",
+        "vigilância",
+        "planejamento",
+        "política pública"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f1dddfc41289fe70",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.953",
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 47,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.953,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Deliberação CIB-SUS/MG nº 5.953 aprovando incorporação de R$ 168,89 milhões ao Teto MAC de Passos para complementação de custeio da Santa Casa de Misericórdia",
+      "por_que_importa": "MUDANÇA CRÍTICA DE RECURSOS: Deliberação aprova aumento significativo (R$ 168,8M/ano) no financiamento do SUS especificamente para instituição filantrópica (Santa Casa de Passos). Muda diretamente fluxo de caixa anual do prestador.",
+      "valor_brl": 168895626.43,
+      "entes": [
+        "Município de Passos",
+        "Santa Casa de Misericórdia de Passos",
+        "Secretaria de Estado de Saúde MG"
+      ],
+      "tags": [
+        "deliberação",
+        "teto MAC",
+        "Santa Casa",
+        "complementação custeio",
+        "alocação recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "68fb5e86fb667543",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.952",
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 47,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.952,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Deliberação CIB-SUS/MG nº 5.952 aprovando incorporação de R$ 1,28 milhão ao Teto MAC de Itacarambi por extrapolamento",
+      "por_que_importa": "MUDA DINHEIRO: Aprovação de aumento de teto MAC por extrapolamento. Recursos adicionais onerando orçamento MS para remuneração de prestadores (públicos/filantrópicos) do município.",
+      "valor_brl": 1284646.82,
+      "entes": [
+        "Município de Itacarambi",
+        "Secretaria de Estado de Saúde MG"
+      ],
+      "tags": [
+        "deliberação",
+        "teto MAC",
+        "extrapolamento",
+        "alocação recursos",
+        "orçamento MS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "549335a0ad5f8892",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.951",
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 47,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.951,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Deliberação CIB-SUS/MG nº 5.951 aprovando incorporação de R$ 265 mil ao Teto MAC de Campo Azul por extrapolamento",
+      "por_que_importa": "MUDA DINHEIRO: Aprovação de aumento ao Teto MAC. Embora menor, representa mudança em fluxo financeiro para prestadores (públicos/filantrópicos) do município.",
+      "valor_brl": 265621.32,
+      "entes": [
+        "Município de Campo Azul",
+        "Secretaria de Estado de Saúde MG"
+      ],
+      "tags": [
+        "deliberação",
+        "teto MAC",
+        "extrapolamento",
+        "alocação recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fb35f39664d3cd02",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.954",
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 47,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.954,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Aprovação de incorporação de R$ 884.018,62 ao Teto MAC do município de São João Batista do Glória por extrapolamento de serviços de média e alta complexidade",
+      "por_que_importa": "Novo recurso federal incorporado ao orçamento municipal para cobertura de procedimentos de média e alta complexidade que excedem o teto anterior",
+      "valor_brl": 884018.62,
+      "entes": [
+        "São João Batista do Glória",
+        "Ministério da Saúde"
+      ],
+      "tags": [
+        "teto MAC",
+        "recursos federais",
+        "média e alta complexidade",
+        "CIB-SUS/MG"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "58c280b6e973d1ef",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.950",
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 47,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.950,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Aprovação de incorporação de R$ 122.474,11 ao Teto MAC do município de Bonito de Minas por extrapolamento de serviços",
+      "por_que_importa": "Incremento de recursos federais ao fundo municipal para absorção de custos de procedures que ultrapassaram o teto orçado",
+      "valor_brl": 122474.11,
+      "entes": [
+        "Bonito de Minas",
+        "Ministério da Saúde"
+      ],
+      "tags": [
+        "teto MAC",
+        "recursos federais",
+        "extrapolamento",
+        "CIB-SUS/MG"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cc0e4583059342ea",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.955",
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 47,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.955,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Aprovação de incorporação de R$ 333.693,57 ao Teto MAC do município de São João das Missões por extrapolamento",
+      "por_que_importa": "Ampliação de recursos federais alocados para cobertura de média e alta complexidade que excedem o limite anterior do município",
+      "valor_brl": 333693.57,
+      "entes": [
+        "São João das Missões",
+        "Ministério da Saúde"
+      ],
+      "tags": [
+        "teto MAC",
+        "recursos federais",
+        "média e alta complexidade",
+        "CIB-SUS/MG"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "af49240bdde23cd9",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11555",
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 47,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES Nº 11555 DE 31 DE AGOSTO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Resolução que torna sem efeito a designação do servidor Rafael Luis Mol Guimarães para Função Gratificada de Regulação Médico Plantonista",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde"
+      ],
+      "tags": [
+        "rotina administrativa",
+        "designação",
+        "servidor",
+        "central de regulação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a68d2e337c5ba2f5",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "5.956",
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 47,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 5.956,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Deliberação que altera inciso VII da Deliberação CIB-SUS/MG nº 5.696 (Centros de Referência em Plasmaférese para Doenças Raras)",
+      "por_que_importa": "Mudança regulatória em normas técnicas de plasmaférese que afetam como procedimentos são executados nos centros de referência",
+      "valor_brl": null,
+      "entes": [
+        "CIB-SUS/MG",
+        "Secretaria de Estado de Saúde"
+      ],
+      "tags": [
+        "regulamentação",
+        "plasmaférese",
+        "doenças raras",
+        "centros de referência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b3810a81ea917e8b",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11.610",
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 47,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES/MG Nº 11.610, DE 01 DE SETEMBRO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Resolução que altera normas de Plasmaférese Terapêutica e incorpora Hospital Santa Casa de Montes Claros como novo Centro Estadual de Referência para macrorregião Norte",
+      "por_que_importa": "Novo centro de referência credenciado com impacto financeiro em ressarcimento de procedimentos e alterações em técnicas permitidas (centrifugação ou filtração)",
+      "valor_brl": null,
+      "entes": [
+        "Hospital Santa Casa de Montes Claros",
+        "Fundação Hospitalar do Estado de Minas Gerais",
+        "Secretaria de Estado de Saúde"
+      ],
+      "tags": [
+        "plasmaférese",
+        "doenças raras",
+        "novo centro de referência",
+        "ressarcimento",
+        "macrorregião Norte"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "aba4c22a98128a5e",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "3.606",
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 48,
+      "edicao": null,
+      "titulo": "PORTARIA PRESIDENCIAL FHEMIG Nº 3.606, DE 24 DE AGOSTO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A48%7D",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Portaria da FHEMIG que institui Comissão de Recursos Hierárquicos para avaliar desempenho de servidores",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Hospitalar do Estado de Minas Gerais"
+      ],
+      "tags": [
+        "rotina administrativa",
+        "comissão interna",
+        "avaliação de desempenho",
+        "FHEMIG"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "10587127afc7d23c",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 49,
+      "edicao": null,
+      "titulo": "ATO 4344, DE 25 DE AGOSTO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A49%7D",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Ato de retificação de aposentadoria do servidor Dario Trujillo Bazoalto - correção de base legal do benefício",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Hospitalar do Estado de Minas Gerais"
+      ],
+      "tags": [
+        "rotina administrativa",
+        "aposentadoria",
+        "retificação",
+        "servidor"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "688f8405c2994c5c",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 49,
+      "edicao": null,
+      "titulo": "ATO 4326, DE 24 DE AGOSTO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A49%7D",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Ato de retificação de aposentadoria do servidor Marco Tulio Lopes Caldas - correção de regime de benefício",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Hospitalar do Estado de Minas Gerais"
+      ],
+      "tags": [
+        "rotina administrativa",
+        "aposentadoria",
+        "retificação",
+        "servidor"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6504db78f39bc547",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": null,
+      "data_publicacao": "2026-09-02",
+      "secao": null,
+      "pagina": 49,
+      "edicao": null,
+      "titulo": "ATO 4369, DE 25 DE AGOSTO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A49%7D",
+      "categoria": "D",
+      "relevancia": 0,
+      "resumo": "Ato de retificação de aposentadoria da servidora Maria da Conceição Silva - correção de base legal da concessão",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Hospitalar do Estado de Minas Gerais"
+      ],
+      "tags": [
+        "rotina administrativa",
+        "aposentadoria",
+        "retificação",
+        "servidor"
+      ],
+      "fallback": false
+    }
+  ]
+}
