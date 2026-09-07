@@ -309,9 +309,13 @@ _ESPACO = re.compile(r"\s+")
 # Tipos de ato que nunca são norma. O modelo os manda para B quando o corpo cita
 # dinheiro, e eles entram na edição ocupando a seção de mudança de regra: em
 # 31/08, 5 dos 8 itens de B eram extrato ou retificação.
+#
+# O plural conta: o DOU publica "EXTRATOS DE REGISTROS DE PREÇOS" e "EXTRATOS DE
+# CONVÊNIOS" como um bloco só, e sem ele dois itens de 03/09 e 04/09 escapavam.
 _TITULO_ADMINISTRATIVO = re.compile(
-    r"^(?:extrato|retificacao|aviso|edital de (?:notificacao|intimacao)"
-    r"|despacho|ata|termo aditivo|apostilamento)\b"
+    r"^(?:extratos?|retifica(?:cao|coes)|avisos?"
+    r"|edita(?:l|is) de (?:notificac(?:ao|oes)|intimac(?:ao|oes))"
+    r"|despachos?|atas?|termos? aditivos?|apostilamentos?)\b"
 )
 # Vocabulário de captação. Habilitar, credenciar e mexer em teto é dinheiro novo
 # para quem lê o boletim, não mudança de regra - e é exatamente a fronteira que

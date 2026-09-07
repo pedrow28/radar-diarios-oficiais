@@ -129,6 +129,13 @@ def _pub_titulado(titulo: str) -> Publicacao:
         "ATA DE REGISTRO DE PREÇOS Nº 45/2026",
         "Termo aditivo nº 4 ao convênio 900123",
         "APOSTILAMENTO Nº 2 AO CONTRATO 77/2026",
+        # O DOU publica o bloco no plural com a mesma frequência que no singular.
+        "EXTRATOS DE REGISTROS DE PREÇOS",
+        "EXTRATOS DE CONVÊNIOS",
+        "RETIFICAÇÕES",
+        "AVISOS DE LICITAÇÃO",
+        "EDITAIS DE NOTIFICAÇÃO",
+        "TERMOS ADITIVOS Nº 4 E 5",
     ],
 )
 def test_b_com_titulo_de_ato_administrativo_vira_x(titulo):
