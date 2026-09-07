@@ -105,10 +105,8 @@ _PROIBIDAS = re.compile(r"\b(dica|truque)\b", re.IGNORECASE)
 _PONTUACAO = ".,;:!?()[]\"'"
 _MAX_BULLETS_FALLBACK = 3
 
-# Conectivos que o português escreve em minúscula numa sentença e em maiúscula
-# num Title Case. Ficam fora da conta de proporção (senão "de" e "do" de um nome
-# de instituição diluiriam qualquer título) e servem de sinal: um só deles em
-# minúscula já basta para saber que a frase não está em Title Case.
+# Conectivos ficam fora da conta de proporção: "de" e "do" de um nome de
+# instituição diluiriam qualquer título até ele passar.
 _CONECTIVOS = frozenset(
     "de da do dos das e em para por com no na a o os as que ao à".split()
 )
@@ -186,13 +184,12 @@ def _tem_title_case(texto: str) -> bool:
 
     O que separa "Habilitações Do Programa Somam Cento E Oitenta Milhões" de
     "3 habilitações do Programa Agora Tem Especialistas somam R$ 180 milhões"
-    são duas coisas, e a regra cobra as duas: a proporção de palavras
-    capitalizadas na frase (siglas, números e conectivos fora da conta) e o
-    conectivo em minúscula, que só existe em sentença - em Title Case até o
-    "Do" vai com maiúscula.
+    é a proporção: no primeiro a frase inteira está capitalizada, no segundo o
+    nome próprio é uma ilha de 4 palavras num texto de 7. Siglas, números e
+    conectivos ficam fora da conta - "de" e "do" de um nome de instituição
+    diluiriam qualquer título.
     """
     palavras: list[str] = []
-    conectivo_minusculo = False
     for bruto in texto.split():
         palavra = bruto.strip(_PONTUACAO)
         if not palavra or not palavra[0].isalpha():
@@ -200,12 +197,9 @@ def _tem_title_case(texto: str) -> bool:
         if palavra.isupper():
             continue  # sigla: "MAC", "SES-MG", "CIB-SUS/MG"
         if palavra.lower() in _CONECTIVOS:
-            conectivo_minusculo = conectivo_minusculo or palavra[0].islower()
             continue
         palavras.append(palavra)
 
-    if conectivo_minusculo:
-        return False
     capitalizadas = sum(1 for p in palavras if p[0].isupper())
     if capitalizadas < _MIN_CAPITALIZADAS_TITULO_CASE:
         return False

@@ -214,6 +214,23 @@ def test_validar_voz_ignora_siglas_e_numeros_na_conta_de_title_case():
     assert validar_voz("SES-MG e CIB-SUS/MG aprovam 12 deliberações") == []
 
 
+def test_validar_voz_reprova_title_case_com_conectivo_em_minuscula():
+    """Title Case de verdade escapou na rodada 2 e voltou a ser pego.
+
+    O título de 02/09 saiu "Santa Casa de Passos Recebe R$ 168,8 Milhões:
+    Edição com Destaque para Incorporações MAC..." - conectivos em minúscula,
+    todo o resto capitalizado. É a frase inteira em Title Case, e a proporção
+    (11 de 11 palavras) é o que a denuncia.
+    """
+    assert (
+        validar_voz(
+            "Santa Casa de Passos Recebe R$ 168,8 Milhões: Edição com Destaque para "
+            "Incorporações MAC e Investimentos em Infraestrutura Rural"
+        )
+        != []
+    )
+
+
 # ── titulo_fallback ─────────────────────────────────────────────────────
 def test_titulo_fallback_traz_data_e_contagem():
     assert titulo_fallback(date(2026, 9, 3), 7) == (

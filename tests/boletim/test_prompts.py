@@ -101,9 +101,9 @@ def test_sistema_de_classificacao_lista_o_que_vai_para_x():
         "aviso de licitação",
         "termo aditivo",
         "apostilamento",
-        "retificação de extrato",
+        "retificação de qualquer ato",
         "edital de notificação",
-        "despacho e ata",
+        "despacho, ata e delegação de competência",
     ):
         assert ato in SISTEMA_CLASSIFICACAO
     assert "Use X, e nunca A, B ou C" in SISTEMA_CLASSIFICACAO
@@ -128,9 +128,9 @@ def test_sistema_de_classificacao_da_dois_exemplos_por_nivel_de_relevancia():
 
 def test_sistema_de_classificacao_disciplina_o_por_que_importa():
     for regra in (
-        'Sem prefixo-rótulo do tipo "Muda regra:"',
-        "sem caixa alta",
-        "sem repetir a cifra",
+        "não comece por rótulo seguido de dois-pontos",
+        "sem caixa alta para dar ênfase",
+        "não escreva nenhum valor em reais na frase",
         'escreva "R$ 104,8 milhões"',
     ):
         assert regra in SISTEMA_CLASSIFICACAO
@@ -149,7 +149,7 @@ def test_sistema_editorial_pede_titulo_com_numero_e_limite():
 
 def test_sistema_editorial_limita_os_bullets_e_a_intro():
     assert "até 140 caracteres" in SISTEMA_EDITORIAL
-    assert "intro: 2 frases" in SISTEMA_EDITORIAL
+    assert "intro: exatamente 2 frases" in SISTEMA_EDITORIAL
 
 
 def test_sistema_editorial_traz_exemplo_bom_e_ruim():
