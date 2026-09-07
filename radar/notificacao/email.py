@@ -28,7 +28,11 @@ def montar_html(resultados: list[Resultado]) -> str:
         )
         # O escopo (órgão/seção) é o mesmo para toda a coleta: entra uma vez no
         # cabeçalho. Repeti-lo por publicação daria 118 linhas iguais num dia de DOU.
-        escopo = resultado.escopo.get("orgao") or ""
+        # `orgaos` (lista) é o formato das fontes que coletam vários órgãos;
+        # `orgao` (string) continua valendo para o IOF-MG.
+        escopo = ", ".join(resultado.escopo.get("orgaos") or []) or (
+            resultado.escopo.get("orgao") or ""
+        )
         if escopo:
             partes.append(f"<p><strong>{escape(escopo)}</strong></p>")
         if resultado.avisos:

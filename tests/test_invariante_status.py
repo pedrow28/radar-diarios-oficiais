@@ -77,8 +77,10 @@ def storage(tmp_path: Path):
     s.fechar()
 
 
-def _cfg_dou() -> ConfigDOU:
-    return ConfigDOU(orgao="Ministério da Saúde", delta=75, concorrencia=1)
+def _cfg_dou(orgaos: list[str] | None = None) -> ConfigDOU:
+    return ConfigDOU(
+        orgaos=orgaos or ["Ministério da Saúde"], delta=75, concorrencia=1
+    )
 
 
 def _cfg_iofmg() -> ConfigIOFMG:
@@ -118,6 +120,26 @@ def _cenarios(storage: Storage, dir_fixtures: Path, monkeypatch):
     yield "dou/total sem itens", FonteDOU(
         _cfg_dou(), storage, SessaoDOU(_html_busca([], 10))
     ).coletar(date(2026, 9, 8))
+
+    # DOU: vários órgãos e nenhum com publicação no dia — vazio legítimo. Nem
+    # toda pasta publica todo dia; isso não pode virar aviso.
+    yield "dou/multiórgão sem publicação", FonteDOU(
+        _cfg_dou(["Ministério da Saúde", "Ministério da Fazenda"]),
+        storage, SessaoDOU(_html_busca([], 0)),
+    ).coletar(date(2026, 9, 12))
+
+    # DOU: a busca trouxe ato da Presidência fora da subunidade acompanhada.
+    # Descartar tudo e dizer `vazio` esconderia hierarquia renomeada na fonte.
+    fora_do_escopo = {
+        "pubName": "DO1", "artType": "Portaria", "urlTitle": "ato-1", "classPK": "1",
+        "hierarchyStr": "Presidência da República/Secretaria-Geral",
+        "title": "Ato Nº 1", "content": "resumo", "editionNumber": "168",
+        "numberPage": "1",
+    }
+    yield "dou/nada no escopo", FonteDOU(
+        _cfg_dou(["Presidência da República"]),
+        storage, SessaoDOU(_html_busca([fora_do_escopo], 1)),
+    ).coletar(date(2026, 9, 13))
 
     # IOF-MG: dia sem edição — vazio legítimo.
     yield "iofmg/sem edição", FonteIOFMG(
@@ -191,6 +213,15 @@ def test_layout_mudado_no_dou_nao_passa_por_dia_sem_publicacao(storage, dir_fixt
     por_nome = dict(_cenarios(storage, dir_fixtures, monkeypatch))
     assert por_nome["dou/sem publicação"].status == Status.VAZIO
     assert por_nome["dou/total sem itens"].status == Status.PARCIAL
+
+
+def test_multiorgao_do_dou_mantem_o_contrato_de_status(storage, dir_fixtures, monkeypatch):
+    """Órgão calado é rotina; filtro que descarta tudo é suspeita."""
+    por_nome = dict(_cenarios(storage, dir_fixtures, monkeypatch))
+    assert por_nome["dou/multiórgão sem publicação"].status == Status.VAZIO
+    assert por_nome["dou/multiórgão sem publicação"].avisos == []
+    assert por_nome["dou/nada no escopo"].status == Status.PARCIAL
+    assert por_nome["dou/nada no escopo"].avisos
 
 
 def test_status_vazio_sempre_significa_exit_zero_sem_alarme(storage, dir_fixtures, monkeypatch):

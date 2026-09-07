@@ -120,3 +120,18 @@ def test_falha_de_envio_devolve_false_sem_propagar(monkeypatch):
     monkeypatch.setattr("smtplib.SMTP", explode)
     monkeypatch.setenv("RADAR_SMTP_HOST", "smtp.exemplo.com")
     assert enviar("<p>x</p>", "a", {"habilitado": True, "destinatarios": ["a@b.c"]}) is False
+
+
+def test_escopo_com_varios_orgaos_aparece_no_cabecalho():
+    """A fonte `dou` passou a coletar vários órgãos; o escopo virou lista."""
+    resultado = Resultado(
+        fonte="dou", data_publicacao=date(2026, 9, 4),
+        coletado_em=datetime(2026, 9, 4, tzinfo=timezone.utc), status=Status.OK,
+        escopo={
+            "orgaos": ["Ministério da Saúde", "Ministério da Fazenda"],
+            "subunidades_extra": ["Casa Civil"],
+        },
+        publicacoes=[_pub()], avisos=[],
+    )
+    html = montar_html([resultado])
+    assert "Ministério da Fazenda" in html

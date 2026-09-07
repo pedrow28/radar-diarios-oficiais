@@ -130,7 +130,10 @@ nessa fonte.
   "data_publicacao": "2026-09-04",
   "coletado_em": "2026-09-04T12:07:41Z",
   "status": "ok",
-  "escopo": { "orgao": "Ministério da Saúde" },
+  "escopo": {
+    "orgaos": ["Ministério da Saúde", "Presidência da República"],
+    "subunidades_extra": ["Casa Civil"]
+  },
   "total": 142,
   "avisos": [],
   "publicacoes": []
