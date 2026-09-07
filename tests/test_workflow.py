@@ -202,6 +202,48 @@ def test_uma_fonte_fora_do_ar_ainda_publica_edicao_parcial(
     assert any(linha.startswith("cat ") for linha in linhas)
 
 
+def test_coleta_declara_fontes_com_erro(workflow: dict[str, Any]) -> None:
+    """A coleta precisa dizer quais fontes deram `erro`, não só que houve
+    ressalva: `parcial=true` avisa a edição, mas sem o nome da fonte ninguém
+    sabe, no dia, qual delas caiu."""
+    coleta = next(p for p in passos(workflow) if p.get("id") == "coleta")
+    assert 'echo "fontes_com_erro=$fontes_com_erro" >> "$GITHUB_OUTPUT"' in coleta["run"]
+    assert "grep" in coleta["run"] and ": erro" in coleta["run"]
+
+
+def test_fonte_fora_do_ar_abre_issue_sem_esperar_o_dia_seguinte(
+    workflow: dict[str, Any],
+) -> None:
+    """G12: uma fonte bloqueada (ex.: o portal do DOU recusando o runner) tem
+    de virar issue no próprio dia, não só o aviso de "coleta parcial" dentro
+    da edição publicada."""
+    passo = next(
+        p for p in passos(workflow) if "fontes_com_erro != ''" in p.get("if", "")
+    )
+    assert "steps.freio.outputs.pular != 'true'" in passo["if"], (
+        "o passo roda mesmo com o freio ativo"
+    )
+    assert passo["env"]["GH_TOKEN"] == "${{ github.token }}"
+    assert passo["env"]["FONTES_COM_ERRO"] == "${{ steps.coleta.outputs.fontes_com_erro }}"
+    assert "Coleta parcial em" in passo["run"]
+    assert "fora do ar" in passo["run"]
+    assert "$RUN_URL" in passo["run"]
+    # Mesma proteção contra duplicata da issue de falha: procura por título
+    # antes de criar.
+    assert "gh issue list" in passo["run"]
+    assert "gh issue create" in passo["run"]
+
+
+def test_issue_de_fonte_fora_do_ar_nao_ecoa_segredo(workflow: dict[str, Any]) -> None:
+    passo = next(
+        p for p in passos(workflow) if "fontes_com_erro != ''" in p.get("if", "")
+    )
+    for numero, linha in enumerate(passo.get("run", "").splitlines(), start=1):
+        if "secrets." in linha:
+            assert "echo" not in linha, f"linha {numero}: {linha.strip()}"
+    assert "GH_TOKEN" not in passo["run"], "o token não deve ser impresso no script"
+
+
 def test_codigo_inesperado_derruba_o_job(workflow: dict[str, Any]) -> None:
     """Um rc que não seja 0, 1 ou 2 (ex.: 127, 137) não pode cair no `else` como
     sucesso silencioso: o passo precisa propagar esse código com `exit "$rc"`."""

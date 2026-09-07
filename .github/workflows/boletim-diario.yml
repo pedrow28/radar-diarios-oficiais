@@ -158,6 +158,12 @@ jobs:
           # fonte. Redirecionado para arquivo e não mostrado, o log diria só
           # "exit 2" e ninguém saberia qual fonte caiu.
           cat "$saida"
+          # Nomes das fontes cujo status deu `erro`, separados por vírgula, e
+          # vazio quando nenhuma caiu. É esse output que decide se a issue de
+          # coleta parcial abre — sem ele o `parcial=true` avisa a edição, mas
+          # ninguém é avisado no dia em que a fonte caiu.
+          fontes_com_erro=$(grep -E '^[A-Za-z0-9_-]+: erro \|' "$saida" | sed -E 's/: erro.*//' | tr '\n' ',' | sed 's/,$//')
+          echo "fontes_com_erro=$fontes_com_erro" >> "$GITHUB_OUTPUT"
           if [ "$rc" -eq 2 ]; then
             # Exit 2 é o pior status entre as fontes, não "nada foi coletado".
             # Com o portal do DOU recusando o runner e o IOF-MG normal, abortar
@@ -261,6 +267,28 @@ jobs:
         id: deploy
         if: steps.freio.outputs.pular != 'true' && steps.data.outputs.existe != 'true' && steps.boletim.outputs.vazio != 'true'
         uses: actions/deploy-pages@v4
+
+      # Fonte fora do ar não é falha do job — o job termina verde e publica a
+      # edição parcial. Sem esta issue, quem descobre que o DOU bloqueou o
+      # runner é só quem abrir a edição e ler o aviso; esta issue avisa no dia,
+      # não numa auditoria posterior. Uma por dia, como a issue de falha.
+      - name: Abre issue por fonte fora do ar
+        if: steps.freio.outputs.pular != 'true' && steps.coleta.outputs.fontes_com_erro != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DATA: ${{ steps.data.outputs.data }}
+          FONTES_COM_ERRO: ${{ steps.coleta.outputs.fontes_com_erro }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          titulo="Coleta parcial em ${DATA:-$(date +%F)}: $FONTES_COM_ERRO fora do ar"
+          abertas=$(gh issue list --state open --search "$titulo in:title" --json title --jq '.[].title' || true)
+          if printf '%s\n' "$abertas" | grep -Fxq "$titulo"; then
+            echo "issue já aberta: $titulo"
+            exit 0
+          fi
+          gh issue create --title "$titulo" --body "Run: $RUN_URL
+
+          A edição de $DATA foi publicada com a(s) outra(s) fonte(s); $FONTES_COM_ERRO ficou de fora."
 
       # Falha silenciosa é o pior desfecho possível numa rotina diária: ninguém
       # olha a aba Actions todo dia. A issue é o alarme. Uma por dia: reexecutar
