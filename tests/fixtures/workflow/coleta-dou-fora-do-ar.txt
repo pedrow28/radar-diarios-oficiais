@@ -1,0 +1,2 @@
+dou: erro | 403 Client Error: Forbidden for url: https://in.gov.br/leiturajornal
+iofmg: ok | 3 publicações | 0 avisos

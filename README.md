@@ -419,7 +419,10 @@ como veredito: ele conta os `data/normalized/<data>/*.json`.
 O log do passo mostra o stdout do `radar` (`<fonte>: erro | …`), então qual
 fonte caiu fica no registro da execução. Isso existe porque o portal do DOU
 pode recusar o IP do runner: perder o IOF-MG junto seria perder o dia inteiro
-por um bloqueio que nem é dele.
+por um bloqueio que nem é dele. Quando isso acontece o job também abre uma
+issue `Coleta parcial em <data>: <fonte> fora do ar`, para que a queda apareça
+no dia em que aconteceu, mesmo com a edição já saindo parcial com as demais
+fontes.
 
 **Quando falha.** O job abre uma issue intitulada `Boletim <data> falhou` com o
 link da execução, e não duplica se já houver uma aberta com o mesmo título.

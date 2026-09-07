@@ -1,0 +1,2 @@
+dou: erro | 403 Client Error: Forbidden for url: https://in.gov.br/leiturajornal
+iofmg: erro | HTTPSConnectionPool(host='iof.mg.gov.br', port=443): Read timed out
