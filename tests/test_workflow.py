@@ -17,6 +17,8 @@ runner. Isso fica com o `workflow_dispatch` e com a issue automática de falha.
 from __future__ import annotations
 
 import re
+import shutil
+import subprocess
 from pathlib import Path
 from typing import Any
 
@@ -28,6 +30,8 @@ WORKFLOW = RAIZ / ".github" / "workflows" / "boletim-diario.yml"
 CI = RAIZ / ".github" / "workflows" / "testes.yml"
 SONDA = RAIZ / ".github" / "workflows" / "sonda-dou.yml"
 FREIO = RAIZ / "PARAR"
+FIXTURES_COLETA = RAIZ / "tests" / "fixtures" / "workflow"
+BASH = shutil.which("bash")
 
 # 09:30 e 12:00 no horário de Brasília, de segunda a sábado (o cron do GitHub é UTC).
 CRONS = {"30 12 * * 1-6", "0 15 * * 1-6"}
@@ -209,6 +213,55 @@ def test_coleta_declara_fontes_com_erro(workflow: dict[str, Any]) -> None:
     coleta = next(p for p in passos(workflow) if p.get("id") == "coleta")
     assert 'echo "fontes_com_erro=$fontes_com_erro" >> "$GITHUB_OUTPUT"' in coleta["run"]
     assert "grep" in coleta["run"] and ": erro" in coleta["run"]
+
+
+def _linha_fontes_com_erro(workflow: dict[str, Any]) -> str:
+    coleta = next(p for p in passos(workflow) if p.get("id") == "coleta")
+    return next(
+        linha.strip()
+        for linha in coleta["run"].splitlines()
+        if linha.strip().startswith("fontes_com_erro=")
+    )
+
+
+@pytest.mark.skipif(BASH is None, reason="bash não está no PATH")
+@pytest.mark.parametrize(
+    ("fixture", "esperado"),
+    [
+        ("coleta-tudo-ok.txt", ""),
+        ("coleta-dou-fora-do-ar.txt", "dou"),
+        ("coleta-ambas-fora-do-ar.txt", "dou,iofmg"),
+    ],
+)
+def test_fontes_com_erro_sobrevive_ao_dia_sem_nenhuma_fonte_caida(
+    workflow: dict[str, Any], fixture: str, esperado: str
+) -> None:
+    """A linha real do passo `coleta`, rodada no bash de verdade.
+
+    G12 (fix): num dia saudável o `grep` não acha `erro` em lugar nenhum e sai
+    1; sob `set -e`/`pipefail`, uma atribuição `fontes_com_erro=$(grep | sed |
+    tr | sed)` sem `|| true` mata o script ali - antes do `parcial=` e da
+    checagem de `rc`. Um teste que só verificasse a presença das strings
+    "grep" e "fontes_com_erro" no YAML não pegaria essa regressão, porque a
+    string continua lá; só rodar a linha sob `bash -eo pipefail` de verdade,
+    contra um stdout onde ninguém caiu, expõe o script morrendo. Por isso a
+    linha é extraída do próprio arquivo do workflow, não reescrita aqui.
+    """
+    linha = _linha_fontes_com_erro(workflow)
+    saida = FIXTURES_COLETA / fixture
+    script = f"""
+    set -eo pipefail
+    saida="{saida.as_posix()}"
+    {linha}
+    printf '%s' "$fontes_com_erro"
+    """
+    resultado = subprocess.run(
+        [BASH, "-c", script], capture_output=True, text=True, cwd=RAIZ
+    )
+    assert resultado.returncode == 0, (
+        f"a linha derrubou o script (rc={resultado.returncode}): {resultado.stderr}"
+    )
+    assert resultado.stdout == esperado
 
 
 def test_fonte_fora_do_ar_abre_issue_sem_esperar_o_dia_seguinte(
