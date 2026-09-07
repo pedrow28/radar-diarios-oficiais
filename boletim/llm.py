@@ -107,6 +107,7 @@ class ClaudeCodeCLI:
         return self._ler(processo, rotulo)
 
     def _ler(self, processo: subprocess.CompletedProcess, rotulo: str) -> dict:
+        logger = configurar_log()
         resultado: dict[str, Any] | None = None
         try:
             lido = json.loads(processo.stdout)
@@ -119,16 +120,39 @@ class ClaudeCodeCLI:
                 f"llm {rotulo}: {_mensagem_de_erro(processo, resultado)}"
             )
         if resultado is None:
+            # O começo da saída, e nunca o prompt: é o que diz se veio um banner
+            # do CLI, uma recusa do modelo ou lixo de terminal. Sem isso, "saída
+            # não é JSON" no log do dia não permite investigar nada.
+            logger.warning(
+                "llm %s: saída não é JSON, começa com: %s",
+                rotulo,
+                _inicio(processo.stdout),
+            )
             raise LLMIndisponivel(f"llm {rotulo}: saída não é JSON")
         if "structured_output" in resultado:
             return resultado["structured_output"]
         try:
             reparado = reparar(resultado["result"])
         except (KeyError, TypeError, ValueError) as exc:
+            logger.warning(
+                "llm %s: resposta sem JSON aproveitável, começa com: %s",
+                rotulo,
+                _inicio(resultado.get("result")),
+            )
             raise LLMIndisponivel(f"llm {rotulo}: resposta sem JSON aproveitável") from exc
         if not isinstance(reparado, dict):
             raise LLMIndisponivel(f"llm {rotulo}: resposta não é um objeto JSON")
         return reparado
+
+
+_MAX_DIAGNOSTICO = 300
+
+
+def _inicio(texto: Any) -> str:
+    """Os primeiros caracteres de uma saída, para o log de diagnóstico."""
+    if not isinstance(texto, str) or not texto.strip():
+        return "(vazio)"
+    return texto.strip()[:_MAX_DIAGNOSTICO]
 
 
 def _mensagem_de_erro(

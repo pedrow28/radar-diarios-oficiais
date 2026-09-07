@@ -183,6 +183,40 @@ lotes, para receber categoria, resumo e relevância. As categorias são cinco:
 | D         | fato administrativo relevante, sem recurso e sem regra nova     |
 | X         | irrelevante; fica em `itens.json`, fora da edição               |
 
+**Regras determinísticas depois do modelo.** A resposta do LLM ainda passa por
+quatro regras em `boletim.classifica.item_de_resposta`, e elas existem porque o
+prompt não fecha fronteira: numa semana real as mesmas habilitações saíram A em
+uma execução e B na seguinte, com a instrução literal nos dois casos. O que
+precisa ser estável entre execuções fica no código; o prompt fica com o que é
+julgamento. Cada regra que muda alguma coisa deixa a sua tag no item.
+
+- **B que é ato administrativo vira X.** Extrato, retificação, edital de
+  notificação ou intimação, despacho, ata, termo aditivo e apostilamento nunca
+  são norma, mesmo quando o corpo cita dinheiro. Aviso entra só quando anuncia
+  trâmite (licitação, alteração de edital, resultado, homologação, suspensão,
+  revogação, dispensa, penalidade, cancelamento): "aviso de chamamento público"
+  abre um edital e fica na edição.
+- **B que é habilitação vira A.** Habilitar, credenciar, qualificar, mexer em
+  teto, limite financeiro, incremento ou repasse é dinheiro novo para quem
+  capta, não mudança de regra. O verbo vale no título ou nos 60 primeiros
+  caracteres do resumo, e nunca quando o título se declara norma (resolução,
+  RDC, instrução normativa, decreto, lei) ou o resumo tem alcance nacional: ali
+  o dinheiro é consequência da regra, não o assunto do ato.
+- **Fora de Minas, a relevância de A não passa de 2.** É a contraparte do piso
+  do IOF-MG: as marcas estão em `boletim.marcas_mg`, e B fica de fora porque
+  regra federal alcança Minas junto com o país. O A que veio da regra anterior
+  só recebe o teto quando o ato nomeia o ente beneficiado.
+- **A cifra não se repete no `por_que_importa`.** O `valor_brl` já tem linha
+  própria na edição. Sai só a expressão que repete esse valor - lida na precisão
+  em que o modelo a escreveu, que tanto arredonda quanto corta -, e só em três
+  posições, todas em que o que sobra continua sendo uma frase: isolada entre
+  parênteses; depois de uma locução-ponte cujo único complemento é ela ("no
+  valor de", "no montante de", "no total de", "somando", "totalizando",
+  "equivalente a", "correspondente a"); e introduzida por preposição, incluindo
+  o caso em que ela fica entre a preposição e o complemento ("acesso a R$ 3,04
+  milhões anuais em CVCF" vira "acesso a CVCF"). Cifra que é sujeito ou objeto
+  da frase fica onde está, e cifra de outro ato também.
+
 ### Rodar local
 
 ```bash

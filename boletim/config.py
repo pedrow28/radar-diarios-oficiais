@@ -25,6 +25,27 @@ class ConfigCTA:
         return f"https://wa.me/{self.whatsapp}?text={quote(texto, safe='')}"
 
 
+# Marcas de Minas Gerais no texto de um ato. Elas decidem o teto de relevância
+# de um item de captação fora do IOF-MG: sem nenhuma delas, o ato não fala com o
+# leitor do boletim, por maior que seja a cifra. A comparação é feita em caixa
+# baixa e sem acento; marca terminada em maiúscula é sigla e não casa dentro de
+# outra palavra ("FHEMIG" não vale por "FHEMIGRANTE"), terminada em minúscula é
+# radical de propósito ("mineir" vale por "mineiro" e "mineira").
+MARCAS_MG = [
+    "Minas Gerais",
+    "/MG",
+    "(MG)",
+    "-MG",
+    "MG",
+    "SES-MG",
+    "SES/MG",
+    "CIB-SUS/MG",
+    "FHEMIG",
+    "Belo Horizonte",
+    "mineir",
+]
+
+
 @dataclass
 class ConfigBoletim:
     modelo: str = "claude-haiku-4-5"
@@ -38,6 +59,7 @@ class ConfigBoletim:
     # O DOU vem do portal público (`dou`), que não exige conta. A fonte
     # `inlabs` continua disponível para quem tiver credencial.
     fontes: list[str] = field(default_factory=lambda: ["dou", "iofmg"])
+    marcas_mg: list[str] = field(default_factory=lambda: list(MARCAS_MG))
     dir_saida: Path = Path("./boletim/saida")
     dir_site: Path = Path("./site")
     dir_dados: Path = Path("./data")

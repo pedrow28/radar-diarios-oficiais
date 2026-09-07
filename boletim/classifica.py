@@ -4,12 +4,21 @@ Três defesas contra o modelo, na ordem em que custam: validação do schema,
 reconciliação por id e bisseção do lote. A quarta e última é o fallback D, que
 nunca deixa uma publicação sumir da edição por causa de uma resposta ruim -
 ela aparece como "outro ato", marcada, em vez de desaparecer em silêncio.
+
+Depois que a resposta chega há um último passo, este determinístico: as regras
+de `item_de_resposta`. Elas existem porque o prompt não fecha fronteira - na
+semana de 31/08 as mesmas habilitações saíram A numa execução e B na seguinte,
+com a instrução literal nos dois casos. O que precisa ser estável entre
+execuções vira código; o prompt fica com o que é julgamento.
 """
 
 from __future__ import annotations
 
 import math
-from typing import Any, Sequence
+import re
+import time
+from functools import lru_cache
+from typing import Any, Callable, Sequence
 
 from boletim.config import ConfigBoletim
 from boletim.edicao import Item
@@ -20,15 +29,29 @@ from radar.core.log import configurar_log
 from radar.core.modelos import Publicacao
 
 _LIMITE_RESUMO_FALLBACK = 200
+_RELEVANCIA_MAXIMA = 3
+_RELEVANCIA_FORA_DE_MG = 2
+
+# Esperas, em segundos, antes de cada retentativa de um lote que caiu no meio do
+# dia. Duas bastam: o que derruba a chamada no meio de uma rodada é sessão OAuth
+# renovando ou limite momentâneo, e um minuto cobre os dois. Mais que isso
+# atrasaria a edição por um modelo que de fato saiu do ar.
+ESPERAS_RETENTATIVA = (20, 60)
 
 
 def classificar(
-    mantidas: Sequence[Publicacao], llm: LLM, cfg: ConfigBoletim
+    mantidas: Sequence[Publicacao],
+    llm: LLM,
+    cfg: ConfigBoletim,
+    *,
+    esperar: Callable[[float], None] = time.sleep,
 ) -> tuple[list[Item], list[str]]:
     """Devolve um `Item` por publicação mantida, na mesma ordem, mais avisos.
 
     Sempre um item por publicação: quem lê o boletim precisa saber que o ato
     existiu, mesmo quando o modelo não conseguiu opinar sobre ele.
+
+    `esperar` é injetável para que o teste da retentativa não durma 80 s.
     """
     logger = configurar_log()
     respostas: dict[str, dict[str, Any]] = {}
@@ -38,7 +61,7 @@ def classificar(
     for indice in range(0, len(mantidas), cfg.lote):
         lote = list(mantidas[indice : indice + cfg.lote])
         rotulo = f"lote-{indice // cfg.lote}"
-        _resolver(lote, llm, cfg, rotulo, respostas, avisos, estado)
+        _resolver(lote, llm, cfg, rotulo, respostas, avisos, estado, esperar)
 
     itens: list[Item] = []
     sem_classificacao = 0
@@ -48,7 +71,7 @@ def classificar(
             sem_classificacao += 1
             itens.append(_item_fallback(pub))
         else:
-            itens.append(item_de_resposta(pub, resposta))
+            itens.append(item_de_resposta(pub, resposta, cfg))
 
     if sem_classificacao:
         aviso = f"{sem_classificacao} itens sem classificação por LLM (fallback D)"
@@ -101,6 +124,7 @@ def _resolver(
     respostas: dict[str, dict[str, Any]],
     avisos: list[str],
     estado: _Estado,
+    esperar: Callable[[float], None],
 ) -> None:
     """Preenche `respostas` com o que o LLM disser sobre `pubs`.
 
@@ -128,21 +152,24 @@ def _resolver(
             return
         estado.orcamento_chamadas -= 1
         try:
-            bruto = llm.completar_json(
-                SISTEMA_CLASSIFICACAO,
-                montar_lote(pubs, cfg),
-                LOTE_SCHEMA,
-                rotulo=rotulo,
-            )
-        except LLMIndisponivel:
+            bruto = _completar(llm, pubs, cfg, rotulo, estado, esperar, logger)
+        except LLMIndisponivel as exc:
             if not estado.algum_sucesso:
                 # Nada classificado ainda: não é uma resposta ruim, é o modelo
                 # fora do ar. Propagar deixa o CLI sair 2 em vez de publicar
                 # uma edição inteira de fallback D.
                 raise
             estado.desistiu = True
-            avisos.append(f"{rotulo}: LLM indisponível, o restante do dia fica sem classificação")
-            logger.warning("%s: LLM indisponível depois de %d respostas", rotulo, len(respostas))
+            avisos.append(
+                f"{rotulo}: LLM indisponível ({exc}), "
+                "o restante do dia fica sem classificação"
+            )
+            logger.warning(
+                "%s: LLM indisponível depois de %d respostas: %s",
+                rotulo,
+                len(respostas),
+                exc,
+            )
             return
 
         erros = validar(bruto, LOTE_SCHEMA)
@@ -189,18 +216,64 @@ def _resolver(
         # dele antes de virar fallback D. A recursão termina porque, dentro
         # dela, `pubs` já é esse mesmo item único (`len(pubs) == 1`).
         if len(pubs) > 1:
-            _resolver(faltantes, llm, cfg, rotulo, respostas, avisos, estado)
+            _resolver(faltantes, llm, cfg, rotulo, respostas, avisos, estado, esperar)
         return
     meio = len(faltantes) // 2
-    _resolver(faltantes[:meio], llm, cfg, rotulo, respostas, avisos, estado)
-    _resolver(faltantes[meio:], llm, cfg, rotulo, respostas, avisos, estado)
+    _resolver(faltantes[:meio], llm, cfg, rotulo, respostas, avisos, estado, esperar)
+    _resolver(faltantes[meio:], llm, cfg, rotulo, respostas, avisos, estado, esperar)
 
 
-def item_de_resposta(pub: Publicacao, resposta: dict[str, Any]) -> Item:
+def _completar(
+    llm: LLM,
+    pubs: list[Publicacao],
+    cfg: ConfigBoletim,
+    rotulo: str,
+    estado: _Estado,
+    esperar: Callable[[float], None],
+    logger: Any,
+) -> dict[str, Any]:
+    """Uma chamada de classificação, com retentativa quando o modelo cai.
+
+    A queda no meio de uma rodada é quase sempre transitória: em 01/09 e 03/09
+    da primeira semana real foi a sessão OAuth expirando, e 20 e 26 itens foram
+    para o fallback D sem que ninguém tentasse de novo - entre eles as
+    deliberações CIB-SUS/MG de maior valor da semana. A reexecução de 03/09
+    passou inteira minutos depois.
+
+    Antes do primeiro sucesso não há retentativa: aí a queda é o modelo fora do
+    ar de verdade, e o lugar de descobrir isso é o exit code, não 80 s de espera.
+    """
+    prompt = montar_lote(pubs, cfg)
+    esperas = ESPERAS_RETENTATIVA if estado.algum_sucesso else ()
+    for indice in range(len(esperas) + 1):
+        try:
+            return llm.completar_json(
+                SISTEMA_CLASSIFICACAO, prompt, LOTE_SCHEMA, rotulo=rotulo
+            )
+        except LLMIndisponivel as exc:
+            if indice >= len(esperas) or estado.orcamento_chamadas <= 0:
+                raise
+            espera = esperas[indice]
+            estado.orcamento_chamadas -= 1
+            logger.warning(
+                "%s: LLM indisponível (%s), nova tentativa em %d s", rotulo, exc, espera
+            )
+            esperar(espera)
+    raise AssertionError("laço de retentativa sempre retorna ou levanta")
+
+
+def item_de_resposta(
+    pub: Publicacao, resposta: dict[str, Any], cfg: ConfigBoletim | None = None
+) -> Item:
     """Junta o que o `radar` coletou com o juízo que o LLM emitiu.
 
-    Os fatos vêm sempre da publicação; do modelo só vem a leitura dela.
+    Os fatos vêm sempre da publicação; do modelo vem a leitura dela, já passada
+    pelas regras determinísticas de `_pos_processar`. O `cfg` entra por causa
+    das marcas de Minas e do tamanho do texto que o modelo leu; sem ele valem os
+    padrões, que são os do `config/config.yaml`.
     """
+    cfg = cfg if cfg is not None else ConfigBoletim()
+    categoria, relevancia, tags = _pos_processar(pub, resposta, cfg)
     return Item(
         id=pub.id,
         fonte=pub.fonte,
@@ -214,14 +287,373 @@ def item_de_resposta(pub: Publicacao, resposta: dict[str, Any]) -> Item:
         edicao=pub.edicao,
         titulo=pub.titulo,
         url=pub.url,
-        categoria=resposta["categoria"],
-        relevancia=resposta["relevancia"],
+        categoria=categoria,
+        relevancia=relevancia,
         resumo=resposta["resumo"],
-        por_que_importa=resposta["por_que_importa"],
+        por_que_importa=_sem_cifra_repetida(
+            resposta["por_que_importa"], resposta["valor_brl"]
+        ),
         valor_brl=resposta["valor_brl"],
         entes=tuple(resposta["entes"]),
-        tags=tuple(resposta["tags"]),
+        tags=tags,
     )
+
+
+# ── regras determinísticas depois do modelo ─────────────────────────────
+TAG_B_ADMINISTRATIVO = "regra:b-administrativo"
+TAG_B_PARA_A = "regra:b-para-a"
+
+_ACENTOS = str.maketrans("áàâãäéèêëíìîïóòôõöúùûüçñ", "aaaaaeeeeiiiiooooouuuucn")
+_ESPACO = re.compile(r"\s+")
+
+# Tipos de ato que nunca são norma. O modelo os manda para B quando o corpo cita
+# dinheiro, e eles entram na edição ocupando a seção de mudança de regra: em
+# 31/08, 5 dos 8 itens de B eram extrato ou retificação.
+#
+# O plural conta: o DOU publica "EXTRATOS DE REGISTROS DE PREÇOS" e "EXTRATOS DE
+# CONVÊNIOS" como um bloco só, e sem ele dois itens de 03/09 e 04/09 escapavam.
+#
+# "Aviso" sozinho não serve: "AVISO DE CHAMAMENTO PÚBLICO" é o começo de um
+# chamamento, o coração da seção C, e a regra o mandava para fora da edição.
+# Só o aviso que anuncia um trâmite - licitação, alteração de edital, resultado,
+# homologação, suspensão - é ato administrativo.
+_AVISO_ADMINISTRATIVO = (
+    "licita|altera|padroniza|resultado|homologa|suspens|revoga|dispensa"
+    "|penalidade|cancelamento"
+)
+_TITULO_ADMINISTRATIVO = re.compile(
+    r"^(?:(?:extratos?|retifica(?:cao|coes)"
+    r"|edita(?:l|is) de (?:notificac(?:ao|oes)|intimac(?:ao|oes))"
+    r"|despachos?|atas?|termos? aditivos?|apostilamentos?)\b"
+    rf"|avisos? de (?:{_AVISO_ADMINISTRATIVO}))"
+)
+# Vocabulário de captação. Habilitar, credenciar e mexer em teto é dinheiro novo
+# para quem lê o boletim, não mudança de regra - e é exatamente a fronteira que
+# o modelo atravessa de uma execução para a outra.
+_CAPTACAO = re.compile(
+    r"\b(?:habilita|credencia|qualifica|desabilita|descredencia"
+    r"|renova(?:cao)? (?:da )?habilitacao|teto|limite financeiro"
+    r"|incremento|repasse)"
+)
+# O verbo de captação só conta onde o ato se anuncia: no título ou na abertura
+# do resumo. Procurá-lo no resumo inteiro puxava norma de verdade para A - a
+# `RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA nº 1.039` virou captação porque o
+# corpo dizia "habilita a Reblas". É o mesmo recorte que `medir-g11.py` usa.
+_ABERTURA_RESUMO = 60
+# Ato cujo título já se declara norma não é habilitação, por mais que o corpo
+# fale de teto ou de repasse.
+_TITULO_NORMATIVO = re.compile(
+    r"^(?:resolucao|rdc|instrucao normativa|decreto|lei)\b"
+)
+# Alcance nacional é a outra marca de norma: "altera o critério de cálculo do
+# teto financeiro de todos os municípios" muda regra para o país inteiro, e em
+# A ele ainda levava o teto de relevância da R3 por não citar Minas.
+_ESCOPO_NACIONAL = re.compile(
+    r"todos os municipios|todos os estados|nacional|em todo o pais"
+)
+
+
+# ── R5: a cifra que o item já carrega não se repete no argumento ────────
+# O `valor_brl` vira uma linha própria na edição. Repeti-la em `por_que_importa`
+# come o espaço do argumento, e a proibição literal no prompt não resolveu: 27
+# itens repetiam a cifra em v1 da semana e os mesmos 27 em v2.
+_MOEDA = r"R\$\s?[\d.,]*\d(?:\s?(?:milh(?:ão|ões)|bilh(?:ão|ões)|mil|bi)\b)?"
+_MOEDA_RX = re.compile(_MOEDA, re.IGNORECASE)
+# A mesma expressão com os grupos separados, para ler o número que ela escreve.
+_MOEDA_LIDA = re.compile(
+    r"R\$\s?(?P<numero>[\d.,]*\d)"
+    r"(?:\s?(?P<unidade>milh(?:ão|ões)|bilh(?:ão|ões)|mil|bi)\b)?",
+    re.IGNORECASE,
+)
+_MULTIPLICADOR = {
+    "mil": 1_000.0,
+    "bi": 1_000_000_000.0,
+    "milhao": 1_000_000.0,
+    "milhoes": 1_000_000.0,
+    "bilhao": 1_000_000_000.0,
+    "bilhoes": 1_000_000_000.0,
+}
+# "R$ 3 milhões anuais" sai inteiro: deixar "anuais" para trás produz
+# concordância solta ("nova fonte de receita anuais").
+_UNIDADE = r"(?:\s+(?:anuais|anual|mensais|mensal|adicionais|adicional))?"
+_APROXIMACAO = r"(?:apenas|quase|cerca de|até|mais de|aproximadamente)\s+"
+# Locuções cujo único complemento é a cifra: sem ela, elas também não param de pé.
+_PONTE = (
+    r"no valor de|no montante de|no total de|somando|totalizando"
+    r"|equivalente a|correspondente a"
+)
+# A cifra só sai quando vem isolada entre parênteses ou introduzida por uma
+# preposição (ou por uma das locuções-ponte). Cifra que é sujeito ou objeto da
+# frase fica onde está: tirá-la deixaria "Define como novo limite anual".
+#
+# O terceiro padrão é o da forma mais comum da rodada v3, "acesso a R$ 3,04
+# milhões anuais em CVCF": ali a preposição fica e quem sai é a cifra com o "em"
+# que a ligava ao que ela conta, de modo que a preposição passa a reger o
+# complemento ("acesso a CVCF").
+_REMOCOES = tuple(
+    (re.compile(padrao, re.IGNORECASE), troca)
+    for padrao, troca in (
+        (rf"\s*\([^()]{{0,40}}{_MOEDA}[^()]{{0,25}}\)", ""),
+        (rf"\s+(?:{_PONTE})\s+(?:{_APROXIMACAO})?{_MOEDA}{_UNIDADE}", ""),
+        (
+            rf"\b(a|ao|de|em|para|com|por)\s+(?:{_APROXIMACAO})?"
+            rf"{_MOEDA}{_UNIDADE}\s+em\s+",
+            r"\1 ",
+        ),
+        (rf"\s+(?:de|em|para|com|por)\s+(?:{_APROXIMACAO})?{_MOEDA}{_UNIDADE}", ""),
+    )
+)
+_PASSES_REMOCAO = 3
+_MIN_POR_QUE_IMPORTA = 25
+
+_ESPACO_SOBRANDO = re.compile(r" {2,}")
+_ESPACO_ANTES_DE_PONTUACAO = re.compile(r"\s+([,.;:)])")
+_PONTUACAO_DOBRADA = re.compile(r"([,;:])\s*([,.;:])")
+
+# Terminações de verbo conjugado ou no infinitivo, mais as poucas palavras
+# comuns que terminam igual sem ser verbo. O teste é grosseiro de propósito: ele
+# existe só para barrar a remoção que deixaria um sintagma sem predicado, e um
+# falso positivo não muda nada, porque as remoções já são conservadoras.
+_TERMINACOES_VERBO = (
+    "ndo", "ram", "rem", "vam", "ria", "ou", "am", "em", "ar", "er", "ir",
+)
+_NAO_SAO_VERBOS = frozenset(
+    "para com sem bem tambem alem porem nem quem alguem ninguem hospitalar "
+    "familiar particular similar militar escolar popular regular auxiliar "
+    "exemplar lugar mar par item".split()
+)
+
+
+def _sem_cifra_repetida(
+    por_que_importa: str | None, valor_brl: float | None
+) -> str | None:
+    """Tira do argumento a cifra que o item já carrega em `valor_brl`.
+
+    Só sai a cifra que repete o `valor_brl`. A regra removia qualquer expressão
+    monetária, e com isso "reduz o teto de R$ 10 milhões para R$ 8 milhões"
+    perdia justamente o número que o card não mostra: o valor antigo, que é o
+    que dá sentido à mudança. Cada candidata é lida e comparada com o valor do
+    item, na precisão em que ela mesma foi escrita.
+
+    Sem `valor_brl` não há repetição - a cifra do texto é a única que existe - e
+    o texto passa intacto. Depois do corte valem duas guardas: o que sobrou
+    precisa continuar tendo tamanho de frase e não pode ter perdido o verbo que
+    o original tinha. Falhando qualquer uma delas, volta o texto do modelo.
+    """
+    if not por_que_importa or valor_brl is None:
+        return por_que_importa
+    if not _MOEDA_RX.search(por_que_importa):
+        return por_que_importa
+
+    novo = por_que_importa
+    for _ in range(_PASSES_REMOCAO):
+        antes = novo
+        for remocao, troca in _REMOCOES:
+            novo = remocao.sub(
+                lambda m, troca=troca: (
+                    m.expand(troca) if _repete_o_valor(m.group(0), valor_brl) else m.group(0)
+                ),
+                novo,
+            )
+        if novo == antes:
+            break
+
+    novo = _limpar(novo)
+    if len(novo) < _MIN_POR_QUE_IMPORTA:
+        return por_que_importa
+    if _tem_verbo(por_que_importa) and not _tem_verbo(novo):
+        return por_que_importa
+    return novo
+
+
+def _repete_o_valor(trecho: str, valor_brl: float) -> bool:
+    """Se a cifra escrita no trecho é a mesma que o item já carrega.
+
+    A comparação é feita na precisão em que o modelo escreveu, e com folga de
+    uma casa: ele tanto arredonda quanto corta, e nas sete edições reais fez as
+    duas coisas - "quase R$ 95 milhões" para 94.274.974,56 e "R$ 8,5 milhões"
+    para 8.570.045,94. Uma casa é o suficiente para reconhecer os dois e ainda
+    separar cifras diferentes: "R$ 10 milhões" não repete um valor de 8 milhões.
+    Vale para a forma por extenso e para a de `formatar_brl` ("R$ 721.233,95").
+    """
+    achado = _MOEDA_LIDA.search(trecho)
+    if achado is None:
+        return False
+    escrito = achado.group("numero").replace(".", "").replace(",", ".")
+    try:
+        numero = float(escrito)
+    except ValueError:
+        return False
+    unidade = _normalizar(achado.group("unidade") or "")
+    esperado = valor_brl / _MULTIPLICADOR.get(unidade, 1.0)
+    _, _, decimais = escrito.partition(".")
+    # `- 1e-9` mantém a diferença de uma casa cheia (8 contra 9) do lado de fora.
+    return abs(esperado - numero) < 10.0 ** -len(decimais) - 1e-9
+
+
+def _limpar(texto: str) -> str:
+    """Fecha os buracos que a remoção deixa: espaço duplo e pontuação órfã."""
+    texto = _ESPACO_SOBRANDO.sub(" ", texto)
+    texto = _ESPACO_ANTES_DE_PONTUACAO.sub(r"\1", texto)
+    texto = _PONTUACAO_DOBRADA.sub(r"\2", texto)
+    return texto.strip().strip(",;:").strip()
+
+
+def _tem_verbo(texto: str) -> bool:
+    for bruto in _normalizar(texto).split():
+        palavra = bruto.strip(".,;:()[]\"'!?%")
+        if len(palavra) < 3 or palavra in _NAO_SAO_VERBOS:
+            continue
+        if palavra.endswith(_TERMINACOES_VERBO):
+            return True
+    return False
+
+
+def _normalizar(texto: str) -> str:
+    """Caixa baixa, sem acento e com espaço único: o alvo de todas as regras."""
+    return _ESPACO.sub(" ", texto.casefold().translate(_ACENTOS))
+
+
+# A sigla do estado é a única marca que colide com uma unidade de medida: antes
+# dela não pode vir número, nem número seguido de espaço.
+_SIGLA_MG = "mg"
+_GUARDA_MILIGRAMA = r"(?<!\d)(?<!\d\s)"
+
+
+@lru_cache(maxsize=4)
+def _padrao_marcas(marcas: tuple[str, ...]) -> re.Pattern[str]:
+    """Uma alternação com as marcas de Minas já normalizadas.
+
+    Em cache porque a lista vem do config e não muda dentro de uma execução,
+    enquanto a função roda uma vez por publicação classificada.
+    """
+    return re.compile("|".join(_padrao_marca(m) for m in marcas if m))
+
+
+def _padrao_marca(marca: str) -> str:
+    alvo = _normalizar(marca)
+    padrao = re.escape(alvo)
+    if alvo == _SIGLA_MG:
+        # A marca era " MG " com espaço dos dois lados, e por isso "Pirajuba -
+        # MG," - do jeito que o diário escreve - não casava: a vírgula ocupava o
+        # lugar do espaço. Fronteira de palavra resolve, mas "mg" também é
+        # miligrama, e "500 mg de dipirona" não é Minas.
+        return _GUARDA_MILIGRAMA + r"\b" + padrao + r"\b"
+    if alvo[:1].isalnum():
+        padrao = r"\b" + padrao
+    # Só a marca escrita em maiúscula é sigla fechada: "FHEMIG" não pode valer
+    # por "FHEMIGRANTE", mas "mineir" existe justamente para pegar "mineiro".
+    if marca[-1:].isupper() or marca[-1:].isdigit():
+        padrao += r"\b"
+    return padrao
+
+
+def _tem_marca_mg(
+    pub: Publicacao, resposta: dict[str, Any], cfg: ConfigBoletim
+) -> bool:
+    """Se o ato cita Minas em algum lugar do que o modelo teve à frente.
+
+    O texto entra só até `max_chars_texto`: a marca precisa estar no trecho que
+    o modelo leu, senão o item seria promovido por uma menção que ninguém viu.
+    Os campos são unidos por espaço para que nenhuma marca case atravessando a
+    fronteira entre dois deles.
+    """
+    alvo = " ".join(
+        [
+            pub.titulo,
+            resposta["resumo"],
+            *resposta["entes"],
+            pub.texto[: cfg.max_chars_texto],
+        ]
+    )
+    padrao = _padrao_marcas(tuple(cfg.marcas_mg))
+    return bool(padrao.search(f" {_normalizar(alvo)} "))
+
+
+def _pos_processar(
+    pub: Publicacao, resposta: dict[str, Any], cfg: ConfigBoletim
+) -> tuple[str, int, tuple[str, ...]]:
+    """Aplica as regras determinísticas à resposta do modelo.
+
+    A ordem importa: a categoria é decidida antes da relevância, porque o piso
+    do IOF-MG olha a categoria final, e o ato administrativo que sai de B leva a
+    relevância a zero de qualquer jeito.
+
+    Cada regra que muda alguma coisa deixa uma tag no item, para que a auditoria
+    de uma rodada saiba dizer o que foi do modelo e o que foi do código.
+    """
+    categoria = resposta["categoria"]
+    relevancia = resposta["relevancia"]
+    tags = list(resposta["tags"])
+    movido_para_a = False
+
+    if categoria == "B":
+        if _TITULO_ADMINISTRATIVO.search(_normalizar(pub.titulo)):
+            categoria, relevancia = "X", 0
+            tags.append(TAG_B_ADMINISTRATIVO)
+        elif _e_captacao(pub, resposta):
+            categoria = "A"
+            movido_para_a = True
+            tags.append(TAG_B_PARA_A)
+
+    relevancia = _relevancia(pub, resposta, categoria, relevancia, cfg, movido_para_a)
+    return categoria, relevancia, tuple(tags)
+
+
+def _e_captacao(pub: Publicacao, resposta: dict[str, Any]) -> bool:
+    """Se o B que o modelo devolveu é, na verdade, dinheiro novo para alguém.
+
+    Duas guardas antes do vocabulário, e as duas vieram de casos reais: um ato
+    que se anuncia como norma no título continua norma (a RDC da Anvisa que
+    "habilita a Reblas" no corpo), e um ato de alcance nacional também (o que
+    "altera o critério de cálculo do teto financeiro de todos os municípios").
+    Os dois viravam A, e em A o teto da R3 ainda os rebaixava por não citarem
+    Minas: uma mudança de regra federal saía da seção certa e da ordenação.
+
+    O verbo vale no título ou nos primeiros 60 caracteres do resumo, onde o ato
+    diz o que faz. Mais adiante ele costuma ser contexto.
+    """
+    titulo = _normalizar(pub.titulo)
+    resumo = _normalizar(resposta["resumo"])
+    if _TITULO_NORMATIVO.match(titulo) or _ESCOPO_NACIONAL.search(resumo):
+        return False
+    return bool(
+        _CAPTACAO.search(titulo) or _CAPTACAO.search(resumo[:_ABERTURA_RESUMO])
+    )
+
+
+def _relevancia(
+    pub: Publicacao,
+    resposta: dict[str, Any],
+    categoria: str,
+    relevancia: int,
+    cfg: ConfigBoletim,
+    movido_para_a: bool = False,
+) -> int:
+    """Piso do IOF-MG e teto de quem não fala de Minas: as duas pontas da régua.
+
+    Todo ato do IOF-MG é mineiro por definição, e Minas é o mercado do boletim.
+    Deixar isso a cargo do prompt não funcionou: na semana de 31/08 o modelo deu
+    3 a habilitações na Bahia e 2 a deliberações CIB-SUS/MG que alocam recurso a
+    município mineiro. O piso vale só para A e B - um ato de rotina do estado
+    não vira prioridade só por ser de Minas.
+
+    O teto é a contraparte e vale só para A: captação que não cita Minas em
+    lugar nenhum não é prioridade do dia, por maior que seja a cifra. B fica de
+    fora porque mudança de regra federal alcança Minas junto com o país.
+
+    O A que veio da R2 só recebe o teto quando o ato nomeia o ente beneficiado:
+    aí ele é mesmo alocação para um lugar, e o lugar não é Minas. Sem ente
+    nominal, o que a R2 moveu é um ato de alcance amplo, e rebaixá-lo repetiria
+    em A o erro que o teto existe para evitar em B.
+    """
+    if pub.fonte == "iofmg" and categoria in ("A", "B"):
+        return max(relevancia, _RELEVANCIA_MAXIMA)
+    if movido_para_a and not resposta["entes"]:
+        return relevancia
+    if categoria == "A" and not _tem_marca_mg(pub, resposta, cfg):
+        return min(relevancia, _RELEVANCIA_FORA_DE_MG)
+    return relevancia
 
 
 def _item_fallback(pub: Publicacao) -> Item:

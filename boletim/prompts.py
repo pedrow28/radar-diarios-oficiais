@@ -37,37 +37,78 @@ dinheiro ou regra para essas instituições do que é rotina administrativa.
 
 Classifique cada publicação em uma categoria:
 
-A) Captação de recursos. Habilitação ou credenciamento de serviço ou de leito, teto MAC \
-ou AC, limite financeiro, incremento, emenda parlamentar, repasse fundo a fundo do Fundo \
-Nacional de Saúde, deliberação CIB-SUS/MG que aloca recurso a município ou hospital \
-nominal. Exemplo: portaria que habilita 10 leitos de UTI em Manhuaçu e destina \
-R$ 1.234.567,89 de custeio anual.
+A) Captação de recursos. Habilitação, credenciamento, desabilitação, qualificação ou \
+renovação de serviço ou de leito com recurso associado, teto MAC ou AC, limite \
+financeiro, incremento, emenda parlamentar, repasse fundo a fundo do Fundo Nacional de \
+Saúde, deliberação CIB-SUS/MG que aloca recurso a município ou hospital nominal, convênio \
+ou termo de compromisso com repasse nominal a município ou entidade. Exemplo: portaria \
+que habilita 10 leitos de UTI em Manhuaçu e destina R$ 1.234.567,89 de custeio anual.
 
-B) Mudança de regra. Portaria, resolução ou RDC que altera critério, piso, prazo, \
-requisito ou tabela. Exemplo: portaria que muda o critério de cálculo do piso da atenção \
-primária dos municípios com menos de 30 mil habitantes.
+B) Mudança de regra, e só isso. Ato normativo (portaria, resolução, RDC, instrução \
+normativa, decreto) que altera critério, piso, prazo, tabela, requisito ou fluxo válido \
+para um conjunto de instituições. Exemplo: portaria que muda o critério de cálculo do \
+piso da atenção primária dos municípios com menos de 30 mil habitantes. Habilitação, \
+credenciamento, desabilitação, qualificação e renovação com recurso são A, nunca B, \
+mesmo quando o ato cita a regra que os autoriza.
 
-C) Edital ou chamamento público. Exemplo: edital de chamamento público que seleciona \
-hospitais filantrópicos para um programa de média complexidade.
+C) Edital ou chamamento público que abre inscrição para instituições disputarem recurso, \
+credenciamento ou vaga em programa. Exemplo: edital de chamamento público que seleciona \
+hospitais filantrópicos para um programa de média complexidade. C exige inscrição aberta: \
+edital de notificação, edital de intimação, edital de convocação de fornecedor, aviso de \
+licitação, aviso de alteração de edital, aviso de padronização, pregão e retificação de \
+edital são X, nunca C.
 
 D) Fato administrativo relevante ao setor, sem recurso e sem regra nova. Exemplo: \
-nomeação de dirigente de órgão do SUS ou instituição de grupo de trabalho sobre \
-prontuário eletrônico.
+nomeação de dirigente de órgão do SUS, instituição de grupo de trabalho sobre prontuário \
+eletrônico, ou certificação sem dinheiro associado (hospital de ensino, por exemplo).
 
-X) Irrelevante. Pessoal de rotina, licitação de item genérico, ato fora da saúde. \
-Exemplo: extrato de contrato de fornecimento de material de expediente.
+X) Irrelevante. Pessoal de rotina (nomeação, exoneração, progressão funcional, licença), \
+licitação de item genérico, ato fora da saúde. Use X, e nunca A, B ou C, para: extrato de \
+registro de preços, pregão, aviso de licitação, de alteração de edital ou de padronização, \
+extrato de contrato, termo aditivo, apostilamento, encerramento ou prorrogação de convênio \
+sem valor novo, retificação de qualquer ato, edital de notificação, de intimação ou de \
+convocação, despacho, ata e delegação de competência. Exemplo: extrato de registro de \
+preços de material hospitalar de um instituto federal.
 
 Regras de decisão:
-- na dúvida entre D e X, use X;
+- na dúvida entre D e X, use X; na dúvida entre C e X, use X;
 - qualquer alocação nominal de recurso a um município ou a um hospital é A, mesmo que o \
-ato também trate de outro assunto.
+ato também trate de outro assunto;
+- o tipo do ato manda sobre o assunto: um extrato continua sendo extrato mesmo quando \
+fala de saúde, e uma habilitação continua sendo A mesmo quando cita uma portaria;
+- X não é um resto: um dia normal do Diário Oficial tem mais X do que A, B e C somados. \
+Não force um ato de rotina para dentro de C só porque a palavra "edital" aparece nele.
 
 Campos da resposta:
-- relevancia: 3 quando afeta diretamente a captação de um hospital ou município em Minas \
-Gerais, 2 quando afeta o SUS nacionalmente, 1 quando é contexto, 0 apenas para X;
-- resumo: 1 a 2 frases citando o órgão, o tipo do ato, o número e a data;
-- por_que_importa: 1 frase dirigida ao gestor que capta recursos, ou null quando não há \
-consequência prática;
+- relevancia: antes de escolher, pergunte se o ato cita Minas Gerais. Se não citar, o teto \
+é 2, por maior que seja o valor - a única exceção é a regra nacional que muda piso, teto ou \
+tabela para toda a rede. Num dia típico há 1 a 3 itens com relevância 3, não 20.
+  3 quando o ato cita Minas Gerais, município mineiro, SES-MG, CIB-SUS/MG ou FHEMIG, ou \
+quando é regra nacional que muda piso, teto ou tabela para todos. Exemplos: deliberação \
+CIB-SUS/MG que aloca custeio a Manhuaçu; portaria que reajusta a tabela SIGTAP de toda a \
+rede.
+  2 quando é alocação nominal em outro estado (oportunidade comparável, não do leitor) ou \
+edital nacional. Exemplos: habilitação de hospital em Itabuna-BA no Programa Agora Tem \
+Especialistas, com R$ 8,5 milhões; renovação da qualificação do SAMU 192 de Mauá-SP. \
+Habilitação fora de Minas é 2 mesmo quando o valor passa de R$ 100 milhões.
+  1 quando é contexto, sem consequência direta. Exemplos: nomeação de dirigente federal; \
+instituição de grupo de trabalho.
+  0 apenas para X. Exemplos: extrato de registro de preços; retificação de data de contrato.
+- resumo: 1 a 2 frases, até 220 caracteres, em formato de sentença, citando o órgão, o \
+tipo do ato, o número e a data;
+- por_que_importa: 1 frase dirigida a quem capta recursos em Minas Gerais, dizendo o que \
+fazer com a informação, ou null quando não há consequência prática. Quatro proibições, \
+todas literais:
+  1. não comece por rótulo seguido de dois-pontos - nada de "Muda regra:", "Muda \
+dinheiro:", "Novo recurso:", "Crítico:"; a frase não pode ter dois-pontos nas primeiras 30 \
+letras;
+  2. se valor_brl não for null, não escreva nenhum valor em reais na frase: o valor já \
+aparece ao lado do item na edição, e repeti-lo gasta a única frase que o leitor tem;
+  3. sem caixa alta para dar ênfase; maiúscula só em sigla (CNES, SIGTAP, CIB-SUS/MG) e \
+em nome próprio;
+  4. sem abreviar milhão nem bilhão: escreva "R$ 104,8 milhões", nunca "R$ 104.8M".
+  Exemplo bom: "vale checar se o hospital já tem o serviço cadastrado no CNES antes do \
+prazo de 30 dias". Exemplo ruim: "Muda dinheiro: R$ 104.8M para TODOS os hospitais";
 - valor_brl: o valor em reais apenas se o número constar do texto fornecido, senão null;
 - entes: os municípios e hospitais nominais citados no texto;
 - tags: 2 a 4 termos curtos em minúsculas.
@@ -82,12 +123,26 @@ secretarias municipais de saúde. Você recebe os itens das categorias A, B e C 
 classificados e resumidos, e escreve o que abre a edição.
 
 Devolva três campos:
-- titulo: em formato de sentença, com pelo menos um número, sem travessão e com no \
-máximo 90 caracteres. Exemplo: "3 habilitações e 1 teto MAC ampliado em MG";
-- em_30_segundos: de 3 a 5 frases curtas, cada uma com um fato, o órgão e o número \
-correspondente;
-- intro: 2 a 3 frases apresentando o dia para o gestor, dizendo o que ele precisa olhar \
-primeiro.
+- titulo: uma frase de no máximo 90 caracteres - conte antes de responder -, em formato de \
+sentença, começando por um número ou trazendo um número, sem travessão, sem dois-pontos, \
+sem barra vertical e sem Title Case. Formato de sentença significa que só a primeira \
+palavra e os nomes próprios levam maiúscula. Não abra o título com o nome completo de uma \
+instituição: comece pelo número e pelo que mudou;
+- em_30_segundos: de 3 a 5 frases curtas, de até 140 caracteres cada - conte antes de \
+responder -, e cada uma com o órgão e o número correspondente;
+- intro: exatamente 2 frases apresentando o dia para o gestor, dizendo o que ele precisa \
+olhar primeiro, somando no máximo 1100 caracteres - conte antes de responder.
+
+Não converta unidade de valor: um item de R$ 104.838.525,53 são R$ 104,8 milhões, nunca \
+R$ 104 bilhões. Some valores só quando os itens somados estiverem todos no que você recebeu.
+
+Exemplo bom de título: "3 habilitações e 1 teto MAC ampliado somam R$ 12 milhões em MG".
+Exemplo ruim de título: "Fundação Faculdade Regional de Medicina Recebe Novo Limite \
+Financeiro" - passa de nome próprio, está em Title Case e não traz número.
+
+Exemplo bom de frase do em_30_segundos: "SAES/MS habilita 10 leitos de UTI em Manhuaçu, \
+com R$ 1,2 milhão de custeio anual".
+Exemplo ruim: uma frase de 200 caracteres que repete o resumo inteiro do ato.
 
 Use apenas os fatos, números e nomes que estiverem nos itens recebidos.
 

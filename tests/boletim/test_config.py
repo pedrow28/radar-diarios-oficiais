@@ -22,6 +22,7 @@ boletim:
   fontes: [iofmg]
   dir_saida: ./outra-saida
   dir_site: ./outro-site
+  marcas_mg: ["Minas Gerais", "Uberlândia"]
   cta:
     whatsapp: "5500000000000"
     texto_botao: "Fale conosco"
@@ -49,6 +50,8 @@ def test_defaults_quando_bloco_boletim_nao_existe(tmp_path: Path):
     assert cfg.dir_saida == Path("./boletim/saida")
     assert cfg.dir_site == Path("./site")
     assert cfg.dir_dados == Path("./data")
+    assert cfg.marcas_mg[0] == "Minas Gerais"
+    assert "mineir" in cfg.marcas_mg
     assert cfg.cta == ConfigCTA()
 
 
@@ -70,6 +73,7 @@ def test_yaml_sobrescreve_os_defaults(tmp_path: Path):
     assert cfg.cta.whatsapp == "5500000000000"
     assert cfg.cta.texto_botao == "Fale conosco"
     assert cfg.cta.mensagem == "Oi, vi o boletim de {data}"
+    assert cfg.marcas_mg == ["Minas Gerais", "Uberlândia"]
 
 
 def test_bloco_parcial_mantem_defaults_dos_campos_omitidos(tmp_path: Path):
