@@ -116,9 +116,20 @@ _FRACAO_TITULO_CASE = 0.6
 # Limites de comprimento da abertura. Estavam só no prompt, e em v2 da semana
 # saíram títulos de 128 e 98 caracteres: o modelo obedece ao número quando o
 # número volta medido na correção.
+#
+# O teto da intro nasceu em 400 e nenhuma edição real chegou perto: o modelo
+# entregou de 716 a 1102 caracteres nas sete edições da semana, e o limite
+# reprovava 7 de 7. Limite que nunca é cumprido não é limite, é uma segunda
+# chamada garantida por dia. 1100 é o maior valor real arredondado: a intro de
+# duas frases cabe com folga, e a que dobrar de tamanho ainda cai.
 MAX_TITULO = 90
 MAX_BULLET = 140
-MAX_INTRO = 400
+MAX_INTRO = 1100
+
+# Os três campos da abertura. Cada um é aprovado ou reprovado sozinho: uma
+# intro comprida não pode custar o título que passou.
+CAMPOS_ABERTURA = ("titulo", "em_30_segundos", "intro")
+_ROTULO_CAMPO = {"titulo": "título", "em_30_segundos": "bullet", "intro": "intro"}
 
 SEM_RELEVANTES = "Sem publicações relevantes nesta data"
 INTRO_SEM_RELEVANTES = (
@@ -274,12 +285,19 @@ def _abertura(
 
     A segunda chamada leva as correções junto: sem dizer o que estava errado,
     repetir o mesmo prompt tende a produzir o mesmo travessão.
+
+    A aprovação é por campo. Antes ela era do bloco inteiro, e uma intro
+    comprida levava junto um título bom: em 31/08 e 01/09 da semana real o
+    título passava em tudo e caiu no fallback por causa da intro. O que valida
+    fica guardado, e depois da segunda tentativa só o campo que continuou
+    reprovado é trocado pelo determinístico.
     """
     logger = configurar_log()
     contagens = {cat: len(secoes[cat]) for cat in ROTULOS}
     base = montar_editorial(relevantes, contagens, data)
     prompt = base
-    erros: list[str] = []
+    aprovados: dict[str, Any] = {}
+    reprovados: dict[str, list[str]] = {}
 
     for _ in range(2):
         try:
@@ -287,34 +305,68 @@ def _abertura(
                 SISTEMA_EDITORIAL, prompt, EDITORIAL_SCHEMA, rotulo="editorial"
             )
         except LLMIndisponivel as exc:
-            logger.warning("editorial: LLM indisponível (%s), título determinístico", exc)
+            logger.warning("editorial: LLM indisponível (%s), abertura determinística", exc)
             break
-        erros = validar(resposta, EDITORIAL_SCHEMA)
-        if not erros:
-            # Travessão é erro de digitação, não de julgamento: normalizar antes
-            # de validar poupa uma chamada e não deixa o dia sem título quando o
-            # modelo insiste no em-dash.
-            resposta = _normalizado(resposta)
-            erros = _erros_de_voz(resposta)
-        if not erros:
+        erros_schema = validar(resposta, EDITORIAL_SCHEMA)
+        if erros_schema:
+            # Fora do schema não há campo para aproveitar: pode faltar o campo.
+            reprovados = {campo: list(erros_schema) for campo in CAMPOS_ABERTURA}
+            prompt = f"{base}\n\nCorreções obrigatórias: {'; '.join(erros_schema)}"
+            continue
+        # Travessão é erro de digitação, não de julgamento: normalizar antes de
+        # validar poupa uma chamada e não deixa o dia sem título quando o
+        # modelo insiste no em-dash.
+        resposta = _normalizado(resposta)
+        reprovados = _erros_de_voz(resposta)
+        if not reprovados:
             return (
                 resposta["titulo"],
                 tuple(resposta["em_30_segundos"]),
                 resposta["intro"],
             )
-        prompt = f"{base}\n\nCorreções obrigatórias: {'; '.join(erros)}"
+        for campo in CAMPOS_ABERTURA:
+            if campo not in reprovados:
+                aprovados.setdefault(campo, resposta[campo])
+        prompt = f"{base}\n\nCorreções obrigatórias: {'; '.join(_mensagens(reprovados))}"
     else:
         # O `for` terminou sem `break`: as duas tentativas caíram na
         # validação (schema ou voz), não no LLM fora do ar.
-        logger.warning("editorial: voz reprovada 2x: %s", "; ".join(erros))
+        logger.warning(
+            "editorial: %s reprovado 2x (%s); fallback determinístico só nesse campo",
+            ", ".join(c for c in CAMPOS_ABERTURA if c not in aprovados),
+            "; ".join(_mensagens(reprovados)),
+        )
 
+    determinista = _abertura_determinista(relevantes, data)
+    escolhidos = {campo: aprovados.get(campo, determinista[campo]) for campo in CAMPOS_ABERTURA}
     return (
-        titulo_fallback(data, len(relevantes)),
-        tuple(i.resumo for i in relevantes[:_MAX_BULLETS_FALLBACK]),
-        f"O radar encontrou {len(relevantes)} publicações relevantes nesta data. "
-        "O texto de abertura não pôde ser gerado, e os destaques abaixo saem "
-        "direto da classificação.",
+        escolhidos["titulo"],
+        tuple(escolhidos["em_30_segundos"]),
+        escolhidos["intro"],
     )
+
+
+def _abertura_determinista(relevantes: list[Item], data: date) -> dict[str, Any]:
+    """A abertura sem modelo, campo a campo, para preencher só o que faltar."""
+    return {
+        "titulo": titulo_fallback(data, len(relevantes)),
+        "em_30_segundos": [i.resumo for i in relevantes[:_MAX_BULLETS_FALLBACK]],
+        "intro": (
+            f"O radar encontrou {len(relevantes)} publicações relevantes nesta data. "
+            "O texto de abertura não pôde ser gerado, e os destaques abaixo saem "
+            "direto da classificação."
+        ),
+    }
+
+
+def _mensagens(reprovados: dict[str, list[str]]) -> list[str]:
+    """Achata os erros por campo na lista que vai na correção, sem repetição."""
+    mensagens: list[str] = []
+    for campo in CAMPOS_ABERTURA:
+        for erro in reprovados.get(campo, ()):
+            if erro not in mensagens:
+                mensagens.append(erro)
+    return mensagens
 
 
 def _normalizado(editorial: dict[str, Any]) -> dict[str, Any]:
@@ -326,29 +378,37 @@ def _normalizado(editorial: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def _erros_de_voz(editorial: dict[str, Any]) -> list[str]:
-    """Voz e comprimento dos três campos da abertura.
+def _erros_de_voz(editorial: dict[str, Any]) -> dict[str, list[str]]:
+    """Voz e comprimento da abertura, com os erros separados por campo.
 
     O comprimento vivia só no prompt, e em v2 da semana saíram títulos de 128 e
     98 caracteres e bullets acima de 140. É a regra mais fácil de conferir sem o
     modelo, e o caminho da correção já existe: o número medido volta na segunda
-    chamada, e se ela também falhar entra o fallback determinístico de sempre.
-    """
-    partes = [editorial["titulo"], editorial["intro"], *editorial["em_30_segundos"]]
-    erros: list[str] = []
-    for parte in partes:
-        for erro in validar_voz(parte):
-            if erro not in erros:
-                erros.append(erro)
+    chamada, e se ela também falhar entra o fallback determinístico - agora só
+    no campo que errou, e não na abertura inteira.
 
-    limites = [
-        ("título", editorial["titulo"], MAX_TITULO),
-        ("intro", editorial["intro"], MAX_INTRO),
-        *(("bullet", b, MAX_BULLET) for b in editorial["em_30_segundos"]),
-    ]
-    for nome, texto, maximo in limites:
-        if len(texto) > maximo:
-            erro = f"{nome} com {len(texto)} caracteres (máx. {maximo})"
-            if erro not in erros:
-                erros.append(erro)
-    return erros
+    Devolve apenas os campos reprovados; dicionário vazio é abertura aprovada.
+    """
+    textos = {
+        "titulo": [editorial["titulo"]],
+        "em_30_segundos": list(editorial["em_30_segundos"]),
+        "intro": [editorial["intro"]],
+    }
+    maximos = {"titulo": MAX_TITULO, "em_30_segundos": MAX_BULLET, "intro": MAX_INTRO}
+
+    reprovados: dict[str, list[str]] = {}
+    for campo in CAMPOS_ABERTURA:
+        rotulo = _ROTULO_CAMPO[campo]
+        erros: list[str] = []
+        for texto in textos[campo]:
+            for erro in validar_voz(texto):
+                mensagem = f"{rotulo}: {erro}"
+                if mensagem not in erros:
+                    erros.append(mensagem)
+            if len(texto) > maximos[campo]:
+                erro = f"{rotulo} com {len(texto)} caracteres (máx. {maximos[campo]})"
+                if erro not in erros:
+                    erros.append(erro)
+        if erros:
+            reprovados[campo] = erros
+    return reprovados
