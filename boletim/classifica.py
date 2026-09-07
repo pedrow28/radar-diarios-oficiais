@@ -341,12 +341,22 @@ _PONTE = (
 # A cifra só sai quando vem isolada entre parênteses ou introduzida por uma
 # preposição (ou por uma das locuções-ponte). Cifra que é sujeito ou objeto da
 # frase fica onde está: tirá-la deixaria "Define como novo limite anual".
+#
+# O terceiro padrão é o da forma mais comum da rodada v3, "acesso a R$ 3,04
+# milhões anuais em CVCF": ali a preposição fica e quem sai é a cifra com o "em"
+# que a ligava ao que ela conta, de modo que a preposição passa a reger o
+# complemento ("acesso a CVCF").
 _REMOCOES = tuple(
-    re.compile(padrao, re.IGNORECASE)
-    for padrao in (
-        rf"\s*\([^()]{{0,40}}{_MOEDA}[^()]{{0,25}}\)",
-        rf"\s+(?:{_PONTE})\s+(?:{_APROXIMACAO})?{_MOEDA}{_UNIDADE}",
-        rf"\s+(?:de|em|com|por)\s+(?:{_APROXIMACAO})?{_MOEDA}{_UNIDADE}",
+    (re.compile(padrao, re.IGNORECASE), troca)
+    for padrao, troca in (
+        (rf"\s*\([^()]{{0,40}}{_MOEDA}[^()]{{0,25}}\)", ""),
+        (rf"\s+(?:{_PONTE})\s+(?:{_APROXIMACAO})?{_MOEDA}{_UNIDADE}", ""),
+        (
+            rf"\b(a|ao|de|em|para|com|por)\s+(?:{_APROXIMACAO})?"
+            rf"{_MOEDA}{_UNIDADE}\s+em\s+",
+            r"\1 ",
+        ),
+        (rf"\s+(?:de|em|com|por)\s+(?:{_APROXIMACAO})?{_MOEDA}{_UNIDADE}", ""),
     )
 )
 _PASSES_REMOCAO = 3
@@ -388,8 +398,8 @@ def _sem_cifra_repetida(
     novo = por_que_importa
     for _ in range(_PASSES_REMOCAO):
         antes = novo
-        for remocao in _REMOCOES:
-            novo = remocao.sub("", novo)
+        for remocao, troca in _REMOCOES:
+            novo = remocao.sub(troca, novo)
         if novo == antes:
             break
 

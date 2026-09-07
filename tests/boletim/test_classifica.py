@@ -370,6 +370,21 @@ def test_cifra_apos_gerundio_de_soma_sai_com_o_gerundio():
     )
 
 
+def test_cifra_entre_preposicao_e_complemento_deixa_a_preposicao_reger():
+    """A forma mais comum de v3: "acesso a R$ 3,04 milhões anuais em CVCF".
+
+    Aqui a preposição fica e sai a cifra com o "em" que a ligava ao que ela
+    conta, de modo que "a" passa a reger o complemento.
+    """
+    antes = (
+        "Abre acesso a R$ 3,04 milhões anuais em CVCF para hospital "
+        "especializado de Maceió"
+    )
+    assert _por_que_importa(antes) == (
+        "Abre acesso a CVCF para hospital especializado de Maceió"
+    )
+
+
 def test_cifra_que_e_o_objeto_da_frase_fica_onde_esta():
     """Tirar a cifra daqui deixaria "Define como novo limite anual".
 
