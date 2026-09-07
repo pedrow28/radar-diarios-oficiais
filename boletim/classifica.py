@@ -9,7 +9,8 @@ ela aparece como "outro ato", marcada, em vez de desaparecer em silêncio.
 from __future__ import annotations
 
 import math
-from typing import Any, Sequence
+import time
+from typing import Any, Callable, Sequence
 
 from boletim.config import ConfigBoletim
 from boletim.edicao import Item
@@ -20,15 +21,28 @@ from radar.core.log import configurar_log
 from radar.core.modelos import Publicacao
 
 _LIMITE_RESUMO_FALLBACK = 200
+_RELEVANCIA_MAXIMA = 3
+
+# Esperas, em segundos, antes de cada retentativa de um lote que caiu no meio do
+# dia. Duas bastam: o que derruba a chamada no meio de uma rodada é sessão OAuth
+# renovando ou limite momentâneo, e um minuto cobre os dois. Mais que isso
+# atrasaria a edição por um modelo que de fato saiu do ar.
+ESPERAS_RETENTATIVA = (20, 60)
 
 
 def classificar(
-    mantidas: Sequence[Publicacao], llm: LLM, cfg: ConfigBoletim
+    mantidas: Sequence[Publicacao],
+    llm: LLM,
+    cfg: ConfigBoletim,
+    *,
+    esperar: Callable[[float], None] = time.sleep,
 ) -> tuple[list[Item], list[str]]:
     """Devolve um `Item` por publicação mantida, na mesma ordem, mais avisos.
 
     Sempre um item por publicação: quem lê o boletim precisa saber que o ato
     existiu, mesmo quando o modelo não conseguiu opinar sobre ele.
+
+    `esperar` é injetável para que o teste da retentativa não durma 80 s.
     """
     logger = configurar_log()
     respostas: dict[str, dict[str, Any]] = {}
@@ -38,7 +52,7 @@ def classificar(
     for indice in range(0, len(mantidas), cfg.lote):
         lote = list(mantidas[indice : indice + cfg.lote])
         rotulo = f"lote-{indice // cfg.lote}"
-        _resolver(lote, llm, cfg, rotulo, respostas, avisos, estado)
+        _resolver(lote, llm, cfg, rotulo, respostas, avisos, estado, esperar)
 
     itens: list[Item] = []
     sem_classificacao = 0
@@ -101,6 +115,7 @@ def _resolver(
     respostas: dict[str, dict[str, Any]],
     avisos: list[str],
     estado: _Estado,
+    esperar: Callable[[float], None],
 ) -> None:
     """Preenche `respostas` com o que o LLM disser sobre `pubs`.
 
@@ -128,21 +143,24 @@ def _resolver(
             return
         estado.orcamento_chamadas -= 1
         try:
-            bruto = llm.completar_json(
-                SISTEMA_CLASSIFICACAO,
-                montar_lote(pubs, cfg),
-                LOTE_SCHEMA,
-                rotulo=rotulo,
-            )
-        except LLMIndisponivel:
+            bruto = _completar(llm, pubs, cfg, rotulo, estado, esperar, logger)
+        except LLMIndisponivel as exc:
             if not estado.algum_sucesso:
                 # Nada classificado ainda: não é uma resposta ruim, é o modelo
                 # fora do ar. Propagar deixa o CLI sair 2 em vez de publicar
                 # uma edição inteira de fallback D.
                 raise
             estado.desistiu = True
-            avisos.append(f"{rotulo}: LLM indisponível, o restante do dia fica sem classificação")
-            logger.warning("%s: LLM indisponível depois de %d respostas", rotulo, len(respostas))
+            avisos.append(
+                f"{rotulo}: LLM indisponível ({exc}), "
+                "o restante do dia fica sem classificação"
+            )
+            logger.warning(
+                "%s: LLM indisponível depois de %d respostas: %s",
+                rotulo,
+                len(respostas),
+                exc,
+            )
             return
 
         erros = validar(bruto, LOTE_SCHEMA)
@@ -189,17 +207,57 @@ def _resolver(
         # dele antes de virar fallback D. A recursão termina porque, dentro
         # dela, `pubs` já é esse mesmo item único (`len(pubs) == 1`).
         if len(pubs) > 1:
-            _resolver(faltantes, llm, cfg, rotulo, respostas, avisos, estado)
+            _resolver(faltantes, llm, cfg, rotulo, respostas, avisos, estado, esperar)
         return
     meio = len(faltantes) // 2
-    _resolver(faltantes[:meio], llm, cfg, rotulo, respostas, avisos, estado)
-    _resolver(faltantes[meio:], llm, cfg, rotulo, respostas, avisos, estado)
+    _resolver(faltantes[:meio], llm, cfg, rotulo, respostas, avisos, estado, esperar)
+    _resolver(faltantes[meio:], llm, cfg, rotulo, respostas, avisos, estado, esperar)
+
+
+def _completar(
+    llm: LLM,
+    pubs: list[Publicacao],
+    cfg: ConfigBoletim,
+    rotulo: str,
+    estado: _Estado,
+    esperar: Callable[[float], None],
+    logger: Any,
+) -> dict[str, Any]:
+    """Uma chamada de classificação, com retentativa quando o modelo cai.
+
+    A queda no meio de uma rodada é quase sempre transitória: em 01/09 e 03/09
+    da primeira semana real foi a sessão OAuth expirando, e 20 e 26 itens foram
+    para o fallback D sem que ninguém tentasse de novo - entre eles as
+    deliberações CIB-SUS/MG de maior valor da semana. A reexecução de 03/09
+    passou inteira minutos depois.
+
+    Antes do primeiro sucesso não há retentativa: aí a queda é o modelo fora do
+    ar de verdade, e o lugar de descobrir isso é o exit code, não 80 s de espera.
+    """
+    prompt = montar_lote(pubs, cfg)
+    esperas = ESPERAS_RETENTATIVA if estado.algum_sucesso else ()
+    for indice in range(len(esperas) + 1):
+        try:
+            return llm.completar_json(
+                SISTEMA_CLASSIFICACAO, prompt, LOTE_SCHEMA, rotulo=rotulo
+            )
+        except LLMIndisponivel as exc:
+            if indice >= len(esperas) or estado.orcamento_chamadas <= 0:
+                raise
+            espera = esperas[indice]
+            estado.orcamento_chamadas -= 1
+            logger.warning(
+                "%s: LLM indisponível (%s), nova tentativa em %d s", rotulo, exc, espera
+            )
+            esperar(espera)
+    raise AssertionError("laço de retentativa sempre retorna ou levanta")
 
 
 def item_de_resposta(pub: Publicacao, resposta: dict[str, Any]) -> Item:
     """Junta o que o `radar` coletou com o juízo que o LLM emitiu.
 
-    Os fatos vêm sempre da publicação; do modelo só vem a leitura dela.
+    Os fatos vêm sempre da publicação; do modelo só vem a leitura dela - com uma
+    exceção determinística: o piso de relevância do IOF-MG, abaixo.
     """
     return Item(
         id=pub.id,
@@ -215,13 +273,28 @@ def item_de_resposta(pub: Publicacao, resposta: dict[str, Any]) -> Item:
         titulo=pub.titulo,
         url=pub.url,
         categoria=resposta["categoria"],
-        relevancia=resposta["relevancia"],
+        relevancia=_relevancia(pub, resposta),
         resumo=resposta["resumo"],
         por_que_importa=resposta["por_que_importa"],
         valor_brl=resposta["valor_brl"],
         entes=tuple(resposta["entes"]),
         tags=tuple(resposta["tags"]),
     )
+
+
+def _relevancia(pub: Publicacao, resposta: dict[str, Any]) -> int:
+    """Piso de relevância para o que sai do Diário Oficial de Minas Gerais.
+
+    Todo ato do IOF-MG é mineiro por definição, e Minas é o mercado do boletim.
+    Deixar isso a cargo do prompt não funcionou: na semana de 31/08 o modelo deu
+    3 a habilitações na Bahia e 2 a deliberações CIB-SUS/MG que alocam recurso a
+    município mineiro. Vale só para A e B - um ato de rotina do estado não vira
+    prioridade só por ser de Minas.
+    """
+    relevancia = resposta["relevancia"]
+    if pub.fonte == "iofmg" and resposta["categoria"] in ("A", "B"):
+        return max(relevancia, _RELEVANCIA_MAXIMA)
+    return relevancia
 
 
 def _item_fallback(pub: Publicacao) -> Item:

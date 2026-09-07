@@ -119,6 +119,43 @@ def test_result_sem_json_vira_llm_indisponivel(cli, monkeypatch):
         cli.completar_json("s", "u", SCHEMA, rotulo="r")
 
 
+def _capturar(cli, caplog, stdout: str) -> str:
+    logger = configurar_log()
+    logger.addHandler(caplog.handler)
+    try:
+        with caplog.at_level(logging.WARNING, logger="radar"):
+            with pytest.raises(LLMIndisponivel):
+                cli.completar_json("sistema", "segredo do lote", SCHEMA, rotulo="lote-3")
+    finally:
+        logger.removeHandler(caplog.handler)
+    return caplog.text
+
+
+def test_stdout_ilegivel_registra_o_comeco_da_saida_no_log(cli, monkeypatch, caplog):
+    """Sem ver a saída, "saída não é JSON" não diz o que aconteceu.
+
+    A mensagem de erro sozinha não distingue um banner de atualização do CLI de
+    uma recusa do modelo, e sem isso a próxima queda no meio do dia volta a ser
+    investigada por adivinhação.
+    """
+    _responder(monkeypatch, "Claude Code v9 disponível. " + "x" * 500)
+    registrado = _capturar(cli, caplog, "")
+
+    assert "lote-3" in registrado
+    assert "Claude Code v9 disponível." in registrado
+    # 300 caracteres do stdout, e nada do prompt.
+    assert "x" * 300 not in registrado
+    assert "segredo do lote" not in registrado
+
+
+def test_result_sem_json_registra_o_comeco_da_resposta_no_log(cli, monkeypatch, caplog):
+    _responder(monkeypatch, json.dumps({"result": "desculpe, não consigo classificar"}))
+    registrado = _capturar(cli, caplog, "")
+
+    assert "desculpe, não consigo classificar" in registrado
+    assert "segredo do lote" not in registrado
+
+
 def test_timeout_vira_llm_indisponivel(cli, monkeypatch):
     def estoura(argv, **kwargs):
         raise subprocess.TimeoutExpired(argv, 30)

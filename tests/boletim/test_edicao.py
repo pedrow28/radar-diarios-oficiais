@@ -180,6 +180,40 @@ def test_validar_voz_acumula_erros():
     assert len(validar_voz("Dica: o que mudou — hoje?")) == 3
 
 
+# ── Title Case: nome próprio dentro da frase não é Title Case da frase ──
+def test_validar_voz_aceita_nome_proprio_longo_dentro_da_sentenca():
+    """O nome do programa tem 4 iniciais maiúsculas seguidas e não é Title Case.
+
+    Era este o falso positivo que jogou 3 dos 5 dias da primeira semana real no
+    título determinístico: a regra antiga contava palavras capitalizadas
+    seguidas, e todo nome próprio de programa ou de hospital estourava o limite.
+    """
+    assert validar_voz("3 habilitações do Programa Agora Tem Especialistas somam R$ 180 milhões") == []
+
+
+def test_validar_voz_reprova_sentenca_inteira_em_title_case():
+    assert validar_voz("Habilitações Do Programa Somam Cento E Oitenta Milhões") != []
+
+
+def test_validar_voz_aceita_titulo_real_reprovado_do_programa():
+    """Um dos dois títulos reais que caíram no fallback na semana de 31/08."""
+    assert validar_voz("3 hospitais entram no Programa Agora Tem Especialistas com R$ 180 milhões") == []
+
+
+def test_validar_voz_aceita_titulo_real_reprovado_da_fundacao():
+    """O outro: um nome de instituição com 7 iniciais maiúsculas."""
+    assert (
+        validar_voz(
+            "1 hospital de São José do Rio Preto recebe R$ 104,8 milhões em terapia renal"
+        )
+        == []
+    )
+
+
+def test_validar_voz_ignora_siglas_e_numeros_na_conta_de_title_case():
+    assert validar_voz("SES-MG e CIB-SUS/MG aprovam 12 deliberações") == []
+
+
 # ── titulo_fallback ─────────────────────────────────────────────────────
 def test_titulo_fallback_traz_data_e_contagem():
     assert titulo_fallback(date(2026, 9, 3), 7) == (
@@ -222,18 +256,39 @@ def test_montar_edicao_usa_o_editorial_do_llm(dir_fixtures):
 
 
 def test_montar_edicao_repete_uma_vez_quando_a_voz_reprova():
-    ruim = dict(_editorial_bom(), titulo="Radar do dia — 3 habilitações")
+    ruim = dict(_editorial_bom(), titulo="O que mudou hoje no SUS?")
     llm = LLMFalso({"editorial": [ruim, _editorial_bom()]})
     edicao = _montar([_item(categoria="A")], llm)
 
     assert edicao.titulo == "3 habilitações e 1 teto MAC ampliado em MG"
     assert len(llm.chamadas) == 2
     assert "Correções obrigatórias:" in llm.chamadas[1][2]
-    assert "travessão" in llm.chamadas[1][2]
+    assert "pergunta retórica" in llm.chamadas[1][2]
+
+
+def test_montar_edicao_normaliza_o_travessao_em_vez_de_reprovar():
+    """Travessão é erro de digitação do modelo, não de julgamento editorial.
+
+    Reprovar por causa dele custava uma segunda chamada e, quando o modelo
+    repetia, o dia inteiro perdia o título. Trocar por hífen antes de validar
+    resolve na origem e mantém a regra de travessão para os outros usos.
+    """
+    ruim = {
+        "titulo": "Radar do dia — 3 habilitações",
+        "em_30_segundos": ["fato 1 — com traço", "fato 2", "fato 3"],
+        "intro": "O dia trouxe 2 atos – com dinheiro novo. Vale olhar os prazos.",
+    }
+    llm = LLMFalso({"editorial": ruim})
+    edicao = _montar([_item(categoria="A")], llm)
+
+    assert edicao.titulo == "Radar do dia - 3 habilitações"
+    assert edicao.em_30_segundos[0] == "fato 1 - com traço"
+    assert "–" not in edicao.intro and "-" in edicao.intro
+    assert len(llm.chamadas) == 1
 
 
 def test_montar_edicao_cai_no_fallback_apos_duas_reprovacoes():
-    ruim = dict(_editorial_bom(), titulo="Radar do dia — 3 habilitações")
+    ruim = dict(_editorial_bom(), titulo="O que mudou hoje no SUS?")
     llm = LLMFalso({"editorial": [ruim, ruim]})
     itens = [
         _item(id="1", categoria="A", resumo="resumo A"),
@@ -293,7 +348,7 @@ def test_montar_edicao_loga_aviso_quando_llm_esta_fora_do_ar(caplog):
 
 
 def test_montar_edicao_loga_aviso_quando_voz_reprova_duas_vezes(caplog):
-    ruim = dict(_editorial_bom(), titulo="Radar do dia — 3 habilitações")
+    ruim = dict(_editorial_bom(), titulo="O que mudou hoje no SUS?")
     llm = LLMFalso({"editorial": [ruim, ruim]})
     logger = configurar_log()
     logger.addHandler(caplog.handler)
@@ -306,7 +361,7 @@ def test_montar_edicao_loga_aviso_quando_voz_reprova_duas_vezes(caplog):
         logger.removeHandler(caplog.handler)
 
     assert "voz reprovada 2x" in caplog.text
-    assert "travessão" in caplog.text
+    assert "pergunta retórica" in caplog.text
 
 
 def test_editorial_deterministico_lista_no_maximo_tres_titulos_de_d():

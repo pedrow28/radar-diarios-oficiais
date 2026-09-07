@@ -84,10 +84,78 @@ def test_sistemas_nao_usam_travessao_nem_emoji():
         assert sistema.count("—") == sistema.count("(— ou –)")
 
 
+def test_sistema_de_classificacao_tira_habilitacao_e_certificacao_de_b():
+    """B ficou poluída na semana real: 18 dos 18 B de 31/08 não eram regra."""
+    assert "Mudança de regra, e só isso" in SISTEMA_CLASSIFICACAO
+    assert (
+        "Habilitação, credenciamento, desabilitação, qualificação e renovação com "
+        "recurso são A, nunca B" in SISTEMA_CLASSIFICACAO
+    )
+    assert "certificação sem dinheiro associado" in SISTEMA_CLASSIFICACAO
+
+
+def test_sistema_de_classificacao_lista_o_que_vai_para_x():
+    for ato in (
+        "extrato de registro de preços",
+        "pregão",
+        "aviso de licitação",
+        "termo aditivo",
+        "apostilamento",
+        "retificação de extrato",
+        "edital de notificação",
+        "despacho e ata",
+    ):
+        assert ato in SISTEMA_CLASSIFICACAO
+    assert "Use X, e nunca A, B ou C" in SISTEMA_CLASSIFICACAO
+
+
+def test_sistema_de_classificacao_ancora_a_relevancia_3_em_minas():
+    assert (
+        "3 quando o ato cita Minas Gerais, município mineiro, SES-MG, CIB-SUS/MG ou "
+        "FHEMIG" in SISTEMA_CLASSIFICACAO
+    )
+    assert "2 quando é alocação nominal em outro estado" in SISTEMA_CLASSIFICACAO
+    assert "0 apenas para X" in SISTEMA_CLASSIFICACAO
+
+
+def test_sistema_de_classificacao_da_dois_exemplos_por_nivel_de_relevancia():
+    trecho = SISTEMA_CLASSIFICACAO.split("- relevancia:")[1].split("- resumo:")[0]
+    assert trecho.count("Exemplos:") == 4
+    for nivel in trecho.strip().splitlines():
+        if "Exemplos:" in nivel:
+            assert nivel.count(";") >= 1  # dois exemplos separados por ponto e vírgula
+
+
+def test_sistema_de_classificacao_disciplina_o_por_que_importa():
+    for regra in (
+        'Sem prefixo-rótulo do tipo "Muda regra:"',
+        "sem caixa alta",
+        "sem repetir a cifra",
+        'escreva "R$ 104,8 milhões"',
+    ):
+        assert regra in SISTEMA_CLASSIFICACAO
+
+
+def test_sistema_de_classificacao_limita_o_resumo():
+    assert "até 220 caracteres" in SISTEMA_CLASSIFICACAO
+
+
 def test_sistema_editorial_pede_titulo_com_numero_e_limite():
     assert "90 caracteres" in SISTEMA_EDITORIAL
-    assert "pelo menos um número" in SISTEMA_EDITORIAL
+    assert "começando por um número ou trazendo um número" in SISTEMA_EDITORIAL
+    assert "sem Title Case" in SISTEMA_EDITORIAL
     assert "em_30_segundos" in SISTEMA_EDITORIAL
+
+
+def test_sistema_editorial_limita_os_bullets_e_a_intro():
+    assert "até 140 caracteres" in SISTEMA_EDITORIAL
+    assert "intro: 2 frases" in SISTEMA_EDITORIAL
+
+
+def test_sistema_editorial_traz_exemplo_bom_e_ruim():
+    assert "Exemplo bom de título:" in SISTEMA_EDITORIAL
+    assert "Exemplo ruim de título:" in SISTEMA_EDITORIAL
+    assert "Exemplo bom de frase do em_30_segundos:" in SISTEMA_EDITORIAL
 
 
 # ── montar_lote ─────────────────────────────────────────────────────────

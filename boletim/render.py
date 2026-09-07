@@ -21,7 +21,7 @@ from typing import Any, Literal, Sequence
 from jinja2 import Environment, PackageLoader, StrictUndefined
 
 from boletim.config import ConfigBoletim
-from boletim.edicao import ROTULOS, Edicao, FonteResumo, Item
+from boletim.edicao import ROTULOS, Edicao, FonteResumo, Item, sem_travessao
 from radar.core.datas import hoje
 
 Modo = Literal["email", "web"]
@@ -63,7 +63,6 @@ ESQUEMAS_SEGUROS = ("https://", "http://")
 # O que quebraria o destino de um link markdown, que fecha no primeiro `)`.
 _ESCAPE_MARKDOWN = {" ": "%20", "(": "%28", ")": "%29", "<": "%3C", ">": "%3E"}
 
-_TRAVESSAO = re.compile(r"[—–]")
 _TELEFONE_BR = re.compile(r"^55(\d{2})(\d{5})(\d{4})$")
 _EDICAO_NUMERO = re.compile(r"^\d+$")
 
@@ -82,15 +81,6 @@ def data_br(d: date) -> str:
 def data_extenso(d: date) -> str:
     """`"3 de setembro de 2026"`. Sem locale: a VPS não tem pt_BR instalado."""
     return f"{d.day} de {MESES[d.month - 1]} de {d.year}"
-
-
-def sem_travessao(texto: str) -> str:
-    """Troca travessão e meia-risca por hífen, conforme a diretriz de marca.
-
-    Vale para o texto do LLM e para o do diário: o em-dash entra por copiar e
-    colar de PDF, e um único deles numa peça já quebra a voz.
-    """
-    return _TRAVESSAO.sub("-", texto)
 
 
 def telefone_legivel(numero: str) -> str:

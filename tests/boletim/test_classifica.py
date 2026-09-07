@@ -78,6 +78,40 @@ def test_item_de_resposta_junta_publicacao_e_juizo_do_llm():
     assert item.fallback is False
 
 
+def _pub_iofmg(n: int) -> Publicacao:
+    return dataclasses.replace(_pub(n), fonte="iofmg")
+
+
+def test_item_do_iofmg_em_a_ou_b_sobe_para_relevancia_3():
+    """O IOF-MG é Minas por definição, e Minas é o mercado do boletim.
+
+    Na primeira semana real o modelo deu relevância 2 a deliberações CIB-SUS/MG
+    que alocam recurso a município mineiro enquanto dava 3 a habilitações na
+    Bahia. Isso não é ajuste de prompt: é regra, e regra fica no código.
+    """
+    pub = _pub_iofmg(1)
+    for categoria in ("A", "B"):
+        item = item_de_resposta(pub, _resposta(pub, categoria=categoria, relevancia=2))
+        assert item.relevancia == 3
+
+
+def test_item_do_iofmg_fora_de_a_e_b_mantem_a_relevancia_do_llm():
+    pub = _pub_iofmg(1)
+    for categoria in ("C", "D", "X"):
+        item = item_de_resposta(pub, _resposta(pub, categoria=categoria, relevancia=1))
+        assert item.relevancia == 1
+
+
+def test_prioridade_do_iofmg_nunca_rebaixa_a_relevancia():
+    pub = _pub_iofmg(1)
+    assert item_de_resposta(pub, _resposta(pub, relevancia=3)).relevancia == 3
+
+
+def test_prioridade_do_iofmg_nao_alcanca_o_dou():
+    pub = _pub(1)
+    assert item_de_resposta(pub, _resposta(pub, relevancia=2)).relevancia == 2
+
+
 # ── caminho feliz ───────────────────────────────────────────────────────
 def test_lote_unico_classifica_os_sete_itens_da_fixture(cfg, dir_fixtures):
     carga = carregar(dir_fixtures / "boletim", date(2026, 9, 3), ["inlabs", "iofmg"])
@@ -206,16 +240,97 @@ def test_id_estranho_na_resposta_e_ignorado_com_aviso(cfg):
 
 
 # ── LLM fora do ar ──────────────────────────────────────────────────────
+class _Relogio:
+    """Dublê da espera entre retentativas: registra em vez de dormir."""
+
+    def __init__(self) -> None:
+        self.esperas: list[float] = []
+
+    def __call__(self, segundos: float) -> None:
+        self.esperas.append(segundos)
+
+
+class _CaiAntesDeResponder:
+    """LLM que fica indisponível nas N primeiras chamadas de cada rótulo."""
+
+    def __init__(self, base: LLMFalso, quedas: dict[str, int]) -> None:
+        self.base = base
+        self.quedas = dict(quedas)
+
+    @property
+    def chamadas(self) -> list[tuple[str, str, str]]:
+        return self.base.chamadas
+
+    def completar_json(self, sistema, usuario, schema, *, rotulo) -> dict:
+        if self.quedas.get(rotulo, 0) > 0:
+            self.quedas[rotulo] -= 1
+            raise LLMIndisponivel(f"llm {rotulo}: sem resposta em 180s")
+        return self.base.completar_json(sistema, usuario, schema, rotulo=rotulo)
+
+
 def test_llm_indisponivel_na_primeira_chamada_de_todas_propaga(cfg):
+    relogio = _Relogio()
     with pytest.raises(LLMIndisponivel):
-        classificar([_pub(1)], LLMFalso({}), cfg)
+        classificar([_pub(1)], LLMFalso({}), cfg, esperar=relogio)
+    assert relogio.esperas == []
+
+
+def test_queda_no_meio_do_dia_e_retentada_com_espera(cfg):
+    """Uma queda depois do primeiro lote quase sempre é transitória.
+
+    Em 01/09 e 03/09 a sessão OAuth expirou no meio da rodada e 20 e 26 itens
+    foram para o fallback D sem que ninguém tentasse de novo. A reexecução de
+    03/09 passou inteira, com lotes de 70 a 90 s: era soluço, não indisponibilidade.
+    """
+    cfg.lote = 1
+    pubs = [_pub(1), _pub(2)]
+    base = LLMFalso(
+        {"lote-0": _lote(_resposta(pubs[0])), "lote-1": _lote(_resposta(pubs[1]))}
+    )
+    llm = _CaiAntesDeResponder(base, quedas={"lote-1": 1})
+    relogio = _Relogio()
+
+    itens, avisos = classificar(pubs, llm, cfg, esperar=relogio)
+
+    assert not any(i.fallback for i in itens)
+    assert relogio.esperas == [20]
+    assert avisos == []
+
+
+def test_retentativa_desiste_depois_de_duas_esperas(cfg):
+    cfg.lote = 1
+    pubs = [_pub(1), _pub(2)]
+    llm = LLMFalso({"lote-0": _lote(_resposta(pubs[0]))})
+    relogio = _Relogio()
+
+    itens, avisos = classificar(pubs, llm, cfg, esperar=relogio)
+
+    assert relogio.esperas == [20, 60]
+    assert itens[0].fallback is False
+    assert itens[1].fallback is True
+    assert "1 itens sem classificação por LLM (fallback D)" in avisos
+
+
+def test_aviso_de_indisponibilidade_traz_a_mensagem_do_erro(cfg):
+    """Sem a mensagem, o aviso do dia não distingue timeout de cota estourada."""
+    cfg.lote = 1
+    pubs = [_pub(1), _pub(2)]
+    llm = LLMFalso({"lote-0": _lote(_resposta(pubs[0]))})
+
+    _, avisos = classificar(pubs, llm, cfg, esperar=_Relogio())
+
+    indisponivel = [a for a in avisos if "LLM indisponível" in a]
+    assert indisponivel == [
+        "lote-1: LLM indisponível (llm falso: sem resposta para o rótulo lote-1), "
+        "o restante do dia fica sem classificação"
+    ]
 
 
 def test_llm_que_cai_depois_do_primeiro_lote_vira_fallback(cfg):
     cfg.lote = 1
     pubs = [_pub(1), _pub(2)]
     llm = LLMFalso({"lote-0": _lote(_resposta(pubs[0]))})
-    itens, avisos = classificar(pubs, llm, cfg)
+    itens, avisos = classificar(pubs, llm, cfg, esperar=_Relogio())
 
     assert len(itens) == 2
     assert itens[0].fallback is False

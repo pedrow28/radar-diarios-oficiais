@@ -103,8 +103,17 @@ _TRAVESSAO = re.compile(r"[—–]")
 _EMOJI = re.compile(r"[🌀-🫿☀-➿]")
 _PROIBIDAS = re.compile(r"\b(dica|truque)\b", re.IGNORECASE)
 _PONTUACAO = ".,;:!?()[]\"'"
-_MAX_TITULO_CASE = 3
 _MAX_BULLETS_FALLBACK = 3
+
+# Conectivos que o português escreve em minúscula numa sentença e em maiúscula
+# num Title Case. Ficam fora da conta de proporção (senão "de" e "do" de um nome
+# de instituição diluiriam qualquer título) e servem de sinal: um só deles em
+# minúscula já basta para saber que a frase não está em Title Case.
+_CONECTIVOS = frozenset(
+    "de da do dos das e em para por com no na a o os as que ao à".split()
+)
+_MIN_CAPITALIZADAS_TITULO_CASE = 4
+_FRACAO_TITULO_CASE = 0.6
 
 SEM_RELEVANTES = "Sem publicações relevantes nesta data"
 INTRO_SEM_RELEVANTES = (
@@ -153,27 +162,54 @@ def validar_voz(texto: str) -> list[str]:
         erros.append(f'palavra proibida: "{achado}"')
     if _tem_title_case(texto):
         erros.append(
-            f"Title Case: mais de {_MAX_TITULO_CASE} palavras seguidas em maiúscula"
+            "Title Case: a frase inteira está capitalizada; escreva em formato de sentença"
         )
     return erros
 
 
+def sem_travessao(texto: str) -> str:
+    """Troca travessão e meia-risca por hífen, conforme a diretriz de marca.
+
+    Vale para o texto do LLM e para o do diário: o em-dash entra por copiar e
+    colar de PDF, e um único deles numa peça já quebra a voz.
+    """
+    return _TRAVESSAO.sub("-", texto)
+
+
 def _tem_title_case(texto: str) -> bool:
-    """Siglas não contam: "teto MAC ampliado" é sentença, não Title Case."""
-    seguidas = 0
+    """Title Case da frase, não nome próprio dentro dela.
+
+    A regra antiga reprovava 4 iniciais maiúsculas seguidas, e com isso
+    "Programa Agora Tem Especialistas" - o nome de um programa federal que
+    aparece em quase todo dia da semana - derrubava o título editorial. Na
+    primeira semana real isso custou 3 dos 5 títulos.
+
+    O que separa "Habilitações Do Programa Somam Cento E Oitenta Milhões" de
+    "3 habilitações do Programa Agora Tem Especialistas somam R$ 180 milhões"
+    são duas coisas, e a regra cobra as duas: a proporção de palavras
+    capitalizadas na frase (siglas, números e conectivos fora da conta) e o
+    conectivo em minúscula, que só existe em sentença - em Title Case até o
+    "Do" vai com maiúscula.
+    """
+    palavras: list[str] = []
+    conectivo_minusculo = False
     for bruto in texto.split():
         palavra = bruto.strip(_PONTUACAO)
-        if not palavra:
-            continue
+        if not palavra or not palavra[0].isalpha():
+            continue  # número, cifra, marcador
         if palavra.isupper():
+            continue  # sigla: "MAC", "SES-MG", "CIB-SUS/MG"
+        if palavra.lower() in _CONECTIVOS:
+            conectivo_minusculo = conectivo_minusculo or palavra[0].islower()
             continue
-        if palavra[0].isalpha() and palavra[0].isupper():
-            seguidas += 1
-            if seguidas > _MAX_TITULO_CASE:
-                return True
-        else:
-            seguidas = 0
-    return False
+        palavras.append(palavra)
+
+    if conectivo_minusculo:
+        return False
+    capitalizadas = sum(1 for p in palavras if p[0].isupper())
+    if capitalizadas < _MIN_CAPITALIZADAS_TITULO_CASE:
+        return False
+    return capitalizadas / len(palavras) >= _FRACAO_TITULO_CASE
 
 
 def titulo_fallback(data: date, n: int) -> str:
@@ -249,10 +285,16 @@ def _abertura(
             resposta = llm.completar_json(
                 SISTEMA_EDITORIAL, prompt, EDITORIAL_SCHEMA, rotulo="editorial"
             )
-        except LLMIndisponivel:
-            logger.warning("editorial: LLM indisponível, título determinístico")
+        except LLMIndisponivel as exc:
+            logger.warning("editorial: LLM indisponível (%s), título determinístico", exc)
             break
-        erros = validar(resposta, EDITORIAL_SCHEMA) or _erros_de_voz(resposta)
+        erros = validar(resposta, EDITORIAL_SCHEMA)
+        if not erros:
+            # Travessão é erro de digitação, não de julgamento: normalizar antes
+            # de validar poupa uma chamada e não deixa o dia sem título quando o
+            # modelo insiste no em-dash.
+            resposta = _normalizado(resposta)
+            erros = _erros_de_voz(resposta)
         if not erros:
             return (
                 resposta["titulo"],
@@ -272,6 +314,15 @@ def _abertura(
         "O texto de abertura não pôde ser gerado, e os destaques abaixo saem "
         "direto da classificação.",
     )
+
+
+def _normalizado(editorial: dict[str, Any]) -> dict[str, Any]:
+    """Aplica a normalização determinística de traço nos três campos."""
+    return {
+        "titulo": sem_travessao(editorial["titulo"]),
+        "em_30_segundos": [sem_travessao(b) for b in editorial["em_30_segundos"]],
+        "intro": sem_travessao(editorial["intro"]),
+    }
 
 
 def _erros_de_voz(editorial: dict[str, Any]) -> list[str]:
