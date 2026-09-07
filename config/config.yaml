@@ -57,6 +57,22 @@ boletim:
   fontes:
     - dou
     - iofmg
+  # Sem nenhuma destas marcas no título, no resumo, nos entes ou no trecho lido
+  # do ato, um item de captação (A) fora do IOF-MG não passa de relevância 2.
+  # Comparação sem acento e em caixa baixa; marca em maiúscula é sigla fechada,
+  # marca em minúscula é radical ("mineir" vale por "mineiro").
+  marcas_mg:
+    - "Minas Gerais"
+    - "/MG"
+    - "(MG)"
+    - "-MG"
+    - " MG "
+    - "SES-MG"
+    - "SES/MG"
+    - "CIB-SUS/MG"
+    - "FHEMIG"
+    - "Belo Horizonte"
+    - "mineir"
   dir_saida: ./boletim/saida
   dir_site: ./site
   cta:

@@ -218,6 +218,109 @@ def test_regra_de_categoria_preserva_as_tags_do_modelo():
     assert item.tags == ("habilitação", "regra:b-para-a")
 
 
+# ── R3: teto de relevância fora de Minas ────────────────────────────────
+def test_a_sem_marca_de_minas_nao_passa_de_relevancia_2():
+    """A contraparte do piso do IOF-MG: fora de Minas, o teto é 2.
+
+    Em v2 da semana o modelo deu 3 a 23 itens de 31/08 e 04/09 sem nenhuma
+    relação com Minas - habilitações na Bahia, saneamento no Nordeste - e eles
+    subiram para o topo da seção de captação, à frente das deliberações
+    CIB-SUS/MG. A iteração no prompt derrubou o número, não o fechou.
+    """
+    pub = _pub(1)
+    item = item_de_resposta(pub, _resposta(pub, categoria="A", relevancia=3))
+    assert item.relevancia == 2
+
+
+@pytest.mark.parametrize(
+    "marca",
+    [
+        "Minas Gerais",
+        "Hospital de Itabira/MG",
+        "Itabira (MG)",
+        "Itabira-MG",
+        "atende em MG conforme pactuação",
+        "SES-MG",
+        "SES/MG",
+        "CIB-SUS/MG",
+        "FHEMIG",
+        "Belo Horizonte",
+        "consórcio mineiro de saúde",
+    ],
+)
+def test_marca_de_minas_no_titulo_preserva_a_relevancia(marca):
+    pub = _pub_titulado(f"PORTARIA GM/MS Nº 3.412 - {marca}")
+    item = item_de_resposta(pub, _resposta(pub, categoria="A", relevancia=3))
+    assert item.relevancia == 3
+
+
+def test_marca_de_minas_vale_no_resumo_nos_entes_e_no_texto_integral():
+    pub = _pub(1)
+    campos = [
+        {"resumo": "Habilitação em Belo Horizonte."},
+        {"entes": ["Município de Belo Horizonte"]},
+    ]
+    for campo in campos:
+        item = item_de_resposta(pub, _resposta(pub, categoria="A", relevancia=3, **campo))
+        assert item.relevancia == 3
+
+    com_texto = dataclasses.replace(pub, texto="Ato publicado no estado de Minas Gerais.")
+    item = item_de_resposta(com_texto, _resposta(pub, categoria="A", relevancia=3))
+    assert item.relevancia == 3
+
+
+def test_texto_integral_alem_do_limite_de_leitura_nao_conta(cfg):
+    """A marca precisa estar no trecho que o modelo leu, não na página 40."""
+    longe = "x" * cfg.max_chars_texto + " Minas Gerais"
+    pub = dataclasses.replace(_pub(1), texto=longe)
+    item = item_de_resposta(pub, _resposta(pub, categoria="A", relevancia=3), cfg)
+    assert item.relevancia == 2
+
+
+def test_sigla_de_minas_dentro_de_palavra_nao_conta():
+    pub = _pub_titulado("PORTARIA que credencia a FHEMIGRANTE e a AMGEN do Paraná")
+    item = item_de_resposta(pub, _resposta(pub, categoria="A", relevancia=3))
+    assert item.relevancia == 2
+
+
+def test_teto_fora_de_minas_nao_alcanca_b_nem_as_outras_categorias():
+    """B é regra nacional: uma portaria que muda a tabela SUS vale para Minas."""
+    pub = _pub(1)
+    for categoria in ("B", "C", "D"):
+        item = item_de_resposta(pub, _resposta(pub, categoria=categoria, relevancia=3))
+        assert item.relevancia == 3
+
+
+def test_teto_fora_de_minas_nao_sobe_relevancia():
+    pub = _pub(1)
+    item = item_de_resposta(pub, _resposta(pub, categoria="A", relevancia=1))
+    assert item.relevancia == 1
+
+
+def test_teto_fora_de_minas_nao_alcanca_o_iofmg():
+    pub = _pub_iofmg(1)
+    item = item_de_resposta(pub, _resposta(pub, categoria="A", relevancia=3))
+    assert item.relevancia == 3
+
+
+def test_b_que_virou_a_tambem_recebe_o_teto():
+    """A habilitação da Bahia que a R2 tirou de B não vira prioridade por isso."""
+    pub = _pub(1)
+    resposta = _resposta(pub, categoria="B", relevancia=3, resumo="Habilita leitos")
+    item = item_de_resposta(pub, resposta)
+    assert item.categoria == "A"
+    assert item.relevancia == 2
+
+
+def test_marcas_de_minas_vem_do_config(cfg):
+    cfg.marcas_mg = ["Uberlândia"]
+    pub = _pub_titulado("PORTARIA que habilita leitos em Uberlândia")
+    assert item_de_resposta(pub, _resposta(pub, relevancia=3), cfg).relevancia == 3
+
+    fora = _pub_titulado("PORTARIA que habilita leitos em Belo Horizonte")
+    assert item_de_resposta(fora, _resposta(fora, relevancia=3), cfg).relevancia == 2
+
+
 # ── caminho feliz ───────────────────────────────────────────────────────
 def test_lote_unico_classifica_os_sete_itens_da_fixture(cfg, dir_fixtures):
     carga = carregar(dir_fixtures / "boletim", date(2026, 9, 3), ["inlabs", "iofmg"])

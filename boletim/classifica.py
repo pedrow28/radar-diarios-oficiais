@@ -17,6 +17,7 @@ from __future__ import annotations
 import math
 import re
 import time
+from functools import lru_cache
 from typing import Any, Callable, Sequence
 
 from boletim.config import ConfigBoletim
@@ -29,6 +30,7 @@ from radar.core.modelos import Publicacao
 
 _LIMITE_RESUMO_FALLBACK = 200
 _RELEVANCIA_MAXIMA = 3
+_RELEVANCIA_FORA_DE_MG = 2
 
 # Esperas, em segundos, antes de cada retentativa de um lote que caiu no meio do
 # dia. Duas bastam: o que derruba a chamada no meio de uma rodada é sessão OAuth
@@ -69,7 +71,7 @@ def classificar(
             sem_classificacao += 1
             itens.append(_item_fallback(pub))
         else:
-            itens.append(item_de_resposta(pub, resposta))
+            itens.append(item_de_resposta(pub, resposta, cfg))
 
     if sem_classificacao:
         aviso = f"{sem_classificacao} itens sem classificação por LLM (fallback D)"
@@ -260,13 +262,18 @@ def _completar(
     raise AssertionError("laço de retentativa sempre retorna ou levanta")
 
 
-def item_de_resposta(pub: Publicacao, resposta: dict[str, Any]) -> Item:
+def item_de_resposta(
+    pub: Publicacao, resposta: dict[str, Any], cfg: ConfigBoletim | None = None
+) -> Item:
     """Junta o que o `radar` coletou com o juízo que o LLM emitiu.
 
     Os fatos vêm sempre da publicação; do modelo vem a leitura dela, já passada
-    pelas regras determinísticas de `_pos_processar`.
+    pelas regras determinísticas de `_pos_processar`. O `cfg` entra por causa
+    das marcas de Minas e do tamanho do texto que o modelo leu; sem ele valem os
+    padrões, que são os do `config/config.yaml`.
     """
-    categoria, relevancia, tags = _pos_processar(pub, resposta)
+    cfg = cfg if cfg is not None else ConfigBoletim()
+    categoria, relevancia, tags = _pos_processar(pub, resposta, cfg)
     return Item(
         id=pub.id,
         fonte=pub.fonte,
@@ -319,8 +326,51 @@ def _normalizar(texto: str) -> str:
     return _ESPACO.sub(" ", texto.casefold().translate(_ACENTOS))
 
 
+@lru_cache(maxsize=4)
+def _padrao_marcas(marcas: tuple[str, ...]) -> re.Pattern[str]:
+    """Uma alternação com as marcas de Minas já normalizadas.
+
+    Em cache porque a lista vem do config e não muda dentro de uma execução,
+    enquanto a função roda uma vez por publicação classificada.
+    """
+    return re.compile("|".join(_padrao_marca(m) for m in marcas if m))
+
+
+def _padrao_marca(marca: str) -> str:
+    alvo = _normalizar(marca)
+    padrao = re.escape(alvo)
+    if alvo[:1].isalnum():
+        padrao = r"\b" + padrao
+    # Só a marca escrita em maiúscula é sigla fechada: "FHEMIG" não pode valer
+    # por "FHEMIGRANTE", mas "mineir" existe justamente para pegar "mineiro".
+    if marca[-1:].isupper() or marca[-1:].isdigit():
+        padrao += r"\b"
+    return padrao
+
+
+def _tem_marca_mg(
+    pub: Publicacao, resposta: dict[str, Any], cfg: ConfigBoletim
+) -> bool:
+    """Se o ato cita Minas em algum lugar do que o modelo teve à frente.
+
+    O texto entra só até `max_chars_texto`: a marca precisa estar no trecho que
+    o modelo leu, senão o item seria promovido por uma menção que ninguém viu.
+    O alvo é envolto em espaços para que a marca " MG " também case na borda.
+    """
+    alvo = " ".join(
+        [
+            pub.titulo,
+            resposta["resumo"],
+            *resposta["entes"],
+            pub.texto[: cfg.max_chars_texto],
+        ]
+    )
+    padrao = _padrao_marcas(tuple(cfg.marcas_mg))
+    return bool(padrao.search(f" {_normalizar(alvo)} "))
+
+
 def _pos_processar(
-    pub: Publicacao, resposta: dict[str, Any]
+    pub: Publicacao, resposta: dict[str, Any], cfg: ConfigBoletim
 ) -> tuple[str, int, tuple[str, ...]]:
     """Aplica as regras determinísticas à resposta do modelo.
 
@@ -343,20 +393,33 @@ def _pos_processar(
             categoria = "A"
             tags.append(TAG_B_PARA_A)
 
-    return categoria, _relevancia(pub, categoria, relevancia), tuple(tags)
+    relevancia = _relevancia(pub, resposta, categoria, relevancia, cfg)
+    return categoria, relevancia, tuple(tags)
 
 
-def _relevancia(pub: Publicacao, categoria: str, relevancia: int) -> int:
-    """Piso de relevância para o que sai do Diário Oficial de Minas Gerais.
+def _relevancia(
+    pub: Publicacao,
+    resposta: dict[str, Any],
+    categoria: str,
+    relevancia: int,
+    cfg: ConfigBoletim,
+) -> int:
+    """Piso do IOF-MG e teto de quem não fala de Minas: as duas pontas da régua.
 
     Todo ato do IOF-MG é mineiro por definição, e Minas é o mercado do boletim.
     Deixar isso a cargo do prompt não funcionou: na semana de 31/08 o modelo deu
     3 a habilitações na Bahia e 2 a deliberações CIB-SUS/MG que alocam recurso a
-    município mineiro. Vale só para A e B - um ato de rotina do estado não vira
-    prioridade só por ser de Minas.
+    município mineiro. O piso vale só para A e B - um ato de rotina do estado
+    não vira prioridade só por ser de Minas.
+
+    O teto é a contraparte e vale só para A: captação que não cita Minas em
+    lugar nenhum não é prioridade do dia, por maior que seja a cifra. B fica de
+    fora porque mudança de regra federal alcança Minas junto com o país.
     """
     if pub.fonte == "iofmg" and categoria in ("A", "B"):
         return max(relevancia, _RELEVANCIA_MAXIMA)
+    if categoria == "A" and not _tem_marca_mg(pub, resposta, cfg):
+        return min(relevancia, _RELEVANCIA_FORA_DE_MG)
     return relevancia
 
 
