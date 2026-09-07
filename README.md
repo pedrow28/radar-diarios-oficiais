@@ -73,24 +73,30 @@ vez de nenhuma (ver "Rotina em nuvem").
 
 A fonte `dou` raspa o portal público `in.gov.br` e não exige conta nenhuma.
 Quais órgãos ela acompanha é decisão do bloco `fontes.dou` do
-`config/config.yaml`:
+`config/config.yaml`. Hoje são dois: o **Ministério da Saúde** (a ANVISA vem
+junto, dentro da hierarquia dele) e a **Presidência da República**, recortada
+para a **Casa Civil** — de onde saem emendas e créditos.
 
 ```yaml
 fontes:
   dou:
+    # Fazenda e Planejamento ficaram de fora em 06/09: em 04/09 encheram 69 das 120 vagas do dia com atos da Receita Federal.
     orgaos:
       - "Ministério da Saúde"
       - "Presidência da República"
-      - "Ministério da Fazenda"
-      - "Ministério do Planejamento e Orçamento"
     # 2º nível exigido para capturar atos publicados sob "Presidência da República".
     subunidades_extra:
       - "Casa Civil"
 ```
 
+Para acompanhar outro órgão, acrescente o nome (igual ao que aparece no
+`orgPrin` do portal) à lista `orgaos`; se ele também assinar o diário inteiro
+como a Presidência, acrescente o 2º nível desejado em `subunidades_extra` —
+essa chave hoje vale só para a Presidência (ver `radar/fontes/escopo.py`).
+
 É **uma busca por órgão** (`orgPrin`), com os resultados juntados e sem
 repetição — o mesmo ato listado sob dois órgãos entra uma vez só. O bruto de
-cada busca vai para `data/raw/<data>/dou/busca-<órgão>-p<N>.html`.
+cada busca vai para `data/raw/<data>/dou/busca-<órgão>-<índice>-p<N>.html`.
 
 `subunidades_extra` é um filtro de **segundo nível**: a "Presidência da
 República" assina boa parte do diário, então só entram as publicações cuja
@@ -143,11 +149,14 @@ não pede credencial nenhuma. Sem edição publicada na data — domingo, feriad
 o serviço responde 404 e a coleta sai `vazio`, exit 0.
 
 Quais órgãos entram é decisão do bloco `fontes.inlabs` do
-`config/config.yaml`: `orgaos` casa o 1º nível de `artCategory`, e
+`config/config.yaml`, com o mesmo escopo do portal — Ministério da Saúde e
+Presidência da República (recortada para a Casa Civil) —, mais a ANVISA
+declarada à parte: `orgaos` casa o 1º nível de `artCategory`, e
 `subunidades_extra` recorta a "Presidência da República", que de outro modo
-traria o Executivo inteiro. A ANVISA é aceita em qualquer nível da hierarquia,
-porque o serviço ora a publica como órgão de 1º nível, ora sob o Ministério da
-Saúde.
+traria o Executivo inteiro. A ANVISA é aceita em qualquer nível da hierarquia
+quando está em `orgaos`, porque o serviço ora a publica como órgão de 1º
+nível, ora sob o Ministério da Saúde — diferente do portal, onde ela sempre
+vem aninhada.
 
 ## Boletim diário (newsletter)
 

@@ -19,14 +19,17 @@ from radar.fontes.dou import busca, normaliza
 from radar.fontes.dou.texto import TextoDOU, extrair_texto
 
 
-def _apelido(orgao: str) -> str:
+def _apelido(orgao: str, indice: int) -> str:
     """Nome de arquivo estável para o bruto de cada órgão.
 
     Sem ele os órgãos dividiriam `busca-p1.html` e o segundo leria, do cache, a
-    listagem do primeiro — coleta silenciosamente errada no reprocessamento.
+    listagem do primeiro — coleta silenciosamente errada no reprocessamento. O
+    índice do laço vai sempre junto: dois nomes que normalizam para o mesmo
+    slug (acentuação ou pontuação diferentes) ainda colidiriam sem ele.
     """
     sem_acento = unicodedata.normalize("NFKD", orgao).encode("ascii", "ignore").decode()
-    return re.sub(r"[^a-z0-9]+", "-", sem_acento.lower()).strip("-") or "orgao"
+    slug = re.sub(r"[^a-z0-9]+", "-", sem_acento.lower()).strip("-") or "orgao"
+    return f"{slug}-{indice}"
 
 
 class FonteDOU:
@@ -145,10 +148,10 @@ class FonteDOU:
         avisos: list[str] = []
         falharam: list[str] = []
 
-        for orgao in orgaos:
-            def pagina(numero: int, cursor, orgao=orgao) -> str:
+        for indice, orgao in enumerate(orgaos):
+            def pagina(numero: int, cursor, orgao=orgao, indice=indice) -> str:
                 url = busca.montar_url_busca(orgao, data, self.cfg.delta, numero, cursor)
-                nome = f"busca-{_apelido(orgao)}-p{numero}.html"
+                nome = f"busca-{_apelido(orgao, indice)}-p{numero}.html"
                 return busca.decodificar_busca(self._buscar_bruto(data, nome, url, forcar))
 
             try:
@@ -160,18 +163,25 @@ class FonteDOU:
                 avisos.append(aviso)
                 continue
 
-            avisos.extend(avisos_do_orgao)
-            novos = 0
+            # `percorrer_paginas` não sabe qual órgão está buscando; sem o
+            # prefixo, um aviso de layout quebrado não diz onde investigar.
+            avisos.extend(f"{orgao}: {aviso}" for aviso in avisos_do_orgao)
+            no_escopo = 0
             for item in itens:
                 chave = item.get("urlTitle") or str(item.get("classPK") or "")
-                if chave and chave not in encontrados:
+                if chave:
                     encontrados[chave] = item
-                    novos += 1
+                if self._no_escopo(item):
+                    no_escopo += 1
             self.logger.info(
-                "DOU %s: %s trouxe %d publicações (%d inéditas)",
-                data, orgao, len(itens), novos,
+                "DOU %s: %s trouxe %d, %d no escopo",
+                data, orgao, len(itens), no_escopo,
             )
 
+        # Órgãos diferentes falhando do mesmo jeito (ex.: todos com paginação
+        # travada) repetiriam a mensagem; deduplicar preserva a ordem sem
+        # inflar `avisos` com o mesmo aviso mais de uma vez.
+        avisos = list(dict.fromkeys(avisos))
         return list(encontrados.values()), avisos, falharam
 
     def _baixar_textos(

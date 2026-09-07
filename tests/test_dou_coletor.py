@@ -12,7 +12,7 @@ from radar.core.erros import FonteIndisponivel, Status
 from radar.core.log import configurar_log
 from radar.core.storage import Storage
 from radar.fontes.dou.busca import ID_BLOCO_JSON
-from radar.fontes.dou.coletor import FonteDOU
+from radar.fontes.dou.coletor import FonteDOU, _apelido
 
 
 def _html_busca(itens: list[dict], total: int) -> bytes:
@@ -253,6 +253,17 @@ def test_soma_as_publicacoes_dos_orgaos_sem_repetir(storage):
     assert resultado.escopo["orgaos"] == [MS, FAZENDA, PLANEJAMENTO]
 
 
+def test_apelido_leva_o_indice_mesmo_com_slug_repetido():
+    """"Ministério da Saúde" e "Ministério da Saúde!" normalizam para o mesmo
+    slug; sem o índice do laço, o segundo órgão colidiria com o bruto do
+    primeiro no disco."""
+    a = _apelido("Ministério da Saúde", 0)
+    b = _apelido("Ministério da Saúde!", 1)
+    assert a != b
+    assert a == "ministerio-da-saude-0"
+    assert b == "ministerio-da-saude-1"
+
+
 def test_cada_orgao_tem_o_seu_proprio_bruto_em_disco(storage):
     """Um nome de arquivo só faria o 2º órgão reler a busca do 1º."""
     sessao = SessaoPorOrgao(
@@ -366,6 +377,38 @@ def test_log_diz_quantas_publicacoes_vieram_de_cada_orgao(storage):
 
     assert any(MS in linha and "2" in linha for linha in linhas), linhas
     assert any(FAZENDA in linha and "0" in linha for linha in linhas), linhas
+    assert any("no escopo" in linha for linha in linhas), linhas
+
+
+class SessaoTotalIlegivel:
+    """Busca cujo texto de "N resultados" não bate com o `jsonArray` devolvido:
+    dispara, dentro de `percorrer_paginas`, o aviso de layout quebrado — que
+    por si só não sabe nomear o órgão da busca.
+    """
+
+    def __init__(self, item: dict):
+        self.item = item
+
+    def get(self, url, timeout=None):
+        class R:
+            status_code = 200
+            content = b""
+
+        r = R()
+        r.content = _html_busca([self.item], 0) if "buscar/dou" in url else HTML_PUB
+        return r
+
+
+def test_aviso_de_paginacao_leva_o_nome_do_orgao(storage):
+    """`percorrer_paginas` é agnóstica a órgão; sem o prefixo aplicado por
+    `_buscar_orgaos`, o aviso de total ilegível não diz onde investigar.
+    """
+    cfg = ConfigDOU(orgaos=[MS], concorrencia=2)
+    sessao = SessaoTotalIlegivel(_item("ms-1", f"{MS}/Gabinete"))
+    resultado = FonteDOU(cfg, storage, sessao).coletar(date(2026, 9, 4))
+
+    assert resultado.avisos
+    assert any(aviso.startswith(f"{MS}:") for aviso in resultado.avisos), resultado.avisos
 
 
 def test_lista_de_orgaos_vazia_nao_passa_por_dia_sem_publicacao(storage):

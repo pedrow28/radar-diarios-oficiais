@@ -2,11 +2,10 @@ timezone: America/Sao_Paulo
 
 fontes:
   dou:
+    # Fazenda e Planejamento ficaram de fora em 06/09: em 04/09 encheram 69 das 120 vagas do dia com atos da Receita Federal.
     orgaos:
       - "Ministério da Saúde"
       - "Presidência da República"
-      - "Ministério da Fazenda"
-      - "Ministério do Planejamento e Orçamento"
     # 2º nível exigido para capturar atos publicados sob "Presidência da República".
     subunidades_extra:
       - "Casa Civil"
@@ -28,12 +27,11 @@ fontes:
   inlabs:
     secoes:
       - DO1
+    # Fazenda e Planejamento ficaram de fora em 06/09: em 04/09 encheram 69 das 120 vagas do dia com atos da Receita Federal.
     orgaos:
       - "Ministério da Saúde"
       - "Agência Nacional de Vigilância Sanitária"
       - "Presidência da República"
-      - "Ministério da Fazenda"
-      - "Ministério do Planejamento e Orçamento"
     # 2º nível exigido para capturar atos publicados sob "Presidência da República".
     subunidades_extra:
       - "Casa Civil"

@@ -59,8 +59,12 @@ def test_config_inexistente_da_erro_claro(tmp_path: Path):
 ORGAOS_DOU_PADRAO = [
     "Ministério da Saúde",
     "Presidência da República",
-    "Ministério da Fazenda",
-    "Ministério do Planejamento e Orçamento",
+]
+
+ORGAOS_INLABS_PADRAO = [
+    "Ministério da Saúde",
+    "Agência Nacional de Vigilância Sanitária",
+    "Presidência da República",
 ]
 
 
@@ -133,24 +137,47 @@ def test_dou_le_orgaos_e_subunidades_do_yaml(tmp_path: Path):
     assert cfg.dou.subunidades_extra == ["Casa Civil", "Vice-Presidência"]
 
 
+def test_dou_orgaos_string_no_yaml_da_erro_claro(tmp_path: Path):
+    """YAML aceita uma string solta onde se espera lista (`orgaos: "X"` em vez
+    de `orgaos: ["X"]`); sem checar, ela seria iterada letra a letra."""
+    p = _com_bloco_dou(tmp_path, '    orgaos: "Ministério da Saúde"\n')
+    with pytest.raises(ValueError, match="orgaos"):
+        Config.carregar(p)
+
+
+def test_dou_subunidades_extra_string_no_yaml_da_erro_claro(tmp_path: Path):
+    p = _com_bloco_dou(tmp_path, '    subunidades_extra: "Casa Civil"\n')
+    with pytest.raises(ValueError, match="subunidades_extra"):
+        Config.carregar(p)
+
+
+def test_inlabs_orgaos_string_no_yaml_da_erro_claro(tmp_path: Path):
+    conteudo = YAML_MINIMO.rstrip().replace(
+        "armazenamento:",
+        "  inlabs:\n"
+        '    orgaos: "Ministério da Saúde"\n'
+        "armazenamento:",
+    )
+    p = tmp_path / "c.yaml"
+    p.write_text(conteudo, encoding="utf-8")
+    with pytest.raises(ValueError, match="orgaos"):
+        Config.carregar(p)
+
+
 def test_config_padrao_do_projeto_cobre_o_escopo_decidido():
     """O `config/config.yaml` versionado é o que roda na nuvem."""
     raiz = Path(__file__).resolve().parent.parent
     cfg = Config.carregar(raiz / "config" / "config.yaml")
     assert cfg.dou.orgaos == ORGAOS_DOU_PADRAO
     assert cfg.dou.subunidades_extra == ["Casa Civil"]
+    assert cfg.inlabs.orgaos == ORGAOS_INLABS_PADRAO
+    assert cfg.inlabs.subunidades_extra == ["Casa Civil"]
 
 
 def test_inlabs_usa_defaults_quando_bloco_nao_existe(caminho_config: Path):
     cfg = Config.carregar(caminho_config)
     assert cfg.inlabs.secoes == ["DO1"]
-    assert cfg.inlabs.orgaos == [
-        "Ministério da Saúde",
-        "Agência Nacional de Vigilância Sanitária",
-        "Presidência da República",
-        "Ministério da Fazenda",
-        "Ministério do Planejamento e Orçamento",
-    ]
+    assert cfg.inlabs.orgaos == ORGAOS_INLABS_PADRAO
     assert cfg.inlabs.subunidades_extra == ["Casa Civil"]
 
 

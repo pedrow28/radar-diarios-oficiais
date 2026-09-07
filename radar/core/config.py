@@ -11,15 +11,31 @@ import yaml
 from radar.core.log import configurar_log
 
 
+def _exigir_lista(chave: str, valor: object) -> None:
+    """YAML aceita uma string solta onde se esperava uma lista (`orgaos: "Ministério
+    da Saúde"` em vez de `orgaos: ["Ministério da Saúde"]`). Sem checar, essa string
+    é iterada letra a letra mais adiante — cada caractere vira um "órgão" de um
+    caractere só, e o escopo inteiro desaparece sem nenhum erro.
+    """
+    if isinstance(valor, str):
+        raise ValueError(
+            f"`{chave}` deve ser uma lista no YAML, não uma string: {valor!r}"
+        )
+
+
 def _orgaos_dou_padrao() -> list[str]:
-    """Escopo decidido para o DOU. A ANVISA não entra na lista de propósito: no
+    """Escopo decidido para o DOU: Ministério da Saúde e Presidência da
+    República (recortada para a Casa Civil, via `subunidades_extra` — é onde
+    saem emendas e créditos). A ANVISA não entra na lista de propósito: no
     portal ela aparece dentro da hierarquia do Ministério da Saúde, e a busca
-    por `orgPrin=Ministério da Saúde` já a traz junto."""
+    por `orgPrin=Ministério da Saúde` já a traz junto.
+
+    Fazenda e Planejamento ficaram de fora em 06/09: em 04/09 encheram 69 das
+    120 vagas do dia com atos da Receita Federal.
+    """
     return [
         "Ministério da Saúde",
         "Presidência da República",
-        "Ministério da Fazenda",
-        "Ministério do Planejamento e Orçamento",
     ]
 
 
@@ -41,6 +57,8 @@ class ConfigDOU:
     baixar_texto_integral: bool = True
 
     def __post_init__(self) -> None:
+        _exigir_lista("fontes.dou.orgaos", self.orgaos)
+        _exigir_lista("fontes.dou.subunidades_extra", self.subunidades_extra)
         if self.orgaos is None:
             self.orgaos = [self.orgao] if self.orgao else _orgaos_dou_padrao()
 
@@ -53,12 +71,20 @@ class ConfigIOFMG:
 
 
 def _orgaos_inlabs_padrao() -> list[str]:
+    """Mesmo escopo do DOU — Ministério da Saúde e Presidência da República —,
+    com a ANVISA também na lista. Diferente do portal, o INLABS ora publica a
+    ANVISA como órgão de 1º nível, ora aninhada sob o Ministério da Saúde (ver
+    README, seção "Fonte INLABS"); sem ela em `orgaos`, a regra de escopo só
+    pega o segundo caso, porque a exceção que casa a ANVISA em qualquer nível
+    (`radar/fontes/escopo.py`) só vale para quem está na lista.
+
+    Fazenda e Planejamento ficaram de fora em 06/09, pelo mesmo motivo do DOU:
+    em 04/09 encheram 69 das 120 vagas do dia com atos da Receita Federal.
+    """
     return [
         "Ministério da Saúde",
         "Agência Nacional de Vigilância Sanitária",
         "Presidência da República",
-        "Ministério da Fazenda",
-        "Ministério do Planejamento e Orçamento",
     ]
 
 
@@ -69,6 +95,10 @@ class ConfigINLABS:
     # 2º nível exigido para capturar atos da "Presidência da República": o
     # INLABS publica a Casa Civil como subunidade dela, não como órgão à parte.
     subunidades_extra: list[str] = field(default_factory=lambda: ["Casa Civil"])
+
+    def __post_init__(self) -> None:
+        _exigir_lista("fontes.inlabs.orgaos", self.orgaos)
+        _exigir_lista("fontes.inlabs.subunidades_extra", self.subunidades_extra)
 
 
 @dataclass
@@ -90,13 +120,17 @@ class Config:
         fontes = bruto.get("fontes", {})
         armazenamento = bruto.get("armazenamento", {})
         dou = fontes.get("dou", {}) or {}
-        if "orgao" in dou and "orgaos" in dou:
+        if "orgao" in dou and dou.get("orgaos"):
             # Aviso, não erro: o YAML antigo continua carregando. Mas silêncio
             # aqui esconderia metade do escopo de quem editou a chave errada.
+            # Gate em `dou.get("orgaos")` (não só `"orgaos" in dou`): uma chave
+            # presente mas vazia/nula no YAML não é "orgaos venceu", e avisar
+            # nesse caso mentiria sobre qual escopo realmente vale.
+            orgaos_novos = dou["orgaos"]
             configurar_log().warning(
                 "config: `fontes.dou.orgao` está obsoleto e foi ignorado porque "
                 "`fontes.dou.orgaos` também está definido (%s).",
-                ", ".join(dou["orgaos"] or []),
+                ", ".join(orgaos_novos) if isinstance(orgaos_novos, list) else orgaos_novos,
             )
         return cls(
             timezone=bruto.get("timezone", "America/Sao_Paulo"),
