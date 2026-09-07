@@ -290,7 +290,9 @@ def item_de_resposta(
         categoria=categoria,
         relevancia=relevancia,
         resumo=resposta["resumo"],
-        por_que_importa=resposta["por_que_importa"],
+        por_que_importa=_sem_cifra_repetida(
+            resposta["por_que_importa"], resposta["valor_brl"]
+        ),
         valor_brl=resposta["valor_brl"],
         entes=tuple(resposta["entes"]),
         tags=tags,
@@ -319,6 +321,102 @@ _CAPTACAO = re.compile(
     r"|renova(?:cao)? (?:da )?habilitacao|teto|limite financeiro"
     r"|incremento|repasse)"
 )
+
+
+# ── R5: a cifra que o item já carrega não se repete no argumento ────────
+# O `valor_brl` vira uma linha própria na edição. Repeti-la em `por_que_importa`
+# come o espaço do argumento, e a proibição literal no prompt não resolveu: 27
+# itens repetiam a cifra em v1 da semana e os mesmos 27 em v2.
+_MOEDA = r"R\$\s?[\d.,]*\d(?:\s?(?:milh(?:ão|ões)|bilh(?:ão|ões)|mil|bi)\b)?"
+_MOEDA_RX = re.compile(_MOEDA, re.IGNORECASE)
+# "R$ 3 milhões anuais" sai inteiro: deixar "anuais" para trás produz
+# concordância solta ("nova fonte de receita anuais").
+_UNIDADE = r"(?:\s+(?:anuais|anual|mensais|mensal|adicionais|adicional))?"
+_APROXIMACAO = r"(?:apenas|quase|cerca de|até|mais de|aproximadamente)\s+"
+# Locuções cujo único complemento é a cifra: sem ela, elas também não param de pé.
+_PONTE = (
+    r"no valor de|no montante de|no total de|somando|totalizando"
+    r"|equivalente a|correspondente a"
+)
+# A cifra só sai quando vem isolada entre parênteses ou introduzida por uma
+# preposição (ou por uma das locuções-ponte). Cifra que é sujeito ou objeto da
+# frase fica onde está: tirá-la deixaria "Define como novo limite anual".
+_REMOCOES = tuple(
+    re.compile(padrao, re.IGNORECASE)
+    for padrao in (
+        rf"\s*\([^()]{{0,40}}{_MOEDA}[^()]{{0,25}}\)",
+        rf"\s+(?:{_PONTE})\s+(?:{_APROXIMACAO})?{_MOEDA}{_UNIDADE}",
+        rf"\s+(?:de|em|com|por)\s+(?:{_APROXIMACAO})?{_MOEDA}{_UNIDADE}",
+    )
+)
+_PASSES_REMOCAO = 3
+_MIN_POR_QUE_IMPORTA = 25
+
+_ESPACO_SOBRANDO = re.compile(r" {2,}")
+_ESPACO_ANTES_DE_PONTUACAO = re.compile(r"\s+([,.;:)])")
+_PONTUACAO_DOBRADA = re.compile(r"([,;:])\s*([,.;:])")
+
+# Terminações de verbo conjugado ou no infinitivo, mais as poucas palavras
+# comuns que terminam igual sem ser verbo. O teste é grosseiro de propósito: ele
+# existe só para barrar a remoção que deixaria um sintagma sem predicado, e um
+# falso positivo não muda nada, porque as remoções já são conservadoras.
+_TERMINACOES_VERBO = (
+    "ndo", "ram", "rem", "vam", "ria", "ou", "am", "em", "ar", "er", "ir",
+)
+_NAO_SAO_VERBOS = frozenset(
+    "para com sem bem tambem alem porem nem quem alguem ninguem hospitalar "
+    "familiar particular similar militar escolar popular regular auxiliar "
+    "exemplar lugar mar par item".split()
+)
+
+
+def _sem_cifra_repetida(
+    por_que_importa: str | None, valor_brl: float | None
+) -> str | None:
+    """Tira do argumento a cifra que o item já carrega em `valor_brl`.
+
+    Sem `valor_brl` não há repetição - a cifra do texto é a única que existe - e
+    o texto passa intacto. Depois do corte valem duas guardas: o que sobrou
+    precisa continuar tendo tamanho de frase e não pode ter perdido o verbo que
+    o original tinha. Falhando qualquer uma delas, volta o texto do modelo.
+    """
+    if not por_que_importa or valor_brl is None:
+        return por_que_importa
+    if not _MOEDA_RX.search(por_que_importa):
+        return por_que_importa
+
+    novo = por_que_importa
+    for _ in range(_PASSES_REMOCAO):
+        antes = novo
+        for remocao in _REMOCOES:
+            novo = remocao.sub("", novo)
+        if novo == antes:
+            break
+
+    novo = _limpar(novo)
+    if len(novo) < _MIN_POR_QUE_IMPORTA:
+        return por_que_importa
+    if _tem_verbo(por_que_importa) and not _tem_verbo(novo):
+        return por_que_importa
+    return novo
+
+
+def _limpar(texto: str) -> str:
+    """Fecha os buracos que a remoção deixa: espaço duplo e pontuação órfã."""
+    texto = _ESPACO_SOBRANDO.sub(" ", texto)
+    texto = _ESPACO_ANTES_DE_PONTUACAO.sub(r"\1", texto)
+    texto = _PONTUACAO_DOBRADA.sub(r"\2", texto)
+    return texto.strip().strip(",;:").strip()
+
+
+def _tem_verbo(texto: str) -> bool:
+    for bruto in _normalizar(texto).split():
+        palavra = bruto.strip(".,;:()[]\"'!?%")
+        if len(palavra) < 3 or palavra in _NAO_SAO_VERBOS:
+            continue
+        if palavra.endswith(_TERMINACOES_VERBO):
+            return True
+    return False
 
 
 def _normalizar(texto: str) -> str:

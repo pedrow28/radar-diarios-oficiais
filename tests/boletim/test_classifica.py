@@ -312,6 +312,94 @@ def test_b_que_virou_a_tambem_recebe_o_teto():
     assert item.relevancia == 2
 
 
+# ── R5: cifra repetida no por_que_importa ───────────────────────────────
+def _por_que_importa(texto: str, valor: float | None = 2700000.0) -> str:
+    pub = _pub(1)
+    resposta = _resposta(pub, por_que_importa=texto, valor_brl=valor)
+    return item_de_resposta(pub, resposta).por_que_importa
+
+
+# As quatro frases abaixo saíram de `semana-v2`; a cifra já está no `valor_brl`
+# do mesmo item e no card da edição, e repeti-la come o espaço do argumento.
+def test_cifra_entre_parenteses_sai_inteira():
+    antes = (
+        "Muda regra de acesso a recursos para reabilitação (R$ 849 mil). Impacta "
+        "indiretamente entidades que executam projetos de reabilitação e inclusão "
+        "de pessoas com deficiência."
+    )
+    assert _por_que_importa(antes) == (
+        "Muda regra de acesso a recursos para reabilitação. Impacta indiretamente "
+        "entidades que executam projetos de reabilitação e inclusão de pessoas com "
+        "deficiência."
+    )
+
+
+def test_cifra_introduzida_por_preposicao_sai_com_a_preposicao():
+    antes = (
+        "Novo repasse de R$ 2,7 milhões para organização filantrópica; programa de "
+        "inclusão e acessibilidade para pessoas com Transtorno do Espectro Autista"
+    )
+    assert _por_que_importa(antes) == (
+        "Novo repasse para organização filantrópica; programa de inclusão e "
+        "acessibilidade para pessoas com Transtorno do Espectro Autista"
+    )
+
+
+def test_cifra_em_no_valor_de_sai_com_a_locucao_inteira():
+    antes = (
+        "MUDA REGRA: Glosas técnicas no valor de R$ 6.300.368,77 são parceladas em "
+        "60 vezes via boleto no INVESTSUS. Não quitação incorre em Tomada de Contas "
+        "Especial."
+    )
+    assert _por_que_importa(antes) == (
+        "MUDA REGRA: Glosas técnicas são parceladas em 60 vezes via boleto no "
+        "INVESTSUS. Não quitação incorre em Tomada de Contas Especial."
+    )
+
+
+def test_cifra_apos_gerundio_de_soma_sai_com_o_gerundio():
+    antes = (
+        "Abre possibilidade de contratação por estados/municípios; três grandes "
+        "estabelecimentos credenciados com matrizes de oferta somando R$ 70,4 "
+        "milhões; requer pactuação na CIB estadual"
+    )
+    assert _por_que_importa(antes) == (
+        "Abre possibilidade de contratação por estados/municípios; três grandes "
+        "estabelecimentos credenciados com matrizes de oferta; requer pactuação na "
+        "CIB estadual"
+    )
+
+
+def test_cifra_que_e_o_objeto_da_frase_fica_onde_esta():
+    """Tirar a cifra daqui deixaria "Define como novo limite anual".
+
+    A regra só remove a cifra que vem introduzida por preposição ou isolada
+    entre parênteses: nos dois casos o que sobra continua sendo uma frase.
+    """
+    antes = (
+        "Muda os valores máximos que estabelecimentos podem receber. Define "
+        "R$ 721.233,95 como novo limite anual."
+    )
+    assert _por_que_importa(antes) == antes
+
+
+def test_cifra_fica_quando_o_item_nao_tem_valor():
+    """Sem `valor_brl` não há repetição: a cifra do texto é a única que existe."""
+    antes = "Contrapartida municipal de R$ 3 mil sobre um total não informado no ato."
+    assert _por_que_importa(antes, valor=None) == antes
+
+
+def test_texto_curto_demais_depois_do_corte_fica_como_estava():
+    antes = "Repasse de R$ 2,7 milhões."
+    assert _por_que_importa(antes) == antes
+
+
+def test_por_que_importa_ausente_continua_ausente():
+    pub = _pub(1)
+    resposta = _resposta(pub, por_que_importa=None)
+    assert item_de_resposta(pub, resposta).por_que_importa is None
+
+
 def test_marcas_de_minas_vem_do_config(cfg):
     cfg.marcas_mg = ["Uberlândia"]
     pub = _pub_titulado("PORTARIA que habilita leitos em Uberlândia")
