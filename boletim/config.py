@@ -36,7 +36,7 @@ MARCAS_MG = [
     "/MG",
     "(MG)",
     "-MG",
-    " MG ",
+    "MG",
     "SES-MG",
     "SES/MG",
     "CIB-SUS/MG",

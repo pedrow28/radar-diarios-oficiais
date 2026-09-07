@@ -346,6 +346,35 @@ def test_texto_integral_alem_do_limite_de_leitura_nao_conta(cfg):
     assert item.relevancia == 2
 
 
+@pytest.mark.parametrize(
+    "titulo",
+    [
+        "PORTARIA que habilita leitos em Pirajuba - MG, no âmbito do SUS",
+        "PORTARIA sobre o município de Pirajuba/MG.",
+        "PORTARIA sobre unidade em MG",
+        "PORTARIA (MG) sobre leitos",
+    ],
+)
+def test_sigla_do_estado_case_colada_na_pontuacao(titulo):
+    """A marca era " MG " com espaço dos dois lados, e a vírgula a derrubava.
+
+    "Pirajuba - MG," é a forma que o diário usa; ali o espaço à direita não
+    existe, e o item de um município mineiro perdia a marca de Minas e levava o
+    teto de relevância como se fosse de outro estado.
+    """
+    pub = _pub_titulado(titulo)
+    item = item_de_resposta(pub, _resposta(pub, categoria="A", relevancia=3))
+    assert item.relevancia == 3
+
+
+def test_miligrama_nao_e_minas_gerais():
+    """"mg" também é unidade de medida, e o diário fala de dose o tempo todo."""
+    pub = _pub_titulado("PORTARIA que padroniza 500 mg de dipirona por ampola")
+    resposta = _resposta(pub, categoria="A", relevancia=3, resumo="dose de 20mg diários")
+    item = item_de_resposta(pub, resposta)
+    assert item.relevancia == 2
+
+
 def test_sigla_de_minas_dentro_de_palavra_nao_conta():
     pub = _pub_titulado("PORTARIA que credencia a FHEMIGRANTE e a AMGEN do Paraná")
     item = item_de_resposta(pub, _resposta(pub, categoria="A", relevancia=3))

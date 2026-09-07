@@ -464,6 +464,12 @@ def _normalizar(texto: str) -> str:
     return _ESPACO.sub(" ", texto.casefold().translate(_ACENTOS))
 
 
+# A sigla do estado é a única marca que colide com uma unidade de medida: antes
+# dela não pode vir número, nem número seguido de espaço.
+_SIGLA_MG = "mg"
+_GUARDA_MILIGRAMA = r"(?<!\d)(?<!\d\s)"
+
+
 @lru_cache(maxsize=4)
 def _padrao_marcas(marcas: tuple[str, ...]) -> re.Pattern[str]:
     """Uma alternação com as marcas de Minas já normalizadas.
@@ -477,6 +483,12 @@ def _padrao_marcas(marcas: tuple[str, ...]) -> re.Pattern[str]:
 def _padrao_marca(marca: str) -> str:
     alvo = _normalizar(marca)
     padrao = re.escape(alvo)
+    if alvo == _SIGLA_MG:
+        # A marca era " MG " com espaço dos dois lados, e por isso "Pirajuba -
+        # MG," - do jeito que o diário escreve - não casava: a vírgula ocupava o
+        # lugar do espaço. Fronteira de palavra resolve, mas "mg" também é
+        # miligrama, e "500 mg de dipirona" não é Minas.
+        return _GUARDA_MILIGRAMA + r"\b" + padrao + r"\b"
     if alvo[:1].isalnum():
         padrao = r"\b" + padrao
     # Só a marca escrita em maiúscula é sigla fechada: "FHEMIG" não pode valer
@@ -493,7 +505,8 @@ def _tem_marca_mg(
 
     O texto entra só até `max_chars_texto`: a marca precisa estar no trecho que
     o modelo leu, senão o item seria promovido por uma menção que ninguém viu.
-    O alvo é envolto em espaços para que a marca " MG " também case na borda.
+    Os campos são unidos por espaço para que nenhuma marca case atravessando a
+    fronteira entre dois deles.
     """
     alvo = " ".join(
         [
