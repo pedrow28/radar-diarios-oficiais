@@ -112,6 +112,112 @@ def test_prioridade_do_iofmg_nao_alcanca_o_dou():
     assert item_de_resposta(pub, _resposta(pub, relevancia=2)).relevancia == 2
 
 
+# ── R1: B que é ato administrativo vira X ───────────────────────────────
+def _pub_titulado(titulo: str) -> Publicacao:
+    return dataclasses.replace(_pub(1), titulo=titulo)
+
+
+@pytest.mark.parametrize(
+    "titulo",
+    [
+        "EXTRATO DE REGISTRO DE PREÇOS Nº 12/2026",
+        "Retificação da Portaria GM/MS nº 4.795",
+        "AVISO DE ALTERAÇÃO DE EDITAL Nº 3/2026",
+        "Edital de notificação nº 8/2026",
+        "EDITAL DE INTIMAÇÃO Nº 9/2026",
+        "Despacho de 2 de setembro de 2026",
+        "ATA DE REGISTRO DE PREÇOS Nº 45/2026",
+        "Termo aditivo nº 4 ao convênio 900123",
+        "APOSTILAMENTO Nº 2 AO CONTRATO 77/2026",
+    ],
+)
+def test_b_com_titulo_de_ato_administrativo_vira_x(titulo):
+    """A fronteira A/B não é estável entre execuções, e regra fica no código.
+
+    Na semana de 31/08 as mesmas habilitações saíram A numa rodada e B na
+    seguinte, com a instrução literal nos dois prompts. Extrato, retificação,
+    aviso e despacho nunca são norma: o que o modelo põe em B por causa de uma
+    cifra no corpo sai da edição em vez de ocupar "mudança de regra".
+    """
+    pub = _pub_titulado(titulo)
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", relevancia=3))
+    assert item.categoria == "X"
+    assert item.relevancia == 0
+    assert "regra:b-administrativo" in item.tags
+
+
+def test_titulo_administrativo_so_alcanca_a_categoria_b():
+    pub = _pub_titulado("EXTRATO DE REGISTRO DE PREÇOS Nº 12/2026")
+    for categoria in ("A", "C", "D", "X"):
+        item = item_de_resposta(pub, _resposta(pub, categoria=categoria, relevancia=3))
+        assert item.categoria == categoria
+        assert "regra:b-administrativo" not in item.tags
+
+
+def test_edital_de_chamamento_nao_e_ato_administrativo():
+    """Só notificação e intimação; edital de chamamento é o coração da seção C."""
+    pub = _pub_titulado("EDITAL DE CHAMAMENTO PÚBLICO Nº 12/2026")
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", resumo="chamamento"))
+    assert item.categoria == "B"
+
+
+def test_ato_administrativo_so_conta_no_comeco_do_titulo():
+    pub = _pub_titulado("PORTARIA GM/MS Nº 12 que aprova a ata da comissão")
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", resumo="aprova ata"))
+    assert item.categoria == "B"
+
+
+# ── R2: B que é habilitação vira A ──────────────────────────────────────
+@pytest.mark.parametrize(
+    "resumo",
+    [
+        "Habilita o Hospital Santa Luzia no Programa Agora Tem Especialistas.",
+        "Credencia estabelecimento para terapia renal substitutiva.",
+        "Qualifica a unidade como hospital de ensino.",
+        "Desabilita dois leitos de UTI do Hospital São Mateus.",
+        "Descredencia o serviço de hemodiálise.",
+        "Renovação da habilitação do serviço de oncologia.",
+        "Amplia o teto MAC do Hospital César Leite.",
+        "Altera o limite financeiro anual do município.",
+        "Concede incremento temporário de custeio.",
+        "Autoriza repasse fundo a fundo ao município.",
+    ],
+)
+def test_b_que_e_habilitacao_ou_dinheiro_vira_a(resumo):
+    pub = _pub(1)
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", resumo=resumo))
+    assert item.categoria == "A"
+    assert "regra:b-para-a" in item.tags
+
+
+def test_b_para_a_reconhece_a_habilitacao_pelo_titulo():
+    pub = _pub_titulado("PORTARIA GM/MS Nº 3.412: habilita leitos de UTI")
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", resumo="dez leitos"))
+    assert item.categoria == "A"
+
+
+def test_b_normativo_de_verdade_continua_b():
+    pub = _pub(1)
+    resumo = "Muda o critério de cálculo do piso da atenção primária."
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", resumo=resumo))
+    assert item.categoria == "B"
+    assert item.tags == ("habilitação",)
+
+
+def test_ato_administrativo_vence_habilitacao_no_mesmo_item():
+    """Um extrato que fala de habilitação continua sendo um extrato."""
+    pub = _pub_titulado("EXTRATO DE TERMO DE HABILITAÇÃO Nº 3/2026")
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", resumo="habilita"))
+    assert item.categoria == "X"
+    assert "regra:b-para-a" not in item.tags
+
+
+def test_regra_de_categoria_preserva_as_tags_do_modelo():
+    pub = _pub(1)
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", resumo="Habilita leitos"))
+    assert item.tags == ("habilitação", "regra:b-para-a")
+
+
 # ── caminho feliz ───────────────────────────────────────────────────────
 def test_lote_unico_classifica_os_sete_itens_da_fixture(cfg, dir_fixtures):
     carga = carregar(dir_fixtures / "boletim", date(2026, 9, 3), ["inlabs", "iofmg"])

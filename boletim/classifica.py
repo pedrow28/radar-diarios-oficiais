@@ -4,11 +4,18 @@ Três defesas contra o modelo, na ordem em que custam: validação do schema,
 reconciliação por id e bisseção do lote. A quarta e última é o fallback D, que
 nunca deixa uma publicação sumir da edição por causa de uma resposta ruim -
 ela aparece como "outro ato", marcada, em vez de desaparecer em silêncio.
+
+Depois que a resposta chega há um último passo, este determinístico: as regras
+de `item_de_resposta`. Elas existem porque o prompt não fecha fronteira - na
+semana de 31/08 as mesmas habilitações saíram A numa execução e B na seguinte,
+com a instrução literal nos dois casos. O que precisa ser estável entre
+execuções vira código; o prompt fica com o que é julgamento.
 """
 
 from __future__ import annotations
 
 import math
+import re
 import time
 from typing import Any, Callable, Sequence
 
@@ -256,9 +263,10 @@ def _completar(
 def item_de_resposta(pub: Publicacao, resposta: dict[str, Any]) -> Item:
     """Junta o que o `radar` coletou com o juízo que o LLM emitiu.
 
-    Os fatos vêm sempre da publicação; do modelo só vem a leitura dela - com uma
-    exceção determinística: o piso de relevância do IOF-MG, abaixo.
+    Os fatos vêm sempre da publicação; do modelo vem a leitura dela, já passada
+    pelas regras determinísticas de `_pos_processar`.
     """
+    categoria, relevancia, tags = _pos_processar(pub, resposta)
     return Item(
         id=pub.id,
         fonte=pub.fonte,
@@ -272,17 +280,73 @@ def item_de_resposta(pub: Publicacao, resposta: dict[str, Any]) -> Item:
         edicao=pub.edicao,
         titulo=pub.titulo,
         url=pub.url,
-        categoria=resposta["categoria"],
-        relevancia=_relevancia(pub, resposta),
+        categoria=categoria,
+        relevancia=relevancia,
         resumo=resposta["resumo"],
         por_que_importa=resposta["por_que_importa"],
         valor_brl=resposta["valor_brl"],
         entes=tuple(resposta["entes"]),
-        tags=tuple(resposta["tags"]),
+        tags=tags,
     )
 
 
-def _relevancia(pub: Publicacao, resposta: dict[str, Any]) -> int:
+# ── regras determinísticas depois do modelo ─────────────────────────────
+TAG_B_ADMINISTRATIVO = "regra:b-administrativo"
+TAG_B_PARA_A = "regra:b-para-a"
+
+_ACENTOS = str.maketrans("áàâãäéèêëíìîïóòôõöúùûüçñ", "aaaaaeeeeiiiiooooouuuucn")
+_ESPACO = re.compile(r"\s+")
+
+# Tipos de ato que nunca são norma. O modelo os manda para B quando o corpo cita
+# dinheiro, e eles entram na edição ocupando a seção de mudança de regra: em
+# 31/08, 5 dos 8 itens de B eram extrato ou retificação.
+_TITULO_ADMINISTRATIVO = re.compile(
+    r"^(?:extrato|retificacao|aviso|edital de (?:notificacao|intimacao)"
+    r"|despacho|ata|termo aditivo|apostilamento)\b"
+)
+# Vocabulário de captação. Habilitar, credenciar e mexer em teto é dinheiro novo
+# para quem lê o boletim, não mudança de regra - e é exatamente a fronteira que
+# o modelo atravessa de uma execução para a outra.
+_CAPTACAO = re.compile(
+    r"\b(?:habilita|credencia|qualifica|desabilita|descredencia"
+    r"|renova(?:cao)? (?:da )?habilitacao|teto|limite financeiro"
+    r"|incremento|repasse)"
+)
+
+
+def _normalizar(texto: str) -> str:
+    """Caixa baixa, sem acento e com espaço único: o alvo de todas as regras."""
+    return _ESPACO.sub(" ", texto.casefold().translate(_ACENTOS))
+
+
+def _pos_processar(
+    pub: Publicacao, resposta: dict[str, Any]
+) -> tuple[str, int, tuple[str, ...]]:
+    """Aplica as regras determinísticas à resposta do modelo.
+
+    A ordem importa: a categoria é decidida antes da relevância, porque o piso
+    do IOF-MG olha a categoria final, e o ato administrativo que sai de B leva a
+    relevância a zero de qualquer jeito.
+
+    Cada regra que muda alguma coisa deixa uma tag no item, para que a auditoria
+    de uma rodada saiba dizer o que foi do modelo e o que foi do código.
+    """
+    categoria = resposta["categoria"]
+    relevancia = resposta["relevancia"]
+    tags = list(resposta["tags"])
+
+    if categoria == "B":
+        if _TITULO_ADMINISTRATIVO.search(_normalizar(pub.titulo)):
+            categoria, relevancia = "X", 0
+            tags.append(TAG_B_ADMINISTRATIVO)
+        elif _CAPTACAO.search(_normalizar(f"{pub.titulo} {resposta['resumo']}")):
+            categoria = "A"
+            tags.append(TAG_B_PARA_A)
+
+    return categoria, _relevancia(pub, categoria, relevancia), tuple(tags)
+
+
+def _relevancia(pub: Publicacao, categoria: str, relevancia: int) -> int:
     """Piso de relevância para o que sai do Diário Oficial de Minas Gerais.
 
     Todo ato do IOF-MG é mineiro por definição, e Minas é o mercado do boletim.
@@ -291,8 +355,7 @@ def _relevancia(pub: Publicacao, resposta: dict[str, Any]) -> int:
     município mineiro. Vale só para A e B - um ato de rotina do estado não vira
     prioridade só por ser de Minas.
     """
-    relevancia = resposta["relevancia"]
-    if pub.fonte == "iofmg" and resposta["categoria"] in ("A", "B"):
+    if pub.fonte == "iofmg" and categoria in ("A", "B"):
         return max(relevancia, _RELEVANCIA_MAXIMA)
     return relevancia
 
