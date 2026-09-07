@@ -183,6 +183,26 @@ lotes, para receber categoria, resumo e relevância. As categorias são cinco:
 | D         | fato administrativo relevante, sem recurso e sem regra nova     |
 | X         | irrelevante; fica em `itens.json`, fora da edição               |
 
+**Regras determinísticas depois do modelo.** A resposta do LLM ainda passa por
+quatro regras em `boletim.classifica.item_de_resposta`, e elas existem porque o
+prompt não fecha fronteira: numa semana real as mesmas habilitações saíram A em
+uma execução e B na seguinte, com a instrução literal nos dois casos. O que
+precisa ser estável entre execuções fica no código; o prompt fica com o que é
+julgamento. Cada regra que muda alguma coisa deixa a sua tag no item.
+
+- **B que é ato administrativo vira X.** Extrato, retificação, aviso, edital de
+  notificação ou intimação, despacho, ata, termo aditivo e apostilamento nunca
+  são norma, mesmo quando o corpo cita dinheiro.
+- **B que é habilitação vira A.** Habilitar, credenciar, qualificar, mexer em
+  teto, limite financeiro, incremento ou repasse é dinheiro novo para quem
+  capta, não mudança de regra.
+- **Fora de Minas, a relevância de A não passa de 2.** É a contraparte do piso
+  do IOF-MG: as marcas estão em `boletim.marcas_mg`, e B fica de fora porque
+  regra federal alcança Minas junto com o país.
+- **A cifra não se repete no `por_que_importa`.** O `valor_brl` já tem linha
+  própria na edição; a cifra só é removida quando sai entre parênteses ou
+  introduzida por preposição, casos em que o que sobra continua sendo uma frase.
+
 ### Rodar local
 
 ```bash
