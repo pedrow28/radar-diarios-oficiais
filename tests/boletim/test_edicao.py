@@ -283,6 +283,58 @@ def test_montar_edicao_repete_uma_vez_quando_a_voz_reprova():
     assert "pergunta retórica" in llm.chamadas[1][2]
 
 
+def test_titulo_acima_de_90_caracteres_volta_para_o_modelo():
+    """Os limites do prompt não eram checados, e em v2 saíram títulos de 128 e
+    98 caracteres. O comprimento é a única regra de voz que dá para conferir
+    sozinho, e o caminho da correção já existe: entra em `_erros_de_voz` e o
+    modelo recebe o número junto com o pedido.
+    """
+    longo = (
+        "3 hospitais de Minas entram no programa federal de especialidades e "
+        "somam R$ 180 milhões em créditos anuais"
+    )
+    assert len(longo) > 90
+    llm = LLMFalso({"editorial": [dict(_editorial_bom(), titulo=longo), _editorial_bom()]})
+    edicao = _montar([_item(categoria="A")], llm)
+
+    assert edicao.titulo == "3 habilitações e 1 teto MAC ampliado em MG"
+    assert len(llm.chamadas) == 2
+    assert f"título com {len(longo)} caracteres (máx. 90)" in llm.chamadas[1][2]
+
+
+def test_titulo_de_90_caracteres_passa():
+    no_limite = (
+        "3 hospitais de Minas entram no programa federal e somam "
+        "R$ 180 milhões em créditos anuais."
+    )
+    assert len(no_limite) == 90
+    llm = LLMFalso({"editorial": dict(_editorial_bom(), titulo=no_limite)})
+    edicao = _montar([_item(categoria="A")], llm)
+
+    assert edicao.titulo == no_limite
+    assert len(llm.chamadas) == 1
+
+
+def test_bullet_acima_de_140_caracteres_volta_para_o_modelo():
+    longo = "a" * 141
+    ruim = dict(_editorial_bom(), em_30_segundos=["fato 1", longo, "fato 3"])
+    llm = LLMFalso({"editorial": [ruim, _editorial_bom()]})
+    edicao = _montar([_item(categoria="A")], llm)
+
+    assert len(llm.chamadas) == 2
+    assert "bullet com 141 caracteres (máx. 140)" in llm.chamadas[1][2]
+    assert edicao.em_30_segundos == ("fato 1", "fato 2", "fato 3")
+
+
+def test_intro_acima_de_400_caracteres_volta_para_o_modelo():
+    longa = "b" * 401
+    llm = LLMFalso({"editorial": [dict(_editorial_bom(), intro=longa), _editorial_bom()]})
+    _montar([_item(categoria="A")], llm)
+
+    assert len(llm.chamadas) == 2
+    assert "intro com 401 caracteres (máx. 400)" in llm.chamadas[1][2]
+
+
 def test_montar_edicao_normaliza_o_travessao_em_vez_de_reprovar():
     """Travessão é erro de digitação do modelo, não de julgamento editorial.
 

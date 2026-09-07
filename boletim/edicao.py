@@ -113,6 +113,13 @@ _CONECTIVOS = frozenset(
 _MIN_CAPITALIZADAS_TITULO_CASE = 4
 _FRACAO_TITULO_CASE = 0.6
 
+# Limites de comprimento da abertura. Estavam só no prompt, e em v2 da semana
+# saíram títulos de 128 e 98 caracteres: o modelo obedece ao número quando o
+# número volta medido na correção.
+MAX_TITULO = 90
+MAX_BULLET = 140
+MAX_INTRO = 400
+
 SEM_RELEVANTES = "Sem publicações relevantes nesta data"
 INTRO_SEM_RELEVANTES = (
     "Nenhuma publicação de captação de recursos, mudança de regra ou edital nesta "
@@ -320,10 +327,28 @@ def _normalizado(editorial: dict[str, Any]) -> dict[str, Any]:
 
 
 def _erros_de_voz(editorial: dict[str, Any]) -> list[str]:
+    """Voz e comprimento dos três campos da abertura.
+
+    O comprimento vivia só no prompt, e em v2 da semana saíram títulos de 128 e
+    98 caracteres e bullets acima de 140. É a regra mais fácil de conferir sem o
+    modelo, e o caminho da correção já existe: o número medido volta na segunda
+    chamada, e se ela também falhar entra o fallback determinístico de sempre.
+    """
     partes = [editorial["titulo"], editorial["intro"], *editorial["em_30_segundos"]]
     erros: list[str] = []
     for parte in partes:
         for erro in validar_voz(parte):
+            if erro not in erros:
+                erros.append(erro)
+
+    limites = [
+        ("título", editorial["titulo"], MAX_TITULO),
+        ("intro", editorial["intro"], MAX_INTRO),
+        *(("bullet", b, MAX_BULLET) for b in editorial["em_30_segundos"]),
+    ]
+    for nome, texto, maximo in limites:
+        if len(texto) > maximo:
+            erro = f"{nome} com {len(texto)} caracteres (máx. {maximo})"
             if erro not in erros:
                 erros.append(erro)
     return erros
