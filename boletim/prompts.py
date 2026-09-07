@@ -131,7 +131,7 @@ instituição: comece pelo número e pelo que mudou;
 - em_30_segundos: de 3 a 5 frases curtas, de até 140 caracteres cada - conte antes de \
 responder -, e cada uma com o órgão e o número correspondente;
 - intro: exatamente 2 frases apresentando o dia para o gestor, dizendo o que ele precisa \
-olhar primeiro.
+olhar primeiro, somando no máximo 400 caracteres - conte antes de responder.
 
 Não converta unidade de valor: um item de R$ 104.838.525,53 são R$ 104,8 milhões, nunca \
 R$ 104 bilhões. Some valores só quando os itens somados estiverem todos no que você recebeu.
