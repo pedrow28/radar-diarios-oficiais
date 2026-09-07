@@ -359,6 +359,20 @@ _ESCOPO_NACIONAL = re.compile(
 # itens repetiam a cifra em v1 da semana e os mesmos 27 em v2.
 _MOEDA = r"R\$\s?[\d.,]*\d(?:\s?(?:milh(?:ão|ões)|bilh(?:ão|ões)|mil|bi)\b)?"
 _MOEDA_RX = re.compile(_MOEDA, re.IGNORECASE)
+# A mesma expressão com os grupos separados, para ler o número que ela escreve.
+_MOEDA_LIDA = re.compile(
+    r"R\$\s?(?P<numero>[\d.,]*\d)"
+    r"(?:\s?(?P<unidade>milh(?:ão|ões)|bilh(?:ão|ões)|mil|bi)\b)?",
+    re.IGNORECASE,
+)
+_MULTIPLICADOR = {
+    "mil": 1_000.0,
+    "bi": 1_000_000_000.0,
+    "milhao": 1_000_000.0,
+    "milhoes": 1_000_000.0,
+    "bilhao": 1_000_000_000.0,
+    "bilhoes": 1_000_000_000.0,
+}
 # "R$ 3 milhões anuais" sai inteiro: deixar "anuais" para trás produz
 # concordância solta ("nova fonte de receita anuais").
 _UNIDADE = r"(?:\s+(?:anuais|anual|mensais|mensal|adicionais|adicional))?"
@@ -386,7 +400,7 @@ _REMOCOES = tuple(
             rf"{_MOEDA}{_UNIDADE}\s+em\s+",
             r"\1 ",
         ),
-        (rf"\s+(?:de|em|com|por)\s+(?:{_APROXIMACAO})?{_MOEDA}{_UNIDADE}", ""),
+        (rf"\s+(?:de|em|para|com|por)\s+(?:{_APROXIMACAO})?{_MOEDA}{_UNIDADE}", ""),
     )
 )
 _PASSES_REMOCAO = 3
@@ -415,6 +429,12 @@ def _sem_cifra_repetida(
 ) -> str | None:
     """Tira do argumento a cifra que o item já carrega em `valor_brl`.
 
+    Só sai a cifra que repete o `valor_brl`. A regra removia qualquer expressão
+    monetária, e com isso "reduz o teto de R$ 10 milhões para R$ 8 milhões"
+    perdia justamente o número que o card não mostra: o valor antigo, que é o
+    que dá sentido à mudança. Cada candidata é lida e comparada com o valor do
+    item, na precisão em que ela mesma foi escrita.
+
     Sem `valor_brl` não há repetição - a cifra do texto é a única que existe - e
     o texto passa intacto. Depois do corte valem duas guardas: o que sobrou
     precisa continuar tendo tamanho de frase e não pode ter perdido o verbo que
@@ -429,7 +449,12 @@ def _sem_cifra_repetida(
     for _ in range(_PASSES_REMOCAO):
         antes = novo
         for remocao, troca in _REMOCOES:
-            novo = remocao.sub(troca, novo)
+            novo = remocao.sub(
+                lambda m, troca=troca: (
+                    m.expand(troca) if _repete_o_valor(m.group(0), valor_brl) else m.group(0)
+                ),
+                novo,
+            )
         if novo == antes:
             break
 
@@ -439,6 +464,31 @@ def _sem_cifra_repetida(
     if _tem_verbo(por_que_importa) and not _tem_verbo(novo):
         return por_que_importa
     return novo
+
+
+def _repete_o_valor(trecho: str, valor_brl: float) -> bool:
+    """Se a cifra escrita no trecho é a mesma que o item já carrega.
+
+    A comparação é feita na precisão em que o modelo escreveu, e com folga de
+    uma casa: ele tanto arredonda quanto corta, e nas sete edições reais fez as
+    duas coisas - "quase R$ 95 milhões" para 94.274.974,56 e "R$ 8,5 milhões"
+    para 8.570.045,94. Uma casa é o suficiente para reconhecer os dois e ainda
+    separar cifras diferentes: "R$ 10 milhões" não repete um valor de 8 milhões.
+    Vale para a forma por extenso e para a de `formatar_brl` ("R$ 721.233,95").
+    """
+    achado = _MOEDA_LIDA.search(trecho)
+    if achado is None:
+        return False
+    escrito = achado.group("numero").replace(".", "").replace(",", ".")
+    try:
+        numero = float(escrito)
+    except ValueError:
+        return False
+    unidade = _normalizar(achado.group("unidade") or "")
+    esperado = valor_brl / _MULTIPLICADOR.get(unidade, 1.0)
+    _, _, decimais = escrito.partition(".")
+    # `- 1e-9` mantém a diferença de uma casa cheia (8 contra 9) do lado de fora.
+    return abs(esperado - numero) < 10.0 ** -len(decimais) - 1e-9
 
 
 def _limpar(texto: str) -> str:

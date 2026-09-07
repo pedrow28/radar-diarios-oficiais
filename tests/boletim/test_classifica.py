@@ -447,7 +447,7 @@ def test_cifra_entre_parenteses_sai_inteira():
         "indiretamente entidades que executam projetos de reabilitação e inclusão "
         "de pessoas com deficiência."
     )
-    assert _por_que_importa(antes) == (
+    assert _por_que_importa(antes, valor=849000.0) == (
         "Muda regra de acesso a recursos para reabilitação. Impacta indiretamente "
         "entidades que executam projetos de reabilitação e inclusão de pessoas com "
         "deficiência."
@@ -471,7 +471,7 @@ def test_cifra_em_no_valor_de_sai_com_a_locucao_inteira():
         "60 vezes via boleto no INVESTSUS. Não quitação incorre em Tomada de Contas "
         "Especial."
     )
-    assert _por_que_importa(antes) == (
+    assert _por_que_importa(antes, valor=6300368.77) == (
         "MUDA REGRA: Glosas técnicas são parceladas em 60 vezes via boleto no "
         "INVESTSUS. Não quitação incorre em Tomada de Contas Especial."
     )
@@ -483,7 +483,7 @@ def test_cifra_apos_gerundio_de_soma_sai_com_o_gerundio():
         "estabelecimentos credenciados com matrizes de oferta somando R$ 70,4 "
         "milhões; requer pactuação na CIB estadual"
     )
-    assert _por_que_importa(antes) == (
+    assert _por_que_importa(antes, valor=70400000.0) == (
         "Abre possibilidade de contratação por estados/municípios; três grandes "
         "estabelecimentos credenciados com matrizes de oferta; requer pactuação na "
         "CIB estadual"
@@ -500,7 +500,7 @@ def test_cifra_entre_preposicao_e_complemento_deixa_a_preposicao_reger():
         "Abre acesso a R$ 3,04 milhões anuais em CVCF para hospital "
         "especializado de Maceió"
     )
-    assert _por_que_importa(antes) == (
+    assert _por_que_importa(antes, valor=3040000.0) == (
         "Abre acesso a CVCF para hospital especializado de Maceió"
     )
 
@@ -515,7 +515,45 @@ def test_cifra_que_e_o_objeto_da_frase_fica_onde_esta():
         "Muda os valores máximos que estabelecimentos podem receber. Define "
         "R$ 721.233,95 como novo limite anual."
     )
-    assert _por_que_importa(antes) == antes
+    assert _por_que_importa(antes, valor=721233.95) == antes
+
+
+def test_so_sai_a_cifra_que_repete_o_valor_do_item():
+    """Duas cifras na frase, e só uma delas está no card.
+
+    A regra removia qualquer expressão monetária, e aqui isso apagaria o valor
+    antigo - o único número que o card não mostra e que dá sentido à mudança.
+    """
+    antes = "Reduz o teto anual de R$ 10 milhões para R$ 8 milhões no custeio do serviço"
+    assert _por_que_importa(antes, valor=8000000.0) == (
+        "Reduz o teto anual de R$ 10 milhões no custeio do serviço"
+    )
+
+
+@pytest.mark.parametrize(
+    ("antes", "valor"),
+    [
+        # arredondado para cima
+        ("Novo repasse de R$ 1,1 milhão para a Santa Casa", 1149000.0),
+        # cortado, como o modelo fez em 31/08 com 8.570.045,94
+        ("Novo repasse de R$ 8,5 milhões para a Santa Casa", 8570045.94),
+        # escrito por extenso a partir de 94.274.974,56
+        ("Novo repasse de quase R$ 95 milhões para a Santa Casa", 94274974.56),
+        # a forma de `formatar_brl`, sem arredondamento nenhum
+        ("Novo repasse de R$ 721.233,95 para a Santa Casa", 721233.95),
+    ],
+)
+def test_cifra_arredondada_pelo_modelo_ainda_repete_o_valor(antes, valor):
+    """O modelo tanto arredonda quanto corta, e as duas formas repetem o valor."""
+    assert _por_que_importa(antes, valor=valor) == "Novo repasse para a Santa Casa"
+
+
+def test_cifra_de_outro_ato_nao_sai():
+    antes = (
+        "Habilita o serviço e mantém a contrapartida municipal de R$ 500 mil "
+        "prevista no convênio anterior"
+    )
+    assert _por_que_importa(antes, valor=2700000.0) == antes
 
 
 def test_cifra_fica_quando_o_item_nao_tem_valor():
