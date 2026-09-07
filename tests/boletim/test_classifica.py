@@ -174,6 +174,23 @@ def test_ato_administrativo_so_conta_no_comeco_do_titulo():
     assert item.categoria == "B"
 
 
+def test_aviso_de_chamamento_publico_nao_e_ato_administrativo():
+    """O "aviso" solto apagava o começo de um chamamento.
+
+    `AVISO DE CHAMAMENTO PÚBLICO` abre um edital - é a seção C inteira - e a
+    regra o mandava para X, fora da edição. Só o aviso que anuncia trâmite
+    (licitação, alteração de edital, resultado, homologação) é administrativo.
+    """
+    pub = _pub_titulado("AVISO DE CHAMAMENTO PÚBLICO Nº 4/2026")
+    for categoria in ("B", "C"):
+        item = item_de_resposta(
+            pub,
+            _resposta(pub, categoria=categoria, resumo="chamamento para projetos"),
+        )
+        assert item.categoria == categoria
+        assert "regra:b-administrativo" not in item.tags
+
+
 # ── R2: B que é habilitação vira A ──────────────────────────────────────
 @pytest.mark.parametrize(
     "resumo",
@@ -217,6 +234,51 @@ def test_ato_administrativo_vence_habilitacao_no_mesmo_item():
     item = item_de_resposta(pub, _resposta(pub, categoria="B", resumo="habilita"))
     assert item.categoria == "X"
     assert "regra:b-para-a" not in item.tags
+
+
+def test_rdc_da_anvisa_que_habilita_a_reblas_continua_b():
+    """Caso real de 31/08, presente em v1, v2 e v3: a RDC nº 1.039.
+
+    O verbo "habilita" aparece no fim do resumo, falando da Reblas, e a regra
+    puxava uma norma da Anvisa para a seção de captação - onde a R3 ainda a
+    rebaixava para relevância 2 por não citar Minas. Título que se declara norma
+    e verbo fora da abertura do resumo: duas razões para ela ficar em B.
+    """
+    pub = _pub_titulado(
+        "RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA nº 1.039, DE 26 DE AGOSTO DE 2026(*)"
+    )
+    resumo = (
+        "RDC ANVISA Nº 1.039 estabelece novos critérios, requisitos e boas práticas "
+        "para laboratórios analíticos; habilita Rede Brasileira de Laboratórios "
+        "Analíticos em Saúde (Reblas)."
+    )
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", relevancia=3, resumo=resumo))
+    assert item.categoria == "B"
+    assert item.relevancia == 3
+    assert "regra:b-para-a" not in item.tags
+
+
+def test_ato_de_alcance_nacional_com_teto_continua_b():
+    """Um ato que muda o teto de todos os municípios é regra, não captação."""
+    pub = _pub_titulado("PORTARIA GM/MS Nº 12.500, DE 3 DE SETEMBRO DE 2026")
+    resumo = (
+        "Altera o critério de cálculo do teto financeiro de todos os municípios "
+        "para o custeio da atenção especializada."
+    )
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", relevancia=3, resumo=resumo))
+    assert item.categoria == "B"
+    assert item.relevancia == 3
+    assert "regra:b-para-a" not in item.tags
+
+
+def test_verbo_de_captacao_no_fim_do_resumo_nao_move_o_item():
+    pub = _pub(1)
+    resumo = (
+        "Institui novo procedimento de auditoria para a rede de atenção "
+        "especializada e, no artigo 12, cita a habilitação como pré-requisito."
+    )
+    item = item_de_resposta(pub, _resposta(pub, categoria="B", resumo=resumo))
+    assert item.categoria == "B"
 
 
 def test_regra_de_categoria_preserva_as_tags_do_modelo():
@@ -316,6 +378,28 @@ def test_b_que_virou_a_tambem_recebe_o_teto():
     resposta = _resposta(pub, categoria="B", relevancia=3, resumo="Habilita leitos")
     item = item_de_resposta(pub, resposta)
     assert item.categoria == "A"
+    assert item.relevancia == 2
+
+
+def test_b_que_virou_a_sem_ente_nominal_nao_recebe_o_teto():
+    """Sem ente nominal, o que a R2 moveu não é alocação para um lugar.
+
+    O teto existe para não deixar a habilitação da Bahia passar à frente da
+    deliberação mineira. Um ato de alcance amplo que a R2 puxou para A não tem
+    esse lugar, e rebaixá-lo repetiria em A o erro que o teto evita em B.
+    """
+    pub = _pub(1)
+    resposta = _resposta(
+        pub, categoria="B", relevancia=3, resumo="Habilita leitos", entes=[]
+    )
+    item = item_de_resposta(pub, resposta)
+    assert item.categoria == "A"
+    assert item.relevancia == 3
+
+
+def test_a_do_modelo_sem_ente_nominal_continua_recebendo_o_teto():
+    pub = _pub(1)
+    item = item_de_resposta(pub, _resposta(pub, categoria="A", relevancia=3, entes=[]))
     assert item.relevancia == 2
 
 

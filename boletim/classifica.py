@@ -312,10 +312,20 @@ _ESPACO = re.compile(r"\s+")
 #
 # O plural conta: o DOU publica "EXTRATOS DE REGISTROS DE PREÇOS" e "EXTRATOS DE
 # CONVÊNIOS" como um bloco só, e sem ele dois itens de 03/09 e 04/09 escapavam.
+#
+# "Aviso" sozinho não serve: "AVISO DE CHAMAMENTO PÚBLICO" é o começo de um
+# chamamento, o coração da seção C, e a regra o mandava para fora da edição.
+# Só o aviso que anuncia um trâmite - licitação, alteração de edital, resultado,
+# homologação, suspensão - é ato administrativo.
+_AVISO_ADMINISTRATIVO = (
+    "licita|altera|padroniza|resultado|homologa|suspens|revoga|dispensa"
+    "|penalidade|cancelamento"
+)
 _TITULO_ADMINISTRATIVO = re.compile(
-    r"^(?:extratos?|retifica(?:cao|coes)|avisos?"
+    r"^(?:(?:extratos?|retifica(?:cao|coes)"
     r"|edita(?:l|is) de (?:notificac(?:ao|oes)|intimac(?:ao|oes))"
     r"|despachos?|atas?|termos? aditivos?|apostilamentos?)\b"
+    rf"|avisos? de (?:{_AVISO_ADMINISTRATIVO}))"
 )
 # Vocabulário de captação. Habilitar, credenciar e mexer em teto é dinheiro novo
 # para quem lê o boletim, não mudança de regra - e é exatamente a fronteira que
@@ -324,6 +334,22 @@ _CAPTACAO = re.compile(
     r"\b(?:habilita|credencia|qualifica|desabilita|descredencia"
     r"|renova(?:cao)? (?:da )?habilitacao|teto|limite financeiro"
     r"|incremento|repasse)"
+)
+# O verbo de captação só conta onde o ato se anuncia: no título ou na abertura
+# do resumo. Procurá-lo no resumo inteiro puxava norma de verdade para A - a
+# `RESOLUÇÃO DA DIRETORIA COLEGIADA ANVISA nº 1.039` virou captação porque o
+# corpo dizia "habilita a Reblas". É o mesmo recorte que `medir-g11.py` usa.
+_ABERTURA_RESUMO = 60
+# Ato cujo título já se declara norma não é habilitação, por mais que o corpo
+# fale de teto ou de repasse.
+_TITULO_NORMATIVO = re.compile(
+    r"^(?:resolucao|rdc|instrucao normativa|decreto|lei)\b"
+)
+# Alcance nacional é a outra marca de norma: "altera o critério de cálculo do
+# teto financeiro de todos os municípios" muda regra para o país inteiro, e em
+# A ele ainda levava o teto de relevância da R3 por não citar Minas.
+_ESCOPO_NACIONAL = re.compile(
+    r"todos os municipios|todos os estados|nacional|em todo o pais"
 )
 
 
@@ -496,17 +522,41 @@ def _pos_processar(
     categoria = resposta["categoria"]
     relevancia = resposta["relevancia"]
     tags = list(resposta["tags"])
+    movido_para_a = False
 
     if categoria == "B":
         if _TITULO_ADMINISTRATIVO.search(_normalizar(pub.titulo)):
             categoria, relevancia = "X", 0
             tags.append(TAG_B_ADMINISTRATIVO)
-        elif _CAPTACAO.search(_normalizar(f"{pub.titulo} {resposta['resumo']}")):
+        elif _e_captacao(pub, resposta):
             categoria = "A"
+            movido_para_a = True
             tags.append(TAG_B_PARA_A)
 
-    relevancia = _relevancia(pub, resposta, categoria, relevancia, cfg)
+    relevancia = _relevancia(pub, resposta, categoria, relevancia, cfg, movido_para_a)
     return categoria, relevancia, tuple(tags)
+
+
+def _e_captacao(pub: Publicacao, resposta: dict[str, Any]) -> bool:
+    """Se o B que o modelo devolveu é, na verdade, dinheiro novo para alguém.
+
+    Duas guardas antes do vocabulário, e as duas vieram de casos reais: um ato
+    que se anuncia como norma no título continua norma (a RDC da Anvisa que
+    "habilita a Reblas" no corpo), e um ato de alcance nacional também (o que
+    "altera o critério de cálculo do teto financeiro de todos os municípios").
+    Os dois viravam A, e em A o teto da R3 ainda os rebaixava por não citarem
+    Minas: uma mudança de regra federal saía da seção certa e da ordenação.
+
+    O verbo vale no título ou nos primeiros 60 caracteres do resumo, onde o ato
+    diz o que faz. Mais adiante ele costuma ser contexto.
+    """
+    titulo = _normalizar(pub.titulo)
+    resumo = _normalizar(resposta["resumo"])
+    if _TITULO_NORMATIVO.match(titulo) or _ESCOPO_NACIONAL.search(resumo):
+        return False
+    return bool(
+        _CAPTACAO.search(titulo) or _CAPTACAO.search(resumo[:_ABERTURA_RESUMO])
+    )
 
 
 def _relevancia(
@@ -515,6 +565,7 @@ def _relevancia(
     categoria: str,
     relevancia: int,
     cfg: ConfigBoletim,
+    movido_para_a: bool = False,
 ) -> int:
     """Piso do IOF-MG e teto de quem não fala de Minas: as duas pontas da régua.
 
@@ -527,9 +578,16 @@ def _relevancia(
     O teto é a contraparte e vale só para A: captação que não cita Minas em
     lugar nenhum não é prioridade do dia, por maior que seja a cifra. B fica de
     fora porque mudança de regra federal alcança Minas junto com o país.
+
+    O A que veio da R2 só recebe o teto quando o ato nomeia o ente beneficiado:
+    aí ele é mesmo alocação para um lugar, e o lugar não é Minas. Sem ente
+    nominal, o que a R2 moveu é um ato de alcance amplo, e rebaixá-lo repetiria
+    em A o erro que o teto existe para evitar em B.
     """
     if pub.fonte == "iofmg" and categoria in ("A", "B"):
         return max(relevancia, _RELEVANCIA_MAXIMA)
+    if movido_para_a and not resposta["entes"]:
+        return relevancia
     if categoria == "A" and not _tem_marca_mg(pub, resposta, cfg):
         return min(relevancia, _RELEVANCIA_FORA_DE_MG)
     return relevancia
