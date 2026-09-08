@@ -73,6 +73,11 @@ def reconstruir_indice(cfg: ConfigBoletim) -> Path:
     # edição nenhuma não pode inventar um `edicoes.json` vazio.
     if entradas != arquivadas:
         _gravar_edicoes(dir_site, entradas)
+    # Os assets vêm junto: `boletim site` é o comando de quem mexeu no CSS e
+    # quer ver o site novo. Sem esta linha ele regerava um `index.html` que
+    # pedia uma folha de estilo antiga - e página com CSS velho é pior que
+    # página sem CSS nenhum, porque ninguém repara.
+    _copiar_assets(dir_site)
     return _gravar_indice_html(dir_site, indice_html)
 
 
@@ -82,9 +87,13 @@ def valor_dia(edicao: Edicao) -> float | None:
     Zero e "não declarado" são coisas diferentes e a página as trata diferente:
     um dia sem cifra deixa a coluna do dinheiro vazia, e não escreve `R$ 0,00`
     em cima de atos que movimentaram dinheiro sem dizer quanto.
+
+    A soma é arredondada em centavos: somar float em ponto flutuante devolve
+    `18622424.080000002`, e esse rastro de binário fica gravado no
+    `edicoes.json`, que é arquivo público e legível.
     """
     valores = [i.valor_brl for i in edicao.secoes.get("A", ()) if i.valor_brl]
-    return sum(valores) if valores else None
+    return _somar(valores)
 
 
 def _ficha(edicao: Edicao) -> dict[str, Any]:
@@ -132,7 +141,12 @@ def _valor_dia_do_disco(data: str, cfg: ConfigBoletim) -> float | None:
         for item in ficha.get("itens", ())
         if item.get("categoria") == "A" and item.get("valor_brl")
     ]
-    return sum(valores) if valores else None
+    return _somar(valores)
+
+
+def _somar(valores: list[float]) -> float | None:
+    """A soma em centavos, ou `None` quando não há cifra nenhuma."""
+    return round(sum(valores), 2) if valores else None
 
 
 def _ler_edicoes(dir_site: Path) -> list[dict[str, Any]]:

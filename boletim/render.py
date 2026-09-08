@@ -246,6 +246,11 @@ def _eh_sigla(palavra: str) -> bool:
     return _NAO_LETRA.sub("", nucleo) in SIGLAS
 
 
+def _sem_pontuacao_final(texto: str) -> str:
+    """Tira espaço e pontuação de fim de linha, nesta ordem e nas duas pontas."""
+    return texto.strip().rstrip(_PONTUACAO_FINAL).strip()
+
+
 def titulo_ato(titulo: str) -> str:
     """Título do ato em formato de sentença, sem a data que já está na linha de meta.
 
@@ -253,8 +258,15 @@ def titulo_ato(titulo: str) -> str:
     data no fim: "PORTARIA GM/MS Nº 3.412, DE 2 DE SETEMBRO DE 2026". O
     DESIGN pede título em formato de sentença, e a data sai porque já aparece
     na linha de meta do item - repeti-la no título é ruído, não reforço.
+
+    A pontuação que segurava a data sai com ela, antes e depois do corte. Uma
+    parte dos títulos já chega do diário truncada na vírgula
+    ("DELIBERAÇÃO CIB-SUS/MG Nº 5.960,") e outra fecha com ponto final
+    ("... DE 02 DE SETEMBRO DE 2026."), que era o que escondia a data do
+    `$` da expressão. Nos dois casos o que sobra é um sinal apontando para um
+    texto que não existe mais.
     """
-    sem_data = _DATA_FINAL.sub("", titulo).strip()
+    sem_data = _sem_pontuacao_final(_DATA_FINAL.sub("", _sem_pontuacao_final(titulo)))
     palavras = sem_data.split()
     resultado: list[str] = []
     for indice, palavra in enumerate(palavras):

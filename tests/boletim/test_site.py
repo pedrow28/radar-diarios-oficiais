@@ -15,7 +15,7 @@ import pytest
 
 from boletim.config import ConfigBoletim
 from boletim.render import render_web
-from boletim.site import publicar, reconstruir_indice
+from boletim.site import publicar, reconstruir_indice, valor_dia
 from tests.fixtures.boletim.edicao_exemplo import edicao_exemplo
 
 
@@ -141,6 +141,88 @@ def test_reconstruir_indice_sem_edicoes_ainda_gera_a_pagina(cfg):
     # Reconstruir não inventa arquivo: um site sem edição nenhuma não ganha um
     # `edicoes.json` vazio só por causa da regeneração do índice.
     assert not (cfg.dir_site / "edicoes.json").exists()
+
+
+def test_reconstruir_indice_leva_os_assets_junto(edicao, cfg):
+    """`boletim site` é o comando de quem mexeu no CSS e quer ver o site novo.
+
+    Sem copiar os assets ele regerava um `index.html` que pedia uma folha de
+    estilo antiga - e página com CSS velho é pior que página sem CSS nenhum,
+    porque ninguém repara.
+    """
+    _publicar(edicao, cfg)
+    for asset in ("site.css", "hero.jpg"):
+        (cfg.dir_site / "assets" / asset).unlink()
+
+    reconstruir_indice(cfg)
+
+    assert (cfg.dir_site / "assets" / "site.css").exists()
+    assert (cfg.dir_site / "assets" / "hero.jpg").exists()
+
+
+def test_reconstruir_num_site_vazio_ja_publica_os_assets(cfg):
+    """Reconstruir não depende de haver edição: o índice em si pede a folha."""
+    reconstruir_indice(cfg)
+
+    assert (cfg.dir_site / "assets" / "site.css").exists()
+    assert (cfg.dir_site / "assets" / "hero.jpg").exists()
+
+
+def test_valor_dia_sai_arredondado_em_centavos(edicao, cfg):
+    """Somar float acumula binário: `edicoes.json` é arquivo público e legível.
+
+    Sem o arredondamento a soma de dois valores em reais vira
+    `29334567.890000004` no arquivo e na página.
+    """
+    duas_cifras = replace(
+        edicao,
+        secoes={
+            **edicao.secoes,
+            "A": (
+                replace(edicao.secoes["A"][0], valor_brl=0.1),
+                replace(edicao.secoes["A"][1], valor_brl=0.2),
+            ),
+        },
+    )
+    assert 0.1 + 0.2 != 0.3  # a premissa do teste, explícita
+    assert valor_dia(duas_cifras) == 0.3
+
+    _publicar(duas_cifras, cfg)
+    bruto = (cfg.dir_site / "edicoes.json").read_text(encoding="utf-8")
+    assert '"valor_dia": 0.3' in bruto
+
+
+def test_valor_dia_reconstruido_do_disco_tambem_sai_arredondado(cfg):
+    """O caminho da ficha antiga soma os mesmos floats e tem o mesmo dever."""
+    antiga = {
+        "data": "2026-09-03",
+        "titulo": "Boletim de 03/09",
+        "url": "edicoes/2026-09-03.html",
+        "contagens": {"A": 2, "B": 0, "C": 0, "D": 0},
+        "parcial": False,
+    }
+    cfg.dir_site.mkdir(parents=True)
+    (cfg.dir_site / "edicoes.json").write_text(
+        json.dumps([antiga], ensure_ascii=False), encoding="utf-8"
+    )
+    dia = cfg.dir_saida / "2026-09-03"
+    dia.mkdir(parents=True)
+    (dia / "itens.json").write_text(
+        json.dumps(
+            {
+                "itens": [
+                    {"categoria": "A", "valor_brl": 0.1},
+                    {"categoria": "A", "valor_brl": 0.2},
+                ]
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    reconstruir_indice(cfg)
+
+    entradas = json.loads((cfg.dir_site / "edicoes.json").read_text(encoding="utf-8"))
+    assert entradas[0]["valor_dia"] == 0.3
 
 
 def test_reconstruir_indice_recalcula_o_valor_dia_que_faltava(edicao, cfg):

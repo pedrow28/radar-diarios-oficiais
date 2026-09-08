@@ -14,6 +14,13 @@
   A coluna do dinheiro é a aresta à direita: o valor de cada ato pendurado na
   linha de base do título, na mesma aresta em todos. Nada mais na página é
   alinhado à direita.
+
+  O esqueleto de títulos é a navegação de quem lê por leitor de tela: `h1` no
+  título da edição, um `h2` por seção real ("Em 30 segundos" e cada categoria
+  com ato) e `h3` em cada ato. Por isso o rótulo da categoria é um `h2` com o
+  eyebrow dentro, e não um `<p>`: 39 `h3` irmãos sem nenhum `h2` entre eles é
+  uma página sem sumário. O eyebrow do cabeçalho continua `<p>` - ali quem abre
+  a página é o `h1`.
 #}
 {% extends "site/base.html.j2" %}
 {% block titulo %}{{ edicao.titulo|sem_travessao }}{% endblock %}
@@ -59,7 +66,7 @@
 {% for categoria in ["A", "B", "C"] %}
 {% if edicao.secoes[categoria] %}
 <div class="secao-atos">
-<p class="eyebrow"><span class="filete"></span><span class="rotulo">{{ rotulos[categoria] }}</span></p>
+<h2 class="eyebrow"><span class="filete"></span><span class="rotulo">{{ rotulos[categoria] }}</span></h2>
 {% for item in edicao.secoes[categoria] %}
 {% if not loop.first %}<hr class="divisor">{% endif %}
 {% include "site/_item.html.j2" %}
@@ -70,7 +77,7 @@
 
 {% if edicao.secoes["D"] %}
 <div class="secao-atos">
-<p class="eyebrow"><span class="filete"></span><span class="rotulo">{{ rotulos["D"] }}</span></p>
+<h2 class="eyebrow"><span class="filete"></span><span class="rotulo">{{ rotulos["D"] }}</span></h2>
 <div class="lista-compacta">
 {# Sem URL de esquema conhecido o título fica de pé, só que sem link: o ato
    continua registrado, que é a razão de existir desta lista. #}

@@ -181,22 +181,38 @@ a { color: inherit; }
 }
 
 /* ── eyebrow e filetes ──────────────────────────────────────────────── */
-.eyebrow { margin-bottom: 32px; }
+/* O rótulo que abre seção na edição é um `<h2>` de verdade: navegação por
+ * títulos é como o leitor de tela varre 46 atos, e um `<p>` em caixa alta não
+ * aparece nessa lista. O elemento zera a tipografia de título e a aparência
+ * continua nos filhos (`.filete` e `.rotulo`), então o tamanho e o tracking do
+ * rótulo não mudam por ele ter virado cabeçalho. */
+.eyebrow {
+  margin: 0 0 32px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--ink);
+}
 .eyebrow .rotulo { display: block; margin-top: 16px; }
 
+/* A hairline do DESIGN.md nasce e morre transparente: o pico fica no meio e as
+ * duas pontas em zero. A versão em ink divide seção e não gasta luz. */
 .filete {
   display: block;
   height: 1px;
   width: 96px;
   border: 0;
   margin: 0;
-  background: linear-gradient(90deg, var(--ink), rgba(199, 210, 232, 0));
+  background: linear-gradient(90deg, transparent, var(--ink), transparent);
 }
 
-/* O filete portador: nasce e morre transparente, com pico a 20%. É o único
- * lugar do site onde a hairline gasta a luz, e ele carrega `data-luz`. */
+/* O filete portador: mesma forma, com o pico a 20% que a lei fixa para a luz.
+ * É o único lugar do site onde a hairline gasta ciano, e ele carrega
+ * `data-luz`. Ele já foi um gradiente de .55 até zero, que era meia hairline:
+ * começava aceso na ponta esquerda e o pico ficava três vezes acima do teto. */
 .filete-luz {
-  background: linear-gradient(90deg, rgba(var(--luz-rgb), .55), rgba(var(--luz-rgb), 0));
+  background: linear-gradient(90deg, transparent, rgba(var(--luz-rgb), .20), transparent);
 }
 
 .divisor {
@@ -507,11 +523,17 @@ a { color: inherit; }
   /* No retrato a foto é uma paisagem 16:9 espremida num quadro vertical, e o
    * corte central perderia justamente a pilha. O enquadramento vai para a
    * direita, o texto desce para o pé da dobra e o overlay desce com ele: a
-   * cena fica em cima, a leitura embaixo, e o gradiente faz a junção. */
+   * cena fica em cima, a leitura embaixo, e o gradiente faz a junção.
+   *
+   * A primeira parada do overlay é de contraste, não de gosto: a 34% a lâmpada
+   * acesa ficava bem debaixo da logo branca e a marca media 2.60:1, abaixo do
+   * piso de 3:1 para elemento gráfico. A 55% a cena continua legível e a logo
+   * volta para cima do piso. No desktop o overlay é o diagonal do pipeline e a
+   * logo nunca cai sobre a lâmpada, então ele não muda. */
   .hero { padding: 96px 0 48px; align-items: flex-end; }
   .hero-foto { object-position: 74% 42%; }
   .hero-foto + .hero-overlay {
-    background: linear-gradient(180deg, rgba(0, 5, 31, .34) 0%, rgba(0, 5, 31, .74) 40%, rgba(0, 5, 31, .97) 72%);
+    background: linear-gradient(180deg, rgba(0, 5, 31, .55) 0%, rgba(0, 5, 31, .74) 40%, rgba(0, 5, 31, .97) 72%);
   }
   .hero-acao { margin-top: 32px; }
   .botao { display: block; text-align: center; padding: 16px 24px; }

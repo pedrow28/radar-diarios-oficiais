@@ -178,6 +178,33 @@ def test_titulo_ato_nao_preserva_palavra_comum_curta_so_por_ser_maiuscula(bruto)
     assert titulo_ato(bruto) == bruto.capitalize()
 
 
+@pytest.mark.parametrize(
+    "bruto, esperado",
+    [
+        # O diário publica o título já truncado na vírgula que segurava a data.
+        (
+            "DELIBERAÇÃO CIB-SUS/MG Nº 5.960,",
+            "Deliberação CIB-SUS/MG nº 5.960",
+        ),
+        # E também com ponto final depois da data, que era o que escondia a
+        # data do `$` da expressão: sem tirar o ponto antes, a data ficava.
+        (
+            "PORTARIA GM/MS Nº 3.412, DE 2 DE SETEMBRO DE 2026.",
+            "Portaria GM/MS nº 3.412",
+        ),
+        ("RESOLUÇÃO SES/MG Nº 9.101;", "Resolução SES/MG nº 9.101"),
+        ("PORTARIA FHEMIG Nº 218 ", "Portaria FHEMIG nº 218"),
+    ],
+)
+def test_titulo_ato_nao_deixa_pontuacao_apontando_para_texto_que_saiu(bruto, esperado):
+    """A pontuação que segurava a data sai com ela, antes e depois do corte.
+
+    Vale para o e-mail também, e de propósito: uma vírgula no fim do título é
+    um sinal apontando para um texto que não existe mais, em qualquer peça.
+    """
+    assert titulo_ato(bruto) == esperado
+
+
 def test_meta_orgao_junta_orgao_e_unidade_sem_middle_dot(edicao):
     # Antes a meta era uma tira de "A · B · C · D". Agora a primeira linha diz
     # só quem publicou, que é o que o gestor reconhece.
@@ -675,6 +702,60 @@ def test_gradiente_so_no_overlay_no_filete_e_no_numeral(css):
     assert com_gradiente == SELETORES_COM_GRADIENTE
     # Gradiente radial e cônico não existem no sistema.
     assert "radial-gradient" not in css and "conic-gradient" not in css
+
+
+def _paradas_do_gradiente(css: str, seletor: str) -> list[str]:
+    """As paradas do `linear-gradient` da regra, a vírgula de dentro de `rgba`
+    preservada: `[^()]*\\)` não atravessa parêntese, então só a vírgula de topo
+    de nível separa parada de parada."""
+    corpos = [c for s, c in _regras(css) if s == seletor and "linear-gradient" in c]
+    assert len(corpos) == 1, f"{seletor}: {len(corpos)} regras com gradiente"
+    interior = re.search(r"linear-gradient\((.*)\)", corpos[0]).group(1)
+    return [p.strip() for p in re.split(r",(?![^()]*\))", interior)]
+
+
+def test_a_hairline_nasce_e_morre_transparente_com_o_pico_a_20(css):
+    """A hairline do DESIGN.md tem forma de sino, não de rampa.
+
+    A versão anterior ia de `.55` até zero: começava acesa na ponta esquerda
+    (meia hairline) e o pico ficava quase três vezes acima do teto de 20% que a
+    lei fixa para a luz. Vale para as duas: a de luz e a de ink que divide
+    seção, que é a mesma forma sem gastar ciano.
+    """
+    luz = _paradas_do_gradiente(css, ".filete-luz")
+    assert luz == ["90deg", "transparent", "rgba(var(--luz-rgb), .20)", "transparent"]
+
+    ink = _paradas_do_gradiente(css, ".filete")
+    assert ink[0] == "90deg"
+    assert (ink[1], ink[-1]) == ("transparent", "transparent")
+    assert len(ink) == 4 and "--luz" not in ink[2]
+
+
+def _titulos(html: str, nivel: str) -> list[str]:
+    cru = re.findall(rf"<{nivel}\b[^>]*>(.*?)</{nivel}>", html, re.DOTALL)
+    return [re.sub(r"<[^>]+>", " ", t).strip() for t in cru]
+
+
+def test_cada_secao_da_edicao_abre_com_um_h2_na_ordem_do_documento(pagina, edicao):
+    """O esqueleto de títulos é a navegação de quem varre 46 atos por leitor de
+    tela: um `h2` por seção real, com o eyebrow dentro, e os atos em `h3`.
+
+    O rótulo de categoria em `<p>` não aparecia na lista de títulos, e a página
+    ficava com 39 `h3` irmãos e nenhum sumário. Sem trilha de âncoras: o sumário
+    é o esqueleto, não um menu a mais competindo com o silêncio da página.
+    """
+    esperado = ["Em 30 segundos", *(ROTULOS[c] for c in ROTULOS if edicao.secoes[c])]
+    assert _titulos(pagina, "h2") == esperado
+    assert len(_titulos(pagina, "h1")) == 1
+    assert 'href="#' not in pagina
+
+
+def test_categoria_vazia_nao_deixa_h2_orfao_no_site(edicao, cfg):
+    sem_editais = replace(edicao, secoes={**edicao.secoes, "C": ()})
+    h2 = _titulos(render_web(sem_editais, cfg), "h2")
+
+    assert ROTULOS["C"] not in h2
+    assert h2 == ["Em 30 segundos", ROTULOS["A"], ROTULOS["B"], ROTULOS["D"]]
 
 
 def test_a_fraunces_entra_com_os_eixos_da_marca(css, indice, pagina):
