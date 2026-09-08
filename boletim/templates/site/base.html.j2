@@ -1,0 +1,41 @@
+{#
+  Esqueleto das duas páginas do site, no sistema escuro do DESIGN.md.
+
+  O site deixou de ser o e-mail em outro modo. Aqui há folha externa, webfont
+  variável e grid de 12 colunas - três coisas que não sobrevivem a um cliente de
+  e-mail e que o site não tem por que abrir mão de ter.
+
+  A armadilha da Fraunces está resolvida em dois lugares, de propósito: a URL do
+  Google fixa `SOFT` e `WONK` em 0, e o CSS declara
+  `font-variation-settings: "opsz" 40, "SOFT" 0, "WONK" 0`. Sem isso o título
+  sai no corte de display, com a excentricidade ligada - os defaults do arquivo
+  variável não são os da marca.
+
+  O grão, o filete e o inventário do ciano vivem em `site.css`. Aqui só entra o
+  que é estrutura de documento.
+#}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>{% block titulo %}{% endblock %}</title>
+{% block descricao %}{% endblock %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0,0,9..144,400..600&amp;family=Plus+Jakarta+Sans:wght@300;500;700&amp;display=swap">
+<link rel="stylesheet" href="{{ url_css }}">
+</head>
+<body>
+{% block corpo %}{% endblock %}
+<footer class="rodape">
+<div class="env">
+<hr class="divisor">
+{% block rodape %}{% endblock %}
+<p class="meta">Thauma. Inteligência e narrativa em saúde.</p>
+<p class="meta"><a class="link" href="{{ cta_url }}">Conversar no WhatsApp: {{ cta_whatsapp_legivel }}</a></p>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{#
+  Um ato de A, B ou C na página do site.
+
+  A ordem é a da decisão: o que é, quanto vale, quem publicou, onde saiu, o que
+  diz, por que importa, e o link para o diário.
+
+  O valor sai do fluxo do texto e vai para a coluna do dinheiro - segunda coluna
+  da grade, pendurado na linha de base do título, na mesma aresta em todos os
+  atos. No celular ele desce para logo abaixo do título, ainda à direita: a
+  coluna sobrevive à quebra porque ela é uma aresta, não uma posição.
+
+  "Ver publicação" só vira link quando a URL do diário passa por `url_segura`.
+  Esquema fora de `http`/`https` não vira href: o ato fica sem link, que é
+  melhor do que um destino que ninguém consegue ler antes de clicar.
+#}
+<article class="ato">
+<h3 class="ato-titulo titulo-card">{{ item.titulo|sem_travessao|titulo_ato }}</h3>
+{% if item.valor_brl %}
+<p class="valor">{{ item.valor_brl|brl }}</p>
+{% endif %}
+<div class="ato-corpo">
+<p class="meta">{{ item|meta_orgao|sem_travessao }}</p>
+<p class="meta">{{ item|meta_origem }}</p>
+<p class="corpo">{{ item.resumo|sem_travessao }}</p>
+{% if item.por_que_importa %}
+<p class="corpo"><span class="enfase">Por que importa.</span> {{ item.por_que_importa|sem_travessao }}</p>
+{% endif %}
+{% set href = item.url|url_segura %}
+{% if href %}
+<p class="acao"><a class="link" href="{{ href|e }}">Ver publicação</a></p>
+{% endif %}
+</div>
+</article>

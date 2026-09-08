@@ -1,0 +1,101 @@
+{#
+  Índice do site: a porta e o arquivo.
+
+  Três dobras, uma ideia por dobra e um portador de luz em cada, declarado com
+  `data-luz`: o botão, a cápsula da edição mais recente, o botão de novo (mesmo
+  destino - dois destinos concorrentes numa landing é o mesmo erro que duas
+  luzes). O rodapé não tem portador nenhum.
+
+  A coluna do dinheiro aparece aqui uma escala acima da edição: cada card leva o
+  `valor_dia` em Fraunces, alinhado à direita, e o arquivo inteiro lê como um
+  livro-caixa. Dia sem cifra declarada fica sem número, e não com `R$ 0,00`.
+#}
+{% extends "site/base.html.j2" %}
+{% set glossario = {
+  "A": "Habilitação, teto, emenda e repasse. É dinheiro entrando, e o valor aparece quando o ato diz quanto.",
+  "B": "Portaria que muda o que a instituição precisa cumprir para continuar recebendo o que já recebe.",
+  "C": "Chamada pública com prazo aberto. É onde a captação começa, e onde chegar depois custa o edital inteiro.",
+  "D": "O que saiu no dia e não move dinheiro nem regra. Fica registrado para quem precisa do rastro.",
+} %}
+{% block titulo %}Radar de captação em saúde{% endblock %}
+{% block descricao %}
+<meta name="description" content="O que o Diário Oficial da União e o Diário Oficial de Minas Gerais publicaram sobre dinheiro para a saúde, todo dia útil.">
+{% endblock %}
+{% block corpo %}
+
+{# ── dobra 1: a porta ───────────────────────────────────────────────── #}
+<section class="hero" data-dobra="1">
+<img class="hero-foto" src="{{ url_hero }}" alt="">
+<div class="hero-overlay"></div>
+<div class="hero-marca"><div class="env"><span class="marca"><img src="{{ url_logo_branco }}" alt="Thauma"></span></div></div>
+<div class="hero-conteudo">
+<div class="env">
+<div class="hero-texto revelar">
+<p class="eyebrow"><span class="filete"></span><span class="rotulo">Radar de captação em saúde</span></p>
+<h1 class="headline">O que o Diário Oficial publicou hoje sobre dinheiro para a saúde.</h1>
+<p class="lead">DOU e Diário de Minas lidos todo dia útil às 9h30. Habilitações, tetos, emendas e mudanças de regra, em uma página.</p>
+<div class="hero-acao revelar revelar--2">
+<a class="botao" data-luz href="{{ cta_url }}">{{ cta_texto }}</a>
+{% if edicoes %}
+<p><a class="link link-secundario" href="{{ edicoes[0].url|e }}">Ler a edição de {{ edicoes[0].data|data_br }}</a></p>
+{% endif %}
+</div>
+</div>
+</div>
+</div>
+</section>
+
+{# ── dobra 2: o arquivo ─────────────────────────────────────────────── #}
+<section class="dobra" data-dobra="2" id="edicoes">
+<div class="env">
+<p class="eyebrow"><span class="filete"></span><span class="rotulo">Edições</span></p>
+{% if edicoes %}
+<div class="grade-edicoes">
+{% for edicao in edicoes %}
+<a class="card{% if loop.first %} card--destaque{% endif %}" href="{{ edicao.url|e }}">
+{% if loop.first %}
+<span class="capsula" data-luz><span class="capsula-ponto"></span>Edição mais recente</span>
+{% endif %}
+<span class="meta data">{{ edicao.data|data_extenso }}</span>
+<h2 class="titulo-card">{{ edicao.titulo|sem_travessao }}</h2>
+<span class="pe-card">
+<span class="meta">{{ edicao.contagens|resumo_edicao(edicao.parcial) }}</span>
+{% if edicao.valor_dia %}
+<span class="valor">{{ edicao.valor_dia|brl }}</span>
+{% endif %}
+</span>
+</a>
+{% endfor %}
+</div>
+{% else %}
+<p class="corpo medida">A primeira edição sai no próximo dia útil, às 9h30.</p>
+{% endif %}
+</div>
+</section>
+
+{# ── dobra 3: como se lê e quem assina ──────────────────────────────── #}
+<section class="dobra dobra--fim" data-dobra="3">
+<div class="env">
+<h2 class="titulo-bloco">Como ler o radar</h2>
+<div class="glossario">
+{% for chave, nome in rotulos.items() %}
+{% if not loop.first %}<hr class="divisor">{% endif %}
+<div class="glossario-linha">
+<h3 class="titulo-card">{{ nome }}</h3>
+<p class="corpo">{{ glossario[chave] }}</p>
+</div>
+{% endfor %}
+</div>
+
+<div class="assinatura">
+<h2 class="titulo-bloco">Quem assina</h2>
+<p class="corpo medida">A Thauma é a consultoria de inteligência e narrativa em saúde de Pedro William. O radar nasceu do trabalho com hospitais filantrópicos e Santas Casas, que perdem prazo de edital por não ter quem leia o Diário Oficial todo dia.</p>
+<a class="botao" data-luz href="{{ cta_url }}">{{ cta_texto }}</a>
+</div>
+</div>
+</section>
+
+{% endblock %}
+{% block rodape %}
+<p class="meta">Fontes: Diário Oficial da União, pelo portal público, e Diário Oficial de Minas Gerais.</p>
+{% endblock %}

@@ -1,0 +1,526 @@
+/* Site público do Radar de captação em saúde - sistema escuro da THAUMA.
+ *
+ * "Museu à noite": navy quase preto, uma luz por dobra, tipografia esculpida e
+ * silêncio em volta. Deriva de `DESIGN.md` (lei) e do plano `g13-plano-design`.
+ *
+ * O inventário do ciano é a regra mais dura do sistema e está fechado neste
+ * arquivo: `--luz` e `--luz-rgb` aparecem em quatro lugares e em nenhum outro -
+ * o botão principal, o ponto da cápsula de status, o filete do eyebrow portador
+ * e o anel de foco. Ciano fora dessa lista é vazamento, não destaque, e há
+ * teste conferindo. O portador de cada dobra é declarado no markup com
+ * `data-luz`, porque a regra é de intenção e não de aparência.
+ *
+ * Uma coisa é alinhada à direita na página inteira: o valor em reais. É a
+ * coluna do dinheiro, e é por isso que ela é vista.
+ */
+
+/* ── tokens ─────────────────────────────────────────────────────────── */
+:root {
+  --navy: #00051f;
+  --navy-primario: #001070;
+  --luz: #40D7FF;
+  --luz-rgb: 64, 215, 255;
+  --ink: #c7d2e8;
+  --branco: #ffffff;
+  /* ink a 70% sobre navy: 6.65:1, acima do piso de 4.5:1 do corpo. */
+  --muted: #8b94ac;
+
+  --card: rgba(255, 255, 255, .02);
+  --card-aceso: rgba(255, 255, 255, .035);
+  --borda: rgba(255, 255, 255, .08);
+  --borda-acesa: rgba(255, 255, 255, .16);
+  /* Filete de linha: divide conteúdo real, e por isso não gasta luz. */
+  --linha: rgba(199, 210, 232, .10);
+  --sublinhado: rgba(199, 210, 232, .40);
+
+  --serifa: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans: 'Plus Jakarta Sans', -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  /* Medida de leitura. A unidade `ch` mede o dígito zero, e na Plus Jakarta
+   * Sans ele é 1.5 vez mais largo que a letra média: `65ch` deu 92 caracteres
+   * por linha na primeira medição, quase 20 acima do teto do DESIGN.md. A
+   * medida passa a ser declarada em `em`, com o número aferido no browser.
+   * 33em a 19px dá 70 caracteres. */
+  --medida: 33em;
+  --medida-curta: 28em;
+
+  --largura: 1200px;
+  --margem: 32px;
+  --gutter: 24px;
+  --saida: cubic-bezier(.2, .7, .2, 1);
+}
+
+/* Fraunces variável: os defaults do arquivo não são os da marca. Sem esta
+ * declaração o título sai no corte de display (opsz baixo) e com a
+ * excentricidade do WONK ligada - que é justamente o que não fecha contrato
+ * com hospital. A URL do Google já fixa SOFT e WONK em 0; isto repete a
+ * fixação para o caso de a fonte vir do fallback local. */
+.serifa,
+h1, h2, h3, .valor, .numeral {
+  font-family: var(--serifa);
+  font-variation-settings: "opsz" 40, "SOFT" 0, "WONK" 0;
+  font-optical-sizing: none;
+  letter-spacing: -.02em;
+}
+
+/* ── base ───────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grão: ruído fractal estático a 3%, em overlay, sobre tudo. É a profundidade
+ * do sistema junto com o filete - não há sombra de elevação em lugar nenhum. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  pointer-events: none;
+  opacity: .03;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+img { max-width: 100%; height: auto; border: 0; display: block; }
+
+h1, h2, h3 { margin: 0; font-weight: 400; color: var(--branco); }
+
+p { margin: 0; }
+
+a { color: inherit; }
+
+/* Nenhum estado depende só de cor: o link do miolo troca a densidade do
+ * sublinhado, não a matiz. Virar ciano no hover seria um segundo portador. */
+.link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--sublinhado);
+  text-underline-offset: .22em;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 120ms var(--saida);
+}
+.link:hover { text-decoration-color: var(--ink); }
+
+:focus-visible {
+  outline: 2px solid var(--luz);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ── grid ───────────────────────────────────────────────────────────── */
+.env {
+  width: 100%;
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: 0 var(--margem);
+}
+
+/* Medida de leitura do DESIGN.md: 45 a 75 caracteres. Numa coluna de 1200px o
+ * texto corrido ocupa 6 a 8 colunas, nunca as 12. */
+.medida { max-width: var(--medida); }
+
+.dobra { padding: 96px 0; }
+.dobra--fim { padding-bottom: 64px; }
+
+/* ── tipografia ─────────────────────────────────────────────────────── */
+/* Duas linhas no desktop. Três seria erro de corpo, não de texto: a frase
+ * nomeia o objeto concreto e não tem gordura para cortar. */
+.headline {
+  font-size: clamp(32px, 3.4vw, 44px);
+  line-height: 1.1;
+}
+
+.titulo-edicao {
+  font-size: clamp(30px, 3.6vw, 44px);
+  line-height: 1.14;
+  max-width: 15em;
+}
+
+.titulo-bloco { font-size: clamp(26px, 2.6vw, 32px); line-height: 1.2; }
+
+.titulo-card { font-size: 24px; line-height: 1.25; }
+.card--destaque .titulo-card { font-size: 30px; }
+
+.lead {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.corpo { font-size: 19px; line-height: 1.65; }
+
+.meta {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.enfase { font-weight: 500; color: var(--branco); }
+
+/* Rótulo em caixa alta: o DESIGN.md o autoriza, e ele só aparece onde abre uma
+ * seção de verdade. Data de card e ressalva não são rótulo. */
+.rotulo {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: .20em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+/* ── eyebrow e filetes ──────────────────────────────────────────────── */
+.eyebrow { margin-bottom: 32px; }
+.eyebrow .rotulo { display: block; margin-top: 16px; }
+
+.filete {
+  display: block;
+  height: 1px;
+  width: 96px;
+  border: 0;
+  margin: 0;
+  background: linear-gradient(90deg, var(--ink), rgba(199, 210, 232, 0));
+}
+
+/* O filete portador: nasce e morre transparente, com pico a 20%. É o único
+ * lugar do site onde a hairline gasta a luz, e ele carrega `data-luz`. */
+.filete-luz {
+  background: linear-gradient(90deg, rgba(var(--luz-rgb), .55), rgba(var(--luz-rgb), 0));
+}
+
+.divisor {
+  height: 1px;
+  border: 0;
+  margin: 0;
+  background: var(--linha);
+}
+
+/* ── botão ──────────────────────────────────────────────────────────── */
+.botao {
+  display: inline-block;
+  padding: 16px 32px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--luz);
+  color: var(--navy);
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  letter-spacing: .01em;
+  text-decoration: none;
+  transition: filter 120ms var(--saida), transform 120ms var(--saida);
+}
+.botao:hover { filter: brightness(1.08); }
+.botao:active { filter: brightness(.94); transform: translateY(1px); }
+
+/* O link discreto abaixo do botão: é caminho secundário, não segundo botão. */
+.link-secundario {
+  display: inline-block;
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+/* ── cápsula de status ──────────────────────────────────────────────── */
+.capsula {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px 6px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .20em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+/* O único elemento com brilho permanente que o sistema autoriza. */
+.capsula-ponto {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--luz);
+  box-shadow: 0 0 10px rgba(var(--luz-rgb), .60);
+}
+
+/* ── cabeçalho de página ────────────────────────────────────────────── */
+.marca { display: inline-block; }
+.marca img { height: 28px; width: auto; }
+
+/* ── primeira dobra do índice ───────────────────────────────────────── */
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  /* `svh` é a altura sem a barra do navegador no celular; o `vh` fica de
+   * reserva para quem não conhece a unidade. */
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 96px 0 64px;
+  /* Sem a imagem-tema a dobra fica no navy do sistema, não num buraco. */
+  background: var(--navy);
+  overflow: hidden;
+}
+
+/* Pipeline de 3 passos do DESIGN.md, passo 2: dessaturação de 85% e contraste
+ * de +10%. Nenhuma foto entra crua. */
+.hero-foto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.15) contrast(1.1);
+  z-index: -2;
+}
+
+/* Passo 3: overlay diagonal a 110°, de 96% no canto do texto a 40% no oposto. */
+.hero-foto + .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, rgba(0, 5, 31, .96) 0%, rgba(0, 5, 31, .40) 100%);
+}
+
+.hero-conteudo { width: 100%; }
+.hero-texto { max-width: 720px; }
+.hero .headline { margin-top: 24px; }
+.hero .lead { margin-top: 24px; max-width: var(--medida-curta); }
+.hero-acao { margin-top: 48px; }
+.hero-marca { position: absolute; top: 32px; left: 0; right: 0; z-index: 1; }
+
+/* ── dobra das edições ──────────────────────────────────────────────── */
+.grade-edicoes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gutter);
+}
+.card--destaque { grid-column: 1 / -1; }
+/* O arquivo cresce um dia por dia útil, então a grade fecha em número par
+ * metade das vezes e a outra metade deixaria uma célula vazia no fim. Quando o
+ * total é par, a última edição atravessa as duas colunas: o arquivo fica
+ * emparelhado entre a mais recente em cima e a mais antiga embaixo, e nenhuma
+ * célula fica em branco. */
+.grade-edicoes .card:last-child:nth-child(even) { grid-column: 1 / -1; }
+
+.card {
+  position: relative;
+  display: block;
+  padding: 32px;
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  background: var(--card);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 120ms var(--saida), border-color 120ms var(--saida);
+}
+.card:hover { background: var(--card-aceso); border-color: var(--borda-acesa); }
+.card--destaque .capsula { margin-bottom: 24px; }
+.card .data { display: block; margin-bottom: 8px; }
+.card--destaque .titulo-card { max-width: 20em; }
+
+/* O pé do card é uma linha só: a contagem à esquerda, o dinheiro à direita, os
+ * dois pendurados na mesma linha de base. */
+.pe-card {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--gutter);
+  margin-top: 24px;
+}
+
+/* A coluna do dinheiro. A única coisa alinhada à direita no site. */
+.valor {
+  font-family: var(--serifa);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+  color: var(--branco);
+  text-align: right;
+  white-space: nowrap;
+}
+.pe-card .valor { font-size: 32px; line-height: 1.1; }
+.card--destaque .pe-card .valor { font-size: 38px; }
+
+/* ── dobra "como ler o radar" ───────────────────────────────────────── */
+.glossario { margin-top: 32px; }
+.glossario-linha {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: var(--gutter);
+  padding: 24px 0;
+}
+.glossario-linha:first-child { padding-top: 0; }
+.glossario .divisor { margin: 0; }
+.glossario-linha .titulo-card { font-size: 22px; }
+.glossario-linha .corpo { max-width: var(--medida); }
+
+.assinatura { margin-top: 96px; }
+.assinatura .corpo { margin-top: 24px; }
+.assinatura .botao { margin-top: 48px; }
+
+/* ── cabeçalho da edição ────────────────────────────────────────────── */
+.cabecalho-edicao {
+  position: relative;
+  isolation: isolate;
+  padding: 32px 0 64px;
+  overflow: hidden;
+}
+/* O numeral se ancora na coluna de 1200px, não na largura da janela: numa tela
+ * de 1920px ele iria parar longe do título e deixaria de compor com ele. */
+.cabecalho-edicao .env { position: relative; }
+.cabecalho-edicao .titulo-edicao { margin-top: 32px; }
+.cabecalho-edicao .meta { margin-top: 24px; }
+.cabecalho-edicao .lead { margin-top: 32px; }
+.cabecalho-edicao .eyebrow { margin-top: 48px; margin-bottom: 0; }
+
+/* Numeral fantasma em baixo-relevo, na receita da capa escultórica: face em
+ * gradiente frio recortada no texto, extrusão curta para baixo e uma luz que
+ * vem de cima e raspa o ombro das letras.
+ *
+ * Desvio declarado: o rim é ink, não ciano. A diretriz da capa pede rim ciano,
+ * mas a luz desta dobra já é o filete do eyebrow, e dois portadores na mesma
+ * composição é a proibição mais dura do DESIGN.md. O efeito escultórico está na
+ * direção da luz, não na matiz dela. */
+.numeral {
+  position: absolute;
+  z-index: -1;
+  right: -.03em;
+  /* Ancorado na faixa do título, não no centro do cabeçalho: centralizado ele
+   * caía por cima da intro e comia as últimas linhas. */
+  top: 88px;
+  font-weight: 600;
+  font-size: clamp(130px, 17vw, 240px);
+  line-height: .8;
+  letter-spacing: -.05em;
+  user-select: none;
+  background: linear-gradient(180deg, #141d3a 0%, #03060f 82%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 0 #0a1029, 0 2px 0 #070b1f, 0 3px 0 #050817;
+}
+.numeral::after {
+  content: attr(data-numeral);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(199, 210, 232, .26) 0%, rgba(199, 210, 232, 0) 12%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+}
+
+/* ── miolo da edição ────────────────────────────────────────────────── */
+.bloco { padding: 64px 0 0; }
+
+.bullets { margin-top: 32px; }
+.bullets p { padding: 24px 0; }
+.bullets p:first-of-type { padding-top: 0; }
+
+.secao-atos { padding-top: 96px; }
+.secao-atos .eyebrow { margin-bottom: 48px; }
+
+/* A coluna do dinheiro na edição: 280px à direita, a mesma aresta em todos os
+ * atos, e o valor pendurado na linha de base do título do ato. O ato sem cifra
+ * deixa a coluna vazia, e o vão informa: aquele ato move regra, não dinheiro. */
+.ato {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  column-gap: var(--gutter);
+  padding: 32px 0;
+}
+.ato-titulo { grid-column: 1; grid-row: 1; }
+.ato .valor { grid-column: 2; grid-row: 1; align-self: baseline; font-size: 28px; }
+.ato-corpo { grid-column: 1; grid-row: 2; max-width: var(--medida); }
+.ato-corpo .meta:first-child { margin-top: 8px; }
+.ato-corpo .corpo { margin-top: 16px; }
+.ato-corpo .acao { margin-top: 16px; font-size: 16px; }
+
+.lista-compacta { margin-top: 32px; }
+/* A cauda de "outros atos" é um índice de títulos, não prosa: a medida é
+ * maior que a do corpo de propósito, para que um título comum não quebre em
+ * duas linhas só por causa do teto de leitura. */
+.lista-compacta p { padding: 16px 0; max-width: 42em; }
+
+/* ── chamada final ──────────────────────────────────────────────────── */
+.chamada {
+  padding: 48px;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  background: var(--card);
+}
+.chamada .corpo { max-width: 26em; }
+.chamada .botao { margin-top: 32px; }
+
+/* ── rodapé ─────────────────────────────────────────────────────────── */
+.rodape { padding: 64px 0 96px; }
+.rodape .divisor { margin-bottom: 32px; }
+.rodape p { margin-top: 16px; }
+.rodape p:first-of-type { margin-top: 0; }
+
+/* ── revelação única ────────────────────────────────────────────────── */
+/* Um momento orquestrado no carregamento, e nada em scroll nem em hover. */
+@keyframes revelar {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.revelar { animation: revelar 600ms var(--saida) both; }
+.revelar--2 { animation-delay: 120ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .revelar { animation: none; }
+  * { transition-duration: 1ms !important; }
+}
+
+/* ── 768px ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .grade-edicoes { grid-template-columns: minmax(0, 1fr); }
+  .card--destaque .titulo-card { max-width: none; }
+  .ato { grid-template-columns: minmax(0, 1fr); }
+  .ato-titulo { grid-row: 1; }
+  .ato .valor { grid-column: 1; grid-row: 2; margin-top: 8px; }
+  .ato-corpo { grid-row: 3; margin-top: 16px; }
+  .glossario-linha { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+}
+
+/* ── 375px ──────────────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  :root { --margem: 16px; }
+  body { font-size: 18px; }
+  .dobra { padding: 64px 0; }
+  /* No retrato a foto é uma paisagem 16:9 espremida num quadro vertical, e o
+   * corte central perderia justamente a pilha. O enquadramento vai para a
+   * direita, o texto desce para o pé da dobra e o overlay desce com ele: a
+   * cena fica em cima, a leitura embaixo, e o gradiente faz a junção. */
+  .hero { padding: 96px 0 48px; align-items: flex-end; }
+  .hero-foto { object-position: 74% 42%; }
+  .hero-foto + .hero-overlay {
+    background: linear-gradient(180deg, rgba(0, 5, 31, .34) 0%, rgba(0, 5, 31, .74) 40%, rgba(0, 5, 31, .97) 72%);
+  }
+  .hero-acao { margin-top: 32px; }
+  .botao { display: block; text-align: center; padding: 16px 24px; }
+  .card { padding: 24px; }
+  .pe-card { display: block; }
+  .pe-card .valor, .card--destaque .pe-card .valor { display: block; margin-top: 16px; font-size: 28px; }
+  .chamada { padding: 32px 24px; }
+  .secao-atos { padding-top: 64px; }
+  /* O numeral fantasma não sobrevive à largura de celular: em 375px ele deixa
+   * de ser volume e vira mancha atrás do título. Some. */
+  .numeral { display: none; }
+}

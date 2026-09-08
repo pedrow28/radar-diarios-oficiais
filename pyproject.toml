@@ -27,7 +27,7 @@ boletim = "boletim.cli:executar"
 include = ["radar*", "boletim*"]
 
 [tool.setuptools.package-data]
-boletim = ["templates/*.j2", "assets/*.png"]
+boletim = ["templates/*.j2", "templates/site/*.j2", "assets/*.png", "assets/*.css", "assets/*.jpg"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

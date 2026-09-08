@@ -1,14 +1,17 @@
 """Renderização da edição: e-mail HTML, página do site, markdown e índice.
 
-O e-mail é o único artefato do projeto que um humano lê sem intermediário, e o
-meio é hostil: Outlook não entende `max-width`, Gmail reescreve cor, metade da
-base bloqueia imagem. Por isso a estrutura vive nos templates (tabela, coluna
-única, estilo inline) e aqui ficam só o ambiente Jinja, os filtros de formato e
-o contexto - o que muda quando o mesmo template vira e-mail ou página.
+O e-mail e o site deixaram de ser a mesma peça. O e-mail vive no sub-sistema
+claro do DESIGN.md porque o meio é hostil - Outlook não entende `max-width`,
+Gmail reescreve cor, metade da base bloqueia imagem - e por isso continua sendo
+tabela, coluna única e estilo inline. O site é do sistema escuro, com CSS
+externo, grid de 12 colunas e webfont: um navegador entrega o que um cliente de
+e-mail não entrega, e obrigar o site a caber no denominador comum do Outlook era
+o que deixava a página com cara de e-mail impresso.
 
-Autoescape ligado para HTML e desligado para markdown: o texto que chega vem do
-diário oficial e do LLM, e nenhum dos dois é confiável o bastante para entrar
-cru numa página. Nada de `|safe` nos templates.
+Aqui ficam só o ambiente Jinja, os filtros de formato e o contexto. Autoescape
+ligado para HTML e desligado para markdown: o texto que chega vem do diário
+oficial e do LLM, e nenhum dos dois é confiável o bastante para entrar cru numa
+página. Nada de `|safe` nos templates.
 """
 
 from __future__ import annotations
@@ -16,15 +19,13 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, fields
 from datetime import date
-from typing import Any, Literal, Sequence
+from typing import Any, Sequence
 
 from jinja2 import Environment, PackageLoader, StrictUndefined
 
 from boletim.config import ConfigBoletim
 from boletim.edicao import ROTULOS, Edicao, FonteResumo, Item, sem_travessao
 from radar.core.datas import hoje
-
-Modo = Literal["email", "web"]
 
 MESES = (
     "janeiro", "fevereiro", "março", "abril", "maio", "junho",
@@ -81,6 +82,15 @@ def data_br(d: date) -> str:
 def data_extenso(d: date) -> str:
     """`"3 de setembro de 2026"`. Sem locale: a VPS não tem pt_BR instalado."""
     return f"{d.day} de {MESES[d.month - 1]} de {d.year}"
+
+
+def data_numeral(d: date) -> str:
+    """`"05.09"`, para o numeral fantasma do cabeçalho da edição.
+
+    Dia e mês, sem o ano: o numeral é escala e volume atrás do título, não um
+    segundo carimbo de data - a data por extenso já está uma linha abaixo dele.
+    """
+    return f"{d:%d.%m}"
 
 
 def telefone_legivel(numero: str) -> str:
@@ -271,6 +281,7 @@ def criar_ambiente() -> Environment:
     ambiente.filters["brl"] = brl
     ambiente.filters["data_br"] = data_br
     ambiente.filters["data_extenso"] = data_extenso
+    ambiente.filters["data_numeral"] = data_numeral
     ambiente.filters["sem_travessao"] = sem_travessao
     ambiente.filters["url_segura"] = url_segura
     ambiente.filters["url_markdown"] = url_markdown
@@ -286,21 +297,27 @@ def criar_ambiente() -> Environment:
 
 @dataclass(frozen=True)
 class ContextoRender:
-    """Tudo que o template precisa e não sabe calcular sozinho."""
+    """Tudo que o template precisa e não sabe calcular sozinho.
+
+    `url_css` e `url_hero` só interessam ao site; o e-mail os ignora, porque
+    cliente de e-mail não carrega folha externa nem imagem de fundo. Ficam no
+    mesmo contexto para que a edição tenha um endereço só para cada asset.
+    """
 
     edicao: Edicao
     site_url: str
     url_edicao: str
     url_logo_navy: str
     url_logo_branco: str
+    url_css: str
+    url_hero: str
     cta_url: str
     cta_texto: str
     cta_whatsapp_legivel: str
     rotulos: dict[str, str]
-    modo: Modo
 
     @classmethod
-    def montar(cls, edicao: Edicao, cfg: ConfigBoletim, modo: Modo) -> ContextoRender:
+    def montar(cls, edicao: Edicao, cfg: ConfigBoletim) -> ContextoRender:
         site_url = cfg.site_url.rstrip("/")
         return cls(
             edicao=edicao,
@@ -308,48 +325,63 @@ class ContextoRender:
             url_edicao=f"{site_url}/edicoes/{edicao.data.isoformat()}.html",
             url_logo_navy=f"{site_url}/assets/logo-navy.png",
             url_logo_branco=f"{site_url}/assets/logo-branco.png",
+            url_css=f"{site_url}/assets/site.css",
+            url_hero=f"{site_url}/assets/hero.jpg",
             cta_url=cfg.cta.url(edicao.data),
             cta_texto=cfg.cta.texto_botao,
             cta_whatsapp_legivel=telefone_legivel(cfg.cta.whatsapp),
             rotulos=ROTULOS,
-            modo=modo,
         )
 
     def como_dict(self) -> dict[str, Any]:
         return {campo.name: getattr(self, campo.name) for campo in fields(self)}
 
 
-def _render(template: str, edicao: Edicao, cfg: ConfigBoletim, modo: Modo) -> str:
-    contexto = ContextoRender.montar(edicao, cfg, modo)
+def _render(template: str, edicao: Edicao, cfg: ConfigBoletim) -> str:
+    contexto = ContextoRender.montar(edicao, cfg)
     return criar_ambiente().get_template(template).render(**contexto.como_dict())
 
 
 def render_email(edicao: Edicao, cfg: ConfigBoletim) -> str:
-    """O e-mail que sai para a lista."""
-    return _render("email.html.j2", edicao, cfg, "email")
+    """O e-mail que sai para a lista, no sub-sistema claro."""
+    return _render("email.html.j2", edicao, cfg)
 
 
 def render_web(edicao: Edicao, cfg: ConfigBoletim) -> str:
-    """A mesma edição como página do site: sem o convite a abrir o site."""
-    return _render("email.html.j2", edicao, cfg, "web")
+    """A edição como página do site, no sistema escuro.
+
+    Deixou de ser o template do e-mail em outro modo. A página tem CSS externo,
+    webfont e grid de 12 colunas, e nada disso sobreviveria à tabela de 600px
+    que o Outlook exige - era essa herança que dava ao site cara de e-mail.
+    """
+    return _render("site/edicao.html.j2", edicao, cfg)
 
 
 def render_md(edicao: Edicao, cfg: ConfigBoletim) -> str:
     """Markdown da edição, para arquivo e para leitura por agente."""
-    return _render("edicao.md.j2", edicao, cfg, "web")
+    return _render("edicao.md.j2", edicao, cfg)
 
 
 def render_index(edicoes: list[dict[str, Any]], cfg: ConfigBoletim) -> str:
-    """Índice do site. Cada dict traz `data, titulo, url, contagens, parcial`."""
+    """Índice do site.
+
+    Cada dict traz `data, titulo, url, contagens, parcial, valor_dia,
+    total_relevante`. `valor_dia` pode ser `None`: dia sem nenhum ato de
+    captação com cifra declarada não recebe um zero inventado na coluna do
+    dinheiro, recebe silêncio.
+    """
     site_url = cfg.site_url.rstrip("/")
     # A mensagem do WhatsApp cita uma data; no índice, a da edição mais recente.
     # Assim o índice regerado hoje sobre um arquivo antigo não muda de conteúdo.
     data_cta = edicoes[0]["data"] if edicoes else hoje()
-    return criar_ambiente().get_template("index.html.j2").render(
+    return criar_ambiente().get_template("site/index.html.j2").render(
         edicoes=edicoes,
         site_url=site_url,
-        url_logo_navy=f"{site_url}/assets/logo-navy.png",
         url_logo_branco=f"{site_url}/assets/logo-branco.png",
+        url_css=f"{site_url}/assets/site.css",
+        url_hero=f"{site_url}/assets/hero.jpg",
         cta_url=cfg.cta.url(data_cta),
+        cta_texto=cfg.cta.texto_botao,
         cta_whatsapp_legivel=telefone_legivel(cfg.cta.whatsapp),
+        rotulos=ROTULOS,
     )

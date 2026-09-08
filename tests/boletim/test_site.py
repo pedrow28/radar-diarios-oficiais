@@ -49,6 +49,20 @@ def test_publicar_grava_pagina_indice_assets_e_nojekyll(edicao, cfg):
     assert (cfg.dir_site / ".nojekyll").read_bytes() == b""
 
 
+def test_publicar_leva_a_folha_de_estilo_junto_com_a_pagina(edicao, cfg):
+    """O site tem CSS externo desde que saiu do template do e-mail.
+
+    Página publicada com um `site.css` de duas semanas atrás é pior que página
+    sem estilo nenhum, porque ninguém repara: o asset anda junto do HTML.
+    """
+    pagina = _publicar(edicao, cfg)
+
+    css = cfg.dir_site / "assets" / "site.css"
+    assert css.exists()
+    assert "--luz: #40D7FF" in css.read_text(encoding="utf-8")
+    assert "assets/site.css" in pagina.read_text(encoding="utf-8")
+
+
 def test_edicoes_json_guarda_a_ficha_da_edicao(edicao, cfg):
     _publicar(edicao, cfg)
 
@@ -162,12 +176,13 @@ def test_reconstruir_indice_recalcula_o_valor_dia_que_faltava(edicao, cfg):
         encoding="utf-8",
     )
 
-    reconstruir_indice(cfg)
+    indice = reconstruir_indice(cfg).read_text(encoding="utf-8")
 
     entradas = json.loads((cfg.dir_site / "edicoes.json").read_text(encoding="utf-8"))
     # Só a categoria A entra na soma; item sem cifra não vira zero.
     assert entradas[0]["valor_dia"] == 1234567.89
     assert entradas[0]["total_relevante"] == 4
+    assert "R$ 1.234.567,89" in indice
 
 
 def test_ficha_antiga_sem_o_dia_no_disco_fica_sem_valor_em_vez_de_zero(edicao, cfg):
