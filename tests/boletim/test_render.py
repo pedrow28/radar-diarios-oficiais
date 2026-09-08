@@ -10,9 +10,11 @@ from __future__ import annotations
 import re
 from dataclasses import replace
 from datetime import date
+from pathlib import Path
 
 import pytest
 
+from boletim import render
 from boletim.config import ConfigBoletim, ConfigCTA
 from boletim.edicao import ROTULOS
 from boletim.render import (
@@ -53,7 +55,24 @@ _EDICAO_INDICE = {
     "url": "edicoes/2026-09-03.html",
     "contagens": {"A": 2, "B": 1, "C": 1, "D": 2},
     "parcial": True,
+    "valor_dia": 29334567.89,
+    "total_relevante": 4,
 }
+
+# Duas edições, a mais recente sem cifra declarada: é o caso que a coluna do
+# dinheiro precisa aguentar sem escrever `R$ 0,00` em cima de um dia real.
+_DUAS_EDICOES = [
+    {
+        "data": date(2026, 9, 4),
+        "titulo": "Boletim de 04/09",
+        "url": "edicoes/2026-09-04.html",
+        "contagens": {"A": 1, "B": 0, "C": 0, "D": 0},
+        "parcial": False,
+        "valor_dia": None,
+        "total_relevante": 1,
+    },
+    _EDICAO_INDICE,
+]
 
 
 @pytest.fixture
@@ -159,6 +178,33 @@ def test_titulo_ato_nao_preserva_palavra_comum_curta_so_por_ser_maiuscula(bruto)
     assert titulo_ato(bruto) == bruto.capitalize()
 
 
+@pytest.mark.parametrize(
+    "bruto, esperado",
+    [
+        # O diário publica o título já truncado na vírgula que segurava a data.
+        (
+            "DELIBERAÇÃO CIB-SUS/MG Nº 5.960,",
+            "Deliberação CIB-SUS/MG nº 5.960",
+        ),
+        # E também com ponto final depois da data, que era o que escondia a
+        # data do `$` da expressão: sem tirar o ponto antes, a data ficava.
+        (
+            "PORTARIA GM/MS Nº 3.412, DE 2 DE SETEMBRO DE 2026.",
+            "Portaria GM/MS nº 3.412",
+        ),
+        ("RESOLUÇÃO SES/MG Nº 9.101;", "Resolução SES/MG nº 9.101"),
+        ("PORTARIA FHEMIG Nº 218 ", "Portaria FHEMIG nº 218"),
+    ],
+)
+def test_titulo_ato_nao_deixa_pontuacao_apontando_para_texto_que_saiu(bruto, esperado):
+    """A pontuação que segurava a data sai com ela, antes e depois do corte.
+
+    Vale para o e-mail também, e de propósito: uma vírgula no fim do título é
+    um sinal apontando para um texto que não existe mais, em qualquer peça.
+    """
+    assert titulo_ato(bruto) == esperado
+
+
 def test_meta_orgao_junta_orgao_e_unidade_sem_middle_dot(edicao):
     # Antes a meta era uma tira de "A · B · C · D". Agora a primeira linha diz
     # só quem publicou, que é o que o gestor reconhece.
@@ -235,17 +281,18 @@ def test_swap_de_logo_no_modo_escuro(html):
     assert ".logo-claro" in html and ".logo-escuro" in html
 
 
-@pytest.mark.parametrize("saida", ["email", "indice"])
-def test_modo_escuro_repinta_o_fundo_junto_com_o_logo(saida, html, cfg):
+def test_modo_escuro_repinta_o_fundo_junto_com_o_logo(html):
     """O logo branco precisa de chão escuro, e não só de `display:block`.
 
     Achado da revisão: o cliente que honra `prefers-color-scheme` sem inverter
     nada (Apple Mail com `color-scheme: light dark`) trocava o logo navy pelo
     branco e o deixava sobre `#f5f7f9`. A troca de logo e a repintura da peça
     passam a viver na mesma media query.
+
+    Vale só para o e-mail. O site não tem modo claro para repintar: ele nasce
+    escuro, que é o padrão do sistema.
     """
-    peca = html if saida == "email" else render_index([_EDICAO_INDICE], cfg)
-    bloco = ESCURO.search(peca)
+    bloco = ESCURO.search(html)
     assert bloco is not None
     regras = bloco.group().replace(" ", "")
     assert ".logo-escuro{display:block!important;}" in regras
@@ -301,10 +348,16 @@ def test_rodape_repete_o_whatsapp_em_link_e_por_extenso(html):
     assert "(31) 98448-3183" in html
 
 
-def test_indice_nao_tem_botao(cfg):
+def test_indice_do_site_repete_o_botao_com_o_mesmo_destino(cfg):
+    """O índice antigo era uma folha clara sem chamada. O site é uma landing, e
+    o DESIGN.md manda um botão por tela: ele reaparece na última dobra, mas com
+    o mesmo destino - dois destinos concorrentes é o mesmo erro que duas luzes.
+    """
     indice = render_index([_EDICAO_INDICE], cfg)
-    assert 'bgcolor="#0060e0"' not in indice
-    assert "#0060e0" in indice  # o link continua sendo a luz
+    destinos = set(re.findall(r'<a class="botao"[^>]*href="([^"]+)"', indice))
+    assert len(destinos) == 1
+    assert indice.count('class="botao"') == 2
+    assert WHATSAPP in destinos.pop()
 
 
 # ── identidade ──────────────────────────────────────────────────────────
@@ -319,11 +372,13 @@ def test_nada_de_ambar_ciano_gradiente_travessao_ou_emoji(html):
 
 
 def test_sem_middle_dot_seta_ou_raio_generico(html, cfg, edicao):
-    """Os três tells que o design pass tirou da peça, nas três saídas.
+    """Os três tells que o design pass tirou da peça.
 
-    O middle dot e a seta são assinatura de página gerada; o raio ficou em 0
-    porque a folha é quadrada e um botão arredondado dentro dela seria o único
-    canto redondo da peça.
+    O middle dot e a seta são assinatura de página gerada, e valem para as
+    quatro saídas. O raio 0 é regra só do e-mail e do markdown: a folha do
+    e-mail é quadrada e um botão arredondado dentro dela seria o único canto
+    redondo da peça. O site tem card e cápsula, que o DESIGN.md especifica com
+    canto de 14 a 18px e raio 999px.
     """
     indice = render_index([_EDICAO_INDICE], cfg)
     for saida in (html, render_web(edicao, cfg), render_md(edicao, cfg), indice):
@@ -331,6 +386,7 @@ def test_sem_middle_dot_seta_ou_raio_generico(html, cfg, edicao):
         # quando vem espaçado.
         assert "·" not in saida
         assert "→" not in saida
+    for saida in (html, render_md(edicao, cfg)):
         assert "border-radius" not in saida
 
 
@@ -442,13 +498,19 @@ def test_valor_sai_formatado_em_reais(html):
     assert "R$ 1.234.567,89" in html
 
 
-def test_versao_completa_so_no_email_e_indice_so_na_web(edicao, cfg):
+def test_versao_completa_so_no_email_e_volta_ao_indice_so_no_site(edicao, cfg):
+    """O e-mail convida a abrir o site; o site já é o site e leva ao arquivo.
+
+    O alvo mudou de "Voltar ao índice" para "Todas as edições" quando a página
+    saiu do template do e-mail: quem chega pelo Google não voltou de lugar
+    nenhum, e o link nomeia o destino em vez de descrever um movimento.
+    """
     email = render_email(edicao, cfg)
     web = render_web(edicao, cfg)
     assert "Ler a versão completa" in email
-    assert "Voltar ao índice" not in email
+    assert "Todas as edições" not in email
     assert "Ler a versão completa" not in web
-    assert "Voltar ao índice" in web
+    assert f'<a class="link" href="{cfg.site_url}">Todas as edições</a>' in web
     assert f"{cfg.site_url}/edicoes/2026-09-03.html" in email
 
 
@@ -486,23 +548,7 @@ def test_markdown_tem_as_secoes_e_o_link_do_whatsapp(edicao, cfg):
 
 
 def test_indice_lista_as_edicoes_da_mais_recente_para_a_mais_antiga(cfg):
-    edicoes = [
-        {
-            "data": date(2026, 9, 4),
-            "titulo": "Boletim de 04/09",
-            "url": "edicoes/2026-09-04.html",
-            "contagens": {"A": 1, "B": 0, "C": 0, "D": 0},
-            "parcial": False,
-        },
-        {
-            "data": date(2026, 9, 3),
-            "titulo": "Boletim de 03/09",
-            "url": "edicoes/2026-09-03.html",
-            "contagens": {"A": 2, "B": 1, "C": 1, "D": 2},
-            "parcial": True,
-        },
-    ]
-    html = render_index(edicoes, cfg)
+    html = render_index(_DUAS_EDICOES, cfg)
     assert html.index("4 de setembro de 2026") < html.index("3 de setembro de 2026")
     assert "Coleta parcial." in html
     assert 'href="edicoes/2026-09-03.html"' in html
@@ -513,11 +559,325 @@ def test_indice_conta_as_edicoes_em_frase_e_nao_em_tira_de_pontos(cfg):
     assert "2 atos de captação, 1 mudança de regra e 1 edital. Coleta parcial." in indice
 
 
-def test_indice_usa_a_mesma_folha_e_a_mesma_serifa_do_email(cfg):
+def test_indice_saiu_do_sub_sistema_de_e_mail(cfg):
+    """O veredito do Pedro sobre o site anterior foi de forma, não de conteúdo:
+    a página era o e-mail servido no navegador. Nada da tabela de 600px, do
+    estilo inline e da folha branca sobrevive."""
     indice = render_index([_EDICAO_INDICE], cfg)
-    assert indice.count("background-color:#FFFFFF") == 1
-    assert "Georgia, 'Times New Roman', serif" in indice
-    assert "#dde4ee" in indice
+    assert "background-color:#FFFFFF" not in indice
+    assert "<table" not in indice
+    assert "bgcolor" not in indice
+    assert 'width="600"' not in indice
+    assert "#f5f7f9" not in indice
+
+
+# ── o site: sistema escuro ──────────────────────────────────────────────
+#
+# O site tem folha externa, então o HTML não carrega estilo nenhum e o CSS não
+# sabe qual página está pintando. As duas metades são conferidas em separado: o
+# markup responde pela contagem de portadores por dobra, o CSS responde pelo
+# inventário do ciano e do gradiente.
+CIANO = "#40D7FF"
+# Um bloco folha de CSS: `seletor { declarações }`. Como `[^{}]` não atravessa
+# chave, a expressão só casa com o bloco mais interno, e regra dentro de
+# `@media` sai com o seletor dela, não com o da media query.
+REGRA_CSS = re.compile(r"([^{}]+)\{([^{}]*)\}")
+COMENTARIO_CSS = re.compile(r"/\*.*?\*/", re.DOTALL)
+
+# Onde o sistema autoriza gastar a luz. Quatro lugares, e o anel de foco é
+# estado de interface, não portador.
+SELETORES_COM_LUZ = {":root", ".botao", ".capsula-ponto", ".filete-luz", ":focus-visible"}
+# Gradiente decorativo é proibido. Os três que existem têm função: o overlay do
+# pipeline de imagem, o filete que nasce e morre transparente, e o baixo-relevo
+# do numeral fantasma.
+SELETORES_COM_GRADIENTE = {
+    ".filete",
+    ".filete-luz",
+    ".hero-foto + .hero-overlay",
+    ".numeral",
+    ".numeral::after",
+}
+
+
+@pytest.fixture
+def css() -> str:
+    return (
+        Path(render.__file__).parent / "assets" / "site.css"
+    ).read_text(encoding="utf-8")
+
+
+@pytest.fixture
+def indice(cfg) -> str:
+    return render_index(_DUAS_EDICOES, cfg)
+
+
+@pytest.fixture
+def pagina(edicao, cfg) -> str:
+    return render_web(edicao, cfg)
+
+
+def _regras(css: str) -> list[tuple[str, str]]:
+    limpo = COMENTARIO_CSS.sub("", css)
+    return [
+        (seletor.strip(), corpo)
+        for seletor, corpo in REGRA_CSS.findall(limpo)
+        if seletor.strip()
+    ]
+
+
+def _luzes_por_dobra(html: str) -> dict[str, int]:
+    """Quantos `data-luz` cada dobra declara. A dobra vai até a próxima dobra."""
+    marcas = [(m.group(1), m.start()) for m in re.finditer(r'data-dobra="(\d)"', html)]
+    assert marcas, "a página não marcou nenhuma dobra"
+    limites = [*[p for _, p in marcas[1:]], len(html)]
+    return {
+        numero: html.count("data-luz", inicio, fim)
+        for (numero, inicio), fim in zip(marcas, limites)
+    }
+
+
+def test_nenhuma_dobra_carrega_duas_luzes(indice, pagina):
+    """A regra mais dura do DESIGN.md numa página que rola: composição = dobra.
+
+    Quando dois elementos disputam a luz, nenhum dos dois é a luz.
+    """
+    for html in (indice, pagina):
+        assert max(_luzes_por_dobra(html).values()) <= 1
+
+
+def test_o_portador_de_cada_dobra_e_o_declarado_no_plano(indice, pagina):
+    """No índice as três dobras pedem ação ou estado, e as três têm portador.
+
+    Na edição o miolo não tem nenhum, de propósito: são 46 atos num dia real, e
+    um ponto de luz por ato seriam 46 luzes, que é o mesmo que nenhuma.
+    """
+    assert _luzes_por_dobra(indice) == {"1": 1, "2": 1, "3": 1}
+    assert _luzes_por_dobra(pagina) == {"1": 1, "2": 0, "3": 1}
+
+
+def test_a_luz_do_indice_e_botao_capsula_botao(indice):
+    portadores = re.findall(r'<(\w+) class="([^"]+)"[^>]*data-luz', indice)
+    assert [(tag, classe) for tag, classe in portadores] == [
+        ("a", "botao"),
+        ("span", "capsula"),
+        ("a", "botao"),
+    ]
+
+
+def test_a_luz_da_edicao_e_filete_e_botao(pagina):
+    portadores = re.findall(r'<(\w+) class="([^"]+)"[^>]*data-luz', pagina)
+    assert portadores == [("span", "filete filete-luz"), ("a", "botao")]
+
+
+def test_o_html_do_site_nao_carrega_cor_nenhuma(indice, pagina):
+    """Estilo mora na folha externa. Ciano solto no markup é vazamento."""
+    for html in (indice, pagina):
+        assert CIANO not in html
+        assert "style=" not in html
+        assert "<style" not in html
+
+
+def test_o_css_gasta_a_luz_em_quatro_lugares_e_declara_o_hex_uma_vez(css):
+    assert css.count(CIANO) == 1  # só na definição de `--luz`
+    gastam = {
+        seletor
+        for seletor, corpo in _regras(css)
+        if "var(--luz" in corpo or CIANO in corpo
+    }
+    assert gastam == SELETORES_COM_LUZ
+
+
+def test_o_ciano_nunca_carrega_texto_corrido(css):
+    for seletor, corpo in _regras(css):
+        for declaracao in corpo.split(";"):
+            propriedade, _, valor = declaracao.partition(":")
+            if propriedade.strip() == "color":
+                assert "--luz" not in valor and CIANO not in valor, seletor
+
+
+def test_gradiente_so_no_overlay_no_filete_e_no_numeral(css):
+    com_gradiente = {
+        seletor for seletor, corpo in _regras(css) if "gradient" in corpo
+    }
+    assert com_gradiente == SELETORES_COM_GRADIENTE
+    # Gradiente radial e cônico não existem no sistema.
+    assert "radial-gradient" not in css and "conic-gradient" not in css
+
+
+def _paradas_do_gradiente(css: str, seletor: str) -> list[str]:
+    """As paradas do `linear-gradient` da regra, a vírgula de dentro de `rgba`
+    preservada: `[^()]*\\)` não atravessa parêntese, então só a vírgula de topo
+    de nível separa parada de parada."""
+    corpos = [c for s, c in _regras(css) if s == seletor and "linear-gradient" in c]
+    assert len(corpos) == 1, f"{seletor}: {len(corpos)} regras com gradiente"
+    interior = re.search(r"linear-gradient\((.*)\)", corpos[0]).group(1)
+    return [p.strip() for p in re.split(r",(?![^()]*\))", interior)]
+
+
+def test_a_hairline_nasce_e_morre_transparente_com_o_pico_a_20(css):
+    """A hairline do DESIGN.md tem forma de sino, não de rampa.
+
+    A versão anterior ia de `.55` até zero: começava acesa na ponta esquerda
+    (meia hairline) e o pico ficava quase três vezes acima do teto de 20% que a
+    lei fixa para a luz. Vale para as duas: a de luz e a de ink que divide
+    seção, que é a mesma forma sem gastar ciano.
+    """
+    luz = _paradas_do_gradiente(css, ".filete-luz")
+    assert luz == ["90deg", "transparent", "rgba(var(--luz-rgb), .20)", "transparent"]
+
+    ink = _paradas_do_gradiente(css, ".filete")
+    assert ink[0] == "90deg"
+    assert (ink[1], ink[-1]) == ("transparent", "transparent")
+    assert len(ink) == 4 and "--luz" not in ink[2]
+
+
+def _titulos(html: str, nivel: str) -> list[str]:
+    cru = re.findall(rf"<{nivel}\b[^>]*>(.*?)</{nivel}>", html, re.DOTALL)
+    return [re.sub(r"<[^>]+>", " ", t).strip() for t in cru]
+
+
+def test_cada_secao_da_edicao_abre_com_um_h2_na_ordem_do_documento(pagina, edicao):
+    """O esqueleto de títulos é a navegação de quem varre 46 atos por leitor de
+    tela: um `h2` por seção real, com o eyebrow dentro, e os atos em `h3`.
+
+    O rótulo de categoria em `<p>` não aparecia na lista de títulos, e a página
+    ficava com 39 `h3` irmãos e nenhum sumário. Sem trilha de âncoras: o sumário
+    é o esqueleto, não um menu a mais competindo com o silêncio da página.
+    """
+    esperado = ["Em 30 segundos", *(ROTULOS[c] for c in ROTULOS if edicao.secoes[c])]
+    assert _titulos(pagina, "h2") == esperado
+    assert len(_titulos(pagina, "h1")) == 1
+    assert 'href="#' not in pagina
+
+
+def test_categoria_vazia_nao_deixa_h2_orfao_no_site(edicao, cfg):
+    sem_editais = replace(edicao, secoes={**edicao.secoes, "C": ()})
+    h2 = _titulos(render_web(sem_editais, cfg), "h2")
+
+    assert ROTULOS["C"] not in h2
+    assert h2 == ["Em 30 segundos", ROTULOS["A"], ROTULOS["B"], ROTULOS["D"]]
+
+
+def test_a_fraunces_entra_com_os_eixos_da_marca(css, indice, pagina):
+    """A armadilha documentada: os defaults do arquivo variável não são os da
+    marca. Sem fixar os eixos, o título sai no corte de display e com a
+    excentricidade do WONK ligada."""
+    assert '"opsz" 40' in css and '"SOFT" 0' in css and '"WONK" 0' in css
+    for html in (indice, pagina):
+        assert "family=Fraunces:SOFT,WONK,opsz,wght@0,0,9..144,400..600" in html
+        assert "family=Plus+Jakarta+Sans:wght@300;500;700" in html
+        assert "display=swap" in html
+    assert "Georgia" in css  # a pilha de fallback enquanto a webfont não chega
+
+
+def test_grao_vinheta_de_ruido_sobre_a_pagina(css):
+    """A profundidade do sistema é o grão e o filete, não a caixa."""
+    assert "feTurbulence" in css
+    assert "mix-blend-mode: overlay" in css
+    assert "opacity: .03" in css
+    assert "box-shadow" not in css.replace("box-shadow: 0 0 10px rgba(var(--luz-rgb), .60)", "")
+
+
+def test_uma_revelacao_so_e_ela_respeita_reduced_motion(css):
+    assert css.count("@keyframes") == 1
+    assert "@media (prefers-reduced-motion: reduce)" in css
+    reduzido = css[css.index("@media (prefers-reduced-motion: reduce)") :]
+    assert "animation: none" in reduzido
+
+
+def test_foco_visivel_ao_teclado_com_segundo_canal(css):
+    assert "outline: none" not in css
+    assert ":focus-visible" in css
+    assert "outline-offset: 2px" in css
+
+
+def test_toda_imagem_do_site_tem_alt(indice, pagina):
+    for html in (indice, pagina):
+        imagens = re.findall(r"<img\b[^>]*>", html)
+        assert imagens
+        assert all("alt=" in img for img in imagens)
+
+
+def test_paginas_do_site_sem_travessao_emoji_ou_largura_de_email(indice, pagina):
+    for html in (indice, pagina):
+        assert "—" not in html and "–" not in html
+        assert EMOJI.search(html) is None
+        assert 'width="600"' not in html
+        assert "<table" not in html
+
+
+def test_o_indice_traz_o_valor_do_dia_e_cala_quando_nao_ha_cifra(indice):
+    """A coluna do dinheiro no índice: uma escala acima da edição.
+
+    Dia sem cifra declarada fica sem número. Zero e "não declarado" são coisas
+    diferentes, e `R$ 0,00` em cima de um dia real seria a segunda.
+    """
+    valores = re.findall(r'<span class="valor">([^<]+)</span>', indice)
+    assert valores == ["R$ 29.334.567,89"]
+
+
+def test_a_edicao_tem_a_coluna_do_dinheiro_em_todos_os_atos_com_valor(pagina, edicao):
+    com_valor = [
+        item
+        for cat in ("A", "B", "C")
+        for item in edicao.secoes[cat]
+        if item.valor_brl
+    ]
+    valores = re.findall(r'<p class="valor">([^<]+)</p>', pagina)
+    assert len(valores) == len(com_valor) == 2
+    assert "R$ 1.234.567,89" in valores
+
+
+def test_o_valor_e_a_unica_coisa_alinhada_a_direita(css):
+    a_direita = {
+        seletor
+        for seletor, corpo in _regras(css)
+        if "text-align: right" in corpo
+    }
+    assert a_direita == {".valor"}
+
+
+def test_a_caixa_alta_so_abre_secao_de_verdade(indice, pagina):
+    """O rótulo em caixa alta é do DESIGN.md e os dois skills o tratam como tell
+    quando ele abre toda seção. O acordo: no índice ele nomeia a seção do
+    arquivo e a marca; na edição, as quatro categorias do boletim, que são a
+    taxonomia que o leitor usa para varrer a página."""
+    assert indice.count('class="rotulo"') == 2
+    assert pagina.count('class="rotulo"') == 1 + len(ROTULOS)
+    # A data do card não virou rótulo: seis datas em caixa alta empilhadas são
+    # exatamente o cromo de template que o design pass tirou da peça.
+    assert '<span class="meta data">' in indice
+
+
+def test_conteudo_do_diario_sai_escapado_tambem_no_site(edicao, cfg):
+    primeiro = edicao.secoes["A"][0]
+    hostil = replace(primeiro, titulo="<script>alert('xss')</script> Portaria")
+    perigosa = replace(edicao, secoes={**edicao.secoes, "A": (hostil,)})
+    html = render_web(perigosa, cfg)
+    assert "<script>alert" not in html
+    assert "&lt;script&gt;alert" in html
+
+
+def test_titulo_hostil_no_indice_tambem_sai_escapado(cfg):
+    entrada = {**_EDICAO_INDICE, "titulo": "<script>alert('xss')</script>"}
+    html = render_index([entrada], cfg)
+    assert "<script>alert" not in html
+    assert "&lt;script&gt;alert" in html
+
+
+def test_o_numeral_fantasma_e_decoracao_e_sai_da_leitura(pagina):
+    """Ele repete a data que já está em texto uma linha abaixo. Escala, não
+    informação: quem lê por leitor de tela não precisa ouvir "05.09" duas
+    vezes."""
+    assert '<span class="numeral" data-numeral="03.09" aria-hidden="true">' in pagina
+    assert "3 de setembro de 2026" in pagina
+
+
+def test_link_do_miolo_e_ink_com_sublinhado_nao_ciano(css):
+    regras = dict(_regras(css))
+    assert "color: var(--ink)" in regras[".link"]
+    assert "text-decoration: underline" in regras[".link"]
+    assert "var(--luz" not in regras[".link"] and "var(--luz" not in regras[".link:hover"]
 
 
 # ── esquema de URL ──────────────────────────────────────────────────────

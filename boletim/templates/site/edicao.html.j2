@@ -1,0 +1,113 @@
+{#
+  A edição do dia como página do site.
+
+  Três dobras marcadas com `data-dobra`. A luz do cabeçalho é o filete do
+  eyebrow; o miolo não tem portador nenhum, de propósito - quarenta e seis atos
+  com um ponto de luz cada seriam quarenta e seis luzes, que é o mesmo que
+  nenhuma; a chamada final volta ao botão.
+
+  O numeral fantasma da data fica atrás do título, em baixo-relevo, na receita
+  da capa escultórica. Ele é decoração de escala, não informação: a data por
+  extenso está logo abaixo, em texto, e o numeral sai do fluxo de leitura com
+  `aria-hidden`.
+
+  A coluna do dinheiro é a aresta à direita: o valor de cada ato pendurado na
+  linha de base do título, na mesma aresta em todos. Nada mais na página é
+  alinhado à direita.
+
+  O esqueleto de títulos é a navegação de quem lê por leitor de tela: `h1` no
+  título da edição, um `h2` por seção real ("Em 30 segundos" e cada categoria
+  com ato) e `h3` em cada ato. Por isso o rótulo da categoria é um `h2` com o
+  eyebrow dentro, e não um `<p>`: 39 `h3` irmãos sem nenhum `h2` entre eles é
+  uma página sem sumário. O eyebrow do cabeçalho continua `<p>` - ali quem abre
+  a página é o `h1`.
+#}
+{% extends "site/base.html.j2" %}
+{% block titulo %}{{ edicao.titulo|sem_travessao }}{% endblock %}
+{% block descricao %}
+<meta name="description" content="{{ edicao.intro|sem_travessao|truncate(180, true, '') }}">
+{% endblock %}
+{% block corpo %}
+
+{# ── dobra 1: cabeçalho ─────────────────────────────────────────────── #}
+<header class="cabecalho-edicao" data-dobra="1">
+<div class="env">
+<span class="numeral" data-numeral="{{ edicao.data|data_numeral }}" aria-hidden="true">{{ edicao.data|data_numeral }}</span>
+<a class="marca" href="{{ site_url }}"><img src="{{ url_logo_branco }}" alt="Thauma"></a>
+<div class="revelar">
+<p class="eyebrow"><span class="filete filete-luz" data-luz></span><span class="rotulo">Radar de captação em saúde</span></p>
+<h1 class="titulo-edicao">{{ edicao.titulo|sem_travessao }}</h1>
+<p class="meta">{{ edicao.data|data_extenso }}</p>
+{% if edicao.parcial %}
+{% set avisos = edicao.fontes|avisos_fontes %}
+{# Ressalva de proveniência, não alerta: sem caixa e sem cor, como o DESIGN.md
+   pede para dado com ressalva. #}
+<p class="meta">Coleta parcial nesta data{% if avisos %}: {{ avisos }}{% endif %}.</p>
+{% endif %}
+<p class="lead medida">{{ edicao.intro|sem_travessao }}</p>
+</div>
+</div>
+</header>
+
+{# ── dobra 2: o miolo. Nenhum portador de luz aqui. ─────────────────── #}
+<section data-dobra="2">
+<div class="env">
+
+<div class="bloco">
+<h2 class="titulo-bloco">Em 30 segundos</h2>
+<div class="bullets medida">
+{% for bullet in edicao.em_30_segundos %}
+{% if not loop.first %}<hr class="divisor">{% endif %}
+<p class="corpo">{{ bullet|sem_travessao }}</p>
+{% endfor %}
+</div>
+</div>
+
+{% for categoria in ["A", "B", "C"] %}
+{% if edicao.secoes[categoria] %}
+<div class="secao-atos">
+<h2 class="eyebrow"><span class="filete"></span><span class="rotulo">{{ rotulos[categoria] }}</span></h2>
+{% for item in edicao.secoes[categoria] %}
+{% if not loop.first %}<hr class="divisor">{% endif %}
+{% include "site/_item.html.j2" %}
+{% endfor %}
+</div>
+{% endif %}
+{% endfor %}
+
+{% if edicao.secoes["D"] %}
+<div class="secao-atos">
+<h2 class="eyebrow"><span class="filete"></span><span class="rotulo">{{ rotulos["D"] }}</span></h2>
+<div class="lista-compacta">
+{# Sem URL de esquema conhecido o título fica de pé, só que sem link: o ato
+   continua registrado, que é a razão de existir desta lista. #}
+{% for item in edicao.secoes["D"] %}
+{% if not loop.first %}<hr class="divisor">{% endif %}
+{% set href = item.url|url_segura %}
+<p class="meta">{% if href %}<a class="link" href="{{ href|e }}">{{ item.titulo|sem_travessao|titulo_ato }}</a>{% else %}{{ item.titulo|sem_travessao|titulo_ato }}{% endif %}, {{ item.orgao|sem_travessao }}</p>
+{% endfor %}
+</div>
+</div>
+{% endif %}
+
+</div>
+</section>
+
+{# ── dobra 3: chamada final ─────────────────────────────────────────── #}
+<section class="dobra dobra--fim" data-dobra="3">
+<div class="env">
+<div class="chamada">
+<p class="corpo">Pedro William responde no WhatsApp o que estes atos mudam para a sua instituição.</p>
+<a class="botao" data-luz href="{{ cta_url }}">{{ cta_texto }}</a>
+</div>
+</div>
+</section>
+
+{% endblock %}
+{% block rodape %}
+{% set publicadas = edicao.fontes|fontes_publicadas %}
+{% if publicadas %}
+<p class="meta">Fontes: {% for fonte in publicadas %}{{ fonte.nome|nome_fonte }}{% if fonte.edicao %} (edição {{ fonte.edicao }}{% if fonte.paginas %}, {{ fonte.paginas }}{% endif %}){% elif fonte.paginas %} ({{ fonte.paginas }}){% endif %}{% if not loop.last %}; {% endif %}{% endfor %}.</p>
+{% endif %}
+<p class="meta"><a class="link" href="{{ site_url }}">Todas as edições</a></p>
+{% endblock %}
