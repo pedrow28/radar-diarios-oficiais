@@ -12,7 +12,7 @@ Nesta segunda-feira, a agenda traz 13 deliberações federais e estaduais que re
 
 ## Captação de recursos
 
-### Deliberação CIB-SUS/MG nº 5.948,
+### Deliberação CIB-SUS/MG nº 5.948
 
 Secretaria de Estado de Saúde
 
@@ -24,7 +24,7 @@ Por que importa. CRÍTICO: Alteração nas normas de como os municípios acessam
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-01T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330889%2C%22paginaSelecionada%22%3A21%7D)
 
-### Resolução SES/MG nº 11.604, de 31 de agosto de 2026.
+### Resolução SES/MG nº 11.604
 
 Secretaria de Estado de Saúde
 
@@ -36,7 +36,7 @@ Por que importa. CRÍTICO: Prorrogação de prazo para usar recursos e simplific
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-01T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330889%2C%22paginaSelecionada%22%3A21%7D)
 
-### Deliberação CIB-SUS/MG nº 5.949,
+### Deliberação CIB-SUS/MG nº 5.949
 
 Secretaria de Estado de Saúde
 

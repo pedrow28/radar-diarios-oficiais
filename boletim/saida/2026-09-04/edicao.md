@@ -14,7 +14,7 @@ Esta edição consolida um movimento duplo de expansão orçamentária e qualifi
 
 ## Captação de recursos
 
-### Deliberação CIB-SUS/MG nº 5.960,
+### Deliberação CIB-SUS/MG nº 5.960
 
 Secretaria de Estado de Saúde
 
@@ -28,7 +28,7 @@ Valor: R$ 28.132.761,89
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D)
 
-### Deliberação CIB-SUS/MG nº 5.959,
+### Deliberação CIB-SUS/MG nº 5.959
 
 Secretaria de Estado de Saúde
 
@@ -42,7 +42,7 @@ Valor: R$ 680.282,90
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D)
 
-### Deliberação CIB-SUS/MG nº 5.957,
+### Deliberação CIB-SUS/MG nº 5.957
 
 Secretaria de Estado de Saúde
 
@@ -56,7 +56,7 @@ Valor: R$ 200.286,02
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D)
 
-### Deliberação CIB-SUS/MG nº 5.958,
+### Deliberação CIB-SUS/MG nº 5.958
 
 Secretaria de Estado de Saúde
 
@@ -466,7 +466,7 @@ Por que importa. Processo de contratação interno da Hemobrás. Não impacta in
 
 [Ver publicação](https://www.in.gov.br/web/dou/-/aviso-de-alteracao-730048081)
 
-### Resolução SES nº 11602, 27 de agosto de 2026.
+### Resolução SES nº 11602, 27 de agosto de 2026
 
 Secretaria de Estado de Saúde
 
@@ -478,7 +478,7 @@ Por que importa. Rotina administrativa de gestão de pessoal, ajuste decorrente 
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-04T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330899%2C%22paginaSelecionada%22%3A26%7D)
 
-### Resolução SES nº 11601, 27 de agosto de 2026.
+### Resolução SES nº 11601, 27 de agosto de 2026
 
 Secretaria de Estado de Saúde
 

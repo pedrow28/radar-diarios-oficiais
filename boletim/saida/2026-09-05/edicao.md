@@ -26,7 +26,7 @@ Valor: R$ 1.268.895,98
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-05T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330902%2C%22paginaSelecionada%22%3A30%7D)
 
-### Resolução SES nº 11.616 de 03 de setembro de 2026.
+### Resolução SES nº 11.616
 
 Secretaria de Estado de Saúde
 

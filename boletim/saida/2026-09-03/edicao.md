@@ -152,7 +152,7 @@ Valor: R$ 600,00
 
 ## Mudança de regra
 
-### Resolução SES nº 11.606, 02 de setembro de 2026.
+### Resolução SES nº 11.606, 02 de setembro de 2026
 
 Secretaria de Estado de Saúde
 

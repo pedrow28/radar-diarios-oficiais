@@ -12,7 +12,7 @@ Edição de 2 de setembro registra uma tarde de aprovações significativas em M
 
 ## Captação de recursos
 
-### Deliberação CIB-SUS/MG nº 5.953,
+### Deliberação CIB-SUS/MG nº 5.953
 
 Secretaria de Estado de Saúde
 
@@ -40,7 +40,7 @@ Valor: R$ 2.958.744,13
 
 [Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-convenio-729594023)
 
-### Deliberação CIB-SUS/MG nº 5.954,
+### Deliberação CIB-SUS/MG nº 5.954
 
 Secretaria de Estado de Saúde
 
@@ -54,7 +54,7 @@ Valor: R$ 884.018,62
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D)
 
-### Deliberação CIB-SUS/MG nº 5.955,
+### Deliberação CIB-SUS/MG nº 5.955
 
 Secretaria de Estado de Saúde
 
@@ -68,7 +68,7 @@ Valor: R$ 333.693,57
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D)
 
-### Deliberação CIB-SUS/MG nº 5.950,
+### Deliberação CIB-SUS/MG nº 5.950
 
 Secretaria de Estado de Saúde
 
@@ -82,7 +82,7 @@ Valor: R$ 122.474,11
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D)
 
-### Resolução SES/MG nº 11.610, de 01 de setembro de 2026.
+### Resolução SES/MG nº 11.610
 
 Secretaria de Estado de Saúde
 
@@ -222,7 +222,7 @@ Valor: R$ 1.548.599,81
 
 ## Mudança de regra
 
-### Deliberação CIB-SUS/MG nº 5.952,
+### Deliberação CIB-SUS/MG nº 5.952
 
 Secretaria de Estado de Saúde
 
@@ -236,7 +236,7 @@ Valor: R$ 1.284.646,82
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D)
 
-### Deliberação CIB-SUS/MG nº 5.951,
+### Deliberação CIB-SUS/MG nº 5.951
 
 Secretaria de Estado de Saúde
 
@@ -250,7 +250,7 @@ Valor: R$ 265.621,32
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A47%7D)
 
-### Deliberação CIB-SUS/MG nº 5.956,
+### Deliberação CIB-SUS/MG nº 5.956
 
 Secretaria de Estado de Saúde
 
@@ -356,7 +356,7 @@ Por que importa. Procedimento administrativo de notificação formal; não impac
 
 ## Outros atos
 
-### Ato 4326, de 24 de agosto de 2026.
+### Ato 4326
 
 Secretaria de Estado de Saúde
 
@@ -366,7 +366,7 @@ Ato de retificação de aposentadoria do servidor Marco Tulio Lopes Caldas - cor
 
 [Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-02T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330892%2C%22paginaSelecionada%22%3A49%7D)
 
-### Ato 4344, de 25 de agosto de 2026.
+### Ato 4344
 
 Secretaria de Estado de Saúde
 
@@ -470,7 +470,7 @@ Por que importa. Criação de grupo para planejamento futuro de vigilância em s
 
 [Ver publicação](https://www.in.gov.br/web/dou/-/portaria-svsa/ms-n-186-de-1-de-setembro-de-2026-729412931)
 
-### Resolução SES nº 11555 de 31 de agosto de 2026.
+### Resolução SES nº 11555
 
 Secretaria de Estado de Saúde
 

@@ -9,7 +9,9 @@
       "C": 0,
       "D": 0
     },
-    "parcial": false
+    "parcial": false,
+    "valor_dia": 1493966.18,
+    "total_relevante": 2
   },
   {
     "data": "2026-09-04",
@@ -21,7 +23,9 @@
       "C": 16,
       "D": 7
     },
-    "parcial": false
+    "parcial": false,
+    "valor_dia": 31571461.84,
+    "total_relevante": 39
   },
   {
     "data": "2026-09-03",
@@ -33,7 +37,9 @@
       "C": 9,
       "D": 8
     },
-    "parcial": false
+    "parcial": false,
+    "valor_dia": 18622424.08,
+    "total_relevante": 30
   },
   {
     "data": "2026-09-02",
@@ -45,7 +51,9 @@
       "C": 6,
       "D": 12
     },
-    "parcial": false
+    "parcial": false,
+    "valor_dia": 195340512.02,
+    "total_relevante": 25
   },
   {
     "data": "2026-09-01",
@@ -57,7 +65,9 @@
       "C": 2,
       "D": 6
     },
-    "parcial": false
+    "parcial": false,
+    "valor_dia": 28631767.39,
+    "total_relevante": 13
   },
   {
     "data": "2026-08-31",
@@ -69,6 +79,8 @@
       "C": 9,
       "D": 10
     },
-    "parcial": false
+    "parcial": false,
+    "valor_dia": 320718732.43,
+    "total_relevante": 31
   }
 ]
