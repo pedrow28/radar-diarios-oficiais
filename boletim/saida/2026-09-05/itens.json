@@ -1,15 +1,15 @@
 {
   "data": "2026-09-05",
-  "gerado_em": "2026-09-07T23:55:49.548321+00:00",
+  "gerado_em": "2026-09-08T11:09:18.036726+00:00",
   "avisos": [],
   "edicao": {
-    "titulo": "2 resoluções estaduais de Minas Gerais mobilizam R$ 1,5 milhão para câncer e AVC",
+    "titulo": "2 resoluções da SES divulgam R$ 1,3 milhão para câncer e AVC",
     "em_30_segundos": [
-      "SES/MG divulga beneficiários e valores para diagnóstico de câncer em Cuidar na Hora Certa, com R$ 1,3 milhão.",
-      "SES/MG repassa recursos por ressarcimento para a estratégia de Unidade de Acidente Vascular Cerebral Estadual, totalizando R$ 225 mil.",
-      "As 2 resoluções estaduais abrem oportunidades de financiamento para hospitais filantrópicos e Santas Casas em Minas Gerais."
+      "Resolução SES nº 11.617 divulga R$ 1,3 milhão para diagnóstico do câncer no Programa Cuidar na Hora Certa.",
+      "Resolução SES nº 11.616 divulga ressarcimento para hospitais com Unidade de AVC Estadual com medicamentos trombolíticos.",
+      "Ambas resoluções da SES definem estratégias para diagnóstico de câncer e assistência a AVC."
     ],
-    "intro": "Na edição de 5 de setembro, Minas Gerais divulga duas resoluções para investimento em saúde especializada de seu sistema. Gestores de hospitais devem acompanhar os detalhes da resolução sobre o diagnóstico de câncer em Cuidar na Hora Certa e também da que trata do repasse para unidades de acidente vascular cerebral.",
+    "intro": "Dos 2 atos divulgados hoje, a Secretaria de Estado de Saúde destaca R$ 1,3 milhão em recursos para a estratégia de diagnóstico do Programa Estadual de Enfrentamento ao Câncer Cuidar na Hora Certa, além de valores de ressarcimento para hospitais credenciados como Unidades de Acidente Vascular Cerebral Estadual com medicamentos trombolíticos. Gestores de hospitais, santas casas e secretarias municipais de saúde devem conferir os beneficiários e os valores divulgados nas resoluções nº 11.617 e nº 11.616 de 03/09/2026 para garantir o acompanhamento correto das estratégias de diagnóstico de câncer e dos procedimentos terapêuticos em AVC.",
     "parcial": false,
     "fontes": [
       {
@@ -44,13 +44,13 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-05T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330902%2C%22paginaSelecionada%22%3A29%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Resolução SES nº 11.611, de 4 de setembro de 2026, prorroga por 12 meses o prazo de execução de recursos das resoluções SES nº 8.992/2023 e nº 8.993/2023.",
+      "resumo": "Resolução SES nº 11.611, de 04/09/2026 prorroga por 12 meses o prazo de execução dos recursos das resoluções sobre estruturação da atenção primária.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "prorrogação",
-        "prazo",
+        "atenção primária",
         "investimento"
       ],
       "fallback": false
@@ -70,14 +70,15 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-05T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330902%2C%22paginaSelecionada%22%3A29%7D",
       "categoria": "A",
       "relevancia": 3,
-      "resumo": "Resolução SES nº 11.616, de 3 de setembro de 2026, divulga valores de repasse por ressarcimento para a estratégia de Unidade de Acidente Vascular Cerebral Estadual (U-AVCE) em Minas Gerais.",
-      "por_que_importa": "Verificar se o hospital está cadastrado como Unidade de Acidente Vascular Cerebral Estadual e conferir o ressarcimento divulgado para medicamentos trombolíticos.",
-      "valor_brl": 225070.2,
+      "resumo": "Resolução SES nº 11.616, de 03/09/2026 divulga valores de ressarcimento para hospitais credenciados como Unidade de Acidente Vascular Cerebral Estadual com medicamentos trombolíticos.",
+      "por_que_importa": "o hospital deve confirmar seu credenciamento U-AVCE e solicitar o ressarcimento dos medicamentos trombolíticos conforme as regras divulgadas.",
+      "valor_brl": null,
       "entes": [
         "Hospital Cred"
       ],
       "tags": [
         "ressarcimento",
+        "U-AVCE",
         "AVC",
         "medicamentos"
       ],
@@ -98,13 +99,13 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-05T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330902%2C%22paginaSelecionada%22%3A29%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Resolução SES nº 11.613, de 4 de setembro de 2026, prorroga por 12 meses o prazo de execução de recursos das resoluções SES nº 9.231/2023 e nº 9.264/2023.",
+      "resumo": "Resolução SES nº 11.613, de 04/09/2026 prorroga por 12 meses o prazo de execução dos recursos das resoluções sobre aquisição de veículos.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "prorrogação",
-        "prazo",
+        "veículos",
         "investimento"
       ],
       "fallback": false
@@ -124,14 +125,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-05T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330902%2C%22paginaSelecionada%22%3A29%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Resolução SES nº 11.614, de 4 de setembro de 2026, prorroga por 12 meses o prazo de execução de recursos das resoluções SES nº 9.247/2023 e nº 9.249/2023.",
+      "resumo": "Resolução SES nº 11.614, de 04/09/2026 prorroga por 12 meses o prazo de execução dos recursos das resoluções sobre módulo de eletivas da Política Hospitalar.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "prorrogação",
-        "prazo",
-        "investimento"
+        "eletivas",
+        "hospitalar"
       ],
       "fallback": false
     },
@@ -150,14 +151,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-05T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330902%2C%22paginaSelecionada%22%3A30%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Resolução SES nº 11.612, de 4 de setembro de 2026, prorroga por 12 meses o prazo de execução de recursos de 6 resoluções sobre apoio e fortalecimento à atenção especializada.",
+      "resumo": "Resolução SES nº 11.612, de 04/09/2026 prorroga por 12 meses o prazo de execução dos recursos de 6 resoluções sobre atenção especializada.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "prorrogação",
-        "prazo",
-        "investimento"
+        "atenção especializada",
+        "equipamentos"
       ],
       "fallback": false
     },
@@ -176,8 +177,8 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-05T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330902%2C%22paginaSelecionada%22%3A30%7D",
       "categoria": "A",
       "relevancia": 3,
-      "resumo": "Resolução SES nº 11.617, de 3 de setembro de 2026, divulga beneficiários e valores para o componente de diagnóstico do Programa Estadual de Enfrentamento ao Câncer – Cuidar na Hora Certa.",
-      "por_que_importa": "Verificar se a instituição está incluída entre os beneficiários para adequação orçamentária do componente de diagnóstico no programa de câncer.",
+      "resumo": "Resolução SES nº 11.617, de 03/09/2026 divulga beneficiários e valores da estratégia de diagnóstico do Programa Estadual de Enfrentamento ao Câncer Cuidar na Hora Certa.",
+      "por_que_importa": "as fundações devem utilizar os recursos para fortalecer a capacidade de diagnóstico do programa de câncer conforme as metas estabelecidas.",
       "valor_brl": 1268895.98,
       "entes": [
         "Fundação Hospitalar do Estado de Minas Gerais",
@@ -188,7 +189,7 @@
       "tags": [
         "câncer",
         "diagnóstico",
-        "repasse"
+        "programa estadual"
       ],
       "fallback": false
     },
@@ -207,16 +208,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-05T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330902%2C%22paginaSelecionada%22%3A30%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria FUNED nº 068, de 4 de setembro de 2026, institui orientações e procedimentos para despesas de pronto pagamento na Fundação Ezequiel Dias.",
+      "resumo": "Portaria FUNED nº 068, de 04/09/2026 institui orientações e procedimentos gerais para realização de despesas de pronto pagamento com limite de R$ 200.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [
-        "Fundação Ezequiel Dias"
-      ],
+      "entes": [],
       "tags": [
-        "procedimento",
-        "administrativo",
-        "adiantamento"
+        "despesas",
+        "pronto pagamento",
+        "procedimento"
       ],
       "fallback": false
     }
