@@ -361,11 +361,15 @@ suíte aceita o repositório com e sem `PARAR`; o que ela cobra é que um freio
 presente diga na primeira linha por que está ali, porque é essa linha que o
 workflow imprime como `freio remoto ativo:`.
 
-**Horários.** 09:30 e 12:00 no horário de Brasília, de segunda a sábado (no
-arquivo eles aparecem como `30 12` e `0 15`, porque o cron do GitHub é UTC). A
-execução das 12:00 é a rede de segurança de quando o diário ainda não estava
-publicado às 09:30, e se anula sozinha quando `site/edicoes/<data>.html` já
-existe.
+**Horários.** Quatro tentativas entre 06:37 e 07:41 no horário de Brasília, mais
+uma rede às 11:52, de segunda a sábado (no arquivo as horas aparecem em UTC,
+porque é o fuso do cron do GitHub). A primeira não vem antes das 06:30 porque é
+a hora em que o Diário de Minas fica disponível, e uma coleta anterior
+publicaria o dia sem ele. As tentativas se repetem porque o agendamento do
+GitHub é melhor esforço: em horário cheio já medimos de 3 a 5 horas de atraso,
+então o minuto é sempre quebrado e a janela é coberta mais de uma vez. Quando a
+edição do dia já existe, a tentativa seguinte termina em segundos, sem coletar
+nem chamar o modelo.
 
 **Disparo manual.** Actions → "Boletim diário" → "Run workflow", com duas
 entradas: `data` (`AAAA-MM-DD`, padrão hoje em São Paulo) e `forcar` (regera
