@@ -33,8 +33,17 @@ FREIO = RAIZ / "PARAR"
 FIXTURES_COLETA = RAIZ / "tests" / "fixtures" / "workflow"
 BASH = shutil.which("bash")
 
-# 09:30 e 12:00 no horário de Brasília, de segunda a sábado (o cron do GitHub é UTC).
-CRONS = {"30 12 * * 1-6", "0 15 * * 1-6"}
+# Quatro tentativas entre 06:37 e 07:41 no horário de Brasília, mais a rede das
+# 11:52, de segunda a sábado (o cron do GitHub é UTC e BRT = UTC-3). Nenhuma
+# antes das 06:30, quando o Diário de Minas fica disponível.
+CRONS = {
+    "37 9 * * 1-6",
+    "58 9 * * 1-6",
+    "19 10 * * 1-6",
+    "41 10 * * 1-6",
+    "52 14 * * 1-6",
+}
+PRIMEIRO_HORARIO_UTC = (9, 37)
 # O único segredo sem o qual a rotina não roda: o modelo é chamado em toda
 # execução. Os do INLABS são opcionais desde que o portal virou a fonte padrão.
 SEGREDO_OBRIGATORIO = "CLAUDE_CODE_OAUTH_TOKEN"
@@ -72,9 +81,27 @@ def test_o_arquivo_e_yaml_valido(workflow: dict[str, Any]) -> None:
     assert workflow["jobs"]["boletim"]["runs-on"] == "ubuntu-latest"
 
 
-def test_os_dois_horarios_diarios(workflow: dict[str, Any]) -> None:
+def test_os_horarios_diarios(workflow: dict[str, Any]) -> None:
     agendados = {item["cron"] for item in gatilhos(workflow)["schedule"]}
     assert agendados == CRONS
+
+
+def test_nenhuma_tentativa_antes_das_6h30_de_brasilia(
+    workflow: dict[str, Any],
+) -> None:
+    """O Diário de Minas só fica disponível às 06:30 BRT, e uma coleta anterior
+    publicaria o dia sem ele — a edição existente impede que a tentativa
+    seguinte refaça o dia."""
+    for item in gatilhos(workflow)["schedule"]:
+        minuto, hora = item["cron"].split()[:2]
+        assert (int(hora), int(minuto)) >= PRIMEIRO_HORARIO_UTC, item["cron"]
+
+
+def test_nenhuma_tentativa_em_minuto_de_pico(workflow: dict[str, Any]) -> None:
+    """O agendamento do GitHub é melhor esforço e a fila entope em minuto
+    redondo, que é onde todo mundo agenda."""
+    for item in gatilhos(workflow)["schedule"]:
+        assert int(item["cron"].split()[0]) % 15 != 0, item["cron"]
 
 
 def test_disparo_manual_aceita_data_e_forcar(workflow: dict[str, Any]) -> None:

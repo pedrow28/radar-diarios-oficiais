@@ -28,9 +28,18 @@ name: Boletim diário
 
 on:
   schedule:
-    # O cron do GitHub é UTC. 12:30 UTC = 09:30 BRT, 15:00 UTC = 12:00 BRT.
-    - cron: "30 12 * * 1-6"
-    - cron: "0 15 * * 1-6"
+    # O cron do GitHub é UTC; BRT = UTC-3. Quatro tentativas entre 06:37 e
+    # 07:41 BRT, porque o disparo da newsletter é às 08:30 e o agendamento do
+    # GitHub é melhor esforço: medimos de 3 a 5 horas de atraso em horário
+    # cheio. Minuto quebrado foge do pelotão que agenda em :00 e :30. Nada
+    # antes das 06:30: é a hora em que o Diário de Minas fica disponível, e
+    # uma coleta anterior publicaria o dia sem ele. As tentativas seguintes
+    # custam segundos quando a edição do dia já existe.
+    - cron: "37 9 * * 1-6"   # 06:37 BRT
+    - cron: "58 9 * * 1-6"   # 06:58 BRT
+    - cron: "19 10 * * 1-6"  # 07:19 BRT
+    - cron: "41 10 * * 1-6"  # 07:41 BRT
+    - cron: "52 14 * * 1-6"  # 11:52 BRT, rede de segurança do dia
   workflow_dispatch:
     inputs:
       data:
