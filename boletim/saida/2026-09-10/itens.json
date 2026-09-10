@@ -1,23 +1,23 @@
 {
   "data": "2026-09-10",
-  "gerado_em": "2026-09-10T11:13:31.995123+00:00",
+  "gerado_em": "2026-09-10T11:43:23.521800+00:00",
   "avisos": [],
   "edicao": {
-    "titulo": "Boletim de 10/09/2026: 0 publicações relevantes",
+    "titulo": "6 habilitações em hemodiálise e 1 repasse para medicamentos somam R$ 7,9 milhões",
     "em_30_segundos": [
-      "Sem publicações relevantes nesta data"
+      "SAES/MS habilita 6 unidades de hemodiálise em 5 estados com R$ 7,5 milhões.",
+      "GM/MS autoriza repasse de R$ 408 mil em Santa Catarina para medicamentos em ações judiciais.",
+      "SAES/SCTIE altera procedimentos de farmácia especializada na tabela SIGTAP."
     ],
-    "intro": "Nenhuma publicação de captação de recursos, mudança de regra ou edital nesta data. O radar segue lendo o Diário Oficial da União e o Diário Oficial de Minas Gerais no próximo dia útil.",
-    "parcial": true,
+    "intro": "Hoje o boletim traz 6 novas habilitações em hemodiálise pelo programa Agora Tem Especialistas com investimento de R$ 7,5 milhões em custeio anual, distribuídas entre São Paulo (Assis), Rio de Janeiro (Teresópolis), Rio Grande do Norte (Natal e Santa Cruz), Rio Grande do Sul (Rio Grande) e Santa Catarina (Xanxerê). Além disso, gestores precisam acompanhar 2 atos importantes: a transferência de R$ 408 mil para reembolso de medicamentos em ações judiciais em Santa Catarina e a alteração de procedimentos de farmácia especializada na tabela SIGTAP.",
+    "parcial": false,
     "fontes": [
       {
         "nome": "dou",
-        "status": "ausente",
-        "edicao": null,
-        "paginas": null,
-        "avisos": [
-          "arquivo não encontrado"
-        ]
+        "status": "ok",
+        "edicao": "171",
+        "paginas": "pp. 1-109",
+        "avisos": []
       },
       {
         "nome": "iofmg",
@@ -29,6 +29,1215 @@
     ]
   },
   "itens": [
+    {
+      "id": "2c2ceb6d2ae78b83",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.828",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 68,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.828, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.828-de-2-de-setembro-de-2026-731067885",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 4.828, de 2 de setembro de 2026, autoriza Hospital dos Olhos Visão Center LTDA em São Mateus, Espírito Santo, a realizar transplante de córnea e esclera.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital dos Olhos Visão Center LTDA",
+        "São Mateus"
+      ],
+      "tags": [
+        "transplante",
+        "córnea",
+        "autorização",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ad7998c55dd8f282",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.835",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 71,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.835, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.835-de-2-de-setembro-de-2026-731067806",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 4.835, de 2 de setembro de 2026, concede progressão de categoria para Hospital Santa Isabel, Santa Casa de Misericórdia da Bahia, para realizar transplante de célula progenitora hematopoética.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Santa Isabel",
+        "Salvador"
+      ],
+      "tags": [
+        "transplante",
+        "cph",
+        "progressão",
+        "habilitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c544f049d98339d3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.833",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 71,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.833, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.833-de-2-de-setembro-de-2026-731067008",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 4.833, de 2 de setembro de 2026, inclui membros em equipes de transplante em São Paulo, Piauí e Santa Catarina.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "transplante",
+        "equipe",
+        "pessoal",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "94d4a052a24244e0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Decisão",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 75,
+      "edicao": "171",
+      "titulo": "DECISÃO DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/decisao-de-9-de-setembro-de-2026-731066927",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Decisão da ANS de 9 de setembro de 2026 suspende eficácia da Resolução Regimental nº 38 de 27 de agosto de 2026 até 15 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "ans",
+        "regulação",
+        "suspensão",
+        "saúde-suplementar"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "278d7f5084133670",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.846",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 73,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.846, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.846-de-3-de-setembro-de-2026-731065866",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.846, de 3 de setembro de 2026, habilita Unidade de Nefrologia de Assis LTDA em Assis, São Paulo, no Programa Agora Tem Especialistas, modalidade hemodiálise.",
+      "por_que_importa": null,
+      "valor_brl": 2282213.09,
+      "entes": [
+        "Unidade de Nefrologia de Assis LTDA",
+        "Assis"
+      ],
+      "tags": [
+        "hemodiálise",
+        "agora-tem-especialistas",
+        "crédito-financeiro",
+        "habilitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "798ece5ab9ae9974",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.840",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 72,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.840, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.840-de-3-de-setembro-de-2026-731063154",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.840, de 3 de setembro de 2026, habilita Instituto do Rim Serviço de Nefrologia LTDA em Natal, Rio Grande do Norte, no Programa Agora Tem Especialistas, modalidade hemodiálise.",
+      "por_que_importa": null,
+      "valor_brl": 2186858.84,
+      "entes": [
+        "Instituto do Rim Serviço de Nefrologia LTDA",
+        "Natal"
+      ],
+      "tags": [
+        "hemodiálise",
+        "agora-tem-especialistas",
+        "crédito-financeiro",
+        "habilitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "de764984b20a4164",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.847",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 73,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.847, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.847-de-3-de-setembro-de-2026-731063075",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.847, de 3 de setembro de 2026, renova certificação de beneficência da Casa de Caridade Leopoldinense, sediada em Leopoldina, Minas Gerais, com validade até 31 de dezembro de 2027.",
+      "por_que_importa": "identificar oportunidades de parcerias, apoio ou repasses com a entidade, que mantém sua vinculação ao SUS até 2027.",
+      "valor_brl": null,
+      "entes": [
+        "Casa de Caridade Leopoldinense",
+        "Leopoldina"
+      ],
+      "tags": [
+        "cebas",
+        "beneficência",
+        "renovação",
+        "minas-gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "217bef4974d884d3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.836",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 72,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.836, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.836-de-2-de-setembro-de-2026-731061895",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 4.836, de 2 de setembro de 2026, substitui responsáveis técnicos de equipes de transplante em São Paulo e Rio Grande do Sul.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "transplante",
+        "equipe",
+        "responsável-técnico",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "64149144d37d3b4b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.844",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 73,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.844, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.844-de-3-de-setembro-de-2026-731061814",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.844, de 3 de setembro de 2026, habilita Centro de Nefrologia Santa Rita LTDA em Santa Cruz, Rio Grande do Norte, no Programa Agora Tem Especialistas, modalidade hemodiálise.",
+      "por_que_importa": null,
+      "valor_brl": 786636.96,
+      "entes": [
+        "Centro de Nefrologia Santa Rita LTDA",
+        "Santa Cruz"
+      ],
+      "tags": [
+        "hemodiálise",
+        "agora-tem-especialistas",
+        "crédito-financeiro",
+        "habilitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "257e62c454238dcc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.831",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 69,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.831, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.831-de-2-de-setembro-de-2026-731060945",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 4.831, de 2 de setembro de 2026, renova autorização de 4 estabelecimentos no Rio de Janeiro para retirada e transplante de órgãos, com validade de 2 anos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital de Olhos Niterói",
+        "Hospital Samaritano",
+        "Hospital Adventista Silvestre",
+        "Hospital Municipal Pedro II"
+      ],
+      "tags": [
+        "transplante",
+        "renovação",
+        "órgãos",
+        "rio-de-janeiro"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6ad29195602952d9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.848",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 73,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.848, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.848-de-3-de-setembro-de-2026-731060866",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.848, de 3 de setembro de 2026, habilita Renal Assistência Médica LTDA em Teresópolis, Rio de Janeiro, no Programa Agora Tem Especialistas, modalidade hemodiálise.",
+      "por_que_importa": null,
+      "valor_brl": 1579433.19,
+      "entes": [
+        "Renal Assistência Médica LTDA",
+        "Teresópolis"
+      ],
+      "tags": [
+        "hemodiálise",
+        "agora-tem-especialistas",
+        "crédito-financeiro",
+        "habilitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "84e952b8355390b0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.845",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 73,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.845, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.845-de-3-de-setembro-de-2026-731059987",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 4.845, de 3 de setembro de 2026, renova certificação de beneficência da Associação Rede Feminina de Combate ao Câncer em São Miguel do Oeste, Santa Catarina, com validade até 2030.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Associação Rede Feminina de Combate ao Câncer",
+        "São Miguel do Oeste"
+      ],
+      "tags": [
+        "cebas",
+        "beneficência",
+        "renovação",
+        "câncer"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3b904907baa02993",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.842",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 73,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.842, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.842-de-3-de-setembro-de-2026-731042411",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Portaria SAES/MS nº 4.842, de 3 de setembro de 2026, renova certificação de entidade beneficente da Santa Casa de Misericórdia de Muzambinho até 31 de dezembro de 2027.",
+      "por_que_importa": "confirmar que a Santa Casa de Muzambinho mantém seu status de entidade beneficente, essencial para seus benefícios fiscais até 2027.",
+      "valor_brl": null,
+      "entes": [
+        "Santa Casa de Misericórdia de Muzambinho",
+        "Muzambinho"
+      ],
+      "tags": [
+        "certificação",
+        "CEBAS",
+        "filantropia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c1541e40dd9240fe",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.843",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 73,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.843, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.843-de-3-de-setembro-de-2026-731039059",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 4.843, de 3 de setembro de 2026, renova certificação de entidade beneficente do Hospital Beneficente Nossa Senhora Aparecida até 31 de dezembro de 2028.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Beneficente Nossa Senhora Aparecida",
+        "Paraí"
+      ],
+      "tags": [
+        "certificação",
+        "CEBAS",
+        "entidade beneficente"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f657c7c759c33341",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.851",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.851, DE 4 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.851-de-4-de-setembro-de-2026-731038980",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.851, de 4 de setembro de 2026, habilita Centro de Nefrologia e Diálise em Rio Grande (RS) no Programa Agora Tem Especialistas em hemodiálise.",
+      "por_que_importa": null,
+      "valor_brl": 466744.17,
+      "entes": [
+        "CND - Centro de Nefrologia e Diálise LTDA",
+        "Rio Grande"
+      ],
+      "tags": [
+        "habilitação",
+        "agora tem especialistas",
+        "hemodiálise"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bc865c9a2471380f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.838",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 72,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.838, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.838-de-2-de-setembro-de-2026-731037627",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 4.838, de 2 de setembro de 2026, renova autorização do Laboratório Imunogenética da Universidade Estadual de Maringá para exames de histocompatibilidade.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Laboratório Imunogenética da Universidade Estadual de Maringá",
+        "Maringá"
+      ],
+      "tags": [
+        "renovação",
+        "histocompatibilidade",
+        "autorização"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a180d4234b5c5bb9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.147",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 68,
+      "edicao": "171",
+      "titulo": "PORTARIA GM/MS Nº 12.147, DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.147-de-9-de-setembro-de-2026-731034241",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.147, de 9 de setembro de 2026, autoriza transferência fundo a fundo de recursos para reembolso de medicamentos em ações judiciais em Santa Catarina.",
+      "por_que_importa": null,
+      "valor_brl": 407934.38,
+      "entes": [],
+      "tags": [
+        "reembolso",
+        "fundo a fundo",
+        "medicamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1cbf0eadc89ad672",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.837",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 72,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.837, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.837-de-2-de-setembro-de-2026-731034162",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Portaria SAES/MS nº 4.837, de 2 de setembro de 2026, renova autorização para bancos de tecido ocular de estabelecimentos em Pernambuco e Minas Gerais.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Regional João Penido",
+        "Instituto de Medicina Integral Professor Fernando Figueira",
+        "Fundação Hospital do Estado de Minas Gerais FHEMIG",
+        "Juiz de Fora",
+        "Recife"
+      ],
+      "tags": [
+        "renovação",
+        "banco de tecido",
+        "FHEMIG"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5c7347482ad2b5b0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 100,
+      "edicao": "171",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-731021598",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Registro de Preços para aquisição de materiais hospitalares para hemodinâmica infantil.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "extrato",
+        "registro de preços",
+        "material hospitalar"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fb7cc66de7f2d292",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Grupo Hospitalar Conceição",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 106,
+      "edicao": "171",
+      "titulo": "Extratos de Registros de Preços",
+      "url": "https://www.in.gov.br/web/dou/-/extratos-de-registros-de-precos-731021290",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extratos de Registros de Preços para aquisição de materiais e equipamentos para Grupo Hospitalar Conceição e Hospital Federal de Bonsucesso.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "extrato",
+        "registro de preços",
+        "material"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3ae2328573eb0bf6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Adesão",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 101,
+      "edicao": "171",
+      "titulo": "EXTRATO DE TERMO DE ADESÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-adesao-730994888",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Termo de Adesão nº 21/2026 entre Instituto Nacional de Traumatologia e Ortopedia e Cristália para aquisição de produtos farmacêuticos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "extrato",
+        "termo de adesão",
+        "farmacêutico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "eada2ef8d10579c1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "171",
+      "titulo": "ReTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730994503",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de número de processo no Edital de Chamamento nº 6 da ANVISA, publicado em 3 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "edital",
+        "ANVISA"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b901ecb77c0c2e0b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 106,
+      "edicao": "171",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730994426",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de datas de vigência no Extrato de Termo Aditivo nº 00006/2026 publicado em 10 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "termo aditivo",
+        "vigência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4b66d4a7f73f3576",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "171",
+      "titulo": "Retificação",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730979996",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação da Portaria SAES/MS nº 4.650, de 6 de agosto de 2026, corrigindo estabelecimento de saúde na autorização de banco de tecido.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "portaria",
+        "banco de tecido"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "84fbe29d865a73a4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria Conjunta",
+      "numero": "75",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 68,
+      "edicao": "171",
+      "titulo": "Portaria Conjunta SAES/SCTIE Nº 75, DE 31 DE agosto DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-conjunta-saes/sctie-n-75-de-31-de-agosto-de-2026-730979243",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Portaria Conjunta SAES/SCTIE nº 75 de 31 de agosto de 2026 altera procedimentos da tabela SIGTAP de farmácia especializada.",
+      "por_que_importa": "Confira as alterações em idade máxima, descrição de indicações e quantidade máxima dos medicamentos etanercepte, mepolizumabe e tacrolimo antes de prescrever ou habilitar esses procedimentos na instituição.",
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "tabela",
+        "sigtap",
+        "farmácia",
+        "critério"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "afa53b01e2117968",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.832",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 71,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.832, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.832-de-2-de-setembro-de-2026-730974685",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.832 de 2 de setembro de 2026 renova autorização para retirada e transplante de rim ao Hospital de Cirurgia em Aracaju (SE).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital de Cirurgia",
+        "Aracaju"
+      ],
+      "tags": [
+        "transplante",
+        "renovação",
+        "autorização",
+        "sergipe"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cc327af0d1ab8901",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.829",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 69,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.829, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.829-de-2-de-setembro-de-2026-730970321",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.829 de 2 de setembro de 2026 autoriza o Hospital Santa Luzia em Salvador (BA) para transplante de córnea e esclera.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Santa Luzia",
+        "Salvador"
+      ],
+      "tags": [
+        "transplante",
+        "autorização",
+        "córnea",
+        "bahia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8976f6be54711840",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.850",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.850, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.850-de-3-de-setembro-de-2026-730970186",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 4.850 de 3 de setembro de 2026 defere em grau de reconsideração renovação de CEBAS para a Fundação Pedro Américo em Campina Grande (PB).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Pedro Américo",
+        "Campina Grande"
+      ],
+      "tags": [
+        "cebas",
+        "renovação",
+        "certificação",
+        "paraíba"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8ad9ec309fa738e5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 106,
+      "edicao": "171",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-730969275",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação da Fundação Nacional de Saúde convoca empresa KTM Construtora a pagar débito de convênio em Itapitanga (BA).",
+      "por_que_importa": null,
+      "valor_brl": 50101.07,
+      "entes": [
+        "Itapitanga"
+      ],
+      "tags": [
+        "cobrança",
+        "convênio",
+        "débito",
+        "funasa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2de6401038495c56",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.849",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.849, DE 3 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.849-de-3-de-setembro-de-2026-730966732",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.849 de 3 de setembro de 2026 habilita Unidade de Terapia Renal de Xanxerê no programa Agora Tem Especialistas em hemodiálise (SC).",
+      "por_que_importa": "Verifique se há unidades de terapia renal habilitadas em Minas Gerais no programa ou se há oportunidade de inscrição em futuras chamadas públicas.",
+      "valor_brl": 199830.31,
+      "entes": [
+        "Unidade de Terapia Renal de Xanxerê",
+        "Xanxerê"
+      ],
+      "tags": [
+        "hemodiálise",
+        "habilitação",
+        "agora tem especialistas",
+        "terapia renal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9dc29b15247dbb60",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.830",
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 69,
+      "edicao": "171",
+      "titulo": "Portaria SAES/MS Nº 4.830, DE 2 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.830-de-2-de-setembro-de-2026-730963913",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.830 de 2 de setembro de 2026 renova autorização para transplante de córnea e esclera ao Hospital Das Clínicas de Recife (PE).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Das Clínicas",
+        "Recife"
+      ],
+      "tags": [
+        "transplante",
+        "córnea",
+        "renovação",
+        "pernambuco"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4104890090075127",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "1",
+      "pagina": 74,
+      "edicao": "171",
+      "titulo": "Retificação",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730963834",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação corrige número de CNES de equipe de cuidados paliativos em Pelotas (RS) na Portaria SAES/MS nº 4.288 de 22 de junho de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Pelotas"
+      ],
+      "tags": [
+        "retificação",
+        "cuidados paliativos",
+        "cnes"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "207e63b0b1697463",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 100,
+      "edicao": "171",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-730937100",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Registro de Preços de material hospitalar para Instituto Nacional do Câncer, ata nº 351/2026, com vigência até 10/09/2027.",
+      "por_que_importa": null,
+      "valor_brl": 8100,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "material hospitalar",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "71e50553592e602b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Comunicado",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "171",
+      "titulo": "COMUNICADO DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/comunicado-de-9-de-setembro-de-2026-730936666",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Comunicado da ANS de 9 de setembro de 2026 notifica cancelamento de registro da operadora INTERVIDA de planos privados de saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "ans",
+        "saúde suplementar",
+        "cancelamento",
+        "operadora"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a78fe52b3f8e0b42",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "171",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730914982",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação corrige vigência de contrato publicado em 09/09/2026 pela Secretaria de Saúde Indígena para tempo indeterminado.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "contrato",
+        "vigência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0ee35f1cee994315",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 100,
+      "edicao": "171",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-730902668",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Alteração de Edital para Pregão 37/2026 de esterilização e reprocessamento de artigos hospitalares com novo prazo de recebimento.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "esterilização",
+        "pregão",
+        "alteração"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b50f3cb0842223d1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "171",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-730872176",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde altera edital de concorrência para construção de UBSI em Mongaguá-SP, mudando data de início de recebimento de propostas.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Mongaguá"
+      ],
+      "tags": [
+        "alteração de edital",
+        "saúde indígena",
+        "construção"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c54b73e502bb8352",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 107,
+      "edicao": "171",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-730851182",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Oswaldo Cruz retifica extrato de termo aditivo, corrigindo número de 88/2025 para 88/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "termo aditivo",
+        "administrativa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0d7f02e6547497ac",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 106,
+      "edicao": "171",
+      "titulo": "EXTRATO DE ENCERRAMENTO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-encerramento-730838628",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Nacional de Saúde encerra convênio nº 1787/2017 com município de Senador Salgado Filho-RS.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Senador Salgado Filho"
+      ],
+      "tags": [
+        "encerramento de convênio",
+        "FNS",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3bfcd949c8dad0fb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 100,
+      "edicao": "171",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-730818146",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto Nacional de Cardiologia convida empresas para apresentar especificações de tecnologias e estudo de mercado para terceirização de exames laboratoriais.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "chamamento público",
+        "estudo de mercado",
+        "terceirização"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "347dbe0ff79e36db",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Edital",
+      "numero": "8",
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "171",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 8, DE 3 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-8-de-3-de-setembro-de-2026-730813295",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "ANVISA notifica pessoas física ou jurídica sobre indeferimento de parcelamento de débito, com prazo de 15 dias para ciência.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "ANVISA",
+        "débito"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2d7e3b104d925b23",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 100,
+      "edicao": "171",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-730803222",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto Nacional de Cardiologia registra preços para aquisição de materiais hospitalares de hemodinâmica.",
+      "por_que_importa": null,
+      "valor_brl": 245100,
+      "entes": [],
+      "tags": [
+        "registro de preços",
+        "materiais",
+        "hemodinâmica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "16fec7fd44345f38",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": "3",
+      "pagina": 106,
+      "edicao": "171",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-730797818",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Nacional de Saúde notifica empresa Urbana Service Ltda sobre descumprimento de edital e inexecução de serviços contratados.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "FNS",
+        "descumprimento contratual"
+      ],
+      "fallback": false
+    },
     {
       "id": "c49171c5dda04928",
       "fonte": "iofmg",
@@ -44,16 +1253,17 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A32%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ato 319 da SES-MG de 8 de setembro revoga gratificação por risco à saúde de servidores e publica decisões sobre aposentadoria e férias-prêmio.",
+      "resumo": "Secretaria de Estado de Saúde de MG publica atos administrativos de pessoal incluindo revogação de gratificação, decisão sanitária, afastamento à aposentadoria, abono de permanência e férias-prêmio.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
+        "Alfenas",
         "Fundação Ezequiel Dias"
       ],
       "tags": [
-        "pessoal",
-        "aposentadoria",
-        "rotina"
+        "atos de pessoal",
+        "administrativo",
+        "SES-MG"
       ],
       "fallback": false
     },
@@ -72,7 +1282,7 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A32%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria FUNED nº 69 de 8 de setembro de 2026 promove servidor Weriton Bernardes Almeida de AST nível 2 para nível 3.",
+      "resumo": "FUNED publica portaria que concede promoção na carreira ao servidor Weriton Bernardes Almeida.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
@@ -100,14 +1310,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A32%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria FUNED nº 71 de 8 de setembro reconstitui progressão do servidor Erico de Moraes Colen por erro material na vigência.",
+      "resumo": "FUNED publica portaria que anula e reconcedera progressão na carreira do servidor Erico de Moraes Colen.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
         "Fundação Ezequiel Dias"
       ],
       "tags": [
-        "progressão",
+        "progressão funcional",
         "pessoal",
         "FUNED"
       ],
@@ -128,7 +1338,7 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria FUNED nº 70 de 8 de setembro reconstitui progressão de Jose Junior Santos; FHEMIG autoriza férias-prêmio a servidoras.",
+      "resumo": "FUNED publica portaria com anulação e reconcessão de progressão para servidor Jose Junior Santos; FHEMIG autoriza férias-prêmio para servidoras.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
@@ -137,8 +1347,8 @@
       ],
       "tags": [
         "progressão",
-        "pessoal",
-        "férias"
+        "férias-prêmio",
+        "pessoal"
       ],
       "fallback": false
     },
@@ -157,14 +1367,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria NUCAD/SEE nº 231 de 10 de setembro reconduz 5 comissões de processos administrativos disciplinares por 60 dias.",
+      "resumo": "Secretaria de Estado de Educação reconduz comissões processantes de processos administrativos disciplinares pelo prazo de 60 dias.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "educação",
-        "processo disciplinar",
-        "rotina"
+        "administrativo",
+        "comissão processante"
       ],
       "fallback": false
     },
@@ -183,13 +1393,13 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria NUCAD/SEE nº 246 de 10 de setembro prorroga prazo de processo administrativo disciplinar em educação por 30 dias.",
+      "resumo": "Portaria da Secretaria de Estado de Educação prorroga por 30 dias prazo de apuração em processo administrativo disciplinar, conforme Portaria NUCAD/SEE nº 246/2026, de 10 de setembro de 2026.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "educação",
-        "processo disciplinar",
+        "pessoal",
         "prorrogação"
       ],
       "fallback": false
@@ -209,13 +1419,13 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria NUCAD/SEE nº 232 de 10 de setembro prorroga prazo de 6 processos administrativos disciplinares em educação por 30 dias.",
+      "resumo": "Portaria da Secretaria de Estado de Educação prorroga por 30 dias prazo de apuração em processos administrativos disciplinares, conforme NUCAD/SEE nº 232/2026, de 10 de setembro de 2026.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "educação",
-        "processo disciplinar",
+        "pessoal",
         "prorrogação"
       ],
       "fallback": false
@@ -235,14 +1445,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria NUCAD/SEE nº 245 de 10 de setembro reconduz 2 comissões de processos administrativos disciplinares por 60 dias.",
+      "resumo": "Portaria da Secretaria de Estado de Educação reconduz as comissões processantes por 60 dias, conforme Portaria NUCAD/SEE nº 245/2026, de 10 de setembro de 2026.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "educação",
-        "processo disciplinar",
-        "rotina"
+        "pessoal",
+        "recondução"
       ],
       "fallback": false
     },
@@ -261,14 +1471,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ato nº 2208 de 10 de setembro concede promoção por escolaridade adicional a servidor da educação Luciane Cláudia Teixeira Cirino.",
+      "resumo": "Secretaria de Estado de Educação concede promoção por escolaridade adicional à servidora Luciane Cláudia Teixeira Cirino, conforme ATO nº 2208/2026, de 10 de setembro de 2026.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "educação",
-        "promoção",
-        "pessoal"
+        "pessoal",
+        "promoção"
       ],
       "fallback": false
     },
@@ -287,14 +1497,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ato nº 2175 de 10 de setembro concede promoção por escolaridade adicional a servidor da educação Danielle Geralda Correia.",
+      "resumo": "Secretaria de Estado de Educação concede promoção por escolaridade adicional à servidora Danielle Geralda Correia, conforme ATO nº 2175/2026, de 10 de setembro de 2026.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "educação",
-        "promoção",
-        "pessoal"
+        "pessoal",
+        "promoção"
       ],
       "fallback": false
     },
@@ -313,16 +1523,17 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ato nº 2181 de 10 de setembro com promoção em educação, retorno de afastamento, exoneração e reabertura de processo disciplinar na FHEMIG.",
+      "resumo": "ATO nº 2181/2026, de 10 de setembro de 2026, da Secretaria de Estado de Educação e Fundação Hospitalar com promoção de servidora, retorno de afastamento, exoneração, dispensa e procedimento disciplinar.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
-        "Fundação Hospitalar do Estado de Minas Gerais"
+        "Fundação Hospitalar do Estado de Minas Gerais",
+        "Maternidade Odete Valadares"
       ],
       "tags": [
         "pessoal",
-        "processo disciplinar",
-        "FHEMIG"
+        "fhemig",
+        "disciplinar"
       ],
       "fallback": false
     }

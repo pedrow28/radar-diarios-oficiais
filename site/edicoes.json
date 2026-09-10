@@ -1,17 +1,17 @@
 [
   {
     "data": "2026-09-10",
-    "titulo": "Boletim de 10/09/2026: 0 publicações relevantes",
+    "titulo": "6 habilitações em hemodiálise e 1 repasse para medicamentos somam R$ 7,9 milhões",
     "url": "edicoes/2026-09-10.html",
     "contagens": {
-      "A": 0,
-      "B": 0,
+      "A": 7,
+      "B": 1,
       "C": 0,
-      "D": 0
+      "D": 13
     },
-    "parcial": true,
-    "valor_dia": null,
-    "total_relevante": 0
+    "parcial": false,
+    "valor_dia": 7909650.94,
+    "total_relevante": 8
   },
   {
     "data": "2026-09-09",
