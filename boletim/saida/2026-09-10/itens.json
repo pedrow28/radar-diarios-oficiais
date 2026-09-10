@@ -1,0 +1,330 @@
+{
+  "data": "2026-09-10",
+  "gerado_em": "2026-09-10T11:13:31.995123+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "Boletim de 10/09/2026: 0 publicações relevantes",
+    "em_30_segundos": [
+      "Sem publicações relevantes nesta data"
+    ],
+    "intro": "Nenhuma publicação de captação de recursos, mudança de regra ou edital nesta data. O radar segue lendo o Diário Oficial da União e o Diário Oficial de Minas Gerais no próximo dia útil.",
+    "parcial": true,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ausente",
+        "edicao": null,
+        "paginas": null,
+        "avisos": [
+          "arquivo não encontrado"
+        ]
+      },
+      {
+        "nome": "iofmg",
+        "status": "ok",
+        "edicao": null,
+        "paginas": "pp. 32-33",
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "c49171c5dda04928",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 32,
+      "edicao": null,
+      "titulo": "ATO 319, DE 08 DE SETEMBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A32%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ato 319 da SES-MG de 8 de setembro revoga gratificação por risco à saúde de servidores e publica decisões sobre aposentadoria e férias-prêmio.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ezequiel Dias"
+      ],
+      "tags": [
+        "pessoal",
+        "aposentadoria",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ec113f234b34c5ef",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 32,
+      "edicao": null,
+      "titulo": "PORTARIA FUNED N. º 69, DE 08 DE SETEMBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A32%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria FUNED nº 69 de 8 de setembro de 2026 promove servidor Weriton Bernardes Almeida de AST nível 2 para nível 3.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ezequiel Dias"
+      ],
+      "tags": [
+        "promoção",
+        "pessoal",
+        "FUNED"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "62fa216e8af993a7",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 32,
+      "edicao": null,
+      "titulo": "PORTARIA FUNED N. º 71, DE 08 DE SETEMBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A32%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria FUNED nº 71 de 8 de setembro reconstitui progressão do servidor Erico de Moraes Colen por erro material na vigência.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ezequiel Dias"
+      ],
+      "tags": [
+        "progressão",
+        "pessoal",
+        "FUNED"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "05185b8762ace89e",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": null,
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 33,
+      "edicao": null,
+      "titulo": "PORTARIA FUNED N. º 70, DE 08 DE SETEMBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria FUNED nº 70 de 8 de setembro reconstitui progressão de Jose Junior Santos; FHEMIG autoriza férias-prêmio a servidoras.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ezequiel Dias",
+        "Fundação Hospitalar do Estado de Minas Gerais"
+      ],
+      "tags": [
+        "progressão",
+        "pessoal",
+        "férias"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3ed1a0ce179788e9",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "231",
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 33,
+      "edicao": null,
+      "titulo": "PORTARIA NUCAD/SEE Nº 231/2026 – RECONDUÇÃO DA COMISSÃO",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria NUCAD/SEE nº 231 de 10 de setembro reconduz 5 comissões de processos administrativos disciplinares por 60 dias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "educação",
+        "processo disciplinar",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6894b2bdf2d43611",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "246",
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 33,
+      "edicao": null,
+      "titulo": "PORTARIA NUCAD/SEE Nº 246/2026 – PRORROGAÇÃO DE PRAZO",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria NUCAD/SEE nº 246 de 10 de setembro prorroga prazo de processo administrativo disciplinar em educação por 30 dias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "educação",
+        "processo disciplinar",
+        "prorrogação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "12aae6aa31301d7f",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "232",
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 33,
+      "edicao": null,
+      "titulo": "PORTARIA NUCAD/SEE Nº 232/2026 – PRORROGAÇÃO DE PRAZO",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria NUCAD/SEE nº 232 de 10 de setembro prorroga prazo de 6 processos administrativos disciplinares em educação por 30 dias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "educação",
+        "processo disciplinar",
+        "prorrogação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f10592f6456f5c5c",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "245",
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 33,
+      "edicao": null,
+      "titulo": "PORTARIA NUCAD/SEE Nº 245/2026 – RECONDUÇÃO DA COMISSÃO",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria NUCAD/SEE nº 245 de 10 de setembro reconduz 2 comissões de processos administrativos disciplinares por 60 dias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "educação",
+        "processo disciplinar",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ae19fa37b1ad6496",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": "2208",
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 33,
+      "edicao": null,
+      "titulo": "ATO Nº 2208/2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ato nº 2208 de 10 de setembro concede promoção por escolaridade adicional a servidor da educação Luciane Cláudia Teixeira Cirino.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "educação",
+        "promoção",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b3786d0b02e6c392",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": "2175",
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 33,
+      "edicao": null,
+      "titulo": "ATO Nº2175/2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ato nº 2175 de 10 de setembro concede promoção por escolaridade adicional a servidor da educação Danielle Geralda Correia.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "educação",
+        "promoção",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8d41e1bc8ff0fead",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": "2181",
+      "data_publicacao": "2026-09-10",
+      "secao": null,
+      "pagina": 33,
+      "edicao": null,
+      "titulo": "ATO Nº2181/2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330931%2C%22paginaSelecionada%22%3A33%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ato nº 2181 de 10 de setembro com promoção em educação, retorno de afastamento, exoneração e reabertura de processo disciplinar na FHEMIG.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Hospitalar do Estado de Minas Gerais"
+      ],
+      "tags": [
+        "pessoal",
+        "processo disciplinar",
+        "FHEMIG"
+      ],
+      "fallback": false
+    }
+  ]
+}
