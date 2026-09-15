@@ -1,0 +1,1425 @@
+{
+  "data": "2026-09-15",
+  "gerado_em": "2026-09-15T11:49:30.259692+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "2 renovações de UPA e 1 desabilitação de UTI em 3 estados movimentam R$ 6,8 milhões de MAC",
+    "em_30_segundos": [
+      "Ministério da Saúde desabilita 10 leitos de UTI Adulto Tipo II em Registro por portaria nº 12.161, com dedução de R$ 3,0 milhões.",
+      "MS renova qualificação de UPA 24h Ambrosina Coimbra Bueno em Aparecida de Goiás por portaria nº 12.162, mantendo R$ 3,0 milhões.",
+      "MS renova qualificação de UPA 24h em Bom Princípio por portaria nº 12.158, mantendo recurso de R$ 840 mil no MAC.",
+      "Secretaria de Atenção Especializada à Saúde inclui 7 tipos de veículos para transporte sanitário no CNES por portaria nº 4.904."
+    ],
+    "intro": "Nesta edição de 15 de setembro, 4 portarias do MS impactam R$ 6,8 milhões em MAC, com a principal perda sendo 10 leitos de UTI Adulto Tipo II desabilitados em Registro, SP. Ao mesmo tempo, 2 UPAs 24h renovam qualificações em Aparecida de Goiás e Bom Princípio, e a SAES regulariza 7 tipos de veículos para transporte sanitário no CNES.",
+    "parcial": false,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "174",
+        "paginas": "pp. 1-100",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ok",
+        "edicao": null,
+        "paginas": "pp. 24-24",
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "dc065e70a0e2616c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.873",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 90,
+      "edicao": "174",
+      "titulo": "PORTARIA SAES/MS Nº 4.873, DE 8 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.873-de-8-de-setembro-de-2026-731890895",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "A Secretaria de Atenção Especializada à Saúde deferiu concessão de CEBAS da Liga Feminina de Combate ao Câncer de Alegrete por portaria nº 4.873, de 8 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Liga Feminina de Combate ao Câncer de Alegrete",
+        "Alegrete"
+      ],
+      "tags": [
+        "cebas",
+        "certificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "afac30c5d03e09fb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Portaria",
+      "numero": "376",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 93,
+      "edicao": "174",
+      "titulo": "PORTARIA SGTES/MS Nº 376, DE 11 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-376-de-11-de-setembro-de-2026-731890814",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "A SGTES/MS alterou registro de médico intercambista do Projeto Mais Médicos por portaria nº 376, de 11 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "mais médicos",
+        "intercambista"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7a795c7441b6c616",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.885",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 91,
+      "edicao": "174",
+      "titulo": "PORTARIA SAES/MS Nº 4.885, DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.885-de-9-de-setembro-de-2026-731889944",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "A Secretaria de Atenção Especializada à Saúde deferiu concessão de CEBAS do Instituto Terezinha Vieira por portaria nº 4.885, de 9 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Terezinha Vieira",
+        "Guaíra"
+      ],
+      "tags": [
+        "cebas",
+        "certificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cb5f22e86fbf02e6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.875",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 90,
+      "edicao": "174",
+      "titulo": "PORTARIA SAES/MS Nº 4.875, DE 8 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.875-de-8-de-setembro-de-2026-731888996",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "A Secretaria de Atenção Especializada à Saúde deferiu renovação de CEBAS da Fundação Hospitalar de Três Barras por portaria nº 4.875, de 8 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Hospitalar de Três Barras",
+        "Três Barras"
+      ],
+      "tags": [
+        "cebas",
+        "renovação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5d2d41603314f2ca",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Portaria",
+      "numero": "375",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 93,
+      "edicao": "174",
+      "titulo": "PORTARIA SGTES/MS Nº 375, DE 11 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-375-de-11-de-setembro-de-2026-731888127",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "A SGTES/MS alterou registro de médico intercambista do Projeto Mais Médicos por portaria nº 375, de 11 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Santana do Paraíso"
+      ],
+      "tags": [
+        "mais médicos",
+        "intercambista"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "55dc061f8be549f8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Portaria",
+      "numero": "373",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 92,
+      "edicao": "174",
+      "titulo": "PORTARIA SGTES/MS Nº 373, DE 11 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-373-de-11-de-setembro-de-2026-731886744",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "A SGTES/MS alterou registro de médico intercambista do Projeto Mais Médicos por portaria nº 373, de 11 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Amambai"
+      ],
+      "tags": [
+        "mais médicos",
+        "intercambista"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "98c045d3a1fc4bdc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.874",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 90,
+      "edicao": "174",
+      "titulo": "PORTARIA SAES/MS Nº 4.874, DE 8 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.874-de-8-de-setembro-de-2026-731885634",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "A Secretaria de Atenção Especializada à Saúde deferiu renovação de CEBAS da Fundação Estadual de Saúde por portaria nº 4.874, de 8 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Estadual de Saúde",
+        "Aracaju"
+      ],
+      "tags": [
+        "cebas",
+        "renovação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "81943c0da7b90bfd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.904",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 91,
+      "edicao": "174",
+      "titulo": "Portaria SAES/MS Nº 4.904, DE 14 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.904-de-14-de-setembro-de-2026-731885555",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "A Secretaria de Atenção Especializada à Saúde incluiu 7 tipos de veículos para transporte sanitário na tabela de equipamentos do CNES por portaria nº 4.904, de 14 de setembro de 2026.",
+      "por_que_importa": "Entidades que operam transporte sanitário para pacientes em radiomedicina ou hemodiálise precisam registrá-los no CNES conforme os novos códigos; observe o prazo de 60 dias para atualização.",
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "cnes",
+        "equipamentos",
+        "tabela"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "82a838969113376c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.117",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 89,
+      "edicao": "174",
+      "titulo": "Portaria GM/MS Nº 12.117, DE 14 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.117-de-14-de-setembro-de-2026-731883491",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "O Ministério da Saúde instituiu grupo de trabalho para acompanhar acordo com a Fiocruz sobre gestão do Hospital Federal da Lagoa por portaria nº 12.117, de 14 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Oswaldo Cruz",
+        "Hospital Federal da Lagoa",
+        "Instituto Nacional de Saúde da Mulher, Criança e Adolescente Fernandes Figueira"
+      ],
+      "tags": [
+        "grupo de trabalho",
+        "fiocruz"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ace8416012b11114",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.878",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 90,
+      "edicao": "174",
+      "titulo": "PORTARIA SAES/MS Nº 4.878, DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.878-de-9-de-setembro-de-2026-731880566",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "A Secretaria de Atenção Especializada à Saúde deferiu renovação de CEBAS da Santa Casa de Misericórdia de Taguaí por portaria nº 4.878, de 9 de setembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Santa Casa de Misericórdia de Taguaí",
+        "Taguaí"
+      ],
+      "tags": [
+        "cebas",
+        "renovação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "92688f66124fbd6f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 92,
+      "edicao": "174",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-731880487",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "A Secretaria de Atenção Especializada à Saúde retificou período de validade de renovação de CEBAS em portaria nº 4.802, de 27 de agosto de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "cebas"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b79b10fe1d226401",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.161",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 89,
+      "edicao": "174",
+      "titulo": "Portaria GM/ms Nº 12.161, DE 14 de setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.161-de-14-de-setembro-de-2026-731879695",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde desabilitou 10 leitos de UTI Adulto Tipo II em hospital de Registro (SP) e deduziu recurso de MAC por portaria nº 12.161, de 14 de setembro de 2026.",
+      "por_que_importa": "Acompanhe se hospitais mineiros tiveram desabilitação similar de leitos de UTI e verifique correspondentes ajustes de teto MAC junto ao estado.",
+      "valor_brl": 3026404.8,
+      "entes": [
+        "Hospital São João Registro",
+        "Registro"
+      ],
+      "tags": [
+        "uti",
+        "desabilitação",
+        "mac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e770e08404ca9be0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.882",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 91,
+      "edicao": "174",
+      "titulo": "PORTARIA SAES/MS Nº 4.882, DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.882-de-9-de-setembro-de-2026-731879616",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 4.882, de 9 de setembro de 2026, renova o Certificado de Entidade Beneficente de Assistência Social da Associação dos Fornecedores de Cana de Piracicaba (SP).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Associação dos Fornecedores de Cana de Piracicaba"
+      ],
+      "tags": [
+        "cebas",
+        "renovação",
+        "filantropia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "791a7f1ab4d0ff48",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Decisão",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 93,
+      "edicao": "174",
+      "titulo": "DECISÃO DE 26 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/decisao-de-26-de-agosto-de-2026-731879537",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Decisão da ANS de 26 de agosto de 2026 aplica multa a operadora de saúde suplementar por descumprimento de termo de compromisso.",
+      "por_que_importa": null,
+      "valor_brl": 12500,
+      "entes": [],
+      "tags": [
+        "ans",
+        "saúde suplementar",
+        "multa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9f9142caf6252e10",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.880",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 91,
+      "edicao": "174",
+      "titulo": "PORTARIA SAES/MS Nº 4.880, DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.880-de-9-de-setembro-de-2026-731876491",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 4.880, de 9 de setembro de 2026, renova o Certificado de Entidade Beneficente de Assistência Social da Santa Casa de Misericórdia de Cachoeiro de Itapemirim (ES).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Santa Casa de Misericórdia de Cachoeiro de Itapemirim"
+      ],
+      "tags": [
+        "cebas",
+        "renovação",
+        "santa casa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "401f4d9d1f97a9c6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 92,
+      "edicao": "174",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-731876414",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação da Portaria SAES/MS nº 4.164, de 21 de maio de 2026, corrige a data do fato gerador de descumprimento de requisito de certificação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "certificação",
+        "cebas"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9eef28aa5e86019f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Penalidade",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "174",
+      "titulo": "AVISO DE PENALIDADE",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-penalidade-731831196",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Penalidade publica impedimento de licitar por 6 meses à empresa Intensimed Comércio de Instrumentos e Materiais Hospitalares Ltda. junto ao Instituto Nacional de Câncer.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Câncer"
+      ],
+      "tags": [
+        "penalidade",
+        "licitação",
+        "fornecedor"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4a72948d028794e8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "174",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-731831119",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Registro de Preços nº 358/2026 para aquisição de laringoscópio pelo Instituto Nacional de Câncer, com vigência até 15 de setembro de 2027.",
+      "por_que_importa": null,
+      "valor_brl": 236000,
+      "entes": [
+        "Instituto Nacional de Câncer"
+      ],
+      "tags": [
+        "extrato",
+        "registro de preços",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ac49c86706d5821d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "723",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "174",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 723, DE 11 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-723-de-11-de-setembro-de-2026-731818272",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 723, de 11 de setembro de 2026, da SAPS/MS convoca pessoa para retirar notificação sobre parecer referente a transferência de recursos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "transferência",
+        "recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "be2d5df1fa7a1573",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 88,
+      "edicao": "174",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-731818191",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação da Fundação Nacional de Saúde convoca ex-gestor do município de Uauá-BA para recolher débito de convênio nº 797642 no prazo de 30 dias.",
+      "por_que_importa": null,
+      "valor_brl": 46300.65,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Uauá"
+      ],
+      "tags": [
+        "notificação",
+        "convênio",
+        "débito"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4750c7344d336ae0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.162",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 90,
+      "edicao": "174",
+      "titulo": "Portaria GM/ms Nº 12.162, DE 14 de setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.162-de-14-de-setembro-de-2026-731812466",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.162, de 14 de setembro de 2026, renova qualificação de UPA 24h Ambrosina Coimbra Bueno em Aparecida de Goiânia (GO) e mantém recurso no MAC.",
+      "por_que_importa": "Representa oportunidade de benchmark para implementação de modelo similar de qualificação e repasse de recurso para UPA em Minas Gerais.",
+      "valor_brl": 3000000,
+      "entes": [
+        "Aparecida de Goiânia"
+      ],
+      "tags": [
+        "upa",
+        "qualificação",
+        "mac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "635214e8ec680fd5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.883",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 91,
+      "edicao": "174",
+      "titulo": "PORTARIA SAES/MS Nº 4.883, DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.883-de-9-de-setembro-de-2026-731812443",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 4.883, de 9 de setembro de 2026, renova o Certificado de Entidade Beneficente de Assistência Social da Irmandade do Hospital de Caridade Padre Nicanor Merino (SP).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Irmandade do Hospital de Caridade Padre Nicanor Merino"
+      ],
+      "tags": [
+        "cebas",
+        "renovação",
+        "hospital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c53c88156604cdcd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Portaria",
+      "numero": "372",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 92,
+      "edicao": "174",
+      "titulo": "PORTARIA SGTES/MS Nº 372, DE 11 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-372-de-11-de-setembro-de-2026-731809437",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SGTES/MS nº 372, de 11 de setembro de 2026, altera dados de médico intercambista do Projeto Mais Médicos na Portaria SAPS/MS nº 48.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "portaria",
+        "médicos intercambistas",
+        "projeto mais médicos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "45580ae91144bbb8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.158",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 89,
+      "edicao": "174",
+      "titulo": "Portaria GM/ms Nº 12.158, DE 14 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.158-de-14-de-setembro-de-2026-731808566",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.158, de 14 de setembro de 2026, renova qualificação de UPA 24h em Bom Princípio (RS) e mantém recurso no MAC.",
+      "por_que_importa": "Representa oportunidade de benchmark para implementação de modelo de qualificação de UPA e repasse de recurso em Minas Gerais.",
+      "valor_brl": 840000,
+      "entes": [
+        "Bom Princípio"
+      ],
+      "tags": [
+        "upa",
+        "qualificação",
+        "mac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "20d802bc11a93553",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.893",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 91,
+      "edicao": "174",
+      "titulo": "Portaria SAES/MS Nº 4.893, DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.893-de-9-de-setembro-de-2026-731808487",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.893 habilita Hospital Tramandaí em regime de hospital dia com 4 leitos sem impacto financeiro.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Tramandaí"
+      ],
+      "tags": [
+        "habilitação",
+        "hospital dia",
+        "rio grande do sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6728c1714474d447",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.871",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 90,
+      "edicao": "174",
+      "titulo": "Portaria SAES/MS Nº 4.871, DE 8 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.871-de-8-de-setembro-de-2026-731805000",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Portaria SAES/MS nº 4.871 defere concessão do CEBAS à Associação dos Diabéticos de Barbacena com validade de 3 anos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Barbacena"
+      ],
+      "tags": [
+        "cebas",
+        "certificação",
+        "barbacena"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "eb2d45aa97f5f873",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.872",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 90,
+      "edicao": "174",
+      "titulo": "PORTARIA SAES/MS Nº 4.872, DE 8 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.872-de-8-de-setembro-de-2026-731804869",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.872 defere renovação do CEBAS do Hospital de Caridade Santa Rita com validade até 30 de dezembro de 2027.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital de Caridade Santa Rita"
+      ],
+      "tags": [
+        "cebas",
+        "renovação",
+        "rio grande do sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c82a5abe895fe8a4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.892",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 91,
+      "edicao": "174",
+      "titulo": "Portaria SAES/MS Nº 4.892, DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.892-de-9-de-setembro-de-2026-731804790",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.892 habilita Hospital Casa de Saúde em regime de hospital dia com 10 leitos em Santa Maria-RS sem impacto financeiro.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Casa de Saúde"
+      ],
+      "tags": [
+        "habilitação",
+        "hospital dia",
+        "santa maria"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "570c4ecf4b13a4a2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Portaria",
+      "numero": "374",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 92,
+      "edicao": "174",
+      "titulo": "PORTARIA SGTES/MS Nº 374, DE 11 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-374-de-11-de-setembro-de-2026-731804126",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SGTES/MS nº 374 altera alocação de médico intercambista Juliano Alves da Silva no Projeto Mais Médicos de Pelotas-RS para Beberibe-CE.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Beberibe"
+      ],
+      "tags": [
+        "mais médicos",
+        "intercambista",
+        "remanejamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b5d91df94ed4afc6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "4.891",
+      "data_publicacao": "2026-09-15",
+      "secao": "1",
+      "pagina": 91,
+      "edicao": "174",
+      "titulo": "Portaria SAES/MS Nº 4.891, DE 9 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-4.891-de-9-de-setembro-de-2026-731800967",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 4.891 habilita Hospital de Portão em regime de hospital dia com 2 leitos sem impacto financeiro.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital de Portão"
+      ],
+      "tags": [
+        "habilitação",
+        "hospital dia",
+        "portão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d65cf5f398db1e26",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "722",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "174",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 722, DE 11 DE setembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-722-de-11-de-setembro-de-2026-731791845",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 722 convoca Ana Cláudia do Ó Silva para retirar notificação sobre parecer em processo administrativo.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "52102145d3be8c63",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Adesão",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "174",
+      "titulo": "EXTRATO DE ADESÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-adesao-731786106",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Adesão nº 22/2026 formaliza termo entre Instituto Nacional de Traumatologia e Ortopedia e Oeste Sul Cirúrgica Ltda de 10 de setembro de 2026 a 30 de abril de 2027.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Traumatologia e Ortopedia"
+      ],
+      "tags": [
+        "extrato",
+        "adesão",
+        "contrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0eb78b07c179f06c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Edital de Notificação",
+      "numero": "3/2026",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 84,
+      "edicao": "174",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 3/2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-3/2026-731742977",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 3/2026 notifica Enfemed Saúde e Serviços Ltda sobre aplicação de penalidades por inadimplência contratual.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "penalidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0e7f0d9167862152",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Vigilância em Saúde e Ambiente",
+      "tipo": "Edital",
+      "numero": "12/2026",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 87,
+      "edicao": "174",
+      "titulo": "Edital nº 12/2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-n-12/2026-731741063",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Edital nº 12/2026 divulga resultado da primeira etapa do Programa EpiSUS 23ª turma nível avançado com 12 vagas oferecidas.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "episus",
+        "treinamento",
+        "resultado"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e899cdf92c45f813",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 84,
+      "edicao": "174",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-731714655",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Parcelamento de Débito nº 099/2026 formaliza parcelamento de débito de Rafaela Claudina Silva junto ao Fundo Nacional de Saúde em 10 parcelas.",
+      "por_que_importa": null,
+      "valor_brl": 7713.58,
+      "entes": [],
+      "tags": [
+        "extrato",
+        "parcelamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c3b2a6ed7e1743cf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Extrato de Concessão de Uso",
+      "numero": "2/2026",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 88,
+      "edicao": "174",
+      "titulo": "EXTRATO DE TERMO DE CESSÃO DE USO Nº 2/2026 - UASG 253002",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-cessao-de-uso-n-2/2026-uasg-253002-731714424",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Termo de Cessão de Uso nº 2/2026 formaliza cessão não onerosa de área aeroportuária de Macapá entre ANVISA e SPE Novo Norte Aeroportos com vigência até 14 de agosto de 2031.",
+      "por_que_importa": null,
+      "valor_brl": 114000,
+      "entes": [],
+      "tags": [
+        "extrato",
+        "cessão",
+        "aeroporto"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c0b84aac139074f5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 88,
+      "edicao": "174",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-731714270",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Nacional de Saúde publica edital de notificação para pessoa contratada pelo Município de Baixa Grande do Ribeira retirar notificação de processo de tomada de contas especial.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Baixa Grande do Ribeira"
+      ],
+      "tags": [
+        "edital notificação",
+        "tomada contas",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "022f1f8b71c45765",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "721",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "174",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 721, DE 11 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-721-de-11-de-setembro-de-2026-731713639",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Atenção Primária à Saúde publica edital de notificação nº 721 de 11 de setembro de 2026 convocando pessoa a retirar notificação de parecer administrativo.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital notificação",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b3a89a9d3b565df8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 88,
+      "edicao": "174",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-731713558",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Nacional de Saúde publica edital de notificação para empresa contratada pelo Município de Dom Inocêncio retirar notificação de processo de tomada de contas especial.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Dom Inocêncio"
+      ],
+      "tags": [
+        "edital notificação",
+        "tomada contas",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7553b33bbf9a726e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": "165/2026",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 89,
+      "edicao": "174",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO Nº 165/2026",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-n-165/2026-731713479",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto de Tecnologia em Fármacos Farmanguinhos publica aviso de chamamento público nº 165 de 2026 para pesquisa de mercado de aquisição de bulas mediante pregão eletrônico.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto de Tecnologia em Fármacos - Farmanguinhos"
+      ],
+      "tags": [
+        "aviso licitação",
+        "pesquisa mercado",
+        "pregão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "33aa557b49b915ad",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "724",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "174",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 724, DE 11 DE SETEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-724-de-11-de-setembro-de-2026-731692970",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Atenção Primária à Saúde publica edital de notificação nº 724 de 11 de setembro de 2026 convocando pessoa a retirar notificação de parecer administrativo.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital notificação",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bce21bee22b8b109",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Extrato de Concessão de Uso",
+      "numero": "3/2026",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 88,
+      "edicao": "174",
+      "titulo": "EXTRATO DE TERMO DE CESSÃO DE USO Nº 3/2026 - UASG 253002",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-cessao-de-uso-n-3/2026-uasg-253002-731677539",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Agência Nacional de Vigilância Sanitária publica extrato de termo de cessão não onerosa de área aeroportuária do aeroporto de Belém com vigência até 14 de agosto de 2031.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "extrato",
+        "cessão uso",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b5e7269961205656",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Adesão",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "174",
+      "titulo": "EXTRATO DE ADESÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-adesao-731672048",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto Nacional de Traumatologia e Ortopedia publica extrato de adesão nº 20 de 2026 a pregão eletrônico para fornecimento de produtos cirúrgicos com vigência até 22 de dezembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Traumatologia e Ortopedia"
+      ],
+      "tags": [
+        "extrato adesão",
+        "pregão",
+        "fornecimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "60c4281d00e43032",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Acordo de Cooperação Técnica",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "174",
+      "titulo": "EXTRATO DE ACORDO DE COOPERAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-cooperacao-731661811",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto Nacional de Traumatologia e Ortopedia publica extrato de acordo de cooperação técnica nº 2 de 2026 com Instituto Nacional de Tecnologia prorrogando vigência até 15 de setembro de 2029.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Traumatologia e Ortopedia",
+        "Instituto Nacional de Tecnologia"
+      ],
+      "tags": [
+        "extrato acordo",
+        "cooperação",
+        "prorrogação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f2dba54e54d72a88",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 88,
+      "edicao": "174",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-731659896",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Nacional de Saúde publica retificação de extrato de instrumento de convênio, corrigindo vigência de 24 de agosto de 2026 para 24 de fevereiro de 2027.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde"
+      ],
+      "tags": [
+        "retificação",
+        "convênio",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "91fa2e1fdea0ee38",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": "166/2026",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 89,
+      "edicao": "174",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO Nº 166/2026",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-n-166/2026-731659857",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto de Tecnologia em Fármacos Farmanguinhos publica aviso de chamamento público nº 166 de 2026 para pesquisa de mercado de contratação de serviços de manutenção de equipamentos Merck.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto de Tecnologia em Fármacos - Farmanguinhos"
+      ],
+      "tags": [
+        "aviso licitação",
+        "pesquisa mercado",
+        "pregão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "24b5d86ca94a3486",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": "3/2026",
+      "data_publicacao": "2026-09-15",
+      "secao": "3",
+      "pagina": 85,
+      "edicao": "174",
+      "titulo": "EXTRATO de Recebimento de Bens Móveis nº 3/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-recebimento-de-bens-moveis-n-3/2026-731646953",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto Nacional de Câncer publica extrato de recebimento de doação de equipamentos sem encargos formalizada em 19 de agosto de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Câncer"
+      ],
+      "tags": [
+        "extrato recebimento",
+        "doação",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "460ff9b437cb560b",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": "326",
+      "data_publicacao": "2026-09-15",
+      "secao": null,
+      "pagina": 24,
+      "edicao": null,
+      "titulo": "ATO Nº 326 DE 14 DE SETEMBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-15T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330940%2C%22paginaSelecionada%22%3A24%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Estado de Saúde publica ato nº 326 de 14 de setembro de 2026 concedendo promoção e progressão na carreira a 3 servidores do quadro de pessoal.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Secretaria de Estado de Saúde"
+      ],
+      "tags": [
+        "progressão funcional",
+        "carreira",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "81e0df1de1dcc9e1",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "60",
+      "data_publicacao": "2026-09-15",
+      "secao": null,
+      "pagina": 24,
+      "edicao": null,
+      "titulo": "PORTARIA DE RECONDUÇÃO SES Nº 60/2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-15T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330940%2C%22paginaSelecionada%22%3A24%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "A SES/MG reconduz pela Portaria nº 60/2026 de 15 de setembro comissão processante para conclusão em 60 dias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "processo disciplinar",
+        "rotina",
+        "SES-MG"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6ab8449049dc4329",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "63",
+      "data_publicacao": "2026-09-15",
+      "secao": null,
+      "pagina": 24,
+      "edicao": null,
+      "titulo": "PORTARIA DE RECONDUÇÃO SES Nº 63/2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-15T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330940%2C%22paginaSelecionada%22%3A24%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "A SES/MG reconduz pela Portaria nº 63/2026 de 15 de setembro comissão processante e concede redução de carga horária a servidora.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "processo disciplinar",
+        "licença",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f2b374331a5069ed",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11560",
+      "data_publicacao": "2026-09-15",
+      "secao": null,
+      "pagina": 24,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES Nº 11560, 14 DE SETEMBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-15T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A330940%2C%22paginaSelecionada%22%3A24%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "A Resolução SES nº 11560 de 14 de setembro retifica data de dispensa de servidor e progressões funcionais na FHEMIG.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Hospitalar do Estado de Minas Gerais"
+      ],
+      "tags": [
+        "retificação",
+        "recursos humanos",
+        "FHEMIG"
+      ],
+      "fallback": false
+    }
+  ]
+}
