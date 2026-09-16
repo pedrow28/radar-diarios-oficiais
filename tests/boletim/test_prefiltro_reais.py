@@ -102,12 +102,20 @@ def test_retificacao_de_anexo_sem_ementa_e_mantida(reais, cfg):
     assert _veredito(pub, cfg) == "mantida"
 
 
+def test_extrato_de_doacao_da_saps_vai_para_o_modelo(reais, cfg):
+    """`5c87ec9922084fcd`: doação de equipamentos de UBS a Medicilândia/PA, 31/08.
+    Era descartada pela regra `extrato de doação`; desde 16/09/2026 (54 doações
+    do MS a prefeituras descartadas num dia só) doação nunca cai em silêncio. O
+    doador vem como "a UNIÃO, por intermédio do MS", fora do formato que o
+    agrupamento lê, então segue para o modelo."""
+    assert _veredito(reais["5c87ec9922084fcd"], cfg) == "mantida"
+
+
 # ── o que precisa cair ──────────────────────────────────────────────────
 @pytest.mark.parametrize(
     "id_real",
     [
         pytest.param("8c8731bbce27cf8c", id="resolucao-re-com-rdc-no-preambulo"),
-        pytest.param("5c87ec9922084fcd", id="extrato-de-doacao"),
         pytest.param("c9fc835cc7da4e0e", id="extrato-de-contrato-com-edital-no-corpo"),
         pytest.param("dcd548f2f702c56a", id="extrato-de-termo-aditivo-com-cifra"),
     ],
