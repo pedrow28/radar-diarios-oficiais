@@ -45,7 +45,13 @@ def _uma_a_uma(regras: tuple[str, ...]) -> tuple[tuple[str, re.Pattern[str]], ..
     return tuple((r, re.compile(r, re.IGNORECASE)) for r in regras)
 
 
-# Ruído de diário oficial: ato de pessoal, contrato, doação e aviso de licitação.
+# Ruído de diário oficial: ato de pessoal, contrato e aviso de licitação.
+#
+# Doação saiu da lista em 16/09/2026. A regra nasceu de uma leitura só de
+# títulos, e naquele dia descartou 54 doações do Ministério da Saúde a
+# prefeituras nominais - R$ 27,8 milhões em veículos, dois deles para Minas - e
+# a edição saiu com zero relevantes. Doação do MS vai para `Triagem.doacoes` e
+# é agrupada sem modelo (`boletim.doacoes`); as demais seguem para o modelo.
 _REGRAS_DESCARTE = (
     r"nomea",
     r"exonera",
@@ -56,11 +62,11 @@ _REGRAS_DESCARTE = (
     r"boletim de serviço",
     r"ata de registro de preços",
     r"aviso de licitação",
-    r"extrato de (contrato|termo aditivo|inexigibilidade|dispensa|doação"
+    r"extrato de (contrato|termo aditivo|inexigibilidade|dispensa"
     r"|apostilamento|comodato|rescisão|cessão|cooperação)",
     r"aviso de (homologação|suspensão|revogação|dispensa|reabertura|adiamento"
     r"|retificação)",
-    r"termo de (apostilamento|doação)",
+    r"termo de apostilamento",
     r"resultado de julgamento",
     r"resolução-re\b",
     r"autorização de funcionamento",
@@ -133,6 +139,9 @@ _REGRAS_FORTE_CORPO = (
 )
 _FORTE_CORPO_UMA_A_UMA = _uma_a_uma(_REGRAS_FORTE_CORPO)
 
+_TERMO_DE_DOACAO = re.compile(r"termo de doa[cç][aã]o", re.IGNORECASE)
+_DOADOR_MS = re.compile(r"Doador:\s*Minist[eé]rio da Sa[uú]de", re.IGNORECASE)
+
 _VALOR = re.compile(r"R\$\s?(\d{1,3}(?:\.\d{3})*|\d+),(\d{2})")
 
 _MAIUSCULA = "A-ZÁÀÂÃÄÉÈÊËÍÌÎÏÓÒÔÕÖÚÙÛÜÇÑ"
@@ -170,6 +179,9 @@ class Triagem:
     mantidas: tuple[Publicacao, ...]
     descartadas: tuple[Descarte, ...]
     avisos: tuple[str, ...] = ()
+    # Doações do Ministério da Saúde: nem modelo, nem descarte, nem teto. Ver
+    # `boletim.doacoes`.
+    doacoes: tuple[Publicacao, ...] = ()
 
 
 def valores_brl(texto: str) -> tuple[float, ...]:
@@ -210,12 +222,16 @@ def triar(pubs: Sequence[Publicacao], cfg: ConfigBoletim) -> Triagem:
     """Separa o que vale a pena classificar do ruído previsível do diário."""
     mantidas: list[Publicacao] = []
     descartadas: list[Descarte] = []
+    doacoes: list[Publicacao] = []
 
     for pub in pubs:
         if pub.fonte in ("dou", "inlabs") and pub.secao == "2":
             descartadas.append(Descarte(pub.id, "secao_2"))
             continue
         alvo = _alvo(pub)
+        if _TERMO_DE_DOACAO.search(alvo) and _DOADOR_MS.search(pub.texto):
+            doacoes.append(pub)
+            continue
         # O descarte roda primeiro, e só o título e a ementa podem resgatá-lo.
         if _DESCARTE.search(alvo) and not _FORTE.search(alvo):
             descartadas.append(Descarte(pub.id, "descarte"))
@@ -231,7 +247,7 @@ def triar(pubs: Sequence[Publicacao], cfg: ConfigBoletim) -> Triagem:
             "não foram classificados"
         )
 
-    return Triagem(tuple(mantidas), tuple(descartadas), tuple(avisos))
+    return Triagem(tuple(mantidas), tuple(descartadas), tuple(avisos), tuple(doacoes))
 
 
 def _aplicar_teto(

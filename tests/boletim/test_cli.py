@@ -212,3 +212,58 @@ def test_config_inexistente_sai_2_sem_estourar_excecao(tmp_path, capsys):
     codigo = main(["site", "--config", str(tmp_path / "nao-existe.yaml")])
     assert codigo == 2
     assert "erro:" in capsys.readouterr().err
+
+
+# ── doações do Ministério da Saúde (16/09/2026) ─────────────────────────
+DATA_DOACOES = "2026-09-16"
+
+
+def _dia_de_doacoes(tmp_path: Path) -> Path:
+    """Dados do dia com as doações reais da fixture como único diário (DOU)."""
+    publicacoes = json.loads(
+        (FIXTURES / "doacoes-2026-09-16.json").read_text(encoding="utf-8")
+    )
+    pasta = tmp_path / "dados" / "normalized" / DATA_DOACOES
+    pasta.mkdir(parents=True)
+    (pasta / "dou.json").write_text(
+        json.dumps({"status": "ok", "avisos": [], "publicacoes": publicacoes}),
+        encoding="utf-8",
+    )
+    config = escrever_config(tmp_path, "dou")
+    texto = config.read_text(encoding="utf-8").replace(
+        FIXTURES.as_posix(), (tmp_path / "dados").as_posix()
+    )
+    config.write_text(texto, encoding="utf-8")
+    return config
+
+
+def test_gerar_agrupa_doacoes_do_ms_em_um_item_e_manda_o_resto_ao_modelo(
+    tmp_path, capsys
+):
+    config = _dia_de_doacoes(tmp_path)
+    main(["gerar", "--config", str(config), "--data", DATA_DOACOES, "--llm", "falso"])
+
+    dia = tmp_path / "saida" / DATA_DOACOES
+    prefiltro = json.loads((dia / "prefiltro.json").read_text(encoding="utf-8"))
+    assert prefiltro["mantidas"] == 1  # a doação da Saps, fora do formato
+    assert len(prefiltro["doacoes"]) == 7
+
+    itens = json.loads((dia / "itens.json").read_text(encoding="utf-8"))["itens"]
+    agrupados = [i for i in itens if i["tipo"] == "Extrato de Termo de Doação"]
+    assert len(agrupados) == 1
+    assert agrupados[0]["categoria"] == "A"
+    assert agrupados[0]["relevancia"] == 3
+    assert agrupados[0]["numero"] is None
+    assert len(itens) == 2
+
+    titulo = "Doação de 18 veículos do SUS a 6 municípios e 1 estado"
+    email = (dia / "edicao.html").read_text(encoding="utf-8")
+    assert titulo in email
+    assert "R$ 5.727.614,00" in email
+    site = (tmp_path / "site" / "edicoes" / f"{DATA_DOACOES}.html").read_text(
+        encoding="utf-8"
+    )
+    assert titulo in site
+    assert '<p class="valor">R$ 5.727.614,00</p>' in site
+    assert "Ministério da Saúde, Secretaria de Atenção Especializada à Saúde" in site
+    assert "A=1" in capsys.readouterr().out

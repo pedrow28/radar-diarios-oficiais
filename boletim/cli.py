@@ -25,6 +25,7 @@ from boletim import site as publicacao
 from boletim.carga import Carga, carregar
 from boletim.classifica import classificar
 from boletim.config import ConfigBoletim
+from boletim.doacoes import agrupar, extrair
 from boletim.edicao import (
     ROTULOS,
     Edicao,
@@ -130,9 +131,17 @@ def _gerar(args) -> int:
 
     llm = _llm(args, cfg)
     triagem = triar(carga.publicacoes, cfg)
-    itens, avisos_llm = classificar(triagem.mantidas, llm, cfg)
+    # Doação do MS que a regex não lê vai ao modelo no mesmo lote das mantidas:
+    # uma chamada a `classificar` só mantém um orçamento de chamadas e um aviso
+    # de fallback, em vez de dois. São poucas - zero em 16/09/2026.
+    nao_extraidas = [pub for pub in triagem.doacoes if extrair(pub) is None]
+    itens, avisos_llm = classificar([*triagem.mantidas, *nao_extraidas], llm, cfg)
+    doacoes, avisos_doacoes = agrupar(triagem.doacoes, data, cfg.marcas_mg)
+    if doacoes is not None:
+        # Antes de `montar_edicao`, para que o editorial do dia o veja.
+        itens.append(doacoes)
     edicao = montar_edicao(itens, carga.fontes, carga.parcial, llm, data, agora_utc())
-    avisos = [*triagem.avisos, *avisos_llm]
+    avisos = [*triagem.avisos, *avisos_doacoes, *avisos_llm]
 
     # Tudo renderizado antes da primeira gravação: template quebrado falha aqui,
     # com o site ainda intacto.
@@ -196,6 +205,7 @@ def _ficha_prefiltro(data: date, carga: Carga, triagem: Triagem) -> dict[str, An
         "publicacoes": len(carga.publicacoes),
         "mantidas": len(triagem.mantidas),
         "avisos": list(triagem.avisos),
+        "doacoes": [pub.id for pub in triagem.doacoes],
         "descartadas": [{"id": d.id, "regra": d.regra} for d in triagem.descartadas],
     }
 

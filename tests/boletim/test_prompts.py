@@ -237,3 +237,22 @@ def test_montar_editorial_traz_data_contagens_e_valor():
     assert "R$ 28.100.000,00" in prompt
     assert "A: 1" in prompt
     assert "D: 2" in prompt
+
+
+def test_classificacao_tem_doacao_do_ms_a_municipio_como_a_e_excecao_do_extrato():
+    """16/09/2026: doações do MS a prefeituras eram descartadas como extrato."""
+    texto = " ".join(SISTEMA_CLASSIFICACAO.split())
+    assert (
+        "extrato de termo de doação do Ministério da Saúde a prefeitura, fundo "
+        "municipal ou outro ente público"
+    ) in texto
+    assert "é A, e é a exceção à regra de que extrato é X" in texto
+    assert "ambulância" in texto
+
+
+def test_classificacao_tem_tomada_de_contas_especial_como_d_nunca_x():
+    """16/09/2026: 9 resoluções SES/MG de TCE saíram 3 como D e 6 como X."""
+    texto = " ".join(SISTEMA_CLASSIFICACAO.split())
+    assert "instaura Tomada de Contas Especial contra município ou entidade é D" in texto
+    assert "nunca X" in texto
+    assert "recurso a devolver" in texto

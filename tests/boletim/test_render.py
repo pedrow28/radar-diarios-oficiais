@@ -961,3 +961,33 @@ def test_markdown_escapa_parentese_e_espaco_da_url(edicao, cfg):
     """`)` ou espaço vindos do diário fechariam o link markdown no meio."""
     md = render_md(_com_url(edicao, "https://exemplo.test/ato (2026)"), cfg)
     assert "[Ver publicação](https://exemplo.test/ato%20%282026%29)" in md
+
+
+# ── item agrupado de doações (numero=None, sem LLM) ─────────────────────
+def test_item_agrupado_de_doacoes_renderiza_nos_tres_formatos():
+    import json
+
+    from boletim.doacoes import agrupar
+    from radar.core.modelos import publicacao_de_dict
+
+    bruto = json.loads(
+        (Path(__file__).resolve().parents[1] / "fixtures" / "boletim"
+         / "doacoes-2026-09-16.json").read_text(encoding="utf-8")
+    )
+    pubs = [publicacao_de_dict(p, date(2026, 9, 16)) for p in bruto]
+    cfg = ConfigBoletim(site_url="https://exemplo.test/radar")
+    item, _ = agrupar(
+        [p for p in pubs if "Doador: Ministério da Saúde" in p.texto],
+        date(2026, 9, 16),
+        cfg.marcas_mg,
+    )
+    assert item is not None and item.numero is None
+    assert meta_orgao(item) == "Ministério da Saúde, Secretaria de Atenção Especializada à Saúde"
+    assert meta_origem(item) == "DOU nº 175, seção 3, página 109, de 16/09/2026"
+
+    edicao = replace(edicao_exemplo(), secoes={"A": (item,), "B": (), "C": (), "D": ()})
+    titulo = "Doação de 18 veículos do SUS a 6 municípios e 1 estado"
+    for saida in (render_web(edicao, cfg), render_email(edicao, cfg), render_md(edicao, cfg)):
+        assert titulo in saida
+        assert "R$ 5.727.614,00" in saida
+        assert "Em Minas: Almenara e Córrego Novo." in saida

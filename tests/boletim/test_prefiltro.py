@@ -255,7 +255,6 @@ def test_publicacao_sem_regra_alguma_e_mantida(cfg):
 @pytest.mark.parametrize(
     "titulo",
     [
-        "EXTRATO DE DOAÇÃO Nº 3.618/2026",
         "EXTRATO DE APOSTILAMENTO Nº 4/2026",
         "EXTRATO DE COMODATO Nº 7/2026",
         "EXTRATO DE RESCISÃO Nº 2/2026",
@@ -267,7 +266,6 @@ def test_publicacao_sem_regra_alguma_e_mantida(cfg):
         "AVISO DE ADIAMENTO",
         "AVISO DE RETIFICAÇÃO",
         "TERMO DE APOSTILAMENTO Nº 3/2026",
-        "TERMO DE DOAÇÃO Nº 8/2026",
         "PORTARIA DE PESSOAL Nº 40",
         "PORTARIA Nº 41 DE PROGRESSÃO FUNCIONAL",
         "PORTARIA Nº 42 DE LICENÇA PRÊMIO",
@@ -282,6 +280,51 @@ def test_ruido_de_diario_e_descartado_pelo_titulo(cfg, titulo):
     triagem = triar([pub], cfg)
     assert triagem.mantidas == ()
     assert triagem.descartadas[0].regra == "descarte"
+
+
+_TEXTO_DOACAO_MS = (
+    "EXTRATO DE TERMO DE DOAÇÃO Nº 3317/2026-Doador: Ministério da Saúde, CNPJ/MF sob "
+    "nº 00.394.544/0001-85. Donatário: Prefeitura Municipal de Blumenau/SC, CNPJ/MF: "
+    "83.108.357/0001-15. Objeto: Doação de 02 veículo(s) para utilização como renovação "
+    "de frota, com encargos, no valor de R$ 585.200,00."
+)
+
+
+def test_doacao_do_ministerio_da_saude_vai_para_doacoes(cfg):
+    """16/09/2026: 54 doações do MS a prefeituras caíam no descarte por título."""
+    pub = _pub("EXTRATO DE TERMO DE DOAÇÃO", texto=_TEXTO_DOACAO_MS, fonte="dou",
+               secao="3", tipo="Extrato")
+    triagem = triar([pub], cfg)
+    assert triagem.doacoes == (pub,)
+    assert triagem.mantidas == ()
+    assert triagem.descartadas == ()
+
+
+def test_doacao_de_outro_doador_vai_para_o_modelo(cfg):
+    texto = _TEXTO_DOACAO_MS.replace(
+        "Doador: Ministério da Saúde", "Doador: a UNIÃO, por intermédio do MINISTÉRIO DA SAÚDE"
+    )
+    pub = _pub("EXTRATO DE DOAÇÃO Nº 3.618/2026", texto=texto, fonte="dou", secao="3",
+               tipo="Extrato de Doação")
+    triagem = triar([pub], cfg)
+    assert triagem.mantidas == (pub,)
+    assert triagem.doacoes == ()
+    assert triagem.descartadas == ()
+
+
+def test_doacoes_nao_contam_para_o_teto(cfg):
+    from dataclasses import replace
+
+    doacoes = [
+        _pub(f"EXTRATO DE TERMO DE DOAÇÃO {i}", texto=_TEXTO_DOACAO_MS, fonte="dou",
+             secao="3", tipo="Extrato")
+        for i in range(3)
+    ]
+    outras = [_pub(f"PORTARIA Nº {i}", ementa="Institui grupo.") for i in range(2)]
+    triagem = triar([*doacoes, *outras], replace(cfg, max_itens_dia=2))
+    assert len(triagem.doacoes) == 3
+    assert len(triagem.mantidas) == 2
+    assert triagem.avisos == ()
 
 
 def test_retificacao_bare_nao_e_mais_descartada(cfg):
