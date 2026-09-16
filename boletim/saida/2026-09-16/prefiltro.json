@@ -1,8 +1,64 @@
 {
   "data": "2026-09-16",
   "publicacoes": 189,
-  "mantidas": 33,
+  "mantidas": 35,
   "avisos": [],
+  "doacoes": [
+    "eea32880980ce3e3",
+    "b71eabace658ba83",
+    "0d0302ba9d18f414",
+    "d5fefd61e1002031",
+    "abaa11a7d7897d20",
+    "a36b72ae0d682838",
+    "c3923ecc6d9d4534",
+    "2d5777ae9043a692",
+    "e6d2c38695237e05",
+    "c83c92093f34f7ca",
+    "dae401d6000007d4",
+    "19858d552a16768b",
+    "994f03c3d74f5111",
+    "3e566a51377681f9",
+    "83e65aaab0e5e441",
+    "dda9ee210ccd63b6",
+    "98ae31ab87a22504",
+    "b15a2e642b8b7865",
+    "4e4c3102d15e3a6d",
+    "85d58eead04aa3b0",
+    "307a960c7a13befd",
+    "5cf92df7dfd79fbb",
+    "67913a8a119c9e01",
+    "b0519124ee8ac77c",
+    "66adcdada3e5bdd1",
+    "1def37a26d9d51d0",
+    "461ae2e572c378d6",
+    "2adbc6b72ffa9437",
+    "90fdc8ab61f86054",
+    "c1860209e6124ddf",
+    "cf9e105abf48cacc",
+    "74e99a642aaafc8f",
+    "ca5f52918364cf8d",
+    "a048f7b5da0e4d60",
+    "7ed52fabe91e7abd",
+    "86005fcb773a8112",
+    "8cef5df4104266b1",
+    "9a7a084f315561ca",
+    "06a441f8e52f245d",
+    "d0982a5aa4a72917",
+    "2cbb96aee4741d2d",
+    "c210a4eb84d4ba43",
+    "91e6a829ac0be3dc",
+    "dd3fbc48408e674a",
+    "8a878034d2794380",
+    "cf1ae6792a81f720",
+    "ddc25a9220ac0425",
+    "8125bc9b44efd105",
+    "38ac0fbb4b547cf9",
+    "41de16b52f698c97",
+    "f7c949b89d3ae472",
+    "849439e1a1c22d52",
+    "736b1bc1961d22ba",
+    "d75ea3ec05916a36"
+  ],
   "descartadas": [
     {
       "id": "fd4bd5b9164b53c9",
@@ -55,22 +111,6 @@
     {
       "id": "2895506bcb5415eb",
       "regra": "secao_2"
-    },
-    {
-      "id": "eea32880980ce3e3",
-      "regra": "descarte"
-    },
-    {
-      "id": "b71eabace658ba83",
-      "regra": "descarte"
-    },
-    {
-      "id": "0d0302ba9d18f414",
-      "regra": "descarte"
-    },
-    {
-      "id": "3e2c0e41d6d282bd",
-      "regra": "descarte"
     },
     {
       "id": "41ba998431657d76",
@@ -133,26 +173,6 @@
       "regra": "descarte"
     },
     {
-      "id": "d5fefd61e1002031",
-      "regra": "descarte"
-    },
-    {
-      "id": "abaa11a7d7897d20",
-      "regra": "descarte"
-    },
-    {
-      "id": "a36b72ae0d682838",
-      "regra": "descarte"
-    },
-    {
-      "id": "c3923ecc6d9d4534",
-      "regra": "descarte"
-    },
-    {
-      "id": "2d5777ae9043a692",
-      "regra": "descarte"
-    },
-    {
       "id": "a7bde9ec195fe51b",
       "regra": "descarte"
     },
@@ -177,18 +197,6 @@
       "regra": "descarte"
     },
     {
-      "id": "e6d2c38695237e05",
-      "regra": "descarte"
-    },
-    {
-      "id": "c83c92093f34f7ca",
-      "regra": "descarte"
-    },
-    {
-      "id": "dae401d6000007d4",
-      "regra": "descarte"
-    },
-    {
       "id": "17928d3c81eae181",
       "regra": "descarte"
     },
@@ -203,14 +211,6 @@
     {
       "id": "313fc86c204350dc",
       "regra": "secao_2"
-    },
-    {
-      "id": "19858d552a16768b",
-      "regra": "descarte"
-    },
-    {
-      "id": "994f03c3d74f5111",
-      "regra": "descarte"
     },
     {
       "id": "dea6b72725986db0",
@@ -265,51 +265,11 @@
       "regra": "secao_2"
     },
     {
-      "id": "3e566a51377681f9",
-      "regra": "descarte"
-    },
-    {
-      "id": "83e65aaab0e5e441",
-      "regra": "descarte"
-    },
-    {
-      "id": "dda9ee210ccd63b6",
-      "regra": "descarte"
-    },
-    {
-      "id": "98ae31ab87a22504",
-      "regra": "descarte"
-    },
-    {
-      "id": "b15a2e642b8b7865",
-      "regra": "descarte"
-    },
-    {
-      "id": "0fe32f975ec8a571",
-      "regra": "descarte"
-    },
-    {
-      "id": "4e4c3102d15e3a6d",
-      "regra": "descarte"
-    },
-    {
       "id": "e5cf8979029c4a98",
       "regra": "descarte"
     },
     {
       "id": "5910403ee4119bcb",
-      "regra": "descarte"
-    },
-    {
-      "id": "85d58eead04aa3b0",
-      "regra": "descarte"
-    },
-    {
-      "id": "307a960c7a13befd",
-      "regra": "descarte"
-    },
-    {
-      "id": "5cf92df7dfd79fbb",
       "regra": "descarte"
     },
     {
@@ -321,27 +281,7 @@
       "regra": "descarte"
     },
     {
-      "id": "67913a8a119c9e01",
-      "regra": "descarte"
-    },
-    {
       "id": "66a3bca7390d97af",
-      "regra": "descarte"
-    },
-    {
-      "id": "b0519124ee8ac77c",
-      "regra": "descarte"
-    },
-    {
-      "id": "66adcdada3e5bdd1",
-      "regra": "descarte"
-    },
-    {
-      "id": "1def37a26d9d51d0",
-      "regra": "descarte"
-    },
-    {
-      "id": "461ae2e572c378d6",
       "regra": "descarte"
     },
     {
@@ -354,22 +294,6 @@
     },
     {
       "id": "e1ae9c28e272af25",
-      "regra": "descarte"
-    },
-    {
-      "id": "2adbc6b72ffa9437",
-      "regra": "descarte"
-    },
-    {
-      "id": "90fdc8ab61f86054",
-      "regra": "descarte"
-    },
-    {
-      "id": "c1860209e6124ddf",
-      "regra": "descarte"
-    },
-    {
-      "id": "cf9e105abf48cacc",
       "regra": "descarte"
     },
     {
@@ -389,19 +313,7 @@
       "regra": "descarte"
     },
     {
-      "id": "74e99a642aaafc8f",
-      "regra": "descarte"
-    },
-    {
       "id": "6f2375519f3cb43f",
-      "regra": "descarte"
-    },
-    {
-      "id": "ca5f52918364cf8d",
-      "regra": "descarte"
-    },
-    {
-      "id": "a048f7b5da0e4d60",
       "regra": "descarte"
     },
     {
@@ -414,14 +326,6 @@
     },
     {
       "id": "3b45e1c50486a7e6",
-      "regra": "descarte"
-    },
-    {
-      "id": "7ed52fabe91e7abd",
-      "regra": "descarte"
-    },
-    {
-      "id": "86005fcb773a8112",
       "regra": "descarte"
     },
     {
@@ -441,14 +345,6 @@
       "regra": "descarte"
     },
     {
-      "id": "8cef5df4104266b1",
-      "regra": "descarte"
-    },
-    {
-      "id": "9a7a084f315561ca",
-      "regra": "descarte"
-    },
-    {
       "id": "d2823b0e22c87eb3",
       "regra": "descarte"
     },
@@ -461,14 +357,6 @@
       "regra": "descarte"
     },
     {
-      "id": "06a441f8e52f245d",
-      "regra": "descarte"
-    },
-    {
-      "id": "d0982a5aa4a72917",
-      "regra": "descarte"
-    },
-    {
       "id": "2eec797a07152c22",
       "regra": "descarte"
     },
@@ -477,31 +365,11 @@
       "regra": "descarte"
     },
     {
-      "id": "2cbb96aee4741d2d",
-      "regra": "descarte"
-    },
-    {
-      "id": "c210a4eb84d4ba43",
-      "regra": "descarte"
-    },
-    {
       "id": "8b80354ea615568f",
       "regra": "descarte"
     },
     {
       "id": "454d297c4567117f",
-      "regra": "descarte"
-    },
-    {
-      "id": "91e6a829ac0be3dc",
-      "regra": "descarte"
-    },
-    {
-      "id": "dd3fbc48408e674a",
-      "regra": "descarte"
-    },
-    {
-      "id": "8a878034d2794380",
       "regra": "descarte"
     },
     {
@@ -525,47 +393,11 @@
       "regra": "descarte"
     },
     {
-      "id": "cf1ae6792a81f720",
-      "regra": "descarte"
-    },
-    {
-      "id": "ddc25a9220ac0425",
-      "regra": "descarte"
-    },
-    {
       "id": "7048252a22ecbd47",
       "regra": "descarte"
     },
     {
       "id": "0dd3b5841f29f57c",
-      "regra": "descarte"
-    },
-    {
-      "id": "8125bc9b44efd105",
-      "regra": "descarte"
-    },
-    {
-      "id": "38ac0fbb4b547cf9",
-      "regra": "descarte"
-    },
-    {
-      "id": "41de16b52f698c97",
-      "regra": "descarte"
-    },
-    {
-      "id": "f7c949b89d3ae472",
-      "regra": "descarte"
-    },
-    {
-      "id": "849439e1a1c22d52",
-      "regra": "descarte"
-    },
-    {
-      "id": "736b1bc1961d22ba",
-      "regra": "descarte"
-    },
-    {
-      "id": "d75ea3ec05916a36",
       "regra": "descarte"
     },
     {

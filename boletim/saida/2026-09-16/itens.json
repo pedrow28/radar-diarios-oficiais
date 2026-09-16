@@ -1,15 +1,15 @@
 {
   "data": "2026-09-16",
-  "gerado_em": "2026-09-16T12:09:06.979714+00:00",
+  "gerado_em": "2026-09-16T13:55:59.487754+00:00",
   "avisos": [],
   "edicao": {
-    "titulo": "Boletim de 16/09/2026: 0 publicações relevantes",
+    "titulo": "67 veículos para transporte sanitário e SAMU somam R$ 27,8 milhões",
     "em_30_segundos": [
-      "Portaria GM/MS Nº 12.165, DE 15 DE setembro DE 2026",
-      "Portaria GM/MS Nº 12.168, DE 15 DE setembro DE 2026",
-      "RESOLUÇÃO SES/MG Nº 11.630 DE 08 DE SETEMBRO DE 2026"
+      "Ministério da Saúde distribui 67 veículos para transporte sanitário em 52 municípios e 1 estado, totalizando R$ 27,8 milhões",
+      "Em Minas Gerais, Almenara e Córrego Novo integram os beneficiados da doação de 26 micro-ônibus, 21 viaturas SAMU 192 e 15 vans",
+      "SAPS doa equipamentos para unidade básica de saúde em Indiaporã, São Paulo, pelo Novo PAC 2025"
     ],
-    "intro": "Nenhuma publicação de captação de recursos, mudança de regra ou edital nesta data. O radar segue lendo o Diário Oficial da União e o Diário Oficial de Minas Gerais no próximo dia útil.",
+    "intro": "O Ministério da Saúde segue expandindo a frota de transporte sanitário com a doação de 67 veículos para 52 municípios e 1 estado em R$ 27,8 milhões, incluindo micro-ônibus, viaturas SAMU e vans. A Secretaria de Atenção Primária à Saúde também realiza doação de equipamentos para unidade básica de saúde em Indiaporã, São Paulo, integrando os investimentos em atenção primária pelo Novo PAC 2025.",
     "parcial": false,
     "fontes": [
       {
@@ -44,7 +44,7 @@
       "url": "https://www.in.gov.br/web/dou/-/consulta-publica-sctie/ms-n-96-de-14-de-setembro-de-2026-732156132",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Consulta pública SCTIE/MS nº 96 de 14 de setembro de 2026 sobre recomendação da Conitec para incorporação de procedimento de resfriamento do couro cabeludo em pacientes com câncer de mama.",
+      "resumo": "Consulta Pública nº 96 da Secretaria de Ciência, Tecnologia e Inovação em Saúde/MS de 14 de setembro de 2026 sobre incorporação de procedimento para alopecia induzida por quimioterapia.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
@@ -70,14 +70,14 @@
       "url": "https://www.in.gov.br/web/dou/-/consulta-publica-sctie/ms-n-94-de-14-de-setembro-de-2026-732154824",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Consulta pública SCTIE/MS nº 94 de 14 de setembro de 2026 sobre atualização do Protocolo Clínico de Dislipidemia e Prevenção de Eventos Cardiovasculares.",
+      "resumo": "Consulta Pública nº 94 da Secretaria de Ciência, Tecnologia e Inovação em Saúde/MS de 14 de setembro de 2026 sobre atualização do Protocolo Clínico de Dislipidemia e Prevenção de Eventos Cardiovasculares.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "consulta pública",
-        "conitec",
-        "protocolo clínico"
+        "protocolo clínico",
+        "cardiovascular"
       ],
       "fallback": false
     },
@@ -96,14 +96,14 @@
       "url": "https://www.in.gov.br/web/dou/-/retificacao-732130702",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Retificação à Resolução CNS nº 793 de 7 de agosto de 2025 que corrige nome de entidade na composição da CISTT.",
+      "resumo": "Retificação do Conselho Nacional de Saúde de 16 de setembro de 2026 da Resolução CNS nº 793 de 7 de agosto de 2025, corrigindo composição de grupo.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "retificação",
         "resolução",
-        "composição"
+        "cns"
       ],
       "fallback": false
     },
@@ -122,7 +122,7 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-penalidade-732123528",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Aviso de penalidade do INCA de 16 de setembro de 2026 contra Mediton Farmacêutica por descumprimento de edital, com multa e impedimento de licitar por 2 meses.",
+      "resumo": "Aviso de Penalidade do Instituto Nacional de Câncer de 16 de setembro de 2026 aplicando multa e impedimento de licitar por 2 meses à Mediton Farmacêutica Ltda.",
       "por_que_importa": null,
       "valor_brl": 221.52,
       "entes": [
@@ -131,7 +131,7 @@
       "tags": [
         "penalidade",
         "licitação",
-        "multa"
+        "inca"
       ],
       "fallback": false
     },
@@ -150,14 +150,42 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-732115482",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Aviso de alteração do Pregão 223/2026 de 16 de setembro de 2026 para aquisição de materiais de consumo médico, retificando termo de referência e alterando datas.",
+      "resumo": "Aviso de Alteração de Edital da Secretaria de Atenção Especializada à Saúde de 16 de setembro de 2026 do Pregão 223/2026 para materiais de consumo médico.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "aviso de alteração",
+        "edital",
         "pregão",
-        "materiais"
+        "alteração"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3e2c0e41d6d282bd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-09-16",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "175",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-732115405",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 6.676/2026 da Secretaria de Atenção Primária à Saúde de 28 de agosto de 2026 de equipamentos para UBS em Indiaporã/SP no Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Indiaporã/SP"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "ubs"
       ],
       "fallback": false
     },
@@ -176,7 +204,7 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.165-de-15-de-setembro-de-2026-732107656",
       "categoria": "D",
       "relevancia": 1,
-      "resumo": "Portaria GM/MS nº 12.165 de 15 de setembro de 2026 que altera composição do grupo de trabalho.",
+      "resumo": "Portaria GM/MS nº 12.165 de 15 de setembro de 2026 altera a Portaria nº 10.950 para dispor sobre composição de grupo de trabalho.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
@@ -202,14 +230,14 @@
       "url": "https://www.in.gov.br/web/dou/-/despacho-de-14-de-setembro-de-2026-732107101",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Despacho da SCTIE/MS de 14 de setembro de 2026 que indefere pedido de reconsideração sobre não incorporação de burosumabe no SUS.",
+      "resumo": "Despacho da Secretaria de Ciência, Tecnologia e Inovação em Saúde de 14 de setembro de 2026 nega recurso sobre não incorporação de burosumabe para hipofosfatemia.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "despacho",
-        "incorporação",
-        "tecnologia"
+        "conitec",
+        "medicamento"
       ],
       "fallback": false
     },
@@ -228,14 +256,14 @@
       "url": "https://www.in.gov.br/web/dou/-/consulta-publica-sctie/ms-n-95-de-14-de-setembro-de-2026-732089314",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Consulta pública SCTIE/MS nº 95 de 14 de setembro de 2026 sobre atualização do Protocolo Clínico de Dor Crônica.",
+      "resumo": "Consulta Pública nº 95 da Secretaria de Ciência, Tecnologia e Inovação em Saúde/MS de 14 de setembro de 2026 sobre atualização do Protocolo Clínico de Dor Crônica.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "consulta pública",
-        "conitec",
-        "protocolo"
+        "protocolo clínico",
+        "dor"
       ],
       "fallback": false
     },
@@ -254,13 +282,13 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.168-de-15-de-setembro-de-2026-732085075",
       "categoria": "D",
       "relevancia": 1,
-      "resumo": "Portaria GM/MS nº 12.168 de 15 de setembro de 2026 que prorroga atuação de grupo de trabalho para atualizar SISLAB por 12 meses.",
+      "resumo": "Portaria GM/MS nº 12.168 de 15 de setembro de 2026 prorroga por 12 meses a atuação do Grupo de Trabalho para atualizar SISLAB e elaborar PNLSP.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "portaria",
-        "grupo de trabalho",
+        "sislab",
         "laboratórios"
       ],
       "fallback": false
@@ -280,14 +308,42 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-732082531",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Aviso de alteração do Pregão 287/2026 de 16 de setembro de 2026 para aquisição de material de consumo, ajustando termo de referência.",
+      "resumo": "Aviso de Alteração de Edital da Secretaria de Atenção Especializada à Saúde de 16 de setembro de 2026 do Pregão 287/2026 para material de consumo médico.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "aviso de alteração",
+        "edital",
         "pregão",
-        "material de consumo"
+        "alteração"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0fe32f975ec8a571",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-09-16",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "175",
+      "titulo": "EXTRATO de Doação Simplificada",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-simplificada-732024607",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Doação Simplificada do Instituto Nacional de Câncer de 15 de setembro de 2026 de materiais do pesquisador Martin Hernan Bonamino.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Câncer"
+      ],
+      "tags": [
+        "doação",
+        "inca",
+        "materiais"
       ],
       "fallback": false
     },
@@ -306,21 +362,21 @@
       "url": "https://www.in.gov.br/web/dou/-/extratos-de-convenio-732007242",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Extratos de 6 convênios SUS de 14 e 16 de setembro de 2026 para cessão e alocação de servidores entre Ministério da Saúde, prefeituras municipais e hospital estadual.",
+      "resumo": "Ministério da Saúde publica extrato de 5 convênios SUS de 16 de setembro de 2026 relativos à cessão de servidores entre MS e órgãos municipais e hospitalares em diversos estados.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
         "Hospital Universitário Oswaldo Cruz",
+        "Viçosa",
         "Porto Nacional",
         "Colméia",
-        "Viçosa",
         "Crato",
         "Cachoeirinha"
       ],
       "tags": [
-        "extrato de convênio",
-        "servidores",
-        "SUS"
+        "convênio",
+        "cessão de pessoal",
+        "rotina"
       ],
       "fallback": false
     },
@@ -339,14 +395,14 @@
       "url": "https://www.in.gov.br/web/dou/-/comunicado-de-15-de-setembro-de-2026-732006934",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Comunicado de 15 de setembro de 2026 da ANS sobre cancelamento de registro de operadora de planos privados UNIODONTO de Três Rios-RJ.",
+      "resumo": "Agência Nacional de Saúde Suplementar comunica cancelamento de registro de operadora de planos odontológicos privados em 14 de setembro de 2026.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "saúde suplementar",
-        "ans",
-        "cancelamento"
+        "cancelamento",
+        "operadora"
       ],
       "fallback": false
     },
@@ -365,14 +421,16 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-padronizacao-de-marcas-731997591",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Aviso de padronização nº 25386.001688/2022-11 da Fundação Oswaldo Cruz sobre padronização de vestimentas descartáveis, publicado em 16/09/2026.",
+      "resumo": "Fundação Oswaldo Cruz avisa padronização de marcas de vestimentas descartáveis no período de 23 de setembro a 23 de outubro de 2026.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [],
+      "entes": [
+        "Fundação Oswaldo Cruz"
+      ],
       "tags": [
         "padronização",
-        "vestimentas",
-        "marcas"
+        "compras",
+        "rotina"
       ],
       "fallback": false
     },
@@ -391,16 +449,14 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-731960853",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Aviso de alteração de edital da Concorrência 324/2026 para construção de unidade básica de saúde indígena em Pesqueira/PE, publicado em 16/09/2026.",
+      "resumo": "Ministério da Saúde publica aviso de alteração de edital de concorrência para construção de unidade básica de saúde indígena em Pesqueira, Pernambuco.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [
-        "Pesqueira"
-      ],
+      "entes": [],
       "tags": [
         "edital",
-        "construção",
-        "ubs indígena"
+        "alteração",
+        "construção"
       ],
       "fallback": false
     },
@@ -419,14 +475,14 @@
       "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-simplificado-731935096",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Extrato de termo simplificado de inserção orçamentária entre Ministério da Saúde e Organização Pan-Americana da Saúde/OMS, processo 25000.027822/2026-14, de 16/09/2026.",
+      "resumo": "Ministério da Saúde publica extrato de termo simplificado de inserção de R$ 1.400.000,00 em recursos orçamentários ao 167º termo de cooperação técnica com OPAS/OMS.",
       "por_que_importa": null,
       "valor_brl": 1400000,
       "entes": [],
       "tags": [
-        "extrato",
         "cooperação técnica",
-        "recursos"
+        "recursos orçamentários",
+        "internacional"
       ],
       "fallback": false
     },
@@ -445,14 +501,16 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-padronizacao-de-marcas-731931134",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Aviso de padronização nº 25386.002364/2023-72 da Fundação Oswaldo Cruz sobre padronização de microtubos em polipropileno, publicado em 16/09/2026.",
+      "resumo": "Fundação Oswaldo Cruz avisa padronização de marcas de microtubos em polipropileno no período de 23 de setembro a 23 de outubro de 2026.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [],
+      "entes": [
+        "Fundação Oswaldo Cruz"
+      ],
       "tags": [
         "padronização",
-        "microtubos",
-        "marcas"
+        "compras",
+        "rotina"
       ],
       "fallback": false
     },
@@ -471,16 +529,16 @@
       "url": "https://www.in.gov.br/web/dou/-/extrato-de-anulacao-731923857",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Extrato de anulação da Secretaria de Atenção Especializada à Saúde tornando sem efeito Termo de Doação nº 575/2026 da Prefeitura Municipal de Assis/SP, de 16/09/2026.",
+      "resumo": "Ministério da Saúde publica extrato de anulação do termo de doação nº 575/2026 à Prefeitura Municipal de Assis em São Paulo.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
         "Assis"
       ],
       "tags": [
-        "extrato",
         "anulação",
-        "doação"
+        "termo de doação",
+        "retificação"
       ],
       "fallback": false
     },
@@ -499,14 +557,16 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-padronizacao-de-marcas-731900063",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Aviso de padronização nº 25386.002241/2022-51 da Fundação Oswaldo Cruz sobre padronização de toalhas para sala limpa, publicado em 16/09/2026.",
+      "resumo": "Fundação Oswaldo Cruz avisa padronização de marcas de toalhinhas para sala limpa no período de 23 de setembro a 23 de outubro de 2026.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [],
+      "entes": [
+        "Fundação Oswaldo Cruz"
+      ],
       "tags": [
         "padronização",
-        "toalhas",
-        "marcas"
+        "compras",
+        "rotina"
       ],
       "fallback": false
     },
@@ -525,14 +585,14 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-penalidade-731971524",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Aviso de penalidade da Casa Civil impedindo DF Medical Ltda de licitar e contratar com a União por 2 meses, publicado em 16/09/2026.",
+      "resumo": "Casa Civil publica aviso de penalidade contra empresa DF Medical impedindo licitação e contratação com a União por 2 meses.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "penalidade",
-        "impedimento",
-        "licitação"
+        "licitação",
+        "fornecedor"
       ],
       "fallback": false
     },
@@ -551,14 +611,14 @@
       "url": "https://www.in.gov.br/web/dou/-/extrato-do-acordo-de-cooperacao-tecnica-n-2/2026-731944129",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Extrato de acordo de cooperação técnica nº 2/2026 entre Presidência da República e SENAC para cessão de espaço físico, de 16/09/2026.",
+      "resumo": "Casa Civil publica extrato de acordo de cooperação técnica nº 2/2026 entre Presidência da República e SENAC-AR/DF para cessão de espaço físico.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "extrato",
-        "acordo",
-        "cooperação"
+        "cooperação técnica",
+        "Senac",
+        "fora da saúde"
       ],
       "fallback": false
     },
@@ -577,14 +637,14 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-penalidade-731919650",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Aviso de penalidade da Casa Civil impedindo Inova Service Distribuidora de licitar e contratar com a União por 2 meses, publicado em 16/09/2026.",
+      "resumo": "Casa Civil publica aviso de penalidade contra empresa Inova Service impedindo licitação e contratação com a União por 2 meses.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "penalidade",
-        "impedimento",
-        "licitação"
+        "licitação",
+        "fornecedor"
       ],
       "fallback": false
     },
@@ -603,16 +663,16 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A50%7D",
       "categoria": "D",
       "relevancia": 3,
-      "resumo": "Resolução SES/MG nº 11.633 de 08/09/2026 instaurando Tomada de Contas Especial para apuração de aplicação de recursos do Convênio nº 1531/2013 com Associação Hospitalar Santa Rosália.",
-      "por_que_importa": "Suspenda novas alocações enquanto a instituição está sob investigação de Tomada de Contas Especial da SES-MG.",
+      "resumo": "Secretaria de Estado de Saúde de Minas Gerais publica Resolução nº 11.633 de 8 de setembro de 2026 instaurando tomada de contas especial contra Associação Hospitalar Santa Rosália.",
+      "por_que_importa": "Verificar se há recursos bloqueados na entidade e se existem pendências similares em outros convênios com a SES-MG que possam colocar em risco transferências futuras.",
       "valor_brl": null,
       "entes": [
         "Associação Hospitalar Santa Rosália"
       ],
       "tags": [
         "tomada de contas",
-        "convênio",
-        "apuração"
+        "risco",
+        "convênio"
       ],
       "fallback": false
     },
@@ -631,16 +691,16 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A50%7D",
       "categoria": "D",
       "relevancia": 3,
-      "resumo": "Resolução SES/MG nº 11.630 de 08/09/2026 instaurando Tomada de Contas Especial para apuração de aplicação de recursos do Convênio nº 1532/2013 com Associação Hospitalar Santa Rosália.",
-      "por_que_importa": "Suspenda novas alocações enquanto a instituição está sob investigação de Tomada de Contas Especial da SES-MG.",
+      "resumo": "Resolução SES/MG nº 11.630 instaura tomada de contas especial contra a Associação Hospitalar Santa Rosália por falta de comprovação de aplicação de recursos do convênio 1532/2013.",
+      "por_que_importa": "Acompanhe a tomada de contas especial pois pode resultar em devolução de recursos ao estado.",
       "valor_brl": null,
       "entes": [
         "Associação Hospitalar Santa Rosália"
       ],
       "tags": [
-        "tomada de contas",
+        "tomada de contas especial",
         "convênio",
-        "apuração"
+        "santa rosália"
       ],
       "fallback": false
     },
@@ -659,16 +719,16 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A50%7D",
       "categoria": "D",
       "relevancia": 3,
-      "resumo": "Resolução SES/MG nº 11.631 de 08/09/2026 instaurando Tomada de Contas Especial para apuração de aplicação de recursos do Convênio nº 1936/2012 com Associação Hospitalar Santa Rosália.",
-      "por_que_importa": "Suspenda novas alocações enquanto a instituição está sob investigação de Tomada de Contas Especial da SES-MG.",
+      "resumo": "Resolução SES/MG nº 11.631 instaura tomada de contas especial contra a Associação Hospitalar Santa Rosália por falta de comprovação de aplicação de recursos do convênio 1936/2012.",
+      "por_que_importa": "Acompanhe a tomada de contas especial pois pode resultar em devolução de recursos ao estado.",
       "valor_brl": null,
       "entes": [
         "Associação Hospitalar Santa Rosália"
       ],
       "tags": [
-        "tomada de contas",
+        "tomada de contas especial",
         "convênio",
-        "apuração"
+        "santa rosália"
       ],
       "fallback": false
     },
@@ -685,10 +745,10 @@
       "edicao": null,
       "titulo": "RESOLUÇÃO SES/MG Nº 11.634, DE 08 DE SETEMBRO DE 2026",
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A51%7D",
-      "categoria": "X",
-      "relevancia": 0,
-      "resumo": "Resolução SES/MG nº 11.634 de 08 de setembro de 2026 instaura Tomada de Contas Especial da Associação Hospitalar Santa Rosália pelo Convênio nº 1530/2013.",
-      "por_que_importa": null,
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Resolução SES/MG nº 11.634 instaura tomada de contas especial contra a Associação Hospitalar Santa Rosália por falta de comprovação de aplicação de recursos do convênio 1530/2013.",
+      "por_que_importa": "Acompanhe a tomada de contas especial pois pode resultar em devolução de recursos ao estado.",
       "valor_brl": null,
       "entes": [
         "Associação Hospitalar Santa Rosália"
@@ -696,7 +756,7 @@
       "tags": [
         "tomada de contas especial",
         "convênio",
-        "fiscalização"
+        "santa rosália"
       ],
       "fallback": false
     },
@@ -713,10 +773,10 @@
       "edicao": null,
       "titulo": "RESOLUÇÃO SES/MG Nº 11.628, DE 08 DE SETEMBRO DE 2026",
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A51%7D",
-      "categoria": "X",
-      "relevancia": 0,
-      "resumo": "Resolução SES/MG nº 11.628 de 08 de setembro de 2026 instaura Tomada de Contas Especial da Associação Hospitalar Santa Rosália pelo Convênio nº 1771/2012.",
-      "por_que_importa": null,
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Resolução SES/MG nº 11.628 instaura tomada de contas especial contra a Associação Hospitalar Santa Rosália por falta de comprovação de aplicação de recursos do convênio 1771/2012.",
+      "por_que_importa": "Acompanhe a tomada de contas especial pois pode resultar em devolução de recursos ao estado.",
       "valor_brl": null,
       "entes": [
         "Associação Hospitalar Santa Rosália"
@@ -724,7 +784,7 @@
       "tags": [
         "tomada de contas especial",
         "convênio",
-        "fiscalização"
+        "santa rosália"
       ],
       "fallback": false
     },
@@ -741,10 +801,10 @@
       "edicao": null,
       "titulo": "RESOLUÇÃO SES/MG Nº 11.629, DE 08 DE SETEMBRO DE 2026",
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A51%7D",
-      "categoria": "X",
-      "relevancia": 0,
-      "resumo": "Resolução SES/MG nº 11.629 de 08 de setembro de 2026 instaura Tomada de Contas Especial da Associação Hospitalar Santa Rosália pelo Convênio nº 1212/2012.",
-      "por_que_importa": null,
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Resolução SES/MG nº 11.629 instaura tomada de contas especial contra a Associação Hospitalar Santa Rosália por falta de comprovação de aplicação de recursos do convênio 1212/2012.",
+      "por_que_importa": "Acompanhe a tomada de contas especial pois pode resultar em devolução de recursos ao estado.",
       "valor_brl": 1836288.26,
       "entes": [
         "Associação Hospitalar Santa Rosália"
@@ -752,7 +812,7 @@
       "tags": [
         "tomada de contas especial",
         "convênio",
-        "fiscalização"
+        "santa rosália"
       ],
       "fallback": false
     },
@@ -771,14 +831,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A51%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Resolução SES nº 11558 de 11 de setembro de 2026 dispensa o servidor Marcus Alvim Valadares da Função Gratificada de Regulação Médico Plantonista.",
+      "resumo": "Resolução SES nº 11.558 dispensa do servidor Marcus Alvim Valadares de Função Gratificada de Regulação Médico Plantonista da Central de Operações para Regulação Estadual.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "pessoal",
-        "exoneração",
-        "função gratificada"
+        "dispensa",
+        "regulação"
       ],
       "fallback": false
     },
@@ -797,14 +857,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A51%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Resolução SES nº 11559 de 11 de setembro de 2026 torna sem efeito a designação da servidora Fernanda Basso Lasmar Rocha para Coordenador Macrorregional.",
+      "resumo": "Resolução SES nº 11.559 torna sem efeito a designação de Fernanda Basso Lasmar Rocha para Função Gratificada de Regulação Coordenador Macrorregional.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "pessoal",
         "designação",
-        "função gratificada"
+        "regulação"
       ],
       "fallback": false
     },
@@ -823,16 +883,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A51%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Resolução SES/MG nº 11.620 de 14 de setembro de 2026 altera a Comissão Avaliadora para processo seletivo interno de Autoridade Sanitária em Regulação do Acesso a Serviços de Saúde.",
+      "resumo": "Resolução SES/MG nº 11.620 altera composição da comissão avaliadora para processo seletivo interno de designação de servidores como autoridade sanitária na área de regulação.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [
-        "Setubinha"
-      ],
+      "entes": [],
       "tags": [
-        "processo seletivo",
+        "pessoal",
         "comissão",
-        "pessoal"
+        "seleção interna"
       ],
       "fallback": false
     },
@@ -849,18 +907,18 @@
       "edicao": null,
       "titulo": "RESOLUÇÃO SES/MG Nº 11.635, DE 08 DE SETEMBRO DE 2026",
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A51%7D",
-      "categoria": "X",
-      "relevancia": 0,
-      "resumo": "Resolução SES/MG nº 11.635 de 08 de setembro de 2026 instaura Tomada de Contas Especial do Município de Bertópolis pelo Convênio nº 1854/2013.",
-      "por_que_importa": null,
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Resolução SES/MG nº 11.635 instaura tomada de contas especial contra o Município de Bertópolis por falta de comprovação de aplicação de recursos do convênio 1854/2013.",
+      "por_que_importa": "Acompanhe a tomada de contas especial pois pode resultar em devolução de recursos ao estado.",
       "valor_brl": 50991.2,
       "entes": [
-        "Bertópolis"
+        "Município de Bertópolis"
       ],
       "tags": [
         "tomada de contas especial",
-        "município",
-        "convênio"
+        "convênio",
+        "município"
       ],
       "fallback": false
     },
@@ -879,14 +937,14 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A51%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Resolução SES nº 11607 de 15 de setembro de 2026 revoga Função Gratificada de Regulação Médico Plantonista do servidor Bruno Soares de Melo Polcaro.",
+      "resumo": "Resolução SES nº 11.607 revoga função gratificada de regulação médico plantonista do servidor Bruno Soares de Melo Polcaro da Central de Operações para Regulação Estadual.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "pessoal",
-        "função gratificada",
-        "revogação"
+        "revogação",
+        "regulação"
       ],
       "fallback": false
     },
@@ -903,10 +961,10 @@
       "edicao": null,
       "titulo": "RESOLUÇÃO SES/MG Nº 11.632, DE 08 DE SETEMBRO DE 2026",
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331006%2C%22paginaSelecionada%22%3A51%7D",
-      "categoria": "X",
-      "relevancia": 0,
-      "resumo": "Resolução SES/MG nº 11.632 de 08 de setembro de 2026 instaura Tomada de Contas Especial da Associação Hospitalar Santa Rosália pelo Convênio nº 1531/2013.",
-      "por_que_importa": null,
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Resolução SES/MG nº 11.632 instaura tomada de contas especial contra a Associação Hospitalar Santa Rosália por falta de comprovação de aplicação de recursos do convênio 1531/2013.",
+      "por_que_importa": "Acompanhe a tomada de contas especial pois pode resultar em devolução de recursos ao estado.",
       "valor_brl": 3948498,
       "entes": [
         "Associação Hospitalar Santa Rosália"
@@ -914,7 +972,85 @@
       "tags": [
         "tomada de contas especial",
         "convênio",
-        "fiscalização"
+        "santa rosália"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c39fcc1488ca6b41",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Termo de Doação",
+      "numero": null,
+      "data_publicacao": "2026-09-16",
+      "secao": "3",
+      "pagina": 109,
+      "edicao": "175",
+      "titulo": "Doação de 67 veículos do SUS a 52 municípios e 1 estado",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-731990578",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "52 municípios e 1 estado recebem 67 veículos do Ministério da Saúde: 26 micro-ônibus de transporte sanitário, 21 viaturas do SAMU 192 e 15 vans de transporte sanitário, no total de R$ 27,8 milhões. Em Minas: Almenara e Córrego Novo.",
+      "por_que_importa": "Municípios mineiros contemplados confirmam que o programa está ativo no estado; os demais podem pleitear os mesmos veículos.",
+      "valor_brl": 27768076.0,
+      "entes": [
+        "Almenara",
+        "Córrego Novo",
+        "Areal",
+        "Blumenau",
+        "Bom Princípio do Piauí",
+        "Cabo de Santo Agostinho",
+        "Canindé de São Francisco",
+        "Cardoso",
+        "Casinhas",
+        "Catalão",
+        "Cidelândia",
+        "Cocos",
+        "Conceição do Lago-Açu",
+        "Dom Pedro",
+        "Embu-Guaçu",
+        "Florânia",
+        "Goiana",
+        "Ibipitanga",
+        "Icapuí",
+        "Irani",
+        "Itacajá",
+        "Itaituba",
+        "Lagoa Nova",
+        "Lençóis Paulistas",
+        "Macau",
+        "Mambaí",
+        "Mangueirinha",
+        "Ministro Andreazza",
+        "Miracema",
+        "Monte Alegre",
+        "Nova Itarana",
+        "Novo Horizonte D'Oeste",
+        "Óbidos",
+        "Picos",
+        "Porto Velho",
+        "Praia Norte",
+        "Presidente Dutra",
+        "Rio Real",
+        "Roseira",
+        "Santa Luzia D'Oeste",
+        "Santo Antônio de Jesus",
+        "Santo Antônio de Pádua",
+        "São Luis Gonzaga do Maranhão",
+        "São Miguel do Tapuio",
+        "Secretaria de Estado da Saúde do Piauí",
+        "Taquaral de Goiás",
+        "Torres",
+        "Tracuateua",
+        "Umuarama",
+        "Uruguaiana",
+        "Vargem Alta",
+        "Vilhena",
+        "Wanderley"
+      ],
+      "tags": [
+        "regra:doacoes-agrupadas"
       ],
       "fallback": false
     }
