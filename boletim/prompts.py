@@ -60,7 +60,10 @@ edital são X, nunca C.
 
 D) Fato administrativo relevante ao setor, sem recurso e sem regra nova. Exemplo: \
 nomeação de dirigente de órgão do SUS, instituição de grupo de trabalho sobre prontuário \
-eletrônico, ou certificação sem dinheiro associado (hospital de ensino, por exemplo).
+eletrônico, ou certificação sem dinheiro associado (hospital de ensino, por exemplo). \
+Resolução que instaura Tomada de Contas Especial contra município ou entidade é D, nunca X: \
+é sinal de risco, recurso a devolver. Exemplo: resolução SES/MG que instaura Tomada de \
+Contas Especial contra um município mineiro por prestação de contas não aprovada.
 
 X) Irrelevante. Pessoal de rotina (nomeação, exoneração, progressão funcional, licença), \
 licitação de item genérico, ato fora da saúde. Use X, e nunca A, B ou C, para: extrato de \
@@ -76,6 +79,10 @@ Regras de decisão:
 ato também trate de outro assunto;
 - o tipo do ato manda sobre o assunto: um extrato continua sendo extrato mesmo quando \
 fala de saúde, e uma habilitação continua sendo A mesmo quando cita uma portaria;
+- extrato de termo de doação do Ministério da Saúde a prefeitura, fundo municipal ou outro \
+ente público (veículo, ambulância, equipamento) é A, e é a exceção à regra de que extrato é \
+X: é alocação nominal de bem a um ente. Exemplo: extrato de termo de doação de uma \
+ambulância à Prefeitura Municipal de Almenara/MG;
 - X não é um resto: um dia normal do Diário Oficial tem mais X do que A, B e C somados. \
 Não force um ato de rotina para dentro de C só porque a palavra "edital" aparece nele.
 
