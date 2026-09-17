@@ -1,13 +1,15 @@
 {
   "data": "2026-09-17",
-  "gerado_em": "2026-09-17T13:05:03.553975+00:00",
+  "gerado_em": "2026-09-17T13:51:53.148839+00:00",
   "avisos": [],
   "edicao": {
-    "titulo": "Boletim de 17/09/2026: 0 publicações relevantes",
+    "titulo": "1 termo PRONAS/PCD de R$ 1,4 milhão em Monte Carmelo",
     "em_30_segundos": [
-      "PORTARIA CONJUNTA SGTES/SAES Nº 81, DE 16 DE SETEMBRO DE 2026"
+      "Ministério da Saúde assina termo PRONAS/PCD com investimento de R$ 1,4 milhão.",
+      "Associação de Monte Carmelo recebe recurso de R$ 1,4 milhão para ações inclusivas.",
+      "PRONAS/PCD celebra novo compromisso financeiro de R$ 1,4 milhão com instituição filantrópica em Monte Carmelo."
     ],
-    "intro": "Nenhuma publicação de captação de recursos, mudança de regra ou edital nesta data. O radar segue lendo o Diário Oficial da União e o Diário Oficial de Minas Gerais no próximo dia útil.",
+    "intro": "Nesta edição, 1 novo termo PRONAS/PCD do Ministério da Saúde autoriza investimento de R$ 1,4 milhão em Monte Carmelo. A Associação de Pais e Amigos dos Excepcionais do município é a beneficiária, e você deve observar esse trâmite para ampliar parcerias com sua instituição filantrópica e fortalecer a rede local de cuidados.",
     "parcial": false,
     "fontes": [
       {
@@ -42,17 +44,14 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-380-de-14-de-setembro-de-2026-732414426",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria SGTES/MS nº 380, de 14 de setembro de 2026, altera dados de 2 médicos do Projeto Mais Médicos para o Brasil.",
+      "resumo": "Portaria SGTES/MS nº 380, de 14 de setembro de 2026, altera localização de 2 médicos intercambistas do Projeto Mais Médicos para o Brasil em Maranhão.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [
-        "Coroata",
-        "Alto Alegre do Pindare"
-      ],
+      "entes": [],
       "tags": [
+        "médicos intercambistas",
         "projeto mais médicos",
-        "intercambistas",
-        "pessoal"
+        "maranhão"
       ],
       "fallback": false
     },
@@ -71,17 +70,14 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-382-de-14-de-setembro-de-2026-732410588",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria SGTES/MS nº 382, de 14 de setembro de 2026, altera dados de 1 médica do Projeto Mais Médicos para o Brasil.",
+      "resumo": "Portaria SGTES/MS nº 382, de 14 de setembro de 2026, retifica localização de médico intercambista do Projeto Mais Médicos para o Brasil.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [
-        "Recife",
-        "Brasileia"
-      ],
+      "entes": [],
       "tags": [
+        "médicos intercambistas",
         "projeto mais médicos",
-        "intercambistas",
-        "pessoal"
+        "mobilidade"
       ],
       "fallback": false
     },
@@ -100,7 +96,7 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-conjunta-sgtes/saes-n-81-de-16-de-setembro-de-2026-732409047",
       "categoria": "D",
       "relevancia": 1,
-      "resumo": "Portaria Conjunta SGTES/SAES nº 81, de 16 de setembro de 2026, concede Certificação de Hospital de Ensino Nível 1 a 3 hospitais.",
+      "resumo": "Portaria Conjunta SGTES/SAES nº 81, de 16 de setembro de 2026, concede Certificação de Hospital de Ensino - Nível 1 a 3 hospitais (RS, SP, MA).",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
@@ -109,9 +105,9 @@
         "Hospital Universitário da UFMA"
       ],
       "tags": [
-        "hospital de ensino",
         "certificação",
-        "nível 1"
+        "hospital de ensino",
+        "integração ensino-serviço"
       ],
       "fallback": false
     },
@@ -130,17 +126,14 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-385-de-14-de-setembro-de-2026-732408968",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria SGTES/MS nº 385, de 14 de setembro de 2026, altera dados de 1 médico do Projeto Mais Médicos para o Brasil.",
+      "resumo": "Portaria SGTES/MS nº 385, de 14 de setembro de 2026, retifica localização de médico intercambista do Projeto Mais Médicos para o Brasil.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [
-        "Buriti",
-        "Padre Bernardo"
-      ],
+      "entes": [],
       "tags": [
+        "médicos intercambistas",
         "projeto mais médicos",
-        "intercambistas",
-        "pessoal"
+        "mobilidade"
       ],
       "fallback": false
     },
@@ -157,16 +150,16 @@
       "edicao": "176",
       "titulo": "PORTARIA SGTES/MS Nº 388, DE 16 DE SETEMBRO DE 2026",
       "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-388-de-16-de-setembro-de-2026-732407844",
-      "categoria": "X",
-      "relevancia": 0,
-      "resumo": "Portaria SGTES/MS nº 388, de 16 de setembro de 2026, institui a Central de Relacionamento Resolve SGTES.",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SGTES/MS nº 388, de 16 de setembro de 2026, institui Central de Relacionamento Resolve SGTES para atendimento integrado de demandas administrativas.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "administrativo",
         "central de atendimento",
-        "SGTES"
+        "resolve sgtes",
+        "atendimento administrativo"
       ],
       "fallback": false
     },
@@ -185,17 +178,14 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-383-de-14-de-setembro-de-2026-732402280",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria SGTES/MS nº 383, de 14 de setembro de 2026, altera dados de 1 médico do Projeto Mais Médicos para o Brasil.",
+      "resumo": "Portaria SGTES/MS nº 383, de 14 de setembro de 2026, altera localização de médico intercambista do Projeto Mais Médicos para o Brasil em Pará.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [
-        "Augusto Correa",
-        "Castanhal"
-      ],
+      "entes": [],
       "tags": [
+        "médicos intercambistas",
         "projeto mais médicos",
-        "intercambistas",
-        "pessoal"
+        "mobilidade"
       ],
       "fallback": false
     },
@@ -214,14 +204,14 @@
       "url": "https://www.in.gov.br/web/dou/-/despacho-732402201",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Despacho da ANS, de 17 de setembro de 2026, comunica decisões sobre processos administrativos de saúde suplementar.",
+      "resumo": "Despacho da ANS comunica decisões sobre processos administrativos de conhecimento prévio de doença junto a operadoras de saúde suplementar.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "saúde suplementar",
-        "ANS",
-        "despacho"
+        "ans",
+        "doença preexistente"
       ],
       "fallback": false
     },
@@ -240,13 +230,13 @@
       "url": "https://www.in.gov.br/web/dou/-/retificacao-732398823",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Retificação da ANVISA, de 17 de setembro de 2026, corrige números de votos em decisões de recursos administrativos.",
+      "resumo": "Retificação da ANVISA corrige números de votos em processos de recursos administrativos.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
+        "anvisa",
         "retificação",
-        "ANVISA",
         "administrativo"
       ],
       "fallback": false
@@ -266,17 +256,14 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-381-de-14-de-setembro-de-2026-732394863",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria SGTES/MS nº 381, de 14 de setembro de 2026, altera dados de 1 médico do Projeto Mais Médicos para o Brasil.",
+      "resumo": "Portaria SGTES/MS nº 381, de 14 de setembro de 2026, altera localização de médico intercambista do Projeto Mais Médicos para o Brasil em Pará.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [
-        "Terra Santa",
-        "Ouricuri"
-      ],
+      "entes": [],
       "tags": [
+        "médicos intercambistas",
         "projeto mais médicos",
-        "intercambistas",
-        "pessoal"
+        "mobilidade"
       ],
       "fallback": false
     },
@@ -295,17 +282,14 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-386-de-14-de-setembro-de-2026-732393156",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Portaria SGTES/MS nº 386, de 14 de setembro de 2026, altera dados de 1 médica do Projeto Mais Médicos para o Brasil.",
+      "resumo": "Portaria SGTES/MS nº 386, de 14 de setembro de 2026, altera localização de médico intercambista do Projeto Mais Médicos para o Brasil em Pará.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [
-        "Aveiro",
-        "Belterra"
-      ],
+      "entes": [],
       "tags": [
+        "médicos intercambistas",
         "projeto mais médicos",
-        "intercambistas",
-        "pessoal"
+        "mobilidade"
       ],
       "fallback": false
     },
@@ -324,14 +308,14 @@
       "url": "https://www.in.gov.br/web/dou/-/edital-n-38-de-15-de-setembro-de-2026-732366352",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Edital nº 38 da FIOCRUZ, de 15 de setembro de 2026, divulga eliminação de candidatos em seleção.",
+      "resumo": "Edital nº 38 da FIOCRUZ, de 15 de setembro de 2026, divulga eliminação, desistência e renúncia em concurso público de pessoal.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "FIOCRUZ",
-        "pessoal",
-        "seleção"
+        "fiocruz",
+        "concurso público",
+        "pessoal"
       ],
       "fallback": false
     },
@@ -350,9 +334,9 @@
       "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-732352126",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Extrato de Registro de Preços, de 17 de setembro de 2026, para aquisição de medicamentos controlados.",
+      "resumo": "Extrato de Registro de Preços para aquisição de medicamentos controlados, com vigência de 12 meses a partir de 17 de setembro de 2026.",
       "por_que_importa": null,
-      "valor_brl": 6298.26,
+      "valor_brl": null,
       "entes": [],
       "tags": [
         "medicamentos",
@@ -374,19 +358,19 @@
       "edicao": "176",
       "titulo": "EXTRATO DE COMPROMISSO",
       "url": "https://www.in.gov.br/web/dou/-/extrato-de-compromisso-732340763",
-      "categoria": "X",
-      "relevancia": 0,
-      "resumo": "Ministério da Saúde publica em 17/09/2026 extrato de compromisso PRONAS/PCD entre a União e a Associação de Pais e Amigos dos Excepcionais de Monte Carmelo para execução de projeto.",
-      "por_que_importa": null,
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde celebra termo de compromisso PRONAS/PCD com Associação de Pais e Amigos dos Excepcionais de Monte Carmelo, CNPJ nº 21.288.626/0001-15.",
+      "por_que_importa": "a associação mineira de Monte Carmelo receberá transferência de recursos conforme cronograma do termo de compromisso.",
       "valor_brl": 1445694,
       "entes": [
         "Monte Carmelo"
       ],
       "tags": [
-        "pronas",
-        "deficiência",
+        "PRONAS/PCD",
         "compromisso",
-        "apae"
+        "reabilitação",
+        "regra:pronas-pronon"
       ],
       "fallback": false
     },
@@ -405,15 +389,14 @@
       "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-732316473",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ministério da Saúde publica em 17/09/2026 extratos de registro de preços para aquisição de materiais hospitalares e EPI.",
+      "resumo": "Secretaria de Atenção Especializada à Saúde publica extratos de registros de preços para aquisição de materiais hospitalares.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "licitação",
-        "materiais",
-        "epi",
-        "registropreços"
+        "registro de preços",
+        "materiais hospitalares",
+        "licitação"
       ],
       "fallback": false
     },
@@ -432,15 +415,14 @@
       "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-725-de-14-de-setembro-de-2026-732316396",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ministério da Saúde publica em 17/09/2026 edital de notificação nº 725 para intimar Georgia Maria de Albuquerque a retirar notificação sobre parecer.",
+      "resumo": "Secretaria de Atenção Primária à Saúde publica edital de notificação para pessoa em local incerto ou não sabido.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "notificação",
-        "edital",
-        "intimação",
-        "administrativo"
+        "pessoa física",
+        "transferência de recursos"
       ],
       "fallback": false
     },
@@ -459,7 +441,7 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-384-de-14-de-setembro-de-2026-732314808",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ministério da Saúde publica portaria SGTES/MS nº 384 de 14/09/2026, alterando lista de médicos intercambistas do Projeto Mais Médicos para o Brasil.",
+      "resumo": "Portaria SGTES/MS nº 384 de 14 de setembro de 2026 altera localização de médico intercambista do Projeto Mais Médicos em Minas Gerais.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
@@ -467,10 +449,9 @@
         "Acucena"
       ],
       "tags": [
-        "maismedicos",
-        "médicos",
-        "alocação",
-        "portaria"
+        "Projeto Mais Médicos",
+        "médico intercambista",
+        "pessoal"
       ],
       "fallback": false
     },
@@ -489,18 +470,14 @@
       "url": "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-379-de-14-de-setembro-de-2026-732310282",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ministério da Saúde publica portaria SGTES/MS nº 379 de 14/09/2026, alterando lista de médicos intercambistas do Projeto Mais Médicos para o Brasil.",
+      "resumo": "Portaria SGTES/MS nº 379 de 14 de setembro de 2026 altera localização de médico intercambista do Projeto Mais Médicos.",
       "por_que_importa": null,
       "valor_brl": null,
-      "entes": [
-        "Augusto Correia",
-        "Rosário"
-      ],
+      "entes": [],
       "tags": [
-        "maismedicos",
-        "médicos",
-        "alocação",
-        "portaria"
+        "Projeto Mais Médicos",
+        "médico intercambista",
+        "pessoal"
       ],
       "fallback": false
     },
@@ -519,15 +496,14 @@
       "url": "https://www.in.gov.br/web/dou/-/despacho-n-116-de-16-de-setembro-de-2026-732310145",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "ANVISA publica em 17/09/2026 despacho nº 116, tornando públicas decisões administrativas sobre processos de empresas de produtos fumígenos.",
+      "resumo": "Agência Nacional de Vigilância Sanitária publica despacho com decisões sobre registros de produtos fumígenos.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "anvisa",
-        "tabaco",
-        "despacho",
-        "administrativo"
+        "ANVISA",
+        "vigilância sanitária",
+        "produtos fumígenos"
       ],
       "fallback": false
     },
@@ -546,15 +522,14 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-732300794",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ministério da Saúde publica em 17/09/2026 aviso de alteração de edital do pregão 11/2026 para aquisição de medicamentos antiagregantes, anticoagulantes e antianêmicos.",
+      "resumo": "Secretaria de Atenção Especializada à Saúde publica aviso de alteração de data de pregão para aquisição de medicamentos.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "licitação",
-        "medicamentos",
         "pregão",
-        "alteração"
+        "medicamentos",
+        "licitação"
       ],
       "fallback": false
     },
@@ -571,17 +546,16 @@
       "edicao": "176",
       "titulo": "EXTRATO DO ACORDO DE COOPERAÇÃO TÉCNICA Nº 4/2026",
       "url": "https://www.in.gov.br/web/dou/-/extrato-do-acordo-de-cooperacao-tecnica-n-4/2026-732267182",
-      "categoria": "X",
-      "relevancia": 0,
-      "resumo": "Ministério da Saúde publica em 17/09/2026 extrato de acordo de cooperação técnica nº 4/2026 entre MS e ABDI para disseminação de soluções inovadoras em construção no SUS.",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Ministério da Saúde celebra acordo de cooperação técnica com Agência Brasileira de Desenvolvimento Industrial para disseminação de soluções em industrialização da construção e BIM na infraestrutura do SUS.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "cooperação",
+        "acordo de cooperação",
         "infraestrutura",
-        "inovação",
-        "construção"
+        "inovação"
       ],
       "fallback": false
     },
@@ -600,15 +574,14 @@
       "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-732267101",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ministério da Saúde publica em 17/09/2026 extrato de registro de preços ata nº 373/2026 para aquisição de materiais hospitalares.",
+      "resumo": "Secretaria de Atenção Especializada à Saúde publica extrato de registro de preços para aquisição de materiais hospitalares.",
       "por_que_importa": null,
-      "valor_brl": 90090,
+      "valor_brl": null,
       "entes": [],
       "tags": [
-        "licitação",
-        "materiais",
-        "registropreços",
-        "hospitalar"
+        "registro de preços",
+        "materiais hospitalares",
+        "licitação"
       ],
       "fallback": false
     },
@@ -627,15 +600,14 @@
       "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-726-de-14-de-setembro-de-2026-732266971",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Ministério da Saúde publica em 17/09/2026 edital de notificação nº 726 para intimar Adão Reginei dos Santos Camargo a retirar notificação sobre parecer.",
+      "resumo": "Secretaria de Atenção Primária à Saúde publica edital de notificação para pessoa em local incerto ou não sabido.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "notificação",
-        "edital",
-        "intimação",
-        "administrativo"
+        "pessoa física",
+        "transferência de recursos"
       ],
       "fallback": false
     },
@@ -654,15 +626,14 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-732261270",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Instituto Nacional de Cardiologia publica em 17/09/2026 aviso de chamamento público convidando empresas a apresentar tecnologias em software para gestão de projetos.",
+      "resumo": "Instituto Nacional de Cardiologia publica aviso de chamamento público para apresentação de especificações de plataforma SaaS.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "chamamento",
+        "chamamento público",
         "tecnologia",
-        "saas",
-        "demonstração"
+        "licitação"
       ],
       "fallback": false
     },
@@ -681,15 +652,14 @@
       "url": "https://www.in.gov.br/web/dou/-/edital-de-intimacao-de-16-de-setembro-de-2026-732240712",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "ANS publica em 17/09/2026 edital de intimação de operadoras de saúde suplementar para pagamento de multas por infrações à legislação.",
+      "resumo": "Agência Nacional de Saúde Suplementar publica edital de intimação para operadoras de planos de saúde.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "intimação",
-        "multas",
-        "suplementar",
-        "infração"
+        "ANS",
+        "planos de saúde",
+        "multa"
       ],
       "fallback": false
     },
@@ -708,14 +678,14 @@
       "url": "https://www.in.gov.br/web/dou/-/comunicado-732210190",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Agência Nacional de Saúde Suplementar concede autorização de funcionamento à operadora Vida Saúde Planos de Saúde conforme comunicado de 17 de setembro de 2026.",
+      "resumo": "Comunicado da ANS autorizando o funcionamento da operadora de planos de saúde Vida Saúde Planos de Saúde em 17/09/2026.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "saúde suplementar",
-        "ANS",
-        "autorização de funcionamento"
+        "autorização",
+        "ANS"
       ],
       "fallback": false
     },
@@ -734,14 +704,14 @@
       "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-14-de-16-de-setembro-de-2026-732210162",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Agência Nacional de Vigilância Sanitária publica edital de notificação nº 14 de 16 de setembro de 2026 para intimação de empresa sobre auto de infração sanitária.",
+      "resumo": "Edital de notificação nº 14 da ANVISA de 16/09/2026 para intimação de empresa sobre Auto de Infração Sanitária.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "ANVISA",
         "notificação",
-        "infração sanitária"
+        "infração"
       ],
       "fallback": false
     },
@@ -760,14 +730,14 @@
       "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-732196910",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Secretaria de Atenção Especializada à Saúde publica extrato de registro de preços de materiais hospitalares para o Instituto Nacional do Câncer com vigência até 17 de setembro de 2027.",
+      "resumo": "Extrato de registro de preços para aquisição de materiais hospitalares pelo Instituto Nacional do Câncer, com 3 atas vigentes de 17/09/2026 a 17/09/2027.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "registro de preços",
-        "materiais hospitalares",
-        "extrato"
+        "materiais",
+        "INC"
       ],
       "fallback": false
     },
@@ -786,14 +756,14 @@
       "url": "https://www.in.gov.br/web/dou/-/extrato-de-ajuste-732181862",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Secretaria Executiva publica extrato de ajuste ao Termo de Ajuste nº 6/2023 do Proadi-SUS com redução de valor para projeto de rastreio de câncer de colo do útero.",
+      "resumo": "Extrato de ajuste do Termo nº 6/2023 do Proadi-SUS para projeto de rastreio de câncer do colo do útero, com redução de valor aprovado em 17/09/2026.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
-        "proadi-sus",
-        "câncer de colo do útero",
-        "ajuste contratual"
+        "Proadi-SUS",
+        "câncer",
+        "ajuste"
       ],
       "fallback": false
     },
@@ -812,14 +782,14 @@
       "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-732170462",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Secretaria de Atenção Especializada à Saúde publica aviso de alteração de edital do Pregão 433/2026 para contratação de empresa de engenharia clínica com alteração na planilha de preços.",
+      "resumo": "Aviso de alteração de edital do Pregão 433/2026 da SES para contratação de serviços de engenharia clínica, com alteração de data de 17/09/2026.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [],
       "tags": [
         "pregão",
-        "engenharia clínica",
-        "aviso de alteração"
+        "alteração",
+        "engenharia clínica"
       ],
       "fallback": false
     },
@@ -838,17 +808,16 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331009%2C%22paginaSelecionada%22%3A21%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Secretaria de Estado de Saúde publica Resolução nº 11561 de 15 de setembro de 2026 com atos administrativos de pessoal da SES-MG, Hemominas e Funed.",
+      "resumo": "Resolução SES nº 11561 de 15/09/2026 com atos de pessoal: dispensa, afastamento para férias-prêmio, exonerações de servidores da SES e Hemominas.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
-        "Fundação Centro de Hematologia",
-        "Fundação Hemominas",
+        "Fundação Centro de Hematologia e Hemoterapia do Estado de Minas Gerais - Hemominas",
         "Fundação Ezequiel Dias"
       ],
       "tags": [
         "pessoal",
-        "SES-MG",
+        "SES/MG",
         "exoneração"
       ],
       "fallback": false
@@ -868,7 +837,7 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331009%2C%22paginaSelecionada%22%3A21%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Fundação Ezequiel Dias publica Portaria nº 72 de 14 de setembro de 2026 estabelecendo procedimentos para observância da ordem cronológica de pagamento de obrigações.",
+      "resumo": "Portaria FUNED nº 72 de 14/09/2026 que estabelece procedimentos para observância da ordem cronológica de pagamento de obrigações da Fundação Ezequiel Dias.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
@@ -876,8 +845,8 @@
       ],
       "tags": [
         "FUNED",
-        "pagamento",
-        "procedimento administrativo"
+        "ordem de pagamento",
+        "procedimento"
       ],
       "fallback": false
     },
@@ -896,7 +865,7 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331009%2C%22paginaSelecionada%22%3A23%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Fundação Ezequiel Dias publica Portaria nº 74 de 15 de setembro de 2026 concedendo gratificação por risco à saúde em grau médio a 4 servidores.",
+      "resumo": "Portaria FUNED nº 74 de 15/09/2026 que concede gratificação por risco a saúde em grau médio a 4 servidores da Fundação Ezequiel Dias.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
@@ -904,8 +873,8 @@
       ],
       "tags": [
         "FUNED",
-        "gratificação por risco",
-        "pessoal"
+        "pessoal",
+        "gratificação"
       ],
       "fallback": false
     },
@@ -924,7 +893,7 @@
       "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-09-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331009%2C%22paginaSelecionada%22%3A23%7D",
       "categoria": "X",
       "relevancia": 0,
-      "resumo": "Fundação Ezequiel Dias publica Portaria nº 73 de 15 de setembro de 2026 concedendo adicional de periculosidade a 3 servidores e dispensando outro de função gratificada.",
+      "resumo": "Portaria FUNED nº 73 de 15/09/2026 que concede adicional de periculosidade a 3 servidores e dispensa 1 servidor de função gratificada da Fundação Ezequiel Dias.",
       "por_que_importa": null,
       "valor_brl": null,
       "entes": [
@@ -932,8 +901,8 @@
       ],
       "tags": [
         "FUNED",
-        "adicional de periculosidade",
-        "pessoal"
+        "pessoal",
+        "periculosidade"
       ],
       "fallback": false
     }
