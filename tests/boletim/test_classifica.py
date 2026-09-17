@@ -1,11 +1,12 @@
 import dataclasses
 import json
 from datetime import date, datetime, timezone
+from pathlib import Path
 
 import pytest
 
 from boletim.carga import carregar
-from boletim.classifica import classificar, item_de_resposta
+from boletim.classifica import TAG_PRONAS_PRONON, classificar, item_de_resposta
 from boletim.config import ConfigBoletim
 from boletim.llm import LLMFalso, LLMIndisponivel
 from boletim.prefiltro import triar
@@ -580,6 +581,184 @@ def test_marcas_de_minas_vem_do_config(cfg):
 
     fora = _pub_titulado("PORTARIA que habilita leitos em Belo Horizonte")
     assert item_de_resposta(fora, _resposta(fora, relevancia=3), cfg).relevancia == 2
+
+
+# ── R6: extrato do PRONAS/PCD e do PRONON é captação ────────────────────
+# Texto real de `data/normalized/2026-09-17/dou.json` (id 1fc114da38a5e91e),
+# sem a linha de signatários. O modelo o classificou X em 17/09 e a edição do
+# dia saiu com "0 publicações relevantes", com uma APAE captando R$ 1,4 milhão.
+TEXTO_PRONAS = (
+    "EXTRATO DE COMPROMISSO\n"
+    "PRONAS/PCD: Termo de Compromisso que entre si celebram a União, por "
+    "intermédio do Ministério da Saúde, CNPJ/MS nº 00.530.493/0001-71, por meio "
+    "da Secretaria-Executiva, e a Associação de Pais e Amigos dos Excepcionais "
+    "de Monte Carmelo, CNPJ nº 21.288.626/0001-15.\n"
+    "NUP: 25000.155417/2024-15.\n"
+    'OBJETO: Execução do Projeto "Reabilitando e Superando Limites".\n'
+    "VIGÊNCIA: A partir da data da publicação até o prazo de 60 (sessenta) dias "
+    "após a publicação do resultado da análise da prestação de contas.\n"
+    "VALOR: R$ 1.445.694,00 (um milhão, quatrocentos e quarenta e cinco mil, "
+    "seiscentos e noventa e quatro reais)."
+)
+
+
+def _pub_pronas(texto: str = TEXTO_PRONAS) -> Publicacao:
+    return dataclasses.replace(
+        _pub(1),
+        titulo="EXTRATO DE COMPROMISSO",
+        tipo="Extrato de Compromisso",
+        numero=None,
+        ementa=None,
+        texto=texto,
+    )
+
+
+def test_extrato_do_pronas_que_o_modelo_deu_x_vira_a_com_o_valor_do_texto():
+    """O caso de 17/09: extrato de compromisso do PRONAS/PCD com uma APAE.
+
+    O prompt manda o tipo do ato vencer o assunto, e por isso o modelo devolve
+    X e não informa valor. Mas o ato nomeia o beneficiário e traz dinheiro novo:
+    é exatamente o leitor-alvo do boletim captando R$ 1,4 milhão.
+    """
+    pub = _pub_pronas()
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", relevancia=0, valor_brl=None))
+    assert item.categoria == "A"
+    assert item.valor_brl == 1445694.0
+    assert TAG_PRONAS_PRONON in item.tags
+
+
+def test_extrato_de_registro_de_precos_continua_x():
+    """A regra do tipo de ato continua certa para o extrato de sempre."""
+    pub = dataclasses.replace(
+        _pub_titulado("EXTRATO DE REGISTRO DE PREÇOS Nº 41/2026"),
+        texto="OBJETO: material hospitalar.\nVALOR: R$ 2.300.000,00.",
+    )
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", relevancia=0, valor_brl=None))
+    assert item.categoria == "X"
+    assert TAG_PRONAS_PRONON not in item.tags
+    assert item.valor_brl is None
+
+
+def test_pronas_que_o_modelo_ja_deu_a_continua_a_sem_duplicar_a_tag():
+    pub = _pub_pronas()
+    resposta = _resposta(
+        pub,
+        categoria="A",
+        relevancia=2,
+        valor_brl=1445694.0,
+        tags=["captação", TAG_PRONAS_PRONON],
+    )
+    item = item_de_resposta(pub, resposta)
+    assert item.categoria == "A"
+    assert item.valor_brl == 1445694.0
+    assert list(item.tags).count(TAG_PRONAS_PRONON) == 1
+
+
+def test_valor_que_o_modelo_leu_nao_e_sobrescrito_pelo_texto():
+    pub = _pub_pronas()
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", valor_brl=1445694.0))
+    assert item.categoria == "A"
+    assert item.valor_brl == 1445694.0
+
+
+def test_termo_de_compromisso_do_pronon_com_valor_tambem_vira_a():
+    texto = (
+        "EXTRATO DE COMPROMISSO\n"
+        "PRONON: Termo de Compromisso que entre si celebram a União, por "
+        "intermédio do Ministério da Saúde, e a Fundação de Apoio ao Hospital "
+        "de Câncer.\n"
+        "OBJETO: Execução do Projeto de assistência oncológica.\n"
+        "VALOR: R$ 3.200.000,00 (três milhões e duzentos mil reais)."
+    )
+    pub = _pub_pronas(texto)
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", relevancia=0, valor_brl=None))
+    assert item.categoria == "A"
+    assert item.valor_brl == 3200000.0
+    assert TAG_PRONAS_PRONON in item.tags
+
+
+def test_pronas_sem_valor_nenhum_continua_como_o_modelo_deixou():
+    """A regra é "nomeia beneficiário e traz valor novo": sem cifra, não há A.
+
+    O aviso que apenas divulga o resultado da análise de projetos do PRONAS/PCD
+    não move dinheiro, e movê-lo para A encheria a seção de captação de avisos.
+    """
+    texto = (
+        "PRONAS/PCD: divulga o resultado da análise dos projetos apresentados "
+        "no exercício, sem previsão de repasse neste ato."
+    )
+    pub = _pub_pronas(texto)
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", relevancia=0, valor_brl=None))
+    assert item.categoria == "X"
+    assert TAG_PRONAS_PRONON not in item.tags
+
+
+def test_pronas_no_titulo_ou_na_ementa_tambem_conta():
+    por_titulo = dataclasses.replace(
+        _pub_pronas("VALOR: R$ 500.000,00."),
+        titulo="EXTRATO DE COMPROMISSO PRONAS/PCD Nº 12/2026",
+    )
+    item = item_de_resposta(
+        por_titulo, _resposta(por_titulo, categoria="X", valor_brl=None)
+    )
+    assert item.categoria == "A"
+
+    por_ementa = dataclasses.replace(
+        _pub_pronas("VALOR: R$ 500.000,00."),
+        ementa="Termo de compromisso do PRONAS/PCD com entidade filantrópica.",
+    )
+    item = item_de_resposta(
+        por_ementa, _resposta(por_ementa, categoria="X", valor_brl=None)
+    )
+    assert item.categoria == "A"
+
+
+def test_pronas_citado_depois_do_trecho_lido_nao_conta():
+    """A marca precisa estar no trecho que entrou na decisão, não na página 40."""
+    texto = "x" * 3000 + " PRONAS/PCD. VALOR: R$ 500.000,00."
+    pub = _pub_pronas(texto)
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", valor_brl=None))
+    assert item.categoria == "X"
+
+
+def test_pronon_nao_casa_dentro_de_outra_palavra():
+    pub = _pub_pronas("PRONONTUARIO eletrônico. VALOR: R$ 500.000,00.")
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", valor_brl=None))
+    assert item.categoria == "X"
+
+
+def test_regra_do_pronas_nao_mexe_na_relevancia_alem_do_teto_fora_de_minas():
+    """Decisão do controlador: a relevância fica com a R3.
+
+    "Monte Carmelo" aparece sem "/MG" no extrato real, então a R3 limita o item
+    a 2. Fica assim por ora; reconhecer município mineiro citado sem UF é
+    melhoria futura, não desta regra.
+    """
+    pub = _pub_pronas()
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", relevancia=3, valor_brl=None))
+    assert item.categoria == "A"
+    assert item.relevancia == 2
+
+
+# ── dia real ────────────────────────────────────────────────────────────
+_RAIZ = Path(__file__).resolve().parents[2]
+_DIA_REAL = _RAIZ / "data" / "normalized" / "2026-09-17"
+_ID_PRONAS = "1fc114da38a5e91e"
+
+
+@pytest.mark.skipif(not _DIA_REAL.is_dir(), reason="dados de 17/09/2026 ausentes")
+def test_dia_real_17_09_converte_o_extrato_do_pronas(cfg):
+    carga = carregar(_RAIZ / "data", date(2026, 9, 17), ["dou", "iofmg"])
+    mantidas = triar(carga.publicacoes, cfg).mantidas
+    pub = next((p for p in mantidas if p.id == _ID_PRONAS), None)
+    assert pub is not None, "o extrato do PRONAS precisa continuar entre as mantidas"
+
+    item = item_de_resposta(
+        pub, _resposta(pub, categoria="X", relevancia=0, valor_brl=None), cfg
+    )
+    assert item.categoria == "A"
+    assert item.valor_brl == 1445694.0
+    assert TAG_PRONAS_PRONON in item.tags
 
 
 # ── caminho feliz ───────────────────────────────────────────────────────
