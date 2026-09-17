@@ -727,17 +727,56 @@ def test_pronon_nao_casa_dentro_de_outra_palavra():
     assert item.categoria == "X"
 
 
-def test_regra_do_pronas_nao_mexe_na_relevancia_alem_do_teto_fora_de_minas():
-    """Decisão do controlador: a relevância fica com a R3.
+def test_teto_da_r3_continua_valendo_no_item_que_a_r6_promoveu():
+    """"Monte Carmelo" aparece sem "/MG" no extrato real, e o teto é 2.
 
-    "Monte Carmelo" aparece sem "/MG" no extrato real, então a R3 limita o item
-    a 2. Fica assim por ora; reconhecer município mineiro citado sem UF é
-    melhoria futura, não desta regra.
+    Reconhecer município mineiro citado sem UF é melhoria futura, não desta
+    regra.
     """
     pub = _pub_pronas()
     item = item_de_resposta(pub, _resposta(pub, categoria="X", relevancia=3, valor_brl=None))
     assert item.categoria == "A"
     assert item.relevancia == 2
+
+
+def test_pronas_fora_de_minas_recebe_piso_de_relevancia_2():
+    """Promover a categoria sem promover a relevância só muda o lugar do erro.
+
+    O modelo que dá X manda `relevancia` 0 junto, e sem piso o extrato entrava
+    em A ordenando atrás de toda captação do dia: R$ 1,4 milhão de uma APAE no
+    fim da seção. O piso é o mesmo número que a R3 daria de teto.
+    """
+    pub = _pub_pronas()
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", relevancia=0, valor_brl=None))
+    assert item.categoria == "A"
+    assert item.relevancia == 2
+
+
+def test_pronas_com_marca_de_minas_no_texto_recebe_piso_de_relevancia_3():
+    texto = TEXTO_PRONAS.replace("de Monte Carmelo", "de Monte Carmelo/MG")
+    pub = _pub_pronas(texto)
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", relevancia=0, valor_brl=None))
+    assert item.categoria == "A"
+    assert item.relevancia == 3
+
+
+def test_piso_do_pronas_nao_rebaixa_quem_ja_veio_com_relevancia_maior():
+    """O piso é `max`: ele levanta o chão e não encosta em quem já está acima."""
+    mineiro = _pub_pronas(TEXTO_PRONAS.replace("de Monte Carmelo", "de Monte Carmelo/MG"))
+    item = item_de_resposta(mineiro, _resposta(mineiro, categoria="A", relevancia=3))
+    assert item.relevancia == 3
+
+    fora = _pub_pronas()
+    item = item_de_resposta(fora, _resposta(fora, categoria="A", relevancia=2))
+    assert item.relevancia == 2
+
+
+def test_piso_nao_alcanca_o_item_que_a_r6_nao_promoveu():
+    """Sem cifra não há R6, e sem R6 não há piso: o X segue com a relevância 0."""
+    pub = _pub_pronas("PRONAS/PCD: divulga o resultado da análise dos projetos.")
+    item = item_de_resposta(pub, _resposta(pub, categoria="X", relevancia=0, valor_brl=None))
+    assert item.categoria == "X"
+    assert item.relevancia == 0
 
 
 # ── dia real ────────────────────────────────────────────────────────────
@@ -758,6 +797,7 @@ def test_dia_real_17_09_converte_o_extrato_do_pronas(cfg):
     )
     assert item.categoria == "A"
     assert item.valor_brl == 1445694.0
+    assert item.relevancia == 2
     assert TAG_PRONAS_PRONON in item.tags
 
 

@@ -639,6 +639,9 @@ def _pos_processar(
     que o modelo deu, porque o erro que ela corrige aparece tanto em X quanto no
     B que a R1 transforma em X.
 
+    O piso da R6 é o último passo, depois da R3, senão o teto da R3 o desfaria
+    no mesmo item em que ele acabou de ser aplicado.
+
     Cada regra que muda alguma coisa deixa uma tag no item, para que a auditoria
     de uma rodada saiba dizer o que foi do modelo e o que foi do código.
     """
@@ -665,7 +668,29 @@ def _pos_processar(
             tags.append(TAG_PRONAS_PRONON)
 
     relevancia = _relevancia(pub, resposta, categoria, relevancia, cfg, movido_para_a)
+    if valor_pronas is not None:
+        relevancia = max(relevancia, _piso_do_pronas_pronon(pub, resposta, cfg))
     return categoria, relevancia, tuple(tags), valor_brl
+
+
+def _piso_do_pronas_pronon(
+    pub: Publicacao, resposta: dict[str, Any], cfg: ConfigBoletim
+) -> int:
+    """O chão de relevância do item que a R6 promoveu: o teto que a R3 daria.
+
+    Sem piso, o extrato que o modelo deu como X entrava em A com a relevância 0
+    que ele mandou junto, e ordenava atrás de qualquer outra captação do dia -
+    R$ 1,4 milhão para uma APAE no fim da seção. Promover a categoria sem
+    promover a relevância só troca o lugar onde o item se perde.
+
+    O piso é o mesmo número que a R3 usaria como teto: 2 fora de Minas, 3 quando
+    o ato cita Minas. Assim as duas regras nunca se desfazem - uma não deixa
+    subir acima do teto, a outra não deixa ficar abaixo dele - e o item que já
+    veio com relevância maior não é rebaixado por causa do piso.
+    """
+    if _tem_marca_mg(pub, resposta, cfg):
+        return _RELEVANCIA_MAXIMA
+    return _RELEVANCIA_FORA_DE_MG
 
 
 def _e_captacao(pub: Publicacao, resposta: dict[str, Any]) -> bool:
