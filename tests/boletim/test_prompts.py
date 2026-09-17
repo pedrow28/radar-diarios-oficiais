@@ -256,3 +256,24 @@ def test_classificacao_tem_tomada_de_contas_especial_como_d_nunca_x():
     assert "instaura Tomada de Contas Especial contra município ou entidade é D" in texto
     assert "nunca X" in texto
     assert "recurso a devolver" in texto
+
+
+def test_classificacao_abre_excecao_para_o_extrato_que_nomeia_beneficiario():
+    """17/09/2026: o extrato de compromisso do PRONAS/PCD com uma APAE saiu X."""
+    texto = " ".join(SISTEMA_CLASSIFICACAO.split())
+    assert (
+        "extrato que nomeia beneficiário (município, entidade filantrópica, "
+        "hospital) e traz valor novo é A"
+    ) in texto
+    assert "termo de compromisso do PRONAS/PCD ou do PRONON" in texto
+    assert "Monte Carmelo" in texto
+
+
+def test_classificacao_mantem_o_extrato_sem_valor_novo_em_x():
+    """A exceção não pode engolir a regra: extrato de contrato continua X."""
+    texto = " ".join(SISTEMA_CLASSIFICACAO.split())
+    assert (
+        "extrato de contrato, extrato de registro de preços, termo aditivo de "
+        "prorrogação e apostilamento continuam X"
+    ) in texto
+    assert "o tipo do ato manda sobre o assunto" in texto

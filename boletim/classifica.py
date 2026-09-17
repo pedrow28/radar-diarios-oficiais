@@ -273,7 +273,7 @@ def item_de_resposta(
     padrões, que são os do `config/config.yaml`.
     """
     cfg = cfg if cfg is not None else ConfigBoletim()
-    categoria, relevancia, tags = _pos_processar(pub, resposta, cfg)
+    categoria, relevancia, tags, valor_brl = _pos_processar(pub, resposta, cfg)
     return Item(
         id=pub.id,
         fonte=pub.fonte,
@@ -290,10 +290,8 @@ def item_de_resposta(
         categoria=categoria,
         relevancia=relevancia,
         resumo=resposta["resumo"],
-        por_que_importa=_sem_cifra_repetida(
-            resposta["por_que_importa"], resposta["valor_brl"]
-        ),
-        valor_brl=resposta["valor_brl"],
+        por_que_importa=_sem_cifra_repetida(resposta["por_que_importa"], valor_brl),
+        valor_brl=valor_brl,
         entes=tuple(resposta["entes"]),
         tags=tags,
     )
@@ -302,6 +300,7 @@ def item_de_resposta(
 # ── regras determinísticas depois do modelo ─────────────────────────────
 TAG_B_ADMINISTRATIVO = "regra:b-administrativo"
 TAG_B_PARA_A = "regra:b-para-a"
+TAG_PRONAS_PRONON = "regra:pronas-pronon"
 
 _ACENTOS = str.maketrans("áàâãäéèêëíìîïóòôõöúùûüçñ", "aaaaaeeeeiiiiooooouuuucn")
 _ESPACO = re.compile(r"\s+")
@@ -570,14 +569,78 @@ def _tem_marca_mg(
     return bool(padrao.search(f" {_normalizar(alvo)} "))
 
 
+# ── R6: extrato do PRONAS/PCD e do PRONON é captação ────────────────────
+# A regra do tipo de ato ("um extrato continua sendo extrato") acerta no extrato
+# de contrato e no de registro de preços, e erra sempre que o extrato nomeia o
+# beneficiado e traz dinheiro novo. Em 17/09 ela mandou para X o termo de
+# compromisso do PRONAS/PCD com a APAE de Monte Carmelo, R$ 1.445.694,00 - uma
+# entidade filantrópica captando pelo programa que o boletim existe para
+# acompanhar -, e a edição do dia saiu com "0 publicações relevantes".
+#
+# Os dois programas são nominais por construção: cada termo tem um proponente e
+# uma cifra. Por isso a regra é determinística, e não mais uma linha de prompt
+# para o modelo pesar contra a regra do tipo do ato.
+_PRONAS_PRONON = re.compile(r"pronas/pcd|\bpronon\b", re.IGNORECASE)
+# O mesmo recorte de leitura das outras regras: a marca precisa estar no trecho
+# que entrou na decisão. 3000 caracteres cobrem o extrato inteiro com folga - o
+# de 17/09 tem 742.
+_TEXTO_R6 = 3000
+# "VALOR: R$ 1.445.694,00" é a linha padrão do extrato de compromisso. Exigi-la
+# com o rótulo evita confundir a cifra do objeto com a do repasse.
+_VALOR_DECLARADO = re.compile(rf"\bvalor:?\s?{_MOEDA}", re.IGNORECASE)
+
+
+def _ler_moeda(trecho: str) -> float | None:
+    """O número que a expressão monetária escreve, em reais."""
+    achado = _MOEDA_LIDA.search(trecho)
+    if achado is None:
+        return None
+    escrito = achado.group("numero").replace(".", "").replace(",", ".")
+    try:
+        numero = float(escrito)
+    except ValueError:
+        return None
+    unidade = _normalizar(achado.group("unidade") or "")
+    return numero * _MULTIPLICADOR.get(unidade, 1.0)
+
+
+def _valor_do_pronas_pronon(pub: Publicacao, valor_brl: float | None) -> float | None:
+    """O valor do termo do PRONAS/PCD ou do PRONON, ou `None` se não for um.
+
+    Devolver o valor em vez de um booleano é o que deixa a regra completar o
+    `valor_brl` quando o modelo não o leu: em 17/09 ele devolveu `null`, porque
+    para ele o ato era irrelevante e não havia o que medir.
+
+    Sem cifra não há captação: o aviso que só divulga o resultado da análise de
+    projetos não move dinheiro, e promovê-lo encheria a seção de captação.
+    """
+    alvo = " ".join(
+        [pub.titulo, pub.ementa or "", pub.texto[:_TEXTO_R6]]
+    )
+    if not _PRONAS_PRONON.search(alvo):
+        return None
+    if valor_brl is not None:
+        return valor_brl
+    achado = _VALOR_DECLARADO.search(alvo)
+    return _ler_moeda(achado.group(0)) if achado else None
+
+
 def _pos_processar(
     pub: Publicacao, resposta: dict[str, Any], cfg: ConfigBoletim
-) -> tuple[str, int, tuple[str, ...]]:
+) -> tuple[str, int, tuple[str, ...], float | None]:
     """Aplica as regras determinísticas à resposta do modelo.
 
     A ordem importa: a categoria é decidida antes da relevância, porque o piso
     do IOF-MG olha a categoria final, e o ato administrativo que sai de B leva a
     relevância a zero de qualquer jeito.
+
+    A R6 vem depois da R1 de propósito: o título do termo de compromisso é um
+    extrato, e a R1 acabaria de mandá-lo para X. Ela também não olha a categoria
+    que o modelo deu, porque o erro que ela corrige aparece tanto em X quanto no
+    B que a R1 transforma em X.
+
+    O piso da R6 é o último passo, depois da R3, senão o teto da R3 o desfaria
+    no mesmo item em que ele acabou de ser aplicado.
 
     Cada regra que muda alguma coisa deixa uma tag no item, para que a auditoria
     de uma rodada saiba dizer o que foi do modelo e o que foi do código.
@@ -585,6 +648,7 @@ def _pos_processar(
     categoria = resposta["categoria"]
     relevancia = resposta["relevancia"]
     tags = list(resposta["tags"])
+    valor_brl = resposta["valor_brl"]
     movido_para_a = False
 
     if categoria == "B":
@@ -596,8 +660,37 @@ def _pos_processar(
             movido_para_a = True
             tags.append(TAG_B_PARA_A)
 
+    valor_pronas = _valor_do_pronas_pronon(pub, valor_brl)
+    if valor_pronas is not None:
+        categoria = "A"
+        valor_brl = valor_pronas
+        if TAG_PRONAS_PRONON not in tags:
+            tags.append(TAG_PRONAS_PRONON)
+
     relevancia = _relevancia(pub, resposta, categoria, relevancia, cfg, movido_para_a)
-    return categoria, relevancia, tuple(tags)
+    if valor_pronas is not None:
+        relevancia = max(relevancia, _piso_do_pronas_pronon(pub, resposta, cfg))
+    return categoria, relevancia, tuple(tags), valor_brl
+
+
+def _piso_do_pronas_pronon(
+    pub: Publicacao, resposta: dict[str, Any], cfg: ConfigBoletim
+) -> int:
+    """O chão de relevância do item que a R6 promoveu: o teto que a R3 daria.
+
+    Sem piso, o extrato que o modelo deu como X entrava em A com a relevância 0
+    que ele mandou junto, e ordenava atrás de qualquer outra captação do dia -
+    R$ 1,4 milhão para uma APAE no fim da seção. Promover a categoria sem
+    promover a relevância só troca o lugar onde o item se perde.
+
+    O piso é o mesmo número que a R3 usaria como teto: 2 fora de Minas, 3 quando
+    o ato cita Minas. Assim as duas regras nunca se desfazem - uma não deixa
+    subir acima do teto, a outra não deixa ficar abaixo dele - e o item que já
+    veio com relevância maior não é rebaixado por causa do piso.
+    """
+    if _tem_marca_mg(pub, resposta, cfg):
+        return _RELEVANCIA_MAXIMA
+    return _RELEVANCIA_FORA_DE_MG
 
 
 def _e_captacao(pub: Publicacao, resposta: dict[str, Any]) -> bool:

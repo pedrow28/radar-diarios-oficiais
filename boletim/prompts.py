@@ -83,6 +83,14 @@ fala de saúde, e uma habilitação continua sendo A mesmo quando cita uma porta
 ente público (veículo, ambulância, equipamento) é A, e é a exceção à regra de que extrato é \
 X: é alocação nominal de bem a um ente. Exemplo: extrato de termo de doação de uma \
 ambulância à Prefeitura Municipal de Almenara/MG;
+- extrato que nomeia beneficiário (município, entidade filantrópica, hospital) e traz valor \
+novo é A: doação do Ministério a ente público, termo de compromisso do PRONAS/PCD ou do \
+PRONON, convênio com repasse novo. Exemplo: extrato de compromisso do PRONAS/PCD com a \
+Associação de Pais e Amigos dos Excepcionais de Monte Carmelo, no valor de R$ 1.445.694,00;
+- extrato de contrato, extrato de registro de preços, termo aditivo de prorrogação e \
+apostilamento continuam X, porque não há beneficiário nomeado nem dinheiro novo: são a \
+execução de um ato anterior. Exemplo: extrato de contrato de manutenção predial de um \
+hospital federal, com valor empenhado;
 - X não é um resto: um dia normal do Diário Oficial tem mais X do que A, B e C somados. \
 Não force um ato de rotina para dentro de C só porque a palavra "edital" aparece nele.
 
