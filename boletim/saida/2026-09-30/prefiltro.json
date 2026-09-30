@@ -1,0 +1,388 @@
+{
+  "data": "2026-09-30",
+  "publicacoes": 169,
+  "mantidas": 46,
+  "avisos": [],
+  "doacoes": [
+    "ee744bafb69cff43",
+    "cedc4d1a0aa03120",
+    "c4ec3877de9b7eed",
+    "ac206e9e57e0086c",
+    "5b2b440a1df99e78",
+    "c51e579d0b34fee7",
+    "f7224f80d8d05201",
+    "7684c952fad37596",
+    "1877fdd2421b2000",
+    "f6a9db1493cb357e",
+    "d6588b76741cd854",
+    "ce66aba7a1e26f15",
+    "932cbc2f84139599",
+    "cd3842674072a687",
+    "55d47d4a88439f36",
+    "0b6c3c188cd474ff",
+    "3bb621b87d49e39b",
+    "0d8aa6bc1cef4f7b",
+    "cc9f6dd80ecef2be",
+    "cc17cca78d5f0d52",
+    "0630b9cc3301c16b",
+    "98e51218845c979f",
+    "93014263caf55499",
+    "7be7e9a2a593b057",
+    "8e3bb560481b2918",
+    "198482b8ee898e64",
+    "86aeeace41b775d6",
+    "2360583446773c88",
+    "7f2081517b37ca3d",
+    "9f3737fa54b70b73",
+    "5f032ad7094cba0d",
+    "302c192d03692f7c",
+    "3a349c852205358a",
+    "1c9a9a8465c2da3b",
+    "9a28fd0903f9b200",
+    "d3979b63cb37caa5",
+    "9f8b6f6e90f8e8d5",
+    "cd1fca44b494d03d"
+  ],
+  "descartadas": [
+    {
+      "id": "bbd822925d7bd19c",
+      "regra": "descarte"
+    },
+    {
+      "id": "f4c47fdc363bd7c0",
+      "regra": "descarte"
+    },
+    {
+      "id": "ae22676c70197ebd",
+      "regra": "descarte"
+    },
+    {
+      "id": "af57a55b33f1c980",
+      "regra": "descarte"
+    },
+    {
+      "id": "918871bc007387ea",
+      "regra": "descarte"
+    },
+    {
+      "id": "bc58cc7ac775b52d",
+      "regra": "descarte"
+    },
+    {
+      "id": "15f76b650585aa4a",
+      "regra": "descarte"
+    },
+    {
+      "id": "563880ab5e237117",
+      "regra": "descarte"
+    },
+    {
+      "id": "f6825bd38cf3fdc0",
+      "regra": "descarte"
+    },
+    {
+      "id": "b6758f0974ddfc31",
+      "regra": "descarte"
+    },
+    {
+      "id": "4f9378bd82825fe8",
+      "regra": "descarte"
+    },
+    {
+      "id": "8401acf3831301af",
+      "regra": "descarte"
+    },
+    {
+      "id": "76317b2044e42d7e",
+      "regra": "descarte"
+    },
+    {
+      "id": "875efc2f47f86955",
+      "regra": "descarte"
+    },
+    {
+      "id": "4b7dd7255511ae68",
+      "regra": "descarte"
+    },
+    {
+      "id": "27ca6e8556767440",
+      "regra": "descarte"
+    },
+    {
+      "id": "eb40c809c1827c15",
+      "regra": "descarte"
+    },
+    {
+      "id": "d7e3e298c7943ff4",
+      "regra": "descarte"
+    },
+    {
+      "id": "33aa7a60ba681bdf",
+      "regra": "descarte"
+    },
+    {
+      "id": "b7283968440a4d30",
+      "regra": "descarte"
+    },
+    {
+      "id": "a56ad1987c3d3a61",
+      "regra": "descarte"
+    },
+    {
+      "id": "c8005cf556efdfcc",
+      "regra": "descarte"
+    },
+    {
+      "id": "93e4c9c817bf6f0a",
+      "regra": "descarte"
+    },
+    {
+      "id": "832107eec631f438",
+      "regra": "descarte"
+    },
+    {
+      "id": "4d839239aa7e478a",
+      "regra": "descarte"
+    },
+    {
+      "id": "e06ebcdb229a8f57",
+      "regra": "descarte"
+    },
+    {
+      "id": "d77d38586ad58eb0",
+      "regra": "descarte"
+    },
+    {
+      "id": "07b2343745101cbc",
+      "regra": "descarte"
+    },
+    {
+      "id": "4965d95fecd21ca8",
+      "regra": "descarte"
+    },
+    {
+      "id": "21451a774e0e3e66",
+      "regra": "descarte"
+    },
+    {
+      "id": "7b5504d06474235f",
+      "regra": "descarte"
+    },
+    {
+      "id": "1e285c271a35ca0a",
+      "regra": "descarte"
+    },
+    {
+      "id": "c1cae91ecc03588b",
+      "regra": "descarte"
+    },
+    {
+      "id": "0afe3d981ba6dacf",
+      "regra": "descarte"
+    },
+    {
+      "id": "04a72c99bfb24880",
+      "regra": "descarte"
+    },
+    {
+      "id": "89f1b601b4ab3cda",
+      "regra": "descarte"
+    },
+    {
+      "id": "7fefe8be08a6f435",
+      "regra": "descarte"
+    },
+    {
+      "id": "276ad5a4fa78573a",
+      "regra": "descarte"
+    },
+    {
+      "id": "8c0ab88aee198a05",
+      "regra": "descarte"
+    },
+    {
+      "id": "bc110b6632d12692",
+      "regra": "descarte"
+    },
+    {
+      "id": "46a8b57a399fc262",
+      "regra": "descarte"
+    },
+    {
+      "id": "47c1e9b24669adeb",
+      "regra": "descarte"
+    },
+    {
+      "id": "09135f519e90f689",
+      "regra": "descarte"
+    },
+    {
+      "id": "381446f806a73ae5",
+      "regra": "descarte"
+    },
+    {
+      "id": "6f7999e7aeffb9e0",
+      "regra": "descarte"
+    },
+    {
+      "id": "806cf585ee52fd7e",
+      "regra": "descarte"
+    },
+    {
+      "id": "f6c187a30c2b3f7d",
+      "regra": "descarte"
+    },
+    {
+      "id": "bf2f9864bc3fa5d7",
+      "regra": "descarte"
+    },
+    {
+      "id": "505fc3a56230110b",
+      "regra": "descarte"
+    },
+    {
+      "id": "cfc50f4288beccaf",
+      "regra": "descarte"
+    },
+    {
+      "id": "7128e7049ca793bf",
+      "regra": "descarte"
+    },
+    {
+      "id": "78ab77996173a0a7",
+      "regra": "descarte"
+    },
+    {
+      "id": "2240f154a98fda7a",
+      "regra": "descarte"
+    },
+    {
+      "id": "749a5875f6ea05a5",
+      "regra": "descarte"
+    },
+    {
+      "id": "2afb47906d66a5c3",
+      "regra": "descarte"
+    },
+    {
+      "id": "0d9c8ef1de936cc8",
+      "regra": "descarte"
+    },
+    {
+      "id": "5b79dd2a0fb2c965",
+      "regra": "descarte"
+    },
+    {
+      "id": "f8e39141c7313349",
+      "regra": "descarte"
+    },
+    {
+      "id": "2d60ad7d49d05536",
+      "regra": "descarte"
+    },
+    {
+      "id": "acab05d46174303f",
+      "regra": "descarte"
+    },
+    {
+      "id": "269fa3d66aaacb43",
+      "regra": "descarte"
+    },
+    {
+      "id": "42c0d1200fa2a64b",
+      "regra": "descarte"
+    },
+    {
+      "id": "52545d0da43b9e57",
+      "regra": "descarte"
+    },
+    {
+      "id": "1c91271de8ebb1af",
+      "regra": "descarte"
+    },
+    {
+      "id": "13a4f402458e8a3b",
+      "regra": "descarte"
+    },
+    {
+      "id": "eb2e44491bad9bc7",
+      "regra": "descarte"
+    },
+    {
+      "id": "2fe439c48d8fdc04",
+      "regra": "descarte"
+    },
+    {
+      "id": "3659feba105d5b36",
+      "regra": "descarte"
+    },
+    {
+      "id": "495ff25f1ddf473f",
+      "regra": "descarte"
+    },
+    {
+      "id": "f191977636e9ca47",
+      "regra": "descarte"
+    },
+    {
+      "id": "22041a6629e8b22e",
+      "regra": "descarte"
+    },
+    {
+      "id": "226e7209f8278047",
+      "regra": "descarte"
+    },
+    {
+      "id": "b65e9bd20e0ff52e",
+      "regra": "descarte"
+    },
+    {
+      "id": "91949f1c1cde7b00",
+      "regra": "descarte"
+    },
+    {
+      "id": "a47055697474b3c3",
+      "regra": "descarte"
+    },
+    {
+      "id": "1f50b67947035a1d",
+      "regra": "secao_2"
+    },
+    {
+      "id": "18de466e78479633",
+      "regra": "secao_2"
+    },
+    {
+      "id": "8afe30f470374a0d",
+      "regra": "secao_2"
+    },
+    {
+      "id": "c89410d125d8f507",
+      "regra": "secao_2"
+    },
+    {
+      "id": "921f2d4685ce4d3d",
+      "regra": "secao_2"
+    },
+    {
+      "id": "0d38ec7367b1ed13",
+      "regra": "secao_2"
+    },
+    {
+      "id": "f08e791768fcc358",
+      "regra": "secao_2"
+    },
+    {
+      "id": "3bfc98d837548626",
+      "regra": "secao_2"
+    },
+    {
+      "id": "61308d428f6c8799",
+      "regra": "secao_2"
+    },
+    {
+      "id": "e0562556da1fe091",
+      "regra": "secao_2"
+    }
+  ]
+}
