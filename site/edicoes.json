@@ -1,5 +1,19 @@
 [
   {
+    "data": "2026-10-01",
+    "titulo": "47 atos liberam 130 milhões em especialistas, 37 em cirurgia e 22 em teto MAC",
+    "url": "edicoes/2026-10-01.html",
+    "contagens": {
+      "A": 47,
+      "B": 7,
+      "C": 0,
+      "D": 4
+    },
+    "parcial": false,
+    "valor_dia": 205062790.43,
+    "total_relevante": 54
+  },
+  {
     "data": "2026-09-30",
     "titulo": "8 atos movem R$ 2,3 bilhões para atenção hospitalar em Minas",
     "url": "edicoes/2026-09-30.html",
