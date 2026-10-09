@@ -1,0 +1,2710 @@
+{
+  "data": "2026-10-09",
+  "gerado_em": "2026-10-09T16:47:40.974275+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "Boletim de 09/10/2026: 59 publicações relevantes",
+    "em_30_segundos": [
+      "Portaria SAES/MS nº 5.092, de 7 de outubro de 2026, que habilita Bio Rim em Ituiutaba para hemodiálise no Programa Agora Tem Especialistas.",
+      "4 municípios recebem 4 veículos do Ministério da Saúde: 4 outros veículos, no total de R$ 1,6 milhão. Em Minas: PRESIDENTE JUSCELINO.",
+      "Ministério da Saúde doa equipamentos para UBS de Salinas/MG através do Novo PAC 2025 via termo de doação nº 6.141/2026."
+    ],
+    "intro": "O radar encontrou 59 publicações relevantes nesta data. O texto de abertura não pôde ser gerado, e os destaques abaixo saem direto da classificação.",
+    "parcial": false,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "192",
+        "paginas": "pp. 1-163",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ok",
+        "edicao": null,
+        "paginas": "pp. 23-23",
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "0bbb5b61c7698ae7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.141/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.141/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.141/2026-737735627",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS de Salinas/MG através do Novo PAC 2025 via termo de doação nº 6.141/2026.",
+      "por_que_importa": "a prefeitura de Salinas deve acompanhar a entrega sucessiva dos bens e cadastrá-los no CNES conforme as entregas por lote ou remessa.",
+      "valor_brl": null,
+      "entes": [
+        "Salinas"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bb40e9329fe4d50f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.952/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.952/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.952/2026-737735546",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS de Santo Expedito/SP através do Novo PAC 2025 via termo de doação nº 6.952/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Santo Expedito"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f541a3072b275323",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.578/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.578/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.578/2026-737726378",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS de Tangará/RN através do Novo PAC 2025 via termo de doação nº 4.578/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Tangará"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3f19d00101886086",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.195/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.195/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.195/2026-737726350",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS de São Gonçalo do Abaeté/MG através do Novo PAC 2025 via termo de doação nº 6.195/2026.",
+      "por_que_importa": "a prefeitura de São Gonçalo do Abaeté deve acompanhar a entrega sucessiva dos bens e cadastrá-los no CNES conforme as entregas por lote ou remessa.",
+      "valor_brl": null,
+      "entes": [
+        "São Gonçalo do Abaeté"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6ae45808f47945a1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.515/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.515/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.515/2026-737726220",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS de Ituporanga/SC através do Novo PAC 2025 via termo de doação nº 7.515/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Ituporanga"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ec9f938e6cc664c9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.999/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.999/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.999/2026-737726143",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS de São Martinho/RS através do Novo PAC 2025 via termo de doação nº 7.999/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São Martinho"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3733ce9f16036925",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Vigilância em Saúde e Ambiente",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "192",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-737725989",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração do pregão 77/2026 adia data de recebimento de propostas para reforma do Complexo Logístico do IEC para 09 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "pregão",
+        "IEC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e4382a983da5d23d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "760",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 760, DE 1º DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-760-de-1-de-outubro-de-2026-737717901",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 760 de 1º de outubro de 2026 convoca pessoa para retirar notificação no prazo de 15 dias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5f71ea3d4e5dd433",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.231/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.231/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.231/2026-737717824",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS de Cardeal da Silva/BA através do Novo PAC 2025 via termo de doação nº 5.231/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Cardeal da Silva"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "80e2f9a477c3c015",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.282/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.282/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.282/2026-737717745",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS de Ubá/MG através do Novo PAC 2025 via termo de doação nº 6.282/2026.",
+      "por_que_importa": "a prefeitura de Ubá deve acompanhar a entrega sucessiva dos bens e cadastrá-los no CNES conforme as entregas por lote ou remessa.",
+      "valor_brl": null,
+      "entes": [
+        "Ubá"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6a9892bac1a4d825",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.137/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.137/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.137/2026-737717668",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS de Dois Vizinhos/PR através do Novo PAC 2025 via termo de doação nº 7.137/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Dois Vizinhos"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e7ff31031247f37a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "192",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-737717491",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fiotec doa 2 microcomputadores portáteis ao Instituto Nacional de Saúde da Mulher, da Criança e do Adolescente Fernandes Figueira.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "fiocruz"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "90d2b7302e0da18f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.452/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.452/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.452/2026-737709294",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa bens para estruturação de UBS em Tanguá/RJ pelo Novo PAC 2025, conforme Extrato de Doação nº 6.452/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Tanguá"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "86c580aa75806c43",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.628/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.628/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.628/2026-737691951",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa bens para estruturação de UBS em Brejo dos Santos/PB pelo Novo PAC 2025, conforme Extrato de Doação nº 4.628/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Brejo dos Santos"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b57de550dd28c0fa",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.214/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.214/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.214/2026-737691874",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa bens para estruturação de UBS em São José da Lapa/MG pelo Novo PAC 2025, conforme Extrato de Doação nº 6.214/2026.",
+      "por_que_importa": "A Secretaria Municipal deve coordenar com o Ministério a entrega dos equipamentos e readequação das instalações das UBS.",
+      "valor_brl": null,
+      "entes": [
+        "São José da Lapa"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0c8893d5effc5fc8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.727/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.727/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.727/2026-737691797",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa bens para estruturação de UBS em José Bonifácio/SP pelo Novo PAC 2025, conforme Extrato de Doação nº 6.727/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "José Bonifácio"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5099177ef2a54b66",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Resultado de Chamamento Público",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "192",
+      "titulo": "RESULTADO De julgamento",
+      "url": "https://www.in.gov.br/web/dou/-/resultado-de-julgamento-737691720",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Distrito Sanitário Especial Indígena Vale do Javari publica resultado de julgamento de Chamamento Público nº 34/2026 para locação de estrutura física em Tabatinga/AM.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Tabatinga"
+      ],
+      "tags": [
+        "chamamento",
+        "resultado"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "55498bf6461533ee",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "192",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-737684739",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto Nacional de Câncer publica Extrato de Registro de Preços para aquisição de medicamentos controlados, com vigência até outubro de 2027.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "registro de preços",
+        "medicamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "072abe4ac0a7f603",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.519/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.519/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.519/2026-737684531",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa bens para estruturação de UBS em Teodoro Sampaio/BA pelo Novo PAC 2025, conforme Extrato de Doação nº 5.519/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Teodoro Sampaio"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cc680095b2d43f6b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.201/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.201/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.201/2026-737684450",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa bens para estruturação de UBS em São João da Lagoa/MG pelo Novo PAC 2025, conforme Extrato de Doação nº 6.201/2026.",
+      "por_que_importa": "A Secretaria Municipal deve coordenar com o Ministério a entrega dos equipamentos e readequação das instalações das UBS.",
+      "valor_brl": null,
+      "entes": [
+        "São João da Lagoa"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "94f70eb0955be407",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.632/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.632/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.632/2026-737684422",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa bens para estruturação de UBS em Garça/SP pelo Novo PAC 2025, conforme Extrato de Doação nº 6.632/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Garça"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c2946033de8401fb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.462/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.462/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.462/2026-737684296",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa bens para estruturação de UBS em Rio Verde/GO pelo Novo PAC 2025, conforme Extrato de Doação nº 8.462/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Rio Verde"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a749647d23760ca9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Edital de Notificação",
+      "numero": "16",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "192",
+      "titulo": "Edital DE NOTIFICAÇÃO Nº 16, DE 7 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-16-de-7-de-outubro-de-2026-737684114",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Agência Nacional de Vigilância Sanitária publica Edital de Notificação nº 16, de 7 de outubro de 2026, para procedimento ético contra ex-agente público.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "ética"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b6420d8b180748a1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "192",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-737668084",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Hospital Federal de Ipanema publica Extrato de Convênio com Instituto Brasileiro de Medicina de Reabilitação para concessão de estágio não-obrigatório com vigência de 5 anos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Federal de Ipanema"
+      ],
+      "tags": [
+        "convênio",
+        "estágio"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "df7f92bde935dffc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.203/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.203/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.203/2026-737662022",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa bens para estruturação de UBS em Juscimeira por meio do termo de doação nº 8.203/2026 de 09/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Juscimeira"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "64c75d51bd76bf96",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "192",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-737649696",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração do pregão 61/2026 para contratação de empresa de bilhetes de passagem do Distrito Sanitário Especial Indígena Alto Rio Juruá com nova data de recebimento em 09/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "alteração",
+        "bilhetes",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b0529d9b824df985",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.370/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.370/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.370/2026-737645757",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa bens para estruturação de UBS em Morada Nova por meio do termo de doação nº 4.370/2026 de 09/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Morada Nova"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d3cb3f99ec53a793",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.724/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.724/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.724/2026-737645680",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa bens para estruturação de UBS em Camaquã por meio do termo de doação nº 7.724/2026 de 09/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Camaquã"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fa3eaf9fd6c81115",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.276/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.276/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.276/2026-737636473",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa bens para estruturação de UBS em Assaré por meio do termo de doação nº 4.276/2026 de 09/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Assaré"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8f244ab333f1a4f3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.728/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.728/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.728/2026-737636396",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa bens para estruturação de UBS em Cônego Marinho por meio do termo de doação nº 5.728/2026 de 09/10/2026.",
+      "por_que_importa": "o município mineiro deve coordenar com a secretaria estadual as entregas sucessivas dos bens conforme cronograma do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Cônego Marinho"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac",
+        "minas gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7a6df268221d0221",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.132/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.132/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.132/2026-737636319",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa bens para estruturação de UBS em Rio Verde de Mato Grosso por meio do termo de doação nº 8.132/2026 de 09/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Rio Verde de Mato Grosso"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d278a95e0cd29e46",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 140,
+      "edicao": "192",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-737631120",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde firma convênio nº 29737/2026 com Associação Pelotense de Assistência e Cultura para aquisição de equipamento e material permanente.",
+      "por_que_importa": null,
+      "valor_brl": 866976,
+      "entes": [
+        "Associação Pelotense de Assistência e Cultura"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "material permanente",
+        "filantropia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8ceeff4ee8d572e9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.932/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.932/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.932/2026-737630912",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa bens para estruturação de UBS em Santa Cruz do Capibaribe por meio do termo de doação nº 4.932/2026 de 09/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Santa Cruz do Capibaribe"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "632f1aff3d5ba4db",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.226/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.226/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.226/2026-737630888",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa bens para estruturação de UBS em Paranaíta por meio do termo de doação nº 8.226/2026 de 09/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Paranaíta"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7bd2af59873edbe8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.933/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.933/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.933/2026-737617533",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa bens para estruturação de UBS em Lima Campos por meio do termo de doação nº 3.933/2026 de 09/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Lima Campos"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "077be56e21bdc8be",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.799/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.799/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.799/2026-737617500",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa bens para estruturação de UBS em Estrela Velha por meio do termo de doação nº 7.799/2026 de 09/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Estrela Velha"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1c3bd4df5130fd8d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "192",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-737609649",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Registro de Preços nº 412/2026 para aquisição de materiais hospitalares pelo Ministério da Saúde.",
+      "por_que_importa": null,
+      "valor_brl": 125183.6,
+      "entes": [],
+      "tags": [
+        "registro de preços",
+        "materiais hospitalares"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1a595c6dda3fa6de",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.586/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.586/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.586/2026-737609489",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de Termo de Doação nº 5.586/2026 do Ministério da Saúde para estruturação de UBS em Araújos/MG.",
+      "por_que_importa": "acompanhe as entregas de equipamentos para UBS ao município de Araújos conforme cronograma do Novo PAC.",
+      "valor_brl": null,
+      "entes": [
+        "Araújos"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC 2025"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c4b390c4304966ab",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.146/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.146/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.146/2026-737609461",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de Termo de Doação nº 6.146/2026 do Ministério da Saúde para estruturação de UBS em Santa Bárbara do Tugúrio/MG.",
+      "por_que_importa": "acompanhe as entregas de equipamentos para UBS ao município de Santa Bárbara do Tugúrio conforme cronograma do Novo PAC.",
+      "valor_brl": null,
+      "entes": [
+        "Santa Bárbara do Tugúrio"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC 2025"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0844f5ba4c3b220e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Edital",
+      "numero": "15",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "192",
+      "titulo": "Edital DE NOTIFICAÇÃO Nº 15, DE 7 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-15-de-7-de-outubro-de-2026-737609385",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 15 de 7 de outubro de 2026 da ANVISA para notificação sobre procedimento ético.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "ética",
+        "ANVISA"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8ba1d2d6433a6df1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Edital de Notificação",
+      "numero": "17",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "192",
+      "titulo": "Edital DE NOTIFICAÇÃO N° 17, DE 7 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-17-de-7-de-outubro-de-2026-737609303",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 17 de 7 de outubro de 2026 da ANVISA para notificação sobre penalidade.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "multa",
+        "ANVISA"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6249e6fbf7aa4dde",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-737601003",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Alteração de Edital para Pregão 9/2026 do Ministério da Saúde com alteração de datas.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "alteração",
+        "medicamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4d22b5749fd5f635",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "192",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-737594695",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação da Fundação Nacional de Saúde para cobrança administrativa de ressarcimento.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "ressarcimento",
+        "FUNASA"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9356f1be15d863b6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "192",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-737586494",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Registro de Preços nº 409/2026 para aquisição de insumos para ensino e pesquisa pelo Ministério da Saúde.",
+      "por_que_importa": null,
+      "valor_brl": 1800,
+      "entes": [],
+      "tags": [
+        "registro de preços",
+        "insumos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6c4abd943640242c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.038/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.038/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.038/2026-737581410",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 4.038/2026 do Ministério da Saúde para estruturação de UBS em Agricolândia/PI.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Agricolândia"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC 2025"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "09ba83a196ababa3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.748/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.748/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.748/2026-737581331",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de Termo de Doação nº 5.748/2026 do Ministério da Saúde para estruturação de UBS em Córrego Fundo/MG.",
+      "por_que_importa": "acompanhe as entregas de equipamentos para UBS ao município de Córrego Fundo conforme cronograma do Novo PAC.",
+      "valor_brl": null,
+      "entes": [
+        "Córrego Fundo"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC 2025"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "13ac3de509d74d82",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.117/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.117/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.117/2026-737581303",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 7.117/2026 do Ministério da Saúde para estruturação de UBS em Chopinzinho/PR.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Chopinzinho"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC 2025"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ea016f7bf0d8c281",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.396/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.396/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.396/2026-737570701",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 6.396/2026 do Ministério da Saúde para estruturação de UBS em Duque de Caxias/RJ.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Duque de Caxias"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC 2025"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "70505c3c031328b5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Coleta de Preços",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "192",
+      "titulo": "AVISO DE COLETA DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-coleta-de-precos-737570678",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto Nacional de Cardiologia publica aviso de coleta de preços de 09/10/2026 para consultoria editorial de manuscritos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "editorial",
+        "consultoria"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "007eff715e884221",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.811/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.811/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.811/2026-737570543",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Gaurama/RS por termo de doação 7.811/2026 de 30/09/2026 no âmbito do Novo PAC 2025.",
+      "por_que_importa": "verificar o recebimento e registro de patrimônio dos equipamentos conforme protocolo 25000.138402/2026-54.",
+      "valor_brl": null,
+      "entes": [
+        "Gaurama/RS"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6ea125ce164d3190",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Extrato de Termo de Cooperação Técnica",
+      "numero": "173/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE COOPERAÇÃO Nº 173/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-cooperacao-n-173/2026-737570443",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "FIOCRUZ e Secretaria de Ciência, Tecnologia e Inovação da Bahia assinam termo de cooperação técnica 173/2026 de 15/05/2026 para participação em observatório de inovação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "cooperação",
+        "fiocruz",
+        "inovação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a265429d61369205",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.130/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.130/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.130/2026-737569468",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Cruzeiro do Oeste/PR por termo de doação 7.130/2026 de 01/10/2026 no âmbito do Novo PAC 2025.",
+      "por_que_importa": "verificar o recebimento e registro de patrimônio dos equipamentos conforme protocolo 25000.135680/2026-50.",
+      "valor_brl": null,
+      "entes": [
+        "Cruzeiro do Oeste/PR"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "04fdbded4eba93b2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "192",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-737569333",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Saúde Indígena publica aviso de alteração do pregão 137/2026 de 09/10/2026 adiando recebimento de propostas para aquisição de fórmulas infantis.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "licitação",
+        "fórmulas infantis"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "23169bad45a7a1c1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "192",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-737554929",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto Nacional de Cardiologia registra preços de materiais hospitalares em ata 406/2026 de 07/10/2026 em pregão eletrônico.",
+      "por_que_importa": null,
+      "valor_brl": 40800,
+      "entes": [],
+      "tags": [
+        "registro de preços",
+        "materiais",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fa74bc0962a14daa",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.870/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.870/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.870/2026-737554857",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Maratá/RS por termo de doação 7.870/2026 de 30/09/2026 no âmbito do Novo PAC 2025.",
+      "por_que_importa": "verificar o recebimento e registro de patrimônio dos equipamentos conforme protocolo 25000.138584/2026-63.",
+      "valor_brl": null,
+      "entes": [
+        "Maratá/RS"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "25cd840192f44845",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.005/2026",
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "192",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.005/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.005/2026-737553523",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Taquarituba/SP por termo de doação 7.005/2026 de 30/09/2026 no âmbito do Novo PAC 2025.",
+      "por_que_importa": "verificar o recebimento e registro de patrimônio dos equipamentos conforme protocolo 25000.120302/2026-71.",
+      "valor_brl": null,
+      "entes": [
+        "Taquarituba/SP"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "396102870968c826",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Vigilância em Saúde e Ambiente",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "192",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-737553446",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Vigilância em Saúde e Ambiente publica aviso de alteração do pregão 59/2026 de 09/10/2026 adiando recebimento de propostas para prestação de serviços com tratadores de animais.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "licitação",
+        "serviços"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3555332f134049cd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.276",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 150,
+      "edicao": "192",
+      "titulo": "Portaria GM/MS Nº 12.276, DE 8 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.276-de-8-de-outubro-de-2026-737484388",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde autoriza repasse de incremento financeiro emergencial para Maués por portaria GM/MS 12.276 de 08/10/2026 para resposta a emergências em saúde pública.",
+      "por_que_importa": "verificar se Maués cumpre os requisitos para comprovar aplicação de recursos mediante Relatório Anual de Gestão conforme art. 660 da Portaria de Consolidação GM/MS nº 6.",
+      "valor_brl": 345489.88,
+      "entes": [
+        "Maués/AM"
+      ],
+      "tags": [
+        "repasse",
+        "emergência",
+        "custeio"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5b90e386f8e08004",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.072",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 152,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.072, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.072-de-5-de-outubro-de-2026-737484283",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Ministério da Saúde inclui membros em equipes de transplante de rim, córnea/esclera e fígado por portaria SAES/MS 5.072 de 05/10/2026 em estados de diferentes regiões.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "transplante",
+        "equipes",
+        "profissionais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9dbe26f64e8ab1dd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.097",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 156,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.097, DE 7 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.097-de-7-de-outubro-de-2026-737484204",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde habilita Clínica de Diálise Renal Med Ltda em Corumbá/MS para Programa Agora Tem Especialistas por portaria SAES/MS 5.097 de 07/10/2026 com limite anual de créditos.",
+      "por_que_importa": "verificar que o incremento é concedido na forma de certificados de valor de créditos financeiros e acompanhar a regularidade fiscal para manutenção.",
+      "valor_brl": 669988.08,
+      "entes": [
+        "Corumbá/MS"
+      ],
+      "tags": [
+        "habilitação",
+        "terapia renal",
+        "créditos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6f58142e577c3ddf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.074",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 153,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.074, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.074-de-5-de-outubro-de-2026-737483646",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 5.074, de 5 de outubro de 2026, exclui 2 membros de equipes de transplante de pulmão.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "exclusão",
+        "transplante"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "aecf98133e02e8da",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.082",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 154,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.082, DE 6 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.082-de-6-de-outubro-de-2026-737483567",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.082, de 6 de outubro de 2026, habilita Prontorim Ltda para hemodiálise no Programa Agora Tem Especialistas com limite anual de créditos financeiros.",
+      "por_que_importa": "consulte a regulamentação do programa para avaliar candidatura de hospitais mineiros de hemodiálise.",
+      "valor_brl": 1076493.09,
+      "entes": [
+        "Prontorim Ltda"
+      ],
+      "tags": [
+        "habilitação",
+        "hemodiálise",
+        "programa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ef42e3d143af934a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.089",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 155,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.089, DE 6 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.089-de-6-de-outubro-de-2026-737483464",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.089, de 6 de outubro de 2026, habilita Instituto do Rim de Paranaguá para hemodiálise no Programa Agora Tem Especialistas com limite anual de créditos financeiros.",
+      "por_que_importa": "verifique requisitos de habilitação para direcionar candidaturas de clínicas mineiras de nefrologia.",
+      "valor_brl": 818045.97,
+      "entes": [
+        "Instituto do Rim de Paranaguá Ltda"
+      ],
+      "tags": [
+        "habilitação",
+        "hemodiálise",
+        "programa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fbc2b997f9535278",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.081",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 154,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.081, DE 6 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.081-de-6-de-outubro-de-2026-737482478",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.081, de 6 de outubro de 2026, habilita S. Campos Serviços Médicos em Belém para hemodiálise no Programa Agora Tem Especialistas com limite anual de créditos financeiros.",
+      "por_que_importa": "procure a regulamentação para direcionar candidaturas de unidades mineiras de hemodiálise.",
+      "valor_brl": 840712.31,
+      "entes": [
+        "S. Campos Serviços Médicos Ltda"
+      ],
+      "tags": [
+        "habilitação",
+        "hemodiálise",
+        "programa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8c3d09fcfc04e838",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.066",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 151,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.066, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.066-de-5-de-outubro-de-2026-737481612",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.066, de 5 de outubro de 2026, autoriza 3 estabelecimentos em Rio de Janeiro e Paraná para retirada e transplante de órgãos.",
+      "por_que_importa": "avalie conformidade de estabelecimentos mineiros de transplante com requisitos de autorização federais.",
+      "valor_brl": null,
+      "entes": [
+        "Hospital Barra Dor II",
+        "Hospital Esperança S.A.",
+        "Hospital e Maternidade Maringá"
+      ],
+      "tags": [
+        "autorização",
+        "transplante",
+        "órgãos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5085c140d02cc38b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 157,
+      "edicao": "192",
+      "titulo": "Retificação",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-737481473",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de 9 de outubro de 2026 corrige dados de responsável técnico e número de equipe na Portaria SAES/MS nº 4.828.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "transplante"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "302f65ff322779ed",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.080",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 154,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.080, DE 6 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.080-de-6-de-outubro-de-2026-737480502",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.080, de 6 de outubro de 2026, habilita Davita Serviços de Nefrologia Ananindeua para hemodiálise no Programa Agora Tem Especialistas com limite anual de créditos financeiros.",
+      "por_que_importa": "identifique clínicas de diálise mineiras que atendam aos critérios deste programa de expansão.",
+      "valor_brl": 1008521.85,
+      "entes": [
+        "Davita Serviços de Nefrologia Ananindeua Ltda"
+      ],
+      "tags": [
+        "habilitação",
+        "hemodiálise",
+        "programa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "180c96edbe5ddd5d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.099",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 157,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.099, DE 7 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.099-de-7-de-outubro-de-2026-737479387",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.099, de 7 de outubro de 2026, habilita Centro de Diálises da Ibiapaba em Tianguá para hemodiálise no Programa Agora Tem Especialistas com limite anual de créditos financeiros.",
+      "por_que_importa": "consulte a regulamentação para avaliar candidatura de centros de diálise mineiros neste programa.",
+      "valor_brl": 927992.66,
+      "entes": [
+        "CDI - Centro de Diálises da Ibiapaba Ltda"
+      ],
+      "tags": [
+        "habilitação",
+        "hemodiálise",
+        "programa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "71f9112bd8c4f641",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.075",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 153,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.075, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.075-de-5-de-outubro-de-2026-737478700",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.075, de 5 de outubro de 2026, cancela autorização de 2 estabelecimentos para transplante de rim e córnea.",
+      "por_que_importa": "revise conformidade de hospitais mineiros de transplante com requisitos de autorização para evitar cancelamentos.",
+      "valor_brl": null,
+      "entes": [
+        "Hospital Nossa Senhora das Neves",
+        "Naim Pessoa Ltda"
+      ],
+      "tags": [
+        "cancelamento",
+        "transplante",
+        "autorização"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "157b507b58b3736f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.093",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 156,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.093, DE 7 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.093-de-7-de-outubro-de-2026-737477718",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.093, de 7 de outubro de 2026, habilita Davita Serviços de Nefrologia Fonte Nova em Salvador para hemodiálise no Programa Agora Tem Especialistas com limite anual de créditos financeiros.",
+      "por_que_importa": "pesquise critérios do programa para orientar candidaturas de clínicas mineiras de nefrologia.",
+      "valor_brl": 2587438.81,
+      "entes": [
+        "Davita Serviços de Nefrologia Fonte Nova Ltda"
+      ],
+      "tags": [
+        "habilitação",
+        "hemodiálise",
+        "programa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "47db83b4f238b283",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.087",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 155,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.087, DE 6 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.087-de-6-de-outubro-de-2026-737476160",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.087, de 6 de outubro de 2026, habilita Davita Serviços de Nefrologia Tejipió em Recife para hemodiálise no Programa Agora Tem Especialistas com limite anual de créditos financeiros.",
+      "por_que_importa": "analise a política de valores de limites financeiros para orientar estratégia de candidaturas mineiras.",
+      "valor_brl": 2290015.08,
+      "entes": [
+        "Davita Serviços de Nefrologia Tejipió Ltda"
+      ],
+      "tags": [
+        "habilitação",
+        "hemodiálise",
+        "programa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "df6a89e52ea0f050",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.069",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 151,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.069, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.069-de-5-de-outubro-de-2026-737472835",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.069, de 5 de outubro de 2026, renova autorização de 3 estabelecimentos para transplante de tecido ocular, fígado e músculo-esquelético.",
+      "por_que_importa": "monitore datas de renovação de autorizações em hospitais de transplante mineiros para evitar perda de credenciamento.",
+      "valor_brl": null,
+      "entes": [
+        "Centro Oftalmológico de Belém",
+        "Hospital Universitário Clementino Fraga Filho",
+        "Hospital Regional Unimed"
+      ],
+      "tags": [
+        "renovação",
+        "transplante",
+        "autorização"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b44a3509d62bc7a3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 161,
+      "edicao": "192",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-737472703",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação da ANVISA sobre Resolução nº 2.857, de 20 de julho de 2026, que corrige informações sobre produto alimentar.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "vigilância sanitária",
+        "alimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "baa7a23a9d3e8aed",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.253",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 150,
+      "edicao": "192",
+      "titulo": "PORTARIA GM/MS Nº 12.253, DE 8 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.253-de-8-de-outubro-de-2026-737470044",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.253, de 8 de outubro de 2026, que autoriza repasse emergencial de custeio para Ribeira.",
+      "por_que_importa": "compare o modelo de transferência fundo a fundo para resposta a emergências com sua instituição.",
+      "valor_brl": 10553.98,
+      "entes": [
+        "Ribeira"
+      ],
+      "tags": [
+        "emergência",
+        "vigilância",
+        "repasse"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8c954151d0278fe7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.271",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 150,
+      "edicao": "192",
+      "titulo": "Portaria GM/MS Nº 12.271, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.271-de-5-de-outubro-de-2026-737469965",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.271, de 5 de outubro de 2026, que autoriza repasse emergencial de custeio para Carauari.",
+      "por_que_importa": "acompanhe o modelo de financiamento para emergências em saúde pública em municípios.",
+      "valor_brl": 104252.83,
+      "entes": [
+        "Carauari"
+      ],
+      "tags": [
+        "emergência",
+        "vigilância",
+        "repasse"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2f90a6d54ec7137f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.092",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 156,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.092, DE 7 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.092-de-7-de-outubro-de-2026-737469833",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Portaria SAES/MS nº 5.092, de 7 de outubro de 2026, que habilita Bio Rim em Ituiutaba para hemodiálise no Programa Agora Tem Especialistas.",
+      "por_que_importa": "verifique se sua instituição pode se credenciar no programa para hemodiálise.",
+      "valor_brl": 5745198.29,
+      "entes": [
+        "Bio Rim"
+      ],
+      "tags": [
+        "agora tem especialistas",
+        "hemodiálise"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bd8e5376fa157a0c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Portaria",
+      "numero": "514",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 157,
+      "edicao": "192",
+      "titulo": "PORTARIA SESAI/MS Nº 514, DE 7 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-sesai/ms-n-514-de-7-de-outubro-de-2026-737469754",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SESAI/MS nº 514, de 7 de outubro de 2026, que altera composição e prorroga grupo de trabalho sobre resiliência climática em saúde indígena.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "saúde indígena",
+        "grupo de trabalho"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e7e86e11185181cb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 161,
+      "edicao": "192",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-737469675",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação da ANVISA sobre Resolução nº 3.634, de 15 de setembro de 2026, que corrige fabricante de produto.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "vigilância sanitária",
+        "alimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2eefbee58978df83",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.057",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 150,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.057, DE 2 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.057-de-2-de-outubro-de-2026-737466064",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.057, de 2 de outubro de 2026, que habilita Clínica Santa Helena em Camaçari para o Programa Agora Tem Especialistas.",
+      "por_que_importa": "analise a estrutura de habilitação do programa para avaliação de expansão.",
+      "valor_brl": 38577448.64,
+      "entes": [
+        "Clínica Santa Helena Ltda"
+      ],
+      "tags": [
+        "agora tem especialistas",
+        "credenciamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4b0b254eff704e57",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.107",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 157,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.107, DE 7 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.107-de-7-de-outubro-de-2026-737465929",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.107, de 7 de outubro de 2026, que habilita Davita Serviços de Nefrologia Lapa em São Paulo para hemodiálise.",
+      "por_que_importa": "examine a estrutura de credenciamento para serviços de nefrologia no Programa Agora Tem Especialistas.",
+      "valor_brl": 1136290.52,
+      "entes": [
+        "Davita Serviços de Nefrologia Lapa Ltda"
+      ],
+      "tags": [
+        "agora tem especialistas",
+        "nefrologia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c8a1f0e5f7c14e93",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.068",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 151,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.068, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.068-de-5-de-outubro-de-2026-737465212",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.068, de 5 de outubro de 2026, que autoriza Hospital Palmas Medical e Hospital Getúlio Vargas para retirada e transplante de órgãos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Palmas Medical HPM",
+        "Hospital Getúlio Vargas"
+      ],
+      "tags": [
+        "transplante",
+        "autorização"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e3227a8bac6a1194",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.076",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 153,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.076, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.076-de-5-de-outubro-de-2026-737464072",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.076, de 5 de outubro de 2026, que renova autorização de 3 estabelecimentos para exames de histocompatibilidade.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital de Clínicas de Porto Alegre",
+        "Fundação Hemocentro de Ribeirão Preto",
+        "Hospital de Base de São José do Rio Preto"
+      ],
+      "tags": [
+        "histocompatibilidade",
+        "renovação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8ee702869d3e078e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.084",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 155,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.084, DE 6 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.084-de-6-de-outubro-de-2026-737462657",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.084, de 6 de outubro de 2026, que habilita Clínica de Hemodiálise de Videira para o Programa Agora Tem Especialistas.",
+      "por_que_importa": "acompanhe as habilitações no programa para serviços de hemodiálise.",
+      "valor_brl": 446819.64,
+      "entes": [
+        "Clínica de Hemodiálise de Videira Ltda"
+      ],
+      "tags": [
+        "agora tem especialistas",
+        "hemodiálise"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c486a041e622d638",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.077",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 154,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.077, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.077-de-5-de-outubro-de-2026-737460261",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.077, de 5 de outubro de 2026, que habilita Hospital Adventista Silvestre em Rio de Janeiro para tratamento da falência intestinal.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Adventista Silvestre"
+      ],
+      "tags": [
+        "falência intestinal",
+        "habilitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4eefab803aa47c14",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.098",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 156,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.098, DE 7 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.098-de-7-de-outubro-de-2026-737460238",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.098, de 7 de outubro de 2026, habilita Nefroclínica Ipiranga Ltda no Programa Agora Tem Especialistas, modalidade Terapia Renal Substitutiva, com limite de créditos financeiros.",
+      "por_que_importa": "verificar se há clínicas de hemodiálise em Minas Gerais com estrutura para se habilitar no Programa Agora Tem Especialistas.",
+      "valor_brl": 1440564.27,
+      "entes": [
+        "Nefroclínica Ipiranga Ltda"
+      ],
+      "tags": [
+        "hemodiálise",
+        "agora tem especialistas",
+        "habilitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1e75450a0d835894",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Aresto",
+      "numero": "1.804",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 157,
+      "edicao": "192",
+      "titulo": "ARESTO nº 1.804, DE 8 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/aresto-n-1.804-de-8-de-outubro-de-2026-737460154",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aresto ANVISA nº 1.804, de 8 de outubro de 2026, nega provimento a recursos administrativos de empresas sobre questões sanitárias de medicamentos e produtos médicos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "anvisa",
+        "aresto",
+        "medicamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a8b5d6c1d4a322dc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.073",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 153,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.073, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.073-de-5-de-outubro-de-2026-737459649",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.073, de 5 de outubro de 2026, defere renovação de Certificado de Entidade Beneficente de Assistência Social da Sociedade Operária Humanitária de Limeira (SP).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Sociedade Operária Humanitária"
+      ],
+      "tags": [
+        "cebas",
+        "entidade-beneficente",
+        "renovação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ab9d415b48ff9d90",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.085",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 155,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.085, DE 6 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.085-de-6-de-outubro-de-2026-737458373",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.085, de 6 de outubro de 2026, habilita Clinefran Clínica de Nefrologia no Programa Agora Tem Especialistas, modalidade Terapia Renal Substitutiva, com limite de créditos financeiros.",
+      "por_que_importa": "verificar se há clínicas de hemodiálise em Minas Gerais com estrutura para se habilitar no Programa Agora Tem Especialistas.",
+      "valor_brl": 6589852.43,
+      "entes": [
+        "Clinefran Clínica de Nefrologia Franco da Rocha Ltda"
+      ],
+      "tags": [
+        "hemodiálise",
+        "agora tem especialistas",
+        "habilitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "62732b66d596157f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.071",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 152,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.071, DE 5 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.071-de-5-de-outubro-de-2026-737455804",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.071, de 5 de outubro de 2026, renova autorização ao HC da FMUSP para retirada e transplante de intestino delgado e multivisceral por 4 anos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "HC da FMUSP"
+      ],
+      "tags": [
+        "transplante",
+        "autorização",
+        "órgãos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4758b945321a9c40",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.083",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 154,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.083, DE 6 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.083-de-6-de-outubro-de-2026-737455725",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.083, de 6 de outubro de 2026, habilita Clínica de Nefrologia de Senhor do Bonfim no Programa Agora Tem Especialistas, modalidade Terapia Renal Substitutiva, com limite de créditos financeiros.",
+      "por_que_importa": "verificar se há clínicas de hemodiálise em Minas Gerais com estrutura para se habilitar no Programa Agora Tem Especialistas.",
+      "valor_brl": 1168438.78,
+      "entes": [
+        "Clínica de Nefrologia de Senhor do Bonfim Ltda"
+      ],
+      "tags": [
+        "hemodiálise",
+        "agora tem especialistas",
+        "nefrologia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "32d5447830d8e3a9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.088",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 155,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.088, DE 6 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.088-de-6-de-outubro-de-2026-737455651",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.088, de 6 de outubro de 2026, habilita DaVita Serviços de Nefrologia de Araraquara no Programa Agora Tem Especialistas, modalidade Terapia Renal Substitutiva, com limite de créditos financeiros.",
+      "por_que_importa": "verificar se há clínicas de hemodiálise em Minas Gerais com estrutura para se habilitar no Programa Agora Tem Especialistas.",
+      "valor_brl": 1973897.01,
+      "entes": [
+        "DaVita Serviços de Nefrologia de Araraquara Ltda"
+      ],
+      "tags": [
+        "hemodiálise",
+        "agora tem especialistas",
+        "davita"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4482aa79486ac2d7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.096",
+      "data_publicacao": "2026-10-09",
+      "secao": "1",
+      "pagina": 156,
+      "edicao": "192",
+      "titulo": "Portaria SAES/MS Nº 5.096, DE 7 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.096-de-7-de-outubro-de-2026-737452149",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.096, de 7 de outubro de 2026, habilita DaVita Serviços de Nefrologia Petrolina no Programa Agora Tem Especialistas, modalidade Terapia Renal Substitutiva, com limite de créditos financeiros.",
+      "por_que_importa": "verificar se há clínicas de hemodiálise em Minas Gerais com estrutura para se habilitar no Programa Agora Tem Especialistas.",
+      "valor_brl": 1085723.32,
+      "entes": [
+        "DaVita Serviços de Nefrologia Petrolina Ltda"
+      ],
+      "tags": [
+        "hemodiálise",
+        "agora tem especialistas",
+        "davita"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bb0727af2d341ca0",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": "361",
+      "data_publicacao": "2026-10-09",
+      "secao": null,
+      "pagina": 23,
+      "edicao": null,
+      "titulo": "ATO Nº 361 DE 08 OUTUBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-09T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331103%2C%22paginaSelecionada%22%3A23%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ato SES-MG nº 361, de 8 de outubro de 2026, concede progressão na carreira a servidor ocupante de cargo efetivo da Secretaria de Estado de Saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "servidor",
+        "progressão",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4c59740a76ced81c",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "76",
+      "data_publicacao": "2026-10-09",
+      "secao": null,
+      "pagina": 23,
+      "edicao": null,
+      "titulo": "PORTARIA DE RECONDUÇÃO SES Nº 76/2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-09T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331103%2C%22paginaSelecionada%22%3A23%7D",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Portaria SES-MG nº 76, de 2026, reconduz comissão de Processo Administrativo Disciplinar da Fundação Ezequiel Dias para conclusão em 60 dias.",
+      "por_que_importa": "acompanhar resultado do processo administrativo disciplinar da Funed para avaliar possíveis impactos na oferta de serviços ao SUS.",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ezequiel Dias"
+      ],
+      "tags": [
+        "processo-administrativo",
+        "disciplinar",
+        "funed"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "213bd792b027b44e",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "82",
+      "data_publicacao": "2026-10-09",
+      "secao": null,
+      "pagina": 23,
+      "edicao": null,
+      "titulo": "PORTARIA/FUNED Nº 82, DE 07 DE OUTUBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-09T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331103%2C%22paginaSelecionada%22%3A23%7D",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Portaria Funed nº 82, de 7 de outubro de 2026, altera estrutura orgânica da Fundação Ezequiel Dias criando Unidade de Saúde, Meio Ambiente e Segurança.",
+      "por_que_importa": "acompanhar mudanças estruturais da Funed que podem afetar sua capacidade de oferta de serviços ao SUS mineiro.",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ezequiel Dias"
+      ],
+      "tags": [
+        "estrutura-orgânica",
+        "funed",
+        "reorganização"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "54f55b41f4d8364e",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "80",
+      "data_publicacao": "2026-10-09",
+      "secao": null,
+      "pagina": 23,
+      "edicao": null,
+      "titulo": "PORTARIA FUNED Nº 80 , DE 07 DE OUTUBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-09T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331103%2C%22paginaSelecionada%22%3A23%7D",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Portaria Funed nº 80, de 7 de outubro de 2026, institui Política de Divulgação Científica da Fundação Ezequiel Dias com diretrizes de governança e planejamento.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ezequiel Dias"
+      ],
+      "tags": [
+        "divulgação-científica",
+        "funed",
+        "política"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3d28dc14d4939750",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Termo de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-09",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "192",
+      "titulo": "Doação de 4 veículos do SUS a 4 municípios",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-2.493/2026-737645838",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "4 municípios recebem 4 veículos do Ministério da Saúde: 4 outros veículos, no total de R$ 1,6 milhão. Em Minas: PRESIDENTE JUSCELINO.",
+      "por_que_importa": "Municípios mineiros contemplados confirmam que o programa está ativo no estado; os demais podem pleitear os mesmos veículos.",
+      "valor_brl": 1558540.52,
+      "entes": [
+        "PRESIDENTE JUSCELINO",
+        "AIQUARA",
+        "CARIÚS",
+        "PIQUET CARNEIRO"
+      ],
+      "tags": [
+        "regra:doacoes-agrupadas"
+      ],
+      "fallback": false
+    }
+  ]
+}
