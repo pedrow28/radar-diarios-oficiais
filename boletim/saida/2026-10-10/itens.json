@@ -1,0 +1,59 @@
+{
+  "data": "2026-10-10",
+  "gerado_em": "2026-10-10T15:34:55.552542+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "Boletim de 10/10/2026: 0 publicações relevantes",
+    "em_30_segundos": [
+      "Sem publicações relevantes nesta data"
+    ],
+    "intro": "Nenhuma publicação de captação de recursos, mudança de regra ou edital nesta data. O radar segue lendo o Diário Oficial da União e o Diário Oficial de Minas Gerais no próximo dia útil.",
+    "parcial": false,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "vazio",
+        "edicao": null,
+        "paginas": null,
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ok",
+        "edicao": null,
+        "paginas": "pp. 20-20",
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "d2e503ed6e4ff2d1",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "ATO",
+      "numero": null,
+      "data_publicacao": "2026-10-10",
+      "secao": null,
+      "pagina": 20,
+      "edicao": null,
+      "titulo": "ATO 343, DE 25 DE SETEMBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-10T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331126%2C%22paginaSelecionada%22%3A20%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "O ato 343 de 25 de setembro de 2026 exonera servidor da SES-MG e autoriza concessões de férias prêmio a servidores da SES-MG e Fundação HEMOMINAS.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Centro de Hematologia e Hemoterapia do Estado de Minas Gerais"
+      ],
+      "tags": [
+        "pessoal",
+        "rotina",
+        "férias"
+      ],
+      "fallback": false
+    }
+  ]
+}
