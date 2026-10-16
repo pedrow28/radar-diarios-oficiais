@@ -1,0 +1,3387 @@
+{
+  "data": "2026-10-16",
+  "gerado_em": "2026-10-16T14:30:39.145803+00:00",
+  "avisos": [
+    "91 itens além do teto de 120 não foram classificados"
+  ],
+  "edicao": {
+    "titulo": "79 doações para UBS no Novo PAC 2025 e R$ 282,8 milhões em PROADI-SUS",
+    "em_30_segundos": [
+      "MS publica 79 extratos de doação para estruturação de unidades básicas de saúde.",
+      "MS doa R$ 282,8 milhões à Fundação Antônio Prudente no PROADI-SUS 2027-2029.",
+      "MS doa 14 kits de teleconsulta para municípios de Bahia e Ceará.",
+      "CIB-SUS/MG aprova R$ 7,5 milhões de incremento ao teto MAC de Abaeté."
+    ],
+    "intro": "Esta edição de 16 de outubro apresenta principalmente dois destaques: a Fundação Antônio Prudente recebe R$ 282,8 milhões para participação no PROADI-SUS no triênio 2027-2029, e o Ministério da Saúde publica 79 novos extratos de doação para estruturação de unidades básicas de saúde no Novo PAC 2025. Gestores de Santas Casas e hospitais filantrópicos devem priorizar o acompanhamento do PROADI-SUS, enquanto secretarias de saúde planejam a absorção dos 14 kits de teleconsulta e dos incrementos ao teto MAC em Minas Gerais, que somam R$ 7,5 milhões em Abaeté e se refletem em outras deliberações da CIB-SUS.",
+    "parcial": false,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "196",
+        "paginas": "pp. 1-145",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ok",
+        "edicao": null,
+        "paginas": "pp. 16-16",
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "7de22f579b335171",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "6.005",
+      "data_publicacao": "2026-10-16",
+      "secao": null,
+      "pagina": 16,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 6.005,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331238%2C%22paginaSelecionada%22%3A16%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Deliberação CIB-SUS/MG nº 6.005, de 15 de outubro de 2026, aprova incorporação de recurso financeiro ao Teto MAC do município de Abaeté.",
+      "por_que_importa": "entre em contato com Abaeté para conhecer os serviços que serão custeados com o recurso incorporado ao teto.",
+      "valor_brl": 7536538.55,
+      "entes": [
+        "Abaeté"
+      ],
+      "tags": [
+        "teto MAC",
+        "abaeté",
+        "incorporação",
+        "custeio"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9674b50bcf028cd0",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "6.006",
+      "data_publicacao": "2026-10-16",
+      "secao": null,
+      "pagina": 16,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 6.006,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331238%2C%22paginaSelecionada%22%3A16%7D",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Deliberação CIB-SUS/MG nº 6.006, de 15 de outubro de 2026, aprova incorporação de recurso ao Teto MAC do município de Alto Jequitibá.",
+      "por_que_importa": "acompanhe o processo de programação do recurso aprovado para identificar oportunidades de parceria com o município.",
+      "valor_brl": null,
+      "entes": [
+        "Alto Jequitibá"
+      ],
+      "tags": [
+        "teto MAC",
+        "alto jequitibá",
+        "incorporação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "53c9f7fbba87dc58",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 125,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738811044",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00110/2026 do Ministério da Saúde, de 16 de outubro de 2026, doa kits de equipamentos para teleconsulta ao município de Piquet Carneiro/CE.",
+      "por_que_importa": "modelos de termo de doação com encargos do Ministério da Saúde para SUS Digital podem orientar negociações com entidades de saúde em Minas.",
+      "valor_brl": 12277.02,
+      "entes": [
+        "Piquet Carneiro"
+      ],
+      "tags": [
+        "telessaúde",
+        "SUS digital",
+        "doação equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1210fb0d86aff637",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Departamento Nacional de Auditoria do Sistema Único de Saúde",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "196",
+      "titulo": "EDITAL DE NOTIFICAÇÃO, DE 9 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-de-9-de-outubro-de-2026-738794044",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação de 9 de outubro de 2026 do Departamento Nacional de Auditoria do SUS notifica pessoa física sobre auditoria realizada em Mata Roma/MA.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital notificação",
+        "auditoria"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "05aa47b64914986b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738793349",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00111/2026 do Ministério da Saúde, de 16 de outubro de 2026, doa kits de equipamentos para teleconsulta ao município de Ibititá/BA.",
+      "por_que_importa": "consulte a estrutura de doação de equipamentos SUS Digital para replicar em iniciativas de Minas.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Ibititá"
+      ],
+      "tags": [
+        "telessaúde",
+        "SUS digital",
+        "doação equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "59f1445b600d2d14",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "196",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-738786749",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Alteração de Edital de 16 de outubro de 2026 retifica datas de recebimento de propostas para Pregão 8/2027 de aquisição de dietas enterais.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital alteração",
+        "aquisição"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8bbffefafd4194a7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-parcelamento-de-debito-738778451",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Termo de Parcelamento de Débito nº 124/2026, de 16 de outubro de 2026, registra parcelamento de glosa técnica do Fundo Nacional de Saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "glosa",
+        "parcelamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3b3326f6ca612fab",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "785",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "196",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 785, DE 13 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-785-de-13-de-outubro-de-2026-738776180",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 785, de 13 de outubro de 2026, convoca pessoas em local incerto para retirar notificações sobre transferências de recursos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Campos dos Goytacazes"
+      ],
+      "tags": [
+        "edital notificação",
+        "transferências"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "753c63bafd2cb9e9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738775765",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00116/2026 do Ministério da Saúde, de 16 de outubro de 2026, doa kits de equipamentos para teleconsulta ao município de Dom Basílio/BA.",
+      "por_que_importa": "consulte a estrutura de doação de equipamentos SUS Digital para replicar em iniciativas de Minas.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Dom Basílio"
+      ],
+      "tags": [
+        "telessaúde",
+        "SUS digital",
+        "doação equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "32ba3316dbea3d01",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "196",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-738763669",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Registro de Preços nº 441/2026 da Secretaria de Atenção Especializada à Saúde, de 16 de outubro de 2026, registra aquisição de materiais hospitalares têxteis por pregão eletrônico.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "registro preços",
+        "material hospitalar"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f91850baf4a1ef8a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738763130",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00113/2026 do Ministério da Saúde, de 16 de outubro de 2026, doa kits de equipamentos para teleconsulta ao município de Luís Eduardo Magalhães/BA.",
+      "por_que_importa": "consulte a estrutura de doação de equipamentos SUS Digital para replicar em iniciativas de Minas.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Luís Eduardo Magalhães"
+      ],
+      "tags": [
+        "telessaúde",
+        "SUS digital",
+        "doação equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2c572abb4f16af6a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738763053",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00118/2026 do Ministério da Saúde, de 16 de outubro de 2026, doa kits de equipamentos para teleconsulta ao município de Ribeira do Pombal/BA.",
+      "por_que_importa": "consulte a estrutura de doação de equipamentos SUS Digital para replicar em iniciativas de Minas.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Ribeira do Pombal"
+      ],
+      "tags": [
+        "telessaúde",
+        "SUS digital",
+        "doação equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e62b9074036e1f9f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738756757",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação de kits de equipamentos para teleconsulta do Ministério da Saúde ao Município de Governador Mangabeira/BA, publicado em 16 de outubro de 2026.",
+      "por_que_importa": "verifique com a SES-MG se há previsão de doação de equipamentos de telessaúde para Minas Gerais pelo programa SUS Digital.",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Governador Mangabeira"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "788fdf14b067e73f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 130,
+      "edicao": "196",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-738756580",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração do pregão 17/2026 da Fundação Oswaldo Cruz para contratação de serviços de jardinagem, com nova data de recebimento de propostas.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "jardinagem",
+        "alteração de edital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0fdf91b9a38b5fbd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738751439",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação de kits de equipamentos para teleconsulta do Ministério da Saúde ao Município de Sátiro Dias/BA, publicado em 16 de outubro de 2026.",
+      "por_que_importa": "verifique com a SES-MG se há previsão de doação de equipamentos de telessaúde para Minas Gerais pelo programa SUS Digital.",
+      "valor_brl": 12817.2,
+      "entes": [
+        "Sátiro Dias"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "84ba353c4c11562b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato",
+      "numero": "7/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "196",
+      "titulo": "EXTRATO DO TERMO DE AJUSTE Nº 7/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-do-termo-de-ajuste-n-7/2026-738737760",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do termo de ajuste para participação da Fundação Antônio Prudente no PROADI-SUS no triênio 2027-2029, assinado em 14 de outubro de 2026.",
+      "por_que_importa": "verifique junto ao AC Camargo Cancer Center quais projetos PROADI-SUS estão disponíveis para sua instituição neste triênio.",
+      "valor_brl": 282815706,
+      "entes": [
+        "Fundação Antônio Prudente",
+        "AC Camargo Cancer Center"
+      ],
+      "tags": [
+        "proadi-sus",
+        "entidade beneficente",
+        "termo de ajuste",
+        "serviços"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "45aef56d48b82bed",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Empresa Brasileira de Hemoderivados e Biotecnologia",
+      "tipo": "Edital de Convocação",
+      "numero": "8",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 129,
+      "edicao": "196",
+      "titulo": "EDITAL Nº 8, DE 14 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-n-8-de-14-de-outubro-de-2026-738737236",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de convocação de candidatos aprovados no concurso público Hemobrás 2024 para procedimento de pré-admissão, publicado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "concurso",
+        "recursos humanos",
+        "convocação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a4abe335baf1158a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 129,
+      "edicao": "196",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-738737159",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação da Fundação Nacional de Saúde para retirada de notificação de cobrança referente ao convênio 0099/2014, publicado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "convênio",
+        "cobrança"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f9364d27a918e4ab",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 131,
+      "edicao": "196",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-738731953",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação da Fiocruz para apresentação de defesa em processo administrativo por recusa em apresentar documentação em licitação, publicado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "processo administrativo",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "34ad30da4eba74b8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Edital",
+      "numero": "5/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "196",
+      "titulo": "Edital nº 5/2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-n-5/2026-738719798",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de suspensão do pagamento de proventos de aposentados que não realizarem recadastramento obrigatório, publicado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pessoal",
+        "aposentadoria",
+        "recadastramento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3edfb59865eb1a64",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Departamento Nacional de Auditoria do Sistema Único de Saúde",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "196",
+      "titulo": "EDITAL DE NOTIFICAÇÃO, DE 14 OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-de-14-outubro-de-2026-738708947",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação do Departamento Nacional de Auditoria do SUS em Santa Catarina para comparecimento em auditoria, publicado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "auditoria",
+        "notificação",
+        "fiscalização"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ffdc8f49451cf3f2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 130,
+      "edicao": "196",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-738706094",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração do pregão 898/2026 da Fundação Oswaldo Cruz para compra de equipamento para laboratório, com nova data de recebimento de propostas.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "equipamento",
+        "alteração de edital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "10ccf38f12a3b2a4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-parcelamento-de-debito-738706865",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de termo de parcelamento de débito referente a glosa técnica em 15 parcelas, publicado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 8046.68,
+      "entes": [],
+      "tags": [
+        "débito",
+        "parcelamento",
+        "glosa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8c280fac7309f96e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Departamento Nacional de Auditoria do Sistema Único de Saúde",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "196",
+      "titulo": "EDITAL DE NOTIFICAÇÃO, de 14 de OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-de-14-de-outubro-de-2026-738706842",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação do Departamento Nacional de Auditoria do SUS em Santa Catarina para comparecimento em auditoria, publicado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "auditoria",
+        "notificação",
+        "fiscalização"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "96b17ddfe41c8025",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 129,
+      "edicao": "196",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-738696106",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação de 16/10/2026 da FUNASA convocando empresa construtora a retirar notificação sobre convênio nº 0099/2014.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "convênio",
+        "funasa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "dedc5a5efcb11725",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "6/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 130,
+      "edicao": "196",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 6/2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-6/2026-738694083",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 6/2026 da FUNASA, de 16/10/2026, notificando sobre reanálise de prestação de contas do TC/PAC nº 0063/2014 com Município de Fortaleza dos Nogueiras/MA.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fortaleza dos Nogueiras"
+      ],
+      "tags": [
+        "notificação",
+        "prestação de contas"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1a49261c6c778ba5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738691535",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00119/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de TEOFILÂNDIA/BA.",
+      "por_que_importa": null,
+      "valor_brl": 25634.4,
+      "entes": [
+        "TEOFILÂNDIA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bbbae2d10ba31177",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738678309",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00114/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de ILHÉUS/BA.",
+      "por_que_importa": null,
+      "valor_brl": 6408.6,
+      "entes": [
+        "ILHÉUS"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6b7b00abc84240bf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 125,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738677279",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00101/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município AIUABA/CE.",
+      "por_que_importa": null,
+      "valor_brl": 12817.2,
+      "entes": [
+        "AIUABA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6964b86c30a4cbf4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 127,
+      "edicao": "196",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-738677202",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Alteração de Edital, de 16/10/2026, da Secretaria de Saúde Indígena sobre Pregão 39/2026 para contratação de serviços de desratização.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "licitação",
+        "desratização"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "02b20e4489eedcfe",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738662154",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00112/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de PLANALTO/BA.",
+      "por_que_importa": null,
+      "valor_brl": 25634.4,
+      "entes": [
+        "PLANALTO"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4715c978a12fe3a7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738660082",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00117/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de SOBRADINHO/BA.",
+      "por_que_importa": null,
+      "valor_brl": 6408.6,
+      "entes": [
+        "SOBRADINHO"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "eb9e1d19df825d55",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 127,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738659951",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00121/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de PINDOBAÇÚ/BA.",
+      "por_que_importa": null,
+      "valor_brl": 6408.6,
+      "entes": [
+        "PINDOBAÇÚ"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "161e647da07a46a5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 125,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738649676",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00108/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de MORADA NOVA/CE.",
+      "por_que_importa": null,
+      "valor_brl": 6408.6,
+      "entes": [
+        "MORADA NOVA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d8c5a1eb8d5057e0",
+      "fonte": "dou",
+      "orgao": "Presidência da República",
+      "unidade": "Casa Civil",
+      "tipo": "Resolução",
+      "numero": "6",
+      "data_publicacao": "2026-10-16",
+      "secao": "1",
+      "pagina": 2,
+      "edicao": "196",
+      "titulo": "RESOLUÇÃO CIIA-PAC/CC Nº 6, DE 9 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-ciia-pac/cc-n-6-de-9-de-outubro-de-2026-738563440",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Resolução nº 6 da Casa Civil, de 16/10/2026, define produtos manufaturados sujeitos à exigência de aquisição nacional no Novo PAC.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pac",
+        "nacionalização",
+        "energia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "62a5fe1d2c92afb1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.566/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.566/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.566/2026-738811583",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 3.566/2026, de 16/10/2026, do Ministério da Saúde, de bens para estruturação de Unidades Básicas de Saúde ao Município de Barcarena/PA.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Barcarena"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8a006e1f3cc44266",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.062/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 115,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.062/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.062/2026-738811506",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 4.062/2026 de bens para estruturação de UBS em Beneditinos/PI no âmbito do Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Beneditinos/PI"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c762945f024ba0e9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.151/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 118,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.151/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.151/2026-738811429",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 5.151/2026 de bens para estruturação de UBS em Aiquara/BA no âmbito do Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Aiquara/BA"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8d9f2a3795c0784d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.623/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 120,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.623/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.623/2026-738811352",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 6.623/2026 de bens para estruturação de UBS em Flora Rica/SP no âmbito do Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Flora Rica/SP"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "19705e4179828dff",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.977/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 121,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.977/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.977/2026-738811275",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 6.977/2026 de bens para estruturação de UBS em São Simão/SP no âmbito do Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São Simão/SP"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4800ec59a37ecf71",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.062/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.062/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.062/2026-738811198",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 7.062/2026 de bens para estruturação de UBS em Antônio Olinto/PR no âmbito do Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Antônio Olinto/PR"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7e1e439162d704e2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.245/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.245/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.245/2026-738811121",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 7.245/2026 de bens para estruturação de UBS em Missal/PR no âmbito do Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Missal/PR"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "325d3243424749ed",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 128,
+      "edicao": "196",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-738810967",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de registro de preços nº 17/2026 para aquisição de rouparia para casais do DSEI Xingu.",
+      "por_que_importa": null,
+      "valor_brl": 249,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "casai",
+        "rouparia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6021876ba11005ac",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.683/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 115,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.683/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.683/2026-738807369",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 3.683/2026 de bens para estruturação de UBS em Tracuateua/PA no âmbito do Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Tracuateua/PA"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6c76f944047c4653",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.402/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.402/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.402/2026-738807292",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 4.402/2026 de bens para estruturação de UBS em Quixeramobim/CE no âmbito do Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Quixeramobim/CE"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cc21c61e11c0570a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.764/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.764/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.764/2026-738807215",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 4.764/2026 de bens para estruturação de UBS em São José de Caiana/PB no âmbito do Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São José de Caiana/PB"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c454ed1c27279f19",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.313/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 118,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.313/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.313/2026-738807187",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 5.313/2026 de bens para estruturação de UBS em Irecê/BA no âmbito do Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Irecê/BA"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8c129ba2d93965f7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.038/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 119,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.038/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.038/2026-738807061",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 6.038/2026 de bens para estruturação de UBS em Paiva/MG no âmbito do Novo PAC 2025.",
+      "por_que_importa": "Confirme com a Secretaria Municipal de Paiva o recebimento dos equipamentos e o registro da UBS no CNES.",
+      "valor_brl": null,
+      "entes": [
+        "Paiva/MG"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "70a2793339ed6904",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.319/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 119,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.319/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.319/2026-738806984",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Anchieta/ES via Novo PAC 2025, conforme Extrato de Doação nº 6.319/2026, de 16/10/2026.",
+      "por_que_importa": "Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Anchieta/ES"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a81f4d1ce66325a8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.445/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 120,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.445/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.445/2026-738806907",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em São José do Vale do Rio Preto/RJ via Novo PAC 2025, conforme Extrato de Doação nº 6.445/2026, de 16/10/2026.",
+      "por_que_importa": "Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "São José do Vale do Rio Preto/RJ"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fafb10dd263094f1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.320/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.320/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.320/2026-738806830",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Rolândia/PR via Novo PAC 2025, conforme Extrato de Doação nº 7.320/2026, de 16/10/2026.",
+      "por_que_importa": "Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Rolândia/PR"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "138a2d8364211ae1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.374/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.374/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.374/2026-738806753",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Tapira/PR via Novo PAC 2025, conforme Extrato de Doação nº 7.374/2026, de 16/10/2026.",
+      "por_que_importa": "Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Tapira/PR"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cf1196123e8c3f3c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.440/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.440/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.440/2026-738806676",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Caçador/SC via Novo PAC 2025, conforme Extrato de Doação nº 7.440/2026, de 16/10/2026.",
+      "por_que_importa": "Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Caçador/SC"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "66d80974d2ef0bb8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.225/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 118,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.225/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.225/2026-738793888",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Cansanção/BA via Novo PAC 2025, conforme Extrato de Doação nº 5.225/2026, de 16/10/2026.",
+      "por_que_importa": "Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Cansanção/BA"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "73f6d16d80cb5cad",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.827/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 119,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.827/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.827/2026-738793811",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Goiabeira/MG via Novo PAC 2025, conforme Extrato de Doação nº 5.827/2026, de 16/10/2026.",
+      "por_que_importa": "Acompanhe a entrega e a instalação dos equipamentos nas UBS para garantir a conclusão do investimento.",
+      "valor_brl": null,
+      "entes": [
+        "Goiabeira/MG"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ff9435d5a5b6ae32",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.060/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 119,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.060/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.060/2026-738793734",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Pedra Bonita/MG via Novo PAC 2025, conforme Extrato de Doação nº 6.060/2026, de 16/10/2026.",
+      "por_que_importa": "Acompanhe a entrega e a instalação dos equipamentos nas UBS para garantir a conclusão do investimento.",
+      "valor_brl": null,
+      "entes": [
+        "Pedra Bonita/MG"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "786aef1fc715bebc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.437/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 120,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.437/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.437/2026-738793657",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Santa Maria Madalena/RJ via Novo PAC 2025, conforme Extrato de Doação nº 6.437/2026, de 16/10/2026.",
+      "por_que_importa": "Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Santa Maria Madalena/RJ"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9401080910edcf22",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.094/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.094/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.094/2026-738793580",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Cafelândia/PR via Novo PAC 2025, conforme Extrato de Doação nº 7.094/2026, de 16/10/2026.",
+      "por_que_importa": "Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Cafelândia/PR"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d7a7cddfd1e76489",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.434/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.434/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.434/2026-738793503",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Bom Retiro/SC via Novo PAC 2025, conforme Extrato de Doação nº 7.434/2026, de 16/10/2026.",
+      "por_que_importa": "Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Bom Retiro/SC"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a93afe5a4b293329",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.915/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 125,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.915/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.915/2026-738793426",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para UBS em Palmitinho/RS via Novo PAC 2025, conforme Extrato de Doação nº 7.915/2026, de 16/10/2026.",
+      "por_que_importa": "Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Palmitinho/RS"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b1478bf8a7264e57",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Pré-Qualificação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 131,
+      "edicao": "196",
+      "titulo": "AVISO DE PRÉ-QUALIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-pre-qualificacao-738793041",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Pré-Qualificação (16/10/2026) da Fundação Oswaldo Cruz qualifica a empresa Edelmann Brazil para fornecimento de cartuchos impressos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pré-qualificação",
+        "licitação",
+        "compras"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cafd088aa5f2c5e8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.599/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.599/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.599/2026-738786618",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do Termo de Doação nº 4.599/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Alhandra/PB.",
+      "por_que_importa": "Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Alhandra/PB"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "326c9d91e1c31a94",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.684/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.684/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.684/2026-738786537",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do Termo de Doação nº 4.684/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Juazeirinho/PB.",
+      "por_que_importa": "Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Juazeirinho/PB"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "96a20783c6665f0c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.965/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.965/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.965/2026-738786460",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do Termo de Doação nº 4.965/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Tuparetama/PE.",
+      "por_que_importa": "Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Tuparetama/PE"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f748aef9fe3223d7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.174/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.174/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.174/2026-738786437",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do Termo de Doação nº 7.174/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Iguatu/PR.",
+      "por_que_importa": "Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Iguatu/PR"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8e6818a3919c7479",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.290/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.290/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.290/2026-738786360",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do Termo de Doação nº 7.290/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Planalto/PR.",
+      "por_que_importa": "Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Planalto/PR"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "dddedeb132fd844b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.369/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.369/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.369/2026-738786283",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do Termo de Doação nº 7.369/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Sertanópolis/PR.",
+      "por_que_importa": "Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Sertanópolis/PR"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "100a91bd70df4049",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.356/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.356/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.356/2026-738778374",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do Termo de Doação nº 4.356/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Limoeiro do Norte/CE.",
+      "por_que_importa": "Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Limoeiro do Norte/CE"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0cfa97736e3c8c88",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.631/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.631/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.631/2026-738778297",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do Termo de Doação nº 4.631/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Cabedelo/PB.",
+      "por_que_importa": "Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Cabedelo/PB"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "25328d095999acdb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.858/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.858/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.858/2026-738778269",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do Termo de Doação nº 4.858/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Garanhuns/PE.",
+      "por_que_importa": "Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Garanhuns/PE"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ee85033a60d5411c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.167/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 119,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.167/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.167/2026-738778143",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato do Termo de Doação nº 6.167/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Santana dos Montes/MG.",
+      "por_que_importa": "Verificar os bens relacionados no anexo e incorporá-los ao patrimônio da unidade conforme cronograma de entrega indicado.",
+      "valor_brl": null,
+      "entes": [
+        "Santana dos Montes/MG"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c6237f137da779db",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.506/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.506/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.506/2026-738778115",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do Termo de Doação nº 7.506/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Iraceminha/SC.",
+      "por_que_importa": "Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Iraceminha/SC"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1d8537a19c3cc569",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.727/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.727/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.727/2026-738777989",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de doação nº 7.727/2026 (Secretaria de Atenção Primária à Saúde, 13/10/2026) de equipamentos para UBS do programa Novo PAC 2025.",
+      "por_que_importa": "verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Campestre da Serra"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "443874528998b8c1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Grupo Hospitalar Conceição",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 128,
+      "edicao": "196",
+      "titulo": "EXTRATOS DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extratos-de-registro-de-precos-738777912",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "extratos de registro de preços (16/10/2026) para aquisição de material médico e de manutenção em hospitais federais.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Grupo Hospitalar Conceição",
+        "Hospital Federal de Bonsucesso",
+        "Hospital Regional de Pronto Socorro de Pelotas"
+      ],
+      "tags": [
+        "registro de preços",
+        "pregão",
+        "material médico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2dc74741a99b8591",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Pré-Qualificação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 131,
+      "edicao": "196",
+      "titulo": "Aviso de Pré-Qualificação",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-pre-qualificacao-738777681",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "aviso de pré-qualificação da Fundação Oswaldo Cruz para fornecedor de rótulos autoadesivos e lacres de segurança, publicado em 15/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pré-qualificação",
+        "fornecedor",
+        "procedimento licitatório"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7f902243011a0a4c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.583/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 120,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.583/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.583/2026-738776103",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de doação nº 6.583/2026 (Secretaria de Atenção Primária à Saúde, 08/10/2026) de equipamentos para UBS do programa Novo PAC 2025.",
+      "por_que_importa": "verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Cordeirópolis"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ea54627edab0971a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.686/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 121,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.686/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.686/2026-738776024",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de doação nº 6.686/2026 (Secretaria de Atenção Primária à Saúde, 08/10/2026) de equipamentos para UBS do programa Novo PAC 2025.",
+      "por_que_importa": "verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Irapuru"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "adcfe7b71a55fd9f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.235/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.235/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.235/2026-738775947",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de doação nº 7.235/2026 (Secretaria de Atenção Primária à Saúde, 28/09/2026) de equipamentos para UBS do programa Novo PAC 2025.",
+      "por_que_importa": "verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Marmeleiro"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b2bb1fe3ec03a560",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.673/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.673/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.673/2026-738775870",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de doação nº 7.673/2026 (Secretaria de Atenção Primária à Saúde, 13/10/2026) de equipamentos para UBS do programa Novo PAC 2025.",
+      "por_que_importa": "verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Alecrim"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0ee141f7eca5ef1b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.027/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 125,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.027/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.027/2026-738775793",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de doação nº 8.027/2026 (Secretaria de Atenção Primária à Saúde, 08/10/2026) de equipamentos para UBS do programa Novo PAC 2025.",
+      "por_que_importa": "verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Soledade"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c08cbe9f3100958d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.499/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.499/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.499/2026-738768999",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de doação nº 3.499/2026 (Secretaria de Atenção Primária à Saúde, 08/10/2026) de equipamentos para UBS do programa Novo PAC 2025.",
+      "por_que_importa": "verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Ipixuna"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "58a9d07eb2d9dfeb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.290/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.290/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.290/2026-738768976",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de doação nº 4.290/2026 (Secretaria de Atenção Primária à Saúde, 28/09/2026) de equipamentos para UBS do programa Novo PAC 2025.",
+      "por_que_importa": "verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Canindé"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "31664cb7f8fad8bd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.403/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.403/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.403/2026-738768845",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de doação nº 4.403/2026 (Secretaria de Atenção Primária à Saúde, 08/10/2026) de equipamentos para UBS do programa Novo PAC 2025.",
+      "por_que_importa": "verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Quixeré"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c465a0df8cf8b3ca",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.304/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 118,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.304/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.304/2026-738768768",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de doação nº 5.304/2026 (Secretaria de Atenção Primária à Saúde, 06/10/2026) de equipamentos para UBS do programa Novo PAC 2025.",
+      "por_que_importa": "verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Inhambupe"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "31a60d643ed87cf9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.444/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 120,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.444/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.444/2026-738768745",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 6.444/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a São José de Ubá/RJ, assinado em 08/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São José de Ubá/RJ"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9ad35c1ebdb50cf6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.836/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 121,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.836/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.836/2026-738768614",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 6.836/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Pederneiras/SP, assinado em 06/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Pederneiras/SP"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7c346ace9444c46f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.061/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 125,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.061/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.061/2026-738768537",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 8.061/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Vicente Dutra/RS, assinado em 06/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Vicente Dutra/RS"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5df3932553071b70",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 130,
+      "edicao": "196",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-738768509",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de doação de equipamentos de laboratório da Fiotec para o Instituto Nacional de Saúde da Mulher, da Criança e do Adolescente Fernandes Figueira da Fiocruz.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Saúde da Mulher, da Criança e do Adolescente Fernandes Figueira"
+      ],
+      "tags": [
+        "doação",
+        "entidade federal",
+        "pesquisa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9ea3ebdd6b4bf5e2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.420/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.420/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.420/2026-738763592",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 4.420/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Tamboril/CE, assinado em 06/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Tamboril/CE"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "24f37b5df04ecd1a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.610/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 118,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.610/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.610/2026-738763515",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de Doação nº 5.610/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Berilo/MG, assinado em 06/10/2026.",
+      "por_que_importa": "Coordene com a Secretaria Municipal de Saúde a chegada dos equipamentos e a operação nas UBS.",
+      "valor_brl": null,
+      "entes": [
+        "Berilo/MG"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c94040e5817c76a6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.980/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 121,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.980/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.980/2026-738763438",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 6.980/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Sebastianópolis do Sul/SP, assinado em 06/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Sebastianópolis do Sul/SP"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2f661ab1c8cc251c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.079/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.079/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.079/2026-738763361",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 7.079/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Bela Vista da Caroba/PR, assinado em 06/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Bela Vista da Caroba/PR"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a754e5f45542b0a1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.246/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.246/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.246/2026-738763284",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 7.246/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Moreira Sales/PR, assinado em 28/09/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Moreira Sales/PR"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8ba2c4e792e52ed5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.099/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 125,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.099/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.099/2026-738763207",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 8.099/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Douradina/MS, assinado em 06/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Douradina/MS"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2a8ec7c9f9327a6d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.627/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 118,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.627/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.627/2026-738757065",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de Doação nº 5.627/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Bonito de Minas/MG, assinado em 06/10/2026.",
+      "por_que_importa": "Coordene com o município a chegada dos equipamentos e a ativação das UBS para seu uso.",
+      "valor_brl": null,
+      "entes": [
+        "Bonito de Minas/MG"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "829679fd1deb7618",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.514/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 120,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.514/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.514/2026-738756988",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 6.514/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Barretos/SP, assinado em 06/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Barretos/SP"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "11f7eff971bd1a88",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.482/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.482/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.482/2026-738756965",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Fraiburgo/SC via extrato nº 7.482/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fraiburgo"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1459b721a832b441",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.885/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.885/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.885/2026-738756883",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Monte Belo do Sul/RS via extrato nº 7.885/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Monte Belo do Sul"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7416646178c29e7b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.425/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.425/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.425/2026-738751770",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Machadinho D'Oeste/RO via extrato nº 3.425/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Machadinho D'Oeste"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "85c79604cc63a222",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.830/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 115,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.830/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.830/2026-738751693",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Xambioá/TO via extrato nº 3.830/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Xambioá"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "56284b21aab07406",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.574/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.574/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.574/2026-738751616",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Severiano Melo/RN via extrato nº 4.574/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Severiano Melo"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c5091bcda3ea3ff0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.234/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 119,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.234/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.234/2026-738751593",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em São Tomás de Aquino/MG via extrato nº 6.234/2026 (16/10/2026).",
+      "por_que_importa": "o município recebeu equipamentos para estruturação de UBS do Novo PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "São Tomás de Aquino"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e3a7407e7d7da4c1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.794/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 121,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.794/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.794/2026-738751495",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Nhandeara/SP via extrato nº 6.794/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Nhandeara"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2ee904f11cde1e78",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.752/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 115,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.752/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.752/2026-738737752",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Esperantina/TO via extrato nº 3.752/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Esperantina"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d0470bdfe7974939",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.259/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.259/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.259/2026-738737621",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Wall Ferraz/PI via extrato nº 4.259/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Wall Ferraz"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a2be7e7798b7ce10",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.061/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.061/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.061/2026-738737544",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em São Luís do Quitunde/AL via extrato nº 5.061/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São Luís do Quitunde"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "78cf4a1c6222b1c2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.203/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 121,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.203/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.203/2026-738737467",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Miguelópolis/SP via extrato nº 8.203/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Miguelópolis"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "acb9684b5f14cebc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.996/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 121,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.996/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.996/2026-738737390",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Taciba/SP via extrato nº 6.996/2026 (16/10/2026).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Taciba"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ba7999bb5a9f1eeb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Pré-Qualificação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 131,
+      "edicao": "196",
+      "titulo": "AVISO DE PRÉ-QUALIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-pre-qualificacao-738737080",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Oswaldo Cruz publica aviso de pré-qualificação de empresa para fornecimento de rótulos, etiquetas e lacres de segurança em 16/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pré-qualificação",
+        "fornecimento",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "69eb3c19254ebcab",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.838/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.838/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.838/2026-738734652",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de doação nº 4.838/2026 de equipamentos para UBS ao município de Caruaru/PE, no âmbito do Novo PAC 2025, em 16/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Caruaru/PE"
+      ],
+      "tags": [
+        "PAC",
+        "UBS",
+        "doação",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "06f70e96b8375255",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.766/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 119,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.766/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.766/2026-738734571",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde publica extrato de doação nº 5.766/2026 de equipamentos para UBS ao município de Diamantina/MG, no âmbito do Novo PAC 2025, em 16/10/2026.",
+      "por_que_importa": "acompanhe o cronograma de entrega dos equipamentos para validar a infraestrutura necessária na unidade.",
+      "valor_brl": null,
+      "entes": [
+        "Diamantina/MG"
+      ],
+      "tags": [
+        "PAC",
+        "UBS",
+        "doação",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "18dbe15bd9b01a70",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.144/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 119,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.144/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.144/2026-738734512",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde publica extrato de doação nº 6.144/2026 de equipamentos para UBS ao município de Santa Bárbara do Leste/MG, no Novo PAC 2025, em 16/10/2026.",
+      "por_que_importa": "acompanhe o cronograma de entrega dos equipamentos para validar a infraestrutura necessária na unidade.",
+      "valor_brl": null,
+      "entes": [
+        "Santa Bárbara do Leste/MG"
+      ],
+      "tags": [
+        "PAC",
+        "UBS",
+        "doação",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7c91338a2da9bf8e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.481/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 120,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.481/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.481/2026-738734417",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de doação nº 6.481/2026 de equipamentos para UBS ao município de Andradina/SP, no âmbito do Novo PAC 2025, em 16/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Andradina/SP"
+      ],
+      "tags": [
+        "PAC",
+        "UBS",
+        "doação",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "822570f2a9ef68ea",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.471/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.471/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.471/2026-738734340",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de doação nº 7.471/2026 de equipamentos para UBS ao município de Dionísio Cerqueira/SC, no âmbito do Novo PAC 2025, em 16/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Dionísio Cerqueira/SC"
+      ],
+      "tags": [
+        "PAC",
+        "UBS",
+        "doação",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "682f98abc536416a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.557/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.557/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.557/2026-738734263",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de doação nº 7.557/2026 de equipamentos para UBS ao município de Nova Veneza/SC, no âmbito do Novo PAC 2025, em 16/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Nova Veneza/SC"
+      ],
+      "tags": [
+        "PAC",
+        "UBS",
+        "doação",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8f25e976ab139226",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Pré-Qualificação",
+      "numero": null,
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 131,
+      "edicao": "196",
+      "titulo": "Aviso de Pré-Qualificação",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-pre-qualificacao-738734163",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Oswaldo Cruz publica aviso de pré-qualificação de empresa para fornecimento de bulas e manuais de instrução em 16/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pré-qualificação",
+        "fornecimento",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "75e1ddc0f6d505b9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.731/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 115,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.731/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.731/2026-738721315",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de doação nº 3.731/2026 de equipamentos para UBS ao município de Brejinho de Nazaré/TO, no âmbito do Novo PAC 2025, em 16/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Brejinho de Nazaré/TO"
+      ],
+      "tags": [
+        "PAC",
+        "UBS",
+        "doação",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "de734feeeaea783f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.026/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 115,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.026/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.026/2026-738721234",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de doação nº 4.026/2026 de equipamentos para UBS ao município de Timon/MA, no âmbito do Novo PAC 2025, em 16/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Timon/MA"
+      ],
+      "tags": [
+        "PAC",
+        "UBS",
+        "doação",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2b9116b38f761e0c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.768/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.768/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.768/2026-738721103",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de doação nº 4.768/2026 de equipamentos para UBS ao município de São José de Princesa/PB, no âmbito do Novo PAC 2025, em 16/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São José de Princesa/PB"
+      ],
+      "tags": [
+        "PAC",
+        "UBS",
+        "doação",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "10365fcb04ce49f4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.476/2026",
+      "data_publicacao": "2026-10-16",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "196",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.476/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.476/2026-738721026",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de doação nº 7.476/2026 de equipamentos para UBS ao município de Erval Velho/SC, no âmbito do Novo PAC 2025, em 16/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Erval Velho/SC"
+      ],
+      "tags": [
+        "PAC",
+        "UBS",
+        "doação",
+        "equipamentos"
+      ],
+      "fallback": false
+    }
+  ]
+}

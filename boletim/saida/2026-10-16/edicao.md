@@ -1,0 +1,1104 @@
+# 79 doações para UBS no Novo PAC 2025 e R$ 282,8 milhões em PROADI-SUS
+
+16 de outubro de 2026
+
+Esta edição de 16 de outubro apresenta principalmente dois destaques: a Fundação Antônio Prudente recebe R$ 282,8 milhões para participação no PROADI-SUS no triênio 2027-2029, e o Ministério da Saúde publica 79 novos extratos de doação para estruturação de unidades básicas de saúde no Novo PAC 2025. Gestores de Santas Casas e hospitais filantrópicos devem priorizar o acompanhamento do PROADI-SUS, enquanto secretarias de saúde planejam a absorção dos 14 kits de teleconsulta e dos incrementos ao teto MAC em Minas Gerais, que somam R$ 7,5 milhões em Abaeté e se refletem em outras deliberações da CIB-SUS.
+
+## Em 30 segundos
+
+- MS publica 79 extratos de doação para estruturação de unidades básicas de saúde.
+- MS doa R$ 282,8 milhões à Fundação Antônio Prudente no PROADI-SUS 2027-2029.
+- MS doa 14 kits de teleconsulta para municípios de Bahia e Ceará.
+- CIB-SUS/MG aprova R$ 7,5 milhões de incremento ao teto MAC de Abaeté.
+
+## Captação de recursos
+
+### Deliberação CIB-SUS/MG nº 6.005
+
+Secretaria de Estado de Saúde
+
+Diário Oficial de Minas Gerais, página 16, de 16/10/2026
+
+Deliberação CIB-SUS/MG nº 6.005, de 15 de outubro de 2026, aprova incorporação de recurso financeiro ao Teto MAC do município de Abaeté.
+
+Por que importa. entre em contato com Abaeté para conhecer os serviços que serão custeados com o recurso incorporado ao teto.
+
+Valor: R$ 7.536.538,55
+
+[Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331238%2C%22paginaSelecionada%22%3A16%7D)
+
+### Deliberação CIB-SUS/MG nº 6.006
+
+Secretaria de Estado de Saúde
+
+Diário Oficial de Minas Gerais, página 16, de 16/10/2026
+
+Deliberação CIB-SUS/MG nº 6.006, de 15 de outubro de 2026, aprova incorporação de recurso ao Teto MAC do município de Alto Jequitibá.
+
+Por que importa. acompanhe o processo de programação do recurso aprovado para identificar oportunidades de parceria com o município.
+
+[Ver publicação](https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-16T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331238%2C%22paginaSelecionada%22%3A16%7D)
+
+### Extrato de termo de doação nº 6.038/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 119, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 6.038/2026 de bens para estruturação de UBS em Paiva/MG no âmbito do Novo PAC 2025.
+
+Por que importa. Confirme com a Secretaria Municipal de Paiva o recebimento dos equipamentos e o registro da UBS no CNES.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.038/2026-738807061)
+
+### Extrato de termo de doação nº 5.827/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 119, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Goiabeira/MG via Novo PAC 2025, conforme Extrato de Doação nº 5.827/2026, de 16/10/2026.
+
+Por que importa. Acompanhe a entrega e a instalação dos equipamentos nas UBS para garantir a conclusão do investimento.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.827/2026-738793811)
+
+### Extrato de termo de doação nº 6.060/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 119, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Pedra Bonita/MG via Novo PAC 2025, conforme Extrato de Doação nº 6.060/2026, de 16/10/2026.
+
+Por que importa. Acompanhe a entrega e a instalação dos equipamentos nas UBS para garantir a conclusão do investimento.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.060/2026-738793734)
+
+### Extrato de termo de doação nº 6.167/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 119, de 16/10/2026
+
+Extrato do Termo de Doação nº 6.167/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Santana dos Montes/MG.
+
+Por que importa. Verificar os bens relacionados no anexo e incorporá-los ao patrimônio da unidade conforme cronograma de entrega indicado.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.167/2026-738778143)
+
+### Extrato de termo de doação nº 5.610/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 118, de 16/10/2026
+
+Extrato de Doação nº 5.610/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Berilo/MG, assinado em 06/10/2026.
+
+Por que importa. Coordene com a Secretaria Municipal de Saúde a chegada dos equipamentos e a operação nas UBS.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.610/2026-738763515)
+
+### Extrato de termo de doação nº 5.627/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 118, de 16/10/2026
+
+Extrato de Doação nº 5.627/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Bonito de Minas/MG, assinado em 06/10/2026.
+
+Por que importa. Coordene com o município a chegada dos equipamentos e a ativação das UBS para seu uso.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.627/2026-738757065)
+
+### Extrato de termo de doação nº 6.234/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 119, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em São Tomás de Aquino/MG via extrato nº 6.234/2026 (16/10/2026).
+
+Por que importa. o município recebeu equipamentos para estruturação de UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.234/2026-738751593)
+
+### Extrato de termo de doação nº 5.766/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 119, de 16/10/2026
+
+Ministério da Saúde publica extrato de doação nº 5.766/2026 de equipamentos para UBS ao município de Diamantina/MG, no âmbito do Novo PAC 2025, em 16/10/2026.
+
+Por que importa. acompanhe o cronograma de entrega dos equipamentos para validar a infraestrutura necessária na unidade.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.766/2026-738734571)
+
+### Extrato de termo de doação nº 6.144/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 119, de 16/10/2026
+
+Ministério da Saúde publica extrato de doação nº 6.144/2026 de equipamentos para UBS ao município de Santa Bárbara do Leste/MG, no Novo PAC 2025, em 16/10/2026.
+
+Por que importa. acompanhe o cronograma de entrega dos equipamentos para validar a infraestrutura necessária na unidade.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.144/2026-738734512)
+
+### Extrato do termo de ajuste nº 7/2026
+
+Ministério da Saúde, Gabinete do Ministro
+
+DOU nº 196, seção 3, página 112, de 16/10/2026
+
+Extrato do termo de ajuste para participação da Fundação Antônio Prudente no PROADI-SUS no triênio 2027-2029, assinado em 14 de outubro de 2026.
+
+Por que importa. verifique junto ao AC Camargo Cancer Center quais projetos PROADI-SUS estão disponíveis para sua instituição neste triênio.
+
+Valor: R$ 282.815.706,00
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-do-termo-de-ajuste-n-7/2026-738737760)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 126, de 16/10/2026
+
+Extrato de Doação nº 00119/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de TEOFILÂNDIA/BA.
+
+Valor: R$ 25.634,40
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738691535)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 126, de 16/10/2026
+
+Extrato de Doação nº 00112/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de PLANALTO/BA.
+
+Valor: R$ 25.634,40
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738662154)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 126, de 16/10/2026
+
+Extrato de doação de kits de equipamentos para teleconsulta do Ministério da Saúde ao Município de Sátiro Dias/BA, publicado em 16 de outubro de 2026.
+
+Por que importa. verifique com a SES-MG se há previsão de doação de equipamentos de telessaúde para Minas Gerais pelo programa SUS Digital.
+
+Valor: R$ 12.817,20
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738751439)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 125, de 16/10/2026
+
+Extrato de Doação nº 00101/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município AIUABA/CE.
+
+Valor: R$ 12.817,20
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738677279)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 125, de 16/10/2026
+
+Extrato de Doação nº 00110/2026 do Ministério da Saúde, de 16 de outubro de 2026, doa kits de equipamentos para teleconsulta ao município de Piquet Carneiro/CE.
+
+Por que importa. modelos de termo de doação com encargos do Ministério da Saúde para SUS Digital podem orientar negociações com entidades de saúde em Minas.
+
+Valor: R$ 12.277,02
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738811044)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 126, de 16/10/2026
+
+Extrato de doação de kits de equipamentos para teleconsulta do Ministério da Saúde ao Município de Governador Mangabeira/BA, publicado em 16 de outubro de 2026.
+
+Por que importa. verifique com a SES-MG se há previsão de doação de equipamentos de telessaúde para Minas Gerais pelo programa SUS Digital.
+
+Valor: R$ 6.408,60
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738756757)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 126, de 16/10/2026
+
+Extrato de Doação nº 00114/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de ILHÉUS/BA.
+
+Valor: R$ 6.408,60
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738678309)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 126, de 16/10/2026
+
+Extrato de Doação nº 00117/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de SOBRADINHO/BA.
+
+Valor: R$ 6.408,60
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738660082)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 127, de 16/10/2026
+
+Extrato de Doação nº 00121/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de PINDOBAÇÚ/BA.
+
+Valor: R$ 6.408,60
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738659951)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 125, de 16/10/2026
+
+Extrato de Doação nº 00108/2026, de 16/10/2026, do Ministério da Saúde, de termo de doação de kits para teleconsulta ao Município de MORADA NOVA/CE.
+
+Valor: R$ 6.408,60
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738649676)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 126, de 16/10/2026
+
+Extrato de Doação nº 00111/2026 do Ministério da Saúde, de 16 de outubro de 2026, doa kits de equipamentos para teleconsulta ao município de Ibititá/BA.
+
+Por que importa. consulte a estrutura de doação de equipamentos SUS Digital para replicar em iniciativas de Minas.
+
+Valor: R$ 6.138,51
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738793349)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 126, de 16/10/2026
+
+Extrato de Doação nº 00116/2026 do Ministério da Saúde, de 16 de outubro de 2026, doa kits de equipamentos para teleconsulta ao município de Dom Basílio/BA.
+
+Por que importa. consulte a estrutura de doação de equipamentos SUS Digital para replicar em iniciativas de Minas.
+
+Valor: R$ 6.138,51
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738775765)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 126, de 16/10/2026
+
+Extrato de Doação nº 00113/2026 do Ministério da Saúde, de 16 de outubro de 2026, doa kits de equipamentos para teleconsulta ao município de Luís Eduardo Magalhães/BA.
+
+Por que importa. consulte a estrutura de doação de equipamentos SUS Digital para replicar em iniciativas de Minas.
+
+Valor: R$ 6.138,51
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738763130)
+
+### Extrato de doação
+
+Ministério da Saúde, Secretaria de Informação e Saúde Digital
+
+DOU nº 196, seção 3, página 126, de 16/10/2026
+
+Extrato de Doação nº 00118/2026 do Ministério da Saúde, de 16 de outubro de 2026, doa kits de equipamentos para teleconsulta ao município de Ribeira do Pombal/BA.
+
+Por que importa. consulte a estrutura de doação de equipamentos SUS Digital para replicar em iniciativas de Minas.
+
+Valor: R$ 6.138,51
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-doacao-738763053)
+
+### Extrato de termo de doação nº 3.566/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 114, de 16/10/2026
+
+Extrato de Termo de Doação nº 3.566/2026, de 16/10/2026, do Ministério da Saúde, de bens para estruturação de Unidades Básicas de Saúde ao Município de Barcarena/PA.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.566/2026-738811583)
+
+### Extrato de termo de doação nº 4.062/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 115, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 4.062/2026 de bens para estruturação de UBS em Beneditinos/PI no âmbito do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.062/2026-738811506)
+
+### Extrato de termo de doação nº 5.151/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 118, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 5.151/2026 de bens para estruturação de UBS em Aiquara/BA no âmbito do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.151/2026-738811429)
+
+### Extrato de termo de doação nº 6.623/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 120, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 6.623/2026 de bens para estruturação de UBS em Flora Rica/SP no âmbito do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.623/2026-738811352)
+
+### Extrato de termo de doação nº 6.977/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 121, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 6.977/2026 de bens para estruturação de UBS em São Simão/SP no âmbito do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.977/2026-738811275)
+
+### Extrato de termo de doação nº 7.062/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 122, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 7.062/2026 de bens para estruturação de UBS em Antônio Olinto/PR no âmbito do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.062/2026-738811198)
+
+### Extrato de termo de doação nº 7.245/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 122, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 7.245/2026 de bens para estruturação de UBS em Missal/PR no âmbito do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.245/2026-738811121)
+
+### Extrato de termo de doação nº 3.683/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 115, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 3.683/2026 de bens para estruturação de UBS em Tracuateua/PA no âmbito do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.683/2026-738807369)
+
+### Extrato de termo de doação nº 4.402/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 116, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 4.402/2026 de bens para estruturação de UBS em Quixeramobim/CE no âmbito do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.402/2026-738807292)
+
+### Extrato de termo de doação nº 4.764/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 117, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 4.764/2026 de bens para estruturação de UBS em São José de Caiana/PB no âmbito do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.764/2026-738807215)
+
+### Extrato de termo de doação nº 5.313/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 118, de 16/10/2026
+
+Ministério da Saúde publica em 16/10/2026 extrato de termo de doação nº 5.313/2026 de bens para estruturação de UBS em Irecê/BA no âmbito do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.313/2026-738807187)
+
+### Extrato de termo de doação nº 6.319/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 119, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Anchieta/ES via Novo PAC 2025, conforme Extrato de Doação nº 6.319/2026, de 16/10/2026.
+
+Por que importa. Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.319/2026-738806984)
+
+### Extrato de termo de doação nº 6.445/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 120, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em São José do Vale do Rio Preto/RJ via Novo PAC 2025, conforme Extrato de Doação nº 6.445/2026, de 16/10/2026.
+
+Por que importa. Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.445/2026-738806907)
+
+### Extrato de termo de doação nº 7.320/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 122, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Rolândia/PR via Novo PAC 2025, conforme Extrato de Doação nº 7.320/2026, de 16/10/2026.
+
+Por que importa. Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.320/2026-738806830)
+
+### Extrato de termo de doação nº 7.374/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 123, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Tapira/PR via Novo PAC 2025, conforme Extrato de Doação nº 7.374/2026, de 16/10/2026.
+
+Por que importa. Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.374/2026-738806753)
+
+### Extrato de termo de doação nº 7.440/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 123, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Caçador/SC via Novo PAC 2025, conforme Extrato de Doação nº 7.440/2026, de 16/10/2026.
+
+Por que importa. Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.440/2026-738806676)
+
+### Extrato de termo de doação nº 5.225/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 118, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Cansanção/BA via Novo PAC 2025, conforme Extrato de Doação nº 5.225/2026, de 16/10/2026.
+
+Por que importa. Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.225/2026-738793888)
+
+### Extrato de termo de doação nº 6.437/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 120, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Santa Maria Madalena/RJ via Novo PAC 2025, conforme Extrato de Doação nº 6.437/2026, de 16/10/2026.
+
+Por que importa. Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.437/2026-738793657)
+
+### Extrato de termo de doação nº 7.094/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 122, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Cafelândia/PR via Novo PAC 2025, conforme Extrato de Doação nº 7.094/2026, de 16/10/2026.
+
+Por que importa. Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.094/2026-738793580)
+
+### Extrato de termo de doação nº 7.434/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 123, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Bom Retiro/SC via Novo PAC 2025, conforme Extrato de Doação nº 7.434/2026, de 16/10/2026.
+
+Por que importa. Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.434/2026-738793503)
+
+### Extrato de termo de doação nº 7.915/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 125, de 16/10/2026
+
+Ministério da Saúde doa equipamentos para UBS em Palmitinho/RS via Novo PAC 2025, conforme Extrato de Doação nº 7.915/2026, de 16/10/2026.
+
+Por que importa. Identifique se seu município ou entidade pode participar desta modalidade do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.915/2026-738793426)
+
+### Extrato de termo de doação nº 4.599/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 116, de 16/10/2026
+
+Extrato do Termo de Doação nº 4.599/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Alhandra/PB.
+
+Por que importa. Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.599/2026-738786618)
+
+### Extrato de termo de doação nº 4.684/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 117, de 16/10/2026
+
+Extrato do Termo de Doação nº 4.684/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Juazeirinho/PB.
+
+Por que importa. Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.684/2026-738786537)
+
+### Extrato de termo de doação nº 4.965/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 117, de 16/10/2026
+
+Extrato do Termo de Doação nº 4.965/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Tuparetama/PE.
+
+Por que importa. Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.965/2026-738786460)
+
+### Extrato de termo de doação nº 7.174/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 122, de 16/10/2026
+
+Extrato do Termo de Doação nº 7.174/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Iguatu/PR.
+
+Por que importa. Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.174/2026-738786437)
+
+### Extrato de termo de doação nº 7.290/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 122, de 16/10/2026
+
+Extrato do Termo de Doação nº 7.290/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Planalto/PR.
+
+Por que importa. Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.290/2026-738786360)
+
+### Extrato de termo de doação nº 7.369/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 123, de 16/10/2026
+
+Extrato do Termo de Doação nº 7.369/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Sertanópolis/PR.
+
+Por que importa. Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.369/2026-738786283)
+
+### Extrato de termo de doação nº 4.356/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 116, de 16/10/2026
+
+Extrato do Termo de Doação nº 4.356/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Limoeiro do Norte/CE.
+
+Por que importa. Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.356/2026-738778374)
+
+### Extrato de termo de doação nº 4.631/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 116, de 16/10/2026
+
+Extrato do Termo de Doação nº 4.631/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Cabedelo/PB.
+
+Por que importa. Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.631/2026-738778297)
+
+### Extrato de termo de doação nº 4.858/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 117, de 16/10/2026
+
+Extrato do Termo de Doação nº 4.858/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Garanhuns/PE.
+
+Por que importa. Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.858/2026-738778269)
+
+### Extrato de termo de doação nº 7.506/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 123, de 16/10/2026
+
+Extrato do Termo de Doação nº 7.506/2026 (16/10/2026) do Ministério da Saúde doa bens para estruturação de unidades básicas de saúde em Iraceminha/SC.
+
+Por que importa. Monitorar a distribuição do Novo PAC nos estados pode prever padrões de alocação para Minas Gerais.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.506/2026-738778115)
+
+### Extrato de termo de doação nº 7.727/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 124, de 16/10/2026
+
+extrato de doação nº 7.727/2026 (Secretaria de Atenção Primária à Saúde, 13/10/2026) de equipamentos para UBS do programa Novo PAC 2025.
+
+Por que importa. verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.727/2026-738777989)
+
+### Extrato de termo de doação nº 6.583/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 120, de 16/10/2026
+
+extrato de doação nº 6.583/2026 (Secretaria de Atenção Primária à Saúde, 08/10/2026) de equipamentos para UBS do programa Novo PAC 2025.
+
+Por que importa. verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.583/2026-738776103)
+
+### Extrato de termo de doação nº 6.686/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 121, de 16/10/2026
+
+extrato de doação nº 6.686/2026 (Secretaria de Atenção Primária à Saúde, 08/10/2026) de equipamentos para UBS do programa Novo PAC 2025.
+
+Por que importa. verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.686/2026-738776024)
+
+### Extrato de termo de doação nº 7.235/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 122, de 16/10/2026
+
+extrato de doação nº 7.235/2026 (Secretaria de Atenção Primária à Saúde, 28/09/2026) de equipamentos para UBS do programa Novo PAC 2025.
+
+Por que importa. verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.235/2026-738775947)
+
+### Extrato de termo de doação nº 7.673/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 124, de 16/10/2026
+
+extrato de doação nº 7.673/2026 (Secretaria de Atenção Primária à Saúde, 13/10/2026) de equipamentos para UBS do programa Novo PAC 2025.
+
+Por que importa. verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.673/2026-738775870)
+
+### Extrato de termo de doação nº 8.027/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 125, de 16/10/2026
+
+extrato de doação nº 8.027/2026 (Secretaria de Atenção Primária à Saúde, 08/10/2026) de equipamentos para UBS do programa Novo PAC 2025.
+
+Por que importa. verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.027/2026-738775793)
+
+### Extrato de termo de doação nº 3.499/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 114, de 16/10/2026
+
+extrato de doação nº 3.499/2026 (Secretaria de Atenção Primária à Saúde, 08/10/2026) de equipamentos para UBS do programa Novo PAC 2025.
+
+Por que importa. verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.499/2026-738768999)
+
+### Extrato de termo de doação nº 4.290/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 116, de 16/10/2026
+
+extrato de doação nº 4.290/2026 (Secretaria de Atenção Primária à Saúde, 28/09/2026) de equipamentos para UBS do programa Novo PAC 2025.
+
+Por que importa. verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.290/2026-738768976)
+
+### Extrato de termo de doação nº 4.403/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 116, de 16/10/2026
+
+extrato de doação nº 4.403/2026 (Secretaria de Atenção Primária à Saúde, 08/10/2026) de equipamentos para UBS do programa Novo PAC 2025.
+
+Por que importa. verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.403/2026-738768845)
+
+### Extrato de termo de doação nº 5.304/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 118, de 16/10/2026
+
+extrato de doação nº 5.304/2026 (Secretaria de Atenção Primária à Saúde, 06/10/2026) de equipamentos para UBS do programa Novo PAC 2025.
+
+Por que importa. verifique se ainda há inscrição aberta para municípios mineiros na modalidade equipamentos para UBS do Novo PAC 2025.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.304/2026-738768768)
+
+### Extrato de termo de doação nº 6.444/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 120, de 16/10/2026
+
+Extrato de Doação nº 6.444/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a São José de Ubá/RJ, assinado em 08/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.444/2026-738768745)
+
+### Extrato de termo de doação nº 6.836/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 121, de 16/10/2026
+
+Extrato de Doação nº 6.836/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Pederneiras/SP, assinado em 06/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.836/2026-738768614)
+
+### Extrato de termo de doação nº 8.061/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 125, de 16/10/2026
+
+Extrato de Doação nº 8.061/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Vicente Dutra/RS, assinado em 06/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.061/2026-738768537)
+
+### Extrato de termo de doação nº 4.420/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 116, de 16/10/2026
+
+Extrato de Doação nº 4.420/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Tamboril/CE, assinado em 06/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.420/2026-738763592)
+
+### Extrato de termo de doação nº 6.980/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 121, de 16/10/2026
+
+Extrato de Doação nº 6.980/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Sebastianópolis do Sul/SP, assinado em 06/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.980/2026-738763438)
+
+### Extrato de termo de doação nº 7.079/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 122, de 16/10/2026
+
+Extrato de Doação nº 7.079/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Bela Vista da Caroba/PR, assinado em 06/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.079/2026-738763361)
+
+### Extrato de termo de doação nº 7.246/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 122, de 16/10/2026
+
+Extrato de Doação nº 7.246/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Moreira Sales/PR, assinado em 28/09/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.246/2026-738763284)
+
+### Extrato de termo de doação nº 8.099/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 125, de 16/10/2026
+
+Extrato de Doação nº 8.099/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Douradina/MS, assinado em 06/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.099/2026-738763207)
+
+### Extrato de termo de doação nº 6.514/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 120, de 16/10/2026
+
+Extrato de Doação nº 6.514/2026 do Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde a Barretos/SP, assinado em 06/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.514/2026-738756988)
+
+### Extrato de termo de doação nº 7.482/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 123, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Fraiburgo/SC via extrato nº 7.482/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.482/2026-738756965)
+
+### Extrato de termo de doação nº 7.885/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 124, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Monte Belo do Sul/RS via extrato nº 7.885/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.885/2026-738756883)
+
+### Extrato de termo de doação nº 3.425/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 114, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Machadinho D'Oeste/RO via extrato nº 3.425/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.425/2026-738751770)
+
+### Extrato de termo de doação nº 3.830/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 115, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Xambioá/TO via extrato nº 3.830/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.830/2026-738751693)
+
+### Extrato de termo de doação nº 4.574/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 116, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Severiano Melo/RN via extrato nº 4.574/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.574/2026-738751616)
+
+### Extrato de termo de doação nº 6.794/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 121, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Nhandeara/SP via extrato nº 6.794/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.794/2026-738751495)
+
+### Extrato de termo de doação nº 3.752/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 115, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Esperantina/TO via extrato nº 3.752/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.752/2026-738737752)
+
+### Extrato de termo de doação nº 4.259/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 116, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Wall Ferraz/PI via extrato nº 4.259/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.259/2026-738737621)
+
+### Extrato de termo de doação nº 5.061/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 117, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em São Luís do Quitunde/AL via extrato nº 5.061/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.061/2026-738737544)
+
+### Extrato de termo de doação nº 8.203/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 121, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Miguelópolis/SP via extrato nº 8.203/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.203/2026-738737467)
+
+### Extrato de termo de doação nº 6.996/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 121, de 16/10/2026
+
+Secretaria de Atenção Primária à Saúde doa equipamentos para UBS em Taciba/SP via extrato nº 6.996/2026 (16/10/2026).
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.996/2026-738737390)
+
+### Extrato de termo de doação nº 4.838/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 117, de 16/10/2026
+
+Ministério da Saúde publica extrato de doação nº 4.838/2026 de equipamentos para UBS ao município de Caruaru/PE, no âmbito do Novo PAC 2025, em 16/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.838/2026-738734652)
+
+### Extrato de termo de doação nº 6.481/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 120, de 16/10/2026
+
+Ministério da Saúde publica extrato de doação nº 6.481/2026 de equipamentos para UBS ao município de Andradina/SP, no âmbito do Novo PAC 2025, em 16/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.481/2026-738734417)
+
+### Extrato de termo de doação nº 7.471/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 123, de 16/10/2026
+
+Ministério da Saúde publica extrato de doação nº 7.471/2026 de equipamentos para UBS ao município de Dionísio Cerqueira/SC, no âmbito do Novo PAC 2025, em 16/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.471/2026-738734340)
+
+### Extrato de termo de doação nº 7.557/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 124, de 16/10/2026
+
+Ministério da Saúde publica extrato de doação nº 7.557/2026 de equipamentos para UBS ao município de Nova Veneza/SC, no âmbito do Novo PAC 2025, em 16/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.557/2026-738734263)
+
+### Extrato de termo de doação nº 3.731/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 115, de 16/10/2026
+
+Ministério da Saúde publica extrato de doação nº 3.731/2026 de equipamentos para UBS ao município de Brejinho de Nazaré/TO, no âmbito do Novo PAC 2025, em 16/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.731/2026-738721315)
+
+### Extrato de termo de doação nº 4.026/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 115, de 16/10/2026
+
+Ministério da Saúde publica extrato de doação nº 4.026/2026 de equipamentos para UBS ao município de Timon/MA, no âmbito do Novo PAC 2025, em 16/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.026/2026-738721234)
+
+### Extrato de termo de doação nº 4.768/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 117, de 16/10/2026
+
+Ministério da Saúde publica extrato de doação nº 4.768/2026 de equipamentos para UBS ao município de São José de Princesa/PB, no âmbito do Novo PAC 2025, em 16/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.768/2026-738721103)
+
+### Extrato de termo de doação nº 7.476/2026
+
+Ministério da Saúde, Secretaria de Atenção Primária à Saúde
+
+DOU nº 196, seção 3, página 123, de 16/10/2026
+
+Ministério da Saúde publica extrato de doação nº 7.476/2026 de equipamentos para UBS ao município de Erval Velho/SC, no âmbito do Novo PAC 2025, em 16/10/2026.
+
+[Ver publicação](https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.476/2026-738721026)
+
+## Fale com a Thauma
+
+Pedro William responde no WhatsApp o que estes atos mudam para a sua instituição: [(31) 98448-3183](https://wa.me/5531984483183?text=Ol%C3%A1%2C%20vi%20o%20Radar%20de%20capta%C3%A7%C3%A3o%20de%2016%2F10%2F2026%20e%20quero%20conversar%20sobre%20solu%C3%A7%C3%B5es%20de%20IA%20para%20sa%C3%BAde)
+
+---
+
+Fontes: DOU (edição 196, pp. 1-145); Diário Oficial de Minas Gerais (pp. 16-16).
+
+Thauma. Inteligência e narrativa em saúde.
