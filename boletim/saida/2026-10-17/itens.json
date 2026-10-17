@@ -1,0 +1,252 @@
+{
+  "data": "2026-10-17",
+  "gerado_em": "2026-10-17T13:12:10.369489+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "2 alterações modificam pactuação e financiamento de doenças transmissíveis em Minas",
+    "em_30_segundos": [
+      "Deliberação CIB-SUS 6.008 altera inciso XVIII sobre pactuação de matérias em Minas Gerais",
+      "Resolução SES 11.699 altera critério de cálculo de financiamento para doenças transmissíveis",
+      "SES de Minas publicou deliberação 6.008 e resolução 11.699 em 16 de outubro"
+    ],
+    "intro": "Nesta edição de 17 de outubro de 2026, a Secretaria de Estado de Saúde de Minas Gerais publicou 2 atos que alteram critérios importantes da gestão de recursos no SUS: a deliberação 6.008 modifica a pactuação de matérias em reunião ordinária, e a resolução 11.699 muda o cálculo do financiamento para estratégia de enfrentamento de doenças transmissíveis. Os gestores de Santas Casas, hospitais filantrópicos e secretarias municipais devem acompanhar especialmente a resolução 11.699, que afeta diretamente a forma como os recursos para doenças transmissíveis serão calculados, potencialmente impactando o custeio anual de ações de saúde pública.",
+    "parcial": false,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "vazio",
+        "edicao": null,
+        "paginas": null,
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ok",
+        "edicao": null,
+        "paginas": "pp. 19-20",
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "406ed84ed430acbe",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11639",
+      "data_publicacao": "2026-10-17",
+      "secao": null,
+      "pagina": 19,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES Nº 11639 DE 15 DE OUTUBRO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331250%2C%22paginaSelecionada%22%3A19%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Resolução SES/MG nº 11639 de 15 de outubro de 2026 designa servidores para funções gratificadas de regulação estadual e regional.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ezequiel Dias"
+      ],
+      "tags": [
+        "designação",
+        "pessoal",
+        "regulação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "671795a21bfa6320",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": null,
+      "data_publicacao": "2026-10-17",
+      "secao": null,
+      "pagina": 19,
+      "edicao": null,
+      "titulo": "PORTARIA FUNED N. º 83, DE 14 DE OUTUBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331250%2C%22paginaSelecionada%22%3A19%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria FUNED nº 83 de 14 de outubro de 2026 altera promoção de servidora Janaina Diniz Rocha em cumprimento a decisão judicial.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Ezequiel Dias"
+      ],
+      "tags": [
+        "promoção",
+        "pessoal",
+        "decisão judicial"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2ecc1d467667470c",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "DELIBERAÇÃO",
+      "numero": "6.008",
+      "data_publicacao": "2026-10-17",
+      "secao": null,
+      "pagina": 19,
+      "edicao": null,
+      "titulo": "DELIBERAÇÃO CIB-SUS/MG Nº 6.008,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331250%2C%22paginaSelecionada%22%3A19%7D",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Deliberação CIB-SUS/MG nº 6.008 de 16 de outubro de 2026 altera inciso XVIII de deliberação anterior sobre pactuação de matérias em reunião ordinária.",
+      "por_que_importa": "Verificar o anexo disponível no site da SES-MG para conhecer as alterações nas regras de pactuação de recursos para enfrentamento de doenças transmissíveis.",
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "deliberação",
+        "pactuação",
+        "arboviroses"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d2118292e4432ddd",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "RESOLUÇÃO",
+      "numero": "11.699",
+      "data_publicacao": "2026-10-17",
+      "secao": null,
+      "pagina": 19,
+      "edicao": null,
+      "titulo": "RESOLUÇÃO SES/MG Nº 11.699, DE 16 DE OUTUBRO DE 2026.",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331250%2C%22paginaSelecionada%22%3A19%7D",
+      "categoria": "B",
+      "relevancia": 3,
+      "resumo": "Resolução SES/MG nº 11.699 de 16 de outubro de 2026 altera critério de cálculo de financiamento para estratégia de enfrentamento de doenças transmissíveis.",
+      "por_que_importa": "Revisar como será calculada a parcela de preparação a partir de 2026, pois passa a considerar cumprimento de indicadores conforme Anexo II.",
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "financiamento",
+        "indicadores",
+        "arboviroses"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fd5acd792d832796",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "75",
+      "data_publicacao": "2026-10-17",
+      "secao": null,
+      "pagina": 19,
+      "edicao": null,
+      "titulo": "PORTARIA DE RECONDUÇÃO SES Nº 75/2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331250%2C%22paginaSelecionada%22%3A19%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SES nº 75 de 17 de outubro de 2026 recondutor comissão de processo administrativo disciplinar por 60 dias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "processo administrativo",
+        "prorrogação",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6877ac32b3f3ea53",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "32",
+      "data_publicacao": "2026-10-17",
+      "secao": null,
+      "pagina": 19,
+      "edicao": null,
+      "titulo": "PORTARIA ESP Nº 32, 15 DE OUTUBRO DE 2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331250%2C%22paginaSelecionada%22%3A19%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria ESP nº 32 de 15 de outubro de 2026 altera composição do Grupo permanente de Diversidade, Acessibilidade e Inclusão da ESP-MG.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Escola de Saúde Pública do Estado de Minas Gerais"
+      ],
+      "tags": [
+        "grupo de trabalho",
+        "composição",
+        "inclusão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "024047c40e1ecfde",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "PORTARIA",
+      "numero": "3.619",
+      "data_publicacao": "2026-10-17",
+      "secao": null,
+      "pagina": 20,
+      "edicao": null,
+      "titulo": "PORTARIA PRESIDENCIAL Nº 3.619,",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331250%2C%22paginaSelecionada%22%3A20%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria FHEMIG nº 3.619 de 16 de outubro de 2026 prorroga por 30 dias suspensão preventiva de servidor lotado no Instituto Raul Soares.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Raul Soares"
+      ],
+      "tags": [
+        "suspensão",
+        "disciplinar",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7ecceff77a38b2ac",
+      "fonte": "iofmg",
+      "orgao": "Secretaria de Estado de Saúde",
+      "unidade": null,
+      "tipo": "EXTRATO",
+      "numero": "44",
+      "data_publicacao": "2026-10-17",
+      "secao": null,
+      "pagina": 20,
+      "edicao": null,
+      "titulo": "EXTRATO DE ORDEM DE SERVIÇO Nº 44 DE 14/10/2026",
+      "url": "https://www.jornalminasgerais.mg.gov.br/edicao-do-dia?dados=%7B%22dataPublicacaoSelecionada%22%3A%222026-10-17T03%3A00%3A00.000Z%22%2C%22idCadernoEdicaoSelecionado%22%3A331250%2C%22paginaSelecionada%22%3A20%7D",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato nº 44 de 14 de outubro de 2026 publica atos de pessoal na FHEMIG incluindo processo administrativo, delegação, exoneração e férias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Hospitalar do Estado de Minas Gerais",
+        "Hospital Eduardo de Menezes"
+      ],
+      "tags": [
+        "pessoal",
+        "exoneração",
+        "férias"
+      ],
+      "fallback": false
+    }
+  ]
+}
