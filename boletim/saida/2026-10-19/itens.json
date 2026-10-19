@@ -1,0 +1,3424 @@
+{
+  "data": "2026-10-19",
+  "gerado_em": "2026-10-19T16:56:52.050135+00:00",
+  "avisos": [
+    "12 itens além do teto de 120 não foram classificados"
+  ],
+  "edicao": {
+    "titulo": "50 doações para UBS e 47 veículos somam R$ 21,6 milhões no MS",
+    "em_30_segundos": [
+      "Ministério da Saúde distribui 47 outros veículos para 45 municípios, totalizando R$ 18,7 milhões.",
+      "MS publica 50 extratos de doação para estruturação de unidades básicas de saúde em diversos municípios.",
+      "MS readequa via portaria nº 998 projeto PRONON no Real Hospital Português de Beneficência em Pernambuco, com R$ 2,8 milhões.",
+      "ANS publica resolução nº 682 para adicionar broncoscopia com criobiópsia ao rol de procedimentos obrigatórios."
+    ],
+    "intro": "O boletim de hoje apresenta 50 extratos de doação do Ministério da Saúde para estruturação de unidades básicas de saúde em diversos municípios, além da distribuição de 47 veículos para 45 prefeituras, totalizando R$ 21,6 milhões em repasses que reforçam a atenção primária em todo o país. Também merecem atenção a portaria de readequação do projeto PRONON no Real Hospital Português de Beneficência em Pernambuco, com R$ 2,8 milhões, e a resolução que amplia o rol de procedimentos obrigatórios em saúde suplementar.",
+    "parcial": false,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "197",
+        "paginas": "pp. 1-230",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "vazio",
+        "edicao": null,
+        "paginas": null,
+        "avisos": []
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "10dc86a887f005e3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739118290",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de 1ª prorrogação de ofício do convênio nº 949364/2023 da Sociedade Hospital Bom Jesus, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 128688,
+      "entes": [
+        "Sociedade Hospital Bom Jesus"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4aab8a415ef21216",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739118209",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de 1ª prorrogação de ofício do convênio nº 971176/2024 da Irmandade da Santa Casa de Misericórdia de Birigui, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 1600083,
+      "entes": [
+        "Irmandade da Santa Casa de Misericórdia de Birigui"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6ac289943d0d297f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739109814",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de 6ª prorrogação de ofício do convênio nº 918156/2021 da Associação de Pais e Amigos dos Excepcionais de Aperibe, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 100091,
+      "entes": [],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "72f944d74aea487a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739109786",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de 1ª prorrogação de ofício do convênio nº 968036/2024 da Irmandade da Santa Casa de Misericórdia de Laranjal Paulista, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 400304,
+      "entes": [
+        "Irmandade da Santa Casa de Misericórdia de Laranjal Paulista"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d1ed2c93f716217a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739101778",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de 10ª prorrogação de ofício do convênio nº 852630/2017 do Fundo Estadual de Saúde do Ceará, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 799950,
+      "entes": [],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "755cdd8989909d3e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739101697",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de 4ª prorrogação de ofício do convênio nº 938262/2022 da Fundação Assistencial da Paraíba, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 147437,
+      "entes": [],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "08c82cc0e308be89",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Edital",
+      "numero": "85/",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EDITAL Nº 85/CODER/CGDEV/FNS/SE/MS, DE 15 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-n-85/coder/cgdev/fns/se/ms-de-15-de-outubro-de-2026-739101674",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica edital nº 85/CODER/CGDEV/FNS/SE/MS de 15 de outubro de 2026 convocando pessoa em endereço desconhecido para retirar comunicação sobre devolução de valores indevidamente recebidos no PMMB.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital",
+        "convocação",
+        "devolução"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "003b85c4d3e5bfa5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739093924",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de 4ª prorrogação de ofício do convênio nº 921283/2021 da Associação Beneficente Nossa Senhora do Desterro, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 268723,
+      "entes": [],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "43c92880b0e9d0bc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739093842",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de 2ª prorrogação de ofício do convênio nº 971128/2024 do Fundo Estadual de Saúde de Mato Grosso, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 4000000,
+      "entes": [],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f43c0e1d1fe65386",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": "6/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "197",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO Nº 6/2026",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-n-6/2026-739093457",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Distrito Sanitário Especial Indígena Médio Rio Purus publica aviso de chamamento público nº 6/2026 para locação de imóvel em Lábrea destinado à Casa de Saúde do DSEI.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Lábrea"
+      ],
+      "tags": [
+        "chamamento público",
+        "imóvel",
+        "saúde indígena"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c4a0acabb3e74b11",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": "178/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "197",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO Nº 178/2026",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-n-178/2026-739093327",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Oswaldo Cruz publica aviso de chamamento público nº 178/2026 de Farmanguinhos para pesquisa de mercado de material elétrico via pregão eletrônico em 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "aviso",
+        "licitação",
+        "pregão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4d2b7853fda6870a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739084933",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de 1ª prorrogação de ofício do convênio nº 973332/2024 da Sociedade de Assistência e Proteção à Infância de Fortaleza, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 664526,
+      "entes": [],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ad985254e2d43993",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739076029",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde prorroga convênio nº 921245/2021 com Fundação Médico Social Rural de São Martinho até 25 de setembro de 2027.",
+      "por_que_importa": null,
+      "valor_brl": 100000,
+      "entes": [
+        "Fundação Médico Social Rural de São Martinho"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "santa catarina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "13e571a9adf9359d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739075952",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde prorroga convênio nº 922584/2021 com Liga Mossoroense de Estudos e Combate ao Cancer até 25 de setembro de 2027.",
+      "por_que_importa": null,
+      "valor_brl": 100000,
+      "entes": [
+        "Liga Mossoroense de Estudos e Combate ao Cancer"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio grande do norte"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f1c1d26454c8745f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739075924",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde prorroga convênio nº 935387/2022 com Fundação de Saúde Dilson de Quadros Godinho de Minas Gerais até 25 de setembro de 2027.",
+      "por_que_importa": null,
+      "valor_brl": 500000,
+      "entes": [
+        "Fundação de Saúde Dilson de Quadros Godinho"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "minas gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "42f5e9d9408c3e3c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739075847",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde prorroga convênio nº 962408/2024 com Santa Casa de Misericórdia de Araçatuba em Recuperação Judicial até 08 de abril de 2028.",
+      "por_que_importa": null,
+      "valor_brl": 501249,
+      "entes": [
+        "Santa Casa de Misericórdia de Araçatuba"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "são paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ea2421f33b6e59e5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "505",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "197",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 505, DE 16 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-505-de-16-de-outubro-de-2026-739075413",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica Edital de Notificação nº 505 de 16 de outubro de 2026 para notificar empresa Jucelino Alves da Silva sobre procedimento de averiguação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "farmácia popular",
+        "averiguação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e1c8ea618490e208",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739072011",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde prorroga convênio nº 930307/2022 com Associação Beneficente de Bastos até 25 de setembro de 2027.",
+      "por_que_importa": null,
+      "valor_brl": 170254,
+      "entes": [
+        "Associação Beneficente de Bastos"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "são paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "455ed52ae463889e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739050656",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde prorroga convênio nº 904810/2020 com Associação Fluminense de Assistência à Mulher, à Criança e ao Idoso até 25 de setembro de 2027.",
+      "por_que_importa": null,
+      "valor_brl": 170000,
+      "entes": [
+        "Associação Fluminense de Assistência à Mulher, à Criança e ao Idoso"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio de janeiro"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0a361589d1cc31b9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739050575",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde prorroga convênio nº 973732/2024 com Fundação Antonia Maria da Conceição do Ceará até 08 de abril de 2028.",
+      "por_que_importa": null,
+      "valor_brl": 1874690,
+      "entes": [
+        "Fundação Antonia Maria da Conceição"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "ceará"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "56eb573420e3ecdd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "504",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "197",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 504, DE 16 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-504-de-16-de-outubro-de-2026-739050113",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde torna sem efeito Edital de Notificação nº 441 publicado em 14 de agosto de 2026 por erro material de identificação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "retificação",
+        "erro material"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "985b39aa2f18773c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739048339",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde prorroga convênio nº 971124/2024 com Fundo Estadual de Saúde do Ceará até 15 de outubro de 2028.",
+      "por_que_importa": null,
+      "valor_brl": 320000,
+      "entes": [
+        "Fundo Estadual de Saúde do Ceará"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "ceará"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3298645e5dae27ff",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739048262",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde prorroga convênio nº 973340/2024 com Fundo Municipal de Saúde de Suzano até 16 de outubro de 2027.",
+      "por_que_importa": null,
+      "valor_brl": 200000,
+      "entes": [
+        "Fundo Municipal de Saúde de Suzano"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "são paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "15a5412ef6d5f9c9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "197",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-739047338",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Oswaldo Cruz publica Aviso de Alteração de Edital do Pregão 450/2026 para aquisição de impressoras Zebras e câmeras IP com nova data de realização.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "alteração de edital",
+        "aquisição"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "164f7d17e8274e86",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739035775",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 6º prorrogação de ofício do Convênio nº 917995/2021 da Associação Beneficente de Bastos.",
+      "por_que_importa": null,
+      "valor_brl": 150000,
+      "entes": [
+        "ASSOCIACAO BENEFICENTE DE BASTOS"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "são paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fd32beb25f8ea6a3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739032373",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 6º prorrogação de ofício do Convênio nº 922586/2021 da Associação Congregação de Santa Catarina.",
+      "por_que_importa": null,
+      "valor_brl": 700000,
+      "entes": [
+        "ASSOCIACAO CONGREGACAO DE SANTA CATARINA"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio de janeiro"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4845e08c1cbca2b6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739019727",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 6º prorrogação de ofício do Convênio nº 921299/2021 da Irmandade de Misericórdia de Porto Ferreira.",
+      "por_que_importa": null,
+      "valor_brl": 254450,
+      "entes": [
+        "IRMANDADE DE MISERICORDIA DE PORTO FERREIRA"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "são paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d217d9a7dbf4f4fe",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739019652",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 1º prorrogação de ofício do Convênio nº 971771/2024 do Hospital de Caridade Frei Clemente.",
+      "por_que_importa": null,
+      "valor_brl": 241948,
+      "entes": [
+        "HOSPITAL DE CARIDADE FREI CLEMENTE"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio grande do sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3041743085d595ba",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739016927",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 7º prorrogação de ofício do Convênio nº 905292/2020 da Universidade Estadual de Campinas.",
+      "por_que_importa": null,
+      "valor_brl": 550000,
+      "entes": [
+        "UNIVERSIDADE ESTADUAL DE CAMPINAS"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "são paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e1446ddcc830f435",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739016801",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 6º prorrogação de ofício do Convênio nº 918283/2021 da Associação Fluminense de Reabilitação AFR.",
+      "por_que_importa": null,
+      "valor_brl": 149997,
+      "entes": [
+        "ASSOCIACAO FLUMINENSE DE REABILITACAO AFR"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio de janeiro"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "56225d13dc992771",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739016724",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 1º prorrogação de ofício do Convênio nº 962377/2024 da Sociedade de Assistência e Proteção à Infância de Fortaleza.",
+      "por_que_importa": null,
+      "valor_brl": 200000,
+      "entes": [
+        "SOCIEDADE DE ASSISTENCIA E PROTECAO A INFANCIA DE FORTALEZA"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "ceará"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d518b671821ea271",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739001188",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 9º prorrogação de ofício do Convênio nº 879347/2018 da Irmandade da Santa Misericórdia de Angra dos Reis.",
+      "por_que_importa": null,
+      "valor_brl": 100060,
+      "entes": [
+        "IRMANDADE DA SANTA MISERICORDIA DE ANGRA DOS REIS"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio de janeiro"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "543e5e37fae1d53c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739001057",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 7º prorrogação de ofício do Convênio nº 905512/2020 da Associação Fluminense de Assistência à Mulher, à Criança e ao Idoso.",
+      "por_que_importa": null,
+      "valor_brl": 100000,
+      "entes": [
+        "ASSOCIACAO FLUMINENSE DE ASSISTENCIA A MULHER A CRIANCA E AO IDOSO"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio de janeiro"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3b8726e24751ea22",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739000980",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 2º prorrogação de ofício do Convênio nº 973586/2024 do Fundo Municipal de Saúde.",
+      "por_que_importa": null,
+      "valor_brl": 200000,
+      "entes": [
+        "FUNDO MUNICIPAL DE SAUDE"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "são paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b0dbab397df0887f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "514",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "197",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 514, DE 16 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-514-de-16-de-outubro-de-2026-739000514",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação SCTIE/MS nº 514, de 16 de outubro de 2026, da Secretária Adjunta de Ciência, Tecnologia e Inovação em Saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "procedimento administrativo",
+        "farmácia popular"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bdfdc2427017bab4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738987151",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 5º prorrogação de ofício do Convênio nº 922656/2021 da Liga Mossoroense de Estudos e Combate ao Câncer.",
+      "por_que_importa": null,
+      "valor_brl": 500000,
+      "entes": [
+        "LIGA MOSSOROENSE DE ESTUDOS E COMBATE AO CANCER"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio grande do norte"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "01facb761f91e794",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738987066",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de prorrogação de ofício do convênio nº 970341/2024, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 1177314,
+      "entes": [
+        "Sociedade de Assistência e Proteção à Infância de Fortaleza"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "ceará"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6dfad6c98800f182",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738986939",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de prorrogação de ofício do convênio nº 989467/2025, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 300000,
+      "entes": [
+        "Fundação Síndrome de Down"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "são paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e3d2ab19272e87dc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738984432",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato da 7ª prorrogação de ofício do convênio nº 904801/2020, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 100008,
+      "entes": [
+        "Centro de Atendimento e. Especializado Filhos de Deus"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "ceará"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a0ae5ca9ba91f3ec",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738984306",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de prorrogação de ofício do convênio nº 946456/2023, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 1999978,
+      "entes": [
+        "Associação Hospitalar de Sergipe"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "sergipe"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7aab2384ec37f609",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "504",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "197",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 504, DE 13 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-504-de-13-de-outubro-de-2026-738984092",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica edital de notificação SCTIE/MS nº 504, de 13 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "farmácia popular",
+        "débito"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "439513049729f558",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "510",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "197",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 510, DE 16 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-510-de-16-de-outubro-de-2026-738984015",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica edital de notificação SCTIE/MS nº 510, de 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "farmácia popular",
+        "averiguação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5e58c000323c4f70",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "516",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "197",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 516, DE 16 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-516-de-16-de-outubro-de-2026-738983936",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica edital de notificação SCTIE/MS nº 516, de 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "farmácia popular",
+        "averiguação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "60908eae11f1a11b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 115,
+      "edicao": "197",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-738983834",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Anvisa publica aviso de alteração de edital do Pregão 4/2026, de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "pregão",
+        "secretariado"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7f7f042d0777dcf7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "511",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "197",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 511, DE 16 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-511-de-16-de-outubro-de-2026-738982075",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica edital de notificação SCTIE/MS nº 511, de 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "farmácia popular",
+        "averiguação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "60b2ac57136ae26d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738970246",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato da 5ª prorrogação de ofício do convênio nº 929709/2022, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 102950,
+      "entes": [
+        "Círculo Operário de Orobo"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "pernambuco"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1d7bb8bd99303314",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738970220",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de prorrogação de ofício do convênio nº 953725/2023, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 350000,
+      "entes": [
+        "Associação Hospitalar Dr. Oscar Benevolo"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio grande do sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c061a04afb6323bf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-parcelamento-de-debito-738970141",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de termo de parcelamento de débito nº 116/2026, de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 11119.17,
+      "entes": [],
+      "tags": [
+        "parcelamento",
+        "débito",
+        "glosa técnica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a6778e55fb8168a7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738968887",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 7ª prorrogação de ofício do convênio 899542/2020 do Ministério da Saúde, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 110000,
+      "entes": [
+        "Fundação Aurelina Virgília Fair"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "bahia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "14f51e060f262827",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738968865",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 5ª prorrogação de ofício do convênio 916387/2021 do Ministério da Saúde, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 350074,
+      "entes": [
+        "Irmandade da Santa Casa de Mis de Tupi Paulista"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "são paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d36aa079c35615cc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738968734",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 1ª prorrogação de ofício do convênio 938267/2022 do Ministério da Saúde, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 169962,
+      "entes": [
+        "Fundação de Assistência Social de Anápolis"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "goias"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "96aa49b35a5f84c4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738955317",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 6ª prorrogação de ofício do convênio 918403/2021 do Ministério da Saúde, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 1250000,
+      "entes": [
+        "Santa Casa de Misericórdia de São João da Barra"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio de janeiro"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f0432e56f5234e1e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738955233",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 6ª prorrogação de ofício do convênio 922321/2021 do Ministério da Saúde, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 404066,
+      "entes": [
+        "Irmandade de Santa Casa de Misericórdia de Valinhos"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "são paulo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c7eefdfb6ca34eaf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738955107",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 1ª prorrogação de ofício do convênio 972722/2024 do Ministério da Saúde, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 236880,
+      "entes": [
+        "Fundo Municipal de Saúde"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "mato grosso do sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "82cbc65158578f97",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "506",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "197",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 506, DE 16 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-506-de-16-de-outubro-de-2026-738954853",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação SCTIE/MS nº 506 de 16 de outubro de 2026 notificando empresa sobre procedimento de averiguação do Programa Farmácia Popular.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "farmácia popular"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bc2e4cfa5852ed6c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "515",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 114,
+      "edicao": "197",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 515, DE 16 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-515-de-16-de-outubro-de-2026-738954722",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação SCTIE/MS nº 515 de 16 de outubro de 2026 notificando empresa sobre procedimento de averiguação do Programa Farmácia Popular.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "farmácia popular"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "79f74a180e50d034",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738950606",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 10ª prorrogação de ofício do convênio 862017/2017 do Ministério da Saúde, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 200030,
+      "entes": [
+        "Fundação Governador Flávio Ribeiro Coutinho"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "paraiba"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "80d31b1adb07406f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738950534",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 2ª prorrogação de ofício do convênio 972740/2024 do Ministério da Saúde, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 245272,
+      "entes": [
+        "Fundo Municipal de Saúde de Paraíso das Águas"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "mato grosso do sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8d44d757cb5f3097",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 104,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738950511",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de 1ª prorrogação de ofício do convênio 918409/2021 do Ministério da Saúde, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 150021,
+      "entes": [
+        "Fundação Araucária"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "rio grande do sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "00808f210fcb702d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "509",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "197",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 509, DE 16 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-509-de-16-de-outubro-de-2026-738950149",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação SCTIE/MS nº 509 de 16 de outubro de 2026 notificando empresa sobre procedimento de averiguação do Programa Farmácia Popular.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "farmácia popular"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4ecac5a580b49e64",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 103,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738944476",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "extrato de prorrogação de ofício do Ministério da Saúde do Convênio nº 868761/2018, assinado em 7 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 100000,
+      "entes": [
+        "Associação Hospital Nossa Senhora da Saúde"
+      ],
+      "tags": [
+        "convênio",
+        "prorrogação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "156021cab48cb6a4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 105,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFICIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-738944390",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "extrato de prorrogação de ofício do Ministério da Saúde do Convênio nº 973713/2024, assinado em 16 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 244680,
+      "entes": [],
+      "tags": [
+        "convênio",
+        "prorrogação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e700f65daac3cc82",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Portaria",
+      "numero": "998",
+      "data_publicacao": "2026-10-19",
+      "secao": "1",
+      "pagina": 186,
+      "edicao": "197",
+      "titulo": "PORTARIA SE/MS Nº 998, DE 15 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-se/ms-n-998-de-15-de-outubro-de-2026-738848518",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "portaria SE/MS nº 998, de 15 de outubro de 2026, aprova readequação de projeto PRONON no Real Hospital Português de Beneficência em Pernambuco.",
+      "por_que_importa": "confira se hospital mineiro com projeto PRONON pode solicitar readequação de valor para equipamento diferente, como neste caso.",
+      "valor_brl": 2832181.01,
+      "entes": [
+        "Real Hospital Português de Beneficência em Pernambuco"
+      ],
+      "tags": [
+        "pronon",
+        "readequação",
+        "recurso",
+        "regra:pronas-pronon"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1eda15958f26e089",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Portaria Conjunta",
+      "numero": "88",
+      "data_publicacao": "2026-10-19",
+      "secao": "1",
+      "pagina": 187,
+      "edicao": "197",
+      "titulo": "PORTARIA CONJUNTA SGTES/SAES Nº 88, DE 16 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-conjunta-sgtes/saes-n-88-de-16-de-outubro-de-2026-738842512",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "portaria conjunta SGTES/SAES nº 88, de 16 de outubro de 2026, concede certificação de hospital de ensino - nível 1 ao Hospital Escola Luiz Gioseffi Jannuzzi.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Escola Luiz Gioseffi Jannuzzi"
+      ],
+      "tags": [
+        "certificação",
+        "hospital de ensino"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0237a4c804acdfde",
+      "fonte": "dou",
+      "orgao": "Presidência da República",
+      "unidade": "Casa Civil",
+      "tipo": "Resolução",
+      "numero": "44",
+      "data_publicacao": "2026-10-19",
+      "secao": "1",
+      "pagina": 7,
+      "edicao": "197",
+      "titulo": "RESOLUÇÃO CRD Nº 44, DE 14 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-crd-n-44-de-14-de-outubro-de-2026-738860497",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "resolução CRD nº 44, de 14 de outubro de 2026, atualiza valor de projeto de cooperação técnica para reparação da Barragem de Fundão.",
+      "por_que_importa": null,
+      "valor_brl": 475907338.79,
+      "entes": [],
+      "tags": [
+        "barragem de fundão",
+        "reparação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "57ba8245c4077b44",
+      "fonte": "dou",
+      "orgao": "Presidência da República",
+      "unidade": "Casa Civil",
+      "tipo": "Resolução",
+      "numero": "43",
+      "data_publicacao": "2026-10-19",
+      "secao": "1",
+      "pagina": 7,
+      "edicao": "197",
+      "titulo": "RESOLUÇÃO CRD Nº 43, DE 14 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-crd-n-43-de-14-de-outubro-de-2026-738850080",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "resolução CRD nº 43, de 14 de outubro de 2026, aprova projeto de reparação da Barragem de Fundão no Território Quilombola de Sapê do Norte.",
+      "por_que_importa": null,
+      "valor_brl": 157900000,
+      "entes": [],
+      "tags": [
+        "barragem de fundão",
+        "quilombola"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "43941e1012b2607e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.576/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 109,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.576/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.576/2026-739109429",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de termo de doação nº 3.576/2026 do Ministério da Saúde para estruturação de UBS em Breves/PA, assinado em 13 de outubro de 2026.",
+      "por_que_importa": "vale acompanhar cronograma de entregas do PAC para solicitar doações semelhantes em Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Breves/PA"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "955db0e984575b67",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.539/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.539/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.539/2026-739109352",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de termo de doação nº 5.539/2026 do Ministério da Saúde para estruturação de UBS em Várzea Nova/BA, assinado em 13 de outubro de 2026.",
+      "por_que_importa": "vale acompanhar cronograma de entregas do PAC para solicitar doações semelhantes em Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Várzea Nova/BA"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "670341ac64e6966d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.108/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.108/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.108/2026-739109275",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "extrato de termo de doação nº 6.108/2026 do Ministério da Saúde para estruturação de UBS em Presidente Juscelino/MG, assinado em 13 de outubro de 2026.",
+      "por_que_importa": "município mineiro pode receber equipamentos para UBS conforme cronograma de entregas do Novo PAC 2025; acompanhe se há edital aberto para outras estruturas.",
+      "valor_brl": null,
+      "entes": [
+        "Presidente Juscelino/MG"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC",
+        "minas gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "63d1e097495d3bb1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.950/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.950/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.950/2026-739101464",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de termo de doação nº 6.950/2026 do Ministério da Saúde para estruturação de UBS em Santo Antônio do Aracanguá/SP, assinado em 13 de outubro de 2026.",
+      "por_que_importa": "vale acompanhar cronograma de entregas do PAC para solicitar doações semelhantes em Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Santo Antônio do Aracanguá/SP"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9384239305762d76",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.734/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.734/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.734/2026-739093639",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de termo de doação nº 4.734/2026 do Ministério da Saúde para estruturação de UBS em Puxinanã/PB, assinado em 13 de outubro de 2026.",
+      "por_que_importa": "vale acompanhar cronograma de entregas do PAC para solicitar doações semelhantes em Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Puxinanã/PB"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2db0e7d63eb54034",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.232/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.232/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.232/2026-739084621",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "extrato de termo de doação nº 4.232/2026 do Ministério da Saúde para estruturação de UBS em São José do Peixe/PI, assinado em 13 de outubro de 2026.",
+      "por_que_importa": "vale acompanhar cronograma de entregas do PAC para solicitar doações semelhantes em Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "São José do Peixe/PI"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7f8d96be890868b6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.976/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.976/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.976/2026-739084544",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Atalaia/AL, conforme termo nº 4.976/2026 de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Atalaia/AL"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5b300623ba60ca24",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.987/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.987/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.987/2026-739084467",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Silveiras/SP, conforme termo nº 6.987/2026 de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Silveiras/SP"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1931deec3e01f684",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.646/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.646/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.646/2026-739084390",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Timbó/SC, conforme termo nº 7.646/2026 de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Timbó/SC"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1406fca99cf7d9d9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.938/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.938/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.938/2026-739084313",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Pontão/RS, conforme termo nº 7.938/2026 de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Pontão/RS"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f3a44908286cca88",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.975/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 109,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.975/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.975/2026-739075567",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Presidente Dutra/MA, conforme termo nº 3.975/2026 de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Presidente Dutra/MA"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "36430e0d5bf6b397",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.824/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.824/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.824/2026-739075490",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Paraguaçu Paulista/SP, conforme termo nº 6.824/2026 de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Paraguaçu Paulista/SP"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3fc561f6f99195ba",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Extrato de Acordo de Cooperação Técnica",
+      "numero": "238/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "197",
+      "titulo": "EXTRATO DE ACORDO DE COOPERAÇÃO TÉCNICA Nº 238/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-cooperacao-tecnica-n-238/2026-739075336",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "O Instituto René Rachou (Fundação Oswaldo Cruz) e a Fundação Educacional Lucas Machado firmam acordo de cooperação técnica nº 238/2026 para projeto sobre continuidade do cuidado na rede de atenção do SUS de Minas Gerais.",
+      "por_que_importa": "Acompanhar a execução do projeto que integra ações de cuidado na rede de atenção primária e especializada de Minas Gerais.",
+      "valor_brl": null,
+      "entes": [
+        "Instituto René Rachou (Fundação Oswaldo Cruz)",
+        "Fundação Educacional Lucas Machado"
+      ],
+      "tags": [
+        "acordo",
+        "cooperação técnica",
+        "continuidade do cuidado"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "30987ea7b684fc8e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.638/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.638/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.638/2026-739062967",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Buenópolis/MG, conforme termo nº 5.638/2026 de 19 de outubro de 2026.",
+      "por_que_importa": "Verificar os equipamentos doados e sua integração na rede de atenção primária municipal.",
+      "valor_brl": null,
+      "entes": [
+        "Buenópolis/MG"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d8595bdb75eaf808",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.210/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.210/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.210/2026-739062890",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Laranjal/PR, conforme termo nº 7.210/2026 de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Laranjal/PR"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ce038442e5837846",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.903/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.903/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.903/2026-739062813",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Novo Tiradentes/RS, conforme termo nº 7.903/2026 de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Novo Tiradentes/RS"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "859f8e506199ac83",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.711/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.711/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.711/2026-739050190",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Chapada Gaúcha/MG, conforme termo nº 5.711/2026 de 19 de outubro de 2026.",
+      "por_que_importa": "Monitorar a entrega dos equipamentos e integração à rede de atenção primária de Chapada Gaúcha.",
+      "valor_brl": null,
+      "entes": [
+        "Chapada Gaúcha/MG"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2763f72eb117167c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.297/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.297/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.297/2026-739047877",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "A Secretaria de Atenção Primária à Saúde doa bens para UBS em Cascavel/CE, conforme termo nº 4.297/2026 de 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Cascavel/CE"
+      ],
+      "tags": [
+        "doação",
+        "UBS",
+        "novo PAC"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "63ea04163f5bfd19",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.388/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.388/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.388/2026-739047800",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em Mascote/BA por meio de extrato de doação nº 5.388/2026.",
+      "por_que_importa": "modelo de doação de equipamentos para Unidades Básicas de Saúde via Novo PAC 2025 que pode servir de referência.",
+      "valor_brl": null,
+      "entes": [
+        "Mascote/BA"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "599e05522b631d46",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.672/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.672/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.672/2026-739047723",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em Capetinga/MG por meio de extrato de doação nº 5.672/2026.",
+      "por_que_importa": "confirmar com a prefeitura a capacidade de arcar com os encargos (contrapartida) do termo de doação e acompanhar prazos de entrega.",
+      "valor_brl": null,
+      "entes": [
+        "Capetinga/MG"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "441d0f947e912acf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.085/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.085/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.085/2026-739047695",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em Piranga/MG por meio de extrato de doação nº 6.085/2026.",
+      "por_que_importa": "confirmar com a prefeitura a capacidade de arcar com os encargos (contrapartida) do termo de doação e acompanhar prazos de entrega.",
+      "valor_brl": null,
+      "entes": [
+        "Piranga/MG"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "afe48ef0e1cf4073",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.504/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.504/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.504/2026-739047569",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em Avaí/SP por meio de extrato de doação nº 6.504/2026.",
+      "por_que_importa": "modelo de doação de equipamentos para Unidades Básicas de Saúde via Novo PAC 2025 que pode servir de referência.",
+      "valor_brl": null,
+      "entes": [
+        "Avaí/SP"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8e58b5ca2b739e48",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.836/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.836/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.836/2026-739047546",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em Ilópolis/RS por meio de extrato de doação nº 7.836/2026.",
+      "por_que_importa": "modelo de doação de equipamentos para Unidades Básicas de Saúde via Novo PAC 2025 que pode servir de referência.",
+      "valor_brl": null,
+      "entes": [
+        "Ilópolis/RS"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b2d634d309700ded",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.037/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.037/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.037/2026-739035490",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em Vera Cruz/SP por meio de extrato de doação nº 7.037/2026.",
+      "por_que_importa": "modelo de doação de equipamentos para Unidades Básicas de Saúde via Novo PAC 2025 que pode servir de referência.",
+      "valor_brl": null,
+      "entes": [
+        "Vera Cruz/SP"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "646f0c24a37f9683",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.052/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.052/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.052/2026-739035413",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em Tuparendi/RS por meio de extrato de doação nº 8.052/2026.",
+      "por_que_importa": "modelo de doação de equipamentos para Unidades Básicas de Saúde via Novo PAC 2025 que pode servir de referência.",
+      "valor_brl": null,
+      "entes": [
+        "Tuparendi/RS"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "192961e9c4d6b1e1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.004/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.004/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.004/2026-739030065",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em São João do Caru/MA por meio de extrato de doação nº 4.004/2026.",
+      "por_que_importa": "modelo de doação de equipamentos para Unidades Básicas de Saúde via Novo PAC 2025 que pode servir de referência.",
+      "valor_brl": null,
+      "entes": [
+        "São João do Caru/MA"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "30eccd42ca2b7cdd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.405/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.405/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.405/2026-739029988",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em Alfredo Wagner/SC por meio de extrato de doação nº 7.405/2026.",
+      "por_que_importa": "modelo de doação de equipamentos para Unidades Básicas de Saúde via Novo PAC 2025 que pode servir de referência.",
+      "valor_brl": null,
+      "entes": [
+        "Alfredo Wagner/SC"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ad0197683fd6a8c8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-739019521",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação do número do extrato de doação nº 3.494/2026 para nº 7.988/2026, publicada em 19 de outubro.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "extrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d5f16c7a565e5699",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.764/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.764/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.764/2026-739016493",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em Desterro de Entre Rios/MG por meio de extrato de doação nº 5.764/2026.",
+      "por_que_importa": "confirmar com a prefeitura a capacidade de arcar com os encargos (contrapartida) do termo de doação e acompanhar prazos de entrega.",
+      "valor_brl": null,
+      "entes": [
+        "Desterro de Entre Rios/MG"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5d9bcf7c48b99212",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.950/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.950/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.950/2026-739016436",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa equipamentos para Unidades Básicas de Saúde em Santo Antônio do Aracanguá/SP por meio de extrato de doação nº 6.950/2026.",
+      "por_que_importa": "modelo de doação de equipamentos para Unidades Básicas de Saúde via Novo PAC 2025 que pode servir de referência.",
+      "valor_brl": null,
+      "entes": [
+        "Santo Antônio do Aracanguá/SP"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "novo pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6d297d47c64ad651",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.421/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.421/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.421/2026-739002904",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 6.421/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em Paraíba do Sul/RJ.",
+      "por_que_importa": "acompanhe o cronograma e a entrega dos equipamentos do Novo PAC 2025 para identificar oportunidades similares em sua região.",
+      "valor_brl": null,
+      "entes": [
+        "Paraíba do Sul/RJ"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "329c4568561355bb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.271/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.271/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.271/2026-739002876",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 8.271/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em União do Sul/MT.",
+      "por_que_importa": "acompanhe o cronograma e a entrega dos equipamentos do Novo PAC 2025 para identificar oportunidades similares em sua região.",
+      "valor_brl": null,
+      "entes": [
+        "União do Sul/MT"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6724b28646010552",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.009/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.009/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.009/2026-739000745",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 6.009/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em Nepomuceno/MG.",
+      "por_que_importa": "acompanhe o cronograma de entrega dos equipamentos e confirme se o município já incluiu a contrapartida local no orçamento.",
+      "valor_brl": null,
+      "entes": [
+        "Nepomuceno/MG"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "minas gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ec1eaca492ae9232",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.635/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.635/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.635/2026-739000668",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 7.635/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em Saudades/SC.",
+      "por_que_importa": "acompanhe o cronograma e a entrega dos equipamentos do Novo PAC 2025 para identificar oportunidades similares em sua região.",
+      "valor_brl": null,
+      "entes": [
+        "Saudades/SC"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9d74dba032ce47dd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "8.169/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 8.169/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-8.169/2026-739000591",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 8.169/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em Canarana/MT.",
+      "por_que_importa": "acompanhe o cronograma e a entrega dos equipamentos do Novo PAC 2025 para identificar oportunidades similares em sua região.",
+      "valor_brl": null,
+      "entes": [
+        "Canarana/MT"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "294ac2c45f60e8ab",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 116,
+      "edicao": "197",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFÍCIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-739000437",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Nacional de Saúde prorroga de ofício o convênio nº 854108 com o Município de Piritiba/BA até 31 de março de 2027, publicado em 19 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Piritiba/BA"
+      ],
+      "tags": [
+        "convênio",
+        "prorrogação",
+        "fns"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5fe8ee32a8e49917",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.724/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 109,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.724/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.724/2026-738986377",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 3.724/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em Babaçulândia/TO.",
+      "por_que_importa": "acompanhe o cronograma e a entrega dos equipamentos do Novo PAC 2025 para identificar oportunidades similares em sua região.",
+      "valor_brl": null,
+      "entes": [
+        "Babaçulândia/TO"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "05f77bf6673bf073",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.585/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 4.585/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-4.585/2026-738986246",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 4.585/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em Umarizal/RN.",
+      "por_que_importa": "acompanhe o cronograma e a entrega dos equipamentos do Novo PAC 2025 para identificar oportunidades similares em sua região.",
+      "valor_brl": null,
+      "entes": [
+        "Umarizal/RN"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4eac6501153482e7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.963/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.963/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.963/2026-738986169",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 5.963/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em Maravilhas/MG.",
+      "por_que_importa": "acompanhe o cronograma de entrega dos equipamentos e confirme se o município já incluiu a contrapartida local no orçamento.",
+      "valor_brl": null,
+      "entes": [
+        "Maravilhas/MG"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "minas gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "74fca8564d495ca4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.775/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.775/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.775/2026-738968503",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 6.775/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em Mogi Mirim/SP.",
+      "por_que_importa": "acompanhe o cronograma e a entrega dos equipamentos do Novo PAC 2025 para identificar oportunidades similares em sua região.",
+      "valor_brl": null,
+      "entes": [
+        "Mogi Mirim/SP"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4b2d30b81308ad2f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.745/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.745/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.745/2026-738968452",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 7.745/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em Casca/RS.",
+      "por_que_importa": "acompanhe o cronograma e a entrega dos equipamentos do Novo PAC 2025 para identificar oportunidades similares em sua região.",
+      "valor_brl": null,
+      "entes": [
+        "Casca/RS"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2409e70f8eef67ce",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.938/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 113,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.938/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.938/2026-738968344",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde formaliza extrato de doação nº 7.938/2026, de 19 de outubro de 2026, para estruturação de Unidades Básicas de Saúde em Pontão/RS.",
+      "por_que_importa": "acompanhe o cronograma e a entrega dos equipamentos do Novo PAC 2025 para identificar oportunidades similares em sua região.",
+      "valor_brl": null,
+      "entes": [
+        "Pontão/RS"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b5aa28bab774fa81",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.566/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.566/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.566/2026-738967938",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de Termo de Doação nº 5.566/2026 do Ministério da Saúde a Alto Caparaó/MG para estruturação de Unidades Básicas de Saúde, assinado em 13/10/2026.",
+      "por_que_importa": "Vale avaliar se o investimento em atenção básica gera demanda para serviços hospitalares no município.",
+      "valor_brl": null,
+      "entes": [
+        "Alto Caparaó"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "49f3983c184464d8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.109/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.109/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.109/2026-738967861",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 7.109/2026 do Ministério da Saúde a Capanema/PR para estruturação de Unidades Básicas de Saúde, assinado em 13/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Capanema"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a1e965fc74aa398d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.580/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.580/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.580/2026-738967784",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 7.580/2026 do Ministério da Saúde a Pinheiro Preto/SC para estruturação de Unidades Básicas de Saúde, assinado em 13/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Pinheiro Preto"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "12064f7d85aa4ee7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.626/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 110,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 5.626/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-5.626/2026-738954938",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de Termo de Doação nº 5.626/2026 do Ministério da Saúde a Bonfinópolis de Minas/MG para estruturação de Unidades Básicas de Saúde, assinado em 13/10/2026.",
+      "por_que_importa": "Vale avaliar se o investimento em atenção básica gera demanda para serviços hospitalares no município.",
+      "valor_brl": null,
+      "entes": [
+        "Bonfinópolis de Minas"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "514866c2ea29f35a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "6.442/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 111,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 6.442/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-6.442/2026-738954930",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 6.442/2026 do Ministério da Saúde a São João da Barra/RJ para estruturação de Unidades Básicas de Saúde, assinado em 13/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São João da Barra"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4b5894bf9cb92086",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Extrato de Acordo de Cooperação",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 117,
+      "edicao": "197",
+      "titulo": "EXTRATO DE ACORDO DE COOPERAÇÃO INTERNACIONAL",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-cooperacao-internacional-738954643",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Acordo de Cooperação Internacional entre Fundação Oswaldo Cruz, Universidade Federal do Paraná e Universidad de Costa Rica para pesquisa sobre Leishmania infantum, vigência 02/07/2026 a 02/07/2029.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pesquisa",
+        "cooperação internacional",
+        "leishmaniose"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "89934faac5c587cd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.434/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 109,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.434/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.434/2026-738950303",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 3.434/2026 do Ministério da Saúde a Nova Mamoré/RO para estruturação de Unidades Básicas de Saúde, assinado em 13/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Nova Mamoré"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3c361b9fed5068a2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.764/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.764/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.764/2026-738950226",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 7.764/2026 do Ministério da Saúde a Constantina/RS para estruturação de Unidades Básicas de Saúde, assinado em 13/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Constantina"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4541d14262996236",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.572/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 109,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 3.572/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-3.572/2026-738935648",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 3.572/2026 do Ministério da Saúde a Bragança/PA para estruturação de Unidades Básicas de Saúde, assinado em 13/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Bragança"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2fde53d8836f9c57",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.500/2026",
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 112,
+      "edicao": "197",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 7.500/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-7.500/2026-738935567",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Termo de Doação nº 7.500/2026 do Ministério da Saúde a Imbuia/SC para estruturação de Unidades Básicas de Saúde, assinado em 13/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Imbuia"
+      ],
+      "tags": [
+        "doação",
+        "PAC 2025",
+        "UBS",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "949d5a3e8ebf2b61",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Despacho",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "1",
+      "pagina": 186,
+      "edicao": "197",
+      "titulo": "DESPACHOS de 16 de outubro de 2026",
+      "url": "https://www.in.gov.br/web/dou/-/despachos-de-16-de-outubro-de-2026-738864201",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Despachos de 16/10/2026 da Secretaria de Ciência, Tecnologia e Inovação em Saúde cancelando participação de farmácias no Programa Farmácia Popular do Brasil por irregularidades.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "farmácia popular",
+        "cancelamento",
+        "irregularidades"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1567b9bdb811cc3e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Resolução",
+      "numero": "682",
+      "data_publicacao": "2026-10-19",
+      "secao": "1",
+      "pagina": 187,
+      "edicao": "197",
+      "titulo": "RESOLUÇÃO NORMATIVA ANS Nº 682, DE 15 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/resolucao-normativa-ans-n-682-de-15-de-outubro-de-2026-738862822",
+      "categoria": "B",
+      "relevancia": 1,
+      "resumo": "Resolução Normativa ANS nº 682/2026, de 15/10/2026, altera o Rol de Procedimentos para adicionar broncoscopia com criobiópsia transbrônquica com cobertura obrigatória em saúde suplementar, vigente a partir de 03/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "saúde suplementar",
+        "rol de procedimentos",
+        "cobertura obrigatória"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3345a991ce263914",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Termo de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-19",
+      "secao": "3",
+      "pagina": 108,
+      "edicao": "197",
+      "titulo": "Doação de 47 veículos do SUS a 45 municípios",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-2692/2026-739118104",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "45 municípios recebem 47 veículos do Ministério da Saúde: 47 outros veículos, no total de R$ 18,7 milhões.",
+      "por_que_importa": null,
+      "valor_brl": 18731891.7,
+      "entes": [
+        "ALAGOINHA",
+        "ALTO SANTO",
+        "AMÉLIA RODRIGUES",
+        "ARACATI",
+        "BARBOSA FERRAZ",
+        "BOA VENTURA",
+        "BONITO DE SANTA FÉ",
+        "CACIMBA DE AREIA",
+        "CASTANHAL",
+        "CUPIRA",
+        "DOIS IRMÃOS DO BURITI",
+        "ESPERANÇA DO SUL",
+        "GENERAL CÂMARA",
+        "ITAÍBA",
+        "JUAZEIRINHO",
+        "LAGOA DE DENTRO",
+        "LAGOA DOS GATOS",
+        "LAGUNA CARAPÃ",
+        "MAETINGA",
+        "MARACÁS",
+        "MOJUÍ DOS CAMPOS",
+        "NOVA BANDEIRANTES",
+        "NOVO HORIZONTE DO SUL",
+        "PESQUEIRA",
+        "PINDOBAÇU",
+        "PONTA DE PEDRAS",
+        "PORTO DOS GAÚCHOS",
+        "PORTO XAVIER",
+        "RIBEIRÃO CASCALHEIRA",
+        "RIO DE CONTAS",
+        "RIO MARIA",
+        "RUY BARBOSA",
+        "SANTANA",
+        "SANTARÉM NOVO",
+        "SÃO BENTO DO UNA",
+        "SÃO DOMINGOS DO CAPIM",
+        "SÃO FÉLIX DO XINGU",
+        "SÃO JOSÉ DOS QUATRO MARCOS",
+        "SÃO SEBASTIÃO DO PASSÉ",
+        "SAPUCAIA",
+        "TOMÉ-AÇU",
+        "UBAÍRA",
+        "VÁRZEA DO POÇO",
+        "WAGNER",
+        "WENCESLAU GUIMARÃES"
+      ],
+      "tags": [
+        "regra:doacoes-agrupadas"
+      ],
+      "fallback": false
+    }
+  ]
+}
