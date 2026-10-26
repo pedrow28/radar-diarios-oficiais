@@ -1,5 +1,19 @@
 [
   {
+    "data": "2026-10-26",
+    "titulo": "1 extrato de doação de bens para unidades básicas de saúde em Carapicuíba",
+    "url": "edicoes/2026-10-26.html",
+    "contagens": {
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 1
+    },
+    "parcial": true,
+    "valor_dia": null,
+    "total_relevante": 1
+  },
+  {
     "data": "2026-10-23",
     "titulo": "23 doações de UBS no Novo PAC 2025 e 1 habilitação somam R$ 2,3 milhões",
     "url": "edicoes/2026-10-23.html",
