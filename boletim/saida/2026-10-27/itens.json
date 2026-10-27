@@ -1,0 +1,3403 @@
+{
+  "data": "2026-10-27",
+  "gerado_em": "2026-10-27T15:49:42.753931+00:00",
+  "avisos": [
+    "19 itens além do teto de 120 não foram classificados"
+  ],
+  "edicao": {
+    "titulo": "19 unidades odontológicas, 5 convênios e 70 teleconsultas somam R$ 10,7 mi",
+    "em_30_segundos": [
+      "Ministério da Saúde doa 19 unidades odontológicas móveis para municípios de todo o país.",
+      "MS celebra 5 convênios com santas casas para aquisição de equipamentos permanentes por R$ 1,8 mi.",
+      "Secretaria de Informação e Saúde Digital doa 70 kits de teleconsulta para telessaúde em municípios.",
+      "Ministério da Saúde publica 94 extratos de doações e convênios nesta edição de 27 de outubro."
+    ],
+    "intro": "Nesta edição de 27 de outubro, o Ministério da Saúde publica 94 atos de doações e convênios que totalizam R$ 10,7 milhões em recursos para o SUS, priorizando a odontologia móvel e a teleconsulta em municípios de todas as regiões do país. Gestores devem dar atenção especial às 19 unidades odontológicas móveis (que movem R$ 7,5 milhões), aos 5 convênios com santas casas e filantrópicos (R$ 1,8 milhão) e aos 70 municípios que recebem equipamentos de telessaúde (R$ 1,4 milhão).",
+    "parcial": true,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "203",
+        "paginas": "pp. 1-152",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ausente",
+        "edicao": null,
+        "paginas": null,
+        "avisos": [
+          "arquivo não encontrado"
+        ]
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "610ec6f9a6d4946c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "203",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-740638891",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde celebra convênio nº 7AAHKL com Irmandade da Santa Casa de Misericórdia de São Paulo em 21 de outubro de 2026 para aquisição de equipamento e material permanente.",
+      "por_que_importa": "a entidade filantrópica deve ativar os processos de empenho e recebimento do equipamento dentro dos prazos do convênio",
+      "valor_brl": 221580,
+      "entes": [
+        "Irmandade da Santa Casa de Misericórdia de São Paulo"
+      ],
+      "tags": [
+        "convênio",
+        "equipamentos",
+        "santa casa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "49b726b31162524d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740638786",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde doa unidade odontológica móvel ao Município de Rio Manso em termo de doação nº 2.494/2026 de 15 de outubro de 2026.",
+      "por_que_importa": "a prefeitura deve cumprir os prazos de operacionalização da unidade odontológica móvel conforme termo de doação para manter a saúde bucal itinerante",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Rio Manso"
+      ],
+      "tags": [
+        "doação",
+        "unidade odontológica móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ab1506594e0954be",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740638660",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de teleconsulta ao Município de Barra do Mendes em termo de doação de 24 de agosto de 2026.",
+      "por_que_importa": "a secretaria municipal deve ativar os kits de teleconsulta conforme orientações de operacionalização do SUS Digital para ampliar acesso",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Município de Barra do Mendes"
+      ],
+      "tags": [
+        "doação",
+        "teleconsulta",
+        "sus digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b24352ff4aaf3fa1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740638583",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de teleconsulta ao Município de Monte Negro em termo de doação de 19 de outubro de 2026.",
+      "por_que_importa": "a secretaria municipal deve ativar os kits de teleconsulta conforme orientações para ampliar o acesso às consultorias especializadas",
+      "valor_brl": 14073.88,
+      "entes": [
+        "Município de Monte Negro"
+      ],
+      "tags": [
+        "doação",
+        "teleconsulta",
+        "sus digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d49531db7487bf7d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740635506",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa unidade odontológica móvel ao Município de Colômbia em termo de doação nº 2.796/2026 de 19 de outubro de 2026.",
+      "por_que_importa": "a prefeitura deve implementar a unidade odontológica móvel conforme cronograma do termo para ampliar acesso à atenção odontológica",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Colômbia"
+      ],
+      "tags": [
+        "doação",
+        "unidade odontológica móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c053887d32d5cad7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740635429",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de teleconsulta ao Município de Santo Antônio do Aracanguá em termo de doação de 15 de outubro de 2026.",
+      "por_que_importa": "a secretaria municipal deve implementar os kits de teleconsulta conforme diretrizes para expandir o acesso à saúde digital",
+      "valor_brl": 7036.94,
+      "entes": [
+        "Município de Santo Antônio do Aracanguá"
+      ],
+      "tags": [
+        "doação",
+        "teleconsulta",
+        "sus digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "66106a6012ae916b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740635365",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de teleconsulta ao Município de Guareí em termo de doação de 16 de outubro de 2026.",
+      "por_que_importa": "a secretaria municipal precisa ativar os equipamentos de teleconsulta para operacionalizar a estratégia de telessaúde",
+      "valor_brl": 14073.88,
+      "entes": [
+        "Município de Guareí"
+      ],
+      "tags": [
+        "doação",
+        "teleconsulta",
+        "sus digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "25741fc8b42c9432",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740635275",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de teleconsulta ao Município de Miracema em termo de doação de 20 de outubro de 2026.",
+      "por_que_importa": "a secretaria municipal deve providenciar a instalação dos kits de teleconsulta conforme orientações para expandir a telessaúde",
+      "valor_brl": 22039.68,
+      "entes": [
+        "Município de Miracema"
+      ],
+      "tags": [
+        "doação",
+        "teleconsulta",
+        "sus digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cfece4b07b13fac1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "142",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 142, DE 7 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-142-de-7-de-outubro-de-2026-740629396",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica edital de notificação nº 142 de 7 de outubro de 2026 para comunicação a ex-participante do PRÓ-RESIDÊNCIA em neonatologia.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto de Medicina Integral"
+      ],
+      "tags": [
+        "notificação",
+        "pró-residência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c10876bac376f865",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740629319",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de teleconsulta ao Município de Mulungu em termo de doação de 25 de setembro de 2026.",
+      "por_que_importa": "a secretaria municipal deve ativar os kits de teleconsulta conforme orientações para ampliar o acesso remoto",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Município de Mulungu"
+      ],
+      "tags": [
+        "doação",
+        "teleconsulta",
+        "sus digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2e4437ca6fad3078",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740629240",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de teleconsulta ao Município de Santópolis do Aguapeí em termo de doação de 13 de outubro de 2026.",
+      "por_que_importa": "a secretaria municipal deve implementar os equipamentos de teleconsulta para ampliar o acesso à atenção à distância",
+      "valor_brl": 7036.94,
+      "entes": [
+        "Município de Santópolis do Aguapeí"
+      ],
+      "tags": [
+        "doação",
+        "teleconsulta",
+        "sus digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "740f4abea217d8cd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740629163",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de teleconsulta ao Município de Carlinda em termo de doação de 13 de outubro de 2026.",
+      "por_que_importa": "a secretaria municipal deve ativar os kits de teleconsulta conforme diretrizes para operacionalizar a estratégia de telessaúde",
+      "valor_brl": 14693.12,
+      "entes": [
+        "Município de Carlinda"
+      ],
+      "tags": [
+        "doação",
+        "teleconsulta",
+        "sus digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "afe03d1f53859766",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740629086",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de kits de equipamentos para telessaúde ao Município de Natividade/RJ.",
+      "por_que_importa": "Acompanhar modelo de doação de equipamentos digitais para saúde em outros municípios pode orientar solicitações de recursos semelhantes.",
+      "valor_brl": 7346.56,
+      "entes": [
+        "Município de NATIVIDADE"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "84d0f9f939421063",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "203",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-740622476",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de convênio do Ministério da Saúde com Irmandade da Santa Casa de Misericórdia de São Paulo para aquisição de equipamento e material permanente.",
+      "por_que_importa": "Entidade filantrópica recebeu recurso federal para equipamento; modelo pode ser aplicado a instituições semelhantes em Minas.",
+      "valor_brl": 500000,
+      "entes": [
+        "IRMANDADE DA SANTA CASA DE MISERICORDIA DE SAO PAULO"
+      ],
+      "tags": [
+        "convênio",
+        "santa casa",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0ef40ab3a849ce14",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740622322",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de unidade odontológica móvel ao Município de Colônia Leopoldina/AL.",
+      "por_que_importa": "Programa de saúde bucal móvel oferece modelo de acesso a serviços que pode ser solicitado por municípios mineiros.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "MUNICÍPIO DE COLÔNIA LEOPOLDINA"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "257a9885566c2827",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "203",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-740611678",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de convênio do Ministério da Saúde com COLSAN para aquisição de equipamento e material permanente em unidade de atenção especializada.",
+      "por_que_importa": "Entidade privada de saúde especializada recebeu recurso federal; modelo relevante para instituições semelhantes que captam recursos federais.",
+      "valor_brl": 224520,
+      "entes": [
+        "COLSAN"
+      ],
+      "tags": [
+        "convênio",
+        "coleta de sangue",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ecba431f02969ec2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "809",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 809, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-809-de-21-de-outubro-de-2026-740611650",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação da Secretaria de Atenção Primária à Saúde convocando ex-prefeito de São Sebastião do Paraíso/MG para retirar notificação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São Sebastião do Paraíso"
+      ],
+      "tags": [
+        "notificação",
+        "devolução",
+        "recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f1c25682e9544994",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "814",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 814, DE 23 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-814-de-23-de-outubro-de-2026-740611524",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação da Secretaria de Atenção Primária à Saúde convocando para retirar notificação sobre devolução de recursos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "devolução de recursos",
+        "edital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2dc0ea803c1ba961",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740611445",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de unidade odontológica móvel ao Município de Missão Velha/CE.",
+      "por_que_importa": "Programa de saúde bucal móvel oferece modelo de acesso que municípios mineiros podem solicitar.",
+      "valor_brl": 379890,
+      "entes": [
+        "MUNICÍPIO DE MISSÃO VELHA"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "97ce843040cc92ce",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740611417",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de unidade odontológica móvel ao Município de Alto Piquiri/PR.",
+      "por_que_importa": "Programa de saúde bucal móvel oferece modelo de acesso que municípios mineiros podem solicitar.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "MUNICÍPIO DE ALTO PIQUIRI"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8309ad6978bba669",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740611289",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de kits de equipamentos para telessaúde ao Município de Benedito Novo/SC.",
+      "por_que_importa": "Acompanhar modelo de doação de equipamentos digitais para saúde em outros municípios pode orientar solicitações similares.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Município de BENEDITO NOVO"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fbe59a67b7b6de55",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740611212",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de kits de equipamentos para telessaúde ao Município de Itapuã do Oeste/RO.",
+      "por_que_importa": "Acompanhar modelo de doação de equipamentos digitais para saúde em outros municípios pode orientar solicitações similares.",
+      "valor_brl": 7036.94,
+      "entes": [
+        "Município de ITAPUÃ DO OESTE"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "59fa94dc681fa154",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "143",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 143, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-143-de-21-de-outubro-de-2026-740605001",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação da Secretaria de Gestão do Trabalho e da Educação na Saúde convocando ex-participante do PRÓ-RESIDÊNCIA.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "residência médica",
+        "edital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cb126b309cfde854",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740604869",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde com rerratificação de kits de equipamentos para telessaúde ao Município de Curaçá/BA.",
+      "por_que_importa": "Acompanhar modelo de doação e retificação de equipamentos digitais para saúde em outros municípios pode orientar solicitações similares.",
+      "valor_brl": 25634.4,
+      "entes": [
+        "Município de CURAÇÁ"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "retificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "405240c3b6171759",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740604790",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00132/2026 de doação da Secretaria de Informação e Saúde Digital de kits para teleconsulta ao Município de Palmas de Monte Alto/BA.",
+      "por_que_importa": "Vale acompanhar como o município está implementando a telessaúde para replicar aprendizados em instituições mineiras.",
+      "valor_brl": 25634.4,
+      "entes": [
+        "Palmas de Monte Alto/BA"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde",
+        "digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3d34dd27bfbc74eb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740604713",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00167/2026 de doação da Secretaria de Informação e Saúde Digital de kits para teleconsulta ao Município de Normandia/RR.",
+      "por_que_importa": "Vale acompanhar como o município está implementando a telessaúde para replicar aprendizados em instituições mineiras.",
+      "valor_brl": 14073.88,
+      "entes": [
+        "Normandia/RR"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde",
+        "digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ad91fde3c725c1b3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740604636",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato nº 00188/2026 de doação da Secretaria de Informação e Saúde Digital de kits para teleconsulta ao Município de São João da Lagoa/MG.",
+      "por_que_importa": "Município mineiro recebeu equipamentos para telessaúde; verifique se está operacionalizando a iniciativa.",
+      "valor_brl": 7036.94,
+      "entes": [
+        "São João da Lagoa/MG"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde",
+        "minas gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b2c645a439adff34",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740604613",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00195/2026 de doação da Secretaria de Informação e Saúde Digital de kits para teleconsulta ao Município de Itaperuna/RJ.",
+      "por_que_importa": "Vale acompanhar como o município está implementando a telessaúde para replicar aprendizados em instituições mineiras.",
+      "valor_brl": 66119.04,
+      "entes": [
+        "Itaperuna/RJ"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde",
+        "digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "292b35df4d929672",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "803",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 140,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 803, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-803-de-21-de-outubro-de-2026-740597846",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 803 da Secretaria de Atenção Primária à Saúde de 27 de outubro de 2026 convocando Sr. Evandro Leal de Abreu para retirar notificação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "rotina",
+        "recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "48f1970d21a0acad",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740597765",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 2.758/2026 da Secretaria de Atenção Primária à Saúde de 1 veículo furgão adaptado como Unidade Odontológica Móvel ao Município de Bom Jesus do Itabapoana/RJ.",
+      "por_que_importa": "Acompanhe como a unidade móvel está sendo utilizada para replicar a estratégia de saúde bucal em instituições mineiras.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Bom Jesus do Itabapoana/RJ"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "saúde bucal",
+        "atenção primária"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "277796c2d3770bea",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740597686",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 2.804/2026 da Secretaria de Atenção Primária à Saúde de 1 veículo furgão adaptado como Unidade Odontológica Móvel ao Município de Jeriquara/SP.",
+      "por_que_importa": "Acompanhe como a unidade móvel está sendo utilizada para replicar a estratégia de saúde bucal em instituições mineiras.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Jeriquara/SP"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "saúde bucal",
+        "atenção primária"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "aedef185dbc0194d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "101",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 101, DE 3 DE AGOSTO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-101-de-3-de-agosto-de-2026-740597609",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 101 da Secretaria de Gestão do Trabalho e da Educação na Saúde de 3 de agosto de 2026 convocando ex-participante do Programa PRÓ-RESIDÊNCIA.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "residência",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "23add5ebe918eaf7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740597532",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00160/2026 de doação da Secretaria de Informação e Saúde Digital de kits para teleconsulta ao Município de Itapetininga/SP.",
+      "por_que_importa": "Vale acompanhar como o município está implementando a telessaúde para replicar aprendizados em instituições mineiras.",
+      "valor_brl": 58772.48,
+      "entes": [
+        "Itapetininga/SP"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde",
+        "digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "31c3934cc735444f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740597509",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00169/2026 de doação da Secretaria de Informação e Saúde Digital de kits para teleconsulta ao Município de Barrocas/BA.",
+      "por_que_importa": "Vale acompanhar como o município está implementando a telessaúde para replicar aprendizados em instituições mineiras.",
+      "valor_brl": 12817.2,
+      "entes": [
+        "Barrocas/BA"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde",
+        "digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3848ac8337de22dd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740597430",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00182/2026 de doação da Secretaria de Informação e Saúde Digital de kits para teleconsulta ao Município de Piraí/RJ.",
+      "por_que_importa": "Vale acompanhar como o município está implementando a telessaúde para replicar aprendizados em instituições mineiras.",
+      "valor_brl": 28147.76,
+      "entes": [
+        "Piraí/RJ"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde",
+        "digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8c41615015b15dba",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740592769",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00156/2026 de doação da Secretaria de Informação e Saúde Digital de kits para teleconsulta ao Município de São Francisco do Guaporé/RO.",
+      "por_que_importa": "Vale acompanhar como o município está implementando a telessaúde para replicar aprendizados em instituições mineiras.",
+      "valor_brl": 14073.88,
+      "entes": [
+        "São Francisco do Guaporé/RO"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde",
+        "digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3e517f521cd609ab",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740592741",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 00165/2026, de 27 de outubro de 2026, do Ministério da Saúde, que doa kits de equipamentos de teleconsulta ao Município de Sinop/MT.",
+      "por_que_importa": "use este termo como referência para solicitar doação de equipamentos de telessaúde para seus municípios mineiros",
+      "valor_brl": 73465.6,
+      "entes": [
+        "Município de Sinop"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4b186c893abdcea5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740592615",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 00178/2026, de 27 de outubro de 2026, do Ministério da Saúde, que doa kits de equipamentos de teleconsulta ao Município de Muliterno/RS.",
+      "por_que_importa": "use este termo como referência para solicitar doação de equipamentos de telessaúde para seus municípios mineiros",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Município de Muliterno"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "16520c115f5dca4d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "805",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 140,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 805, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-805-de-21-de-outubro-de-2026-740584479",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 805, de 21 de outubro de 2026, convoca Carlos Alberto Barbosa Pinheiro para retirar notificação sobre parecer da Secretaria de Atenção Primária à Saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "pessoal",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "398f7ab85d624e68",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "812",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 812, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-812-de-21-de-outubro-de-2026-740584398",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 812, de 21 de outubro de 2026, convoca Marcelo de Morais, ex-prefeito de São Sebastião do Paraíso/MG, para retirar notificação da Secretaria de Atenção Primária à Saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São Sebastião do Paraíso"
+      ],
+      "tags": [
+        "notificação",
+        "pessoal",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "465b54d834bac096",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740584319",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de termo de doação nº 102/2026, de 27 de outubro de 2026, que doa veículo furgão adaptado como Unidade Odontológica Móvel e equipamentos do Ministério da Saúde ao Município de Jardim/CE.",
+      "por_que_importa": "use este termo como referência para solicitar doação de veículo e equipamentos de saúde bucal para seus municípios mineiros",
+      "valor_brl": 379890,
+      "entes": [
+        "Município de Jardim"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "odontológica",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c2ad681588499760",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "141",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 141, DE 7 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-141-de-7-de-outubro-de-2026-740584240",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 141, de 7 de outubro de 2026, convoca Nathallya Rayanne Soares para retirar notificação da Secretaria de Gestão do Trabalho e da Educação na Saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "pessoal",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ea4285082fe31548",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740584163",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00134/2026 de termo de doação e rerratificação, de 27 de outubro de 2026, que doa kits de equipamentos de teleconsulta do Ministério da Saúde ao Município de Coração de Maria/BA.",
+      "por_que_importa": "use este termo como referência para solicitar doação de equipamentos de telessaúde para seus municípios mineiros",
+      "valor_brl": 25634.4,
+      "entes": [
+        "Município de Coração de Maria"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "retificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "66f0150b923cfaf8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "822",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 822, DE 26 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-822-de-26-de-outubro-de-2026-740582363",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 822, de 26 de outubro de 2026, convoca Jaelson Ramalho Matta para retirar notificação da Secretaria de Atenção Primária à Saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "pessoal",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c7392c8c483f9e58",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740582278",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00136/2026 de termo de doação e rerratificação, de 27 de outubro de 2026, que doa kits de equipamentos de teleconsulta do Ministério da Saúde ao Município de Serrolândia/BA.",
+      "por_que_importa": "use este termo como referência para solicitar doação de equipamentos de telessaúde para seus municípios mineiros",
+      "valor_brl": 12817.2,
+      "entes": [
+        "Município de Serrolândia"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "retificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f8e63df8f4cdc48d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740582201",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 00148/2026, de 27 de outubro de 2026, do Ministério da Saúde, que doa kits de equipamentos de teleconsulta ao Município de Catunda/CE.",
+      "por_que_importa": "use este termo como referência para solicitar doação de equipamentos de telessaúde para seus municípios mineiros",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Município de Catunda"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2dcf473642100479",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740582084",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 00170/2026, de 27 de outubro de 2026, do Ministério da Saúde, que doa kits de equipamentos de teleconsulta ao Município de Aiquara/BA.",
+      "por_que_importa": "use este termo como referência para solicitar doação de equipamentos de telessaúde para seus municípios mineiros",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Município de Aiquara"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e5a66b9462edea21",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740582007",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 00180/2026, de 27 de outubro de 2026, do Ministério da Saúde, que doa kits de equipamentos de teleconsulta ao Município de Ronda Alta/RS.",
+      "por_que_importa": "use este termo como referência para solicitar doação de equipamentos de telessaúde para seus municípios mineiros",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Município de Ronda Alta"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "98ef9e88392280fc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Edital",
+      "numero": "26",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 151,
+      "edicao": "203",
+      "titulo": "EDITAL Nº 26, DE 19 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-n-26-de-19-de-outubro-de-2026-740581979",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital nº 26 de 19/10/2026 do Ministério da Saúde prorroga por 2 anos a validade do concurso público para Especialista em Regulação e Vigilância Sanitária.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "concurso",
+        "pessoal",
+        "ANVISA"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1947170331e69e20",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 140,
+      "edicao": "203",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-740569578",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração de edital de 27/10/2026 da Secretaria de Atenção Especializada retarda início do pregão 343/2025 para aquisição de Ecocardiógrafos de Alta Tecnologia.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "licitação",
+        "ecocardiógrafos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "abe8d912aef3fb44",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740569497",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de Doação nº 2.843/2026 de 27/10/2026 da Secretaria de Atenção Primária à Saúde doa 1 veículo furgão adaptado para Unidade Odontológica Móvel ao Município de Montalvânia/MG.",
+      "por_que_importa": "Vale verificar se a unidade odontológica móvel será instalada conforme previsto e registrada no patrimônio municipal.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Montalvânia/MG"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "saúde bucal",
+        "unidade móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bb65ba2a28f96003",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "520",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 520, DE 26 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-520-de-26-de-outubro-de-2026-740569416",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação SCTIE/MS nº 520 de 26/10/2026 convoca empresa ERIKA RIZZATO FARMACIA para apresentar documentos em procedimento de averiguação da Farmácia Popular.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "Farmácia Popular",
+        "SCTIE"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "01aee267f8206f2c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740569339",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00171/2026 de 27/10/2026 da Secretaria de Informação e Saúde Digital doa kits de equipamentos para teleconsulta ao Município de Jaramataia/AL.",
+      "por_que_importa": "Equipamentos integram a ação SUS Digital - Telessaúde e requerem instalação adequada na secretaria de saúde local.",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Município de Jaramataia/AL"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "SUS Digital",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bfc47476ea5eb161",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "203",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-740567183",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Parcelamento de Débito de 27/10/2026 da Secretaria Executiva registra rescisão de parcelamento junto ao Fundo Nacional de Saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "parcelamento",
+        "débito",
+        "Fundo Nacional de Saúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ea44f3b46e747b8e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740566929",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 2.794/2026 de 27/10/2026 da Secretaria de Atenção Primária à Saúde doa 1 veículo furgão adaptado para Unidade Odontológica Móvel ao Município de Caiuá/SP.",
+      "por_que_importa": "Vale verificar se a unidade odontológica móvel será instalada conforme previsto e registrada no patrimônio municipal.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Caiuá/SP"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "saúde bucal",
+        "unidade móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "69ea152a3a20b0de",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "522",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 522, DE 26 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-522-de-26-de-outubro-de-2026-740566798",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação SCTIE/MS nº 522 de 26/10/2026 convoca Sra. Weslayne Garcia Cardoso em procedimento de averiguação da Drogaria Ferreira Cardoso Ltda na Farmácia Popular.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "Farmácia Popular",
+        "SCTIE"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3ab5a38a2745055f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740566775",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00145/2026 de 27/10/2026 da Secretaria de Informação e Saúde Digital doa kits de equipamentos para teleconsulta ao Município de Baturité/CE.",
+      "por_que_importa": "Equipamentos integram a ação SUS Digital - Telessaúde e requerem instalação adequada na secretaria de saúde local.",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Município de Baturité/CE"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "SUS Digital",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b224d0b5b55eba55",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740566698",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00190/2026 de 27/10/2026 da Secretaria de Informação e Saúde Digital doa kits de equipamentos para teleconsulta ao Município de Redenção/PA.",
+      "por_que_importa": "Equipamentos integram a ação SUS Digital - Telessaúde e requerem instalação adequada na secretaria de saúde local.",
+      "valor_brl": 51425.92,
+      "entes": [
+        "Município de Redenção/PA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "SUS Digital",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "853143f39e4f303d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740566619",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00194/2026 de 27/10/2026 da Secretaria de Informação e Saúde Digital doa kits de equipamentos para teleconsulta ao Município de Japeri/RJ.",
+      "por_que_importa": "Equipamentos integram a ação SUS Digital - Telessaúde e requerem instalação adequada na secretaria de saúde local.",
+      "valor_brl": 58772.48,
+      "entes": [
+        "Município de Japeri/RJ"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "SUS Digital",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6233eedb0e98c5b5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "807",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 807, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-807-de-21-de-outubro-de-2026-740557169",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 807 de 21/10/2026 da Secretaria de Atenção Primária à Saúde convoca Sr. Sérgio Murilo dos Santos Guimarães para retirar notificação sobre parecer.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "devolução de recursos",
+        "SAPS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "180194840dad6531",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "811",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 811, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-811-de-21-de-outubro-de-2026-740557092",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 811 de 21 de outubro de 2026 da Secretaria de Atenção Primária à Saúde convoca ex-secretária de São Sebastião do Paraíso/MG para retirada de notificação sobre recursos federais.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São Sebastião do Paraíso"
+      ],
+      "tags": [
+        "edital de notificação",
+        "devolução de recursos",
+        "município"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "82074de42e7ed21a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740556985",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Doação nº 2.795/2026 da Secretaria de Atenção Primária à Saúde doa unidade odontológica móvel e equipamentos a Cananeia/SP.",
+      "por_que_importa": null,
+      "valor_brl": 399380.26,
+      "entes": [
+        "Cananeia"
+      ],
+      "tags": [
+        "doação",
+        "unidade odontológica móvel",
+        "saúde bucal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ab6effa5bfb07fe2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740556857",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Doação nº 50/2026 da Secretaria de Atenção Primária à Saúde doa unidade odontológica móvel e equipamentos a Cutias/AP.",
+      "por_que_importa": null,
+      "valor_brl": 399380.26,
+      "entes": [
+        "Cutias"
+      ],
+      "tags": [
+        "doação",
+        "unidade odontológica móvel",
+        "saúde bucal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8054a5fc62c6871e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740556780",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Doação nº 00137/2026 da Secretaria de Informação e Saúde Digital doa equipamentos para teleconsulta a Tucano/BA.",
+      "por_que_importa": null,
+      "valor_brl": 25634.4,
+      "entes": [
+        "Tucano"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8e3f8e8e81c03b99",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740556703",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Doação nº 00141/2026 da Secretaria de Informação e Saúde Digital doa equipamentos para teleconsulta a Remanso/BA.",
+      "por_que_importa": null,
+      "valor_brl": 6408.6,
+      "entes": [
+        "Remanso"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "20cb57ab92e734ce",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "808",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 808, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-808-de-21-de-outubro-de-2026-740546215",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 808 de 21 de outubro de 2026 da Secretaria de Atenção Primária à Saúde convoca Fundo Municipal de Saúde de São Sebastião do Paraíso/MG para retirada de notificação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São Sebastião do Paraíso"
+      ],
+      "tags": [
+        "edital de notificação",
+        "devolução de recursos",
+        "fundo municipal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2ccf9b1bd9e07446",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740546138",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Doação nº 00140/2026 da Secretaria de Informação e Saúde Digital doa equipamentos para teleconsulta a Ribeira do Amparo/BA.",
+      "por_que_importa": null,
+      "valor_brl": 12817.2,
+      "entes": [
+        "Ribeira do Amparo"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "27e854cc331dfca1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740544294",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Doação nº 302/2026 da Secretaria de Atenção Primária à Saúde doa unidade odontológica móvel e equipamentos a Buritis/RO.",
+      "por_que_importa": null,
+      "valor_brl": 399380.26,
+      "entes": [
+        "Buritis"
+      ],
+      "tags": [
+        "doação",
+        "unidade odontológica móvel",
+        "saúde bucal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e67eb49529875dc7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740544217",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Doação nº 00122/2026 da Secretaria de Informação e Saúde Digital doa equipamentos para teleconsulta a Senador Guiomard/AC.",
+      "por_que_importa": null,
+      "valor_brl": 7346.56,
+      "entes": [
+        "Senador Guiomard"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "31697d79a9f8c35e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740544140",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Doação nº 00174/2026 da Secretaria de Informação e Saúde Digital doa equipamentos para teleconsulta a Pedra Grande/RN.",
+      "por_que_importa": null,
+      "valor_brl": 6138.51,
+      "entes": [
+        "Pedra Grande"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2555abc19cd01fbb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740544059",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Termo de Doação nº 00185/2026 da Secretaria de Informação e Saúde Digital doa equipamentos para teleconsulta a Brasiléia/AC.",
+      "por_que_importa": null,
+      "valor_brl": 28147.76,
+      "entes": [
+        "Brasiléia"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d591b80a3d1be5b8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740542063",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Termo de Doação nº 00186/2026 da Secretaria de Informação e Saúde Digital doa equipamentos para teleconsulta a Alto Rio Doce/MG.",
+      "por_que_importa": null,
+      "valor_brl": 14073.88,
+      "entes": [
+        "Alto Rio Doce"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d74b3fbec55dbc2f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740534102",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa unidade odontológica móvel ao Município de Paulicéia/SP via extrato de doação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamento odontológico móvel junto ao Ministério da Saúde.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Paulicéia/SP"
+      ],
+      "tags": [
+        "doação",
+        "equipamento",
+        "odontologia",
+        "primária"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7f37b193fb03b48d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740534025",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Jussari/BA via extrato de doação e rerratificação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamentos para telessaúde junto ao Ministério da Saúde.",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Município de Jussari/BA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b0816b140e3bb038",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740533997",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Wenceslau Guimarães/BA via extrato de doação e rerratificação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamentos para telessaúde junto ao Ministério da Saúde.",
+      "valor_brl": 25634.4,
+      "entes": [
+        "Município de Wenceslau Guimarães/BA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b971d36e9fd8a5b5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740533871",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Santa Tereza de Goiás/GO via extrato de doação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamentos para telessaúde junto ao Ministério da Saúde.",
+      "valor_brl": 7036.94,
+      "entes": [
+        "Município de Santa Tereza de Goiás/GO"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "daea77e6368bf461",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740533794",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Campinas/SP via extrato de doação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamentos para telessaúde junto ao Ministério da Saúde.",
+      "valor_brl": 124891.52,
+      "entes": [
+        "Município de Campinas/SP"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "86294a12fbbc3761",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740533771",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de São João da Baliza/RR via extrato de doação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamentos para telessaúde junto ao Ministério da Saúde.",
+      "valor_brl": 7036.94,
+      "entes": [
+        "Município de São João da Baliza/RR"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bc44cdecb2e6dcef",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740533694",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Venha-Ver/RN via extrato de doação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamentos para telessaúde junto ao Ministério da Saúde.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Município de Venha-Ver/RN"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0ab49ff3e6d1004b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "804",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 140,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 804, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-804-de-21-de-outubro-de-2026-740527127",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 804/2026 da Secretaria de Atenção Primária à Saúde convoca pessoa para retirada de notificação referente a devolução de recursos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "administrativo",
+        "devolução",
+        "recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "12a31ed7e9cd895e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740527050",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Canudos/BA via extrato de doação e rerratificação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamentos para telessaúde junto ao Ministério da Saúde.",
+      "valor_brl": 12817.2,
+      "entes": [
+        "Município de Canudos/BA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a69e3f5a8f9c24c4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740526971",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Beberibe/CE via extrato de doação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamentos para telessaúde junto ao Ministério da Saúde.",
+      "valor_brl": 51268.8,
+      "entes": [
+        "Município de Beberibe/CE"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2b8d9f9fc5e2e4e0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740526948",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Muribeca/SE via extrato de doação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamentos para telessaúde junto ao Ministério da Saúde.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Município de Muribeca/SE"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a778e2cc5b00c4b7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740526866",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Alto Paraíso/RO via extrato de doação de 27/10/2026.",
+      "por_que_importa": "Instituições mineiras podem solicitar doação semelhante de equipamentos para telessaúde junto ao Ministério da Saúde.",
+      "valor_brl": 7346.56,
+      "entes": [
+        "Município de Alto Paraíso/RO"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento",
+        "teleconsulta"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "20806b5242300af7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Republicação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 140,
+      "edicao": "203",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-740521476",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de contrato múltiplo com os Correios de Sergipe para serviços postais, publicada em 27/10/2026.",
+      "por_que_importa": null,
+      "valor_brl": 2988.08,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "contrato",
+        "correios",
+        "rotina"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2ac3f25e3cd2d316",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "815",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 815, DE 23 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-815-de-23-de-outubro-de-2026-740521272",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 815, de 23/10/2026, para localizar Celso Benedito da Silva.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital",
+        "notificação",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9ca810e2b235e188",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740521141",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de Doação nº 2.485/2026 do Ministério da Saúde, de 15/10/2026, para o Município de Ouro Verde de Minas/MG, de unidade odontológica móvel.",
+      "por_que_importa": "vale contatar a SES-MG para verificar se há inscrição aberta para municípios mineiros receberem unidade odontológica móvel.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Ouro Verde de Minas/MG"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "saúde bucal",
+        "minas gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "88b0cd09e7191848",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740521008",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00123/2026 do Ministério da Saúde, de 09/10/2026, para o Município de Campestre/AL, de kits para teleconsulta.",
+      "por_que_importa": "verificar junto à SES-MG se há inscrição aberta para municípios mineiros na ação estratégica SUS Digital - Telessaúde.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Município de Campestre/AL"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "alagoas"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "331e2a7f06ba5f35",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740520931",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00143/2026 do Ministério da Saúde, de 13/10/2026, para o Município de Boninal/BA, de kits para teleconsulta.",
+      "por_que_importa": "verificar junto à SES-MG se há inscrição aberta para municípios mineiros na ação estratégica SUS Digital - Telessaúde.",
+      "valor_brl": 12277.02,
+      "entes": [
+        "Município de Boninal/BA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "bahia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0dd10569e15b0521",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740520854",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00179/2026 do Ministério da Saúde, de 08/10/2026, para o Município de Três Palmeiras/RS, de kits para teleconsulta.",
+      "por_que_importa": "verificar junto à SES-MG se há inscrição aberta para municípios mineiros na ação estratégica SUS Digital - Telessaúde.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Município de Três Palmeiras/RS"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "rio grande do sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0a0f64275c51882f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740520828",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00183/2026 do Ministério da Saúde, de 13/10/2026, para o Município de Hidrolina/GO, de kits para teleconsulta.",
+      "por_que_importa": "verificar junto à SES-MG se há inscrição aberta para municípios mineiros na ação estratégica SUS Digital - Telessaúde.",
+      "valor_brl": 7036.94,
+      "entes": [
+        "Município de Hidrolina/GO"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "goiás"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7390d12e0c8436b0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740514501",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 2.649/2026 do Ministério da Saúde, de 19/10/2026, para o Município de Senador Guiomard/AC, de unidade odontológica móvel.",
+      "por_que_importa": "verificar junto à SES-MG se há programa similar para municípios mineiros receberem unidade odontológica móvel.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Senador Guiomard/AC"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "saúde bucal",
+        "acre"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "63b61c767b8c2fea",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "140",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 140, DE 5 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-140-de-5-de-outubro-de-2026-740514424",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 140, de 5/10/2026, para localizar Eliza Maria Gomes dos Santos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital",
+        "notificação",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9865b5f7889f999c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740514401",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00127/2026 do Ministério da Saúde, de 13/10/2026, para o Município de Ipirá/BA, de kits para teleconsulta.",
+      "por_que_importa": "verificar junto à SES-MG se há inscrição aberta para municípios mineiros na ação estratégica SUS Digital - Telessaúde.",
+      "valor_brl": 51268.8,
+      "entes": [
+        "Município de Ipirá/BA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "bahia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c7a712a26b950a97",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740514268",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00177/2026 do Ministério da Saúde, de 11/09/2026, para o Município de Vicente Dutra/RS, de kits para teleconsulta.",
+      "por_que_importa": "verificar junto à SES-MG se há inscrição aberta para municípios mineiros na ação estratégica SUS Digital - Telessaúde.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Município de Vicente Dutra/RS"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "rio grande do sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4685e2ca8ac8c241",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740514191",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00181/2026 do Ministério da Saúde, de 09/10/2026, para o Município de Itaporã/MS, de kits para teleconsulta.",
+      "por_que_importa": "verificar junto à SES-MG se há inscrição aberta para municípios mineiros na ação estratégica SUS Digital - Telessaúde.",
+      "valor_brl": 28147.76,
+      "entes": [
+        "Município de Itaporã/MS"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos",
+        "mato grosso do sul"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3455faf12f30ceff",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 142,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740509087",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Termo de Doação nº 2786/2026, doando 1 veículo tipo furgão adaptado como Unidade Odontológica Móvel ao Município de Alfredo Marcondes/SP.",
+      "por_que_importa": "O ente pode estudar o modelo de implantação do componente móvel da atenção à saúde bucal para replicação.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Alfredo Marcondes/SP"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "unidade móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d3e653afda977513",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740509010",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Termo de Doação nº 2.822/2026, doando 1 veículo tipo furgão adaptado como Unidade Odontológica Móvel ao Município de São José da Bela Vista/SP.",
+      "por_que_importa": "O ente pode estudar o modelo de implantação do componente móvel da atenção à saúde bucal para replicação.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "São José da Bela Vista/SP"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "unidade móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7be7440d08eaf9cd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "144",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 144, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-144-de-21-de-outubro-de-2026-740508933",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Edital de Notificação nº 144, de 21 de outubro de 2026, para notificar ex-participante do Programa PRÓ-RESIDÊNCIA.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "residência",
+        "débito"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b6b3e9afffcb508d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740508856",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Extrato nº 00139/2026 de Termo de Doação e Rerratificação, doando kits de equipamentos para teleconsulta ao Município de Inhambupe/BA.",
+      "por_que_importa": "O ente pode verificar se há chamadas similares para a Ação Estratégica SUS Digital - Telessaúde em seu estado.",
+      "valor_brl": 25634.4,
+      "entes": [
+        "Inhambupe/BA"
+      ],
+      "tags": [
+        "telessaúde",
+        "teleconsulta",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4647bbcce94ab8ae",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740508777",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Extrato nº 00149/2026 de Termo de Doação, doando kits de equipamentos para teleconsulta ao Município de Umari/CE.",
+      "por_que_importa": "O ente pode verificar se há chamadas similares para a Ação Estratégica SUS Digital - Telessaúde em seu estado.",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Umari/CE"
+      ],
+      "tags": [
+        "telessaúde",
+        "teleconsulta",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7f8ed29470c2ec5e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740508700",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Extrato nº 00152/2026 de Termo de Doação, doando kits de equipamentos para teleconsulta ao Município de Rosário do Ivaí/PR.",
+      "por_que_importa": "O ente pode verificar se há chamadas similares para a Ação Estratégica SUS Digital - Telessaúde em seu estado.",
+      "valor_brl": 6138.51,
+      "entes": [
+        "Rosário do Ivaí/PR"
+      ],
+      "tags": [
+        "telessaúde",
+        "teleconsulta",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f072a6ef0ebee9b3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740508623",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Extrato nº 00163/2026 de Termo de Doação, doando kits de equipamentos para teleconsulta ao Município de Macedônia/SP.",
+      "por_que_importa": "O ente pode verificar se há chamadas similares para a Ação Estratégica SUS Digital - Telessaúde em seu estado.",
+      "valor_brl": 7036.94,
+      "entes": [
+        "Macedônia/SP"
+      ],
+      "tags": [
+        "telessaúde",
+        "teleconsulta",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "392d165f7e68a284",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740508546",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Extrato nº 00192/2026 de Termo de Doação, doando kits de equipamentos para teleconsulta ao Município de Santa Luzia d'Oeste/RO.",
+      "por_que_importa": "O ente pode verificar se há chamadas similares para a Ação Estratégica SUS Digital - Telessaúde em seu estado.",
+      "valor_brl": 7346.56,
+      "entes": [
+        "Santa Luzia d'Oeste/RO"
+      ],
+      "tags": [
+        "telessaúde",
+        "teleconsulta",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "69e5e2a1f93e0729",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 150,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740508522",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Extrato nº 00196/2026 de Termo de Doação, doando kits de equipamentos para teleconsulta ao Município de São Gonçalo/RJ.",
+      "por_que_importa": "O ente pode verificar se há chamadas similares para a Ação Estratégica SUS Digital - Telessaúde em seu estado.",
+      "valor_brl": 7346.56,
+      "entes": [
+        "São Gonçalo/RJ"
+      ],
+      "tags": [
+        "telessaúde",
+        "teleconsulta",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6f3c26f7b682c337",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "203",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-740502329",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Extrato do Convênio nº 998681 com a Irmandade da Santa Casa de Misericórdia de São Paulo para aquisição de equipamento e material permanente.",
+      "por_que_importa": "O ente pode estudar as condições de convênio para aquisição de equipamento e material permanente.",
+      "valor_brl": 600000,
+      "entes": [
+        "Irmandade da Santa Casa de Misericórdia de São Paulo"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "santa casa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "22beddecc8cd4241",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740502252",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Extrato nº 00130/2026 de Termo de Doação e Rerratificação, doando kits de equipamentos para teleconsulta ao Município de Cícero Dantas/BA.",
+      "por_que_importa": "O ente pode verificar se há chamadas similares para a Ação Estratégica SUS Digital - Telessaúde em seu estado.",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Cícero Dantas/BA"
+      ],
+      "tags": [
+        "telessaúde",
+        "teleconsulta",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8c5a32bb23b948b6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740502175",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "O Ministério da Saúde publica, em 27 de outubro de 2026, o Extrato nº 00135/2026 de Termo de Doação e Rerratificação, doando kits de equipamentos para teleconsulta ao Município de Dom Macedo Costa/BA.",
+      "por_que_importa": "O ente pode verificar se há chamadas similares para a Ação Estratégica SUS Digital - Telessaúde em seu estado.",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Dom Macedo Costa/BA"
+      ],
+      "tags": [
+        "telessaúde",
+        "teleconsulta",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0bc8dea8621217e6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "810",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 810, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-810-de-21-de-outubro-de-2026-740500806",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 810 de 21 de outubro de 2026 da Secretaria de Atenção Primária à Saúde convoca ex-secretário municipal de saúde de São Sebastião do Paraíso para retirar notificação sobre devoluções de recursos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "São Sebastião do Paraíso"
+      ],
+      "tags": [
+        "notificação",
+        "devolução",
+        "recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "46b46b78b9342080",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "521",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO SCTIE/MS Nº 521, DE 26 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-sctie/ms-n-521-de-26-de-outubro-de-2026-740500675",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação SCTIE/MS nº 521 de 26 de outubro de 2026 notifica espólio de Erika Rizzato sobre procedimento de averiguação relacionado ao Programa Farmácia Popular.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "farmácia",
+        "notificação",
+        "averiguação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d23257b6dff60257",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740500596",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00133/2026 de 13 de outubro de 2026 do Ministério da Saúde ao Município de SENTO SÉ/BA de kits de equipamentos para teleconsulta da Ação Estratégica SUS Digital, com rerratificação.",
+      "por_que_importa": null,
+      "valor_brl": 25634.4,
+      "entes": [
+        "SENTO SÉ"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "dcacf0694e65bf43",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740500517",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00154/2026 de 15 de outubro de 2026 do Ministério da Saúde ao Município de XAVANTINA/SC de kits de equipamentos para teleconsulta da Ação Estratégica SUS Digital - Telessaúde.",
+      "por_que_importa": null,
+      "valor_brl": 6138.51,
+      "entes": [
+        "XAVANTINA"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f201eb24640b0b57",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 143,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740490477",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação Termo nº 2.789/2026 de 19 de outubro de 2026 do Ministério da Saúde ao Município de APARECIDA D'OESTE/SP de veículo tipo furgão adaptado para Unidade Odontológica Móvel.",
+      "por_que_importa": null,
+      "valor_brl": 399380.26,
+      "entes": [
+        "APARECIDA D'OESTE"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "odontologia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0190adbd34621153",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740490430",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00125/2026 de 09 de outubro de 2026 do Ministério da Saúde ao Município de EUCLIDES DA CUNHA/BA de kits de equipamentos para teleconsulta da Ação Estratégica SUS Digital, com rerratificação.",
+      "por_que_importa": null,
+      "valor_brl": 51268.8,
+      "entes": [
+        "EUCLIDES DA CUNHA"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e4254aef123a9042",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740490319",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00129/2026 de 19 de outubro de 2026 do Ministério da Saúde ao Município de CAPIM GROSSO/BA de kits de equipamentos para teleconsulta da Ação Estratégica SUS Digital, com rerratificação.",
+      "por_que_importa": null,
+      "valor_brl": 6408.6,
+      "entes": [
+        "CAPIM GROSSO"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7b74bf5d44c06f9f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740490242",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00142/2026 de 21 de outubro de 2026 do Ministério da Saúde ao Município de SANTA RITA DE CÁSSIA/BA de kits de equipamentos para teleconsulta da Ação Estratégica SUS Digital, com rerratificação.",
+      "por_que_importa": null,
+      "valor_brl": 6408.6,
+      "entes": [
+        "SANTA RITA DE CÁSSIA"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6aa33c687ac43d32",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740490165",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00146/2026 de 23 de setembro de 2026 do Ministério da Saúde ao Município de GRAÇA/CE de kits de equipamentos para teleconsulta da Ação Estratégica SUS Digital - Telessaúde.",
+      "por_que_importa": null,
+      "valor_brl": 12817.2,
+      "entes": [
+        "GRAÇA"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "49680a219d85aa3b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "203",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-740490142",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 00159/2026 de 15 de outubro de 2026 do Ministério da Saúde ao Município de SOROCABA/SP de kits de equipamentos para teleconsulta da Ação Estratégica SUS Digital - Telessaúde.",
+      "por_que_importa": null,
+      "valor_brl": 117544.96,
+      "entes": [
+        "SOROCABA"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b9f06c6525b283b7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "203",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-740489682",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Convênio 7AAHKH de 22 de outubro de 2026 entre Ministério da Saúde e Centro de Hemoterapia e Hematologia do Pará para aquisição de equipamento e material permanente.",
+      "por_que_importa": null,
+      "valor_brl": 223709,
+      "entes": [
+        "Centro de Hemoterapia e Hematologia do Pará"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "hemoterapia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b34493cc9798f2f5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "806",
+      "data_publicacao": "2026-10-27",
+      "secao": "3",
+      "pagina": 141,
+      "edicao": "203",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 806, DE 21 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-806-de-21-de-outubro-de-2026-740489605",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 806 de 21 de outubro de 2026 da Secretaria de Atenção Primária à Saúde convoca Gestor do Fundo Municipal de Saúde de Monsenhor Gil/PI para retirar notificação sobre parecer de devoluções.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Monsenhor Gil"
+      ],
+      "tags": [
+        "notificação",
+        "devolução",
+        "recursos"
+      ],
+      "fallback": false
+    }
+  ]
+}
