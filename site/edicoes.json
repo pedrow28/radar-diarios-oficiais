@@ -1,5 +1,19 @@
 [
   {
+    "data": "2026-10-28",
+    "titulo": "63 doações de equipamentos e 13 protocolos clínicos para câncer publicados",
+    "url": "edicoes/2026-10-28.html",
+    "contagens": {
+      "A": 63,
+      "B": 13,
+      "C": 0,
+      "D": 8
+    },
+    "parcial": true,
+    "valor_dia": 44917840.26,
+    "total_relevante": 76
+  },
+  {
     "data": "2026-10-27",
     "titulo": "19 unidades odontológicas, 5 convênios e 70 teleconsultas somam R$ 10,7 mi",
     "url": "edicoes/2026-10-27.html",
