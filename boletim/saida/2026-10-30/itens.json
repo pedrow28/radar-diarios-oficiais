@@ -1,0 +1,59 @@
+{
+  "data": "2026-10-30",
+  "gerado_em": "2026-10-30T16:13:10.364351+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "Boletim de 30/10/2026: 0 publicações relevantes",
+    "em_30_segundos": [
+      "Sem publicações relevantes nesta data"
+    ],
+    "intro": "Nenhuma publicação de captação de recursos, mudança de regra ou edital nesta data. O radar segue lendo o Diário Oficial da União e o Diário Oficial de Minas Gerais no próximo dia útil.",
+    "parcial": true,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "205-C",
+        "paginas": "pp. 1-1",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ausente",
+        "edicao": null,
+        "paginas": null,
+        "avisos": [
+          "arquivo não encontrado"
+        ]
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "d3296d793d040c6b",
+      "fonte": "dou",
+      "orgao": "Presidência da República",
+      "unidade": "Casa Civil",
+      "tipo": "Portaria",
+      "numero": null,
+      "data_publicacao": "2026-10-30",
+      "secao": null,
+      "pagina": 1,
+      "edicao": "205-C",
+      "titulo": "PORTARIAS DE 30 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portarias-de-30-de-outubro-de-2026-741178567",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "A Presidência da República publica portarias nº 1.110 e 1.111 de 30 de outubro de 2026 nomeando assessores especiais do Gabinete de Segurança Institucional.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "nomeação",
+        "pessoal",
+        "gabinete de segurança"
+      ],
+      "fallback": false
+    }
+  ]
+}
