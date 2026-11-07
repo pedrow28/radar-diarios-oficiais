@@ -1,0 +1,34 @@
+{
+  "data": "2026-11-07",
+  "gerado_em": "2026-11-07T16:38:57.474697+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "Boletim de 07/11/2026: 0 publicações relevantes",
+    "em_30_segundos": [
+      "Sem publicações relevantes nesta data"
+    ],
+    "intro": "Nenhuma publicação de captação de recursos, mudança de regra ou edital nesta data. O radar segue lendo o Diário Oficial da União e o Diário Oficial de Minas Gerais no próximo dia útil.",
+    "parcial": true,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "parcial",
+        "edicao": null,
+        "paginas": null,
+        "avisos": [
+          "Busca do órgão Presidência da República falhou: Falhou após 3 tentativas em https://www.in.gov.br/consulta/-/buscar/dou?q=%2A&s=todos&orgPrin=Presid%C3%AAncia+da+Rep%C3%BAblica&exactDate=personalizado&publishFrom=07-11-2026&publishTo=07-11-2026&sortType=0&delta=75: HTTPSConnectionPool(host='www.in.gov.br', port=443): Read timed out. (read timeout=60)"
+        ]
+      },
+      {
+        "nome": "iofmg",
+        "status": "ausente",
+        "edicao": null,
+        "paginas": null,
+        "avisos": [
+          "arquivo não encontrado"
+        ]
+      }
+    ]
+  },
+  "itens": []
+}
