@@ -1,0 +1,3256 @@
+{
+  "data": "2026-11-09",
+  "gerado_em": "2026-11-09T20:22:53.211844+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "60 portarias ampliam investimentos em saúde com R$ 191,8 milhões para infraestrutura",
+    "em_30_segundos": [
+      "Ministério da Saúde aprova enquadramento prioritário de R$ 191,8 milhões via Portaria 12.460 para projeto de infraestrutura em SP.",
+      "SAES/MS habilita 4 clínicas para terapia renal via Portarias 5.211, 5.262, 5.281 e 5.280 com R$ 199,5 milhões",
+      "GM/MS autoriza via Portaria 12.474 repasse de R$ 9,2 milhões a 25 municípios para aquisição de equipamentos.",
+      "Ministério da Saúde publica 18 extratos de doação para equipar unidades básicas de saúde em diversos estados via PAC 2025."
+    ],
+    "intro": "Nesta edição, 60 itens chegam com destaque para um projeto de infraestrutura de saúde em Sorocaba de R$ 191,8 milhões (Portaria 12.460) e 4 novas habilitações no Programa Agora Tem Especialistas para terapia renal substitutiva que somam R$ 199,5 milhões em créditos financeiros. Gestor, leia com prioridade as Portarias SAES/MS 5.211, 5.262, 5.281 e 5.280 para habilitações em terapia renal, a Portaria 12.474 que libera R$ 9,2 milhões a 25 municípios para equipamentos, e os 18 extratos de doação para estruturação de unidades básicas de saúde no PAC 2025.",
+    "parcial": true,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "210",
+        "paginas": "pp. 1-149",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ausente",
+        "edicao": null,
+        "paginas": null,
+        "avisos": [
+          "arquivo não encontrado"
+        ]
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "7a23848fd0d6261d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Ajuste",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 140,
+      "edicao": "210",
+      "titulo": "EXTRATO DE AJUSTE",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-ajuste-742692101",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de ajuste nº 6 de 2023 do Proadi-SUS da Secretaria Executiva reduz valor aprovado de projeto de formação de médicos especialistas.",
+      "por_que_importa": null,
+      "valor_brl": 7225182.31,
+      "entes": [],
+      "tags": [
+        "ajuste",
+        "redução",
+        "proadi-sus"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6ee44a583f63f6d6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.160/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 4.160/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-4.160/2026-742692024",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 4.160/2026 da Secretaria de Atenção Primária à Saúde aloca equipamentos para estruturação de UBS em Massapê do Piauí pelo PAC 2025.",
+      "por_que_importa": "Articule com o município para garantir recebimento dos equipamentos e prepare infraestrutura conforme cronograma de entrega.",
+      "valor_brl": null,
+      "entes": [
+        "Massapê do Piauí"
+      ],
+      "tags": [
+        "pac-2025",
+        "doação",
+        "ubs"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "288e1fe649ee0add",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Comunicado",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "210",
+      "titulo": "COMUNICADO DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/comunicado-de-6-de-novembro-de-2026-742676615",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Comunicado de 6 de novembro de 2026 da Agência Nacional de Saúde Suplementar cancela registros de 2 operadoras de planos de saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "ans",
+        "cancelamento",
+        "suplementar"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f0d8933a7cb3c608",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "210",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-742676538",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração de edital da Fundação Oswaldo Cruz altera descrição de itens no Pregão 61/2026 para aquisição de EPI.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "pregão",
+        "epi"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "19a2c951f518eb0c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "210",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-742669637",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de convênio da Secretaria Executiva do Ministério da Saúde aloca recurso para a Fundação Hospitalar de Hematologia e Hemoterapia do Amazonas.",
+      "por_que_importa": "Confira o cronograma de entrega dos equipamentos e monitore a execução conforme vigência do convênio até 21 de abril de 2028.",
+      "valor_brl": 223709,
+      "entes": [
+        "Fundação Hospitalar de Hematologia e Hemoterapia do Amazonas"
+      ],
+      "tags": [
+        "convênio",
+        "hematologia",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "74e3177fba90aeed",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "210",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-742653046",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração de edital da Secretaria de Saúde Indígena altera agrupamento de itens no Pregão 43/2026 de vigilância patrimonial para o DSEI Vale do Javari.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "pregão",
+        "vigilância"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "548b3f054bd842f5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "210",
+      "titulo": "EDITAL DE CONVOCAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-convocacao-742647216",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de convocação de 9 de novembro de 2026 da Agência Nacional de Saúde Suplementar convida credores da operadora Benefit Benefícios LTDA.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "convocação",
+        "saúde-suplementar"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4a2b2da2d5f846d8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.352/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 7.352/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-7.352/2026-742637627",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 7.352/2026 da Secretaria de Atenção Primária à Saúde aloca equipamentos para estruturação de UBS em São Jorge D'oeste pelo PAC 2025.",
+      "por_que_importa": "Coordene com a prefeitura para garantir infraestrutura e recebimento dos equipamentos conforme cronograma previsto.",
+      "valor_brl": null,
+      "entes": [
+        "São Jorge D'oeste"
+      ],
+      "tags": [
+        "pac-2025",
+        "doação",
+        "ubs"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "433671c916e386e0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": "32/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "210",
+      "titulo": "EXTRATO DE ACORDO DE COOPERAÇÃO TÉCNICA Nº 32/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-cooperacao-tecnica-n-32/2026-742634134",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de acordo de cooperação técnica nº 32/2026 da Secretaria Executiva estabelece perícia em saúde entre Ministério da Saúde e Comunicações.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "acordo",
+        "cooperação-técnica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "86c8a3a880fb407f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.787/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 5.787/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-5.787/2026-742631875",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de doação nº 5.787/2026 da Secretaria de Atenção Primária à Saúde aloca equipamentos para estruturação de UBS em Doresópolis/MG pelo PAC 2025.",
+      "por_que_importa": "Articule com a prefeitura para garantir recebimento dos equipamentos e prepare infraestrutura conforme cronograma do PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Doresópolis"
+      ],
+      "tags": [
+        "pac-2025",
+        "doação",
+        "ubs",
+        "minas-gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "db694f288a264b2c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.370/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 7.370/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-7.370/2026-742631749",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 7.370/2026 da Secretaria de Atenção Primária à Saúde aloca equipamentos para estruturação de UBS em Siqueira Campos pelo PAC 2025.",
+      "por_que_importa": "Coordene com a prefeitura para garantir infraestrutura e recebimento dos equipamentos conforme cronograma previsto.",
+      "valor_brl": null,
+      "entes": [
+        "Siqueira Campos"
+      ],
+      "tags": [
+        "pac-2025",
+        "doação",
+        "ubs"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6b88689bf8bebea8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Vigilância em Saúde e Ambiente",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "210",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-742631595",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração de edital da Secretaria de Vigilância em Saúde e Ambiente retifica instrumento do Pregão 59/2026 de serviços auxiliares.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "pregão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bd350c2cfbc07795",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "210",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-742631437",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica retificação em 09/11/2026 de convênio anterior, corrigindo data de vigência.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "convênio"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7200bfd51a1b9ec5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 148,
+      "edicao": "210",
+      "titulo": "aviso de CHAMAMENTO PÚBLICO",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-742631355",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Oswaldo Cruz publica Aviso de Chamamento Público nº 187/2026 em 09/11/2026 convocando fornecedores para pesquisa de mercado de manutenção predial.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "manutenção"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "25397254182e306d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Ajuste",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 140,
+      "edicao": "210",
+      "titulo": "EXTRATO DE AJUSTE",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-ajuste-742619427",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica Extrato de Ajuste nº 4/2023 do Proadi-SUS em 09/11/2026 aumentando valor de convênio com Hospital Alemão Oswaldo Cruz.",
+      "por_que_importa": "O hospital deve atualizar registros e cronograma de execução conforme o ajuste de valor aprovado no parecer técnico.",
+      "valor_brl": 2746782.3,
+      "entes": [
+        "Hospital Alemão Oswaldo Cruz"
+      ],
+      "tags": [
+        "proadi-sus",
+        "ajuste",
+        "hospital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d12614e6bfce442b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.705/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 4.705/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-4.705/2026-742619273",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica Extrato de Doação nº 4.705/2026 em 09/11/2026 alocando equipamentos para estruturação de UBS em Monte Horebe/PB via Novo PAC 2025.",
+      "por_que_importa": "O município deve providenciar a infraestrutura para receber os equipamentos conforme cronograma de entregas do termo.",
+      "valor_brl": null,
+      "entes": [
+        "Monte Horebe"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c4deaea238ae0439",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "210",
+      "titulo": "EXTRATOS DE CONVÊNIOS",
+      "url": "https://www.in.gov.br/web/dou/-/extratos-de-convenios-742604558",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica Extratos de Convênios em 09/11/2026 para cessão de servidores federais a prefeituras municipais de vários estados.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Senador Guiomard",
+        "Morada Nova",
+        "Trajano de Moraes",
+        "Campo Belo",
+        "São Mateus",
+        "Muniz Freire"
+      ],
+      "tags": [
+        "convênio",
+        "cessão pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7a894f56d1affd99",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3.444/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 3.444/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-3.444/2026-742604458",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica Extrato de Doação nº 3.444/2026 em 09/11/2026 alocando equipamentos para estruturação de UBS em Mirante da Serra/RO via Novo PAC 2025.",
+      "por_que_importa": "O município deve providenciar a infraestrutura para receber os equipamentos conforme cronograma de entregas do termo.",
+      "valor_brl": null,
+      "entes": [
+        "Mirante da Serra"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6df09c0b6ce61f12",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.983/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 4.983/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-4.983/2026-742604381",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica Extrato de Doação nº 4.983/2026 em 09/11/2026 alocando equipamentos para estruturação de UBS em Branquinha/AL via Novo PAC 2025.",
+      "por_que_importa": "O município deve providenciar a infraestrutura para receber os equipamentos conforme cronograma de entregas do termo.",
+      "valor_brl": null,
+      "entes": [
+        "Branquinha"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1cc4059883d271bf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.938/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 5.938/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-5.938/2026-742604250",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde publica Extrato de Doação nº 5.938/2026 em 09/11/2026 alocando equipamentos para estruturação de UBS em Lagoa Grande/MG via Novo PAC 2025.",
+      "por_que_importa": "O município deve providenciar a infraestrutura para receber os equipamentos conforme cronograma de entregas do termo.",
+      "valor_brl": null,
+      "entes": [
+        "Lagoa Grande"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "944876a3ea7a95bd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.805/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 5.805/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-5.805/2026-742599540",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Ministério da Saúde publica Extrato de Doação nº 5.805/2026 em 09/11/2026 alocando equipamentos para estruturação de UBS em Felício dos Santos/MG via Novo PAC 2025.",
+      "por_que_importa": "O município deve providenciar a infraestrutura para receber os equipamentos conforme cronograma de entregas do termo.",
+      "valor_brl": null,
+      "entes": [
+        "Felício dos Santos"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bdad594eca7e87c6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "7.372/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 7.372/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-7.372/2026-742599463",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica Extrato de Doação nº 7.372/2026 em 09/11/2026 alocando equipamentos para estruturação de UBS em Tamarana/PR via Novo PAC 2025.",
+      "por_que_importa": "O município deve providenciar a infraestrutura para receber os equipamentos conforme cronograma de entregas do termo.",
+      "valor_brl": null,
+      "entes": [
+        "Tamarana"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d5898013406a6136",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.028/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 4.028/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-4.028/2026-742586326",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica Extrato de Doação nº 4.028/2026 em 09/11/2026 alocando equipamentos para estruturação de UBS em Tuntum/MA via Novo PAC 2025.",
+      "por_que_importa": "O município deve providenciar a infraestrutura para receber os equipamentos conforme cronograma de entregas do termo.",
+      "valor_brl": null,
+      "entes": [
+        "Tuntum"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "553f10d5d331656d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Vigilância em Saúde e Ambiente",
+      "tipo": "Edital",
+      "numero": "15/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "210",
+      "titulo": "EDITAL Nº 15/2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-n-15/2026-742586245",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica Edital nº 15/2026 em 09/11/2026 de notificação para cobrança de débitos de diárias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital",
+        "notificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "257f6d5b9c803ad2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Grupo Hospitalar Conceição",
+      "tipo": "Extrato de Credenciamento",
+      "numero": "4/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "210",
+      "titulo": "AVISO DE CREDENCIAMENTO Nº 4/2026",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-credenciamento-n-4/2026-742586168",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de credenciamento nº 4/2026, de 9 de novembro de 2026, do Grupo Hospitalar Conceição para seleção de pessoas jurídicas fornecedoras de serviços em endoscopia.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Nossa Senhora da Conceição",
+        "Hospital Federal de Bonsucesso"
+      ],
+      "tags": [
+        "credenciamento",
+        "endoscopia",
+        "especializado",
+        "serviços"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "05782f5e31e10a4f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.199/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 4.199/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-4.199/2026-742572999",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 4.199/2026, de 9 de novembro de 2026, do Ministério da Saúde para estruturação de unidades básicas de saúde em Piripiri/PI.",
+      "por_que_importa": "Acompanhar prazos de entrega de equipamentos para estruturação de UBS em Piripiri, conforme cronograma da modalidade Equipamentos para UBS do PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Piripiri/PI"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "38c26124c01f2263",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.767/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 5.767/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-5.767/2026-742572920",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de doação nº 5.767/2026, de 9 de novembro de 2026, do Ministério da Saúde para estruturação de unidades básicas de saúde em Diogo de Vasconcelos/MG.",
+      "por_que_importa": "Acompanhar o cronograma de entrega de equipamentos para estruturação de UBS em Diogo de Vasconcelos, conforme modalidade Equipamentos para UBS do PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Diogo de Vasconcelos/MG"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d4ef2fe06ffc66a2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Extrato de Acordo de Cooperação Técnica",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 149,
+      "edicao": "210",
+      "titulo": "EXTRATO DE ACORDO DE COOPERAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-cooperacao-742572689",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de acordo de cooperação técnica nº 237/2026, de 26 de setembro de 2026, entre Fiocruz e município de Manaquiri/AM para capacitação de trabalhadores em saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Manaquiri/AM"
+      ],
+      "tags": [
+        "cooperação técnica",
+        "capacitação",
+        "gestão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c98bff9a0f6e39b9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": "26/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "210",
+      "titulo": "EXTRATO DE ACORDO DE COOPERAÇÃO TÉCNICA Nº 26/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-cooperacao-tecnica-n-26/2026-742556571",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de acordo de cooperação técnica nº 26/2026, de 5 de novembro de 2026, entre Ministério da Saúde e Hospital Universitário de Brasília para treinamento de residentes.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Universitário de Brasília"
+      ],
+      "tags": [
+        "estágio",
+        "residência",
+        "cooperação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8be14690d9ddc4c6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Comunicado",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "210",
+      "titulo": "COMUNICADO",
+      "url": "https://www.in.gov.br/web/dou/-/comunicado-742556481",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Comunicado de autorização de funcionamento de operadora de planos de saúde RENOVA SAÚDE PLANOS INTEGRADOS LTDA pela Agência Nacional de Saúde Suplementar.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "saúde suplementar",
+        "autorização",
+        "ans"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "04a6d1ad6d581f21",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 139,
+      "edicao": "210",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-742544177",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de convênio nº 7AAIRW, de 5 de novembro de 2026, do Ministério da Saúde com Associação dos Deficientes Físicos de Alagoas para aquisição de equipamento e material permanente.",
+      "por_que_importa": "Verificar se há convocação similar do ministério para entidades filantrópicas mineiras, tomando este convênio como referência de financiamento de equipamentos permanentes.",
+      "valor_brl": 499986,
+      "entes": [
+        "Associação dos Deficientes Físicos de Alagoas"
+      ],
+      "tags": [
+        "convênio",
+        "equipamentos",
+        "filantrópica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3999c1c7c8b7c483",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.284/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 4.284/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-4.284/2026-742542100",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 4.284/2026, de 9 de novembro de 2026, do Ministério da Saúde para estruturação de unidades básicas de saúde em Baturité/CE.",
+      "por_que_importa": "Acompanhar prazos de entrega de equipamentos para estruturação de UBS em Baturité, conforme cronograma da modalidade Equipamentos para UBS do PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Baturité/CE"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "91ac8e2ece069333",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Edital",
+      "numero": "18/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 140,
+      "edicao": "210",
+      "titulo": "EDITAL Nº 18/2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-n-18/2026-742543532",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital nº 18/2026, de 9 de novembro de 2026, do Ministério da Saúde com resultado preliminar de seleção de experiências exitosas em câncer de colo do útero.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Evandro Chagas",
+        "Fundação Oncocentro de SP"
+      ],
+      "tags": [
+        "edital",
+        "seleção",
+        "experiências",
+        "câncer"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "efd2c22863f2aa5a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Acordo de Cooperação Técnica",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "210",
+      "titulo": "EXTRATO DE ACORDO DE COOPERAÇÃO TÉCNICA",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-cooperacao-tecnica-742543405",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de acordo de cooperação técnica nº 4/2026, de 6 de novembro de 2026, entre Instituto Nacional de Traumatologia e Hospital Federal da Lagoa para treinamento de residentes.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Traumatologia",
+        "Hospital Federal da Lagoa"
+      ],
+      "tags": [
+        "cooperação técnica",
+        "residência",
+        "treinamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0fa4b38758663be7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "4.323/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 4.323/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-4.323/2026-742543325",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 4.323/2026, de 9 de novembro de 2026, do Ministério da Saúde para estruturação de unidades básicas de saúde em Guaramiranga/CE.",
+      "por_que_importa": "Acompanhar prazos de entrega de equipamentos para estruturação de UBS em Guaramiranga, conforme cronograma da modalidade Equipamentos para UBS do PAC 2025.",
+      "valor_brl": null,
+      "entes": [
+        "Guaramiranga/CE"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "04ea518ab4c1b912",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": "34/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "210",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO Nº 34/2026 - UASG 257043",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-n-34/2026-uasg-257043-742543302",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de chamamento público nº 34/2026, de 9 de novembro de 2026, da Secretaria de Saúde Indígena para prospecção de imóvel em Marabá/PA.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Marabá/PA"
+      ],
+      "tags": [
+        "chamamento público",
+        "imóvel",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "672df26648f148a4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 146,
+      "edicao": "210",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-742543171",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração de edital do pregão 118/2026 do Ministério da Saúde, de 9 de novembro de 2026, que retifica procedimento de contratação de transporte aéreo para saúde indígena.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "transporte aéreo",
+        "saúde indígena",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "704b7bfa17d8024f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.142/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 144,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 5.142/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-5.142/2026-742542023",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de termo de doação nº 5.142/2026, de 3 de novembro de 2026, do Ministério da Saúde ao município de Tobias Barreto/SE para estruturação de UBS no Novo PAC 2025.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Tobias Barreto"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e1de60e8a23f5224",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Edital",
+      "numero": "18",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 147,
+      "edicao": "210",
+      "titulo": "Edital DE NOTIFICAÇÃO Nº 18, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-18-de-6-de-novembro-de-2026-742541946",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 18, de 6 de novembro de 2026, da Anvisa, que notifica empresa para ciência de Auto de Infração Sanitária.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "infração sanitária",
+        "anvisa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8493544a841f3d7a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.780/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 5.780/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-5.780/2026-742535000",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de termo de doação nº 5.780/2026, de 3 de novembro de 2026, do Ministério da Saúde ao município de Dom Silvério/MG para estruturação de UBS no Novo PAC 2025.",
+      "por_que_importa": "acompanhar a entrega dos equipamentos e registrá-los no patrimônio municipal",
+      "valor_brl": null,
+      "entes": [
+        "Dom Silvério"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS",
+        "Minas Gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "236c3f410f248a7d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.810/2026",
+      "data_publicacao": "2026-11-09",
+      "secao": "3",
+      "pagina": 145,
+      "edicao": "210",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 5.810/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-5.810/2026-742525954",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de termo de doação nº 5.810/2026, de 3 de novembro de 2026, do Ministério da Saúde ao município de Fervedouro/MG para estruturação de UBS no Novo PAC 2025.",
+      "por_que_importa": "acompanhar a entrega dos equipamentos e registrá-los no patrimônio municipal",
+      "valor_brl": null,
+      "entes": [
+        "Fervedouro"
+      ],
+      "tags": [
+        "doação",
+        "PAC",
+        "UBS",
+        "Minas Gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "05943d09f9945657",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.485",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 96,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.485, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.485-de-6-de-novembro-de-2026-742457229",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Portaria GM/MS nº 12.485, de 6 de novembro de 2026, que autoriza 5 municípios de vários estados, incluindo Corrego do Bom Jesus/MG, a receber recursos para aquisição de equipamentos e materiais permanentes.",
+      "por_que_importa": "verificar se a proposta de Corrego do Bom Jesus foi aprovada e acompanhar a transferência ao fundo municipal",
+      "valor_brl": 1607016,
+      "entes": [
+        "Barra",
+        "Corrego do Bom Jesus",
+        "Areial",
+        "Tunapolis",
+        "Cajamar"
+      ],
+      "tags": [
+        "equipamentos",
+        "emenda parlamentar",
+        "municípios",
+        "Minas Gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "52915b5d45075e70",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.227",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 98,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.227, DE 23 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.227-de-23-de-outubro-de-2026-742457150",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.227, de 23 de outubro de 2026, que concede CEBAS à Fundação Dr. João Penido Burnier, com sede em Campinas/SP, por 3 anos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Campinas"
+      ],
+      "tags": [
+        "CEBAS",
+        "certificação",
+        "entidade beneficente"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1e854347fb7d9887",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.460",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 88,
+      "edicao": "210",
+      "titulo": "Portaria GM/ms Nº 12.460, DE 5 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.460-de-5-de-novembro-de-2026-742453463",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.460, de 5 de novembro de 2026, que aprova enquadramento prioritário de projeto de investimento em infraestrutura de saúde apresentado pela Inova Saúde Sorocaba SPE S.A.",
+      "por_que_importa": "benchmarking de modelo de financiamento via debêntures para projetos de infraestrutura de saúde em Minas",
+      "valor_brl": 191818000,
+      "entes": [
+        "Sorocaba"
+      ],
+      "tags": [
+        "debêntures",
+        "infraestrutura",
+        "investimento",
+        "PPP"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d54039014fdba104",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.474",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 91,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.474, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.474-de-6-de-novembro-de-2026-742453384",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Portaria GM/MS nº 12.474, de 6 de novembro de 2026, que autoriza 25 municípios de vários estados, incluindo Leopoldina/MG, a receber recursos para aquisição de equipamentos e materiais permanentes.",
+      "por_que_importa": "verificar se a proposta de Leopoldina foi aprovada e acompanhar a transferência ao fundo municipal",
+      "valor_brl": 9205930,
+      "entes": [
+        "Arneiroz",
+        "Santa Helena de Goias",
+        "Leopoldina",
+        "Agua Boa",
+        "Maraba",
+        "Igaracu do Tiete",
+        "Junqueiropolis",
+        "Poa",
+        "Carmolandia",
+        "Combinado"
+      ],
+      "tags": [
+        "equipamentos",
+        "emenda parlamentar",
+        "municípios",
+        "Minas Gerais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a0aafd6548637c91",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Despacho",
+      "numero": "114",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 97,
+      "edicao": "210",
+      "titulo": "Despacho Nº 114, DE 6 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-n-114-de-6-de-novembro-de-2026-742453299",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Despacho nº 114, de 6 de novembro de 2026, que nega provimento a recurso administrativo contra indeferimento de CEBAS do Instituto de Promoção e Assistência à Saúde Misericórdiae Vultus.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "CEBAS",
+        "indeferimento",
+        "entidade beneficente"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "26e36112b617ee30",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.211",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 97,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.211, DE 21 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.211-de-21-de-outubro-de-2026-742453226",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.211, de 21 de outubro de 2026, que habilita Davita Brasil em São Caetano do Sul/SP para Programa Agora Tem Especialistas na modalidade Terapia Renal Substitutiva.",
+      "por_que_importa": "contato com a Davita para habilitar unidades em Minas no Programa Agora Tem Especialistas se aplicável",
+      "valor_brl": 49885072.74,
+      "entes": [
+        "São Caetano do Sul"
+      ],
+      "tags": [
+        "hemodiálise",
+        "habilitação",
+        "Agora Tem Especialistas"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "58bfe6e747ad277a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.279",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 102,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.279, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.279-de-28-de-outubro-de-2026-742453145",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Portaria SAES/MS nº 5.279, de 28 de outubro de 2026, que indefere renovação de CEBAS do Hospital São Vicente de Paulo, com sede em Pote/MG.",
+      "por_que_importa": "acompanhar a situação do hospital e verificar se há débito de recursos do SUS a devolver",
+      "valor_brl": null,
+      "entes": [
+        "Pote"
+      ],
+      "tags": [
+        "CEBAS",
+        "indeferimento",
+        "Minas Gerais",
+        "risco"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "99f27306f8d83bf0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.477",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 92,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.477, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.477-de-6-de-novembro-de-2026-742448642",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.477 de 6 de novembro de 2026 aloca recursos federais para aquisição de equipamentos em 3 municípios.",
+      "por_que_importa": "Verifique se há potencial parceria com os municípios beneficiários em projetos de aquisição de equipamentos.",
+      "valor_brl": 1997134,
+      "entes": [
+        "Itapiranga (AM)",
+        "Águas Belas (PE)",
+        "Ribeirão (PE)"
+      ],
+      "tags": [
+        "equipamentos",
+        "emenda",
+        "aquisição"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "647d4b98adc6e2e8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.486",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 96,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.486, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.486-de-6-de-novembro-de-2026-742448563",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.486 de 6 de novembro de 2026 aloca recursos federais para aquisição de equipamentos em São Leopoldo (RS).",
+      "por_que_importa": "Acompanhe alocações federais similares para identificar potencial participação em futuras rodadas de transferência.",
+      "valor_brl": 2000000,
+      "entes": [
+        "São Leopoldo (RS)"
+      ],
+      "tags": [
+        "equipamentos",
+        "emenda",
+        "aquisição"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a315c051a6a1ee5d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.482",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 94,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.482, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.482-de-6-de-novembro-de-2026-742446880",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.482 de 6 de novembro de 2026 aloca recursos de emendas parlamentares para atenção especializada em diversos municípios.",
+      "por_que_importa": "Acompanhe se sua secretaria municipal ou instituição tem propostas similares em análise no InvestSUS.",
+      "valor_brl": 29109694,
+      "entes": [
+        "Paraipaba (CE)",
+        "Brasília (DF)",
+        "São João do Cariri (PB)",
+        "São Raimundo Nonato (PI)",
+        "Vilhena (RO)",
+        "Poço Verde (SE)"
+      ],
+      "tags": [
+        "emenda",
+        "atenção especializada",
+        "incremento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4a6db904d9c275b5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 113,
+      "edicao": "210",
+      "titulo": "ReTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-742446801",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de descrição de apresentação de medicamento em Resolução ANVISA RE nº 3.293 de 2011.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "medicamento",
+        "anvisa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2e100f9b9fdfcb86",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.255",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 86,
+      "edicao": "210",
+      "titulo": "Portaria GM/MS Nº 12.255, DE 5 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.255-de-5-de-novembro-de-2026-742445523",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.255 de 5 de novembro de 2026 desabilita e habilita equipes de atenção domiciliar com recursos realocados.",
+      "por_que_importa": "Verifique se sua instituição oferece atenção domiciliar (EMAD ou EMAP) para identificar potencial habilitação no Programa Melhor em Casa.",
+      "valor_brl": 1092000,
+      "entes": [
+        "Matinhos (PR)",
+        "Morretes (PR)",
+        "Pontal do Paraná (PR)"
+      ],
+      "tags": [
+        "atenção domiciliar",
+        "habilitação",
+        "desabilitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "44f5d0fb878cd822",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.214",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 98,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.214, DE 22 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.214-de-22-de-outubro-de-2026-742445444",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.214 de 22 de outubro de 2026 habilita clínica de nefrologia em Caucaia (CE) no Programa Agora Tem Especialistas.",
+      "por_que_importa": "Identifique se sua instituição oferece terapia renal substitutiva para potencial habilitação no Programa Agora Tem Especialistas.",
+      "valor_brl": 2029502.36,
+      "entes": [
+        "Caucaia (CE)",
+        "CENEC - Centro de Nefrologia de Caucaia Ltda"
+      ],
+      "tags": [
+        "terapia renal",
+        "hemodiálise",
+        "especialista"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0324bb4186bd26f5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.230",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 98,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.230, DE 23 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.230-de-23-de-outubro-de-2026-742445365",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 5.230 de 23 de outubro de 2026 nega concessão de CEBAS ao Instituto Dra. Yanny Brena Alencar Araújo em Juazeiro do Norte (CE).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Juazeiro do Norte (CE)",
+        "Instituto Dra. Yanny Brena Alencar Araújo"
+      ],
+      "tags": [
+        "cebas",
+        "negação",
+        "filantropia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "20618f1bd24f95be",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.275",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 102,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.275, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.275-de-28-de-outubro-de-2026-742445286",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.275 de 28 de outubro de 2026 habilita clínica de nefrologia em Araucária (PR) no Programa Agora Tem Especialistas.",
+      "por_que_importa": "Verifique se sua instituição oferece terapia renal substitutiva para potencial credenciamento no Programa Agora Tem Especialistas.",
+      "valor_brl": 672502.54,
+      "entes": [
+        "Araucária (PR)",
+        "DaVita Serviços de Nefrologia Araucária Ltda"
+      ],
+      "tags": [
+        "terapia renal",
+        "hemodiálise",
+        "especialista"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "916b7c30413e7229",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 113,
+      "edicao": "210",
+      "titulo": "ReTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-742445128",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de apresentações de medicamento em Resolução ANVISA RE nº 2.732 de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "medicamento",
+        "anvisa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6e22c03fad8fc126",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.262",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 100,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.262, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.262-de-28-de-outubro-de-2026-742444249",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.262 de 28 de outubro de 2026 habilita clínica de nefrologia em Londrina (PR) no Programa Agora Tem Especialistas.",
+      "por_que_importa": "Acompanhe habilitações de terapia renal substitutiva no Programa Agora Tem Especialistas para identificar critérios de credenciamento.",
+      "valor_brl": 49885072.74,
+      "entes": [
+        "Londrina (PR)",
+        "DaVita Brasil Participações e Serviços de Nefrologia Ltda"
+      ],
+      "tags": [
+        "terapia renal",
+        "hemodiálise",
+        "especialista"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ca4cb2a96304486b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.266",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 100,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.266, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.266-de-28-de-outubro-de-2026-742444170",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.266 de 28 de outubro de 2026 defere concessão de CEBAS ao Instituto Dr. Aurélio Regazzo em Nova Aurora (PR).",
+      "por_que_importa": "Verifique o perfil de prestação de serviços ao SUS que qualificou esta instituição para concessão de CEBAS como referência para sua estratégia.",
+      "valor_brl": null,
+      "entes": [
+        "Nova Aurora (PR)",
+        "Instituto Dr. Aurélio Regazzo"
+      ],
+      "tags": [
+        "cebas",
+        "concessão",
+        "filantropia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "89d9d7da9cf93b4f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.471",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 90,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.471, DE 6 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.471-de-6-de-novembro-de-2026-742443204",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.471 de 6 de novembro de 2026 renova qualificação de Unidades de Suporte Básico do SAMU 192 de Curitiba.",
+      "por_que_importa": "Acompanhe renovações de qualificação de SAMU 192 para identificar ciclos de revalidação e manutenção de financiamento.",
+      "valor_brl": 411559.2,
+      "entes": [
+        "Matinhos (PR)",
+        "Morretes (PR)",
+        "Pontal do Paraná (PR)"
+      ],
+      "tags": [
+        "samu",
+        "urgência",
+        "revalidação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f98c4788525e6482",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 113,
+      "edicao": "210",
+      "titulo": "ReTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-742443125",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de Resolução RE nº 3.416 de 28 de agosto de 2026, publicada no Diário Oficial da União, corrigindo nome de medicamento.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "medicamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5edda7fda8d9bb24",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.251",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 98,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.251, DE 26 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.251-de-26-de-outubro-de-2026-742440465",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Portaria SAES/MS nº 5.251 de 26 de outubro de 2026 defere renovação de CEBAS do Hospital Dr. Pacifico Mascarenhas em Caetanópolis (MG).",
+      "por_que_importa": "O hospital renova sua certificação de entidade beneficente, mantendo direitos e isenções associados por 3 anos.",
+      "valor_brl": null,
+      "entes": [
+        "Hospital Dr. Pacifico Mascarenhas",
+        "Caetanópolis"
+      ],
+      "tags": [
+        "cebas",
+        "renovação",
+        "certificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b7d427fc686b6681",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.231",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 98,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.231, DE 23 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.231-de-23-de-outubro-de-2026-742440059",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 5.231 de 23 de outubro de 2026 indefere concessão de CEBAS da Liga das Senhoras Católicas da Diocese de Corumbá (MS).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "cebas",
+        "indeferimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "48107edddd184e56",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.276",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 102,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.276, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.276-de-28-de-outubro-de-2026-742439901",
+      "categoria": "D",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.276 de 28 de outubro de 2026 defere renovação de CEBAS da Fundação Médico Social Rural de Rio Fortuna (SC).",
+      "por_que_importa": "A entidade renova sua certificação de beneficente, mantendo qualificação para prestação de serviços ao SUS por 3 anos.",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Médico Social Rural de Rio Fortuna",
+        "Rio Fortuna"
+      ],
+      "tags": [
+        "cebas",
+        "renovação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4712e4b37c162a74",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.258",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 99,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.258, DE 27 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.258-de-27-de-outubro-de-2026-742438936",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 5.258 de 27 de outubro de 2026 indefere concessão de CEBAS do Instituto Capixaba de Gestão e Saúde (ES).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "cebas",
+        "indeferimento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3e5c4ee044617492",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.268",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 100,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.268, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.268-de-28-de-outubro-de-2026-742438857",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.268 de 28 de outubro de 2026 altera limite anual de créditos financeiros para Prorrenal - Clinica Nefrologia Ltda no Programa Agora Tem Especialistas.",
+      "por_que_importa": "O estabelecimento recebe limite fixo de recurso para operacionalização de serviços de hemodiálise no programa.",
+      "valor_brl": 298981.35,
+      "entes": [
+        "Prorrenal - Clinica Nefrologia Ltda"
+      ],
+      "tags": [
+        "hemodiálise",
+        "habilitação",
+        "créditos financeiros"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "181027a35cd2926e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.383",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 87,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.383, DE 29 DE OUTUBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.383-de-29-de-outubro-de-2026-742437451",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.383 de 29 de outubro de 2026 autoriza Fundo Municipal de Saúde de Trindade (GO) a receber recurso para reforma de UPA.",
+      "por_que_importa": "O município recebe autorização para utilizar emenda parlamentar destinada à reforma de unidade de pronto atendimento.",
+      "valor_brl": 1497328,
+      "entes": [
+        "Trindade"
+      ],
+      "tags": [
+        "reforma",
+        "upa",
+        "infraestrutura"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "87db0d8d907a726c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.469",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 90,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.469, DE 6 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.469-de-6-de-novembro-de-2026-742437423",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.469 de 6 de novembro de 2026 renova qualificação de SAMU 192 e mantém limite de custeio para Brumado (BA).",
+      "por_que_importa": "O município mantém recurso de custeio para operacionalização do SAMU 192 pelos próximos 3 anos.",
+      "valor_brl": 559049.4,
+      "entes": [
+        "Brumado"
+      ],
+      "tags": [
+        "samu",
+        "urgência",
+        "qualificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9f62347ab981280e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.224",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 98,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.224, DE 22 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.224-de-22-de-outubro-de-2026-742437295",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.224 de 22 de outubro de 2026 defere concessão de CEBAS da Associação Hospitalar Saúde dos Olhos (SP).",
+      "por_que_importa": "O hospital obtém certificação de entidade beneficente com validade de 3 anos a partir da publicação.",
+      "valor_brl": null,
+      "entes": [
+        "Associação Hospitalar Saúde dos Olhos"
+      ],
+      "tags": [
+        "cebas",
+        "concessão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8e736b32e0b16bcd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.257",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 99,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.257, DE 27 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.257-de-27-de-outubro-de-2026-742437267",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Portaria SAES/MS nº 5.257 de 27 de outubro de 2026 inclui 3 hospitais mineiros e 4 de outros estados no CNES para equipes de doação para transplantes.",
+      "por_que_importa": "Os 3 hospitais mineiros habilitados podem receber componente fixo de incentivo financeiro para equipes de doação por 4 anos.",
+      "valor_brl": null,
+      "entes": [
+        "Hospital Júlia Kubistcheck",
+        "Hospital UNIMED Uberaba",
+        "Hospital da Fundação Casa de Caridade de São Lourenço",
+        "Belo Horizonte",
+        "Uberaba",
+        "São Lourenço"
+      ],
+      "tags": [
+        "e-dot",
+        "transplantes",
+        "qualificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b3ff904ecabd9629",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.269",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 101,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.269, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.269-de-28-de-outubro-de-2026-742437137",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.269 de 28 de outubro de 2026 habilita DaVita Serviços de Nefrologia Boa Vista Ltda (Recife/PE) no Programa Agora Tem Especialistas.",
+      "por_que_importa": "O estabelecimento recebe limite anual de recurso para operacionalização de hemodiálise mediante créditos financeiros.",
+      "valor_brl": 2556906.65,
+      "entes": [
+        "DaVita Serviços de Nefrologia Boa Vista Ltda",
+        "Recife"
+      ],
+      "tags": [
+        "hemodiálise",
+        "habilitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c28184b2f5d7c849",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.462",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 89,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.462, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.462-de-6-de-novembro-de-2026-742436103",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.462 de 6 de novembro de 2026 autoriza Fundo Municipal de Saúde de Gurinhem (PB) a receber emenda parlamentar para atenção especializada.",
+      "por_que_importa": "O município recebe autorização para utilizar emenda parlamentar destinada a incremento temporário de custeio.",
+      "valor_brl": 357552,
+      "entes": [
+        "Gurinhem"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "atenção especializada"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "01691c40aa9c9f49",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.480",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 93,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.480, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.480-de-6-de-novembro-de-2026-742436043",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.480, de 6 de novembro de 2026, autoriza repasse de emendas parlamentares para incremento temporário ao custeio de atenção especializada a 6 municípios.",
+      "por_que_importa": "verificar se o seu município está na lista de beneficiários para acessar o recurso por meio do InvestSUS.",
+      "valor_brl": 5879668,
+      "entes": [
+        "Pedra Branca do Amapari",
+        "Guacui",
+        "Bariri",
+        "Capela do Alto",
+        "Ourinhos",
+        "Cristalandia"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "atenção especializada",
+        "custeio"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9d508bbce4d51043",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.272",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 101,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.272, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.272-de-28-de-outubro-de-2026-742435962",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 5.272, de 28 de outubro de 2026, indefere concessão de CEBAS ao Instituto Brasileiro de Desenvolvimento Sociocognitivo.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Brasileiro de Desenvolvimento Sociocognitivo"
+      ],
+      "tags": [
+        "cebas",
+        "indeferimento",
+        "instituto"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d9cad0971110d845",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.473",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 91,
+      "edicao": "210",
+      "titulo": "Portaria GM/ms Nº 12.473, DE 6 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.473-de-6-de-novembro-de-2026-742434029",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.473, de 6 de novembro de 2026, renova qualificação da UPA 24h em Delmiro Gouveia e mantém recurso anual de atenção especializada.",
+      "por_que_importa": "verificar se sua entidade oferece serviço similar para buscar habilitação ou renovação com recurso equivalente.",
+      "valor_brl": 1500000,
+      "entes": [
+        "Delmiro Gouveia"
+      ],
+      "tags": [
+        "upa",
+        "renovação qualificação",
+        "mac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5ec830a0fdfb33f3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.263",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 100,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.263, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.263-de-28-de-outubro-de-2026-742433950",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 5.263, de 28 de outubro de 2026, indefere concessão de CEBAS ao Hospital Nossa Senhora da Paz.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Nossa Senhora da Paz"
+      ],
+      "tags": [
+        "cebas",
+        "indeferimento",
+        "hospital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5ebf00afea3256b6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.270",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 101,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.270, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.270-de-28-de-outubro-de-2026-742433871",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Portaria SAES/MS nº 5.270, de 28 de outubro de 2026, indefere concessão de CEBAS à Associação Casa das Marias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Associação Casa das Marias - ACDM"
+      ],
+      "tags": [
+        "cebas",
+        "indeferimento",
+        "associação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c3937b30491da01b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.478",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 92,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.478, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.478-de-6-de-novembro-de-2026-742432319",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.478, de 6 de novembro de 2026, autoriza repasse de emendas parlamentares para aquisição de equipamentos a 3 municípios.",
+      "por_que_importa": "verificar se o seu município está entre os beneficiários para acessar os recursos destinados à modernização de estabelecimentos de saúde.",
+      "valor_brl": 1129531,
+      "entes": [
+        "Farias Brito",
+        "Mombaca",
+        "Chapada dos Guimaraes"
+      ],
+      "tags": [
+        "equipamentos",
+        "materiais permanentes",
+        "emenda"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "04e45340d0dbfea9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.488",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 97,
+      "edicao": "210",
+      "titulo": "Portaria GM/ms Nº 12.488, DE 6 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.488-de-6-de-novembro-de-2026-742432233",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.488, de 6 de novembro de 2026, renova qualificação da UPA 24h em Teresina e mantém recurso anual de atenção especializada.",
+      "por_que_importa": "verificar se sua entidade oferece serviço similar para buscar habilitação ou renovação com recurso equivalente.",
+      "valor_brl": 3600000,
+      "entes": [
+        "Teresina"
+      ],
+      "tags": [
+        "upa",
+        "renovação qualificação",
+        "mac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "eb94d60072f54c2b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.277",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 102,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.277, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.277-de-28-de-outubro-de-2026-742432212",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.277, de 28 de outubro de 2026, defere renovação de CEBAS à Associação de Proteção e Assistência à Maternidade e à Infância de Buíque.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Associação de Proteção e Assistência à Maternidade e à Infância de Buíque"
+      ],
+      "tags": [
+        "cebas",
+        "renovação",
+        "maternidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "482259cfab57f768",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.461",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 88,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.461, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.461-de-6-de-novembro-de-2026-742432065",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.461, de 6 de novembro de 2026, autoriza repasse de emendas parlamentares para execução de obras de construção de CAPS em Natal.",
+      "por_que_importa": "acompanhar o modelo de habilitação de obras de saúde mental no SISMOB para replicar em sua região.",
+      "valor_brl": 4998000,
+      "entes": [
+        "Natal"
+      ],
+      "tags": [
+        "caps",
+        "construção",
+        "obras"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "49be546fcea6eb15",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.483",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 95,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.483, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.483-de-6-de-novembro-de-2026-742431930",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.483, de 6 de novembro de 2026, autoriza repasse de emenda parlamentar para aquisição de equipamentos a Campos Belos.",
+      "por_que_importa": "verificar se o seu município está entre os beneficiários para acessar os recursos destinados à modernização de estabelecimentos de saúde.",
+      "valor_brl": 8136,
+      "entes": [
+        "Campos Belos"
+      ],
+      "tags": [
+        "equipamentos",
+        "materiais permanentes",
+        "emenda"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f8c9ca4f74e0009f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.259",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 99,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.259, DE 27 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.259-de-27-de-outubro-de-2026-742431851",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Portaria SAES/MS nº 5.259, de 27 de outubro de 2026, defere renovação de CEBAS à Irmandade de Nossa Senhora das Graças de Sete Lagoas.",
+      "por_que_importa": "verificar se suas entidades mineiras atendem aos critérios observados nesta renovação bem-sucedida de CEBAS.",
+      "valor_brl": null,
+      "entes": [
+        "Irmandade de Nossa Senhora das Graças"
+      ],
+      "tags": [
+        "cebas",
+        "renovação",
+        "sete lagoas"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a6a9250bc9ae1e0f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.484",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 95,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.484, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.484-de-6-de-novembro-de-2026-742431298",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.484, de 6 de novembro de 2026, autoriza repasse de emendas parlamentares para aquisição de equipamentos a 3 municípios.",
+      "por_que_importa": "verificar se o seu município está entre os beneficiários para acessar os recursos destinados à modernização de estabelecimentos de saúde.",
+      "valor_brl": 884177,
+      "entes": [
+        "Campo Alegre de Goias",
+        "Heitorai",
+        "Morrinhos"
+      ],
+      "tags": [
+        "equipamentos",
+        "materiais permanentes",
+        "emenda"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "214e9c3ec4c1cc65",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.226",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 98,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.226, DE 23 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.226-de-23-de-outubro-de-2026-742431275",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.226 de 23 de outubro de 2026 defere a renovação do Certificado de Entidade Beneficente de Assistência Social do Instituto de Saúde São Lucas de Pato Branco, em Pato Branco (PR).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto de Saúde São Lucas de Pato Branco"
+      ],
+      "tags": [
+        "CEBAS",
+        "renovação",
+        "certificação",
+        "filantrópica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "353ebce99f5e8f9f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.475",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 92,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.475, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.475-de-6-de-novembro-de-2026-742428642",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.475 de 6 de novembro de 2026 autoriza repasses para aquisição de equipamentos a Municípios de Nova Londrina (PR) e Torrinha (SP) via emendas parlamentares.",
+      "por_que_importa": null,
+      "valor_brl": 573728,
+      "entes": [
+        "Município de Nova Londrina",
+        "Município de Torrinha"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "equipamentos",
+        "investimento",
+        "capital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "764424feeec001de",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.479",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 93,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.479, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.479-de-6-de-novembro-de-2026-742428563",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.479 de 6 de novembro de 2026 autoriza repasses para aquisição de equipamentos a Municípios de Chaval (CE), Mozarlandia (GO) e São Paulo (SP) via emendas parlamentares.",
+      "por_que_importa": null,
+      "valor_brl": 1426682,
+      "entes": [
+        "Município de Chaval",
+        "Município de Mozarlandia",
+        "Município de São Paulo"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "equipamentos",
+        "investimento",
+        "capital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f6da012309d1e36c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.265",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 100,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.265, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.265-de-28-de-outubro-de-2026-742428484",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.265 de 28 de outubro de 2026 indefere a concessão do Certificado de Entidade Beneficente de Assistência Social do Instituto Saúde Educar, com sede em São Paulo (SP).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Saúde Educar"
+      ],
+      "tags": [
+        "CEBAS",
+        "indeferimento",
+        "certificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c004d6a6233b0be7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.228",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 98,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.228, DE 23 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.228-de-23-de-outubro-de-2026-742427568",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.228 de 23 de outubro de 2026 defere a renovação do CEBAS da Fundação para o Estudo e Tratamento das Deformidades Crâniofaciais, com sede em Bauru (SP).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação para o Estudo e Tratamento das Deformidades Crâniofaciais"
+      ],
+      "tags": [
+        "CEBAS",
+        "renovação",
+        "certificação",
+        "filantrópica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2af58fe56d9d0d74",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.472",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 90,
+      "edicao": "210",
+      "titulo": "Portaria GM/MS Nº 12.472, DE 6 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.472-de-6-de-novembro-de-2026-742426731",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.472 de 6 de novembro de 2026 renova a qualificação da Unidade de Suporte Básico do SAMU 192 de Piancó (PB), mantendo recurso de custeio incorporado ao limite MAC.",
+      "por_que_importa": null,
+      "valor_brl": 137186.4,
+      "entes": [
+        "Município de Tavares",
+        "Município de Piancó"
+      ],
+      "tags": [
+        "SAMU 192",
+        "qualificação",
+        "renovação",
+        "urgência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4145d6fe347b03ee",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.281",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 102,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.281, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.281-de-28-de-outubro-de-2026-742426570",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.281 de 28 de outubro de 2026 habilita DaVita Brasil em Rolândia (PR) no componente de créditos financeiros do Programa Agora Tem Especialistas para hemodiálise.",
+      "por_que_importa": null,
+      "valor_brl": 49885072.74,
+      "entes": [
+        "Município de Rolândia",
+        "DaVita Brasil Participações e Serviços de Nefrologia Ltda."
+      ],
+      "tags": [
+        "hemodiálise",
+        "Agora Tem Especialistas",
+        "habilitação",
+        "nefrologia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "383048f4dc62e552",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 113,
+      "edicao": "210",
+      "titulo": "ReTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-742426440",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de Resolução - RE Nº 3.645 de 17 de setembro de 2026 que corrige período de validade de registro de medicamento similar anfotericina b da Farma Vision Importação e Exportação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Farma Vision Importação e Exportação de Medicamentos Ltda."
+      ],
+      "tags": [
+        "medicamento",
+        "retificação",
+        "ANVISA"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "52e3768527622c77",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.271",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 101,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.271, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.271-de-28-de-outubro-de-2026-742425490",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.271 de 28 de outubro de 2026 habilita DaVita Serviços de Nefrologia Campo Largo Ltda. no componente de créditos financeiros do Programa Agora Tem Especialistas para hemodiálise.",
+      "por_que_importa": null,
+      "valor_brl": 706779.94,
+      "entes": [
+        "Município de Campo Largo",
+        "DaVita Serviços de Nefrologia Campo Largo Ltda."
+      ],
+      "tags": [
+        "hemodiálise",
+        "Agora Tem Especialistas",
+        "habilitação",
+        "nefrologia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "83995788941875b1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.280",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 102,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.280, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.280-de-28-de-outubro-de-2026-742425411",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.280 de 28 de outubro de 2026 habilita DaVita Brasil em Fortaleza (CE) no componente de créditos financeiros do Programa Agora Tem Especialistas para hemodiálise.",
+      "por_que_importa": null,
+      "valor_brl": 49885072.74,
+      "entes": [
+        "Município de Fortaleza",
+        "DaVita Brasil Participações e Serviços de Nefrologia Ltda."
+      ],
+      "tags": [
+        "hemodiálise",
+        "Agora Tem Especialistas",
+        "habilitação",
+        "nefrologia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6a1848457cbca539",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.476",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 92,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.476, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.476-de-6-de-novembro-de-2026-742424293",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.476 de 6 de novembro de 2026 autoriza repasse para aquisição de equipamentos ao Município de Santana do Ipanema (AL) via emenda parlamentar.",
+      "por_que_importa": null,
+      "valor_brl": 230627,
+      "entes": [
+        "Município de Santana do Ipanema"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "equipamentos",
+        "investimento",
+        "capital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4db0ae95ebcd520c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.229",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 98,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.229, DE 23 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.229-de-23-de-outubro-de-2026-742424265",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.229 de 23 de outubro de 2026 indefere a concessão do Certificado de Entidade Beneficente de Assistência Social do Instituto Morgan de Educação, Saúde e Esportes, em Embu das Artes (SP).",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Morgan de Educação, Saúde e Esportes"
+      ],
+      "tags": [
+        "CEBAS",
+        "indeferimento",
+        "certificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1fc2e142e1950a6d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.261",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 100,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.261, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.261-de-28-de-outubro-de-2026-742424179",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.261 de 28 de outubro de 2026 habilita Instituto do Rim do Norte Pioneiro Ltda em Santo Antônio da Platina-PR para hemodiálise no Programa Agora Tem Especialistas.",
+      "por_que_importa": "Vale acompanhar o modelo de habilitação com CVCF em programas de especialização renal para replicar em Minas Gerais.",
+      "valor_brl": 1504292.81,
+      "entes": [
+        "Instituto do Rim do Norte Pioneiro Ltda",
+        "Santo Antônio da Platina"
+      ],
+      "tags": [
+        "hemodiálise",
+        "programa agora tem especialistas",
+        "créditos financeiros"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c0e6b9e71614b434",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.463",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 89,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.463, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.463-de-6-de-novembro-de-2026-742423484",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Portaria GM/MS nº 12.463 de 6 de novembro de 2026 autoriza municípios a receberem emendas parlamentares para incremento temporário à atenção especializada, incluindo Contagem-MG.",
+      "por_que_importa": "Gestores de Contagem-MG devem acompanhar no InvestSUS o processamento do repasse de emenda parlamentar ao fundo municipal.",
+      "valor_brl": 238000,
+      "entes": [
+        "Contagem"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "atenção especializada",
+        "fundo municipal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "38657b6f77634f5f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.487",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 96,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.487, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.487-de-6-de-novembro-de-2026-742423405",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.487 de 6 de novembro de 2026 autoriza municípios a receberem recursos para aquisição de equipamentos e materiais permanentes.",
+      "por_que_importa": "Gestores podem acompanhar no InvestSUS o modelo de transferência de equipamentos permanentes para replicar em Minas Gerais.",
+      "valor_brl": 499999,
+      "entes": [
+        "Bataguassu"
+      ],
+      "tags": [
+        "equipamentos",
+        "materiais permanentes",
+        "infraestrutura"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "62f44e14b795871f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.260",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 99,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.260, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.260-de-28-de-outubro-de-2026-742423326",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.260 de 28 de outubro de 2026 defere renovação do CEBAS da Associação Hospitalar e Maternidade São Sebastião em Papanduva-SC.",
+      "por_que_importa": "Entidades filantrópicas mineiras devem garantir 60% de atendimento ao SUS para obter renovação do CEBAS.",
+      "valor_brl": null,
+      "entes": [
+        "Associação Hospitalar e Maternidade São Sebastião",
+        "Papanduva"
+      ],
+      "tags": [
+        "CEBAS",
+        "certificação",
+        "entidade beneficente"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c275218b09c11262",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.273",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 101,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.273, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.273-de-28-de-outubro-de-2026-742423298",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria SAES/MS nº 5.273 de 28 de outubro de 2026 habilita IDR-Instituto de Doenças Renais SJ Ltda em São João da Boa Vista-SP para hemodiálise no Programa Agora Tem Especialistas.",
+      "por_que_importa": "Analise o modelo de CVCF para habilitação em especialização renal e considere replicação em instituições mineiras.",
+      "valor_brl": 1690657.99,
+      "entes": [
+        "IDR - Instituto de Doenças Renais SJ Ltda",
+        "São João da Boa Vista"
+      ],
+      "tags": [
+        "hemodiálise",
+        "programa agora tem especialistas",
+        "créditos financeiros"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b41bc51745d31873",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 112,
+      "edicao": "210",
+      "titulo": "ReTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-742423212",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de 9 de novembro de 2026 corrige nome de medicamento paracetamol + pseudoefedrina da Multilab na Resolução RE nº 2.631.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "medicamento",
+        "registro"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a513d3240a6e35cd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Resolução",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 131,
+      "edicao": "210",
+      "titulo": "ReTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-742422933",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de 9 de novembro de 2026 corrige datas, endereços e descrições em 5 resoluções de autorização de produtos da ANVISA.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "ANVISA",
+        "registro"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "08b759b4911b36e4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Resolução",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 132,
+      "edicao": "210",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-742422854",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de 9 de novembro de 2026 corrige motivação em Resolução nº 4.160 sobre medida preventiva contra suplemento alimentar.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "ANVISA",
+        "suplemento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b4321194c1e916a2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Despacho",
+      "numero": "136",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 103,
+      "edicao": "210",
+      "titulo": "DESPACHO N° 136, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/despacho-n-136-de-6-de-novembro-de-2026-742420548",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Despacho ANVISA nº 136 de 6 de novembro de 2026 retira efeito suspensivo de recurso administrativo da RCA Labs Ltda.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "RCA Labs Ltda"
+      ],
+      "tags": [
+        "ANVISA",
+        "recurso administrativo",
+        "despacho"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0f399c740c522670",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.481",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 94,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.481, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.481-de-6-de-novembro-de-2026-742419977",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.481 de 6 de novembro de 2026 autoriza 20 entes a receberem emendas para incremento à atenção especializada.",
+      "por_que_importa": "Gestores estaduais e municipais devem acompanhar no InvestSUS o processamento de repasses de emendas parlamentares ao custeio especializado.",
+      "valor_brl": 4144786,
+      "entes": [
+        "Icapuí",
+        "Luis Correia",
+        "Curitiba"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "atenção especializada",
+        "repasse fundo a fundo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5f6b056ed1c9b4ad",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.281",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 87,
+      "edicao": "210",
+      "titulo": "Portaria GM/MS Nº 12.281, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.281-de-6-de-novembro-de-2026-742419246",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.281 de 6 de novembro de 2026 institui incentivo temporário para vigilância de sarampo em 3 municípios do Amazonas.",
+      "por_que_importa": "Monitore este modelo de incentivo transitório para aplicação em Minas se houver surto de sarampo.",
+      "valor_brl": 524029.67,
+      "entes": [
+        "Atalaia do Norte",
+        "Benjamin Constant",
+        "Tabatinga"
+      ],
+      "tags": [
+        "sarampo",
+        "vigilância epidemiológica",
+        "vacinação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "316babb54c9020c2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 97,
+      "edicao": "210",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-742419167",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de 9 de novembro de 2026 corrige descrição de função comissionada de servidor federal na Portaria de Pessoal GM/MS nº 939.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "pessoal",
+        "função comissionada"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3cd93dc0aacde4b2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.232",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 98,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.232, DE 23 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.232-de-23-de-outubro-de-2026-742419144",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.232, de 23 de outubro de 2026, renova CEBAS da Associação de Saúde, Esporte, Lazer e Cultura com sede em Belém.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Associação de Saúde, Esporte, Lazer e Cultura - ASELC"
+      ],
+      "tags": [
+        "CEBAS",
+        "renovação",
+        "certificação filantrópica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7aa860f767582899",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 103,
+      "edicao": "210",
+      "titulo": "Retificação",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-742419011",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação corrige Santa Clara para Santa Maria na Portaria SAES/MS nº 5.145, de 9 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "correção",
+        "portaria"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d53d4dd6d6557f79",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.464",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 89,
+      "edicao": "210",
+      "titulo": "PORTARIA GM/MS Nº 12.464, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.464-de-6-de-novembro-de-2026-742409850",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.464, de 6 de novembro de 2026, autoriza município a receber recursos federais para equipamentos de saúde.",
+      "por_que_importa": "O município de Abadia de Goiás está autorizado a receber recursos para aquisição de equipamentos e materiais permanentes em estabelecimentos de saúde através do InvestSUS.",
+      "valor_brl": 354840,
+      "entes": [
+        "Abadia de Goiás"
+      ],
+      "tags": [
+        "equipamentos",
+        "recursos federais",
+        "InvestSUS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5e936cf12ad859f2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.264",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 100,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.264, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.264-de-28-de-outubro-de-2026-742409771",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.264, de 28 de outubro de 2026, indefere concessão do CEBAS da Associação dos Moradores de Cacimba de Baixo.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Associação dos Moradores da Comunidade de Cacimba de Baixo"
+      ],
+      "tags": [
+        "CEBAS",
+        "indeferimento",
+        "certificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d5a3f639c3f1d80b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.274",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 101,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.274, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.274-de-28-de-outubro-de-2026-742409692",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.274, de 28 de outubro de 2026, indefere concessão do CEBAS do Instituto Med Life de São Paulo.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Med Life"
+      ],
+      "tags": [
+        "CEBAS",
+        "indeferimento",
+        "certificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "674aa65dbd90c67a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.278",
+      "data_publicacao": "2026-11-09",
+      "secao": "1",
+      "pagina": 102,
+      "edicao": "210",
+      "titulo": "Portaria SAES/MS Nº 5.278, DE 28 DE outubro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.278-de-28-de-outubro-de-2026-742409613",
+      "categoria": "D",
+      "relevancia": 3,
+      "resumo": "Portaria SAES/MS nº 5.278, de 28 de outubro de 2026, defere concessão do CEBAS do Instituto Assistencial Plurividas de Juiz de Fora.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Assistencial Plurividas"
+      ],
+      "tags": [
+        "CEBAS",
+        "concessão",
+        "Juiz de Fora"
+      ],
+      "fallback": false
+    }
+  ]
+}
