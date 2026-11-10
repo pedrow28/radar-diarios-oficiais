@@ -1,0 +1,3381 @@
+{
+  "data": "2026-11-10",
+  "gerado_em": "2026-11-10T17:33:29.761834+00:00",
+  "avisos": [
+    "94 itens além do teto de 120 não foram classificados"
+  ],
+  "edicao": {
+    "titulo": "96 doações de equipamentos somam R$ 35,1 milhões para SAMU e saúde bucal",
+    "em_30_segundos": [
+      "Ministério da Saúde doa 11 unidades odontológicas móveis para dez municípios em dez estados.",
+      "Ministério da Saúde doa 78 veículos para SAMU 192, ambulâncias e transporte sanitário eletivo.",
+      "Ministério da Saúde firma 5 convênios com Santas Casas para aquisição de equipamentos.",
+      "Ministério da Saúde renova qualificação de UPA 24h e SAMU via Portarias 12.467, 12.468 e 12.470."
+    ],
+    "intro": "A edição de 10 de novembro traz 96 atos com destaque para as doações de 38 veículos para SAMU 192, 19 vans para transporte sanitário eletivo e 21 ambulâncias padrão suporte básico, além de 11 unidades odontológicas móveis que chegam a dez estados. Gestores de Santas Casas devem acompanhar com atenção os 5 novos convênios firmados pelo Ministério da Saúde com entidades filantrópicas para aquisição de equipamentos, especialmente em São José dos Campos, Santos, São Felix, além de convênios com o Círculo Operário Caxiense e Hospital Nossa Senhora das Graças.",
+    "parcial": true,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "211",
+        "paginas": "pp. 1-171",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ausente",
+        "edicao": null,
+        "paginas": null,
+        "avisos": [
+          "arquivo não encontrado"
+        ]
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "2f053a03271883af",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.468",
+      "data_publicacao": "2026-11-10",
+      "secao": "1",
+      "pagina": 105,
+      "edicao": "211",
+      "titulo": "Portaria GM/MS Nº 12.468, DE 6 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.468-de-6-de-novembro-de-2026-743279567",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS 12.468 de 6 de novembro de 2026 renova qualificação de unidades SAMU 192 em Fazenda Rio Grande, Paraná, e aloca custeio anual.",
+      "por_que_importa": null,
+      "valor_brl": 288834,
+      "entes": [
+        "Município de Fazenda Rio Grande"
+      ],
+      "tags": [
+        "renovação",
+        "samu 192",
+        "paraná",
+        "mac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "92bc42ba138c5359",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.470",
+      "data_publicacao": "2026-11-10",
+      "secao": "1",
+      "pagina": 106,
+      "edicao": "211",
+      "titulo": "Portaria GM/MS Nº 12.470, DE 6 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.470-de-6-de-novembro-de-2026-743270225",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS 12.470 de 6 de novembro de 2026 renova qualificação de unidade de suporte básico SAMU 192 em Xinguara, Pará, e aloca custeio anual.",
+      "por_que_importa": null,
+      "valor_brl": 178342.32,
+      "entes": [
+        "Município de Xinguara"
+      ],
+      "tags": [
+        "renovação",
+        "samu 192",
+        "pará",
+        "mac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7122ffb3de855b0e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.467",
+      "data_publicacao": "2026-11-10",
+      "secao": "1",
+      "pagina": 105,
+      "edicao": "211",
+      "titulo": "PORTARIA GM/MS Nº 12.467, DE 6 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.467-de-6-de-novembro-de-2026-743255397",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS 12.467 de 6 de novembro de 2026 renova qualificação de UPA 24h em Rio Real, Bahia, e aloca custeio anual.",
+      "por_que_importa": null,
+      "valor_brl": 840000,
+      "entes": [
+        "Município de Rio Real"
+      ],
+      "tags": [
+        "renovação",
+        "upa 24h",
+        "bahia",
+        "mac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "06d6b0a34d40ec16",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Edital",
+      "numero": "31/2026/",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 166,
+      "edicao": "211",
+      "titulo": "EDITAL Nº 31/2026/GERH/DIRAD-DIGES/DIGES",
+      "url": "https://www.in.gov.br/web/dou/-/edital-n-31/2026/gerh/dirad-diges/diges-743556010",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital 31/2026 da Agência Nacional de Saúde Suplementar de 10 de novembro de 2026 convoca aprovados em concurso público nacional unificado.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "concurso público",
+        "ans",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ab2e11785fa8b49c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743551362",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação 10202/2026 do Ministério da Saúde para Prefeitura de Camaçari, Bahia, de 2 veículos para SAMU 192.",
+      "por_que_importa": null,
+      "valor_brl": 646074,
+      "entes": [
+        "Prefeitura Municipal de Camaçari"
+      ],
+      "tags": [
+        "doação",
+        "samu 192",
+        "bahia",
+        "veículos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "83915ae92d8c3be9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743551285",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação 1396/2026 do Ministério da Saúde para Prefeitura de Lagoa, Paraíba, de 1 veículo para transporte sanitário eletivo.",
+      "por_que_importa": null,
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Lagoa"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "paraíba",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5048b38d33fcf900",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743551208",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação 10634/2026 do Ministério da Saúde para Prefeitura de Ribeira do Amparo, Bahia, de 1 ambulância suporte básico.",
+      "por_que_importa": null,
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Ribeira do Amparo"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "bahia",
+        "suporte básico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "818aff98f1049e83",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743551131",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação 9646/2026 do Ministério da Saúde para Prefeitura de Formosa, Goiás, de 1 ambulância para transporte sanitário eletivo.",
+      "por_que_importa": null,
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Formosa"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "goiás",
+        "transporte"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a110b468dab70304",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "852",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 852, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-852-de-6-de-novembro-de-2026-743550896",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação 852 de 6 de novembro de 2026 da Secretaria de Atenção Primária à Saúde para retirada de notificação pessoal.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "pessoal",
+        "saps"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "af46fb1f4f3a5f6a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "2479/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 160,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 2479/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-2479/2026-743550819",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de doação 2479/2026 do Ministério da Saúde para Município de Maravilhas, Minas Gerais, de 1 furgão para unidade odontológica móvel.",
+      "por_que_importa": "Considere esse precedente ao buscar equipamento para unidade odontológica móvel junto ao Ministério da Saúde.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Maravilhas"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "minas gerais",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2f5b0d8514b118b6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 151,
+      "edicao": "211",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743542273",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de convênio 7AAITG do Ministério da Saúde com Irmandade da Santa Casa de Misericórdia de Santos, São Paulo, para aquisição de equipamento e material permanente.",
+      "por_que_importa": null,
+      "valor_brl": 282372,
+      "entes": [
+        "Irmandade da Santa Casa de Misericórdia de Santos"
+      ],
+      "tags": [
+        "convênio",
+        "santa casa",
+        "são paulo",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c61ef9525f9f3101",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743542192",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação 9626/2026 do Ministério da Saúde para Prefeitura de Junqueiro, Alagoas, de 1 ambulância para transporte sanitário eletivo.",
+      "por_que_importa": null,
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Junqueiro"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "alagoas",
+        "transporte"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "31db0d3f4bff9b5f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743542169",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10110/2026 do Ministério da Saúde, de 27/10/2026: 01 ambulância padrão suporte básico para Prefeitura Municipal de Cocos/BA.",
+      "por_que_importa": "verifique se sua prefeitura pode se inscrever no programa de doação de ambulâncias da Secretaria de Atenção Especializada à Saúde",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Cocos/BA"
+      ],
+      "tags": [
+        "ambulância",
+        "transporte",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "38596d6ca3cc2c96",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743542038",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10584/2026 do Ministério da Saúde, de 27/10/2026: 01 veículo para renovação de frota do SAMU 192 para Prefeitura Municipal de Ijuí/RS.",
+      "por_que_importa": "consulte a Secretaria de Atenção Especializada à Saúde sobre inscrição em programa de doação de veículos para o SAMU 192",
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Ijuí/RS"
+      ],
+      "tags": [
+        "samu 192",
+        "transporte",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "689216c33b538c15",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743537087",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10224/2026 do Ministério da Saúde, de 27/10/2026: 01 van com acessibilidade para transporte sanitário eletivo da Prefeitura Municipal de Brejo da Cruz/PB.",
+      "por_que_importa": "verifique a possibilidade de sua prefeitura participar do programa de doação de vans para transporte sanitário eletivo",
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Brejo da Cruz/PB"
+      ],
+      "tags": [
+        "transporte",
+        "acessibilidade",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1b8bf11bff710d4f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743537010",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10549/2026 do Ministério da Saúde, de 27/10/2026: 01 veículo para renovação de frota do SAMU 192 para Prefeitura Municipal de Catanduvas/PR.",
+      "por_que_importa": "consulte a Secretaria de Atenção Especializada à Saúde sobre inscrição em programa de doação de veículos para o SAMU 192",
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Catanduvas/PR"
+      ],
+      "tags": [
+        "samu 192",
+        "transporte",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f5c21fedaf0030c0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743536933",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10623/2026 do Ministério da Saúde, de 27/10/2026: 01 ambulância padrão suporte básico para Prefeitura Municipal de Jacaraci/BA.",
+      "por_que_importa": "verifique se sua prefeitura pode se inscrever no programa de doação de ambulâncias da Secretaria de Atenção Especializada à Saúde",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Jacaraci/BA"
+      ],
+      "tags": [
+        "ambulância",
+        "transporte",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0dcfa5a55f5e4db4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743536856",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10627/2026 do Ministério da Saúde, de 27/10/2026: 01 ambulância padrão suporte básico para Prefeitura Municipal de Mirante/BA.",
+      "por_que_importa": "verifique se sua prefeitura pode se inscrever no programa de doação de ambulâncias da Secretaria de Atenção Especializada à Saúde",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Mirante/BA"
+      ],
+      "tags": [
+        "ambulância",
+        "transporte",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0cfbd494ab775ff6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743536779",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10628/2026 do Ministério da Saúde, de 27/10/2026: 01 ambulância padrão suporte básico para Prefeitura Municipal de Monte Santo/BA.",
+      "por_que_importa": "verifique se sua prefeitura pode se inscrever no programa de doação de ambulâncias da Secretaria de Atenção Especializada à Saúde",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Monte Santo/BA"
+      ],
+      "tags": [
+        "ambulância",
+        "transporte",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "96e077fca8f08e76",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743536702",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10629/2026 do Ministério da Saúde, de 27/10/2026: 01 ambulância padrão suporte básico para Prefeitura Municipal de Muritiba/BA.",
+      "por_que_importa": "verifique se sua prefeitura pode se inscrever no programa de doação de ambulâncias da Secretaria de Atenção Especializada à Saúde",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Muritiba/BA"
+      ],
+      "tags": [
+        "ambulância",
+        "transporte",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ba803318cff4f05b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743536625",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10587/2026 do Ministério da Saúde, de 27/10/2026: 01 veículo para renovação de frota do SAMU 192 para Prefeitura Municipal de Palmares do Sul/RS.",
+      "por_que_importa": "consulte a Secretaria de Atenção Especializada à Saúde sobre inscrição em programa de doação de veículos para o SAMU 192",
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Palmares do Sul/RS"
+      ],
+      "tags": [
+        "samu 192",
+        "transporte",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "aee0270d1504899f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743536548",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10641/2026 do Ministério da Saúde, de 27/10/2026: 01 ambulância padrão suporte básico para Prefeitura Municipal de Ubatã/BA.",
+      "por_que_importa": "verifique se sua prefeitura pode se inscrever no programa de doação de ambulâncias da Secretaria de Atenção Especializada à Saúde",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Ubatã/BA"
+      ],
+      "tags": [
+        "ambulância",
+        "transporte",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "271a405deac7777b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743526562",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10578/2026 do Ministério da Saúde, de 27/10/2026: 01 van com acessibilidade para transporte sanitário eletivo da Prefeitura Municipal de Itaporanga/PB.",
+      "por_que_importa": "verifique a possibilidade de sua prefeitura participar do programa de doação de vans para transporte sanitário eletivo",
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Itaporanga/PB"
+      ],
+      "tags": [
+        "transporte",
+        "acessibilidade",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9912f691405bf834",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743526432",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10619/2026 do Ministério da Saúde, de 27/10/2026: 01 ambulância padrão suporte básico para Prefeitura Municipal de Irecê/BA.",
+      "por_que_importa": "verifique se sua prefeitura pode se inscrever no programa de doação de ambulâncias da Secretaria de Atenção Especializada à Saúde",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Irecê/BA"
+      ],
+      "tags": [
+        "ambulância",
+        "transporte",
+        "doação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "55db600b7a330d18",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743526409",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10622/2026 de 27/10/2026 do Ministério da Saúde à Prefeitura de Ituaçu/BA de 1 ambulância no valor de R$ 274.977,00.",
+      "por_que_importa": null,
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Ituaçu/BA"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "samu",
+        "transporte sanitário"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1912d3325cb70b83",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743526332",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10581/2026 de 27/10/2026 do Ministério da Saúde à Prefeitura de São José de Piranhas/PB de 1 transporte sanitário no valor de R$ 304.600,00.",
+      "por_que_importa": null,
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de São José de Piranhas/PB"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "van",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6fe6eb10d70d597b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743526250",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10312/2026 de 27/10/2026 do Ministério da Saúde à Prefeitura de Caraá/RS de 1 veículo para SAMU 192 no valor de R$ 323.037,00.",
+      "por_que_importa": null,
+      "valor_brl": 323037,
+      "entes": [
+        "Prefeitura Municipal de Caraá/RS"
+      ],
+      "tags": [
+        "doação",
+        "samu 192",
+        "ambulância",
+        "urgência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "378b284de2af458a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743526173",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10598/2026 de 27/10/2026 do Ministério da Saúde à Prefeitura de Santo Cristo/RS de 1 veículo para SAMU 192 no valor de R$ 292.600,00.",
+      "por_que_importa": null,
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Santo Cristo/RS"
+      ],
+      "tags": [
+        "doação",
+        "samu 192",
+        "renovação de frota",
+        "ambulância"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "801d4bc0b9e010c6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743526047",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 1754/2026 de 20/08/2026 do Ministério da Saúde à Prefeitura de Areias/SP de 1 transporte sanitário no valor de R$ 304.600,00.",
+      "por_que_importa": null,
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Areias/SP"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "van",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b8ac30e7693b92e0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743526024",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 9797/2026 de 27/10/2026 do Ministério da Saúde à Prefeitura de Águas de Lindóia/SP de 1 transporte sanitário no valor de R$ 304.600,00.",
+      "por_que_importa": null,
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Águas de Lindóia/SP"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "van",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "dc78565796ef06f6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "851",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 851, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-851-de-6-de-novembro-de-2026-743525893",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 851 de 6 de novembro de 2026 da Secretaria de Atenção Primária à Saúde convocando pessoa física para retirada de notificação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital",
+        "notificação",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7d2c974c4e056d25",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 151,
+      "edicao": "211",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743518300",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de convênio nº 7AAIMX de 6 de novembro de 2026 do Ministério da Saúde com Hospital Nossa Senhora das Graças para aquisição de equipamento, com repasse de R$ 200.000,00.",
+      "por_que_importa": null,
+      "valor_brl": 200000,
+      "entes": [
+        "Hospital Nossa Senhora das Graças"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "hospital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7afb96632da0cb4c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743518093",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10564/2026 de 27/10/2026 do Ministério da Saúde à Prefeitura de Itapecuru Mirim/MA de 1 veículo para SAMU 192 no valor de R$ 437.784,00.",
+      "por_que_importa": null,
+      "valor_brl": 437784,
+      "entes": [
+        "Prefeitura Municipal de Itapecuru Mirim/MA"
+      ],
+      "tags": [
+        "doação",
+        "samu 192",
+        "ambulância",
+        "urgência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ebc88ee4a677d574",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743518016",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10568/2026 de 27/10/2026 do Ministério da Saúde à Prefeitura de Ariquemes/RO de 1 veículo para SAMU 192 no valor de R$ 437.784,00.",
+      "por_que_importa": null,
+      "valor_brl": 437784,
+      "entes": [
+        "Prefeitura Municipal de Ariquemes/RO"
+      ],
+      "tags": [
+        "doação",
+        "samu 192",
+        "ambulância",
+        "urgência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "58cae72906f94413",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743517939",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 9846/2026 de 27/10/2026 do Ministério da Saúde à Prefeitura de Ananindeua/PA de 1 veículo para SAMU 192 no valor de R$ 292.600,00.",
+      "por_que_importa": null,
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Ananindeua/PA"
+      ],
+      "tags": [
+        "doação",
+        "samu 192",
+        "renovação de frota",
+        "ambulância"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c4499fc0b87bf490",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743517862",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10543/2026 de 27/10/2026 do Ministério da Saúde à Prefeitura de Boa Vista do Gurupi de 1 veículo para SAMU 192 no valor de R$ 323.037,00.",
+      "por_que_importa": null,
+      "valor_brl": 323037,
+      "entes": [
+        "Prefeitura Municipal de Boa Vista do Gurupi"
+      ],
+      "tags": [
+        "doação",
+        "samu 192",
+        "ambulância",
+        "urgência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "755fc34797a0b590",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743517785",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de veículo para SAMU 192 à Prefeitura Municipal de Aurora do Pará, publicado em 10 de novembro de 2026.",
+      "por_que_importa": "Oportunidade de comparação para prefeituras mineiras em processo de habilitação ou expansão do SAMU 192.",
+      "valor_brl": 323037,
+      "entes": [
+        "Aurora do Pará"
+      ],
+      "tags": [
+        "doação",
+        "samu",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c506ef6a1d6f41ab",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743517708",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de van adaptada à Prefeitura Municipal de Manoel Viana para transporte sanitário eletivo, publicado em 10 de novembro de 2026.",
+      "por_que_importa": "Referência de especificações técnicas de transporte sanitário eletivo com acessibilidade para prefeituras mineiras.",
+      "valor_brl": 304600,
+      "entes": [
+        "Manoel Viana"
+      ],
+      "tags": [
+        "doação",
+        "transporte",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6f350bbca1bf081f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743517631",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de ambulância padrão à Prefeitura Municipal de Wenceslau Guimarães, publicado em 10 de novembro de 2026.",
+      "por_que_importa": "Referência de modelo de ambulância padrão suporte básico para prefeituras mineiras.",
+      "valor_brl": 274977,
+      "entes": [
+        "Wenceslau Guimarães"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "emergência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d0ea67cc9e732a1e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 158,
+      "edicao": "211",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-743517603",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de registro de preços da Secretaria de Atenção Especializada à Saúde para aquisição de câmaras de conservação e freezers, publicado em 10 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 349074.46,
+      "entes": [],
+      "tags": [
+        "registro",
+        "preços",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7bcb8d51dba327b5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "104/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 160,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 104/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-104/2026-743517400",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de unidade odontológica móvel ao Município de Meruoca para implantação de atenção à saúde bucal, publicado em 10 de novembro de 2026.",
+      "por_que_importa": "Referência de modelo de unidade odontológica móvel para municípios mineiros que queiram implementar o componente.",
+      "valor_brl": 379890,
+      "entes": [
+        "Meruoca"
+      ],
+      "tags": [
+        "doação",
+        "odontologia",
+        "móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "aae4e2d7128dbb34",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 151,
+      "edicao": "211",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743508847",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de convênio entre Ministério da Saúde e Círculo Operário Caxiense para aquisição de equipamento e material permanente, publicado em 10 de novembro de 2026.",
+      "por_que_importa": "Modelo de convênio com entidade filantrópica para equipamentos; santas casas mineiras podem usar como referência.",
+      "valor_brl": 300000,
+      "entes": [
+        "Círculo Operário Caxiense"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "filantrópico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4b0d6504d22f4d8a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 152,
+      "edicao": "211",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-743508819",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de parcelamento de débito rescindido do Fundo Nacional de Saúde contra Sr. Joselito Sobreira Medeiros por glosa técnica, publicado em 10 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 2304.55,
+      "entes": [],
+      "tags": [
+        "cobrança",
+        "débito",
+        "rescisão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fbf73178b74ca224",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743508721",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de veículo para expansão de frota do SAMU 192 à Prefeitura Municipal de Itapuã do Oeste, publicado em 10 de novembro de 2026.",
+      "por_que_importa": "Referência de expansão de frota SAMU em município de pequeno porte para prefeituras mineiras.",
+      "valor_brl": 323037,
+      "entes": [
+        "Itapuã do Oeste"
+      ],
+      "tags": [
+        "doação",
+        "samu",
+        "frota"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1e1c49408701b840",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743508665",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação do Ministério da Saúde de veículo para expansão de frota do SAMU 192 à Prefeitura Municipal de Segredo, publicado em 10 de novembro de 2026.",
+      "por_que_importa": "Referência de expansão de frota SAMU em município de pequeno porte para prefeituras mineiras.",
+      "valor_brl": 323037,
+      "entes": [
+        "Segredo"
+      ],
+      "tags": [
+        "doação",
+        "samu",
+        "frota"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "318bfc9784a75e9b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "843",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 843, DE 3 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-843-de-3-de-novembro-de-2026-743508539",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 843 da Secretaria de Atenção Primária à Saúde para ciência de parecer técnico ao Sr. Leonardo Tavares da Silva, publicado em 10 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital",
+        "notificação",
+        "técnico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "837fc5f6ca8e28dc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 151,
+      "edicao": "211",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743494269",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de convênio entre Ministério da Saúde e Irmandade da Santa Casa de Misericórdia de São José dos Campos para aquisição de equipamento e material permanente, publicado em 10 de novembro de 2026.",
+      "por_que_importa": "Modelo de convênio com Santa Casa para equipamentos; santas casas mineiras podem usar como referência para estruturação de projetos.",
+      "valor_brl": 2150000,
+      "entes": [
+        "Irmandade da Santa Casa de Misericórdia de São José dos Campos"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "santa casa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "895de0ce1c29f6da",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Departamento Nacional de Auditoria do Sistema Único de Saúde",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO, de 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-de-6-de-novembro-de-2026-743494053",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação do Departamento Nacional de Auditoria do SUS para Sr. José Nilson Lopes da Silva conhecer Relatório Preliminar de Auditoria nº 20.007, publicado em 10 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital",
+        "auditoria",
+        "notificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "082da9f902cb3bf5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743493976",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 1 van com acessibilidade para transporte sanitário à Prefeitura Municipal de Sumé/PB mediante extrato de doação nº 10576/2026 de 27 de outubro de 2026.",
+      "por_que_importa": "Prefeituras mineiras podem solicitar financiamento similar junto ao Ministério da Saúde para aquisição de veículos de transporte sanitário.",
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Sumé"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "transporte sanitário"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "30e14a42a941e53d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743493948",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 1 ambulância padrão suporte básico à Prefeitura Municipal de Oliveira dos Brejinhos/BA mediante extrato de doação nº 10630/2026 de 27 de outubro de 2026.",
+      "por_que_importa": "Prefeituras mineiras podem solicitar financiamento similar junto ao Ministério da Saúde para aquisição de ambulâncias de suporte básico.",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Oliveira dos Brejinhos"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "atenção eletiva"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "838d0ff712b67adb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743493818",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 1 ambulância padrão suporte básico à Prefeitura Municipal de Pau Brasil/BA mediante extrato de doação nº 10631/2026 de 27 de outubro de 2026.",
+      "por_que_importa": "Prefeituras mineiras podem solicitar financiamento similar junto ao Ministério da Saúde para aquisição de ambulâncias de suporte básico.",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Pau Brasil"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "atenção eletiva"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8b8b3e183369674c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743493741",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 1 veículo para expansão de frota do SAMU 192 à Prefeitura Municipal de São Martinho da Serra/RS mediante extrato de doação nº 10604/2026 de 27 de outubro de 2026.",
+      "por_que_importa": "Prefeituras mineiras podem solicitar financiamento similar junto ao Ministério da Saúde para expansão da frota do SAMU 192.",
+      "valor_brl": 323037,
+      "entes": [
+        "Prefeitura Municipal de São Martinho da Serra"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "samu 192"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6bdc44f683ad6f3d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "848",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 848, DE 5 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-848-de-5-de-novembro-de-2026-743493587",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Atenção Primária à Saúde publica edital de notificação nº 848 de 5 de novembro de 2026 para retirada de notificação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "devolução de recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ab99ab27c9c9de98",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743484239",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 1 veículo para expansão de frota do SAMU 192 à Prefeitura Municipal de Axixá/MA mediante extrato de doação nº 10538/2026 de 27 de outubro de 2026.",
+      "por_que_importa": "Prefeituras mineiras podem solicitar financiamento similar junto ao Ministério da Saúde para expansão da frota do SAMU 192.",
+      "valor_brl": 323037,
+      "entes": [
+        "Prefeitura Municipal de Axixá"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "samu 192"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "54b34160a1687f57",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743484162",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 1 ambulância padrão suporte básico à Prefeitura Municipal de Mascote/BA mediante extrato de doação nº 10626/2026 de 27 de outubro de 2026.",
+      "por_que_importa": "Prefeituras mineiras podem solicitar financiamento similar junto ao Ministério da Saúde para aquisição de ambulâncias de suporte básico.",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Mascote"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "atenção eletiva"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5ebd1b70643908f6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 158,
+      "edicao": "211",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-743484121",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Atenção Especializada à Saúde publica extrato de registro de preços nº 171/2026 de 9 de novembro de 2026 para aquisição de saneantes.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "registro de preços",
+        "saneantes"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ad81c35bd0a9300a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "838",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 838, DE 3 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-838-de-3-de-novembro-de-2026-743481931",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Atenção Primária à Saúde publica edital de notificação nº 838 de 3 de novembro de 2026 para retirada de notificação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "devolução de recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "76cddb37705ed3fb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "849",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 849, DE 5 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-849-de-5-de-novembro-de-2026-743481854",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Atenção Primária à Saúde publica edital de notificação nº 849 de 5 de novembro de 2026 para retirada de notificação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital de notificação",
+        "devolução de recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f55db4a849bb0693",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 151,
+      "edicao": "211",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743478947",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde assina convênio nº 7AAIPH com Irmandade da Santa Casa de Misericórdia de São Felix em 6 de novembro de 2026 para aquisição de equipamento e material permanente, com vigência até 29 de abril de 2028.",
+      "por_que_importa": "Entidades filantrópicas mineiras podem solicitar convênio similar junto ao Ministério da Saúde para aquisição de equipamentos.",
+      "valor_brl": 200000,
+      "entes": [
+        "Irmandade da Santa Casa de Misericórdia de São Felix"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "entidade filantrópica"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "aef47f3cd1c9d5cf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743478793",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 1 ambulância padrão suporte básico à Prefeitura Municipal de Guaratinga/BA mediante extrato de doação nº 10616/2026 de 27 de outubro de 2026.",
+      "por_que_importa": "Prefeituras mineiras podem solicitar financiamento similar junto ao Ministério da Saúde para aquisição de ambulâncias de suporte básico.",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Guaratinga"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "atenção eletiva"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f774614098536002",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743478716",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10228/2026 do Ministério da Saúde, de 27 de outubro de 2026, que doa 1 veículo para SAMU 192 à Prefeitura Municipal de Dom Aquino/MT.",
+      "por_que_importa": null,
+      "valor_brl": 323037,
+      "entes": [
+        "Dom Aquino/MT"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "samu"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c7a64c567e0feecc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743478639",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10607/2026 do Ministério da Saúde, de 27 de outubro de 2026, que doa 1 veículo para SAMU 192 à Prefeitura Municipal de Sobradinho/RS.",
+      "por_que_importa": null,
+      "valor_brl": 323037,
+      "entes": [
+        "Sobradinho/RS"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "samu"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2a058dc69f5f9ee5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743478616",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10603/2026 do Ministério da Saúde, de 27 de outubro de 2026, que doa 1 veículo para SAMU 192 à Prefeitura Municipal de Seberi/RS.",
+      "por_que_importa": null,
+      "valor_brl": 292600,
+      "entes": [
+        "Seberi/RS"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "samu"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7c49e21e4e0dfe5c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "847",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 847, DE 3 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-847-de-3-de-novembro-de-2026-743478485",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 847 de 3 de novembro de 2026 convocando pessoa física a retirar notificação sobre transferência e devolução de recursos junto à Secretaria de Atenção Primária à Saúde.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital",
+        "notificação",
+        "recursos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d3d143f3bccaa395",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Saúde Suplementar",
+      "tipo": "Comunicado",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 170,
+      "edicao": "211",
+      "titulo": "COMUNICADO",
+      "url": "https://www.in.gov.br/web/dou/-/comunicado-743476046",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Comunicado da ANS de 10 de novembro de 2026 autorizando funcionamento da operadora INTER Administradora de Benefícios Ltda.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "saúde suplementar",
+        "autorização",
+        "ans"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2f71dc82987fdd8a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743465581",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10582/2026 do Ministério da Saúde, de 27 de outubro de 2026, que doa 1 van com acessibilidade para transporte sanitário à Prefeitura Municipal de Aparecida/PB.",
+      "por_que_importa": null,
+      "valor_brl": 304600,
+      "entes": [
+        "Aparecida/PB"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6acfa6afa010aa17",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743465504",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10234/2026 do Ministério da Saúde, de 27 de outubro de 2026, que doa 1 veículo para SAMU 192 à Prefeitura Municipal de Brasnorte/MT.",
+      "por_que_importa": null,
+      "valor_brl": 292600,
+      "entes": [
+        "Brasnorte/MT"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "samu"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "45f3b097e359a23c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743465412",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10246/2026 do Ministério da Saúde, de 8 de outubro de 2026, que doa 1 veículo para SAMU 192 à Prefeitura Municipal de Uruará/PA.",
+      "por_que_importa": null,
+      "valor_brl": 292600,
+      "entes": [
+        "Uruará/PA"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "samu"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d5a6da0ed6f1b378",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743465404",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10269/2026 do Ministério da Saúde, de 27 de outubro de 2026, que doa 1 veículo para SAMU 192 à Prefeitura Municipal de Campina Grande/PB.",
+      "por_que_importa": null,
+      "valor_brl": 323037,
+      "entes": [
+        "Campina Grande/PB"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "samu"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e0453c1607ec4e2e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743465322",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10555/2026 do Ministério da Saúde, de 27 de outubro de 2026, que doa 1 veículo para SAMU 192 à Prefeitura Municipal de Ibaiti/PR.",
+      "por_que_importa": null,
+      "valor_brl": 292600,
+      "entes": [
+        "Ibaiti/PR"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "samu"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "50d4d6ea0afbde4e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743465196",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de doação nº 10609/2026 do Ministério da Saúde, de 27 de outubro de 2026, que doa 1 veículo para SAMU 192 à Prefeitura Municipal de Tio Hugo/RS.",
+      "por_que_importa": null,
+      "valor_brl": 323037,
+      "entes": [
+        "Tio Hugo/RS"
+      ],
+      "tags": [
+        "doação",
+        "veículo",
+        "samu"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "eddf7a0ddb9b061d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 158,
+      "edicao": "211",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-743465119",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de registro de preços nº 481/2026 de 8 de novembro de 2026 para aquisição de materiais hospitalares pelo Instituto Nacional do Coração.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "extrato",
+        "registro preços",
+        "materiais"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ec25e46ab6338949",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "840",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 840, DE 3 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-840-de-3-de-novembro-de-2026-743465014",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 840 de 3 de novembro de 2026 da Secretaria de Atenção Primária à Saúde convoca pessoa física para retirada de notificação em processo administrativo.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "saúde",
+        "ministério"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5da1ece7aeafde4b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "850",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 850, DE 5 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-850-de-5-de-novembro-de-2026-743464884",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 850 de 5 de novembro de 2026 da Secretaria de Atenção Primária à Saúde convoca pessoa física para retirada de notificação em processo administrativo.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "saúde",
+        "ministério"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ec598cbbb0eabbb7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 171,
+      "edicao": "211",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-743464572",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Alteração de Edital da Fundação Nacional de Saúde para Pregão 412/2026 reformula Termo de Referência de aquisição de alimentos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "licitação",
+        "alimentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6df558be41fe5471",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743462624",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 10614/2026 de doação de 1 ambulância padrão de 27 de outubro de 2026 da Secretaria de Atenção Especializada à Saúde à Prefeitura Municipal de Feira da Mata/BA.",
+      "por_que_importa": "Verifique com a SES-MG se há programa similar de doação de veículos para prefeituras mineiras.",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Feira da Mata/BA"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "aabacb69e152d84f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743462547",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 10218/2026 de doação de 1 veículo para expansão de frota SAMU 192 de 27 de outubro de 2026 da Secretaria de Atenção Especializada à Saúde à Prefeitura Municipal de Alto Garças/MT.",
+      "por_que_importa": "Verifique com a SES-MG se há programa similar de doação de veículos para prefeituras mineiras.",
+      "valor_brl": 323037,
+      "entes": [
+        "Prefeitura Municipal de Alto Garças/MT"
+      ],
+      "tags": [
+        "doação",
+        "SAMU 192",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1782cf21687ec630",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743462470",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 10223/2026 de doação de 1 van para transporte sanitário eletivo de 27 de outubro de 2026 da Secretaria de Atenção Especializada à Saúde à Prefeitura Municipal de Serra Branca/PB.",
+      "por_que_importa": "Verifique com a SES-MG se há programa similar de doação de veículos para prefeituras mineiras.",
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Serra Branca/PB"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9e6b87c31830b86a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743462393",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 10593/2026 de doação de 1 veículo para renovação de frota SAMU 192 de 27 de outubro de 2026 da Secretaria de Atenção Especializada à Saúde à Prefeitura Municipal de Quaraí/RS.",
+      "por_que_importa": "Verifique com a SES-MG se há programa similar de doação de veículos para prefeituras mineiras.",
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Quaraí/RS"
+      ],
+      "tags": [
+        "doação",
+        "SAMU 192",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5b766052ed605889",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743462316",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 10600/2026 de doação de 1 veículo para renovação de frota SAMU 192 de 27 de outubro de 2026 da Secretaria de Atenção Especializada à Saúde à Prefeitura Municipal de Sapiranga/RS.",
+      "por_que_importa": "Verifique com a SES-MG se há programa similar de doação de veículos para prefeituras mineiras.",
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Sapiranga/RS"
+      ],
+      "tags": [
+        "doação",
+        "SAMU 192",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4b454df9eae324c4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743462239",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 10605/2026 de doação de 1 veículo para expansão de frota SAMU 192 de 27 de outubro de 2026 da Secretaria de Atenção Especializada à Saúde à Prefeitura Municipal São Vicente do Sul/RS.",
+      "por_que_importa": "Verifique com a SES-MG se há programa similar de doação de veículos para prefeituras mineiras.",
+      "valor_brl": 323037,
+      "entes": [
+        "Prefeitura Municipal São Vicente do Sul/RS"
+      ],
+      "tags": [
+        "doação",
+        "SAMU 192",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7f47b02aec803056",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "2624/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 161,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 2624/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-2624/2026-743457854",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 2624/2026 de doação de 1 furgão adaptado como Unidade Odontológica Móvel de 23 de outubro de 2026 da Secretaria de Atenção Primária à Saúde ao Município de Turvo/SC.",
+      "por_que_importa": "Verifique com a SES-MG se há programa similar de doação de veículos para prefeituras mineiras.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Turvo/SC"
+      ],
+      "tags": [
+        "doação",
+        "odontologia móvel",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4148c4effdd78e83",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743447716",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 10618/2026 de doação de 1 ambulância padrão de 27 de outubro de 2026 da Secretaria de Atenção Especializada à Saúde à Prefeitura Municipal de Ipecaetá/BA.",
+      "por_que_importa": "Verifique com a SES-MG se há programa similar de doação de veículos para prefeituras mineiras.",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Ipecaetá/BA"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6feea7aebad235e4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743447639",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato nº 10577/2026 de doação de 1 van para transporte sanitário eletivo de 27 de outubro de 2026 da Secretaria de Atenção Especializada à Saúde à Prefeitura Municipal de Santa Luzia/PB.",
+      "por_que_importa": "Verifique com a SES-MG se há programa similar de doação de veículos para prefeituras mineiras.",
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Santa Luzia/PB"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c1740fe82887907d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743447562",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 01 veículo para a Prefeitura Municipal de Caldeirão Grande do Piauí/PI visando à implementação do SAMU 192, conforme extrato nº 10100/2026.",
+      "por_que_importa": "Acompanhe doações similares em prefeituras mineiras para identificar oportunidades de expansão do SAMU 192.",
+      "valor_brl": 323037,
+      "entes": [
+        "Prefeitura Municipal de Caldeirão Grande do Piauí"
+      ],
+      "tags": [
+        "doação",
+        "SAMU 192",
+        "veículo",
+        "urgência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "37aed9901e5d8f60",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743447485",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 01 veículo para a Prefeitura Municipal de Candeias do Jamari/RO visando à implementação do SAMU 192, conforme extrato nº 10076/2026.",
+      "por_que_importa": "Acompanhe doações similares em prefeituras mineiras para identificar oportunidades de expansão do SAMU 192.",
+      "valor_brl": 323037,
+      "entes": [
+        "Prefeitura Municipal de Candeias do Jamari"
+      ],
+      "tags": [
+        "doação",
+        "SAMU 192",
+        "veículo",
+        "urgência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "897e8dc96aed2494",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743447462",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 01 van com acessibilidade para a Prefeitura Municipal de Arroio do Tigre/RS para transporte sanitário eletivo, conforme extrato nº 9783/2026.",
+      "por_que_importa": "Verifique se há programas similares de transporte sanitário eletivo em municípios mineiros.",
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Arroio do Tigre"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "van",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "dbd1e2f440bc7e59",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743447385",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 01 van com acessibilidade para a Prefeitura Municipal de Iepê/SP para transporte sanitário eletivo, conforme extrato nº 9948/2026.",
+      "por_que_importa": "Verifique se há programas similares de transporte sanitário eletivo em municípios mineiros.",
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Iepê"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "van",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "faa77444d441d7bf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "839",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 839, DE 3 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-839-de-3-de-novembro-de-2026-743447177",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 839 convoca representante do Fundo Municipal de Saúde de Nossa Senhora dos Remédios/PI para retirar notificação de devolução de recursos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundo Municipal de Saúde de Nossa Senhora dos Remédios"
+      ],
+      "tags": [
+        "notificação",
+        "transferência de recursos",
+        "devolução"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "328312045063b00e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743441995",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 01 veículo para a Prefeitura Municipal de Getúlio Vargas/RS para renovação da frota do SAMU 192, conforme extrato nº 10340/2026.",
+      "por_que_importa": "Acompanhe doações similares em prefeituras mineiras para identificar oportunidades de renovação de frota do SAMU 192.",
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Getúlio Vargas"
+      ],
+      "tags": [
+        "doação",
+        "SAMU 192",
+        "veículo",
+        "renovação de frota"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6a9df32345365f99",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743441865",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 01 van com acessibilidade para a Prefeitura Municipal de Marcelino Ramos/RS para transporte sanitário eletivo, conforme extrato nº 9776/2026.",
+      "por_que_importa": "Verifique se há programas similares de transporte sanitário eletivo em municípios mineiros.",
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Marcelino Ramos"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "van",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fd58884216425fc4",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743441842",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 01 ambulância padrão suporte básico para a Prefeitura Municipal de Vereda/BA para transporte sanitário, conforme extrato nº 10643/2026.",
+      "por_que_importa": "Identifique municípios mineiros com demanda de ambulâncias para acessar programa similar.",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Vereda"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "transporte",
+        "urgência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bd806d0e17c99d9d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "841",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 841, DE 3 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-841-de-3-de-novembro-de-2026-743441657",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 841 convoca Sr. Leandro de Oliveira para retirar notificação referente a parecer de monitoramento de transferência de recursos.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "monitoramento",
+        "transferência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "859ef07993b074bb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "2575/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 160,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 2575/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-2575/2026-743441556",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 01 furgão adaptado com equipamentos para unidade odontológica móvel ao Município de Jupi/PE para implantação de componente móvel da atenção à saúde bucal, conforme extrato nº 2575/2026.",
+      "por_que_importa": "Identifique municípios mineiros com demanda de unidades odontológicas móveis para acessar programa similar.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Jupi"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "unidade móvel",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "994a596f8b7fc83a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743432099",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 01 ambulância padrão suporte básico para a Prefeitura Municipal de Ibicoara/BA para transporte sanitário, conforme extrato nº 10617/2026.",
+      "por_que_importa": "Identifique municípios mineiros com demanda de ambulâncias para acessar programa similar.",
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Ibicoara"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "transporte",
+        "urgência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1a6477163f1008e8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743432022",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa 01 veículo para a Prefeitura Municipal de Santo Antônio da Patrulha/RS para renovação da frota do SAMU 192, conforme extrato nº 10597/2026.",
+      "por_que_importa": "Acompanhe doações similares em prefeituras mineiras para identificar oportunidades de renovação de frota do SAMU 192.",
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Santo Antônio da Patrulha"
+      ],
+      "tags": [
+        "doação",
+        "SAMU 192",
+        "veículo",
+        "renovação de frota"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2a96811cd2be44c1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "846",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 846, DE 3 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-846-de-3-de-novembro-de-2026-743431814",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 846 de 3 de novembro de 2026 convoca gestor do Fundo Nacional de Saúde para retirar notificação sobre devolução de recursos no prazo de 15 dias.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "fundo nacional",
+        "devolução"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "15f8deddad864b7b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "2625/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 161,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 2625/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-2625/2026-743431733",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 2625/2026 de 23 de outubro de 2026 do Ministério da Saúde para o Município de Ananás/TO de Unidade Odontológica Móvel e equipamentos para atenção à saúde bucal.",
+      "por_que_importa": null,
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Ananás/TO"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "veículo móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9455fe093a0e5122",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743426678",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 10551/2026 de 27 de outubro de 2026 do Ministério da Saúde para a Prefeitura Municipal de Clevelândia/PR de veículo para o SAMU 192.",
+      "por_que_importa": null,
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Clevelândia/PR"
+      ],
+      "tags": [
+        "doação",
+        "samu 192",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "96f67bda6b1524e7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "2436/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 160,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 2436/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-2436/2026-743426471",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 2436/2026 de 23 de outubro de 2026 do Ministério da Saúde para o Município de Arvorezinha/RS de Unidade Odontológica Móvel e equipamentos para atenção à saúde bucal.",
+      "por_que_importa": null,
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Arvorezinha/RS"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "veículo móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "755d3fe5ee58dea1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743421985",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 2201/2026 de 30 de julho de 2026 do Ministério da Saúde para a Prefeitura Municipal de Cruzeiro do Iguaçu/PR de van para transporte sanitário eletivo.",
+      "por_que_importa": null,
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Cruzeiro do Iguaçu/PR"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fc24980a8f473927",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743421904",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 10588/2026 de 27 de outubro de 2026 do Ministério da Saúde para a Prefeitura Municipal de Panambi/RS de veículo para o SAMU 192.",
+      "por_que_importa": null,
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Panambi/RS"
+      ],
+      "tags": [
+        "doação",
+        "samu 192",
+        "veículo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b962b6f290f801c8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743421827",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 9777/2026 de 27 de outubro de 2026 do Ministério da Saúde para a Prefeitura Municipal de Nonai/RS de van para transporte sanitário eletivo.",
+      "por_que_importa": null,
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Nonai/RS"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c415429724a0f4d5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "177/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 160,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 177/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-177/2026-743421804",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 177/2026 de 17 de junho de 2026 do Ministério da Saúde para o Município de Floresta do Araguaia/PA de Unidade Odontológica Móvel e equipamentos para atenção à saúde bucal.",
+      "por_que_importa": null,
+      "valor_brl": 379890,
+      "entes": [
+        "Município de Floresta do Araguaia/PA"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "veículo móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "96cc8aa0cc0e4d77",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "2499/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 160,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 2499/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-2499/2026-743421722",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato de Doação nº 2499/2026 de 23 de outubro de 2026 do Ministério da Saúde para o Município de São João do Oriente/MG de Unidade Odontológica Móvel e equipamentos para atenção à saúde bucal.",
+      "por_que_importa": "verifique se o município está preparado para receber a Unidade Odontológica Móvel e acompanhe o cronograma de implantação com a SES-MG.",
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de São João do Oriente/MG"
+      ],
+      "tags": [
+        "doação",
+        "saúde bucal",
+        "minas gerais",
+        "veículo móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3ed64e7933570a5a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 152,
+      "edicao": "211",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-743410171",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de Parcelamento de Débito nº 122/2026 do Fundo Nacional de Saúde com pessoa física relativo a glosa técnica em 32 parcelas.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "parcelamento",
+        "glosa técnica",
+        "fundo nacional"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "73499c94907c6889",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743408090",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 10367/2026 de 27 de outubro de 2026 do Ministério da Saúde para a Prefeitura Municipal de Paulista/PB de van para transporte sanitário eletivo.",
+      "por_que_importa": null,
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Paulista/PB"
+      ],
+      "tags": [
+        "doação",
+        "transporte sanitário",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7bbaa1df955c24f0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743408013",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 10601/2026 de 27 de outubro de 2026 do Ministério da Saúde para a Prefeitura Municipal de Sapucaia do Sul/RS de 2 veículos para o SAMU 192.",
+      "por_que_importa": null,
+      "valor_brl": 585200,
+      "entes": [
+        "Prefeitura Municipal de Sapucaia do Sul/RS"
+      ],
+      "tags": [
+        "doação",
+        "samu 192",
+        "veículos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "81ce1806a0f4a29c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 157,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743407936",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa ambulância padrão suporte básico à Prefeitura Municipal de Jacarezinho/PR por extrato nº 10436/2026.",
+      "por_que_importa": null,
+      "valor_brl": 274977,
+      "entes": [
+        "Prefeitura Municipal de Jacarezinho/PR"
+      ],
+      "tags": [
+        "doação",
+        "ambulância",
+        "transporte"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5a0b705cb0283aaa",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "2657/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 161,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 2657/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-2657/2026-743407859",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa Unidade Odontológica Móvel e equipamentos ao Município de Limoeiro de Anadia/AL por extrato nº 2657/2026.",
+      "por_que_importa": null,
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Limoeiro de Anadia/AL"
+      ],
+      "tags": [
+        "doação",
+        "odontologia",
+        "unidade móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "125c388bb8d37c49",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743405170",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa veículo para renovação de frota do SAMU à Prefeitura Municipal de Ananindeua/PA por extrato nº 10239/2026.",
+      "por_que_importa": null,
+      "valor_brl": 292600,
+      "entes": [
+        "Prefeitura Municipal de Ananindeua/PA"
+      ],
+      "tags": [
+        "doação",
+        "samu",
+        "transporte"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "957efe8d170cebdb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 156,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743405024",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa van com acessibilidade para transporte sanitário eletivo à Prefeitura Municipal de Ipiranga do Sul/RS por extrato nº 9774/2026.",
+      "por_que_importa": null,
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Ipiranga do Sul/RS"
+      ],
+      "tags": [
+        "doação",
+        "transporte",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e7d4ab6db078fa6c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 155,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743405013",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa veículo para ampliação de frota do SAMU à Prefeitura Municipal de Porto Velho/RO por extrato nº 10087/2026.",
+      "por_que_importa": null,
+      "valor_brl": 323037,
+      "entes": [
+        "Prefeitura Municipal de Porto Velho/RO"
+      ],
+      "tags": [
+        "doação",
+        "samu",
+        "transporte"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3b24fe97106d627b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "856",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 160,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 856, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-856-de-6-de-novembro-de-2026-743404882",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Atenção Primária à Saúde publica Edital de Notificação nº 856 de 6 de novembro de 2026 para convocação de pessoa.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "administrativo",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "96e7e074c8395dc7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "2526/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 160,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 2526/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-2526/2026-743404805",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa Unidade Odontológica Móvel e equipamentos ao Município de Itororó/BA por extrato nº 2526/2026.",
+      "por_que_importa": null,
+      "valor_brl": 399380.26,
+      "entes": [
+        "Município de Itororó/BA"
+      ],
+      "tags": [
+        "doação",
+        "odontologia",
+        "unidade móvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "3b74d5e8a5afc341",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Ajuste",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 152,
+      "edicao": "211",
+      "titulo": "EXTRATO DE AJUSTE",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-ajuste-743394250",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica extrato de ajuste nº 7/2025 do PROADI-SUS reduzindo valor de projeto da Fundação Antônio Prudente.",
+      "por_que_importa": null,
+      "valor_brl": 10855421.23,
+      "entes": [
+        "Fundação Antônio Prudente"
+      ],
+      "tags": [
+        "proadi-sus",
+        "ajuste",
+        "projeto"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bf5868c51e242543",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 153,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743394173",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa veículo para expansão de frota do SAMU à Prefeitura Municipal de Ribeira do Amparo/BA por extrato nº 10212/2026.",
+      "por_que_importa": null,
+      "valor_brl": 323037,
+      "entes": [
+        "Prefeitura Municipal de Ribeira do Amparo/BA"
+      ],
+      "tags": [
+        "doação",
+        "samu",
+        "transporte"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8594ac2aeee7abfc",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 154,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743394145",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa van com acessibilidade para transporte sanitário eletivo à Prefeitura Municipal de Riachão do Bacamarte/PB por extrato nº 8647/2026.",
+      "por_que_importa": null,
+      "valor_brl": 304600,
+      "entes": [
+        "Prefeitura Municipal de Riachão do Bacamarte/PB"
+      ],
+      "tags": [
+        "doação",
+        "transporte",
+        "acessibilidade"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9e29d752160fea00",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "844",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 159,
+      "edicao": "211",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 844, DE 3 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-844-de-3-de-novembro-de-2026-743392019",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Atenção Primária à Saúde publica Edital de Notificação nº 844 de 3 de novembro de 2026 para convocação de pessoa.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "administrativo",
+        "pessoal"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0554a95b2dec5893",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "2824/2026",
+      "data_publicacao": "2026-11-10",
+      "secao": "3",
+      "pagina": 161,
+      "edicao": "211",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 2824/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-2824/2026-743391942",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa Unidade Odontológica Móvel e equipamentos ao Município de Severínia/SP por extrato nº 2824/2026.",
+      "por_que_importa": null,
+      "valor_brl": 379890,
+      "entes": [
+        "Município de Severínia/SP"
+      ],
+      "tags": [
+        "doação",
+        "odontologia",
+        "unidade móvel"
+      ],
+      "fallback": false
+    }
+  ]
+}
