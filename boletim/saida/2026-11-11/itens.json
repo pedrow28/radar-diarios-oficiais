@@ -1,0 +1,1802 @@
+{
+  "data": "2026-11-11",
+  "gerado_em": "2026-11-11T17:42:52.770839+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "37 portarias e convênios movem R$ 120 milhões para gestores do SUS",
+    "em_30_segundos": [
+      "MS autoriza R$ 60 milhões em portarias para custeio de média e alta complexidade em São Bernardo do Campo.",
+      "Portaria 12.490 do MS habilita atenção primária com R$ 16,5 milhões em incentivos federais de custeio.",
+      "MS autoriza R$ 22,5 milhões em ajuste ao Proadi-SUS para rastreamento com HPV-DNA na Moinhos de Vento.",
+      "MS celebra 14 convênios para aquisição de equipamentos totalizando R$ 11 milhões.",
+      "MS doa kits de teleconsulta a 8 municípios, sistemas de água e bens para unidades de saúde."
+    ],
+    "intro": "O dia trouxe 37 atos do Ministério da Saúde com mais de R$ 120 milhões em repasses, portarias, ajustes ao Proadi-SUS e convênios para equipamentos, além de doações de sistemas de água e kits de teleconsulta para municípios. Prioritário para você acompanhar agora: as duas portarias que destinam R$ 60 milhões para custeio de média e alta complexidade em São Bernardo do Campo, a portaria que habilita atenção primária com R$ 16,5 milhões, os ajustes ao Proadi-SUS (R$ 22,5 milhões) e os 14 convênios para equipamentos que beneficiam instituições filantrópicas por todo o Brasil.",
+    "parcial": true,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "212",
+        "paginas": "pp. 1-363",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ausente",
+        "edicao": null,
+        "paginas": null,
+        "avisos": [
+          "arquivo não encontrado"
+        ]
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "db9cf9d2b5034000",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743848385",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao município de Canhotinho/PE via extrato de doação nº 00209/2026 de 11/11/2026.",
+      "por_que_importa": "Acompanhe como o Ministério estrutura repasses de tecnologia para municípios pequenos e identifique modelo passível de replicação em Minas Gerais.",
+      "valor_brl": 24554.04,
+      "entes": [
+        "Canhotinho"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "04ea936982f1bc77",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743840105",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde celebra convênio com Fundação Hospitalar de Blumenau para aquisição de equipamento e material permanente, conforme extrato de 11/11/2026.",
+      "por_que_importa": "Fundações hospitalares em outros estados recebem recursos para equipamento; verifique se critério de seleção similar beneficia instituições mineiras.",
+      "valor_brl": 490000,
+      "entes": [
+        "Fundação Hospitalar de Blumenau"
+      ],
+      "tags": [
+        "convênio",
+        "equipamentos",
+        "hospital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f0b81c6d59662aef",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743840097",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao município de Varre-Saí/RJ via extrato de doação nº 00212/2026 de 11/11/2026.",
+      "por_que_importa": "Acompanhe como o Ministério estrutura repasses de tecnologia para municípios pequenos e identifique modelo passível de replicação em Minas Gerais.",
+      "valor_brl": 14073.88,
+      "entes": [
+        "Varre-Saí"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a41b901016145352",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743825866",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde celebra convênio com Irmandade da Santa Casa de Misericórdia de São Felix para aquisição de equipamento e material permanente de 11/11/2026.",
+      "por_que_importa": "Santas Casas em outros estados recebem repasse para equipamento; verifique elegibilidade de instituições filantrópicas mineiras para acesso similar.",
+      "valor_brl": 200000,
+      "entes": [
+        "Irmandade da Santa Casa de Misericórdia de São Felix"
+      ],
+      "tags": [
+        "convênio",
+        "santa casa",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "55f45ab17eea462b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "858",
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 858, DE 9 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-858-de-9-de-novembro-de-2026-743825767",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 858 de 9/11/2026 da Secretaria de Atenção Primária à Saúde convoca pessoa a retirar notificação processual.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "processo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "131843222036d8a6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743809543",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao município de Xexéu/PE via extrato de doação nº 00210/2026 de 11/11/2026.",
+      "por_que_importa": "Acompanhe como o Ministério estrutura repasses de tecnologia para municípios pequenos e identifique modelo passível de replicação em Minas Gerais.",
+      "valor_brl": 12277.02,
+      "entes": [
+        "Xexéu"
+      ],
+      "tags": [
+        "doação",
+        "equipamentos",
+        "telessaúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5c0b5ad695e29fd2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 360,
+      "edicao": "212",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-743809421",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de alteração de edital de pregão nº 169/2026 da Secretaria de Saúde Indígena altera datas de recebimento de propostas para licitação.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "pregão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7e9d6bc4644fc62d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743801873",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde celebra convênio com Instituto Paulista de Estudos e Pesquisas em Oftalmologia para aquisição de equipamento e material permanente de 11/11/2026.",
+      "por_que_importa": "Instituições de pesquisa em oftalmologia recebem recursos para equipamento; verifique se institutos mineiros qualificados são elegíveis para programas similares.",
+      "valor_brl": 500000,
+      "entes": [
+        "Instituto Paulista de Estudos e Pesquisas em Oftalmologia"
+      ],
+      "tags": [
+        "convênio",
+        "oftalmologia",
+        "pesquisa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9cec54bbd28c4574",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Ajuste",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "EXTRATO DE AJUSTE",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-ajuste-743801827",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde altera projeto Proadi-SUS do Hospital Sírio Libanês para transferência de inventário de sangue de cordão, conforme extrato de ajuste nº 2/2023 de 11/11/2026.",
+      "por_que_importa": "Grandes hospitais conseguem aumentos em projetos Proadi; verifique se instituições mineiras qualificadas podem renegociar valores com o Ministério.",
+      "valor_brl": 3501189.42,
+      "entes": [
+        "Hospital Sírio Libanês"
+      ],
+      "tags": [
+        "proadi-sus",
+        "ajuste",
+        "sangue de cordão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1de90da7d40c9956",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743790252",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde celebra convênio com Associação Beneficente Oswaldo Cruz de Horizontina para aquisição de equipamento e material permanente de 11/11/2026.",
+      "por_que_importa": "Entidades filantrópicas em outros estados recebem repasse para equipamento; verifique elegibilidade de instituições mineiras para acesso similar.",
+      "valor_brl": 200000,
+      "entes": [
+        "Associação Beneficente Oswaldo Cruz de Horizontina"
+      ],
+      "tags": [
+        "convênio",
+        "equipamentos",
+        "filantropia"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "571f405c4108e3d1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "857",
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 857, DE 9 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-857-de-9-de-novembro-de-2026-743790172",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 857 de 9/11/2026 da Secretaria de Atenção Primária à Saúde convoca pessoa a retirar notificação processual.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "processo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "423e8326d2439f87",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Ajuste",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "EXTRATO DE AJUSTE",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-ajuste-743789214",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde altera projeto Proadi-SUS da Real e Benemérita Associação Portuguesa de Beneficência para avaliação de cardápios hospitalares, conforme extrato de ajuste nº 6/2023 de 11/11/2026.",
+      "por_que_importa": "Redução em projeto Proadi indica reavaliação de critérios; verifique se há riscos similares em projetos de instituições mineiras com performance questionada.",
+      "valor_brl": 889734.09,
+      "entes": [
+        "Real e Benemérita Associação Portuguesa de Beneficência"
+      ],
+      "tags": [
+        "proadi-sus",
+        "ajuste",
+        "cardápios"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f87a696e6aabd405",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743789137",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Itarumã/GO por meio de extrato de doação nº 00208/2026, de 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": 7346.56,
+      "entes": [
+        "Município de Itarumã"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "36e873489d4d7436",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": "33/2026",
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO Nº 33/2026 - UASG 257043",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-n-33/2026-uasg-257043-743789006",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde publica aviso de chamamento público nº 33/2026 para prospecção de mercado imobiliário em Santarém/PA, de 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "chamamento público",
+        "santarém",
+        "imóvel"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d14e863a52734f4f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Acordo de Cooperação Técnica",
+      "numero": "1/2026",
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 361,
+      "edicao": "212",
+      "titulo": "EXTRATO DE ACORDO DE COOPERAÇÃO TÉCNICA Nº 1/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-cooperacao-tecnica-n-1/2026-743788033",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Fundação Nacional de Saúde e Município de Itacarambi/MG assinam acordo de cooperação técnica nº 1/2026 para doação de sistema de tratamento de água à comunidade Nova Esperança, de 11/11/2026.",
+      "por_que_importa": "Valide a instalação, operacionalização e manutenção do sistema de tratamento de água na comunidade Nova Esperança.",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Itacarambi"
+      ],
+      "tags": [
+        "cooperação técnica",
+        "água",
+        "itacarambi"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d7475e50e8557473",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 362,
+      "edicao": "212",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-743787805",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto de Tecnologia em Fármacos publica aviso de chamamento público nº 189/2026 para pesquisa de mercado de material de manutenção predial, de 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto de Tecnologia em Fármacos"
+      ],
+      "tags": [
+        "chamamento público",
+        "manutenção",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ad2afc554f408729",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743785823",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde assina convênio com Associação Cultural e Científica Virvi Ramos para aquisição de equipamento e material permanente, conforme extrato, de 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": 705720,
+      "entes": [
+        "Associação Cultural e Científica Virvi Ramos"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "material permanente"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7f0a670952dc75e2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743785777",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde doa kits de equipamentos para teleconsulta ao Município de Cariús/CE por meio de extrato de doação nº 00205/2026, de 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": 12817.2,
+      "entes": [
+        "Município de Cariús"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2619fa8a1d78337d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "EXTRATO DE REGISTRO DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-registro-de-precos-743771262",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto Nacional do Câncer publica extrato de registro de preços para aquisição de materiais hospitalares, de 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional do Câncer"
+      ],
+      "tags": [
+        "registro de preços",
+        "material hospitalar"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "825567cf42fea1a5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743768569",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde assina convênio com SPDM - Associação Paulista para o Desenvolvimento da Medicina para aquisição de equipamento e material permanente, conforme extrato, de 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": 5006448,
+      "entes": [
+        "SPDM - Associação Paulista para o Desenvolvimento da Medicina"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "material permanente"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "87e5a30eec208031",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "3/2026",
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 361,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 3/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-3/2026-743768503",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Fundação Nacional de Saúde doa sistema de tratamento de água (SALTA-Z) ao Município de Itacarambi/MG por meio de extrato de doação nº 3/2026, de 11/11/2026.",
+      "por_que_importa": "Confirme a entrega e instalação do sistema na comunidade Nova Esperança e a capacitação técnica para operação.",
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde",
+        "Município de Itacarambi"
+      ],
+      "tags": [
+        "doação",
+        "água",
+        "itacarambi"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "daaafed42b939a24",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 357,
+      "edicao": "212",
+      "titulo": "EXTRATO DE PARCELAMENTO DE DÉBITO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-parcelamento-de-debito-743756041",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Fundo Nacional de Saúde formaliza parcelamento de débito com o Município de Avaí/SP, conforme extrato nº 127/2026, de 11/11/2026.",
+      "por_que_importa": "Valide a regularização de repasses para evitar acúmulo de glosas técnicas que geram débito a devolver.",
+      "valor_brl": 56227.62,
+      "entes": [
+        "Município de Avaí"
+      ],
+      "tags": [
+        "parcelamento",
+        "débito",
+        "glosa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "82d560a6877bbc49",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Ajuste",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "EXTRATO DE AJUSTE",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-ajuste-743755810",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Ministério da Saúde e Hospital Albert Einstein ajustam o valor do projeto Proadi-SUS conforme extrato de ajuste, termo de ajuste nº 1/2023, de 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Hospital Albert Einstein"
+      ],
+      "tags": [
+        "proadi-sus",
+        "ajuste",
+        "aprimoramento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2cbaf1f2c7aff079",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Extrato de Instrumentos Contratuais",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "EXTRATO DE EXTINÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-extincao-743749768",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Ministério da Saúde e Instituto Butantan extinguem a Parceria para Desenvolvimento Produtivo de Etanercepte conforme termo de deliberação, de 11/11/2026.",
+      "por_que_importa": "Acompanhe as perspectivas de aquisição de etanercepte no Ministério da Saúde após a extinção da parceria.",
+      "valor_brl": null,
+      "entes": [
+        "Instituto Butantan"
+      ],
+      "tags": [
+        "PDP",
+        "etanercepte",
+        "extinção"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5d637867d6ab8167",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743749637",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Doação nº 00211/2026 do Ministério da Saúde à Prefeitura de Morungaba/SP de kits de equipamentos para teleconsulta, publicado em 11/11/2026.",
+      "por_que_importa": "vale checar se há programas semelhantes de telessaúde e saúde digital disponíveis para municípios mineiros.",
+      "valor_brl": 14073.88,
+      "entes": [
+        "Prefeitura Municipal de Morungaba"
+      ],
+      "tags": [
+        "doação",
+        "equipamento",
+        "telessaúde",
+        "saúde digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "68c9c5cb01bab6e2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 362,
+      "edicao": "212",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-743746907",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Chamamento Público nº 191/2026 da Fundação Oswaldo Cruz para pesquisa de mercado de ferramentas manuais, publicado em 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "pesquisa de mercado",
+        "ferramenta",
+        "Farmanguinhos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "839d0c4037572cd8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743733222",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Convênio nº 7AAITB do Ministério da Saúde com Instituto Paulista de Oftalmologia para aquisição de equipamento e material permanente, publicado em 11/11/2026.",
+      "por_que_importa": "vale usar como referência a estrutura deste convênio com entidade oftalmológica especializada.",
+      "valor_brl": 1000000,
+      "entes": [
+        "Instituto Paulista de Estudos e Pesquisas em Oftalmologia - IPEPO"
+      ],
+      "tags": [
+        "convênio",
+        "oftalmologia",
+        "equipamento",
+        "repasse"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1a0f18517bcf5fd3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-743733145",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Alteração de Edital do Pregão 20/2027 da Secretaria de Atenção Especializada à Saúde para aquisição de medicamentos, alterando data de recebimento para 11/11/2026, publicado em 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "medicamento",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fdcfd0b2b78719b7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743720338",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Convênio nº 7AAISI do Ministério da Saúde com Associação Hospitalar São João Batista para aquisição de equipamento e material permanente, publicado em 11/11/2026.",
+      "por_que_importa": "serve de modelo para estruturação de convênios com hospitais para aquisição de equipamentos.",
+      "valor_brl": 291060,
+      "entes": [
+        "Associação Hospitalar São João Batista"
+      ],
+      "tags": [
+        "convênio",
+        "hospital",
+        "equipamento",
+        "repasse"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "506e40634df0cc71",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 357,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743720241",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Convênio nº 7AAIPK do Ministério da Saúde com Liga Álvaro Bahia Contra a Mortalidade Infantil para aquisição de equipamento e material permanente, publicado em 11/11/2026.",
+      "por_que_importa": "valioso para entidades voltadas a saúde infantil compreender este modelo de convênio.",
+      "valor_brl": 200000,
+      "entes": [
+        "Liga Álvaro Bahia Contra a Mortalidade Infantil"
+      ],
+      "tags": [
+        "convênio",
+        "saúde infantil",
+        "equipamento",
+        "repasse"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d24fc27579559c40",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Ajuste",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "EXTRATO DE AJUSTE",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-ajuste-743720215",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Ajuste nº 3/2023 do Termo Proadi-SUS da Associação Hospitalar Moinhos de Vento para rastreamento com HPV-DNA, alterando valor do projeto aprovado, publicado em 11/11/2026.",
+      "por_que_importa": "aumento de valor no Proadi-SUS indica continuidade e expansão do programa de rastreamento.",
+      "valor_brl": 22559639.98,
+      "entes": [
+        "Associação Hospitalar Moinhos de Vento"
+      ],
+      "tags": [
+        "Proadi-SUS",
+        "câncer",
+        "rastreamento",
+        "HPV"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "b367b27e311361b3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-743712342",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de Alteração de Edital do Pregão 215/2026 da Secretaria de Atenção Especializada à Saúde para contratação de serviço de engenharia clínica, alterando data de recebimento para 11/11/2026, publicado em 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "engenharia",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "fa907941dcb5b09d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743712299",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Convênio nº 7AAIOJ do Ministério da Saúde com Associação Lar São Francisco de Assis na Providência de Deus para aquisição de equipamento e material permanente, publicado em 11/11/2026.",
+      "por_que_importa": "referência importante para entidades filantrópicas na estruturação de convênios de equipamento.",
+      "valor_brl": 200000,
+      "entes": [
+        "Associação Lar São Francisco de Assis na Providência de Deus"
+      ],
+      "tags": [
+        "convênio",
+        "filantropia",
+        "equipamento",
+        "repasse"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "62d5477de08d72a1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743708156",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato de Convênio nº 7AAISG do Ministério da Saúde com Associação Hospitalar Beneficente de Marau para aquisição de equipamento e material permanente, publicado em 11/11/2026.",
+      "por_que_importa": "exemplo de estrutura de convênio que hospitais beneficentes podem utilizar como modelo.",
+      "valor_brl": 200000,
+      "entes": [
+        "Associação Hospitalar Beneficente de Marau"
+      ],
+      "tags": [
+        "convênio",
+        "hospital",
+        "equipamento",
+        "repasse"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d53bfc92d66e3e60",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Grupo Hospitalar Conceição",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 360,
+      "edicao": "212",
+      "titulo": "EXTRATOS DE REGISTROS DE PREÇOS",
+      "url": "https://www.in.gov.br/web/dou/-/extratos-de-registros-de-precos-743707954",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extratos de Registros de Preços do Grupo Hospitalar Conceição e Hospital Federal de Bonsucesso para material de escritório, gêneros alimentícios e medicamentos, publicados em 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Grupo Hospitalar Conceição",
+        "Hospital Federal de Bonsucesso"
+      ],
+      "tags": [
+        "registro de preços",
+        "medicamento",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "804311d3b092c48c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "853",
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 853, DE 6 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-853-de-6-de-novembro-de-2026-743702056",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de Notificação nº 853 de 6 de novembro de 2026 da Secretaria de Atenção Primária à Saúde convocando Alexandre Dias Andrade para retirar notificações sobre devolução de recursos, publicado em 11/11/2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "recursos",
+        "devolução"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "56257bbf2462cfdd",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Ajuste",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 357,
+      "edicao": "212",
+      "titulo": "EXTRATO DE AJUSTE",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-ajuste-743702033",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria Executiva do Ministério da Saúde publica extrato de ajuste reduzindo de R$ 3 milhões para R$ 1,9 milhão o valor do Termo de Ajuste nº 7/2025 Proadi-SUS com a Fundação Antônio Prudente em 11 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 1905249.56,
+      "entes": [
+        "Fundação Antônio Prudente"
+      ],
+      "tags": [
+        "proadi-sus",
+        "ajuste",
+        "fundação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "9de708f3fb31f98c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743695053",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Informação e Saúde Digital do Ministério da Saúde doa equipamentos para teleconsulta ao Município de UBAÍRA/BA pelo extrato nº 00207/2026 em 11 de novembro de 2026.",
+      "por_que_importa": "Vale informar aos municípios mineiros sobre este programa de doação de equipamentos para teleconsulta do SUS Digital.",
+      "valor_brl": 12817.2,
+      "entes": [
+        "Município de UBAÍRA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5bb6f5eb1a8a2311",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743685662",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde estabelece convênio código 7AAISY com o Instituto Paulista de Estudos e Pesquisas em Oftalmologia para aquisição de equipamento e material permanente em 11 de novembro de 2026.",
+      "por_que_importa": "Instituições de pesquisa mineiras podem usar este modelo de convênio como referência para solicitar equipamentos ao Ministério da Saúde.",
+      "valor_brl": 1500000,
+      "entes": [
+        "Instituto Paulista de Estudos e Pesquisas em Oftalmologia"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "pesquisa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "8c13ec7b08ec703f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 357,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743676289",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde estabelece convênio código 7AAIQS com a Fundação João Theodósio Araújo em Intervenção para aquisição de equipamento e material permanente em 11 de novembro de 2026.",
+      "por_que_importa": "Fundações mineiras sob intervenção podem usar este modelo de convênio como referência para aquisição de equipamentos.",
+      "valor_brl": 300000,
+      "entes": [
+        "Fundação João Theodósio Araújo"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "fundação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5a3113c08847e79f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 361,
+      "edicao": "212",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-743676241",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Nacional de Saúde publica aviso de alteração do Pregão 400/2026 ajustando qualificação econômico-financeira e requisitos de habilitação em 11 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Fundação Nacional de Saúde"
+      ],
+      "tags": [
+        "pregão",
+        "licitação",
+        "alteração"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "19e2b40240a62138",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 356,
+      "edicao": "212",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-743666877",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde estabelece convênio código 7AAIPC com a Cruz Vermelha Brasileira - Filial do Estado do Paraná para aquisição de equipamento e material permanente em 11 de novembro de 2026.",
+      "por_que_importa": "Entidades de utilidade pública mineiras podem usar este convênio como modelo para solicitar apoio a aquisição de equipamentos.",
+      "valor_brl": 200000,
+      "entes": [
+        "Cruz Vermelha Brasileira"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "cruz vermelha"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "dc904d0eedec924f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 362,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743666591",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto Nacional de Saúde da Mulher da Fiocruz transfere 4 aparelhos de ar condicionado para a Fundação para o Desenvolvimento Científico e Tecnológico em Saúde em 11 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto Nacional de Saúde da Mulher",
+        "Fiotec"
+      ],
+      "tags": [
+        "transferência",
+        "bem móvel",
+        "fiocruz"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "db45d7c92d92b987",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Saúde Indígena",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-743660423",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria de Saúde Indígena publica retificação corrigindo data de vigência do Contrato nº 8/2026 em 11 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "contrato",
+        "data"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c3e4ebfdfa34c17d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 362,
+      "edicao": "212",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-743660300",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Instituto de Tecnologia em Fármacos da Fiocruz publica aviso de chamamento público nº 190/2026 para pesquisa de mercado de materiais de informática via pregão eletrônico em 11 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Instituto de Tecnologia em Fármacos"
+      ],
+      "tags": [
+        "chamamento público",
+        "licitação",
+        "informática"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a1d06892bdfd23f7",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Extrato de Prorrogação de Ofício",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 357,
+      "edicao": "212",
+      "titulo": "EXTRATO DE PRORROGAÇÃO DE OFÍCIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-prorrogacao-de-oficio-743659892",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Secretaria Executiva do Ministério da Saúde prorroga de ofício o instrumento código 937884 com a Santa Casa de Misericórdia de Belo Horizonte até 09 de dezembro de 2027 em 11 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Santa Casa de Misericórdia de Belo Horizonte"
+      ],
+      "tags": [
+        "prorrogação",
+        "convênio",
+        "santa casa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d2ecc97633d9167a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "5.407/2026",
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 358,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 5.407/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-5.407/2026-743659860",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Atenção Primária à Saúde do Ministério da Saúde doa bens para estruturação de Unidades Básicas de Saúde ao Município de Nazaré/BA pelo extrato nº 5.407/2026 em 11 de novembro de 2026.",
+      "por_que_importa": "Municípios mineiros podem solicitar equipamentos para UBS pelo Novo PAC 2025 usando este termo de doação como modelo.",
+      "valor_brl": null,
+      "entes": [
+        "Município de Nazaré"
+      ],
+      "tags": [
+        "doação",
+        "ubs",
+        "pac"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "97e3d7305925aa32",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Informação e Saúde Digital",
+      "tipo": "Extrato de Doação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 359,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-743659787",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Secretaria de Informação e Saúde Digital do Ministério da Saúde doa equipamentos para teleconsulta ao Município de ITABUNA/BA pelo extrato nº 00206/2026 em 11 de novembro de 2026.",
+      "por_que_importa": "Procure informar aos municípios mineiros sobre este programa de doação de equipamentos para teleconsulta pelo SUS Digital.",
+      "valor_brl": 6408.6,
+      "entes": [
+        "Município de ITABUNA"
+      ],
+      "tags": [
+        "doação",
+        "telessaúde",
+        "sus digital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "1f049491993fac20",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 361,
+      "edicao": "212",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-743659631",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Nacional de Saúde publica edital de notificação para ex-prefeito de Bernardo do Mearim em 11 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Bernardo do Mearim"
+      ],
+      "tags": [
+        "notificação",
+        "tomada de contas"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "eb0f7a9291e729d5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Nacional de Saúde",
+      "tipo": "Extrato de Doação",
+      "numero": "1/2026",
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 361,
+      "edicao": "212",
+      "titulo": "EXTRATO DE DOAÇÃO Nº 1/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-doacao-n-1/2026-743659561",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Fundação Nacional de Saúde em Minas Gerais publica extrato de doação nº 1/2026 de sistema de tratamento de água ao Município de Itacarambi, datado de 3 de novembro de 2026.",
+      "por_que_importa": "A implementação do sistema de tratamento de água pode gerar oportunidades para projetos complementares de saúde pública em Nova Esperança.",
+      "valor_brl": null,
+      "entes": [
+        "Itacarambi"
+      ],
+      "tags": [
+        "doação",
+        "tratamento de água",
+        "itacarambi"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "444525795cd82fa0",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.489",
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 252,
+      "edicao": "212",
+      "titulo": "PORTARIA GM/MS Nº 12.489, DE 9 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.489-de-9-de-novembro-de-2026-743597449",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.489, de 9 de novembro de 2026, homologa identificadores nacionais de equipes de atenção primária para transferência de incentivos federais de custeio, incluindo consultório na rua em Varginha.",
+      "por_que_importa": "Verifique se as equipes da atenção primária homologadas da sua região têm os identificadores nacionais cadastrados no SCNES para receber os incentivos federais mensais.",
+      "valor_brl": 1399500,
+      "entes": [
+        "Varginha"
+      ],
+      "tags": [
+        "atenção primária",
+        "incentivos federais",
+        "consultório na rua"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ef9d5fb88872bfc1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.494",
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 254,
+      "edicao": "212",
+      "titulo": "PORTARIA GM/MS Nº 12.494, DE 10 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.494-de-10-de-novembro-de-2026-743579412",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.494, de 10 de novembro de 2026, autoriza repasse de emendas parlamentares para incremento de custeio de atenção especializada a Redencao, Primavera de Rondônia e São Vicente.",
+      "por_que_importa": "Acompanhe as oportunidades similares disponibilizadas em seu estado e verifique os critérios de elegibilidade para programas de incremento de atenção especializada.",
+      "valor_brl": 500000,
+      "entes": [
+        "Redencao",
+        "Primavera de Rondônia",
+        "São Vicente"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "custeio",
+        "atenção especializada"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c2c9ef04832d3794",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.493",
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 254,
+      "edicao": "212",
+      "titulo": "PORTARIA GM/MS Nº 12.493, DE 10 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.493-de-10-de-novembro-de-2026-743576455",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Portaria GM/MS nº 12.493, de 10 de novembro de 2026, autoriza repasse de emendas parlamentares para incremento de custeio de atenção especializada a Conselheiro Lafaiete e Guarulhos.",
+      "por_que_importa": "O gestor de Conselheiro Lafaiete deve acessar o InvestSUS para confirmar a proposta e providenciar a documentação necessária para receber a transferência.",
+      "valor_brl": 120000,
+      "entes": [
+        "Conselheiro Lafaiete",
+        "Guarulhos"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "custeio",
+        "atenção especializada"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a136ad7c5bd1f123",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.495",
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 255,
+      "edicao": "212",
+      "titulo": "PORTARIA GM/MS Nº 12.495, DE 10 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.495-de-10-de-novembro-de-2026-743575814",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.495, de 10 de novembro de 2026, autoriza repasse de emendas parlamentares para incremento de custeio de atenção especializada a Oiapoque, Atibaia e São Paulo.",
+      "por_que_importa": "Acompanhe as oportunidades similares em seu estado e verifique os critérios de elegibilidade para programas de incremento de atenção especializada.",
+      "valor_brl": 1793571,
+      "entes": [
+        "Oiapoque",
+        "Atibaia",
+        "São Paulo"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "custeio",
+        "atenção especializada"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f219977732b05bdf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.496",
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 255,
+      "edicao": "212",
+      "titulo": "PORTARIA GM/MS Nº 12.496, DE 10 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.496-de-10-de-novembro-de-2026-743565608",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.496, de 10 de novembro de 2026, autoriza repasse de emendas parlamentares para incremento de custeio de atenção especializada a Redencao, Correia Pinto e Carmópolis.",
+      "por_que_importa": "Acompanhe as oportunidades similares em seu estado e verifique os critérios de elegibilidade para programas de incremento de atenção especializada.",
+      "valor_brl": 221254,
+      "entes": [
+        "Redencao",
+        "Correia Pinto",
+        "Carmópolis"
+      ],
+      "tags": [
+        "emenda parlamentar",
+        "custeio",
+        "atenção especializada"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "037231c8432dbe9f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.262",
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 252,
+      "edicao": "212",
+      "titulo": "Portaria GM/MS Nº 12.262, DE 10 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.262-de-10-de-novembro-de-2026-743563961",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria GM/MS nº 12.262, de 10 de novembro de 2026, desabilita uma equipe macrorregional de cuidados paliativos em Recife e habilita outra sem novo impacto orçamentário.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Recife"
+      ],
+      "tags": [
+        "cuidados paliativos",
+        "habilitação",
+        "pernambuco"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d59405377d256168",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.491",
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 254,
+      "edicao": "212",
+      "titulo": "PORTARIA GM/MS Nº 12.491, DE 9 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.491-de-9-de-novembro-de-2026-743562232",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria GM/MS nº 12.491, de 9 de novembro de 2026, institui grupo de trabalho para elaborar proposta de linha de cuidado integral da hanseníase no SUS.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "grupo de trabalho",
+        "hanseníase",
+        "linha de cuidado"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "180ff1442bbf0587",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.499",
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 256,
+      "edicao": "212",
+      "titulo": "PORTARIA GM/MS Nº 12.499, DE 10 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.499-de-10-de-novembro-de-2026-743562183",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.499, de 10 de novembro de 2026, autoriza repasse para custeio de média e alta complexidade via Programa Agora Tem Especialistas a São Bernardo do Campo.",
+      "por_que_importa": "Acompanhe as oportunidades similares em seu estado para programas de média e alta complexidade e especialidades ambulatoriais e cirúrgicas.",
+      "valor_brl": 30000000,
+      "entes": [
+        "São Bernardo do Campo"
+      ],
+      "tags": [
+        "agora tem especialistas",
+        "média e alta complexidade",
+        "custeio"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c69d12173283b632",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.498",
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 255,
+      "edicao": "212",
+      "titulo": "PORTARIA GM/MS Nº 12.498, DE 10 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.498-de-10-de-novembro-de-2026-743558458",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.498, de 10 de novembro de 2026, autoriza repasse para custeio de média e alta complexidade via Programa Agora Tem Especialistas a São Bernardo do Campo.",
+      "por_que_importa": "Acompanhe as oportunidades similares em seu estado para programas de média e alta complexidade e especialidades ambulatoriais e cirúrgicas.",
+      "valor_brl": 30000000,
+      "entes": [
+        "São Bernardo do Campo"
+      ],
+      "tags": [
+        "agora tem especialistas",
+        "média e alta complexidade",
+        "custeio"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "087978e3c293f8a3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 256,
+      "edicao": "212",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-743558035",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de 11 de novembro de 2026 da Resolução nº 3.024 da ANVISA de 31 de julho de 2026, corrigindo descrição de ações de fiscalização.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "ANVISA",
+        "resolução"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "e0ccd9ca4eeca91e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.490",
+      "data_publicacao": "2026-11-11",
+      "secao": "1",
+      "pagina": 253,
+      "edicao": "212",
+      "titulo": "Portaria GM/MS Nº 12.490, DE 9 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.490-de-9-de-novembro-de-2026-743557634",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.490 de 11/11/2026 homologa os códigos dos Identificadores Nacionais de Equipe das equipes de Atenção Primária à Saúde credenciadas para transferência de incentivos de custeio federal.",
+      "por_que_importa": null,
+      "valor_brl": 16500000,
+      "entes": [
+        "Itapema",
+        "Laguna",
+        "Serra Alta",
+        "Araraquara",
+        "Caieiras",
+        "Cravinhos",
+        "Guararapes",
+        "Mogi Mirim",
+        "Monte Mor",
+        "Ourinhos",
+        "Piedade",
+        "Salto de Pirapora",
+        "Votuporanga"
+      ],
+      "tags": [
+        "atenção primária",
+        "identificador nacional equipe",
+        "custeio federal",
+        "transferência fundo a fundo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "4cbc7e65e069e7d4",
+      "fonte": "dou",
+      "orgao": "Presidência da República",
+      "unidade": "Casa Civil",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 1,
+      "edicao": "212",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-743805278",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de 11/11/2026 corrige a data de vigência do termo aditivo nº 00008/2026 ao contrato 506/2021, ajustando período de prorrogação de 03 meses.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "termo aditivo",
+        "contrato"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "92c80bd05a63056e",
+      "fonte": "dou",
+      "orgao": "Presidência da República",
+      "unidade": "Casa Civil",
+      "tipo": "Extrato de Doação",
+      "numero": "23/2026",
+      "data_publicacao": "2026-11-11",
+      "secao": "3",
+      "pagina": 1,
+      "edicao": "212",
+      "titulo": "EXTRATO DE TERMO DE DOAÇÃO Nº 23/2026",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-termo-de-doacao-n-23/2026-743797542",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extrato de termo de doação nº 23/2026 de 11/11/2026 registra doação de obra de arte da Sra. Letícia dos Santos Miranda à Presidência da República.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "doação",
+        "obra de arte",
+        "presidência"
+      ],
+      "fallback": false
+    }
+  ]
+}
