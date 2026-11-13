@@ -1,0 +1,1091 @@
+{
+  "data": "2026-11-13",
+  "gerado_em": "2026-11-13T17:28:24.405027+00:00",
+  "avisos": [],
+  "edicao": {
+    "titulo": "17 convênios e 2 portarias do Ministério da Saúde somam R$ 14,1 milhões",
+    "em_30_segundos": [
+      "Ministério da Saúde habilita unidade de Oncologia com R$ 5,3 milhões.",
+      "16 convênios para aquisição de equipamento somam R$ 5,5 milhões.",
+      "Ministério da Saúde publica convênio de R$ 2,5 milhões para pesquisas científicas.",
+      "Ministério da Saúde autoriza R$ 688,4 mil em repasse emergencial para saúde pública."
+    ],
+    "intro": "O Ministério da Saúde publica hoje 19 atos de grande impacto para infraestrutura hospitalar, com destaque para a habilitação de unidade de Alta Complexidade em Oncologia que atrai R$ 5,3 milhões de recursos financeiros. Os convênios para aquisição de equipamento concentram R$ 5,5 milhões, complementados por um convênio de R$ 2,5 milhões para pesquisas científicas e uma autorização de R$ 688,4 mil para custeio de resposta a emergências.",
+    "parcial": true,
+    "fontes": [
+      {
+        "nome": "dou",
+        "status": "ok",
+        "edicao": "214",
+        "paginas": "pp. 1-192",
+        "avisos": []
+      },
+      {
+        "nome": "iofmg",
+        "status": "ausente",
+        "edicao": null,
+        "paginas": null,
+        "avisos": [
+          "arquivo não encontrado"
+        ]
+      }
+    ]
+  },
+  "itens": [
+    {
+      "id": "f83c6d5678a1efaf",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Extrato de Parceria",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 127,
+      "edicao": "214",
+      "titulo": "EXTRATO DE ACORDO DE PARCERIA",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-acordo-de-parceria-744384359",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Oswaldo Cruz estabelece acordo de pesquisa n° 83/2026 com Instituto de Pesquisas Energéticas e Nucleares para desenvolver projeto sobre detecção de focos infecciosos, assinado em 10 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pesquisa",
+        "inovação",
+        "parceria"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "ba79a1ccab7444c6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744367285",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de convênio 7AAISK com Fundação Hospitalar Oftalmológica Universitária Lions para aquisição de equipamento, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 350000,
+      "entes": [
+        "Fundação Hospitalar Oftalmológica Universitária Lions"
+      ],
+      "tags": [
+        "convênio",
+        "oftalmologia",
+        "universitária"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d2840c5709b04d67",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Departamento Nacional de Auditoria do Sistema Único de Saúde",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "214",
+      "titulo": "EDITAL DE NOTIFICAÇÃO, DE 12 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-de-12-de-novembro-de-2026-744367208",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Departamento Nacional de Auditoria do SUS publica edital de notificação de 12 de novembro de 2026 sobre auditoria na Secretaria Municipal de Saúde de Belém de São Francisco.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Belém de São Francisco"
+      ],
+      "tags": [
+        "auditoria",
+        "notificação",
+        "denasus"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "6464d78ff19c6a22",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744359370",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de convênio 7AAINT com Hospital de Caridade e Beneficência para aquisição de equipamento, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 300000,
+      "entes": [
+        "Hospital de Caridade e Beneficência"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "hospital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "070e1216329ccab1",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Departamento Nacional de Auditoria do Sistema Único de Saúde",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "214",
+      "titulo": "EDITAL DE NOTIFICAÇÃO, DE 12 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-de-12-de-novembro-de-2026-744351385",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Departamento Nacional de Auditoria do SUS publica edital de notificação de 12 de novembro de 2026 sobre auditoria na Secretaria Municipal de Saúde de Belém de São Francisco.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [
+        "Belém de São Francisco"
+      ],
+      "tags": [
+        "auditoria",
+        "notificação",
+        "denasus"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d27acac2380f3711",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744349155",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de convênio 7AAIOL com Fundação Santa Casa de Misericórdia de Franca para aquisição de equipamento, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 282525,
+      "entes": [
+        "Fundação Santa Casa de Misericórdia de Franca"
+      ],
+      "tags": [
+        "convênio",
+        "santa-casa",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "bd5cc49fec40db6b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744336265",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de convênio 7AAIQE com Instituto do Câncer Infantil e Pediatria Especializada para fomento de pesquisas científicas, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 2497955,
+      "entes": [
+        "Instituto do Câncer Infantil e Pediatria Especializada"
+      ],
+      "tags": [
+        "convênio",
+        "pesquisa",
+        "câncer"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "cd22b43a2633943d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744325647",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de convênio 7AAIPN com Liga Bahiana Contra o Câncer para aquisição de equipamento, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 300000,
+      "entes": [
+        "Liga Bahiana Contra o Câncer"
+      ],
+      "tags": [
+        "convênio",
+        "câncer",
+        "equipamento"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c6435b1df1132136",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744323806",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de convênio 7AAINF com Fundação Educacional Serra dos Órgãos para aquisição de equipamento, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 551080,
+      "entes": [
+        "Fundação Educacional Serra dos Órgãos"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "educação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f8e4e8008031551c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Alteração",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 127,
+      "edicao": "214",
+      "titulo": "AVISO DE ALTERAÇÃO DE EDITAL",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-alteracao-de-edital-744308531",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Fundação Oswaldo Cruz publica aviso de alteração de edital para pregão 480/2026, ajustando datas de aquisição de rolamentos, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "pregão",
+        "alteração",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "2f46eb6845daed3d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744307814",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de convênio 7AAISX com Hospital de Caridade São Vicente de Paulo para aquisição de equipamento, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 247900,
+      "entes": [
+        "Hospital de Caridade São Vicente de Paulo"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "hospital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0510e13f81782640",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744307737",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Ministério da Saúde publica extrato de convênio 7AAIMZ com Instituto de Saúde Santa Clara para aquisição de equipamento, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": 299673,
+      "entes": [
+        "Instituto de Saúde Santa Clara"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "instituto"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c41c315bff95d8f8",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744295956",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio do Ministério da Saúde com Associação Beneficente de Novo Horizonte do Sul para aquisição de equipamento e material permanente, publicado em 13 de novembro de 2026.",
+      "por_que_importa": "verificar se a instituição já tem os equipamentos e materiais cadastrados no CNES antes de usar os recursos.",
+      "valor_brl": 499994,
+      "entes": [
+        "ASSOCIACAO BENEFICENTE DE NOVO HORIZONTE DO SUL"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "aquisição"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "794c6d8afa6caa6d",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Departamento Nacional de Auditoria do Sistema Único de Saúde",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "214",
+      "titulo": "EDITAL DE NOTIFICAÇÃO DE 11 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-de-11-de-novembro-de-2026-744295877",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação do Departamento Nacional de Auditoria do SUS para ciência de relatório preliminar de auditoria, de 11 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "auditoria",
+        "notificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "76e4cdcecbec2d39",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Departamento Nacional de Auditoria do Sistema Único de Saúde",
+      "tipo": "Edital de Convocação",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "214",
+      "titulo": "EDITAL DE NOTIFICAÇÃO DE 12 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-de-12-de-novembro-de-2026-744293745",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação do Departamento Nacional de Auditoria do SUS para ciência de relatório preliminar de auditoria realizada em Brusque, de 12 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "auditoria",
+        "notificação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "dfd938861f3cfb3b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Primária à Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "869",
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "214",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 869, DE 10 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-869-de-10-de-novembro-de-2026-744293614",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 869 da Secretaria de Atenção Primária à Saúde para retirada de notificação sobre transferência de recursos, de 10 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "transferência"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f9035d1ea9adf7f2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria Executiva",
+      "tipo": "Edital de Intimação",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EDITAL DE NOTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-744281506",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação do Ministério da Saúde sobre decisão de sanção a empresa por inadimplência contratual, de 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "notificação",
+        "sanção"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "62ced2c0e64e8bfa",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "151",
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "214",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 151, DE 11 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-151-de-11-de-novembro-de-2026-744281478",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 151 da Secretaria de Gestão do Trabalho e da Educação na Saúde sobre programa de residência multiprofissional, de 11 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "residência",
+        "notificação",
+        "bolsa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "efd3a53f3068402c",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Fundação Oswaldo Cruz",
+      "tipo": "Aviso de Chamamento Público",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 127,
+      "edicao": "214",
+      "titulo": "AVISO DE CHAMAMENTO PÚBLICO",
+      "url": "https://www.in.gov.br/web/dou/-/aviso-de-chamamento-publico-744281348",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Aviso de chamamento público do Instituto de Tecnologia em Fármacos - Farmanguinhos/FIOCRUZ para pesquisa de mercado em pregão eletrônico, de 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "licitação",
+        "pregão"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0b65daf223e00fec",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Gestão do Trabalho e da Educação na Saúde",
+      "tipo": "Edital de Notificação",
+      "numero": "150",
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 124,
+      "edicao": "214",
+      "titulo": "EDITAL DE NOTIFICAÇÃO Nº 150, DE 11 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-notificacao-n-150-de-11-de-novembro-de-2026-744279720",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de notificação nº 150 da Secretaria de Gestão do Trabalho e da Educação na Saúde sobre programa de residência em medicina, de 11 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "residência",
+        "notificação",
+        "bolsa"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "46cd79d5e589e5eb",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Grupo Hospitalar Conceição",
+      "tipo": "Extrato de Registro de Preços",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 126,
+      "edicao": "214",
+      "titulo": "ExtratoS de RegistroS de Preços",
+      "url": "https://www.in.gov.br/web/dou/-/extratos-de-registros-de-precos-744279639",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Extratos de registros de preços para aquisição de materiais e equipamentos pelo Grupo Hospitalar Conceição e Hospital Federal de Bonsucesso, de 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "registro de preços",
+        "licitação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7f7f684914330851",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744250260",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio do Ministério da Saúde com Fundação Assistencial da Paraíba para aquisição de equipamento e material permanente, publicado em 13 de novembro de 2026.",
+      "por_que_importa": "confirmar aprovação prévia de contas da fundação para não comprometer futuros desembolsos.",
+      "valor_brl": 300000,
+      "entes": [
+        "FUNDACAO ASSISTENCIAL DA PARAIBA"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "fundação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "0bf06271492c49b2",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744248696",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio do Ministério da Saúde com Fundação Altino Ventura para aquisição de equipamento e material permanente, publicado em 13 de novembro de 2026.",
+      "por_que_importa": "verificar se há atrasos na execução de convênios anteriores que possam prejudicar o desembolso deste.",
+      "valor_brl": 500000,
+      "entes": [
+        "FUNDACAO ALTINO VENTURA"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "fundação"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c0372dcf252de600",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744248615",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Convênio do Ministério da Saúde com Hospital São Vicente de Paulo de Afonso Cláudio para aquisição de equipamento e material permanente, publicado em 13 de novembro de 2026.",
+      "por_que_importa": "alinhar a execução com o planejamento de ampliação de serviços do hospital para otimizar o investimento federal.",
+      "valor_brl": 200000,
+      "entes": [
+        "HOSPITAL SAO VICENTE DE PAULO DE AFONSO CLAUDIO"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "hospital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "98f0a06ccda51f8e",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744235002",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do convênio 7AAIRB do Ministério da Saúde com Hospital São Vicente de Paulo para aquisição de equipamento e material permanente, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": "Acompanhar oportunidades de convênios do Ministério da Saúde para equipamentos como modelo de captação para hospitais filantrópicos.",
+      "valor_brl": 348945,
+      "entes": [
+        "Hospital São Vicente de Paulo"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "filantrópico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "84f7860e210e9634",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744234925",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do convênio 7AAIQM do Ministério da Saúde com Associação de Manutenção do Hospital e Maternidade Dr. Aureliano Brandão para aquisição de equipamento, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": "Acompanhar convênios do Ministério da Saúde para equipamentos como modelo de captação para instituições filantrópicas.",
+      "valor_brl": 504122,
+      "entes": [
+        "Associação de Manutenção do Hospital e Maternidade Dr. Aureliano Brandão"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "filantrópico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "f4485cd48aa769c9",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 122,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744233446",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do convênio 7AAIPB do Ministério da Saúde com Associação Paranaense de Cultura para aquisição de equipamento e material permanente, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": "Acompanhar convênios do Ministério da Saúde para equipamentos como modelo de captação para instituições de saúde.",
+      "valor_brl": 200000,
+      "entes": [
+        "Associação Paranaense de Cultura"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "saúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "a1c524c848ae40d6",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744233369",
+      "categoria": "A",
+      "relevancia": 3,
+      "resumo": "Extrato do convênio 7AAIRG do Ministério da Saúde com Santa Casa de Misericórdia de Belo Horizonte para aquisição de equipamento, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": "Acompanhar modelo de convênio para equipamentos em Santa Casa mineira como referência para outras instituições filantrópicas.",
+      "valor_brl": 454062,
+      "entes": [
+        "Santa Casa de Misericórdia de Belo Horizonte",
+        "Belo Horizonte"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "belo horizonte"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "33fb174d98a9485a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Extrato de Convênio",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 123,
+      "edicao": "214",
+      "titulo": "EXTRATO DE CONVÊNIO",
+      "url": "https://www.in.gov.br/web/dou/-/extrato-de-convenio-744228513",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Extrato do convênio 7AAISN do Ministério da Saúde com Hospital Ana Nery Santa Cruz do Sul para aquisição de equipamento e material permanente, divulgado em 13 de novembro de 2026.",
+      "por_que_importa": "Acompanhar convênios do Ministério da Saúde para equipamentos como modelo de captação para hospitais filantrópicos.",
+      "valor_brl": 200000,
+      "entes": [
+        "Hospital Ana Nery Santa Cruz do Sul"
+      ],
+      "tags": [
+        "convênio",
+        "equipamento",
+        "hospital"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "096236551e9f1d4b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.500",
+      "data_publicacao": "2026-11-13",
+      "secao": "1",
+      "pagina": 180,
+      "edicao": "214",
+      "titulo": "PORTARIA GM/MS Nº 12.500, DE 12 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.500-de-12-de-novembro-de-2026-744158814",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.500, de 12 de novembro de 2026, mantém habilitação de Associação Hospitalar Vila Nova como Unidade de Assistência de Alta Complexidade em Oncologia.",
+      "por_que_importa": "Acompanhar modelos de manutenção de habilitação em alta complexidade para benchmarking de estrutura de financiamento e critérios de renovação.",
+      "valor_brl": 5347549.66,
+      "entes": [
+        "Associação Hospitalar Vila Nova",
+        "Porto Alegre"
+      ],
+      "tags": [
+        "habilitação",
+        "oncologia",
+        "unacon"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "c0ea42016b0446c5",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Ciência, Tecnologia e Inovação em Saúde",
+      "tipo": "Aviso de Consulta Pública",
+      "numero": "110",
+      "data_publicacao": "2026-11-13",
+      "secao": "1",
+      "pagina": 180,
+      "edicao": "214",
+      "titulo": "CONSULTA PÚBLICA SCTIE/MS Nº 110, DE 10 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/consulta-publica-sctie/ms-n-110-de-10-de-novembro-de-2026-744158733",
+      "categoria": "X",
+      "relevancia": 1,
+      "resumo": "Consulta Pública SCTIE/MS nº 110, de 10 de novembro de 2026, sobre proposta de incorporação de trastuzumabe deruxtecana para tratamento de câncer de mama HER2-positivo.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "tecnologia",
+        "oncologia",
+        "conitec"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "58105aa465915c0a",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Aviso de Consulta Pública",
+      "numero": "1.436",
+      "data_publicacao": "2026-11-13",
+      "secao": "1",
+      "pagina": 181,
+      "edicao": "214",
+      "titulo": "CONSULTA PÚBLICA Nº 1.436, DE 12 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/consulta-publica-n-1.436-de-12-de-novembro-de-2026-744158654",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Consulta Pública ANVISA nº 1.436, de 12 de novembro de 2026, sobre proposta de alteração de monografia de ingrediente ativo de agrotóxico Pseudomonas chlororaphis.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "vigilância",
+        "regulação",
+        "agrotóxico"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "73a05e83e8addc5f",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Gabinete do Ministro",
+      "tipo": "Portaria",
+      "numero": "12.492",
+      "data_publicacao": "2026-11-13",
+      "secao": "1",
+      "pagina": 180,
+      "edicao": "214",
+      "titulo": "PORTARIA GM/MS Nº 12.492, DE 12 DE NOVEMBRO DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-gm/ms-n-12.492-de-12-de-novembro-de-2026-744155787",
+      "categoria": "A",
+      "relevancia": 2,
+      "resumo": "Portaria GM/MS nº 12.492, de 12 de novembro de 2026, autoriza repasse de incremento financeiro emergencial para custeio de resposta a emergências em saúde pública.",
+      "por_que_importa": "Acompanhar mecanismos de repasse emergencial disponíveis para municípios em situação de emergência em saúde pública.",
+      "valor_brl": 688426.52,
+      "entes": [
+        "Lábrea"
+      ],
+      "tags": [
+        "repasse emergencial",
+        "custeio",
+        "vigilância"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "753bb76f51418a50",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "1",
+      "pagina": 182,
+      "edicao": "214",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-744146199",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de Resolução-RE nº 3.357, de 26 de agosto de 2026, publicada pela Agência Nacional de Vigilância Sanitária em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "vigilância",
+        "medida preventiva"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "5a1724d186126f2b",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "1",
+      "pagina": 192,
+      "edicao": "214",
+      "titulo": "ReTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-744146122",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de Resolução-RE nº 3.806, de 11 de outubro de 2024, publicada pela Agência Nacional de Vigilância Sanitária em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "vigilância",
+        "produtos saúde"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "d1f82f0b9a3aaac3",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Agência Nacional de Vigilância Sanitária",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "1",
+      "pagina": 192,
+      "edicao": "214",
+      "titulo": "ReTIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-744145214",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação de Resolução-RE nº 1.823, de 14 de maio de 2025, publicada pela Agência Nacional de Vigilância Sanitária em 13 de novembro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "vigilância",
+        "medicamentos"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "7263b991f2e405da",
+      "fonte": "dou",
+      "orgao": "Ministério da Saúde",
+      "unidade": "Secretaria de Atenção Especializada à Saúde",
+      "tipo": "Portaria",
+      "numero": "5.303",
+      "data_publicacao": "2026-11-13",
+      "secao": "1",
+      "pagina": 180,
+      "edicao": "214",
+      "titulo": "Portaria SAES/MS Nº 5.303, DE 12 DE novembro DE 2026",
+      "url": "https://www.in.gov.br/web/dou/-/portaria-saes/ms-n-5.303-de-12-de-novembro-de-2026-744144146",
+      "categoria": "D",
+      "relevancia": 1,
+      "resumo": "Portaria SAES/MS nº 5.303, de 12 de novembro de 2026, defere em grau de reconsideração a concessão do CEBAS ao Instituto Visão para Todos, com sede em João Pessoa (PB).",
+      "por_que_importa": "verifique se entidades mineiras com CEBAS negado podem requerer reconsideração comprovando prestação de 60% de serviços ao SUS.",
+      "valor_brl": null,
+      "entes": [
+        "Instituto Visão para Todos"
+      ],
+      "tags": [
+        "CEBAS",
+        "certificação",
+        "beneficência",
+        "SUS"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "91310bfb2409f841",
+      "fonte": "dou",
+      "orgao": "Presidência da República",
+      "unidade": "Casa Civil",
+      "tipo": "Edital de Intimação",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "3",
+      "pagina": 1,
+      "edicao": "214",
+      "titulo": "EDITAL DE INTIMAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/edital-de-intimacao-744273877",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Edital de intimação publicado pela Secretaria de Administração da Presidência da República para a empresa Koala Utilidades Ltda apresentar recurso.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "edital",
+        "intimação",
+        "administrativo"
+      ],
+      "fallback": false
+    },
+    {
+      "id": "effa3254afcc7891",
+      "fonte": "dou",
+      "orgao": "Presidência da República",
+      "unidade": "Casa Civil",
+      "tipo": "Retificação",
+      "numero": null,
+      "data_publicacao": "2026-11-13",
+      "secao": "1",
+      "pagina": 15,
+      "edicao": "214",
+      "titulo": "RETIFICAÇÃO",
+      "url": "https://www.in.gov.br/web/dou/-/retificacao-744139305",
+      "categoria": "X",
+      "relevancia": 0,
+      "resumo": "Retificação publicada pela Casa Civil da Presidência da República para corrigir designações de órgãos na Portaria IN/CC/PR nº 73, de 26 de outubro de 2026.",
+      "por_que_importa": null,
+      "valor_brl": null,
+      "entes": [],
+      "tags": [
+        "retificação",
+        "administrativo",
+        "imprensa"
+      ],
+      "fallback": false
+    }
+  ]
+}
